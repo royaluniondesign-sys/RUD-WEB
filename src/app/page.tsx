@@ -107,28 +107,28 @@ function Services() {
 function Work() {
   const projects = [
     { 
-      name: 'Future Fur', 
-      category: 'Branding', 
+      name: 'TechFlow App', 
+      category: 'UI/UX Design', 
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-      slug: 'future-fur'
+      slug: 'techflow-app'
     },
     { 
-      name: 'BresicWhitney', 
-      category: 'Web Design', 
-      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
-      slug: 'bresicwhitney'
+      name: 'Nova Fashion', 
+      category: 'Brand Identity', 
+      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80',
+      slug: 'nova-fashion'
     },
     { 
-      name: 'Edlyn 1929', 
-      category: 'Branding', 
-      image: 'https://images.unsplash.com/photo-1604871000636-074fa5117945?w=800&q=80',
-      slug: 'edlyn-1929'
+      name: 'GreenLife Eco', 
+      category: 'UI/UX Design', 
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+      slug: 'greenlife-eco'
     },
     { 
-      name: 'Shadey', 
-      category: 'Design', 
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
-      slug: 'shadey'
+      name: 'Artisan Coffee', 
+      category: 'Packaging Design', 
+      image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80',
+      slug: 'artisan-coffee'
     },
   ]
 
