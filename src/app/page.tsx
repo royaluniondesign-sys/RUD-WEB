@@ -33,7 +33,7 @@ function CustomCursor() {
 
   return (
     <div 
-      className={`fixed pointer-events-none] transition-transform duration z-[9999-200`}
+      className={`fixed pointer-events-none transition-transform duration-200 z-[9999]`}
       style={{ 
         left: position.x, 
         top: position.y,
