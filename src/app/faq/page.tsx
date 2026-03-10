@@ -1,55 +1,67 @@
+import Navbar from '@/components/Navbar'
+import ScrollReveal from '@/components/ScrollReveal'
+import FAQAccordion from '@/components/FAQAccordion'
 import Link from 'next/link'
 
-function Navbar() {
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-      <div className="container-custom">
-        <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center gap-2">
-            <img src="/logo-rud.png" alt="RUD" className="h-10" />
-          </Link>
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/#work" className="text-sm font-medium hover:text-gray-600 transition">WORK</Link>
-            <Link href="/about" className="text-sm font-medium hover:text-gray-600 transition">ABOUT</Link>
-            <Link href="/pricing" className="text-sm font-medium hover:text-gray-600 transition">PRICING</Link>
-            <Link href="/blog" className="text-sm font-medium hover:text-gray-600 transition">BLOG</Link>
-          </div>
-          <Link href="/contact" className="px-6 py-3 bg-black text-white text-sm font-medium hover:bg-gray-800 transition">
-            Let&apos;s Talk
-          </Link>
-        </div>
-      </div>
-    </nav>
-  )
-}
+const faqs = [
+  {
+    question: 'How long does a typical project take?',
+    answer: 'Brand identity projects typically take 4–6 weeks. Website design and development projects range from 6–12 weeks depending on complexity. We will give you a clear timeline in our proposal before any work begins.',
+  },
+  {
+    question: 'Do you offer revisions?',
+    answer: 'Yes — all packages include 3 rounds of revisions. Additional rounds can be arranged at an hourly rate. In our experience, 3 rounds is more than enough to reach the perfect result.',
+  },
+  {
+    question: 'What is your payment process?',
+    answer: 'We invoice 50% upfront to confirm your project date, with the remaining 50% due on final delivery. For larger engagements (€10k+) we can arrange milestone-based payments across the project.',
+  },
+  {
+    question: 'Can you work with existing brand assets?',
+    answer: 'Absolutely. We can build on, refine, or evolve your existing brand assets rather than starting from scratch. We will assess what you have during the discovery phase and recommend the best path forward.',
+  },
+  {
+    question: 'Do you work with international clients?',
+    answer: 'Yes — we work with clients across Europe, Australia, and the Americas. All communication happens via video call and our project management tools, so location is never a barrier.',
+  },
+  {
+    question: 'What is your working process?',
+    answer: 'We start with a discovery call to understand your goals and context. We then create a detailed proposal with scope, timeline, and pricing. Once approved, we move through strategy, design, feedback, and final delivery in clearly defined phases.',
+  },
+  {
+    question: 'Do you offer ongoing support after delivery?',
+    answer: 'Yes — we offer monthly retainer packages for ongoing brand management, website maintenance, and marketing support. Many clients stay with us as long-term partners well beyond the initial project.',
+  },
+  {
+    question: 'What file formats will I receive?',
+    answer: 'You will receive all source files (Figma, AI, EPS), plus ready-to-use export packages for print and digital — PNG, SVG, PDF. You own everything we create for you.',
+  },
+]
 
 export default function FAQ() {
-  const faqs = [
-    { q: 'How long does a project take?', a: 'Typical projects take 4-12 weeks depending on scope.' },
-    { q: 'Do you offer revisions?', a: 'Yes, we offer 3 rounds of revisions on all our work.' },
-    { q: 'What is your payment process?', a: 'We work with 50% upfront and 50% on completion.' },
-    { q: 'Do you offer ongoing support?', a: 'Yes, we offer monthly retainer packages for ongoing work.' },
-    { q: 'Do you work with international clients?', a: 'Yes, we work with clients all over the world.' },
-    { q: 'What is your process?', a: 'We start with a discovery call, then create a proposal, and once approved, we begin the design process.' },
-  ]
-
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[var(--bg)]">
       <Navbar />
-      <section className="pt-32 pb-20">
+
+      <section className="pt-36 pb-20">
         <div className="container-custom">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-center">FAQ</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-16 text-center">
-            Got questions? We&apos;ve got answers
-          </p>
-          
-          <div className="max-w-3xl mx-auto space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-200 p-6">
-                <h3 className="text-lg font-bold mb-2">{faq.q}</h3>
-                <p className="text-gray-600">{faq.a}</p>
-              </div>
-            ))}
+          <ScrollReveal>
+            <p className="text-sm font-medium text-[var(--muted)] uppercase tracking-widest mb-4">FAQ</p>
+            <h1 className="text-5xl md:text-7xl font-bold text-[var(--fg)] mb-6">
+              Got questions?
+            </h1>
+            <p className="text-xl text-[var(--muted)] max-w-xl leading-relaxed">
+              Everything you need to know about working with us. Can&apos;t find what you&apos;re looking for?{' '}
+              <Link href="/contact" className="text-[var(--fg)] underline underline-offset-2 hover:no-underline">
+                Get in touch.
+              </Link>
+            </p>
+          </ScrollReveal>
+
+          <div className="max-w-3xl mt-16">
+            <ScrollReveal delay={100}>
+              <FAQAccordion faqs={faqs} />
+            </ScrollReveal>
           </div>
         </div>
       </section>
