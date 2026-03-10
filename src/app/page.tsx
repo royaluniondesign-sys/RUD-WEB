@@ -29,7 +29,7 @@ function Hero() {
           <span className="italic font-light">thoughtful</span> design
         </h1>
 
-        <p className="text-lg md:text-xl text-[var(--muted)] max-w-2xl mb-10 animate-fade-in-up animation-delay-200 leading-relaxed">
+        <p className="text-base md:text-xl text-[var(--muted)] max-w-2xl mb-8 animate-fade-in-up animation-delay-200 leading-relaxed">
           Crafting exceptional brand identities and digital experiences that connect with people and drive real business results.
         </p>
 
@@ -109,12 +109,12 @@ const serviceIcons: Record<string, React.ReactNode> = {
 
 function Services() {
   const services = [
-    { num: '01', icon: 'strategy',   title: 'Brand Strategy',    desc: 'Positioning, messaging, and competitive differentiation that defines how your brand shows up in the world.' },
-    { num: '02', icon: 'identity',   title: 'Visual Identity',   desc: 'Logo systems, color palettes, typography, and brand guidelines built to last and scale.' },
-    { num: '03', icon: 'webdesign',  title: 'Web Design',        desc: 'Responsive, accessible, and visually striking websites that convert visitors into customers.' },
-    { num: '04', icon: 'dev',        title: 'Development',       desc: 'Clean, performant code built with modern frameworks — Next.js, React, TypeScript, and more.' },
-    { num: '05', icon: 'content',    title: 'Content Creation',  desc: 'Photography, video, and copywriting that tells your story with clarity and impact.' },
-    { num: '06', icon: 'marketing',  title: 'Digital Marketing', desc: 'SEO, social strategy, and paid campaigns that amplify your reach and drive measurable growth.' },
+    { num: '01', icon: 'strategy',   title: 'Brand Strategy',    desc: 'We dig into your market, audience, and competition before touching a single pixel. The result is a positioning platform that makes every future decision easier — and your business harder to ignore.' },
+    { num: '02', icon: 'identity',   title: 'Visual Identity',   desc: 'Logo systems, colour palettes, and typography built to last — not trend. We design identities that work across every touchpoint: from your business card to a 40-metre billboard.' },
+    { num: '03', icon: 'webdesign',  title: 'Web Design',        desc: 'Sites that look remarkable and perform measurably. We design in Figma with conversion in mind, then hand off pixel-perfect specs so nothing is lost in translation.' },
+    { num: '04', icon: 'dev',        title: 'Development',       desc: 'Next.js, React, and clean TypeScript. We build sites that score 90+ on Lighthouse, load in under 2 seconds, and scale as your business grows.' },
+    { num: '05', icon: 'content',    title: 'Content Creation',  desc: 'Art direction, copywriting, and photography briefs that tell your story consistently. We make sure your brand sounds as good as it looks.' },
+    { num: '06', icon: 'marketing',  title: 'Digital Marketing', desc: 'SEO foundations built into every site we deliver. Plus social strategy, email campaigns, and paid media frameworks to put your new brand in front of the right people.' },
   ]
 
   return (
@@ -164,32 +164,32 @@ function Work() {
       name: 'BresicWhitney',
       category: 'Web Design',
       year: '2025',
-      desc: 'Website for a leading Sydney real estate agency',
-      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
+      desc: 'Complete digital overhaul for Sydney\'s leading real estate agency — 40% increase in qualified leads',
+      image: '/work1.jpg',
       slug: 'bresicwhitney',
     },
     {
       name: 'Edlyn 1929',
       category: 'Branding',
       year: '2025',
-      desc: 'Heritage rebranding celebrating 95 years of excellence',
-      image: 'https://images.unsplash.com/photo-1604871000636-074fa5117945?w=800&q=80',
+      desc: 'Heritage rebranding for a 95-year-old food company — stocked in 200+ new retail locations post-launch',
+      image: '/work2.jpg',
       slug: 'edlyn-1929',
     },
     {
-      name: 'Location',
-      category: 'Real Estate',
+      name: 'Future Fur',
+      category: 'Branding',
       year: '2025',
-      desc: 'Luxury real estate platform for Southern Sydney',
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
-      slug: 'location',
+      desc: 'Brand identity for a pet lifestyle startup — launched in 80+ boutiques within 6 months',
+      image: '/work3.jpg',
+      slug: 'future-fur',
     },
     {
       name: 'Marshall White',
-      category: 'Web',
+      category: 'Web Design',
       year: '2025',
-      desc: "Melbourne's premier property experts — digital presence relaunch",
-      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+      desc: 'Premium digital presence for Melbourne\'s top luxury property agency — shortlisted for Australian Web Award',
+      image: '/work4.jpg',
       slug: 'marshall-white',
     },
   ]
@@ -348,28 +348,28 @@ function About() {
 function Testimonials() {
   const testimonials = [
     {
-      name: 'Sarah Johnson',
+      name: 'Tim Grace',
+      role: 'Principal',
+      company: 'BresicWhitney',
+      initials: 'TG',
+      color: 'bg-blue-600',
+      text: 'After our rebrand with RUD, digital enquiries increased 40% in the first quarter. They understood the Sydney real estate market deeply and translated that into design that genuinely converts. The site loads faster than anything we\'ve had before.',
+    },
+    {
+      name: 'Sophie Edlyn',
+      role: 'Brand Director',
+      company: 'Edlyn 1929',
+      initials: 'SE',
+      color: 'bg-amber-600',
+      text: 'Modernising a 95-year-old brand without losing its soul is not easy. RUD handled every detail with care — from the logo system to the packaging guidelines. The response from our distributors and press has been exceptional.',
+    },
+    {
+      name: 'James Harwood',
       role: 'CEO',
       company: 'Future Fur',
-      initials: 'SJ',
-      color: 'bg-violet-500',
-      text: 'RUD transformed our brand completely. The new identity elevated us from a local business to a recognised lifestyle brand. The results far exceeded our expectations.',
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Director',
-      company: 'BresicWhitney',
-      initials: 'MC',
-      color: 'bg-blue-500',
-      text: 'Professional, creative, and delivered ahead of schedule. The website they built has increased our qualified leads by over 40%. Highly recommend to anyone serious about their brand.',
-    },
-    {
-      name: 'Emma Wilson',
-      role: 'Founder',
-      company: 'Edlyn 1929',
-      initials: 'EW',
-      color: 'bg-amber-500',
-      text: 'Our heritage brand needed modernising without losing its soul — RUD nailed it. The feedback from customers and press has been incredible.',
+      initials: 'JH',
+      color: 'bg-emerald-600',
+      text: 'We were a seed-funded startup with zero brand equity trying to compete against established players. RUD gave us an identity that punches well above our weight. We\'ve since been stocked in over 80 boutiques and raised Series A.',
     },
   ]
 
@@ -611,7 +611,7 @@ function Footer() {
           <div className="md:col-span-2 md:col-start-6">
             <h4 className="text-xs font-semibold uppercase tracking-widest text-[var(--fg)] mb-4">Navigate</h4>
             <ul className="space-y-3">
-              {[['Work', '/work'], ['About', '/about'], ['Pricing', '/pricing'], ['Blog', '/blog'], ['Contact', '/contact']].map(([label, href]) => (
+              {[['Work', '/work'], ['Services', '/services'], ['About', '/about'], ['Pricing', '/pricing'], ['Blog', '/blog'], ['Contact', '/contact']].map(([label, href]) => (
                 <li key={href}>
                   <Link href={href} className="text-sm text-[var(--muted)] hover:text-[var(--fg)] transition-colors duration-200">
                     {label}
@@ -626,7 +626,7 @@ function Footer() {
             <ul className="space-y-3">
               {['Branding', 'Web Design', 'Development', 'Marketing', 'Content'].map(service => (
                 <li key={service}>
-                  <Link href="/contact" className="text-sm text-[var(--muted)] hover:text-[var(--fg)] transition-colors duration-200">
+                  <Link href="/services" className="text-sm text-[var(--muted)] hover:text-[var(--fg)] transition-colors duration-200">
                     {service}
                   </Link>
                 </li>
