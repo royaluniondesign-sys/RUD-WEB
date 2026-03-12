@@ -1,5 +1,16 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
+
+export const metadata: Metadata = {
+  title: 'Blog — Brand Strategy & Design Insights',
+  description: 'Insights, case studies and expert thinking on brand strategy, visual identity, web design and digital marketing from the RUD Studio team.',
+  keywords: ['brand strategy blog', 'branding insights', 'design agency blog', 'visual identity tips', 'web design trends', 'brand building advice'],
+  openGraph: {
+    title: 'RUD Blog — Brand Strategy & Design Insights',
+    description: 'Expert thinking on brand strategy, visual identity, web design and digital marketing.',
+  },
+}
 
 const posts = [
   {

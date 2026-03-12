@@ -1,5 +1,16 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
+
+export const metadata: Metadata = {
+  title: 'Services — Brand Strategy, Visual Identity & Web Design',
+  description: 'RUD Studio offers brand strategy, visual identity design, web design, web development, content creation and digital marketing for startups and established businesses in Spain and globally.',
+  keywords: ['brand strategy agency', 'visual identity design', 'web design agency Spain', 'logo design studio', 'brand identity package', 'web development Next.js', 'digital marketing agency Europe'],
+  openGraph: {
+    title: 'Brand & Web Design Services — RUD Studio',
+    description: 'End-to-end brand and digital solutions. From strategy to launch and beyond. Fixed-scope, transparent pricing.',
+  },
+}
 
 const services = [
   {

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 
@@ -239,6 +240,20 @@ const projectsData: Record<string, Project> = {
     nextSlug: 'location',
     nextName: 'Location',
   },
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const project = projectsData[params.slug]
+  if (!project) return {}
+  return {
+    title: `${project.name} — ${project.category} Case Study`,
+    description: `${project.tagline} Full case study: brief, approach and measurable results. Delivered by RUD Studio.`,
+    openGraph: {
+      title: `${project.name} Case Study — RUD Studio`,
+      description: project.tagline,
+      images: [{ url: project.heroImage.startsWith('/') ? `https://rud-web.vercel.app${project.heroImage}` : project.heroImage }],
+    },
+  }
 }
 
 export default function WorkDetail({ params }: { params: { slug: string } }) {

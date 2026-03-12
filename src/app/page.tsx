@@ -178,34 +178,34 @@ function Portfolio() {
     {
       name: 'BresicWhitney',
       tags: ['Web Design', '2025'],
-      desc: '40% increase in qualified leads post-launch',
-      image: '/work1.jpg',
+      desc: '+40% qualified leads — complete digital overhaul',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=90',
       slug: 'bresicwhitney',
-      accent: '#1A3A5C',
+      accent: '#1A2F45',
     },
     {
       name: 'Edlyn 1929',
-      tags: ['Branding', '2025'],
-      desc: '200+ new retail locations post-rebrand',
-      image: '/work2.jpg',
+      tags: ['Brand Identity', '2025'],
+      desc: '200+ new retail locations after rebrand',
+      image: 'https://images.unsplash.com/photo-1614632537190-23e4146777db?w=900&q=90',
       slug: 'edlyn-1929',
-      accent: '#5C3A1A',
+      accent: '#3D2B1F',
     },
     {
       name: 'Future Fur',
-      tags: ['Brand Identity', '2025'],
-      desc: 'Launched in 80+ boutiques within 6 months',
-      image: '/work3.jpg',
+      tags: ['Branding', '2025'],
+      desc: '80+ boutiques in 6 months — Series A raised',
+      image: 'https://images.unsplash.com/photo-1623039405147-547794f92e9e?w=900&q=90',
       slug: 'future-fur',
-      accent: '#2A4A2A',
+      accent: '#1F2F1F',
     },
     {
       name: 'Marshall White',
       tags: ['Web Design', '2025'],
       desc: 'Shortlisted for Australian Web Award',
-      image: '/work4.jpg',
+      image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=900&q=90',
       slug: 'marshall-white',
-      accent: '#2C2C2C',
+      accent: '#222222',
     },
   ]
 
@@ -270,14 +270,64 @@ function Portfolio() {
   )
 }
 
-// ─── Team ─────────────────────────────────────────────────────────────────────
+// ─── Why RUD ──────────────────────────────────────────────────────────────────
 
-function Team() {
-  const members = [
-    { name: 'Alex Ruiz',    role: 'Creative Director',  image: '/team1.jpg', note: 'Formerly at Wolff Olins & Moving Brands' },
-    { name: 'Maria Santos', role: 'Brand Strategist',   image: '/team2.jpg', note: 'Ex-consultant, 6 years in FMCG & retail' },
-    { name: 'Daniel Park',  role: 'Lead Developer',     image: '/team3.jpg', note: '95+ Lighthouse scores on every project' },
-    { name: 'Sofia Torres', role: 'UX Designer',        image: '/team4.jpg', note: 'Background in cognitive psychology' },
+function WhyRUD() {
+  const reasons = [
+    {
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+        </svg>
+      ),
+      title: 'Strategy before design',
+      desc: 'Every project starts with a deep dive into your market, your competitors, and your audience. We don\'t design logos — we build positioning platforms that happen to look exceptional.',
+    },
+    {
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+        </svg>
+      ),
+      title: 'Direct, no account managers',
+      desc: 'You work directly with the designer, developer, or strategist doing your project. No games of telephone. No agency bloat. Faster decisions and better results.',
+    },
+    {
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+        </svg>
+      ),
+      title: 'Measurable outcomes',
+      desc: 'We design for results — not awards. +40% leads for BresicWhitney. 200+ new stockists for Edlyn 1929. Series A for Future Fur. Our work compounds over time.',
+    },
+    {
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      ),
+      title: 'Built to last, not to trend',
+      desc: 'We\'ve been designing brands since 2013. We\'ve seen every visual trend come and go. What we build is timeless — identities and sites that still look right in five years.',
+    },
+    {
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+      ),
+      title: 'Code that performs',
+      desc: 'Every site we build scores 90+ on Google Lighthouse. Sub-2-second load times, WCAG accessibility, and SEO foundations — not as extras, but as baseline requirements.',
+    },
+    {
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      ),
+      title: '98% client retention',
+      desc: 'Most of our clients stay with us for years. Not because we lock them in, but because we build genuine partnerships — being the team they trust to evolve their brand as they grow.',
+    },
   ]
 
   return (
@@ -286,30 +336,27 @@ function Team() {
         <ScrollReveal>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
             <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">The Team</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight">The creative<br />minds behind RUD</h2>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">Why RUD</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight leading-tight">
+                What makes us
+                <br />
+                <span className="italic font-light text-[#9CA3AF]">different</span>
+              </h2>
             </div>
             <Link href="/about" className="inline-flex items-center gap-2 text-sm font-medium text-[#6B7280] hover:text-[#0A0A0A] hover:gap-4 transition-all duration-200">
-              About us
+              Our story
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
           </div>
         </ScrollReveal>
 
         <ScrollReveal className="stagger">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
-            {members.map((m) => (
-              <div key={m.name} className="group">
-                <div className="aspect-square overflow-hidden rounded-2xl mb-4 bg-[#F0EDE6]">
-                  <img
-                    src={m.image}
-                    alt={m.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <h3 className="font-semibold text-[#0A0A0A] text-base">{m.name}</h3>
-                <p className="text-sm text-[#9CA3AF] mt-0.5">{m.role}</p>
-                <p className="text-xs text-[#C4BFB8] mt-1 leading-snug">{m.note}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E2DC]">
+            {reasons.map((r) => (
+              <div key={r.title} className="bg-[#FAFAFA] p-8 hover:bg-white transition-colors duration-200">
+                <div className="text-[#6B7280] mb-5">{r.icon}</div>
+                <h3 className="font-bold text-[#0A0A0A] text-lg mb-3">{r.title}</h3>
+                <p className="text-sm text-[#6B7280] leading-relaxed">{r.desc}</p>
               </div>
             ))}
           </div>
@@ -607,7 +654,7 @@ function Footer() {
         <div className="grid md:grid-cols-12 gap-10 mb-16">
           {/* Brand */}
           <div className="md:col-span-4">
-            <img src="/logo-rud.png" alt="RUD" className="h-9 mb-5 invert opacity-80" />
+            <img src="/logo-rud-white.svg" alt="RÜD — Royal Union Design" className="h-10 mb-5 opacity-85" />
             <p className="text-[#6B7280] text-sm leading-relaxed max-w-xs">
               Building bold brands with thoughtful design. Based in Spain, working globally.
             </p>
@@ -698,7 +745,7 @@ export default function Home() {
       <Stats />
       <Services />
       <Portfolio />
-      <Team />
+      <WhyRUD />
       <Testimonials />
       <Pricing />
       <Awards />

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" fill="none">
+  <!-- R -->
+  <rect x="8" y="10" width="8" height="42" fill="#FAFAFA"/>
+  <rect x="8" y="10" width="26" height="7" fill="#FAFAFA"/>
+  <rect x="26" y="10" width="8" height="22" fill="#FAFAFA"/>
+  <rect x="8" y="27" width="26" height="7" fill="#FAFAFA"/>
+  <polygon points="26,34 34,34 46,52 38,52" fill="#FAFAFA"/>
+
+  <!-- U with umlaut dots -->
+  <circle cx="65" cy="6" r="3.5" fill="#FAFAFA"/>
+  <circle cx="79" cy="6" r="3.5" fill="#FAFAFA"/>
+  <rect x="57" y="10" width="8" height="32" fill="#FAFAFA"/>
+  <rect x="79" y="10" width="8" height="32" fill="#FAFAFA"/>
+  <rect x="57" y="34" width="30" height="8" fill="#FAFAFA"/>
+
+  <!-- D with arrow cutout -->
+  <rect x="102" y="10" width="8" height="42" fill="#FAFAFA"/>
+  <rect x="102" y="10" width="22" height="7" fill="#FAFAFA"/>
+  <rect x="102" y="45" width="22" height="7" fill="#FAFAFA"/>
+  <path d="M122 10 Q138 31 122 52 L130 52 Q148 31 130 10 Z" fill="#FAFAFA"/>
+  <!-- arrow inside D -->
+  <polygon points="118,25 118,37 128,31" fill="#0A0A0A"/>
+
+  <!-- ROYAL UNION DESIGN text -->
+  <text x="8" y="70" font-family="'Inter Tight', 'Inter', sans-serif" font-size="8" font-weight="500" fill="#FAFAFA" letter-spacing="2.5">ROYAL UNION DESIGN</text>
+</svg>

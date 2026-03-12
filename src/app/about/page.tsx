@@ -1,5 +1,16 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
+
+export const metadata: Metadata = {
+  title: 'About — Brand Agency Founded in 2013',
+  description: 'RUD Studio is a brand identity and web design agency based in Spain with 12+ years of experience building brands across Europe and Australia. Meet our team and our process.',
+  keywords: ['brand agency Spain', 'branding studio Europe', 'creative agency about', 'brand design team', 'agencia branding España'],
+  openGraph: {
+    title: 'About RUD Studio — Brand Identity Agency, Spain',
+    description: 'Founded in 2013, RUD Studio has launched 100+ brands across 8 countries. Strategy-first. Small team. Long-term partnerships.',
+  },
+}
 
 export default function About() {
   const stats = [
@@ -180,30 +191,42 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="section-padding bg-[var(--surface)]">
+      {/* Studio */}
+      <section className="section-padding bg-[#F0EDE6]">
         <div className="container-custom">
-          <div className="mb-16">
-            <p className="text-sm font-medium text-[var(--muted)] uppercase tracking-widest mb-4">The Team</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--fg)]">
-              Meet the people behind the work
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member) => (
-              <div key={member.name}>
-                <div className="aspect-[3/4] overflow-hidden rounded-xl mb-5 bg-gray-100 dark:bg-gray-900">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <h3 className="font-bold text-[var(--fg)] text-lg">{member.name}</h3>
-                <p className="text-sm text-[var(--muted)] font-medium mb-3">{member.role}</p>
-                <p className="text-sm text-[var(--muted)] leading-relaxed">{member.bio}</p>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-4">The Studio</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-6 leading-tight">
+                A small studio that punches well above its weight
+              </h2>
+              <div className="space-y-4 text-[#6B7280] leading-relaxed">
+                <p>
+                  RUD operates as a focused team of four core members — a creative director, a brand strategist, a lead developer, and a UX designer — supported by a trusted network of photographers, copywriters, illustrators, and motion designers we bring in when a project demands it.
+                </p>
+                <p>
+                  This structure means you get the quality and specialisation of a full-service agency without the overhead, the account managers, or the hours billed for internal meetings you were never part of.
+                </p>
+                <p>
+                  We are deliberately selective about the clients we take on. We work best with founders, marketing directors, and brand managers who care deeply about quality — and who understand that good design is an investment, not a cost.
+                </p>
               </div>
-            ))}
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { label: 'Brand Strategy', detail: 'Market positioning & messaging' },
+                { label: 'Visual Identity', detail: 'Logo systems, colour & type' },
+                { label: 'Web Design', detail: 'Figma-to-pixel, conversion-led' },
+                { label: 'Development', detail: 'Next.js · 90+ Lighthouse' },
+                { label: 'Content Creation', detail: 'Art direction & copywriting' },
+                { label: 'Digital Marketing', detail: 'SEO, social & paid media' },
+              ].map(({ label, detail }) => (
+                <div key={label} className="bg-white rounded-xl p-5 border border-[#E5E2DC]">
+                  <p className="font-semibold text-[#0A0A0A] text-sm mb-1">{label}</p>
+                  <p className="text-xs text-[#9CA3AF]">{detail}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
