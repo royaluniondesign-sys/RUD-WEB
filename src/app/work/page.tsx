@@ -5,14 +5,14 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 
 const projects = [
-  { name: 'Future Fur',          category: 'Branding',    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80', slug: 'future-fur',          desc: 'Brand identity for lifestyle brand',         year: '2025' },
-  { name: 'BresicWhitney',       category: 'Web Design',  image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80', slug: 'bresicwhitney',       desc: 'Website for a leading real estate agency',   year: '2025' },
-  { name: 'Edlyn 1929',          category: 'Branding',    image: 'https://images.unsplash.com/photo-1604871000636-074fa5117945?w=800&q=80', slug: 'edlyn-1929',          desc: 'Rebranding for heritage food company',       year: '2025' },
-  { name: 'Shadey',              category: 'Design',      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80', slug: 'shadey',              desc: 'Identity for interiors brand',               year: '2025' },
-  { name: 'Associated Concepts', category: 'Branding',    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80', slug: 'associated-concepts', desc: 'Identity for financial services firm',        year: '2025' },
-  { name: "Wood's",              category: 'Branding',    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80', slug: 'woods',               desc: '100% Australian gourmet brand identity',     year: '2025' },
-  { name: 'Location',            category: 'Real Estate', image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80', slug: 'location',            desc: 'Luxury real estate platform',                year: '2025' },
-  { name: 'Marshall White',      category: 'Web Design',  image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80', slug: 'marshall-white',      desc: "Melbourne's premier property experts",       year: '2025' },
+  { name: 'BresicWhitney',       category: 'Web Design',  image: '/work1.jpg',                                                              slug: 'bresicwhitney',       desc: 'Complete digital overhaul — 40% increase in qualified leads',  year: '2025' },
+  { name: 'Edlyn 1929',          category: 'Branding',    image: '/work2.jpg',                                                              slug: 'edlyn-1929',          desc: 'Heritage rebranding — stocked in 200+ new retail locations',   year: '2025' },
+  { name: 'Future Fur',          category: 'Branding',    image: '/work3.jpg',                                                              slug: 'future-fur',          desc: 'Brand identity — launched in 80+ boutiques within 6 months',   year: '2025' },
+  { name: 'Marshall White',      category: 'Web Design',  image: '/work4.jpg',                                                              slug: 'marshall-white',      desc: 'Premium digital presence — shortlisted for Australian Web Award', year: '2025' },
+  { name: 'Shadey',              category: 'Design',      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80', slug: 'shadey',              desc: 'Brand identity for premium window furnishings',                year: '2025' },
+  { name: 'Associated Concepts', category: 'Branding',    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80', slug: 'associated-concepts', desc: 'Identity for a 30-year financial planning firm',               year: '2025' },
+  { name: "Wood's",              category: 'Branding',    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80', slug: 'woods',               desc: '100% Australian gourmet brand — Best New Brand award',         year: '2025' },
+  { name: 'Location',            category: 'Real Estate', image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',   slug: 'location',            desc: 'Luxury real estate brand — Southern Sydney market',            year: '2025' },
 ]
 
 const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))]

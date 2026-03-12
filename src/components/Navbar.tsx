@@ -3,10 +3,10 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import DarkModeToggle from './DarkModeToggle'
 
 const links = [
   { href: '/work', label: 'Work' },
+  { href: '/services', label: 'Services' },
   { href: '/about', label: 'About' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/blog', label: 'Blog' },
@@ -18,100 +18,100 @@ export default function Navbar() {
   const pathname = usePathname()
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
+    const onScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Close mobile menu on route change
   useEffect(() => { setMenuOpen(false) }, [pathname])
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[var(--bg)]/90 backdrop-blur-md border-b border-[var(--border)] shadow-sm'
+          ? 'bg-[#FAFAFA]/95 backdrop-blur-md border-b border-[#E5E2DC]'
           : 'bg-transparent'
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-[72px]">
+
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center group">
             <img
-              src="/logo-rud.png"
-              alt="RUD"
-              className="h-10 transition-transform duration-200 group-hover:scale-105 dark:invert"
+              src="/logo-rud-black.svg"
+              alt="RÜD — Royal Union Design"
+              className="h-10 transition-opacity duration-200 group-hover:opacity-60"
             />
           </Link>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
-            {links.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className={`text-sm font-medium transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-200 hover:after:w-full ${
-                  pathname === href
-                    ? 'text-[var(--fg)] after:w-full'
-                    : 'text-[var(--muted)] hover:text-[var(--fg)]'
-                }`}
-              >
-                {label}
-              </Link>
-            ))}
+            {links.map(({ href, label }) => {
+              const active = pathname === href || pathname.startsWith(href + '/')
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  className={`text-sm font-medium transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#0A0A0A] after:transition-all after:duration-300 ${
+                    active
+                      ? 'text-[#0A0A0A] after:w-full'
+                      : 'text-[#6B7280] hover:text-[#0A0A0A] after:w-0 hover:after:w-full'
+                  }`}
+                >
+                  {label}
+                </Link>
+              )
+            })}
           </div>
 
           {/* Right side */}
           <div className="flex items-center gap-3">
-            <DarkModeToggle />
             <Link
               href="/contact"
-              className="hidden md:inline-flex px-5 py-2.5 bg-[var(--fg)] text-[var(--bg)] text-sm font-medium rounded-full hover:opacity-80 transition-opacity duration-200"
+              className="hidden md:inline-flex btn-primary py-2.5 px-5 text-sm"
             >
               Let&apos;s Talk
             </Link>
 
-            {/* Hamburger */}
+            {/* Hamburger — mobile only */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
+              className="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 rounded-full border border-[#E5E2DC] hover:border-[#0A0A0A] transition-colors duration-200"
               aria-label="Toggle menu"
-              className="md:hidden w-9 h-9 flex flex-col items-center justify-center gap-1.5"
             >
-              <span className={`block w-5 h-px bg-[var(--fg)] transition-all duration-300 origin-center ${menuOpen ? 'rotate-45 translate-y-[3px]' : ''}`} />
-              <span className={`block h-px bg-[var(--fg)] transition-all duration-300 ${menuOpen ? 'w-0 opacity-0' : 'w-5 opacity-100'}`} />
-              <span className={`block w-5 h-px bg-[var(--fg)] transition-all duration-300 origin-center ${menuOpen ? '-rotate-45 -translate-y-[3px]' : ''}`} />
+              <span className={`block w-4 h-0.5 bg-[#0A0A0A] rounded transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+              <span className={`block h-0.5 bg-[#0A0A0A] rounded transition-all duration-300 ${menuOpen ? 'opacity-0 w-0' : 'w-4'}`} />
+              <span className={`block w-4 h-0.5 bg-[#0A0A0A] rounded transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
             </button>
           </div>
         </div>
       </div>
 
       {/* Mobile menu */}
-      <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          menuOpen ? 'max-h-64 border-t border-[var(--border)]' : 'max-h-0'
-        } bg-[var(--bg)]`}
-      >
-        <div className="container-custom py-4 flex flex-col gap-4">
-          {links.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`text-sm font-medium py-1 ${
-                pathname === href ? 'text-[var(--fg)]' : 'text-[var(--muted)]'
-              }`}
-            >
-              {label}
+      {menuOpen && (
+        <div className="md:hidden bg-[#FAFAFA] border-b border-[#E5E2DC] shadow-sm">
+          <div className="container-custom py-5 flex flex-col gap-1">
+            {links.map(({ href, label }) => {
+              const active = pathname === href || pathname.startsWith(href + '/')
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  className={`py-3 text-sm font-medium border-b border-[#F0EDE6] last:border-0 ${
+                    active ? 'text-[#0A0A0A]' : 'text-[#6B7280]'
+                  }`}
+                >
+                  {label}
+                </Link>
+              )
+            })}
+            <Link href="/contact" className="btn-primary mt-4 justify-center text-sm">
+              Let&apos;s Talk
             </Link>
-          ))}
-          <Link
-            href="/contact"
-            className="inline-flex w-fit px-5 py-2.5 bg-[var(--fg)] text-[var(--bg)] text-sm font-medium rounded-full"
-          >
-            Let&apos;s Talk
-          </Link>
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   )
 }
