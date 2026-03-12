@@ -138,7 +138,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#9CA3AF] mb-1">Location</p>
-                    <p className="text-[#0A0A0A] font-medium">Spain — working globally</p>
+                    <p className="text-[#0A0A0A] font-medium">Barcelona, Spain — working globally</p>
                     <p className="text-[#9CA3AF] text-sm mt-0.5">Available for projects worldwide</p>
                   </div>
                 </div>

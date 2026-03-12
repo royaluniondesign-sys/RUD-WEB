@@ -10,11 +10,9 @@ import NewsletterForm from '@/components/NewsletterForm'
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 
 function Hero() {
-  const clients = ['BresicWhitney', 'Future Fur', 'Edlyn 1929', 'Marshall White', 'Location', "Wood's", 'Associated Concepts', 'Shadey']
-
   return (
-    <section className="hero-gradient min-h-screen flex flex-col pt-[72px] relative overflow-hidden">
-      <div className="container-custom flex-1 flex flex-col justify-center py-16 md:py-24">
+    <section className="hero-gradient min-h-screen flex items-center pt-[72px] relative overflow-hidden">
+      <div className="container-custom py-16 md:py-24">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 mb-8 animate-fade-in-up">
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/70 border border-[#E5E2DC] rounded-full text-xs font-medium text-[#6B7280] backdrop-blur-sm">
@@ -45,22 +43,6 @@ function Hero() {
           </Link>
         </div>
       </div>
-
-      {/* Client ticker */}
-      <div className="border-t border-[#E5E2DC] bg-white/50 backdrop-blur-sm py-4 overflow-hidden">
-        <p className="container-custom text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">
-          Trusted by leading brands
-        </p>
-        <div className="flex">
-          <div className="flex items-center gap-16 animate-marquee marquee-track whitespace-nowrap">
-            {[...clients, ...clients].map((client, i) => (
-              <span key={i} className="text-sm font-medium text-[#C4BFB8] uppercase tracking-widest flex-shrink-0">
-                {client}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
     </section>
   )
 }
@@ -69,10 +51,10 @@ function Hero() {
 
 function Stats() {
   const stats = [
-    { num: '+12', label: 'Years of\nExperience' },
-    { num: '+100', label: 'Brands\nBuilt' },
-    { num: '98%', label: 'Client\nRetention' },
-    { num: '+8', label: 'Countries\nServed' },
+    { num: '$0', label: 'AI Operational\nCost' },
+    { num: '100%', label: 'Local\nInfrastructure' },
+    { num: '2', label: 'Specialized\nSubsidiaries' },
+    { num: '6', label: 'Core\nServices' },
   ]
 
   return (
@@ -83,10 +65,7 @@ function Stats() {
             <ScrollReveal key={i} delay={i * 80}>
               <div className="px-6 md:px-10 py-4 first:pl-0 last:pr-0">
                 <p className="stat-number text-[#0A0A0A]">
-                  <span className="text-[0.45em] align-super font-bold text-[#C4BFB8] mr-0.5">
-                    {stat.num.startsWith('+') ? '+' : ''}
-                  </span>
-                  {stat.num.replace('+', '')}
+                  {stat.num}
                 </p>
                 <p className="text-xs text-[#9CA3AF] font-medium mt-1 uppercase tracking-wider whitespace-pre-line leading-tight">
                   {stat.label}
@@ -111,7 +90,7 @@ function Services() {
     { num: '03', title: 'Web Design',        desc: 'Sites that look remarkable and perform measurably. We design in Figma with conversion in mind, then hand off pixel-perfect specs so nothing is lost in translation.' },
     { num: '04', title: 'Development',       desc: 'Next.js, React, and clean TypeScript. We build sites that score 90+ on Lighthouse, load in under 2 seconds, and scale as your business grows.' },
     { num: '05', title: 'Content Creation',  desc: 'Art direction, copywriting, and photography briefs that tell your story consistently. We make sure your brand sounds as good as it looks.' },
-    { num: '06', title: 'Digital Marketing', desc: 'SEO foundations built into every site we deliver. Plus social strategy, email campaigns, and paid media frameworks to put your new brand in front of the right people.' },
+    { num: '06', title: 'AI Automation',     desc: 'Intelligent workflows, autonomous assistants, and AI-powered systems built on local infrastructure via CHARIOT.' },
   ]
 
   return (
@@ -122,6 +101,10 @@ function Services() {
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">What We Do</p>
               <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight">Services</h2>
+              <p className="text-xs text-[#9CA3AF] mt-3 leading-relaxed">
+                RUD operates through two specialized subsidiaries:<br />
+                <span className="text-[#6B7280] font-medium">IDNT</span> — Brand &amp; Visual Identity &nbsp;·&nbsp; <span className="text-[#6B7280] font-medium">CHARIOT</span> — AI Automation &amp; Intelligent Assistants
+              </p>
             </div>
             <Link href="/services" className="inline-flex items-center gap-2 text-sm font-medium text-[#6B7280] hover:text-[#0A0A0A] hover:gap-4 transition-all duration-200">
               All services
@@ -176,36 +159,28 @@ function Services() {
 function Portfolio() {
   const projects = [
     {
-      name: 'Marshall White',
-      tags: ['Brand Identity', 'Web Design', '2025'],
-      desc: 'Luxury real estate brand built for digital-first buyers',
-      image: '/work4.jpg',
-      slug: 'marshall-white',
-      accent: '#1A1A1A',
+      name: 'IDNT',
+      subtitle: 'Brand Identity System',
+      tags: ['Branding', '2025'],
+      desc: 'Full visual identity system developed under RUD\'s IDNT subsidiary.',
+      gradient: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
+      slug: 'idnt',
     },
     {
-      name: 'BresicWhitney',
-      tags: ['Web Design', 'Strategy', '2025'],
-      desc: '+40% qualified leads — complete digital platform',
-      image: '/work2.jpg',
-      slug: 'bresicwhitney',
-      accent: '#1A2F45',
+      name: 'CHARIOT',
+      subtitle: 'AI Automation Suite',
+      tags: ['AI', '2025'],
+      desc: 'Autonomous AI assistant product built for agency-scale automation.',
+      gradient: 'linear-gradient(135deg, #0f3460 0%, #533483 100%)',
+      slug: 'chariot',
     },
     {
-      name: 'Edlyn 1929',
-      tags: ['Brand Identity', 'Packaging', '2024'],
-      desc: 'Century-old artisan brand repositioned for global retail',
-      image: '/work1.jpg',
-      slug: 'edlyn-1929',
-      accent: '#3D2B1F',
-    },
-    {
-      name: 'Future Fur',
-      tags: ['Branding', 'Visual Identity', '2024'],
-      desc: 'Bold brand system for a category-defining sustainable label',
-      image: '/work3.jpg',
-      slug: 'future-fur',
-      accent: '#1F2F1F',
+      name: 'RUD Web Platform',
+      subtitle: null,
+      tags: ['Web Design', '2025'],
+      desc: 'Digital presence for Royal Union Design — strategy, design and development.',
+      gradient: 'linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%)',
+      slug: 'rud-web',
     },
   ]
 
@@ -228,23 +203,13 @@ function Portfolio() {
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
             <ScrollReveal key={project.slug} delay={i * 80}>
-              <Link href={`/work/${project.slug}`} className="group block">
+              <div className="group block">
                 <div
-                  className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-4"
-                  style={{ background: project.accent }}
+                  className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-4 group-hover:opacity-90 transition-opacity duration-300"
+                  style={{ background: project.gradient }}
                 >
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-400 rounded-2xl" />
-
-                  {/* Arrow overlay */}
-                  <div className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0 shadow-md">
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                      <path d="M3 13L13 3M13 3H6M13 3v7" stroke="#0A0A0A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                  <div className="absolute inset-0 flex items-end p-6">
+                    <span className="text-white/20 text-6xl font-bold tracking-tight leading-none">{project.name}</span>
                   </div>
                 </div>
 
@@ -255,15 +220,31 @@ function Portfolio() {
                         <span key={tag} className="tag-pill">{tag}</span>
                       ))}
                     </div>
-                    <h3 className="text-xl font-bold text-[#0A0A0A] group-hover:underline underline-offset-4 decoration-2">
-                      {project.name}
+                    <h3 className="text-xl font-bold text-[#0A0A0A]">
+                      {project.name}{project.subtitle ? ` — ${project.subtitle}` : ''}
                     </h3>
                     <p className="text-sm text-[#6B7280] mt-1">{project.desc}</p>
                   </div>
                 </div>
-              </Link>
+              </div>
             </ScrollReveal>
           ))}
+
+          {/* Coming Soon slot */}
+          <ScrollReveal delay={3 * 80}>
+            <div className="group block">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-4 border border-dashed border-[#D1CDC6] bg-[#F8F5F0] flex items-center justify-center">
+                <p className="text-sm font-medium text-[#C4BFB8] uppercase tracking-widest">Coming Soon</p>
+              </div>
+              <div>
+                <div className="flex flex-wrap gap-1.5 mb-2">
+                  <span className="tag-pill">2025</span>
+                </div>
+                <h3 className="text-xl font-bold text-[#C4BFB8]">Next Project</h3>
+                <p className="text-sm text-[#C4BFB8] mt-1">In progress.</p>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
@@ -366,79 +347,20 @@ function WhyRUD() {
   )
 }
 
-// ─── Testimonials ─────────────────────────────────────────────────────────────
+// ─── Work Speaks ──────────────────────────────────────────────────────────────
 
-function Testimonials() {
-  const testimonials = [
-    {
-      text: 'After our rebrand with RUD, digital enquiries increased 40% in the first quarter. They understood the Sydney real estate market deeply and translated that into design that genuinely converts.',
-      name: 'Tim Grace',
-      role: 'Principal, BresicWhitney',
-      metric: '+40%',
-      metricLabel: 'Digital Enquiries',
-    },
-    {
-      text: 'Modernising a 95-year-old brand without losing its soul is not easy. RUD handled every detail with care — from the logo system to the packaging guidelines. The press response has been exceptional.',
-      name: 'Sophie Edlyn',
-      role: 'Brand Director, Edlyn 1929',
-      metric: '200+',
-      metricLabel: 'New Stockists',
-    },
-    {
-      text: 'We were a seed-funded startup with zero brand equity. RUD gave us an identity that punches well above our weight. We\'ve since been stocked in over 80 boutiques and raised Series A funding.',
-      name: 'James Harwood',
-      role: 'CEO, Future Fur',
-      metric: '80+',
-      metricLabel: 'Boutique Stockists',
-    },
-  ]
-
+function WorkSpeaks() {
   return (
     <section className="section-padding bg-[#F0EDE6]">
       <div className="container-custom">
         <ScrollReveal>
-          <div className="mb-14">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">Testimonials</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight">
-              91% of clients recommend
+          <div className="max-w-2xl">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-6">Our Philosophy</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight leading-tight">
+              We let our work
               <br />
-              <span className="italic font-light text-[#9CA3AF]">our services</span>
+              <span className="italic font-light text-[#9CA3AF]">speak for itself.</span>
             </h2>
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal className="stagger">
-          <div className="grid md:grid-cols-3 gap-5">
-            {testimonials.map((t, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-2xl p-8 flex flex-col gap-6 border border-[#E5E2DC] hover:shadow-md transition-shadow duration-300"
-              >
-                {/* Stars */}
-                <div className="flex gap-1">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <svg key={s} width="13" height="13" viewBox="0 0 24 24" fill="#F59E0B">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                  ))}
-                </div>
-
-                <p className="text-[#374151] leading-relaxed flex-1 text-sm">
-                  &ldquo;{t.text}&rdquo;
-                </p>
-
-                <div className="flex items-center justify-between pt-4 border-t border-[#F0EDE6]">
-                  <div>
-                    <p className="font-semibold text-[#0A0A0A] text-sm">{t.name}</p>
-                    <p className="text-[#9CA3AF] text-xs mt-0.5">{t.role}</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-2xl font-bold text-[#0A0A0A] leading-tight">{t.metric}</p>
-                    <p className="text-[10px] text-[#9CA3AF] uppercase tracking-wide">{t.metricLabel}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </ScrollReveal>
       </div>
@@ -528,37 +450,6 @@ function Pricing() {
             ))}
           </div>
         </ScrollReveal>
-      </div>
-    </section>
-  )
-}
-
-// ─── Awards ───────────────────────────────────────────────────────────────────
-
-function Awards() {
-  const awards = [
-    { year: '2024', name: 'Framer Awards', desc: 'Celebrated for cutting-edge interaction design' },
-    { year: '2023', name: 'Dribbble Awards', desc: 'Recognised for creative excellence in branding' },
-    { year: '2022', name: 'awwwards', desc: 'Honoured with Site of the Day — Best Design' },
-  ]
-
-  return (
-    <section className="bg-[#0A0A0A] py-16">
-      <div className="container-custom">
-        <ScrollReveal>
-          <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#4B5563] mb-8">Recognition</p>
-        </ScrollReveal>
-        <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#1F2937]">
-          {awards.map((award, i) => (
-            <ScrollReveal key={i} delay={i * 80}>
-              <div className="py-8 md:py-0 md:px-10 first:pl-0 last:pr-0">
-                <p className="text-xs font-mono text-[#4B5563] mb-3">{award.year}</p>
-                <h3 className="text-xl font-bold text-white mb-2">{award.name}</h3>
-                <p className="text-sm text-[#6B7280] leading-relaxed">{award.desc}</p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
       </div>
     </section>
   )
@@ -654,10 +545,11 @@ function Footer() {
         <div className="grid md:grid-cols-12 gap-10 mb-16">
           {/* Brand */}
           <div className="md:col-span-4">
-            <img src="/logo-rud.png" alt="RÜD — Royal Union Design" className="h-10 mb-5" style={{ filter: 'brightness(0) invert(1)', opacity: 0.9 }} />
+            <img src="/logo-rud-white.svg" alt="RÜD — Royal Union Design" className="h-10 mb-5" style={{ opacity: 0.9 }} />
             <p className="text-[#6B7280] text-sm leading-relaxed max-w-xs">
-              Building bold brands with thoughtful design. Based in Spain, working globally.
+              Building bold brands with thoughtful design. Based in Barcelona, Spain, working globally.
             </p>
+            <p className="text-[#4B5563] text-xs mt-3 tracking-wide">IDNT · CHARIOT</p>
             <div className="mt-6">
               <p className="text-xs font-medium text-[#9CA3AF] mb-2">Stay in the loop</p>
               <NewsletterForm />
@@ -701,7 +593,7 @@ function Footer() {
                   hello@rud.studio
                 </a>
               </li>
-              <li>Spain</li>
+              <li>Barcelona, Spain</li>
               <li className="text-[#4B5563]">Available worldwide</li>
             </ul>
             <div className="flex gap-2.5 mt-6">
@@ -746,9 +638,8 @@ export default function Home() {
       <Services />
       <Portfolio />
       <WhyRUD />
-      <Testimonials />
+      <WorkSpeaks />
       <Pricing />
-      <Awards />
       <FAQ />
       <CTA />
       <Footer />

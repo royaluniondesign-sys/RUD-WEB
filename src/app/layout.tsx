@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | RUD Studio",
   },
   description:
-    "RUD is a creative brand agency based in Spain specialising in brand strategy, visual identity, web design and digital marketing for startups and growing businesses across Europe and Australia.",
+    "RUD is a creative brand agency based in Barcelona, Spain specialising in brand strategy, visual identity, web design and digital marketing for startups and growing businesses across Europe and Australia.",
   keywords: [
     "brand agency Spain",
     "branding agency Europe",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "RUD Studio",
     title: "RUD — Brand Identity & Web Design Agency",
     description:
-      "Creative brand agency based in Spain. Brand strategy, visual identity, web design and digital marketing for startups and growing businesses.",
+      "Creative brand agency based in Barcelona, Spain. Brand strategy, visual identity, web design and digital marketing for startups and growing businesses.",
     images: [
       {
         url: "/og-image.png",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RUD — Brand Identity & Web Design Agency",
     description:
-      "Creative brand agency based in Spain. Brand strategy, visual identity, web design and digital marketing.",
+      "Creative brand agency based in Barcelona, Spain. Brand strategy, visual identity, web design and digital marketing.",
     images: ["/og-image.png"],
   },
   robots: {

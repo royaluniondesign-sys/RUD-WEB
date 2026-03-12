@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 
 export default function About() {
   const stats = [
-    { num: '12+', label: 'Years of Experience', sub: 'Building brands since 2013' },
-    { num: '100+', label: 'Brands Launched', sub: 'Across 8 countries worldwide' },
-    { num: '98%', label: 'Client Retention', sub: 'Long-term partnerships' },
-    { num: '8', label: 'Countries', sub: 'Europe, Australia, Americas' },
+    { num: '$0', label: 'AI Operational Cost', sub: 'Fully local infrastructure' },
+    { num: '100%', label: 'Local Infrastructure', sub: 'No external AI costs' },
+    { num: '2', label: 'Specialized Subsidiaries', sub: 'IDNT · CHARIOT' },
+    { num: '6', label: 'Core Services', sub: 'Strategy to execution' },
   ]
 
   const values = [
@@ -56,33 +56,6 @@ export default function About() {
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
         </svg>
       ),
-    },
-  ]
-
-  const team = [
-    {
-      name: 'Alex Ruiz',
-      role: 'Creative Director',
-      bio: '12 years designing for ambitious brands across Europe and Australia. Formerly at Wolff Olins and Moving Brands. Believes the best ideas come from asking uncomfortable questions.',
-      image: '/team1.jpg',
-    },
-    {
-      name: 'Maria Santos',
-      role: 'Brand Strategist',
-      bio: 'Ex-management consultant turned brand builder. Spent 6 years advising FMCG and retail businesses before moving agency-side. Helps clients find the clarity they didn\'t know they were missing.',
-      image: '/team2.jpg',
-    },
-    {
-      name: 'Daniel Park',
-      role: 'Lead Developer',
-      bio: 'Full-stack engineer with a design eye. Builds sites in Next.js and React that score 95+ on Lighthouse and hold up under real traffic. Cares deeply about accessibility and performance.',
-      image: '/team3.jpg',
-    },
-    {
-      name: 'Sofia Torres',
-      role: 'UX Designer',
-      bio: 'Background in cognitive psychology, which makes her unusually good at understanding why people do what they do online — and designing around it. Obsessed with the space between aesthetics and function.',
-      image: '/team4.jpg',
     },
   ]
 
@@ -152,7 +125,7 @@ export default function About() {
                   Through all of it, the thing that has stayed constant is the way we work: small, focused teams. Direct relationships. A commitment to craft that means we only take on as much work as we can do properly. We have turned down faster growth to preserve the quality of what we deliver — and the clients who stay with us for years tell us it was the right call.
                 </p>
                 <p>
-                  Today, RUD is a team of eight: four core studio members plus a trusted network of photographers, copywriters, and specialists we bring in when a project demands it. Based in Spain, working globally.
+                  Today, RUD operates through two specialized subsidiaries — IDNT for brand and visual identity, and CHARIOT for AI automation — supported by a trusted network of photographers, copywriters, and specialists we bring in when a project demands it. Based in Barcelona, Spain, working globally.
                 </p>
               </div>
             </div>
@@ -219,7 +192,7 @@ export default function About() {
                 { label: 'Web Design', detail: 'Figma-to-pixel, conversion-led' },
                 { label: 'Development', detail: 'Next.js · 90+ Lighthouse' },
                 { label: 'Content Creation', detail: 'Art direction & copywriting' },
-                { label: 'Digital Marketing', detail: 'SEO, social & paid media' },
+                { label: 'AI Automation', detail: 'CHARIOT — local infrastructure' },
               ].map(({ label, detail }) => (
                 <div key={label} className="bg-white rounded-xl p-5 border border-[#E5E2DC]">
                   <p className="font-semibold text-[#0A0A0A] text-sm mb-1">{label}</p>
