@@ -5,14 +5,14 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 
 const projects = [
-  { name: 'BresicWhitney',       category: 'Web Design',  image: '/work1.jpg',                                                              slug: 'bresicwhitney',       desc: 'Complete digital overhaul — 40% increase in qualified leads',  year: '2025' },
-  { name: 'Edlyn 1929',          category: 'Branding',    image: '/work2.jpg',                                                              slug: 'edlyn-1929',          desc: 'Heritage rebranding — stocked in 200+ new retail locations',   year: '2025' },
-  { name: 'Future Fur',          category: 'Branding',    image: '/work3.jpg',                                                              slug: 'future-fur',          desc: 'Brand identity — launched in 80+ boutiques within 6 months',   year: '2025' },
-  { name: 'Marshall White',      category: 'Web Design',  image: '/work4.jpg',                                                              slug: 'marshall-white',      desc: 'Premium digital presence — shortlisted for Australian Web Award', year: '2025' },
-  { name: 'Shadey',              category: 'Design',      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80', slug: 'shadey',              desc: 'Brand identity for premium window furnishings',                year: '2025' },
-  { name: 'Associated Concepts', category: 'Branding',    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80', slug: 'associated-concepts', desc: 'Identity for a 30-year financial planning firm',               year: '2025' },
-  { name: "Wood's",              category: 'Branding',    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80', slug: 'woods',               desc: '100% Australian gourmet brand — Best New Brand award',         year: '2025' },
-  { name: 'Location',            category: 'Real Estate', image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',   slug: 'location',            desc: 'Luxury real estate brand — Southern Sydney market',            year: '2025' },
+  { name: 'Marshall White',      category: 'Branding',    image: '/work4.jpg',   slug: 'marshall-white',      desc: 'Luxury real estate brand built for a digital-first market',        year: '2025' },
+  { name: 'BresicWhitney',       category: 'Web Design',  image: '/work2.jpg',   slug: 'bresicwhitney',       desc: 'Full digital platform overhaul — 40% increase in qualified leads',  year: '2025' },
+  { name: 'Edlyn 1929',          category: 'Branding',    image: '/work1.jpg',   slug: 'edlyn-1929',          desc: 'Century-old artisan brand repositioned for global retail',          year: '2024' },
+  { name: 'Future Fur',          category: 'Branding',    image: '/work3.jpg',   slug: 'future-fur',          desc: 'Bold identity for a category-defining sustainable fashion label',    year: '2024' },
+  { name: 'Location',            category: 'Real Estate', image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=85', slug: 'location',  desc: 'Premium real estate brand — Southern Sydney luxury market',         year: '2024' },
+  { name: 'Shadey',              category: 'Design',      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=85', slug: 'shadey',    desc: 'Brand identity for a boutique window furnishing studio',            year: '2024' },
+  { name: 'Associated Concepts', category: 'Branding',    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=85', slug: 'associated-concepts', desc: 'Repositioned identity for a 30-year financial advisory firm', year: '2023' },
+  { name: "Wood's",              category: 'Branding',    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=85', slug: 'woods',     desc: 'Gourmet food brand — winner Best New Brand, Sydney Design Awards', year: '2023' },
 ]
 
 const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))]

@@ -176,36 +176,36 @@ function Services() {
 function Portfolio() {
   const projects = [
     {
+      name: 'Marshall White',
+      tags: ['Brand Identity', 'Web Design', '2025'],
+      desc: 'Luxury real estate brand built for digital-first buyers',
+      image: '/work4.jpg',
+      slug: 'marshall-white',
+      accent: '#1A1A1A',
+    },
+    {
       name: 'BresicWhitney',
-      tags: ['Web Design', '2025'],
-      desc: '+40% qualified leads — complete digital overhaul',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=90',
+      tags: ['Web Design', 'Strategy', '2025'],
+      desc: '+40% qualified leads — complete digital platform',
+      image: '/work2.jpg',
       slug: 'bresicwhitney',
       accent: '#1A2F45',
     },
     {
       name: 'Edlyn 1929',
-      tags: ['Brand Identity', '2025'],
-      desc: '200+ new retail locations after rebrand',
-      image: 'https://images.unsplash.com/photo-1614632537190-23e4146777db?w=900&q=90',
+      tags: ['Brand Identity', 'Packaging', '2024'],
+      desc: 'Century-old artisan brand repositioned for global retail',
+      image: '/work1.jpg',
       slug: 'edlyn-1929',
       accent: '#3D2B1F',
     },
     {
       name: 'Future Fur',
-      tags: ['Branding', '2025'],
-      desc: '80+ boutiques in 6 months — Series A raised',
-      image: 'https://images.unsplash.com/photo-1623039405147-547794f92e9e?w=900&q=90',
+      tags: ['Branding', 'Visual Identity', '2024'],
+      desc: 'Bold brand system for a category-defining sustainable label',
+      image: '/work3.jpg',
       slug: 'future-fur',
       accent: '#1F2F1F',
-    },
-    {
-      name: 'Marshall White',
-      tags: ['Web Design', '2025'],
-      desc: 'Shortlisted for Australian Web Award',
-      image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=900&q=90',
-      slug: 'marshall-white',
-      accent: '#222222',
     },
   ]
 
@@ -654,7 +654,7 @@ function Footer() {
         <div className="grid md:grid-cols-12 gap-10 mb-16">
           {/* Brand */}
           <div className="md:col-span-4">
-            <img src="/logo-rud-white.svg" alt="RÜD — Royal Union Design" className="h-10 mb-5 opacity-85" />
+            <img src="/logo-rud.png" alt="RÜD — Royal Union Design" className="h-10 mb-5" style={{ filter: 'brightness(0) invert(1)', opacity: 0.9 }} />
             <p className="text-[#6B7280] text-sm leading-relaxed max-w-xs">
               Building bold brands with thoughtful design. Based in Spain, working globally.
             </p>

@@ -35,12 +35,9 @@ export default function Contact() {
     setError('')
 
     try {
-      const res = await fetch('https://formspree.io/f/xpwzgvry', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
@@ -48,8 +45,6 @@ export default function Contact() {
           projectType: formData.projectType,
           budget: formData.budget,
           message: formData.message,
-          _replyto: formData.email,
-          _subject: `New project enquiry from ${formData.name} — ${formData.projectType || 'General'}`,
         }),
       })
 
