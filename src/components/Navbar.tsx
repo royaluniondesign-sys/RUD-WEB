@@ -39,9 +39,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <img
-              src="/logo-rud.png"
+              src="/logo-rud-black.svg"
               alt="RÜD — Royal Union Design"
-              className="h-10 transition-opacity duration-200 group-hover:opacity-60"
+              className="h-10 w-auto transition-opacity duration-200 group-hover:opacity-60"
             />
           </Link>
 

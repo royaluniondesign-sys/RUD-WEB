@@ -11,9 +11,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Name, email and message are required.' }, { status: 400 })
     }
 
+    const fromDomain = process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev'
+    const toEmail = process.env.CONTACT_TO_EMAIL ?? 'hello@rud.studio'
+
     const { error } = await resend.emails.send({
-      from: 'RÜD Studio Contact <hello@rud.studio>',
-      to: ['hello@rud.studio'],
+      from: `RÜD Studio Contact <${fromDomain}>`,
+      to: [toEmail],
       replyTo: email,
       subject: `New enquiry from ${name}${company ? ` — ${company}` : ''} · ${projectType || 'General'}`,
       html: `
