@@ -54,21 +54,20 @@ const faqsGeneral = [
 
 export default function FAQ() {
   return (
-    <main className="min-h-screen bg-[var(--bg)]">
+    <main style={{ minHeight: '100vh', background: '#F7F5F1' }}>
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-36 pb-20 hero-gradient">
-        <div className="container-custom">
+      <section className="hero-gradient" style={{ paddingTop: 68 }}>
+        <div className="container-custom" style={{ paddingTop: 'clamp(3.5rem,8vw,6rem)', paddingBottom: 'clamp(2.5rem,5vw,4rem)' }}>
           <ScrollReveal>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9CA3AF] mb-4">FAQ</p>
-            <h1 className="font-bold text-[var(--fg)] tracking-tight mb-6"
-              style={{ fontSize: 'clamp(2.2rem, 5vw, 4.5rem)', letterSpacing: '-0.03em' }}>
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#9CA3AF', marginBottom: 14 }}>FAQ</p>
+            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, letterSpacing: '-0.03em', color: '#0A0908', marginBottom: 16, lineHeight: 1.1, maxWidth: 600 }}>
               Preguntas frecuentes
             </h1>
-            <p className="text-lg text-[var(--muted)] max-w-xl leading-relaxed">
+            <p style={{ fontSize: 'clamp(0.875rem,1.5vw,1.05rem)', color: '#6B7280', maxWidth: 520, lineHeight: 1.7 }}>
               Todo lo que necesitas saber sobre trabajar con nosotros. ¿No encuentras tu respuesta?{' '}
-              <Link href="/contact" className="text-[var(--fg)] font-medium underline underline-offset-2 hover:no-underline">
+              <Link href="/contact" style={{ color: '#0A0908', fontWeight: 500, textDecoration: 'underline', textUnderlineOffset: 3 }}>
                 Escríbenos.
               </Link>
             </p>
@@ -77,9 +76,9 @@ export default function FAQ() {
       </section>
 
       {/* FAQ Accordion */}
-      <section className="section-padding" style={{ background: '#FAFAFA' }}>
+      <section style={{ background: '#FAFAFA', paddingBlock: 'clamp(3rem,8vw,5rem)' }}>
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
+          <div style={{ maxWidth: 720, margin: '0 auto' }}>
             <ScrollReveal delay={100}>
               <FAQAccordion faqs={faqsGeneral} />
             </ScrollReveal>
@@ -88,24 +87,23 @@ export default function FAQ() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding" style={{ background: '#F0EDE6' }}>
+      <section style={{ background: '#F0EDE6', paddingBlock: 'clamp(3rem,8vw,5rem)' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <div style={{ maxWidth: '640px', margin: '0 auto', textAlign: 'center' }}>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9CA3AF] mb-4">¿Más dudas?</p>
-              <h2 className="font-bold tracking-tight mb-4"
-                style={{ fontSize: 'clamp(1.6rem, 4vw, 2.5rem)', letterSpacing: '-0.03em' }}>
+            <div style={{ maxWidth: 640, margin: '0 auto', textAlign: 'center' }}>
+              <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#9CA3AF', marginBottom: 14 }}>¿Más dudas?</p>
+              <h2 style={{ fontSize: 'clamp(1.4rem,4vw,2.2rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: 12 }}>
                 Pregúntanos directamente
               </h2>
-              <p className="text-[#6B7280] text-sm mb-8 leading-relaxed">
+              <p style={{ color: '#6B7280', fontSize: 14, marginBottom: 32, lineHeight: 1.7 }}>
                 Respondemos en menos de 24 horas. Sin compromiso, sin formularios eternos.
               </p>
-              <div className="flex flex-wrap gap-3 justify-center">
-                <Link href="/contact" className="btn-primary">
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center' }}>
+                <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.75rem 1.5rem', background: '#0A0908', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>
                   Iniciar conversación
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </Link>
-                <a href="mailto:hello@rud.studio" className="btn-secondary">
+                <a href="mailto:hello@rud.studio" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.75rem 1.5rem', border: '1.5px solid #E2DDD7', color: '#0A0908', borderRadius: 9999, fontWeight: 500, fontSize: 14, textDecoration: 'none' }}>
                   hello@rud.studio
                 </a>
               </div>
