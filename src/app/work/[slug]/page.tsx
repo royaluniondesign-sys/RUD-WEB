@@ -5,54 +5,54 @@ import ScrollReveal from '@/components/ScrollReveal'
 
 const PROJECTS: Record<string, {
   client: string; type: string; desc: string; tags: string[];
-  hero: string; images?: string[]; url?: string;
-  challenge: string; work: string[];
-  details: Record<string,string>; next: string; nextSlug: string;
+  hero: string; images: string[]; url?: string;
+  challenge: string; work: string[]; details: Record<string,string>;
+  next: string; nextSlug: string;
 }> = {
   idnt: {
     client: 'IDNT®', type: 'Moda orgánica sostenible · Barcelona',
-    desc: 'Identidad visual completa, e-commerce Shopify, packaging y automatizaciones para una marca de ropa orgánica barcelonesa.',
+    desc: 'Identidad visual completa, e-commerce Shopify, packaging y automatizaciones para marca de ropa orgánica barcelonesa.',
     tags: ['E-commerce Shopify','Branding','Identidad Visual','Packaging','Automatizaciones'],
     hero: '/client-idnt-hero.gif',
     images: ['/client-idnt-crew.jpg','/client-idnt-hoodie.jpg','/client-idnt-pant.jpg','/client-idnt-tee.jpg'],
     url: 'https://www.idnt.es',
-    challenge: 'IDNT® necesitaba una identidad que comunicara sostenibilidad y artesanía urbana sin caer en los clichés del "slow fashion". Una marca con personalidad propia y sistema visual escalable para físico y digital.',
+    challenge: 'IDNT® necesitaba una identidad que comunicara sostenibilidad y artesanía urbana sin caer en los clichés del slow fashion. Una marca con personalidad propia y sistema visual escalable para físico y digital.',
     work: [
-      'Identidad visual completa desde estrategia hasta producción. Logo, paleta, tipografía, guidelines y aplicaciones en packaging y etiquetas.',
+      'Identidad visual completa: logo, paleta, tipografía, guidelines y todas las aplicaciones físicas.',
       'E-commerce Shopify con experiencia de compra optimizada para conversión, integrado con gestión de inventario.',
-      'Automatizaciones de marketing: recuperación de carrito, email flows de fidelización, publicaciones automáticas en redes.',
+      'Automatizaciones de marketing: recuperación de carrito, email flows, publicaciones automáticas.',
     ],
-    details: { 'Cliente':'IDNT®','Sector':'Moda sostenible','Ubicación':'Barcelona, España','Servicios':'Branding · Shopify · Packaging · Automatizaciones','Web':'idnt.es' },
+    details: { 'Cliente':'IDNT®', 'Sector':'Moda sostenible', 'Ubicación':'Barcelona', 'Servicios':'Branding · Shopify · Packaging', 'Web':'idnt.es' },
     next: 'Aurum Studio', nextSlug: 'aurum',
   },
   aurum: {
     client: 'Aurum Studio', type: 'Joyería artesanal · Barcelona',
-    desc: 'Identidad de lujo accesible para una joyería artesanal barcelonesa. Branding, sistema visual, web y fotografía de producto.',
+    desc: 'Identidad de lujo accesible para joyería artesanal. Branding, sistema visual, web y fotografía de producto.',
     tags: ['Branding Lujo','Identidad Visual','Web Design','Fotografía'],
     hero: '/client-jewelry-hero.jpg',
     images: ['/client-jewelry-ring.jpg','/client-jewelry-2.jpg'],
-    challenge: 'Aurum necesitaba posicionarse como joyería artesanal de calidad sin el precio inalcanzable del lujo tradicional. El reto: crear un sistema visual que transmitiera exclusividad y accesibilidad al mismo tiempo.',
+    challenge: 'Posicionarse como joyería artesanal de calidad sin el precio inalcanzable del lujo tradicional. Crear un sistema visual que transmitiera exclusividad y accesibilidad al mismo tiempo.',
     work: [
       'Estrategia de marca con posicionamiento "lujo accesible". Naming, tagline y propuesta de valor diferenciada.',
-      'Identidad visual completa: logo minimalista, paleta dorada sofisticada, tipografía serif/sans y sistema de aplicaciones.',
-      'Web diseño con catálogo de producto, páginas de colección y experiencia de compra premium.',
+      'Identidad visual: logo minimalista, paleta dorada sofisticada, tipografía editorial y sistema de aplicaciones.',
+      'Diseño web con catálogo de producto y experiencia de compra premium.',
     ],
-    details: { 'Cliente':'Aurum Studio','Sector':'Joyería artesanal','Ubicación':'Barcelona, España','Servicios':'Branding · Identidad Visual · Web · Fotografía' },
-    next: 'BrandForce Agency', nextSlug: 'brandforce',
+    details: { 'Cliente':'Aurum Studio', 'Sector':'Joyería artesanal', 'Ubicación':'Barcelona', 'Servicios':'Branding · Web · Fotografía' },
+    next: 'BrandForce', nextSlug: 'brandforce',
   },
   brandforce: {
     client: 'BrandForce Agency', type: 'Agencia de marketing · Madrid',
-    desc: 'Partner creativo white-label para una agencia de marketing madrileña. Diseño, desarrollo y automatización IA como extensión del equipo.',
+    desc: 'Partner creativo white-label para agencia de marketing. Diseño, desarrollo y automatización IA como extensión del equipo.',
     tags: ['White-label','Diseño Web','Desarrollo','AI Automation'],
     hero: '/client-agency-team.jpg',
     images: ['/client-agency-1.jpg','/client-agency-office.jpg'],
-    challenge: 'BrandForce necesitaba escalar su capacidad creativa y técnica sin contratar equipo fijo. Querían un partner de confianza que entendiera los briefings de sus clientes y entregara en sus estándares de calidad.',
+    challenge: 'Escalar capacidad creativa y técnica sin contratar equipo fijo. Un partner de confianza que entendiera los briefings de sus clientes y entregara en sus estándares de calidad.',
     work: [
       'Partnership white-label continuo: diseño web, landing pages y assets creativos bajo los brandbooks de sus clientes.',
-      'Desarrollo Next.js y WordPress para proyectos que requerían implementación técnica avanzada.',
-      'Implementación de automatizaciones con IA para reducir su tiempo de producción de contenido y reporting.',
+      'Desarrollo Next.js para proyectos que requerían implementación técnica avanzada.',
+      'Automatizaciones con IA para reducir tiempo de producción de contenido y reporting.',
     ],
-    details: { 'Cliente':'BrandForce Agency','Sector':'Agencia de marketing','Ubicación':'Madrid, España','Servicios':'White-label · Diseño · Desarrollo · AI Automation','Modalidad':'Partnership continuo' },
+    details: { 'Cliente':'BrandForce Agency', 'Sector':'Agencia de marketing', 'Ubicación':'Madrid', 'Modalidad':'Partnership continuo', 'Servicios':'White-label · Dev · AI' },
     next: 'IDNT®', nextSlug: 'idnt',
   },
 }
@@ -63,9 +63,9 @@ export async function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const p = PROJECTS[params.slug]
-  if (!p) return {}
+  if (!p) return { title: 'Proyecto no encontrado' }
   return {
-    title: `${p.client} — Caso de estudio · RUD Studio`,
+    title: `${p.client} — Caso de estudio · RUD Studio Barcelona`,
     description: p.desc,
   }
 }
@@ -77,94 +77,111 @@ export default function CaseStudy({ params }: { params: { slug: string } }) {
   return (
     <main>
       <Navbar />
-      <section className="pt-[68px] bg-[#F7F5F1]">
-        <div className="container-custom py-14">
+
+      {/* Header */}
+      <section className="hero-gradient" style={{ paddingTop: 68 }}>
+        <div className="container-custom" style={{ paddingBlock: 'clamp(3rem,7vw,5rem)' }}>
           <ScrollReveal>
-            <Link href="/work" className="inline-flex items-center gap-2 text-sm text-[#6B7280] hover:text-[#0A0908] transition-colors mb-8">
+            <Link href="/work" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, color: '#6B7280', marginBottom: '1.5rem' }}
+              className="hover:text-[#0A0908] transition-colors">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               Portfolio
             </Link>
-            <div className="flex flex-wrap gap-1.5 mb-5">
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: '1.25rem' }}>
               {p.tags.map(t => <span key={t} className="tag-pill">{t}</span>)}
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-3">{p.client}</h1>
-            <p className="text-lg text-[#6B7280]">{p.type}</p>
+            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, letterSpacing: '-.04em', marginBottom: 8 }}>{p.client}</h1>
+            <p style={{ fontSize: 'clamp(.875rem,1.5vw,1.1rem)', color: '#6B7280' }}>{p.type}</p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Hero */}
-      <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
-        <img src={p.hero} alt={`${p.client} — ${p.type}`} className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/25" />
+      {/* Hero image */}
+      <div style={{ position: 'relative', height: 'clamp(220px,45vw,520px)', overflow: 'hidden' }}>
+        <img src={p.hero} alt={`${p.client} — RUD Studio`}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,.25))' }} />
         {p.url && (
           <a href={p.url} target="_blank" rel="noopener noreferrer"
-            className="absolute bottom-6 right-6 inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white text-xs font-medium hover:bg-white/30 transition-colors">
+            style={{ position: 'absolute', bottom: 20, right: 20, padding: '8px 16px', background: 'rgba(255,255,255,.2)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,.3)', borderRadius: 9999, color: '#fff', fontSize: 12, fontWeight: 500 }}>
             Visitar web ↗
           </a>
         )}
       </div>
 
-      <section className="section-padding bg-[#F7F5F1]">
+      {/* Content */}
+      <section className="section-padding" style={{ background: '#F7F5F1' }}>
         <div className="container-custom">
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="md:col-span-2 space-y-10">
-              <ScrollReveal>
-                <h2 className="text-2xl font-bold mb-4">El desafío</h2>
-                <p className="text-[#6B7280] leading-relaxed">{p.challenge}</p>
-              </ScrollReveal>
-              <ScrollReveal delay={80}>
-                <h2 className="text-2xl font-bold mb-4">Lo que hicimos</h2>
-                <div className="space-y-3">
-                  {p.work.map((w, i) => (
-                    <div key={i} className="flex gap-3">
-                      <span className="shrink-0 w-5 h-5 rounded-full bg-[#F0EDE6] flex items-center justify-center mt-0.5">
-                        <span className="text-[10px] font-mono text-[#9CA3AF]">{i+1}</span>
-                      </span>
-                      <p className="text-[#6B7280] leading-relaxed text-sm">{w}</p>
-                    </div>
-                  ))}
-                </div>
-              </ScrollReveal>
-              {p.images && (
-                <ScrollReveal delay={120}>
-                  <div className="grid grid-cols-2 gap-4">
-                    {p.images.map((img, i) => (
-                      <img key={i} src={img} alt={`${p.client} — imagen ${i+1}`} className="rounded-xl w-full h-52 object-cover" />
-                    ))}
-                  </div>
+          <div style={{ display: 'grid', gap: '3rem' }}>
+            <style>{`@media(min-width:768px){#case-grid{grid-template-columns:1fr 300px!important}}`}</style>
+            <div id="case-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2.5rem', alignItems: 'start' }}>
+
+              {/* Main content */}
+              <div>
+                <ScrollReveal>
+                  <h2 style={{ fontSize: '1.35rem', fontWeight: 700, marginBottom: '0.875rem' }}>El desafío</h2>
+                  <p style={{ fontSize: 15, color: '#6B7280', lineHeight: 1.75, marginBottom: '2rem' }}>{p.challenge}</p>
                 </ScrollReveal>
-              )}
-            </div>
-            <ScrollReveal delay={60}>
-              <div className="space-y-5 sticky top-24">
-                <div className="bg-white rounded-2xl p-6 border border-[#E2DDD7]">
-                  <h3 className="text-[10px] font-semibold uppercase tracking-widest text-[#9CA3AF] mb-4">Detalles</h3>
-                  <div className="space-y-4 text-sm">
-                    {Object.entries(p.details).map(([k,v]) => (
-                      <div key={k}>
-                        <p className="text-[10px] text-[#9CA3AF] font-medium uppercase tracking-wider mb-0.5">{k}</p>
-                        <p className="text-[#0A0908] font-medium">{v}</p>
+                <ScrollReveal delay={80}>
+                  <h2 style={{ fontSize: '1.35rem', fontWeight: 700, marginBottom: '0.875rem' }}>Lo que hicimos</h2>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.875rem', marginBottom: '2rem' }}>
+                    {p.work.map((w, i) => (
+                      <div key={i} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+                        <span style={{ flexShrink: 0, width: 22, height: 22, borderRadius: '50%', background: '#F0EDE6', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontFamily: 'monospace', color: '#9CA3AF', marginTop: 2 }}>{i+1}</span>
+                        <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7 }}>{w}</p>
                       </div>
                     ))}
                   </div>
-                </div>
-                <div className="bg-[#F0EDE6] rounded-2xl p-6">
-                  <p className="text-sm text-[#6B7280] leading-relaxed mb-4">¿Proyecto similar? Hablemos.</p>
-                  <Link href="/contact" className="btn-primary w-full justify-center text-sm">Contactar</Link>
-                </div>
+                </ScrollReveal>
+
+                {/* Images grid */}
+                {p.images.length > 0 && (
+                  <ScrollReveal delay={140}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.75rem' }}>
+                      {p.images.map((img, i) => (
+                        <div key={i} style={{ borderRadius: 12, overflow: 'hidden', aspectRatio: '4/3' }}>
+                          <img src={img} alt={`${p.client} ${i+1}`}
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        </div>
+                      ))}
+                    </div>
+                  </ScrollReveal>
+                )}
               </div>
-            </ScrollReveal>
+
+              {/* Sidebar */}
+              <ScrollReveal delay={60}>
+                <div style={{ position: 'sticky', top: 88, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <div style={{ background: '#fff', borderRadius: 16, padding: '1.5rem', border: '1px solid #E2DDD7' }}>
+                    <h3 style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: '1.25rem' }}>Detalles</h3>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                      {Object.entries(p.details).map(([k, v]) => (
+                        <div key={k}>
+                          <p style={{ fontSize: 10, color: '#9CA3AF', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 3 }}>{k}</p>
+                          <p style={{ fontSize: 14, fontWeight: 600 }}>{v}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div style={{ background: '#F0EDE6', borderRadius: 16, padding: '1.5rem' }}>
+                    <p style={{ fontSize: 13, color: '#6B7280', lineHeight: 1.6, marginBottom: '1rem' }}>¿Proyecto similar? Hablemos.</p>
+                    <Link href="/contact" className="btn-primary" style={{ display: 'block', textAlign: 'center', width: '100%' }}>Contactar</Link>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-14 bg-[#F0EDE6] border-t border-[#E2DDD7]">
+      {/* Next project */}
+      <section style={{ background: '#F0EDE6', borderTop: '1px solid #E2DDD7', padding: '3rem 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <div className="flex items-center justify-between">
-              <p className="text-sm text-[#9CA3AF]">Siguiente proyecto</p>
-              <Link href={`/work/${p.nextSlug}`} className="group inline-flex items-center gap-2 text-xl font-bold hover:gap-3 transition-all">
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
+              <p style={{ fontSize: 12, color: '#9CA3AF' }}>Siguiente proyecto</p>
+              <Link href={`/work/${p.nextSlug}`}
+                style={{ fontSize: 'clamp(1.1rem,2.5vw,1.5rem)', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 8 }}>
                 {p.next}
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </Link>

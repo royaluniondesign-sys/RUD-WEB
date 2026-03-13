@@ -1,168 +1,160 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
+import ScrollReveal from '@/components/ScrollReveal'
 
-export const metadata: Metadata = {
-  title: 'Journal — Brand Strategy & Design Thinking',
-  description: 'Perspectives on brand strategy, visual identity, web design and building businesses that people care about. Written by the RUD Studio team.',
-  keywords: ['brand strategy', 'design thinking', 'brand identity agency', 'branding process', 'visual identity design', 'brand positioning Spain'],
-  openGraph: {
-    title: 'RÜD Journal — Brand Strategy & Design Thinking',
-    description: 'Perspectives on brand strategy, identity and building businesses people care about.',
-  },
+export const metadata = {
+  title: 'Blog — Branding, Diseño Web e IA · RUD Studio Barcelona',
+  description: 'Perspectivas reales sobre estrategia de marca, diseño web, e-commerce y automatización IA para empresas en Barcelona y España. Sin relleno.',
+  keywords: 'blog branding Barcelona, diseño web agencia, estrategia de marca, automatización IA, e-commerce Shopify, identidad visual, tendencias branding 2026',
 }
 
 const posts = [
   {
-    title: 'Working With Luxury Real Estate Brands: What Most Agencies Get Wrong',
-    date: 'February 2026',
-    category: 'Case Study',
-    author: 'Álvaro Ruiz',
-    readTime: '7 min',
-    // Editorial architectural photo, moody evening shot
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=85',
-    excerpt: 'How brands in saturated markets build lasting differentiation — not through visual noise, but through strategic restraint and clear positioning. A framework RUD applies across every branding engagement.',
+    slug: 'ia-local-agencias-creativas-2026',
+    title: 'IA local en agencias creativas: por qué dejamos de pagar APIs y ganamos en calidad',
+    date: 'Marzo 2026', category: 'IA & Tecnología', readTime: '8 min',
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&q=85',
+    excerpt: 'Llevamos más de un año corriendo modelos de IA 100% locales con Ollama. El resultado: calidad comparable a GPT-4, coste operativo cero y privacidad total de los datos de clientes. Aquí el stack exacto que usamos en RUD.',
     featured: true,
   },
   {
-    title: 'The First Question We Ask Every Client (And Why Most Hate It)',
-    date: 'January 2026',
-    category: 'Strategy',
-    author: 'Álvaro Ruiz',
-    readTime: '5 min',
-    // Hands working, deliberate, focused
+    slug: 'errores-branding-ecommerce-shopify',
+    title: 'Los 6 errores de branding que destruyen la conversión en tu tienda Shopify',
+    date: 'Febrero 2026', category: 'E-commerce', readTime: '6 min',
+    image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&q=85',
+    excerpt: 'Logo que no funciona a 32px, paleta sin contraste accesible, tipografía ilegible en mobile. Hemos auditado decenas de tiendas en España y el patrón se repite. Aquí los 6 errores que cuestan ventas reales.',
+  },
+  {
+    slug: 'identidad-visual-vs-logo-sistema',
+    title: 'Logo vs. identidad visual: la diferencia que las marcas aprenden tarde y caro',
+    date: 'Enero 2026', category: 'Branding', readTime: '5 min',
+    image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=85',
+    excerpt: 'Un logo es un símbolo. Una identidad es un sistema. La confusión entre los dos le cuesta a las empresas años de rebrandings innecesarios. Qué es exactamente una identidad de sistema y por qué importa.',
+  },
+  {
+    slug: 'nextjs-vs-wordpress-cuando-usar-2026',
+    title: 'Next.js vs. WordPress en 2026: cuándo usar cada uno (sin dogmas)',
+    date: 'Enero 2026', category: 'Desarrollo Web', readTime: '7 min',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=85',
+    excerpt: 'Después de construir proyectos en ambas plataformas nuestra respuesta es: depende. Next.js gana en performance y SEO técnico. WordPress gana en autonomía del cliente. El error es elegir por moda.',
+  },
+  {
+    slug: 'estrategia-marca-antes-de-disenar',
+    title: 'Por qué el 80% de las empresas diseñan antes de tener estrategia de marca',
+    date: 'Diciembre 2025', category: 'Estrategia', readTime: '5 min',
     image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=85',
-    excerpt: 'Before moodboards, before colour palettes, before any conversation about logos — we ask: "What would your best customer lose if you disappeared?" Most clients pause for a long time. The ones who can\'t answer it are the ones who need us most. This question has shaped every strategy we deliver.',
+    excerpt: 'Hemos visto empresas gastar €30k en diseño y rebrandear 18 meses después. El error no fue el diseñador — fue no tener claro a quién le hablas y por qué deberían elegirte. La estrategia no es un lujo.',
   },
   {
-    title: 'Naming a Brand When Your Market Speaks Two Languages',
-    date: 'December 2025',
-    category: 'Branding',
-    author: 'María Santos',
-    readTime: '6 min',
-    // Typography/lettering detail
-    image: 'https://images.unsplash.com/photo-1524666041070-9d87656c35b7?w=800&q=85',
-    excerpt: 'Most naming frameworks were built for monolingual markets. When your brand needs to operate in both Spanish and English — or any two languages — the rules change. After building bilingual brands across Europe and Australia, we\'ve developed a process that goes far beyond translation. The name is the easy part. The positioning is where most projects break.',
-  },
-  {
-    title: 'We Killed the Moodboard. Here\'s What We Do Instead.',
-    date: 'November 2025',
-    category: 'Process',
-    author: 'Álvaro Ruiz',
-    readTime: '4 min',
-    // Materials/craft/design process - texture, editorial
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=85',
-    excerpt: 'Moodboards are designed to create agreement, not insight. After years of watching clients point to the most generic image on the board and call it "perfect", we stopped making them. Instead, we developed the RÜD Brand Pressure Test — a 12-question session we run before any visual work begins. Harder for clients. Better for everyone.',
+    slug: 'automatizar-agencia-n8n-chariot',
+    title: 'Cómo automatizamos el 60% de nuestros workflows con n8n y €0 de coste',
+    date: 'Noviembre 2025', category: 'Automatización', readTime: '9 min',
+    image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=85',
+    excerpt: 'n8n self-hosted + modelos locales + CHARIOT = automatización sin límites ni facturas. Reportes de cliente, publicaciones, leads, briefs automáticos. Este es nuestro stack real y los workflows que más tiempo nos ahorran.',
   },
 ]
 
 export default function Blog() {
   const [featured, ...rest] = posts
-
   return (
-    <main className="min-h-screen bg-[var(--bg)]">
+    <main>
       <Navbar />
 
-      <section className="pt-36 pb-20">
+      <section className="hero-gradient" style={{ paddingTop: 68 }}>
+        <div className="container-custom" style={{ paddingBlock: 'clamp(3.5rem,8vw,6rem)' }}>
+          <ScrollReveal>
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 12 }}>Blog · Perspectivas RUD</p>
+            <h1 style={{ fontSize: 'clamp(1.8rem,4.5vw,3.5rem)', fontWeight: 700, letterSpacing: '-.03em', lineHeight: 1.1, marginBottom: '1rem', maxWidth: '22ch' }}>
+              Branding, diseño y tecnología.{' '}
+              <span style={{ fontStyle: 'italic', fontWeight: 300, color: '#A8A0A0' }}>Sin filtros.</span>
+            </h1>
+            <p style={{ fontSize: 'clamp(.875rem,1.5vw,1rem)', color: '#6B7280', maxWidth: '42ch', lineHeight: 1.7 }}>
+              Lo que aprendemos construyendo marcas, webs y sistemas de IA en Barcelona. Artículos prácticos, sin relleno.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="section-padding" style={{ background: '#F7F5F1' }}>
         <div className="container-custom">
 
-          {/* Header */}
-          <div className="mb-16">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-4">Journal</p>
-            <h1 className="text-5xl md:text-7xl font-bold text-[#0A0A0A] tracking-tight mb-6">Thinking Out Loud</h1>
-            <p className="text-xl text-[#6B7280] max-w-2xl leading-relaxed">
-              We write about brand strategy, design process, and the uncomfortable questions that lead to better work.
-              No trend roundups. No AI-generated filler. Just things we actually believe.
-            </p>
-          </div>
-
-          {/* Featured post */}
-          <article className="group cursor-pointer mb-20">
-            <div className="grid lg:grid-cols-2 gap-10 items-center">
-              <div className="relative aspect-[3/2] overflow-hidden rounded-2xl bg-[var(--surface)]">
-                <img
-                  src={featured.image}
-                  alt={featured.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1.5 bg-[#0A0A0A] text-white text-[11px] font-semibold uppercase tracking-wider rounded-full">
-                    {featured.category}
-                  </span>
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center gap-3 text-xs text-[#9CA3AF] mb-5">
-                  <span>{featured.date}</span>
-                  <span>·</span>
-                  <span>{featured.readTime} read</span>
-                  <span>·</span>
-                  <span>{featured.author}</span>
-                </div>
-                <h2 className="text-3xl md:text-[2.1rem] font-bold text-[#0A0A0A] leading-tight mb-5 group-hover:underline decoration-2 underline-offset-4">
-                  {featured.title}
-                </h2>
-                <p className="text-[#6B7280] leading-relaxed text-base mb-7">{featured.excerpt}</p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#0A0A0A] group-hover:gap-4 transition-all duration-200">
-                  Read article
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </article>
-
-          {/* Divider */}
-          <div className="border-t border-[var(--border)] mb-16" />
-
-          {/* Posts grid */}
-          <div className="grid md:grid-cols-3 gap-10">
-            {rest.map((post, index) => (
-              <article key={index} className="group cursor-pointer">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-xl mb-5 bg-[var(--surface)]">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute top-3 left-3">
-                    <span className="px-2.5 py-1 bg-white/90 text-[10px] font-semibold uppercase tracking-wider rounded-full text-[#0A0A0A]">
-                      {post.category}
-                    </span>
+          {/* Featured */}
+          <ScrollReveal>
+            <Link href={`/blog/${featured.slug}`}
+              className="card-lift"
+              style={{ display: 'block', borderRadius: 16, overflow: 'hidden', background: '#fff', border: '1px solid #E2DDD7', marginBottom: '1.25rem' }}>
+              <div style={{ display: 'grid' }}>
+                <style>{`@media(min-width:768px){#feat-card{grid-template-columns:1fr 1fr!important}}`}</style>
+                <div id="feat-card" style={{ display: 'grid', gridTemplateColumns: '1fr' }}>
+                  <div style={{ position: 'relative', minHeight: 220, overflow: 'hidden' }}>
+                    <img src={featured.image} alt={featured.title}
+                      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <span style={{ position: 'absolute', top: 14, left: 14, padding: '4px 10px', background: '#0A0908', color: '#fff', fontSize: 10, fontWeight: 700, borderRadius: 9999, textTransform: 'uppercase', letterSpacing: '.08em' }}>Destacado</span>
+                  </div>
+                  <div style={{ padding: 'clamp(1.25rem,3vw,2rem)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                    <div>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10, marginBottom: '1rem' }}>
+                        <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.15em', color: '#7B68EE' }}>{featured.category}</span>
+                        <span style={{ fontSize: 10, color: '#C4BFB8' }}>{featured.readTime} lectura</span>
+                        <span style={{ fontSize: 10, color: '#C4BFB8' }}>{featured.date}</span>
+                      </div>
+                      <h2 style={{ fontSize: 'clamp(1.1rem,2.5vw,1.4rem)', fontWeight: 700, lineHeight: 1.35, marginBottom: '0.875rem' }}>{featured.title}</h2>
+                      <p style={{ fontSize: 13, color: '#6B7280', lineHeight: 1.7 }}>{featured.excerpt}</p>
+                    </div>
+                    <div style={{ marginTop: '1.25rem', fontSize: 14, fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                      Leer artículo →
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-[11px] text-[#9CA3AF] mb-3">
-                  <span>{post.date}</span>
-                  <span>·</span>
-                  <span>{post.readTime} read</span>
-                </div>
-                <h2 className="text-lg font-bold text-[#0A0A0A] group-hover:underline decoration-2 underline-offset-4 mb-3 leading-snug">
-                  {post.title}
-                </h2>
-                <p className="text-sm text-[#6B7280] leading-relaxed mb-4 line-clamp-3">{post.excerpt}</p>
-                <span className="text-xs font-semibold text-[#9CA3AF]">By {post.author}</span>
-              </article>
-            ))}
-          </div>
-
-          {/* Newsletter CTA */}
-          <div className="mt-24 bg-[#0A0A0A] rounded-2xl p-12 text-center">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#6B7280] mb-3">Stay sharp</p>
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-              New thinking, direct to your inbox.
-            </h3>
-            <p className="text-[#9CA3AF] mb-8 max-w-md mx-auto text-sm leading-relaxed">
-              We publish 2–3 times a month. No newsletters about newsletters. Just strategy and craft.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-[#0A0A0A] text-sm font-semibold rounded-full hover:bg-[#F0EDE6] transition-colors duration-200"
-            >
-              Get in touch
+              </div>
             </Link>
+          </ScrollReveal>
+
+          {/* Grid */}
+          <div style={{ display: 'grid', gap: '1rem' }}>
+            <style>{`@media(min-width:480px){#blog-grid{grid-template-columns:repeat(2,1fr)!important}}@media(min-width:1024px){#blog-grid{grid-template-columns:repeat(3,1fr)!important}}`}</style>
+            <div id="blog-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem' }}>
+              {rest.map((post, i) => (
+                <ScrollReveal key={post.slug} delay={i * 55}>
+                  <Link href={`/blog/${post.slug}`} className="card-lift"
+                    style={{ display: 'flex', flexDirection: 'column', borderRadius: 16, overflow: 'hidden', background: '#fff', border: '1px solid #E2DDD7', height: '100%' }}>
+                    <div style={{ position: 'relative', height: 170, overflow: 'hidden', flexShrink: 0 }}>
+                      <img src={post.image} alt={post.title}
+                        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                    <div style={{ padding: 'clamp(1rem,2.5vw,1.25rem)', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8, marginBottom: '0.75rem' }}>
+                        <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.12em', color: '#7B68EE' }}>{post.category}</span>
+                        <span style={{ fontSize: 10, color: '#C4BFB8' }}>{post.readTime}</span>
+                      </div>
+                      <h2 style={{ fontSize: 'clamp(.95rem,1.8vw,1.05rem)', fontWeight: 700, lineHeight: 1.4, marginBottom: '0.5rem', flex: 1 }}>{post.title}</h2>
+                      <p style={{ fontSize: 12, color: '#9CA3AF', lineHeight: 1.65, marginBottom: '1rem', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{post.excerpt}</p>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '0.75rem', borderTop: '1px solid #F0EDE6', marginTop: 'auto' }}>
+                        <span style={{ fontSize: 10, color: '#C4BFB8' }}>{post.date}</span>
+                        <span style={{ fontSize: 12, fontWeight: 600 }}>Leer →</span>
+                      </div>
+                    </div>
+                  </Link>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
 
+          {/* Newsletter */}
+          <ScrollReveal delay={300}>
+            <div style={{ marginTop: '3rem', borderRadius: 16, background: '#0A0908', padding: 'clamp(1.5rem,4vw,2.5rem)', textAlign: 'center' }}>
+              <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#444', marginBottom: 10 }}>Newsletter</p>
+              <h3 style={{ fontSize: 'clamp(1.25rem,3vw,1.75rem)', fontWeight: 700, color: '#fff', marginBottom: 8 }}>Sin spam. Solo lo que funciona.</h3>
+              <p style={{ fontSize: 13, color: '#6B7280', marginBottom: '1.5rem' }}>Branding, diseño y IA. Un email al mes.</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10, maxWidth: 380, margin: '0 auto' }}>
+                <input type="email" placeholder="tu@email.com"
+                  style={{ width: '100%', padding: '.75rem 1rem', borderRadius: 9999, background: 'rgba(255,255,255,.08)', border: '1px solid rgba(255,255,255,.1)', color: '#fff', fontSize: 14, outline: 'none' }} />
+                <button className="btn-primary" style={{ background: '#fff', color: '#0A0908', width: '100%', padding: '.75rem' }}>
+                  Suscribirme
+                </button>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </main>
