@@ -5,42 +5,46 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 import FAQAccordion from '@/components/FAQAccordion'
-import NewsletterForm from '@/components/NewsletterForm'
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
-
 function Hero() {
   return (
     <section className="hero-gradient min-h-screen flex items-center pt-[72px] relative overflow-hidden">
-      <div className="container-custom py-16 md:py-24">
-        {/* Badge */}
+      <div className="container-custom py-20 md:py-32">
         <div className="inline-flex items-center gap-2 mb-8 animate-fade-in-up">
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/70 border border-[#E5E2DC] rounded-full text-xs font-medium text-[#6B7280] backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-            Available for new projects
+            <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+            Disponibles para nuevos proyectos · Barcelona
           </span>
         </div>
 
         <h1 className="text-[clamp(3rem,7vw,6.5rem)] font-bold leading-[1.03] tracking-[-0.035em] text-[#0A0A0A] mb-6 animate-fade-in-up animation-delay-100 max-w-5xl">
-          Building bold brands
+          Agencia de diseño
           <br />
-          <span className="italic font-light text-[#6B7280]">with thoughtful design</span>
+          <span className="italic font-light text-[#6B7280]">y branding en Barcelona</span>
         </h1>
 
         <p className="text-base md:text-lg text-[#6B7280] max-w-xl mb-10 animate-fade-in-up animation-delay-200 leading-relaxed">
-          Crafting exceptional brand identities and digital experiences that connect with people and drive real business results.
+          Creamos identidades de marca, webs y sistemas de automatización con IA para empresas que quieren destacar. Estrategia, diseño y tecnología bajo un mismo techo.
         </p>
 
         <div className="flex flex-wrap gap-3 animate-fade-in-up animation-delay-300">
           <Link href="/contact" className="btn-primary">
-            Start a Project
+            Hablemos de tu proyecto
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </Link>
           <Link href="/work" className="btn-secondary">
-            View Our Work
+            Ver nuestro trabajo
           </Link>
+        </div>
+
+        <div className="mt-14 flex flex-wrap gap-6 text-xs text-[#9CA3AF] animate-fade-in-up animation-delay-300">
+          <span>✦ Branding · Barcelona</span>
+          <span>✦ Diseño web · Spain</span>
+          <span>✦ AI Automation</span>
+          <span>✦ Identidad visual</span>
         </div>
       </div>
     </section>
@@ -48,28 +52,22 @@ function Hero() {
 }
 
 // ─── Stats ────────────────────────────────────────────────────────────────────
-
 function Stats() {
   const stats = [
-    { num: '$0', label: 'AI Operational\nCost' },
-    { num: '100%', label: 'Local\nInfrastructure' },
-    { num: '2', label: 'Specialized\nSubsidiaries' },
-    { num: '6', label: 'Core\nServices' },
+    { num: '$0', label: 'Coste operativo\nde IA' },
+    { num: '100%', label: 'Infraestructura\nlocal' },
+    { num: '2', label: 'Subsidiarias\nespecializadas' },
+    { num: '6', label: 'Servicios\ncore' },
   ]
-
   return (
     <section className="bg-[#FAFAFA] py-16 border-y border-[#E5E2DC]">
       <div className="container-custom">
         <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#E5E2DC]">
-          {stats.map((stat, i) => (
+          {stats.map((s, i) => (
             <ScrollReveal key={i} delay={i * 80}>
               <div className="px-6 md:px-10 py-4 first:pl-0 last:pr-0">
-                <p className="stat-number text-[#0A0A0A]">
-                  {stat.num}
-                </p>
-                <p className="text-xs text-[#9CA3AF] font-medium mt-1 uppercase tracking-wider whitespace-pre-line leading-tight">
-                  {stat.label}
-                </p>
+                <p className="stat-number text-[#0A0A0A]">{s.num}</p>
+                <p className="text-xs text-[#9CA3AF] font-medium mt-1 uppercase tracking-wider whitespace-pre-line leading-tight">{s.label}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -79,18 +77,63 @@ function Stats() {
   )
 }
 
-// ─── Services ─────────────────────────────────────────────────────────────────
-
+// ─── Services Cards ───────────────────────────────────────────────────────────
 function Services() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
-
   const services = [
-    { num: '01', title: 'Brand Strategy',    desc: 'We dig into your market, audience, and competition before touching a single pixel. The result is a positioning platform that makes every future decision easier — and your business harder to ignore.' },
-    { num: '02', title: 'Visual Identity',   desc: 'Logo systems, colour palettes, and typography built to last — not trend. We design identities that work across every touchpoint: from your business card to a 40-metre billboard.' },
-    { num: '03', title: 'Web Design',        desc: 'Sites that look remarkable and perform measurably. We design in Figma with conversion in mind, then hand off pixel-perfect specs so nothing is lost in translation.' },
-    { num: '04', title: 'Development',       desc: 'Next.js, React, and clean TypeScript. We build sites that score 90+ on Lighthouse, load in under 2 seconds, and scale as your business grows.' },
-    { num: '05', title: 'Content Creation',  desc: 'Art direction, copywriting, and photography briefs that tell your story consistently. We make sure your brand sounds as good as it looks.' },
-    { num: '06', title: 'AI Automation',     desc: 'Intelligent workflows, autonomous assistants, and AI-powered systems built on local infrastructure via CHARIOT.' },
+    {
+      num: '01',
+      title: 'Brand Strategy',
+      subtitle: 'Estrategia de marca en Barcelona',
+      desc: 'Analizamos tu mercado, competencia y audiencia antes de diseñar una sola pieza. El resultado es un posicionamiento claro que hace cada decisión futura más fácil.',
+      img: '/svc-strategy.jpg',
+      href: '/services#brand-strategy',
+      tag: 'IDNT',
+    },
+    {
+      num: '02',
+      title: 'Identidad Visual',
+      subtitle: 'Diseño de logotipos y sistemas visuales',
+      desc: 'Logos, paletas de color y tipografía construidos para durar. Sistemas de identidad que funcionan en todos los puntos de contacto, desde una tarjeta hasta una valla publicitaria.',
+      img: '/svc-identity.jpg',
+      href: '/services#visual-identity',
+      tag: 'IDNT',
+    },
+    {
+      num: '03',
+      title: 'Diseño Web',
+      subtitle: 'Web design para empresas en Barcelona',
+      desc: 'Sitios que se ven excepcionales y rinden de forma medible. Diseñamos en Figma con conversión en mente, optimizados para posicionarse en Google.',
+      img: '/svc-webdesign.jpg',
+      href: '/services#web-design',
+      tag: 'RUD',
+    },
+    {
+      num: '04',
+      title: 'Desarrollo',
+      subtitle: 'Desarrollo web Next.js · React',
+      desc: 'Next.js, React y TypeScript limpio. Sitios que puntúan 90+ en Lighthouse, cargan en menos de 2 segundos y escalan con tu negocio.',
+      img: '/svc-dev.jpg',
+      href: '/services#development',
+      tag: 'RUD',
+    },
+    {
+      num: '05',
+      title: 'Contenido',
+      subtitle: 'Creación de contenido y copywriting',
+      desc: 'Dirección de arte, copywriting y briefs fotográficos que cuentan tu historia con consistencia. Tu marca debe sonar tan bien como se ve.',
+      img: '/svc-content.jpg',
+      href: '/services#content',
+      tag: 'RUD',
+    },
+    {
+      num: '06',
+      title: 'AI Automation',
+      subtitle: 'Automatización con IA · CHARIOT',
+      desc: 'Flujos de trabajo inteligentes, asistentes autónomos y sistemas de IA construidos sobre infraestructura local a través de CHARIOT. Sin costes de API recurrentes.',
+      img: '/svc-ai.jpg',
+      href: '/services#ai-automation',
+      tag: 'CHARIOT',
+    },
   ]
 
   return (
@@ -99,184 +142,135 @@ function Services() {
         <ScrollReveal>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
             <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">What We Do</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight">Services</h2>
-              <p className="text-xs text-[#9CA3AF] mt-3 leading-relaxed">
-                RUD operates through two specialized subsidiaries:<br />
-                <span className="text-[#6B7280] font-medium">IDNT</span> — Brand &amp; Visual Identity &nbsp;·&nbsp; <span className="text-[#6B7280] font-medium">CHARIOT</span> — AI Automation &amp; Intelligent Assistants
+              <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">Qué hacemos</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight">Servicios</h2>
+              <p className="text-sm text-[#6B7280] mt-3 max-w-md">
+                Agencia de branding y diseño web en Barcelona. <span className="font-medium text-[#0A0A0A]">IDNT</span> · identidad visual. <span className="font-medium text-[#0A0A0A]">CHARIOT</span> · automatización con IA.
               </p>
             </div>
             <Link href="/services" className="inline-flex items-center gap-2 text-sm font-medium text-[#6B7280] hover:text-[#0A0A0A] hover:gap-4 transition-all duration-200">
-              All services
+              Todos los servicios
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
           </div>
         </ScrollReveal>
 
-        <div className="border-t border-[#E5E2DC]">
-          {services.map((service, i) => (
-            <ScrollReveal key={service.num} delay={i * 40}>
-              <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="service-row w-full flex items-center justify-between py-6 group text-left"
-              >
-                <div className="flex items-center gap-6 md:gap-10">
-                  <span className="text-xs font-mono text-[#C4BFB8] w-6 flex-shrink-0">{service.num}</span>
-                  <h3 className="text-xl md:text-2xl font-semibold text-[#0A0A0A] group-hover:text-[#6B7280] transition-colors duration-200">
-                    {service.title}
-                  </h3>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="hidden md:block text-sm text-[#9CA3AF]">
-                    {openIndex === i ? 'Close' : 'Learn more'}
-                  </span>
-                  <span className={`w-8 h-8 flex items-center justify-center rounded-full border border-[#E5E2DC] transition-all duration-300 text-[#6B7280] ${openIndex === i ? 'rotate-45 border-[#0A0A0A] text-[#0A0A0A]' : 'group-hover:border-[#0A0A0A]'}`}>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                      <path d="M6 1v10M1 6h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                    </svg>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {services.map((s, i) => (
+            <ScrollReveal key={s.num} delay={i * 60}>
+              <Link href={s.href} className="group block bg-white border border-[#E5E2DC] rounded-2xl overflow-hidden hover:border-[#0A0A0A] hover:shadow-lg transition-all duration-300">
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <img src={s.img} alt={s.subtitle} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                  <span className={`absolute top-3 right-3 px-2 py-0.5 text-[10px] font-semibold rounded-full ${s.tag === 'CHARIOT' ? 'bg-[#0f3460] text-white' : s.tag === 'IDNT' ? 'bg-[#0A0A0A] text-white' : 'bg-white/90 text-[#0A0A0A]'}`}>
+                    {s.tag}
                   </span>
                 </div>
-              </button>
-              {openIndex === i && (
-                <div className="pb-6 pl-12 md:pl-16 pr-16 animate-fade-in-up">
-                  <p className="text-[#6B7280] leading-relaxed max-w-2xl">{service.desc}</p>
-                  <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-medium text-[#0A0A0A] mt-4 hover:gap-4 transition-all duration-200">
-                    Start a project
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </Link>
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <span className="text-xs font-mono text-[#C4BFB8]">{s.num}</span>
+                    <svg className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 mt-0.5" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#0A0A0A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-[#0A0A0A] mb-1">{s.title}</h3>
+                  <p className="text-xs text-[#9CA3AF] mb-3 font-medium">{s.subtitle}</p>
+                  <p className="text-sm text-[#6B7280] leading-relaxed">{s.desc}</p>
                 </div>
-              )}
+              </Link>
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delay={400}>
+          <div className="mt-10 text-center">
+            <Link href="/contact" className="btn-primary">
+              Solicitar presupuesto gratuito
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </Link>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )
 }
 
 // ─── Portfolio ────────────────────────────────────────────────────────────────
-
 function Portfolio() {
+  const projects = [
+    {
+      name: 'IDNT',
+      subtitle: 'Sistema de Identidad Visual',
+      tags: ['Branding', 'Identidad visual'],
+      desc: 'Subsidiaria de branding de RUD. Estrategia de marca, sistemas de logo y guidelines visuales completos.',
+      img: '/project-idnt.jpg',
+      slug: 'idnt',
+    },
+    {
+      name: 'CHARIOT',
+      subtitle: 'Suite de Automatización IA',
+      tags: ['AI', 'Automatización'],
+      desc: 'Producto de IA autónomo construido sobre infraestructura local para automatización a escala de agencia.',
+      img: '/project-chariot.jpg',
+      slug: 'chariot',
+    },
+    {
+      name: 'RUD Web',
+      subtitle: 'Plataforma Digital',
+      tags: ['Web Design', 'Desarrollo'],
+      desc: 'Presencia digital de Royal Union Design — estrategia, diseño y desarrollo en un solo proyecto.',
+      img: '/project-web.jpg',
+      slug: 'rud-web',
+    },
+  ]
+
   return (
     <section className="section-padding bg-[#F0EDE6]" id="work">
       <div className="container-custom">
         <ScrollReveal>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
             <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">Selected Projects</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight">Our Work</h2>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">Proyectos seleccionados</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight">Nuestro trabajo</h2>
             </div>
             <Link href="/work" className="inline-flex items-center gap-2 text-sm font-medium text-[#6B7280] hover:text-[#0A0A0A] hover:gap-4 transition-all duration-200">
-              All projects
+              Ver todos los proyectos
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
           </div>
         </ScrollReveal>
 
         <div className="grid md:grid-cols-2 gap-6">
-
-          {/* IDNT — usa work3.jpg (abstracto artístico, el único usable) */}
-          <ScrollReveal delay={0}>
-            <div className="group">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-4">
-                <img
-                  src="/work3.jpg"
-                  alt="IDNT Brand Identity System"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300" />
-                <div className="absolute bottom-5 left-5">
-                  <span className="text-white font-bold text-3xl tracking-tight">IDNT</span>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-1.5 mb-2">
-                <span className="tag-pill">Branding</span>
-                <span className="tag-pill">2025</span>
-              </div>
-              <h3 className="text-xl font-bold text-[#0A0A0A]">IDNT — Brand Identity System</h3>
-              <p className="text-sm text-[#6B7280] mt-1">Visual identity subsidiary of RUD — brand strategy, logo systems, and design guidelines.</p>
-            </div>
-          </ScrollReveal>
-
-          {/* CHARIOT — gradiente tech oscuro */}
-          <ScrollReveal delay={80}>
-            <div className="group">
-              <div
-                className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-4 group-hover:opacity-95 transition-opacity duration-300"
-                style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 40%, #16213e 70%, #0f3460 100%)' }}
-              >
-                {/* Circuit-like decorative lines */}
-                <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 400 300" fill="none">
-                  <line x1="0" y1="150" x2="400" y2="150" stroke="white" strokeWidth="0.5"/>
-                  <line x1="200" y1="0" x2="200" y2="300" stroke="white" strokeWidth="0.5"/>
-                  <circle cx="200" cy="150" r="60" stroke="white" strokeWidth="0.5"/>
-                  <circle cx="200" cy="150" r="100" stroke="white" strokeWidth="0.3"/>
-                  <circle cx="200" cy="150" r="8" stroke="white" strokeWidth="1"/>
-                  <line x1="100" y1="50" x2="150" y2="100" stroke="white" strokeWidth="0.5"/>
-                  <line x1="300" y1="50" x2="250" y2="100" stroke="white" strokeWidth="0.5"/>
-                  <line x1="100" y1="250" x2="150" y2="200" stroke="white" strokeWidth="0.5"/>
-                  <line x1="300" y1="250" x2="250" y2="200" stroke="white" strokeWidth="0.5"/>
-                </svg>
-                <div className="absolute inset-0 flex items-end p-6">
-                  <div>
-                    <span className="text-white/60 text-xs font-mono uppercase tracking-widest block mb-1">AI · Automation</span>
-                    <span className="text-white font-bold text-3xl tracking-tight">CHARIOT</span>
+          {projects.map((p, i) => (
+            <ScrollReveal key={p.slug} delay={i * 80}>
+              <Link href={`/work/${p.slug}`} className="group block">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-4">
+                  <img src={p.img} alt={`${p.name} — ${p.subtitle}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+                  <div className="absolute bottom-5 left-5">
+                    <span className="text-white font-bold text-2xl tracking-tight drop-shadow-lg">{p.name}</span>
                   </div>
                 </div>
-              </div>
-              <div className="flex flex-wrap gap-1.5 mb-2">
-                <span className="tag-pill">AI Automation</span>
-                <span className="tag-pill">2025</span>
-              </div>
-              <h3 className="text-xl font-bold text-[#0A0A0A]">CHARIOT — AI Automation Suite</h3>
-              <p className="text-sm text-[#6B7280] mt-1">Autonomous AI assistant product built on local infrastructure for agency-scale automation.</p>
-            </div>
-          </ScrollReveal>
-
-          {/* RUD Web — gradiente editorial */}
-          <ScrollReveal delay={160}>
-            <div className="group">
-              <div
-                className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-4"
-                style={{ background: 'linear-gradient(160deg, #FAFAFA 0%, #E8F4FD 40%, #D6EDFB 100%)' }}
-              >
-                {/* Typography-inspired decoration */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center select-none">
-                    <div className="text-[#0A0A0A]/8 text-[7rem] font-bold leading-none tracking-tighter">RÜD</div>
-                    <div className="text-[#0A0A0A]/5 text-xs font-mono uppercase tracking-[0.5em] mt-2">Royal Union Design</div>
-                  </div>
+                <div className="flex flex-wrap gap-1.5 mb-2">
+                  {p.tags.map(t => <span key={t} className="tag-pill">{t}</span>)}
                 </div>
-                <div className="absolute bottom-5 left-5">
-                  <span className="text-[#0A0A0A] font-bold text-3xl tracking-tight">RUD Web</span>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-1.5 mb-2">
-                <span className="tag-pill">Web Design</span>
-                <span className="tag-pill">2025</span>
-              </div>
-              <h3 className="text-xl font-bold text-[#0A0A0A]">RUD Web Platform</h3>
-              <p className="text-sm text-[#6B7280] mt-1">Digital presence for Royal Union Design — strategy, design and development in one.</p>
-            </div>
-          </ScrollReveal>
+                <h3 className="text-xl font-bold text-[#0A0A0A] group-hover:underline decoration-2 underline-offset-4">{p.name} — {p.subtitle}</h3>
+                <p className="text-sm text-[#6B7280] mt-1">{p.desc}</p>
+              </Link>
+            </ScrollReveal>
+          ))}
 
-          {/* Coming Soon */}
           <ScrollReveal delay={240}>
             <div className="group">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-4 border border-dashed border-[#D1CDC6] bg-[#F8F5F0] flex flex-col items-center justify-center gap-3">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C4BFB8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-                </svg>
-                <p className="text-sm font-medium text-[#C4BFB8] uppercase tracking-widest">In Progress</p>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C4BFB8" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <p className="text-sm font-medium text-[#C4BFB8] uppercase tracking-widest">En producción</p>
               </div>
               <div className="flex flex-wrap gap-1.5 mb-2">
                 <span className="tag-pill">2025</span>
               </div>
-              <h3 className="text-xl font-bold text-[#C4BFB8]">Next Project</h3>
-              <p className="text-sm text-[#C4BFB8] mt-1">Currently in production. Stay tuned.</p>
+              <h3 className="text-xl font-bold text-[#C4BFB8]">Próximo proyecto</h3>
+              <p className="text-sm text-[#C4BFB8] mt-1">Actualmente en producción.</p>
             </div>
           </ScrollReveal>
-
         </div>
       </div>
     </section>
@@ -284,62 +278,37 @@ function Portfolio() {
 }
 
 // ─── Why RUD ──────────────────────────────────────────────────────────────────
-
 function WhyRUD() {
   const reasons = [
     {
-      icon: (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-        </svg>
-      ),
-      title: 'Strategy before design',
-      desc: 'Every project starts with a deep dive into your market, your competitors, and your audience. We don\'t design logos — we build positioning platforms that happen to look exceptional.',
+      icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>,
+      title: 'Estrategia antes que diseño',
+      desc: 'Cada proyecto empieza con un análisis profundo de tu mercado, competidores y audiencia. No diseñamos logos — construimos plataformas de posicionamiento.',
     },
     {
-      icon: (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
-        </svg>
-      ),
-      title: 'Direct, no account managers',
-      desc: 'You work directly with the designer, developer, or strategist doing your project. No games of telephone. No agency bloat. Faster decisions and better results.',
+      icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>,
+      title: 'Trato directo, sin intermediarios',
+      desc: 'Trabajas directamente con el diseñador, desarrollador o estratega que hace tu proyecto. Sin teléfonos rotos. Sin overhead de agencia.',
     },
     {
-      icon: (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
-        </svg>
-      ),
-      title: 'Measurable outcomes',
-      desc: 'We design for results — not appearances. Every project starts with a clear business objective, and we track performance after launch to ensure the work actually moves the needle.',
+      icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>,
+      title: 'Resultados medibles',
+      desc: 'Diseñamos para resultados, no para premios. Cada proyecto se define con un objetivo de negocio claro y medimos el rendimiento tras el lanzamiento.',
     },
     {
-      icon: (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
-      ),
-      title: 'Built to last, not to trend',
-      desc: 'We build for longevity, not trends. Every identity and platform we create is designed to remain relevant and effective for years — not just until the next design cycle.',
+      icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
+      title: 'Construido para durar, no para estar de moda',
+      desc: 'Construimos para la longevidad. Identidades y sitios que siguen siendo relevantes en cinco años, no solo hasta el próximo ciclo de tendencias.',
     },
     {
-      icon: (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-        </svg>
-      ),
-      title: 'Code that performs',
-      desc: 'Every site we build scores 90+ on Google Lighthouse. Sub-2-second load times, WCAG accessibility, and SEO foundations — not as extras, but as baseline requirements.',
+      icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>,
+      title: 'Código que rinde',
+      desc: 'Cada sitio que construimos puntúa 90+ en Google Lighthouse. Tiempos de carga sub-2-segundos, accesibilidad WCAG y SEO técnico como requisitos base.',
     },
     {
-      icon: (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-        </svg>
-      ),
-      title: '98% client retention',
-      desc: 'Most of our clients stay with us for years. Not because we lock them in, but because we build genuine partnerships — being the team they trust to evolve their brand as they grow.',
+      icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>,
+      title: 'IA local, coste cero',
+      desc: 'A través de CHARIOT, ofrecemos automatización con IA a coste operativo $0. Infraestructura 100% local que elimina facturas de API recurrentes.',
     },
   ]
 
@@ -349,79 +318,54 @@ function WhyRUD() {
         <ScrollReveal>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
             <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">Why RUD</p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">Por qué RUD</p>
               <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight leading-tight">
-                What makes us
-                <br />
-                <span className="italic font-light text-[#9CA3AF]">different</span>
+                Qué nos hace
+                <br /><span className="italic font-light text-[#9CA3AF]">diferentes</span>
               </h2>
             </div>
             <Link href="/about" className="inline-flex items-center gap-2 text-sm font-medium text-[#6B7280] hover:text-[#0A0A0A] hover:gap-4 transition-all duration-200">
-              Our story
+              Nuestra historia
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
           </div>
         </ScrollReveal>
 
-        <ScrollReveal className="stagger">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E2DC]">
-            {reasons.map((r) => (
-              <div key={r.title} className="bg-[#FAFAFA] p-8 hover:bg-white transition-colors duration-200">
-                <div className="text-[#6B7280] mb-5">{r.icon}</div>
-                <h3 className="font-bold text-[#0A0A0A] text-lg mb-3">{r.title}</h3>
-                <p className="text-sm text-[#6B7280] leading-relaxed">{r.desc}</p>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
-      </div>
-    </section>
-  )
-}
-
-// ─── Work Speaks ──────────────────────────────────────────────────────────────
-
-function WorkSpeaks() {
-  return (
-    <section className="section-padding bg-[#F0EDE6]">
-      <div className="container-custom">
-        <ScrollReveal>
-          <div className="max-w-2xl">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-6">Our Philosophy</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight leading-tight">
-              We let our work
-              <br />
-              <span className="italic font-light text-[#9CA3AF]">speak for itself.</span>
-            </h2>
-          </div>
-        </ScrollReveal>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E2DC]">
+          {reasons.map((r) => (
+            <div key={r.title} className="bg-[#FAFAFA] p-8 hover:bg-white transition-colors duration-200">
+              <div className="text-[#6B7280] mb-5">{r.icon}</div>
+              <h3 className="font-bold text-[#0A0A0A] text-lg mb-3">{r.title}</h3>
+              <p className="text-sm text-[#6B7280] leading-relaxed">{r.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
 }
 
 // ─── Pricing ──────────────────────────────────────────────────────────────────
-
 function Pricing() {
   const plans = [
     {
       name: 'Starter',
-      price: '€2,500',
-      desc: 'Perfect for early-stage startups',
-      features: ['Brand Strategy Session', 'Logo Design (3 concepts)', 'Colour & Type System', 'Basic Brand Guidelines', 'Email Support'],
+      price: '€2.500',
+      desc: 'Perfecto para startups y proyectos iniciales',
+      features: ['Sesión de Brand Strategy', 'Diseño de logo (3 conceptos)', 'Sistema de color y tipografía', 'Brand Guidelines básico', 'Soporte por email'],
     },
     {
       name: 'Professional',
-      price: '€7,500',
-      desc: 'Our most popular package',
-      features: ['Everything in Starter', 'Full Visual Identity', 'Website Design (5 pages)', 'Figma Handoff', 'Priority Support', '3 Rounds of Revisions'],
+      price: '€7.500',
+      desc: 'Nuestro paquete más popular',
+      features: ['Todo en Starter', 'Identidad visual completa', 'Diseño web (5 páginas)', 'Entrega en Figma', 'Soporte prioritario', '3 rondas de revisiones'],
       featured: true,
     },
     {
       name: 'Enterprise',
-      price: '€15,000+',
-      desc: 'Full end-to-end engagement',
-      features: ['Everything in Professional', 'Website Development', 'Content Strategy & Copy', 'Brand Motion Assets', 'Marketing Collateral', 'Dedicated Account Manager'],
+      price: '€15.000+',
+      desc: 'Engagement completo end-to-end',
+      features: ['Todo en Professional', 'Desarrollo web incluido', 'Estrategia de contenido y copy', 'Assets de motion branding', 'Colateral de marketing', 'AI Automation con CHARIOT'],
     },
   ]
 
@@ -430,57 +374,43 @@ function Pricing() {
       <div className="container-custom">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">Investment</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight mb-4">Pricing</h2>
-            <p className="text-[#6B7280] max-w-sm mx-auto text-sm">Transparent, fixed-scope packages. No surprises.</p>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">Inversión</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight mb-4">Precios</h2>
+            <p className="text-[#6B7280] max-w-sm mx-auto text-sm">Paquetes de precio fijo y alcance definido. Sin sorpresas.</p>
           </div>
         </ScrollReveal>
 
-        <ScrollReveal className="stagger">
-          <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
-            {plans.map((plan, index) => (
-              <div
-                key={index}
-                className={`rounded-2xl p-8 flex flex-col border ${
-                  plan.featured
-                    ? 'bg-[#0A0A0A] text-[#FAFAFA] border-[#0A0A0A] shadow-2xl md:scale-[1.03]'
-                    : 'bg-white border-[#E5E2DC]'
-                }`}
-              >
-                {plan.featured && (
-                  <span className="inline-block mb-4 px-3 py-1 bg-white/15 text-xs font-medium rounded-full w-fit text-white/80">
-                    Most Popular
-                  </span>
-                )}
+        <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+          {plans.map((plan, i) => (
+            <ScrollReveal key={i} delay={i * 80}>
+              <div className={`rounded-2xl p-8 flex flex-col border h-full ${plan.featured ? 'bg-[#0A0A0A] text-[#FAFAFA] border-[#0A0A0A] shadow-2xl md:scale-[1.03]' : 'bg-white border-[#E5E2DC]'}`}>
+                {plan.featured && <span className="inline-block mb-4 px-3 py-1 bg-white/15 text-xs font-medium rounded-full w-fit text-white/80">Más popular</span>}
                 <h3 className="text-lg font-bold mb-1">{plan.name}</h3>
                 <p className={`text-xs mb-4 ${plan.featured ? 'text-white/50' : 'text-[#9CA3AF]'}`}>{plan.desc}</p>
                 <p className="text-4xl font-bold mb-8 tracking-tight">{plan.price}</p>
-
                 <ul className="space-y-2.5 mb-8 flex-1">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2.5 text-sm">
+                  {plan.features.map((f, j) => (
+                    <li key={j} className="flex items-start gap-2.5 text-sm">
                       <svg className="mt-0.5 flex-shrink-0" width="14" height="14" viewBox="0 0 14 14" fill="none">
                         <circle cx="7" cy="7" r="7" fill={plan.featured ? 'rgba(255,255,255,0.12)' : '#F0EDE6'}/>
                         <path d="M4 7l2 2 4-4" stroke={plan.featured ? 'white' : '#0A0A0A'} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
-                      <span className={plan.featured ? 'text-white/70' : 'text-[#6B7280]'}>{feature}</span>
+                      <span className={plan.featured ? 'text-white/70' : 'text-[#6B7280]'}>{f}</span>
                     </li>
                   ))}
                 </ul>
-
-                <Link
-                  href="/contact"
-                  className={`w-full py-3.5 text-center rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80 ${
-                    plan.featured
-                      ? 'bg-white text-[#0A0A0A]'
-                      : 'bg-[#0A0A0A] text-white'
-                  }`}
-                >
-                  Get Started
+                <Link href="/contact" className={`w-full py-3.5 text-center rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80 ${plan.featured ? 'bg-white text-[#0A0A0A]' : 'bg-[#0A0A0A] text-white'}`}>
+                  Empezar proyecto
                 </Link>
               </div>
-            ))}
-          </div>
+            </ScrollReveal>
+          ))}
+        </div>
+
+        <ScrollReveal delay={300}>
+          <p className="text-center text-sm text-[#9CA3AF] mt-8">
+            ¿Tienes un proyecto específico? <Link href="/contact" className="text-[#0A0A0A] font-medium underline underline-offset-2 hover:no-underline">Hablemos y hacemos un presupuesto a medida.</Link>
+          </p>
         </ScrollReveal>
       </div>
     </section>
@@ -488,13 +418,12 @@ function Pricing() {
 }
 
 // ─── FAQ ──────────────────────────────────────────────────────────────────────
-
-const homeFaqs = [
-  { question: 'How long does a typical project take?', answer: 'Brand identity projects typically take 4–6 weeks. Website design and development projects range from 6–12 weeks depending on complexity and scope.' },
-  { question: 'Do you offer revisions?', answer: 'Yes — all packages include 3 rounds of revisions. Additional rounds can be arranged at an hourly rate. We find 3 rounds is more than enough to arrive at the perfect result.' },
-  { question: 'What is your payment process?', answer: 'We invoice 50% upfront to confirm your project date, with the remaining 50% due on final delivery. For larger engagements we can arrange milestone-based payments.' },
-  { question: 'Can you work with existing brand assets?', answer: "Absolutely. We can build on, refine, or evolve your existing brand assets rather than starting from scratch. We'll assess what you have and recommend the best approach." },
-  { question: 'Do you offer ongoing support after delivery?', answer: 'Yes — we offer monthly retainer packages for ongoing brand management, website updates, and marketing support. Many clients stay with us long-term.' },
+const faqs = [
+  { question: '¿Cuánto tiempo tarda un proyecto típico?', answer: 'Los proyectos de identidad de marca suelen tomar 4–6 semanas. Los proyectos de diseño y desarrollo web van de 6–12 semanas según la complejidad.' },
+  { question: '¿Incluís revisiones?', answer: 'Sí — todos los paquetes incluyen 3 rondas de revisiones. Rondas adicionales pueden acordarse a tarifa por hora. Con 3 rondas siempre llegamos al resultado perfecto.' },
+  { question: '¿Cómo es el proceso de pago?', answer: 'Facturamos el 50% al inicio para reservar tu fecha de proyecto, y el 50% restante al entregar el trabajo final. Para proyectos grandes podemos acordar pagos por hitos.' },
+  { question: '¿Podéis trabajar con activos de marca existentes?', answer: 'Absolutamente. Podemos construir sobre, refinar o evolucionar tus activos de marca existentes. Evaluamos lo que tienes y recomendamos el mejor enfoque.' },
+  { question: '¿Ofrecéis soporte después de la entrega?', answer: 'Sí — ofrecemos paquetes de retainer mensual para gestión de marca, actualizaciones de web y soporte de marketing. Muchos clientes trabajan con nosotros a largo plazo.' },
 ]
 
 function FAQ() {
@@ -505,20 +434,14 @@ function FAQ() {
           <ScrollReveal>
             <div className="mb-12">
               <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-3">FAQ</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight">
-                Got questions?
-              </h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0A0A0A] tracking-tight">Preguntas frecuentes</h2>
             </div>
           </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <FAQAccordion faqs={homeFaqs} />
-          </ScrollReveal>
+          <ScrollReveal delay={100}><FAQAccordion faqs={faqs} /></ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="text-[#6B7280] text-sm mt-10">
-              Still have questions?{' '}
-              <Link href="/contact" className="text-[#0A0A0A] font-medium underline underline-offset-2 hover:no-underline">
-                Get in touch
-              </Link>
+              ¿Más preguntas?{' '}
+              <Link href="/contact" className="text-[#0A0A0A] font-medium underline underline-offset-2 hover:no-underline">Contáctanos directamente</Link>
             </p>
           </ScrollReveal>
         </div>
@@ -528,37 +451,27 @@ function FAQ() {
 }
 
 // ─── CTA ──────────────────────────────────────────────────────────────────────
-
 function CTA() {
   return (
     <section className="bg-[#0A0A0A] py-24 md:py-32">
       <div className="container-custom">
         <ScrollReveal>
           <div className="max-w-3xl">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#4B5563] mb-5">Ready to start?</p>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#4B5563] mb-5">¿Listo para empezar?</p>
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-              Let&apos;s build something
-              <br />
-              <span className="italic font-light text-[#6B7280]">great together.</span>
+              Construyamos algo
+              <br /><span className="italic font-light text-[#6B7280]">grande juntos.</span>
             </h2>
             <p className="text-[#6B7280] text-base mb-10 max-w-lg leading-relaxed">
-              Tell us about your project and we&apos;ll get back to you within 24 hours.
+              Cuéntanos tu proyecto y te respondemos en menos de 24 horas. Basados en Barcelona, trabajamos globalmente.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-7 py-4 bg-white text-[#0A0A0A] font-semibold rounded-full hover:bg-[#F0EDE6] transition-colors text-sm"
-              >
-                Start a Conversation
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+              <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-4 bg-white text-[#0A0A0A] font-semibold rounded-full hover:bg-[#F0EDE6] transition-colors text-sm">
+                Iniciar conversación
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </Link>
-              <Link
-                href="/work"
-                className="inline-flex items-center gap-2 px-7 py-4 bg-transparent text-white border border-white/20 font-medium rounded-full hover:border-white/50 transition-colors text-sm"
-              >
-                See Our Work
+              <Link href="/work" className="inline-flex items-center gap-2 px-7 py-4 bg-transparent text-white border border-white/20 font-medium rounded-full hover:border-white/50 transition-colors text-sm">
+                Ver nuestro trabajo
               </Link>
             </div>
           </div>
@@ -569,78 +482,53 @@ function CTA() {
 }
 
 // ─── Footer ───────────────────────────────────────────────────────────────────
-
 function Footer() {
   return (
     <footer className="bg-[#0D0D0D] border-t border-[#1A1A1A] pt-16 pb-8">
       <div className="container-custom">
         <div className="grid md:grid-cols-12 gap-10 mb-16">
-          {/* Brand */}
           <div className="md:col-span-4">
-            <img src="/logo-rud-white.svg" alt="RÜD — Royal Union Design" className="h-10 mb-5" style={{ opacity: 0.9 }} />
+            <img src="/logo-rud-white.png" alt="RÜD — Royal Union Design Barcelona" className="h-10 mb-5" style={{ filter: 'brightness(0) invert(1)', opacity: 0.9 }} />
             <p className="text-[#6B7280] text-sm leading-relaxed max-w-xs">
-              Building bold brands with thoughtful design. Based in Barcelona, Spain, working globally.
+              Agencia de branding y diseño web en Barcelona. Identidades de marca, webs de alto rendimiento y automatización con IA.
             </p>
             <p className="text-[#4B5563] text-xs mt-3 tracking-wide">IDNT · CHARIOT</p>
-            <div className="mt-6">
-              <p className="text-xs font-medium text-[#9CA3AF] mb-2">Stay in the loop</p>
-              <NewsletterForm />
-            </div>
           </div>
 
-          {/* Navigate */}
           <div className="md:col-span-2 md:col-start-6">
-            <h4 className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#4B5563] mb-5">Navigate</h4>
+            <h4 className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#4B5563] mb-5">Navegar</h4>
             <ul className="space-y-3">
-              {[['Work', '/work'], ['Services', '/services'], ['About', '/about'], ['Pricing', '/pricing'], ['Blog', '/blog'], ['Contact', '/contact']].map(([label, href]) => (
-                <li key={href}>
-                  <Link href={href} className="text-sm text-[#6B7280] hover:text-white transition-colors duration-200">
-                    {label}
-                  </Link>
-                </li>
+              {[['Trabajo', '/work'], ['Servicios', '/services'], ['Nosotros', '/about'], ['Precios', '/pricing'], ['Blog', '/blog'], ['Contacto', '/contact']].map(([l, h]) => (
+                <li key={h}><Link href={h} className="text-sm text-[#6B7280] hover:text-white transition-colors duration-200">{l}</Link></li>
               ))}
             </ul>
           </div>
 
-          {/* Services */}
           <div className="md:col-span-2">
-            <h4 className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#4B5563] mb-5">Services</h4>
+            <h4 className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#4B5563] mb-5">Servicios</h4>
             <ul className="space-y-3">
-              {[['Branding', '/services#service-02'], ['Web Design', '/services#service-03'], ['Development', '/services#service-04'], ['Marketing', '/services#service-06'], ['Content', '/services#service-05']].map(([label, href]) => (
-                <li key={label}>
-                  <Link href={href} className="text-sm text-[#6B7280] hover:text-white transition-colors duration-200">
-                    {label}
-                  </Link>
-                </li>
+              {[['Branding', '/services#brand-strategy'], ['Identidad visual', '/services#visual-identity'], ['Diseño web', '/services#web-design'], ['Desarrollo', '/services#development'], ['AI Automation', '/services#ai-automation']].map(([l, h]) => (
+                <li key={l}><Link href={h} className="text-sm text-[#6B7280] hover:text-white transition-colors duration-200">{l}</Link></li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
           <div className="md:col-span-2">
-            <h4 className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#4B5563] mb-5">Contact</h4>
+            <h4 className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#4B5563] mb-5">Contacto</h4>
             <ul className="space-y-3 text-sm text-[#6B7280]">
-              <li>
-                <a href="mailto:hello@rud.studio" className="hover:text-white transition-colors duration-200">
-                  hello@rud.studio
-                </a>
-              </li>
-              <li>Barcelona, Spain</li>
-              <li className="text-[#4B5563]">Available worldwide</li>
+              <li><a href="mailto:hello@rud.studio" className="hover:text-white transition-colors duration-200">hello@rud.studio</a></li>
+              <li>Barcelona, España</li>
+              <li className="text-[#4B5563]">Trabajamos globalmente</li>
             </ul>
             <div className="flex gap-2.5 mt-6">
               {[
-                { label: 'Instagram', href: 'https://instagram.com/royaluniondesign' },
-                { label: 'LinkedIn', href: '#' },
-                { label: 'Behance', href: '#' },
-              ].map(({ label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="w-8 h-8 flex items-center justify-center rounded-full border border-[#2A2A2A] text-[#4B5563] hover:text-white hover:border-[#4B5563] transition-colors duration-200 text-xs font-medium"
-                >
-                  {label[0]}
+                { label: 'Instagram', short: 'Ig', href: 'https://instagram.com/royaluniondesign' },
+                { label: 'LinkedIn', short: 'Li', href: 'https://linkedin.com/company/royaluniondesign' },
+                { label: 'Behance', short: 'Be', href: 'https://behance.net/royaluniondesign' },
+              ].map(({ label, short, href }) => (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
+                  className="w-8 h-8 flex items-center justify-center rounded-full border border-[#2A2A2A] text-[#4B5563] hover:text-white hover:border-[#4B5563] transition-colors duration-200 text-xs font-medium">
+                  {short}
                 </a>
               ))}
             </div>
@@ -648,10 +536,10 @@ function Footer() {
         </div>
 
         <div className="pt-8 border-t border-[#1A1A1A] flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-[#4B5563]">© 2026 RUD Studio. All rights reserved.</p>
+          <p className="text-xs text-[#4B5563]">© 2026 RUD Studio. Todos los derechos reservados. Barcelona, España.</p>
           <div className="flex gap-6">
-            <Link href="#" className="text-xs text-[#4B5563] hover:text-[#6B7280] transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-xs text-[#4B5563] hover:text-[#6B7280] transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="text-xs text-[#4B5563] hover:text-[#6B7280] transition-colors">Política de privacidad</Link>
+            <Link href="/terms" className="text-xs text-[#4B5563] hover:text-[#6B7280] transition-colors">Términos de servicio</Link>
           </div>
         </div>
       </div>
@@ -660,7 +548,6 @@ function Footer() {
 }
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#FAFAFA]">
@@ -670,7 +557,6 @@ export default function Home() {
       <Services />
       <Portfolio />
       <WhyRUD />
-      <WorkSpeaks />
       <Pricing />
       <FAQ />
       <CTA />

@@ -1,43 +1,46 @@
 'use client'
-
 import { useState } from 'react'
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 
 const projects = [
   {
-    name: 'IDNT — Brand Identity System',
+    name: 'IDNT',
+    subtitle: 'Sistema de Identidad Visual',
     category: 'Branding',
+    year: '2025',
+    img: '/project-idnt.jpg',
     slug: 'idnt',
-    desc: 'Visual identity subsidiary of RUD — brand strategy, logo systems, and design guidelines.',
-    year: '2025',
-    bgStyle: { backgroundImage: 'url(/work3.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' },
-    labelColor: 'text-white',
+    tags: ['Branding', 'Identidad visual', 'IDNT'],
+    desc: 'Subsidiaria de branding de RUD. Estrategia de marca, sistemas de logo y guidelines visuales completos.',
   },
   {
-    name: 'CHARIOT — AI Automation Suite',
+    name: 'CHARIOT',
+    subtitle: 'Suite de Automatización IA',
     category: 'AI Automation',
-    slug: 'chariot',
-    desc: 'Autonomous AI assistant product built on local infrastructure for agency-scale automation.',
     year: '2025',
-    bgStyle: { background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 40%, #0f3460 100%)' },
-    labelColor: 'text-white',
+    img: '/project-chariot.jpg',
+    slug: 'chariot',
+    tags: ['AI', 'Automatización', 'CHARIOT'],
+    desc: 'Producto de IA autónomo construido sobre infraestructura local para automatización a escala de agencia.',
   },
   {
-    name: 'RUD Web Platform',
+    name: 'RUD Web',
+    subtitle: 'Plataforma Digital',
     category: 'Web Design',
-    slug: 'rud-web',
-    desc: 'Digital presence for Royal Union Design — strategy, design and development in one.',
     year: '2025',
-    bgStyle: { background: 'linear-gradient(160deg, #E8F4FD 0%, #FAFAFA 60%, #FEF0D6 100%)' },
-    labelColor: 'text-[#0A0A0A]',
+    img: '/project-web.jpg',
+    slug: 'rud-web',
+    tags: ['Web Design', 'Desarrollo Next.js'],
+    desc: 'Presencia digital de Royal Union Design — estrategia, diseño y desarrollo en un solo proyecto.',
   },
 ]
 
-const categories = ['All', 'Branding', 'AI Automation', 'Web Design']
+const cats = ['Todos', 'Branding', 'AI Automation', 'Web Design']
 
 export default function Work() {
-  const [active, setActive] = useState('All')
-  const filtered = active === 'All' ? projects : projects.filter(p => p.category === active)
+  const [active, setActive] = useState('Todos')
+  const filtered = active === 'Todos' ? projects : projects.filter(p => p.category === active)
 
   return (
     <main className="min-h-screen bg-[var(--bg)]">
@@ -46,60 +49,55 @@ export default function Work() {
         <div className="container-custom">
           <div className="mb-16">
             <p className="text-sm font-medium text-[var(--muted)] uppercase tracking-widest mb-3">Portfolio</p>
-            <h1 className="text-5xl md:text-7xl font-bold text-[var(--fg)] mb-6">Our Work</h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-[var(--fg)] mb-6 tracking-tight">Nuestro trabajo</h1>
             <p className="text-lg text-[var(--muted)] max-w-xl leading-relaxed">
-              Projects developed through RUD and its subsidiaries IDNT and CHARIOT.
+              Proyectos desarrollados a través de RUD y sus subsidiarias IDNT y CHARIOT. Basados en Barcelona, trabajamos globalmente.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-2 mb-12">
-            {categories.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setActive(cat)}
-                className={`px-4 py-2 text-sm font-medium rounded-full border transition-all duration-200 ${
-                  active === cat
-                    ? 'bg-[var(--fg)] text-[var(--bg)] border-[var(--fg)]'
-                    : 'bg-transparent text-[var(--muted)] border-[var(--border)] hover:border-[var(--fg)] hover:text-[var(--fg)]'
-                }`}
-              >
-                {cat}
+            {cats.map(c => (
+              <button key={c} onClick={() => setActive(c)}
+                className={`px-4 py-2 text-sm font-medium rounded-full border transition-all duration-200 ${active === c ? 'bg-[var(--fg)] text-[var(--bg)] border-[var(--fg)]' : 'bg-transparent text-[var(--muted)] border-[var(--border)] hover:border-[var(--fg)] hover:text-[var(--fg)]'}`}>
+                {c}
               </button>
             ))}
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {filtered.map((project, index) => (
-              <div key={project.slug} className="group" style={{ animationDelay: `${index * 50}ms` }}>
-                <div
-                  className="relative aspect-[4/3] overflow-hidden mb-4 rounded-2xl"
-                  style={project.bgStyle}
-                >
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+            {filtered.map((p, i) => (
+              <Link key={p.slug} href={`/work/${p.slug}`} className="group" style={{ animationDelay: `${i * 50}ms` }}>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-4">
+                  <img src={p.img} alt={`${p.name} — ${p.subtitle}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
                   <div className="absolute bottom-5 left-5">
-                    <span className={`font-bold text-2xl tracking-tight drop-shadow-lg ${project.labelColor}`}>
-                      {project.name.split(' — ')[0]}
-                    </span>
+                    <span className="text-white font-bold text-2xl tracking-tight drop-shadow-lg">{p.name}</span>
                   </div>
                 </div>
-                <p className="text-xs text-[var(--muted)] mb-1">{project.category} · {project.year}</p>
-                <h3 className="text-xl font-bold text-[var(--fg)]">{project.name}</h3>
-                <p className="text-sm text-[var(--muted)] mt-1">{project.desc}</p>
-              </div>
+                <div className="flex flex-wrap gap-1.5 mb-2">
+                  {p.tags.map(t => <span key={t} className="tag-pill">{t}</span>)}
+                </div>
+                <h3 className="text-xl font-bold text-[var(--fg)] group-hover:underline decoration-2 underline-offset-4">{p.name} — {p.subtitle}</h3>
+                <p className="text-sm text-[var(--muted)] mt-1">{p.desc}</p>
+              </Link>
             ))}
 
-            <div className="group">
-              <div className="relative aspect-[4/3] overflow-hidden mb-4 rounded-2xl border border-dashed border-[#D1CDC6] bg-[#F8F5F0] flex items-center justify-center">
-                <p className="text-sm font-medium text-[#C4BFB8] uppercase tracking-widest">In Progress</p>
+            {/* Coming soon */}
+            <div>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-4 border border-dashed border-[#D1CDC6] bg-[#F8F5F0] flex flex-col items-center justify-center gap-3">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C4BFB8" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <p className="text-sm font-medium text-[#C4BFB8] uppercase tracking-widest">En producción</p>
               </div>
-              <p className="text-xs text-[#C4BFB8] mb-1">2025</p>
-              <h3 className="text-xl font-bold text-[#C4BFB8]">Next Project</h3>
-              <p className="text-sm text-[#C4BFB8] mt-1">Currently in production.</p>
+              <h3 className="text-xl font-bold text-[#C4BFB8]">Próximo proyecto</h3>
+              <p className="text-sm text-[#C4BFB8] mt-1">Actualmente en producción. Próximamente.</p>
             </div>
           </div>
 
           {filtered.length === 0 && (
-            <p className="text-center text-[var(--muted)] py-20">No projects in this category yet.</p>
+            <div className="text-center py-20">
+              <p className="text-[var(--muted)] mb-6">No hay proyectos en esta categoría aún.</p>
+              <Link href="/contact" className="btn-primary">Iniciar un proyecto</Link>
+            </div>
           )}
         </div>
       </section>

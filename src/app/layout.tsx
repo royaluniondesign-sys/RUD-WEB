@@ -6,52 +6,49 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://rud-web.vercel.app"),
   title: {
-    default: "RUD — Brand Identity & Web Design Agency | Spain",
-    template: "%s | RUD Studio",
+    default: "RUD — Agencia de Branding y Diseño Web en Barcelona",
+    template: "%s | RUD Studio Barcelona",
   },
   description:
-    "RUD is a creative brand agency based in Barcelona, Spain specialising in brand strategy, visual identity, web design and digital marketing for startups and growing businesses across Europe and Australia.",
+    "Agencia de branding y diseño web en Barcelona. Creamos identidades de marca, logos y webs de alto rendimiento para startups y empresas en crecimiento. IDNT · CHARIOT.",
   keywords: [
-    "brand agency Spain",
-    "branding agency Europe",
-    "brand identity design",
-    "logo design studio",
-    "web design agency",
-    "brand strategy consultant",
-    "visual identity design",
-    "creative agency Spain",
-    "agencia de branding España",
-    "diseño de marca",
-    "web design startup",
-    "digital marketing agency",
-    "brand design studio",
+    "agencia branding Barcelona",
+    "diseño web Barcelona",
+    "agencia diseño Barcelona",
+    "identidad visual Barcelona",
+    "diseño de logo Barcelona",
+    "agencia creativa Barcelona",
+    "branding startup Barcelona",
+    "diseño de marca España",
+    "web design Barcelona",
+    "agencia marketing Barcelona",
+    "diseño gráfico Barcelona",
+    "brand strategy Barcelona",
+    "agencia digital Barcelona",
+    "desarrollo web Barcelona",
+    "automatización IA Barcelona",
     "Royal Union Design",
+    "RUD Studio",
+    "IDNT branding",
+    "CHARIOT AI automation",
   ],
   authors: [{ name: "RUD Studio", url: "https://rud-web.vercel.app" }],
   creator: "RUD Studio",
   publisher: "RUD Studio",
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "es_ES",
     url: "https://rud-web.vercel.app",
     siteName: "RUD Studio",
-    title: "RUD — Brand Identity & Web Design Agency",
+    title: "RUD — Agencia de Branding y Diseño Web en Barcelona",
     description:
-      "Creative brand agency based in Barcelona, Spain. Brand strategy, visual identity, web design and digital marketing for startups and growing businesses.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "RUD Studio — Building Bold Brands",
-      },
-    ],
+      "Agencia creativa en Barcelona. Branding, identidad visual, diseño web y automatización con IA para empresas que quieren destacar.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "RUD Studio Barcelona — Branding y Diseño Web" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "RUD — Brand Identity & Web Design Agency",
-    description:
-      "Creative brand agency based in Barcelona, Spain. Brand strategy, visual identity, web design and digital marketing.",
+    title: "RUD — Agencia de Branding y Diseño Web en Barcelona",
+    description: "Agencia creativa en Barcelona. Branding, identidad visual, diseño web y automatización con IA.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -59,9 +56,7 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
-  alternates: {
-    canonical: "https://rud-web.vercel.app",
-  },
+  alternates: { canonical: "https://rud-web.vercel.app" },
 };
 
 const jsonLd = {
@@ -69,47 +64,44 @@ const jsonLd = {
   "@type": "ProfessionalService",
   name: "RUD Studio",
   alternateName: "Royal Union Design",
-  description:
-    "Creative brand agency specialising in brand strategy, visual identity, web design and digital marketing for startups and growing businesses.",
+  description: "Agencia de branding y diseño web en Barcelona. Identidades de marca, diseño web y automatización con IA.",
   url: "https://rud-web.vercel.app",
-  logo: "https://rud-web.vercel.app/logo-rud-black.svg",
+  logo: "https://rud-web.vercel.app/logo-rud-white.png",
   email: "hello@rud.studio",
-  address: { "@type": "PostalAddress", addressCountry: "ES" },
-  areaServed: ["Europe", "Australia", "Americas"],
-  serviceType: [
-    "Brand Strategy",
-    "Visual Identity Design",
-    "Web Design",
-    "Web Development",
-    "Digital Marketing",
-    "Content Creation",
-  ],
-  foundingDate: "2013",
-  numberOfEmployees: { "@type": "QuantitativeValue", minValue: 4, maxValue: 10 },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Barcelona",
+    addressRegion: "Cataluña",
+    addressCountry: "ES",
+  },
+  geo: { "@type": "GeoCoordinates", latitude: "41.3851", longitude: "2.1734" },
+  areaServed: ["Barcelona", "España", "Europa"],
+  serviceType: ["Brand Strategy", "Identidad Visual", "Diseño Web", "Desarrollo Web", "AI Automation", "Contenido"],
   sameAs: [
     "https://instagram.com/royaluniondesign",
+    "https://linkedin.com/company/royaluniondesign",
+    "https://behance.net/royaluniondesign",
   ],
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <meta name="theme-color" content="#FAFAFA" />
+        <meta name="geo.region" content="ES-CT" />
+        <meta name="geo.placename" content="Barcelona" />
+        <meta name="geo.position" content="41.3851;2.1734" />
+        <meta name="ICBM" content="41.3851, 2.1734" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter+Tight:wght@100..900&display=swap"
-          rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased font-['Inter_Tight',sans-serif]">
+      <body>
         {children}
         <Analytics />
         <SpeedInsights />
