@@ -61,8 +61,9 @@ export async function generateStaticParams() {
   return Object.keys(PROJECTS).map(slug => ({ slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const p = PROJECTS[params.slug]
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const p = PROJECTS[slug]
   if (!p) return { title: 'Proyecto no encontrado' }
   return {
     title: `${p.client} — Caso de estudio · RUD Studio Barcelona`,
@@ -70,8 +71,9 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   }
 }
 
-export default function CaseStudy({ params }: { params: { slug: string } }) {
-  const p = PROJECTS[params.slug]
+export default async function CaseStudy({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const p = PROJECTS[slug]
   if (!p) notFound()
 
   return (
