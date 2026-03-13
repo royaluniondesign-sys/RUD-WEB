@@ -1,163 +1,128 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
+import ScrollReveal from '@/components/ScrollReveal'
 
-export const metadata: Metadata = {
-  title: 'Sobre RUD — Agencia de Branding en Barcelona',
-  description: 'Royal Union Design es una agencia creativa en Barcelona especializada en branding, diseño web y automatización con IA. Conoce IDNT y CHARIOT.',
+export const metadata = {
+  title: 'Sobre nosotros — RUD Studio · Agencia creativa Barcelona',
+  description: 'RUD es una agencia creativa full-stack en Barcelona. Branding, diseño web, e-commerce, motion y automatización IA. Conoce nuestra filosofía y cómo trabajamos.',
 }
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-[var(--bg)]">
+    <main>
       <Navbar />
-
-      {/* Hero */}
-      <section className="pt-36 pb-20 hero-gradient">
-        <div className="container-custom">
-          <div className="max-w-4xl">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-4">Sobre nosotros</p>
-            <h1 className="text-5xl md:text-7xl font-bold text-[#0A0A0A] tracking-tight mb-8 leading-tight">
-              Royal Union Design<br />
-              <span className="italic font-light text-[#9CA3AF]">Barcelona</span>
+      <section className="hero-gradient pt-[68px] pb-0">
+        <div className="container-custom py-24 md:py-32">
+          <ScrollReveal>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9CA3AF] mb-4">Sobre RUD</p>
+            <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-bold leading-tight tracking-tight mb-6 max-w-3xl">
+              Hacemos marcas y webs que generan resultados reales.
             </h1>
-            <p className="text-xl text-[#6B7280] max-w-2xl leading-relaxed">
-              RUD es una agencia creativa basada en Barcelona que combina estrategia de marca, diseño de alto nivel y tecnología de IA de vanguardia. Operamos a través de dos subsidiarias especializadas: <strong className="text-[#0A0A0A]">IDNT</strong> e <strong className="text-[#0A0A0A]">CHARIOT</strong>.
+            <p className="text-base md:text-lg text-[#6B7280] max-w-xl leading-relaxed">
+              RUD es una agencia creativa full-stack basada en Barcelona. Combinamos estrategia de marca, diseño de alto nivel, tecnología puntera y automatización con IA para construir presencias digitales que destacan.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* Mission */}
-      <section className="py-20 bg-[#FAFAFA]">
+      {/* Filosofía */}
+      <section className="section-padding bg-[#F7F5F1]">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-4">Nuestra misión</p>
-              <h2 className="text-4xl font-bold text-[#0A0A0A] mb-6 tracking-tight">
-                Las mejores herramientas, <span className="italic font-light text-[#9CA3AF]">sin coste recurrente</span>
+            <ScrollReveal>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9CA3AF] mb-4">Nuestra filosofía</p>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">Estrategia primero.<br />Diseño después.</h2>
+              <div className="space-y-4 text-sm text-[#6B7280] leading-relaxed">
+                <p>No abrimos Figma hasta entender a fondo el mercado, la competencia y el cliente. El diseño que no tiene estrategia detrás es decoración — y la decoración se olvida.</p>
+                <p>Creemos en el trabajo honesto: alcance claro, plazos reales, comunicación directa. Sin promesas infladas, sin sorpresas en la factura final.</p>
+                <p>Y creemos que la tecnología debe servir a la creatividad — no al revés. Por eso construimos CHARIOT, nuestro agente de IA interno, para amplificar nuestra capacidad sin sacrificar la calidad.</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={120}>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { num: '8+', label: 'Servicios especializados' },
+                  { num: '€0', label: 'Coste IA con CHARIOT' },
+                  { num: '100%', label: 'Infraestructura local' },
+                  { num: '24h', label: 'Tiempo de respuesta' },
+                ].map(s => (
+                  <div key={s.label} className="bg-white rounded-2xl p-6 border border-[#E2DDD7]">
+                    <p className="text-3xl font-bold tracking-tight mb-1">{s.num}</p>
+                    <p className="text-xs text-[#9CA3AF] font-medium">{s.label}</p>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* CHARIOT */}
+      <section className="py-20 bg-[#06040E] relative overflow-hidden">
+        <div className="absolute top-0 left-1/3 w-[600px] h-[300px] blur-[100px] opacity-12 pointer-events-none"
+          style={{background:'radial-gradient(ellipse,#7B68EE,transparent)'}} />
+        <div className="container-custom relative">
+          <ScrollReveal>
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-full border border-[#7B68EE]/25 bg-[#7B68EE]/10">
+                <span className="w-1.5 h-1.5 bg-[#7B68EE] rounded-full animate-pulse" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#7B68EE]">CHARIOT — nuestro motor interno</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-5">
+                Nuestro Jarvis para la agencia.
               </h2>
               <p className="text-[#6B7280] leading-relaxed mb-6">
-                Creemos que la excelencia creativa y la tecnología de última generación no deberían estar reservadas para las grandes corporaciones. RUD demuestra que se puede operar con infraestructura de nivel enterprise a coste operativo cero.
+                CHARIOT es el super-agente de IA que usamos internamente en RUD. No es un producto externo — es nuestra ventaja competitiva. Analiza briefings, genera contenido, automatiza workflows y nos permite entregar proyectos de mayor calidad en menor tiempo, sin coste operativo adicional.
               </p>
               <p className="text-[#6B7280] leading-relaxed">
-                Nuestra filosofía es simple: usar las mejores herramientas del mercado, constantemente comparando e integrando lo que sirve al propósito. El resultado es un servicio de calidad superior sin los márgenes inflados de las grandes agencias.
+                Corre 100% en infraestructura local con Ollama. Sin subir datos de clientes a servicios de terceros. Sin facturas mensuales de API. Es nuestra apuesta por la IA soberana, segura y eficiente.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { num: '$0', label: 'Coste operativo de IA' },
-                { num: '100%', label: 'Infraestructura local' },
-                { num: '2', label: 'Subsidiarias especializadas' },
-                { num: '6', label: 'Servicios core' },
-              ].map(s => (
-                <div key={s.label} className="bg-white border border-[#E5E2DC] rounded-2xl p-6">
-                  <p className="text-4xl font-bold text-[#0A0A0A] mb-2">{s.num}</p>
-                  <p className="text-sm text-[#9CA3AF] leading-tight">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* Subsidiaries */}
-      <section className="py-20 bg-[#F0EDE6]">
+      {/* Proceso */}
+      <section className="section-padding bg-[#F0EDE6]">
         <div className="container-custom">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-4">Subsidiarias</p>
-          <h2 className="text-4xl font-bold text-[#0A0A0A] mb-12 tracking-tight">Dos especialidades, <span className="italic font-light text-[#9CA3AF]">un equipo</span></h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* IDNT */}
-            <div className="bg-[#0A0A0A] rounded-2xl p-10 text-white">
-              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-              </div>
-              <p className="text-xs font-mono text-white/40 mb-2">Subsidiaria 01</p>
-              <h3 className="text-3xl font-bold mb-3">IDNT</h3>
-              <p className="text-white/60 text-sm font-medium mb-5">Brand & Visual Identity</p>
-              <p className="text-white/70 leading-relaxed mb-8">
-                IDNT se enfoca en la creación de sistemas de identidad visual completos. Desde la estrategia de marca hasta los guidelines que aseguran coherencia en todos los puntos de contacto.
-              </p>
-              <ul className="space-y-2 mb-8">
-                {['Brand Strategy', 'Identidad Visual', 'Diseño de Logo', 'Brand Guidelines', 'Packaging'].map(s => (
-                  <li key={s} className="flex items-center gap-2 text-sm text-white/60">
-                    <span className="w-1 h-1 rounded-full bg-white/30" />
-                    {s}
-                  </li>
-                ))}
-              </ul>
-              <Link href="/services#brand-strategy" className="inline-flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors">
-                Ver servicios IDNT
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </Link>
-            </div>
-
-            {/* CHARIOT */}
-            <div className="bg-[#0f3460] rounded-2xl p-10 text-white">
-              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-              </div>
-              <p className="text-xs font-mono text-white/40 mb-2">Subsidiaria 02</p>
-              <h3 className="text-3xl font-bold mb-3">CHARIOT</h3>
-              <p className="text-white/60 text-sm font-medium mb-5">AI Automation & Intelligent Assistants</p>
-              <p className="text-white/70 leading-relaxed mb-8">
-                CHARIOT construye sistemas de IA autónomos y flujos de trabajo inteligentes sobre infraestructura local. Coste operativo $0 con rendimiento de nivel enterprise. La alternativa sin facturas recurrentes.
-              </p>
-              <ul className="space-y-2 mb-8">
-                {['Flujos n8n', 'Agentes IA autónomos', 'Voice cloning', 'Avatar videos', 'AI Customer Support'].map(s => (
-                  <li key={s} className="flex items-center gap-2 text-sm text-white/60">
-                    <span className="w-1 h-1 rounded-full bg-white/30" />
-                    {s}
-                  </li>
-                ))}
-              </ul>
-              <Link href="/services#ai-automation" className="inline-flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors">
-                Ver servicios CHARIOT
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="py-20 bg-[#FAFAFA]">
-        <div className="container-custom">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-4">Cómo trabajamos</p>
-          <h2 className="text-4xl font-bold text-[#0A0A0A] mb-12 tracking-tight">Nuestro proceso</h2>
+          <ScrollReveal>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9CA3AF] mb-3">Cómo trabajamos</p>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-14">El proceso RUD</h2>
+          </ScrollReveal>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { step: '01', title: 'Descubrimiento', desc: 'Entendemos tu negocio, objetivos y competencia a fondo antes de proponer nada.' },
-              { step: '02', title: 'Estrategia', desc: 'Definimos el posicionamiento, mensajería y hoja de ruta del proyecto.' },
-              { step: '03', title: 'Diseño', desc: 'Creamos con criterio. Cada decisión visual tiene un porqué estratégico.' },
-              { step: '04', title: 'Entrega', desc: 'Entregamos con documentación completa y soporte post-lanzamiento.' },
-            ].map(v => (
-              <div key={v.step} className="bg-white border border-[#E5E2DC] rounded-2xl p-6">
-                <span className="text-3xl font-bold text-[#E5E2DC] block mb-4">{v.step}</span>
-                <h3 className="font-bold text-[#0A0A0A] mb-2">{v.title}</h3>
-                <p className="text-sm text-[#6B7280] leading-relaxed">{v.desc}</p>
-              </div>
+              { num: '01', title: 'Descubrimiento', desc: 'Sesión inicial donde entendemos tu negocio, objetivos, audiencia y competencia. CHARIOT analiza el mercado.' },
+              { num: '02', title: 'Estrategia', desc: 'Definimos posicionamiento, mensajes clave y la dirección creativa antes de diseñar una sola pieza.' },
+              { num: '03', title: 'Diseño & Build', desc: 'Creamos la identidad visual, diseñamos en Figma y desarrollamos. Revisiones iterativas contigo.' },
+              { num: '04', title: 'Entrega & Soporte', desc: 'Entregamos todos los assets, formamos a tu equipo y ofrecemos soporte post-entrega. Lanzamos juntos.' },
+            ].map((step, i) => (
+              <ScrollReveal key={step.num} delay={i * 70}>
+                <div className="bg-white rounded-2xl p-7 border border-[#E2DDD7] h-full">
+                  <span className="text-[10px] font-mono text-[#C4BFB8] mb-5 block">{step.num}</span>
+                  <h3 className="font-bold text-lg mb-3">{step.title}</h3>
+                  <p className="text-sm text-[#6B7280] leading-relaxed">{step.desc}</p>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0A0A0A] py-24">
+      <section className="py-20 bg-[#0A0908]">
         <div className="container-custom">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">¿Listo para trabajar <span className="italic font-light text-[#6B7280]">juntos?</span></h2>
-            <p className="text-[#6B7280] mb-10">Cuéntanos tu proyecto. Respondemos en menos de 24 horas.</p>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-4 bg-white text-[#0A0A0A] font-semibold rounded-full hover:bg-[#F0EDE6] transition-colors text-sm">
-                Iniciar proyecto
+          <ScrollReveal>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">¿Trabajamos juntos?</h2>
+                <p className="text-[#6B7280]">Cuéntanos tu proyecto — respondemos en menos de 24h.</p>
+              </div>
+              <Link href="/contact" className="shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-white text-[#0A0908] font-semibold rounded-full hover:bg-[#F0EDE6] transition-colors">
+                Contactar
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </Link>
-              <Link href="/pricing" className="inline-flex items-center gap-2 px-7 py-4 border border-white/20 text-white font-medium rounded-full hover:border-white/50 transition-colors text-sm">
-                Ver precios
-              </Link>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </main>

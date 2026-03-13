@@ -1,104 +1,177 @@
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
-import type { Metadata } from 'next'
+import ScrollReveal from '@/components/ScrollReveal'
 
-const projects: Record<string, { name: string; subtitle: string; img: string; desc: string; tags: string[]; next: string }> = {
-  'idnt': {
-    name: 'IDNT',
-    subtitle: 'Sistema de Identidad Visual',
-    img: '/project-idnt.jpg',
-    desc: 'IDNT es la subsidiaria de branding de Royal Union Design, especializada en la creación de sistemas de identidad visual completos. Desde la estrategia de marca hasta los brand guidelines que aseguran coherencia en todos los puntos de contacto.',
-    tags: ['Branding', 'Identidad visual', 'Brand Guidelines'],
-    next: 'chariot',
+const PROJECTS: Record<string, {
+  client: string; type: string; desc: string; tags: string[];
+  hero: string; images?: string[]; url?: string;
+  challenge: string; work: string[];
+  details: Record<string,string>; next: string; nextSlug: string;
+}> = {
+  idnt: {
+    client: 'IDNT®', type: 'Moda orgánica sostenible · Barcelona',
+    desc: 'Identidad visual completa, e-commerce Shopify, packaging y automatizaciones para una marca de ropa orgánica barcelonesa.',
+    tags: ['E-commerce Shopify','Branding','Identidad Visual','Packaging','Automatizaciones'],
+    hero: '/client-idnt-hero.gif',
+    images: ['/client-idnt-crew.jpg','/client-idnt-hoodie.jpg','/client-idnt-pant.jpg','/client-idnt-tee.jpg'],
+    url: 'https://www.idnt.es',
+    challenge: 'IDNT® necesitaba una identidad que comunicara sostenibilidad y artesanía urbana sin caer en los clichés del "slow fashion". Una marca con personalidad propia y sistema visual escalable para físico y digital.',
+    work: [
+      'Identidad visual completa desde estrategia hasta producción. Logo, paleta, tipografía, guidelines y aplicaciones en packaging y etiquetas.',
+      'E-commerce Shopify con experiencia de compra optimizada para conversión, integrado con gestión de inventario.',
+      'Automatizaciones de marketing: recuperación de carrito, email flows de fidelización, publicaciones automáticas en redes.',
+    ],
+    details: { 'Cliente':'IDNT®','Sector':'Moda sostenible','Ubicación':'Barcelona, España','Servicios':'Branding · Shopify · Packaging · Automatizaciones','Web':'idnt.es' },
+    next: 'Aurum Studio', nextSlug: 'aurum',
   },
-  'chariot': {
-    name: 'CHARIOT',
-    subtitle: 'Suite de Automatización IA',
-    img: '/project-chariot.jpg',
-    desc: 'CHARIOT es el producto de IA autónomo de RUD, construido sobre infraestructura 100% local. Flujos de trabajo inteligentes, asistentes conversacionales y sistemas de automatización a escala de agencia con coste operativo $0.',
-    tags: ['AI Automation', 'n8n', 'Ollama', 'Local AI'],
-    next: 'rud-web',
+  aurum: {
+    client: 'Aurum Studio', type: 'Joyería artesanal · Barcelona',
+    desc: 'Identidad de lujo accesible para una joyería artesanal barcelonesa. Branding, sistema visual, web y fotografía de producto.',
+    tags: ['Branding Lujo','Identidad Visual','Web Design','Fotografía'],
+    hero: '/client-jewelry-hero.jpg',
+    images: ['/client-jewelry-ring.jpg','/client-jewelry-2.jpg'],
+    challenge: 'Aurum necesitaba posicionarse como joyería artesanal de calidad sin el precio inalcanzable del lujo tradicional. El reto: crear un sistema visual que transmitiera exclusividad y accesibilidad al mismo tiempo.',
+    work: [
+      'Estrategia de marca con posicionamiento "lujo accesible". Naming, tagline y propuesta de valor diferenciada.',
+      'Identidad visual completa: logo minimalista, paleta dorada sofisticada, tipografía serif/sans y sistema de aplicaciones.',
+      'Web diseño con catálogo de producto, páginas de colección y experiencia de compra premium.',
+    ],
+    details: { 'Cliente':'Aurum Studio','Sector':'Joyería artesanal','Ubicación':'Barcelona, España','Servicios':'Branding · Identidad Visual · Web · Fotografía' },
+    next: 'BrandForce Agency', nextSlug: 'brandforce',
   },
-  'rud-web': {
-    name: 'RUD Web',
-    subtitle: 'Plataforma Digital',
-    img: '/project-web.jpg',
-    desc: 'La presencia digital de Royal Union Design. Diseñada y desarrollada internamente como demostración de las capacidades de RUD — estrategia, diseño Figma, desarrollo Next.js y SEO técnico en un solo proyecto.',
-    tags: ['Web Design', 'Next.js', 'React', 'Vercel'],
-    next: 'idnt',
+  brandforce: {
+    client: 'BrandForce Agency', type: 'Agencia de marketing · Madrid',
+    desc: 'Partner creativo white-label para una agencia de marketing madrileña. Diseño, desarrollo y automatización IA como extensión del equipo.',
+    tags: ['White-label','Diseño Web','Desarrollo','AI Automation'],
+    hero: '/client-agency-team.jpg',
+    images: ['/client-agency-1.jpg','/client-agency-office.jpg'],
+    challenge: 'BrandForce necesitaba escalar su capacidad creativa y técnica sin contratar equipo fijo. Querían un partner de confianza que entendiera los briefings de sus clientes y entregara en sus estándares de calidad.',
+    work: [
+      'Partnership white-label continuo: diseño web, landing pages y assets creativos bajo los brandbooks de sus clientes.',
+      'Desarrollo Next.js y WordPress para proyectos que requerían implementación técnica avanzada.',
+      'Implementación de automatizaciones con IA para reducir su tiempo de producción de contenido y reporting.',
+    ],
+    details: { 'Cliente':'BrandForce Agency','Sector':'Agencia de marketing','Ubicación':'Madrid, España','Servicios':'White-label · Diseño · Desarrollo · AI Automation','Modalidad':'Partnership continuo' },
+    next: 'IDNT®', nextSlug: 'idnt',
   },
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params
-  const p = projects[slug]
-  if (!p) return { title: 'Proyecto no encontrado' }
+export async function generateStaticParams() {
+  return Object.keys(PROJECTS).map(slug => ({ slug }))
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }) {
+  const p = PROJECTS[params.slug]
+  if (!p) return {}
   return {
-    title: `${p.name} — ${p.subtitle}`,
+    title: `${p.client} — Caso de estudio · RUD Studio`,
     description: p.desc,
   }
 }
 
-export default async function WorkSlug({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const p = projects[slug]
-
-  if (!p) {
-    return (
-      <main className="min-h-screen bg-[var(--bg)]">
-        <Navbar />
-        <section className="pt-36 pb-20">
-          <div className="container-custom">
-            <Link href="/work" className="inline-flex items-center gap-2 text-sm text-[var(--muted)] hover:text-[var(--fg)] mb-12 transition-colors">← Volver al trabajo</Link>
-            <h1 className="text-4xl font-bold text-[var(--fg)] mb-4">Proyecto no encontrado</h1>
-            <Link href="/work" className="btn-primary">Ver todos los proyectos</Link>
-          </div>
-        </section>
-      </main>
-    )
-  }
+export default function CaseStudy({ params }: { params: { slug: string } }) {
+  const p = PROJECTS[params.slug]
+  if (!p) notFound()
 
   return (
-    <main className="min-h-screen bg-[var(--bg)]">
+    <main>
       <Navbar />
-      <section className="pt-36 pb-20">
-        <div className="container-custom">
-          <Link href="/work" className="inline-flex items-center gap-2 text-sm text-[var(--muted)] hover:text-[var(--fg)] mb-12 transition-colors">← Volver al trabajo</Link>
-
-          <div className="max-w-4xl">
+      <section className="pt-[68px] bg-[#F7F5F1]">
+        <div className="container-custom py-14">
+          <ScrollReveal>
+            <Link href="/work" className="inline-flex items-center gap-2 text-sm text-[#6B7280] hover:text-[#0A0908] transition-colors mb-8">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              Portfolio
+            </Link>
             <div className="flex flex-wrap gap-1.5 mb-5">
               {p.tags.map(t => <span key={t} className="tag-pill">{t}</span>)}
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-[var(--fg)] mb-4 tracking-tight">{p.name}</h1>
-            <p className="text-xl text-[#9CA3AF] mb-8">{p.subtitle}</p>
-          </div>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-3">{p.client}</h1>
+            <p className="text-lg text-[#6B7280]">{p.type}</p>
+          </ScrollReveal>
+        </div>
+      </section>
 
-          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl mb-16">
-            <img src={p.img} alt={`${p.name} — ${p.subtitle}`} className="w-full h-full object-cover" />
-          </div>
+      {/* Hero */}
+      <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+        <img src={p.hero} alt={`${p.client} — ${p.type}`} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/25" />
+        {p.url && (
+          <a href={p.url} target="_blank" rel="noopener noreferrer"
+            className="absolute bottom-6 right-6 inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white text-xs font-medium hover:bg-white/30 transition-colors">
+            Visitar web ↗
+          </a>
+        )}
+      </div>
 
-          <div className="max-w-2xl">
-            <p className="text-lg text-[#6B7280] leading-relaxed mb-12">{p.desc}</p>
-            <Link href="/contact" className="btn-primary">
-              Trabajar con nosotros
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </Link>
+      <section className="section-padding bg-[#F7F5F1]">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="md:col-span-2 space-y-10">
+              <ScrollReveal>
+                <h2 className="text-2xl font-bold mb-4">El desafío</h2>
+                <p className="text-[#6B7280] leading-relaxed">{p.challenge}</p>
+              </ScrollReveal>
+              <ScrollReveal delay={80}>
+                <h2 className="text-2xl font-bold mb-4">Lo que hicimos</h2>
+                <div className="space-y-3">
+                  {p.work.map((w, i) => (
+                    <div key={i} className="flex gap-3">
+                      <span className="shrink-0 w-5 h-5 rounded-full bg-[#F0EDE6] flex items-center justify-center mt-0.5">
+                        <span className="text-[10px] font-mono text-[#9CA3AF]">{i+1}</span>
+                      </span>
+                      <p className="text-[#6B7280] leading-relaxed text-sm">{w}</p>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
+              {p.images && (
+                <ScrollReveal delay={120}>
+                  <div className="grid grid-cols-2 gap-4">
+                    {p.images.map((img, i) => (
+                      <img key={i} src={img} alt={`${p.client} — imagen ${i+1}`} className="rounded-xl w-full h-52 object-cover" />
+                    ))}
+                  </div>
+                </ScrollReveal>
+              )}
+            </div>
+            <ScrollReveal delay={60}>
+              <div className="space-y-5 sticky top-24">
+                <div className="bg-white rounded-2xl p-6 border border-[#E2DDD7]">
+                  <h3 className="text-[10px] font-semibold uppercase tracking-widest text-[#9CA3AF] mb-4">Detalles</h3>
+                  <div className="space-y-4 text-sm">
+                    {Object.entries(p.details).map(([k,v]) => (
+                      <div key={k}>
+                        <p className="text-[10px] text-[#9CA3AF] font-medium uppercase tracking-wider mb-0.5">{k}</p>
+                        <p className="text-[#0A0908] font-medium">{v}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="bg-[#F0EDE6] rounded-2xl p-6">
+                  <p className="text-sm text-[#6B7280] leading-relaxed mb-4">¿Proyecto similar? Hablemos.</p>
+                  <Link href="/contact" className="btn-primary w-full justify-center text-sm">Contactar</Link>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
+        </div>
+      </section>
 
-          {/* Next project */}
-          <div className="mt-24 pt-12 border-t border-[#E5E2DC]">
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-4">Siguiente proyecto</p>
-            <Link href={`/work/${p.next}`} className="group inline-flex items-center gap-3 text-3xl font-bold text-[#0A0A0A] hover:gap-5 transition-all duration-200">
-              {projects[p.next]?.name}
-              <svg width="24" height="24" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </Link>
-          </div>
+      <section className="py-14 bg-[#F0EDE6] border-t border-[#E2DDD7]">
+        <div className="container-custom">
+          <ScrollReveal>
+            <div className="flex items-center justify-between">
+              <p className="text-sm text-[#9CA3AF]">Siguiente proyecto</p>
+              <Link href={`/work/${p.nextSlug}`} className="group inline-flex items-center gap-2 text-xl font-bold hover:gap-3 transition-all">
+                {p.next}
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </main>
   )
-}
-
-export async function generateStaticParams() {
-  return Object.keys(projects).map(slug => ({ slug }))
 }
