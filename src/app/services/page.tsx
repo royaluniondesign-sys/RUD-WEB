@@ -1,160 +1,134 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
+import ScrollReveal from '@/components/ScrollReveal'
 
-export const metadata: Metadata = {
-  title: 'Servicios de Branding y Diseño Web en Barcelona',
-  description: 'Servicios de branding, identidad visual, diseño web, desarrollo y automatización con IA en Barcelona. IDNT para marca, CHARIOT para IA.',
+export const metadata = {
+  title: 'Servicios — RUD Studio · Agencia creativa Barcelona',
+  description: 'Servicios de branding, diseño web, e-commerce, motion, marketing digital y automatización IA en Barcelona. Estrategia y tecnología bajo un mismo techo.',
 }
 
-const services = [
+const SERVICES = [
   {
-    id: 'brand-strategy',
-    num: '01',
-    tag: 'IDNT',
-    title: 'Brand Strategy',
-    headline: 'Estrategia de marca en Barcelona',
+    id: 'branding', num: '01', title: 'Branding & Estrategia', icon: '◈',
+    desc: 'Construimos marcas desde la raíz estratégica. Posicionamiento, naming, sistemas de identidad visual que duran décadas y se adaptan a todos los formatos.',
+    deliverables: ['Auditoría de marca y competencia','Brand Strategy & Positioning','Naming y Tagline','Diseño de logo — 3 conceptos','Sistema visual completo (color, tipografía, layout)','Brand Guidelines (PDF entregable)','Formatos AI/EPS/SVG/PNG/PDF'],
     img: '/svc-strategy.jpg',
-    desc: 'Antes de diseñar una sola pieza, analizamos en profundidad tu mercado, competidores y audiencia. El resultado es un posicionamiento claro que hace cada decisión futura más fácil — y tu negocio más difícil de ignorar.',
-    deliverables: ['Análisis de mercado y competencia', 'Definición de audiencia objetivo', 'Propuesta de valor y posicionamiento', 'Arquitectura de marca', 'Naming y tagline', 'Plataforma de mensajería'],
-    cta: 'Empezar con estrategia',
   },
   {
-    id: 'visual-identity',
-    num: '02',
-    tag: 'IDNT',
-    title: 'Identidad Visual',
-    headline: 'Diseño de identidad visual y logotipos',
+    id: 'visual-identity', num: '02', title: 'Identidad Visual', icon: '◎',
+    desc: 'Sistemas visuales completos que funcionan en tarjeta, pantalla, packaging o valla. Diseñamos para la longevidad, no para la tendencia del mes.',
+    deliverables: ['Evolución o creación de logo','Sistema tipográfico completo','Paleta de color primaria y secundaria','Elementos gráficos y patterns','Aplicaciones sobre colateral (tarjetas, papelería)','Diseño de packaging','Manual de marca completo'],
     img: '/svc-identity.jpg',
-    desc: 'Sistemas de logo, paletas de color y tipografía construidos para durar — no para estar de moda. Identidades que funcionan en todos los puntos de contacto: desde tu tarjeta de visita hasta una valla publicitaria de 40 metros.',
-    deliverables: ['Logo principal y variantes', 'Paleta de color primaria y secundaria', 'Sistema tipográfico', 'Iconografía personalizada', 'Brand guidelines completo', 'Aplicaciones y mockups'],
-    cta: 'Diseñar mi identidad',
   },
   {
-    id: 'web-design',
-    num: '03',
-    tag: 'RUD',
-    title: 'Diseño Web',
-    headline: 'Diseño web para empresas en Barcelona',
+    id: 'web', num: '03', title: 'Diseño Web & Desarrollo', icon: '◉',
+    desc: 'Desde el wireframe hasta el deploy. UX/UI en Figma, desarrollo Next.js o WordPress y e-commerce Shopify. Sitios que puntúan 95+ en Lighthouse.',
+    deliverables: ['Arquitectura de información','Wireframes y prototipos','Diseño UI en Figma (pixel-perfect)','Desarrollo Next.js / React / WordPress','E-commerce Shopify o WooCommerce','SEO técnico de base','Google Analytics 4 & tracking'],
     img: '/svc-webdesign.jpg',
-    desc: 'Sitios que se ven excepcionales y rinden de forma medible. Diseñamos en Figma con conversión en mente, luego entregamos especificaciones pixel-perfect para que nada se pierda en la traducción al desarrollo.',
-    deliverables: ['Auditoría UX del sitio actual', 'Arquitectura de información', 'Wireframes y prototipos', 'Diseño UI en Figma', 'Sistema de componentes', 'Handoff de desarrollo'],
-    cta: 'Diseñar mi web',
   },
   {
-    id: 'development',
-    num: '04',
-    tag: 'RUD',
-    title: 'Desarrollo Web',
-    headline: 'Desarrollo Next.js y React en Barcelona',
-    img: '/svc-dev.jpg',
-    desc: 'Next.js, React y TypeScript limpio. Construimos sitios que puntúan 90+ en Lighthouse, cargan en menos de 2 segundos y escalan con tu negocio. SEO técnico y accesibilidad WCAG como requisitos base.',
-    deliverables: ['Desarrollo Next.js / React', 'Optimización Core Web Vitals', 'SEO técnico on-page', 'Integración CMS (Sanity, Contentful)', 'Formularios y backend', 'Despliegue en Vercel'],
-    cta: 'Desarrollar mi proyecto',
-  },
-  {
-    id: 'content',
-    num: '05',
-    tag: 'RUD',
-    title: 'Contenido',
-    headline: 'Creación de contenido y copywriting',
+    id: 'content', num: '04', title: 'Contenido & Motion', icon: '◆',
+    desc: 'Copywriting estratégico, dirección de arte para foto y video, animaciones de marca y producción de contenido para todos los canales.',
+    deliverables: ['Copywriting web y landing pages','Estrategia de contenido','Dirección de arte para sesiones foto/video','Animaciones de logo y elementos de marca','Motion graphics para redes','Guías de contenido para equipo interno'],
     img: '/svc-content.jpg',
-    desc: 'Dirección de arte, copywriting y briefs fotográficos que cuentan tu historia con consistencia. Hacemos que tu marca suene tan bien como se ve.',
-    deliverables: ['Estrategia de contenido', 'Copywriting web y landing pages', 'Dirección de arte fotográfica', 'Contenido para redes sociales', 'Presentaciones corporativas', 'Materiales de marketing'],
-    cta: 'Crear mi contenido',
   },
   {
-    id: 'ai-automation',
-    num: '06',
-    tag: 'CHARIOT',
-    title: 'AI Automation',
-    headline: 'Automatización con IA · CHARIOT Barcelona',
-    img: '/svc-ai.jpg',
-    desc: 'Flujos de trabajo inteligentes, asistentes autónomos y sistemas de IA construidos sobre infraestructura 100% local a través de CHARIOT. Coste operativo $0 — sin facturas de API recurrentes.',
-    deliverables: ['Auditoría de procesos automatizables', 'Flujos n8n y agentes IA', 'Asistentes conversacionales', 'Integración con herramientas existentes', 'Infraestructura local Ollama', 'Formación y documentación'],
-    cta: 'Automatizar con CHARIOT',
+    id: 'marketing', num: '05', title: 'Marketing Digital', icon: '◇',
+    desc: 'SEO orgánico, SEM y campañas de pago que traen tráfico cualificado. Medimos todo, optimizamos constantemente.',
+    deliverables: ['Auditoría SEO técnico','Estrategia de palabras clave','Configuración y gestión Google Ads','Campañas Meta (Instagram/Facebook)','Email marketing (Klaviyo/Mailchimp)','Dashboards de analítica mensual'],
+    img: '/svc-webdesign.jpg',
+  },
+  {
+    id: 'chariot', num: '06', title: 'AI Automation con CHARIOT', icon: '◐',
+    desc: 'Implementamos nuestro stack de IA autónoma en tu empresa. Asistentes inteligentes, flujos automatizados, generación de contenido y análisis — sin coste de API recurrente.',
+    deliverables: ['Diagnóstico de procesos automatizables','Implementación de agentes de IA locales','Flujos de trabajo con n8n','Asistente de atención al cliente 24/7','Automatización de reporting y datos','Voz clonada y avatar video (opcional)','Formación del equipo'],
+    img: '/svc-chariot.jpg',
+    chariot: true,
   },
 ]
 
 export default function Services() {
   return (
-    <main className="min-h-screen bg-[var(--bg)]">
+    <main>
       <Navbar />
-
-      {/* Hero */}
-      <section className="pt-36 pb-16 hero-gradient">
-        <div className="container-custom">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-4">Qué hacemos</p>
-          <h1 className="text-5xl md:text-7xl font-bold text-[#0A0A0A] tracking-tight mb-6 max-w-3xl">
-            Servicios de diseño <span className="italic font-light text-[#9CA3AF]">y tecnología</span>
-          </h1>
-          <p className="text-lg text-[#6B7280] max-w-xl leading-relaxed mb-8">
-            Agencia creativa en Barcelona con dos subsidiarias especializadas. <strong className="text-[#0A0A0A]">IDNT</strong> para branding e identidad visual. <strong className="text-[#0A0A0A]">CHARIOT</strong> para automatización con IA.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/contact" className="btn-primary">Solicitar presupuesto</Link>
-            <Link href="/pricing" className="btn-secondary">Ver precios</Link>
-          </div>
+      <section className="hero-gradient pt-[68px]">
+        <div className="container-custom py-24 md:py-28">
+          <ScrollReveal>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9CA3AF] mb-4">Servicios · Barcelona</p>
+            <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-bold leading-tight tracking-tight mb-6 max-w-3xl">
+              Full-stack creativo.<br />
+              <span className="italic font-light text-[#A8A0A0]">De la estrategia al deploy.</span>
+            </h1>
+            <p className="text-base md:text-lg text-[#6B7280] max-w-xl leading-relaxed">
+              Branding, diseño web, e-commerce, motion, marketing y automatización IA. Todo bajo un mismo techo en Barcelona para que tu marca avance con coherencia.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* Services Cards */}
-      <section className="py-20">
+      <section className="section-padding bg-[#F7F5F1]">
         <div className="container-custom space-y-6">
-          {services.map((s, i) => (
-            <div key={s.id} id={s.id} className="group bg-white border border-[#E5E2DC] rounded-2xl overflow-hidden hover:border-[#0A0A0A] hover:shadow-lg transition-all duration-300">
-              <div className={`grid md:grid-cols-2 ${i % 2 === 1 ? 'md:flex md:flex-row-reverse' : ''}`}>
-                {/* Image */}
-                <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden">
-                  <img src={s.img} alt={s.headline} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <span className={`absolute top-4 left-4 px-3 py-1 text-xs font-bold rounded-full ${s.tag === 'CHARIOT' ? 'bg-[#0f3460] text-white' : s.tag === 'IDNT' ? 'bg-[#0A0A0A] text-white' : 'bg-white text-[#0A0A0A]'}`}>
-                    {s.tag}
-                  </span>
-                </div>
-
-                {/* Content */}
-                <div className="p-8 md:p-12 flex flex-col justify-center">
-                  <span className="text-xs font-mono text-[#C4BFB8] mb-3">{s.num}</span>
-                  <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-2">{s.title}</h2>
-                  <p className="text-sm text-[#9CA3AF] font-medium mb-5">{s.headline}</p>
-                  <p className="text-[#6B7280] leading-relaxed mb-8">{s.desc}</p>
-
-                  <div className="mb-8">
-                    <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#9CA3AF] mb-4">Entregables</p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {s.deliverables.map(d => (
-                        <div key={d} className="flex items-start gap-2 text-sm text-[#6B7280]">
-                          <svg className="flex-shrink-0 mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <circle cx="6" cy="6" r="6" fill="#F0EDE6"/>
-                            <path d="M3 6l2 2 4-4" stroke="#0A0A0A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
-                          {d}
-                        </div>
-                      ))}
+          {SERVICES.map((s, i) => (
+            <ScrollReveal key={s.id} delay={i * 60}>
+              <div id={s.id} className={`rounded-2xl overflow-hidden border ${s.chariot ? 'border-[#7B68EE]/20 bg-[#06040E]' : 'border-[#E2DDD7] bg-white'}`}>
+                <div className={`grid md:grid-cols-2 ${i % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''}`}>
+                  <div className="relative h-64 md:h-auto min-h-[280px] overflow-hidden">
+                    <img src={s.img} alt={s.title} className="w-full h-full object-cover" />
+                    {s.chariot && (
+                      <div className="absolute inset-0 bg-[#06040E]/60" />
+                    )}
+                  </div>
+                  <div className="p-8 md:p-10">
+                    <div className="flex items-center gap-3 mb-5">
+                      <span className="text-[10px] font-mono text-[#9CA3AF]">{s.num}</span>
+                      <span className={`text-lg ${s.chariot ? 'text-[#7B68EE]' : 'text-[#C4BFB8]'}`}>{s.icon}</span>
+                      {s.chariot && (
+                        <span className="px-2.5 py-1 bg-[#7B68EE]/15 border border-[#7B68EE]/25 rounded-full text-[10px] font-bold text-[#7B68EE] uppercase tracking-widest">CHARIOT</span>
+                      )}
+                    </div>
+                    <h2 className={`text-2xl md:text-3xl font-bold mb-4 tracking-tight ${s.chariot ? 'text-white' : ''}`}>{s.title}</h2>
+                    <p className={`text-sm leading-relaxed mb-6 ${s.chariot ? 'text-[#6B7280]' : 'text-[#6B7280]'}`}>{s.desc}</p>
+                    <div>
+                      <p className={`text-[10px] font-semibold uppercase tracking-widest mb-3 ${s.chariot ? 'text-[#3D3556]' : 'text-[#C4BFB8]'}`}>Entregables</p>
+                      <ul className="space-y-1.5">
+                        {s.deliverables.map(d => (
+                          <li key={d} className="flex items-start gap-2 text-xs">
+                            <span className={`mt-1 w-1 h-1 rounded-full shrink-0 ${s.chariot ? 'bg-[#7B68EE]' : 'bg-[#D4D0CA]'}`} />
+                            <span className={s.chariot ? 'text-[#6B7280]' : 'text-[#6B7280]'}>{d}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="mt-7">
+                      <Link href="/contact" className={`inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-colors ${
+                        s.chariot ? 'bg-[#7B68EE] text-white hover:bg-[#6856D4]' : 'bg-[#0A0908] text-white hover:opacity-80'
+                      }`}>
+                        Solicitar presupuesto
+                        <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </Link>
                     </div>
                   </div>
-
-                  <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-[#0A0A0A] text-white rounded-full text-sm font-semibold hover:opacity-80 transition-opacity w-fit">
-                    {s.cta}
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </Link>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-[#0A0A0A] py-24">
-        <div className="container-custom text-center">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#4B5563] mb-5">¿Listo para empezar?</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">¿No sabes qué necesitas?<br /><span className="italic font-light text-[#6B7280]">Hablemos y lo descubrimos juntos.</span></h2>
-          <p className="text-[#6B7280] mb-10 max-w-md mx-auto">Respondemos en menos de 24 horas. Sin compromiso.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#0A0A0A] font-semibold rounded-full hover:bg-[#F0EDE6] transition-colors">
-            Contactar ahora
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-          </Link>
+      <section className="py-20 bg-[#0A0908]">
+        <div className="container-custom">
+          <ScrollReveal>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-2">¿Necesitas algo específico?</h2>
+                <p className="text-[#6B7280]">Hacemos presupuestos a medida. Cuéntanos qué necesitas.</p>
+              </div>
+              <Link href="/contact" className="shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-white text-[#0A0908] font-semibold rounded-full hover:bg-[#F0EDE6] transition-colors">
+                Contactar ahora
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </main>
