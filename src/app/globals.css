@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+/* ─── Awake-inspired Design Tokens ──────────────────────── */
+:root {
+  --bg: #FAFAFA;
+  --fg: #0A0A0A;
+  --muted: #6B7280;
+  --surface: #F0EDE6;
+  --border: #E5E2DC;
+  --cream: #FEF9F0;
+  --blue-light: #E8F4FD;
+
+  /* 8pt spacing scale */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-16: 128px;
+}
+
+/* ─── Base ──────────────────────────────────────────────── */
+html { scroll-behavior: smooth; color-scheme: light; }
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+}
+
+/* ─── Custom scrollbar ──────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D1CDC6; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* ─── Typography ────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.025em;
+}
+
+/* ─── Hero gradient (Awake style) ───────────────────────── */
+.hero-gradient {
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 0%, #D6EDFB 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 90% 0%, #FEF0D6 0%, transparent 60%),
+    #FAFAFA;
+}
+
+/* ─── Layout utilities ──────────────────────────────────── */
+.container-custom {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+@media (min-width: 640px)  { .container-custom { padding-left: 2rem; padding-right: 2rem; } }
+@media (min-width: 1024px) { .container-custom { padding-left: 3rem; padding-right: 3rem; } }
+
+.section-padding { padding: 5rem 0; }
+@media (min-width: 768px)  { .section-padding { padding: 7rem 0; } }
+@media (min-width: 1024px) { .section-padding { padding: 9rem 0; } }
+
+/* ─── Buttons ────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: #0A0A0A;
+  color: #FAFAFA;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 100px;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  opacity: 0.82;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: transparent;
+  color: #0A0A0A;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 100px;
+  border: 1.5px solid #D1CDC6;
+  transition: border-color 0.2s ease, gap 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-secondary:hover {
+  border-color: #0A0A0A;
+  gap: 14px;
+  transform: translateY(-1px);
+}
+
+/* ─── Images ─────────────────────────────────────────────── */
+.img-hover-zoom { overflow: hidden; }
+.img-hover-zoom img { transition: transform 0.6s ease; }
+.img-hover-zoom:hover img { transform: scale(1.04); }
+
+/* ─── Pill tags (Awake portfolio style) ──────────────────── */
+.tag-pill {
+  display: inline-block;
+  padding: 5px 14px;
+  border: 1.5px solid #D1CDC6;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6B7280;
+  background: transparent;
+  letter-spacing: 0.01em;
+}
+
+/* ─── Service list (Awake numbered style) ────────────────── */
+.service-row {
+  position: relative;
+}
+.service-row::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: #E5E2DC;
+}
+
+/* ─── Stat number (enormous, Awake style) ────────────────── */
+.stat-number {
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ─── Scroll reveal ──────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.stagger > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.visible.stagger > * { opacity: 1; transform: none; }
+.reveal.stagger > *:nth-child(1) { transition-delay: 0ms; }
+.reveal.stagger > *:nth-child(2) { transition-delay: 80ms; }
+.reveal.stagger > *:nth-child(3) { transition-delay: 160ms; }
+.reveal.stagger > *:nth-child(4) { transition-delay: 240ms; }
+.reveal.stagger > *:nth-child(5) { transition-delay: 320ms; }
+.reveal.stagger > *:nth-child(6) { transition-delay: 400ms; }
+
+/* ─── Animations ─────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes serviceExpand {
+  from { max-height: 0; opacity: 0; }
+  to   { max-height: 200px; opacity: 1; }
+}
+
+.animate-fade-in-up  { animation: fadeInUp 0.8s ease forwards; }
+.animate-marquee     { animation: marquee 32s linear infinite; }
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-500 { animation-delay: 500ms; }
+
+/* ─── Marquee pause on hover ─────────────────────────────── */
+.marquee-track:hover { animation-play-state: paused; }
