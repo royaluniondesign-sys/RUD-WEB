@@ -30,9 +30,7 @@ export default function About() {
       {/* Filosofía */}
       <section style={{ background: '#F7F5F1', paddingBlock: 'clamp(3rem,8vw,5rem)' }}>
         <div className="container-custom">
-          <div style={{ display: 'grid', gap: '3rem', alignItems: 'center' }}>
-            <style>{`@media(min-width:768px){#about-grid{grid-template-columns:1fr 1fr!important}}`}</style>
-            <div id="about-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '3rem', alignItems: 'center' }}>
+          <div className="grid gap-12 items-center md:grid-cols-2">
               <ScrollReveal>
                 <div>
                   <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#9CA3AF', marginBottom: 14 }}>Nuestra filosofía</p>
@@ -61,7 +59,6 @@ export default function About() {
                   ))}
                 </div>
               </ScrollReveal>
-            </div>
           </div>
         </div>
       </section>
@@ -97,9 +94,7 @@ export default function About() {
             <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#9CA3AF', marginBottom: 10 }}>Cómo trabajamos</p>
             <h2 style={{ fontSize: 'clamp(1.5rem,3.5vw,2.5rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: 48 }}>El proceso RUD</h2>
           </ScrollReveal>
-          <div style={{ display: 'grid', gap: '1rem' }}>
-            <style>{`@media(min-width:768px){#process-grid{grid-template-columns:repeat(4,1fr)!important}}`}</style>
-            <div id="process-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem' }}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { num: '01', title: 'Descubrimiento', desc: 'Sesión inicial donde entendemos tu negocio, objetivos, audiencia y competencia. CHARIOT analiza el mercado.' },
                 { num: '02', title: 'Estrategia', desc: 'Definimos posicionamiento, mensajes clave y la dirección creativa antes de diseñar una sola pieza.' },
@@ -114,7 +109,6 @@ export default function About() {
                   </div>
                 </ScrollReveal>
               ))}
-            </div>
           </div>
         </div>
       </section>

@@ -128,9 +128,7 @@ export default function Services() {
                 border: s.dark ? '1px solid rgba(123,104,238,.2)' : '1px solid #E2DDD7',
                 background: s.dark ? '#06040E' : '#fff',
               }}>
-                <div style={{ display: 'grid' }}>
-                  <style>{`.svc-${s.num}-inner { grid-template-columns: 1fr !important; } @media(min-width:768px){ .svc-${s.num}-inner { grid-template-columns: 1fr 1fr !important; } }`}</style>
-                  <div className={`svc-${s.num}-inner`} style={{ display: 'grid', gridTemplateColumns: '1fr' }}>
+                <div className="grid md:grid-cols-2">
                     {/* Number + title col */}
                     <div style={{ padding: 'clamp(1.5rem,4vw,2.5rem)', borderRight: '0px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                       <div>
@@ -167,7 +165,6 @@ export default function Services() {
                       </ul>
                     </div>
                   </div>
-                </div>
               </div>
             </ScrollReveal>
           ))}

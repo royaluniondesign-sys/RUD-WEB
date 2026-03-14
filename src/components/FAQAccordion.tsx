@@ -22,7 +22,7 @@ export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
               </svg>
             </span>
           </button>
-          <div className={`grid transition-all duration-350 ease-in-out ${open === i ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+          <div className={`grid transition-all duration-300 ease-in-out ${open === i ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
             <div className="overflow-hidden">
               <p className="pt-4 pb-1 text-sm md:text-base leading-relaxed text-[#6B7280]">{faq.answer}</p>
             </div>

@@ -48,7 +48,8 @@ export default function Navbar() {
               const active = path === href || path.startsWith(href + '/')
               return (
                 <Link key={href} href={href}
-                  className={`text-sm font-medium transition-colors ${active ? 'text-[#0A0908]' : 'text-[#6B7280] hover:text-[#0A0908]'}`}>
+                  data-active={active}
+                  className={`nav-link text-sm font-medium transition-colors ${active ? 'text-[#0A0908]' : 'text-[#6B7280] hover:text-[#0A0908]'}`}>
                   {label}
                 </Link>
               )
@@ -90,7 +91,7 @@ export default function Navbar() {
 
       {/* Mobile overlay */}
       {open && (
-        <div className="mobile-nav-overlay md:hidden">
+        <div className="mobile-nav md:hidden">
           <div className="container-custom py-6 flex flex-col h-full">
             <nav className="flex flex-col">
               {NAV.map(({ href, label }) => (

@@ -85,9 +85,7 @@ export default function Blog() {
             <Link href={`/blog/${featured.slug}`}
               className="card-lift"
               style={{ display: 'block', borderRadius: 16, overflow: 'hidden', background: '#fff', border: '1px solid #E2DDD7', marginBottom: '1.5rem' }}>
-              <div style={{ display: 'grid' }}>
-                <style>{`@media(min-width:768px){#feat-card{grid-template-columns:1fr 1fr!important}}`}</style>
-                <div id="feat-card" style={{ display: 'grid', gridTemplateColumns: '1fr' }}>
+              <div className="grid md:grid-cols-2">
                   <div style={{ position: 'relative', minHeight: 220, overflow: 'hidden' }}>
                     <img src={featured.image} alt={featured.title}
                       style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -107,15 +105,12 @@ export default function Blog() {
                       Leer artículo →
                     </div>
                   </div>
-                </div>
               </div>
             </Link>
           </ScrollReveal>
 
           {/* Grid */}
-          <div style={{ display: 'grid', gap: '1rem' }}>
-            <style>{`@media(min-width:480px){#blog-grid{grid-template-columns:repeat(2,1fr)!important}}@media(min-width:1024px){#blog-grid{grid-template-columns:repeat(3,1fr)!important}}`}</style>
-            <div id="blog-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {rest.map((post, i) => (
                 <ScrollReveal key={post.slug} delay={i * 55}>
                   <Link href={`/blog/${post.slug}`} className="card-lift"
@@ -139,7 +134,6 @@ export default function Blog() {
                   </Link>
                 </ScrollReveal>
               ))}
-            </div>
           </div>
 
           {/* Newsletter */}
