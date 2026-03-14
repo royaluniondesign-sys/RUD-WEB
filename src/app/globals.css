@@ -42,6 +42,10 @@ body {
     var(--bg);
 }
 
+/* ── Hero font utilities ─────────────────── */
+.font-barlow           { font-family: 'Barlow', sans-serif; }
+.font-instrument-serif { font-family: 'Instrument Serif', serif; }
+
 /* ── Botones ─────────────────────────────── */
 .btn-primary {
   display: inline-flex;
