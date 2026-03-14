@@ -14,7 +14,7 @@ function Hero() {
 
       <div className="container-custom relative z-10" style={{paddingTop:'5rem',paddingBottom:'5rem'}}>
         <div className="animate-fade-in-up mb-6">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 border border-[#E2DDD7] rounded-full text-xs font-medium text-[#6B7280]">
+          <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/80 border border-[#E2DDD7] rounded-full text-xs font-medium text-[#6B7280]">
             <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
             Aceptando proyectos · Barcelona
           </span>
@@ -31,7 +31,7 @@ function Hero() {
           Agencia creativa full-stack en Barcelona. Branding estratégico, diseño web, e-commerce, motion y automatización con IA — todo bajo un mismo techo.
         </p>
 
-        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-3 mb-10">
+        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-4 mb-12">
           <Link href="/contact" className="btn-primary arrow-link">
             Hablemos de tu proyecto
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -39,9 +39,9 @@ function Hero() {
           <Link href="/work" className="btn-secondary">Ver trabajo real</Link>
         </div>
 
-        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-2">
+        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-3">
           {['Branding','Diseño Web','E-commerce Shopify','Motion Design','AI Automation','Identidad Visual'].map(t => (
-            <span key={t} className="px-3 py-1 bg-white/60 border border-[#E2DDD7] rounded-full text-[#9CA3AF] font-medium" style={{fontSize:'11px'}}>{t}</span>
+            <span key={t} className="keyword-pill">{t}</span>
           ))}
         </div>
       </div>
@@ -114,7 +114,7 @@ function Services() {
               <Link href={s.href} style={{display:'flex',flexDirection:'column',background:'white',border:'1px solid var(--border)',borderRadius:'16px',padding:'2rem',textDecoration:'none',height:'100%'}} className="card-lift">
                 <h3 style={{fontSize:'1.25rem',fontWeight:700,letterSpacing:'-0.02em',marginBottom:'0.75rem',lineHeight:1.25,color:'var(--fg)'}}>{s.title}</h3>
                 <p style={{fontSize:'0.875rem',color:'var(--muted)',lineHeight:1.65,marginBottom:'1.25rem',flex:1}}>{s.desc}</p>
-                <div style={{display:'flex',flexWrap:'wrap',gap:'6px'}}>
+                <div style={{display:'flex',flexWrap:'wrap',gap:'8px'}}>
                   {s.tags.map(tag => <span key={tag} className="tag-pill">{tag}</span>)}
                 </div>
               </Link>
@@ -188,7 +188,7 @@ function Work() {
               <p className="section-label">Clientes & proyectos reales</p>
               <h2 style={{fontSize:'clamp(1.8rem,4vw,3rem)',fontWeight:700,letterSpacing:'-0.03em'}}>Trabajo que habla.</h2>
             </div>
-            <Link href="/work" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'6px',fontSize:'0.875rem',fontWeight:500,color:'var(--muted)',textDecoration:'none',whiteSpace:'nowrap'}}>
+            <Link href="/work" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',fontSize:'0.875rem',fontWeight:500,color:'var(--muted)',textDecoration:'none',whiteSpace:'nowrap'}}>
               Ver todo el portfolio
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
@@ -209,7 +209,7 @@ function Work() {
                 </div>
                 <div style={{padding:'clamp(1.5rem,4vw,2.5rem)',display:'flex',flexDirection:'column',justifyContent:'space-between'}}>
                   <div>
-                    <div style={{display:'flex',flexWrap:'wrap',gap:'6px',marginBottom:'1.25rem'}}>
+                    <div style={{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'1.25rem'}}>
                       {['E-commerce Shopify','Branding','Identidad Visual','Packaging'].map(t => <span key={t} className="tag-pill">{t}</span>)}
                     </div>
                     <h3 style={{fontSize:'clamp(1.5rem,3vw,2rem)',fontWeight:700,marginBottom:'0.5rem',color:'var(--fg)'}}>IDNT®</h3>
@@ -243,13 +243,13 @@ function Work() {
                   <div style={{position:'absolute',inset:0,background:'linear-gradient(to top,rgba(0,0,0,0.35),transparent)'}} />
                 </div>
                 <div style={{padding:'1.25rem',flex:1,display:'flex',flexDirection:'column'}}>
-                  <div style={{display:'flex',flexWrap:'wrap',gap:'5px',marginBottom:'0.75rem'}}>
+                  <div style={{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'0.75rem'}}>
                     {p.tags.map(t => <span key={t} className="tag-pill">{t}</span>)}
                   </div>
                   <h3 style={{fontSize:'1.1rem',fontWeight:700,marginBottom:'0.25rem',color:'var(--fg)'}}>{p.name}</h3>
                   <p style={{fontSize:'0.75rem',color:'#9CA3AF',fontWeight:500,marginBottom:'0.5rem'}}>{p.type}</p>
                   <p style={{fontSize:'0.8125rem',color:'var(--muted)',lineHeight:1.6,flex:1}}>{p.desc}</p>
-                  <div className="arrow-link" style={{marginTop:'1rem',fontSize:'0.8125rem',fontWeight:600,color:'var(--fg)',display:'inline-flex',alignItems:'center',gap:'6px'}}>
+                  <div className="arrow-link" style={{marginTop:'1rem',fontSize:'0.8125rem',fontWeight:600,color:'var(--fg)',display:'inline-flex',alignItems:'center',gap:'8px'}}>
                     Ver proyecto <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   </div>
                 </div>

@@ -65,7 +65,7 @@ export default function Work() {
                       </div>
                       <div className="p-8 md:p-10 flex flex-col justify-between">
                         <div>
-                          <div className="flex flex-wrap gap-1.5 mb-5">
+                          <div className="flex flex-wrap gap-2 mb-5">
                             {p.tags.map(t => <span key={t} className="tag-pill">{t}</span>)}
                           </div>
                           <h2 className="text-3xl font-bold mb-2 group-hover:underline decoration-2 underline-offset-4">{p.client}</h2>
@@ -85,7 +85,7 @@ export default function Work() {
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                       </div>
                       <div className="p-8 flex flex-col justify-center">
-                        <div className="flex flex-wrap gap-1.5 mb-4">
+                        <div className="flex flex-wrap gap-2 mb-4">
                           {p.tags.map(t => <span key={t} className="tag-pill">{t}</span>)}
                         </div>
                         <h2 className="text-2xl font-bold mb-1 group-hover:underline decoration-2 underline-offset-4">{p.client}</h2>
