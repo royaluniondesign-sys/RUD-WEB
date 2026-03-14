@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
+import FAQAccordion from '@/components/FAQAccordion'
 
 // ═══════════════════════════════════════════════════════════
 // HERO
@@ -12,7 +13,7 @@ function Hero() {
       <div className="absolute inset-0 pointer-events-none"
         style={{backgroundImage:'linear-gradient(rgba(10,9,8,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(10,9,8,.035) 1px,transparent 1px)',backgroundSize:'64px 64px'}} />
 
-      <div className="container-custom relative z-10" style={{paddingTop:'5rem',paddingBottom:'5rem'}}>
+      <div className="container-custom relative z-10" style={{paddingTop:'6rem',paddingBottom:'6rem'}}>
         <div className="animate-fade-in-up mb-6">
           <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/80 border border-[#E2DDD7] rounded-full text-xs font-medium text-[#6B7280]">
             <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
@@ -20,18 +21,18 @@ function Hero() {
           </span>
         </div>
 
-        <h1 className="animate-fade-in-up anim-d1 font-bold leading-[1.02] tracking-tight mb-6"
-          style={{fontSize:'clamp(2.4rem,5.5vw,5.2rem)',letterSpacing:'-0.03em',maxWidth:'820px'}}>
+        <h1 className="animate-fade-in-up anim-d1 font-bold leading-[1.02] tracking-tight mb-8"
+          style={{fontSize:'clamp(2.6rem,6vw,5.8rem)',letterSpacing:'-0.035em',maxWidth:'900px'}}>
           Creamos marcas que<br />
           <span className="italic font-light" style={{color:'#A8A0A0'}}>posicionan de verdad.</span>
         </h1>
 
-        <p className="animate-fade-in-up anim-d2 text-[#6B7280] leading-relaxed mb-8"
-          style={{fontSize:'clamp(0.95rem,2vw,1.15rem)',maxWidth:'480px'}}>
+        <p className="animate-fade-in-up anim-d2 text-[#6B7280] leading-relaxed mb-10"
+          style={{fontSize:'clamp(1rem,2vw,1.25rem)',maxWidth:'520px'}}>
           Agencia creativa full-stack en Barcelona. Branding estratégico, diseño web, e-commerce, motion y automatización con IA — todo bajo un mismo techo.
         </p>
 
-        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-4 mb-12">
+        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-4 mb-14">
           <Link href="/contact" className="btn-primary arrow-link">
             Hablemos de tu proyecto
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -69,6 +70,34 @@ function Marquee() {
 }
 
 // ═══════════════════════════════════════════════════════════
+// STATS — 4 bold stats
+// ═══════════════════════════════════════════════════════════
+function Stats() {
+  const stats = [
+    { number: '50+', label: 'Proyectos entregados' },
+    { number: '95+', label: 'Lighthouse score medio' },
+    { number: '24h', label: 'Tiempo de respuesta' },
+    { number: '100%', label: 'Clientes satisfechos' },
+  ]
+  return (
+    <section style={{background:'#FAFAFA',padding:'clamp(3rem,6vw,5rem) 0'}}>
+      <div className="container-custom">
+        <div className="grid grid-cols-2 md:grid-cols-4" style={{gap:'1px',background:'var(--border)',borderRadius:'20px',overflow:'hidden'}}>
+          {stats.map((stat, i) => (
+            <ScrollReveal key={stat.label} delay={i * 80}>
+              <div style={{background:'#FAFAFA',padding:'clamp(1.5rem,4vw,2.5rem)',textAlign:'center'}}>
+                <p className="stat-number" style={{color:'var(--fg)',marginBottom:'0.5rem'}}>{stat.number}</p>
+                <p style={{fontSize:'0.8125rem',color:'var(--muted)',fontWeight:500}}>{stat.label}</p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ═══════════════════════════════════════════════════════════
 // SERVICES — featured 2 + compact 2
 // ═══════════════════════════════════════════════════════════
 function Services() {
@@ -94,11 +123,11 @@ function Services() {
     <section className="section-padding" style={{background:'#F7F5F1'}}>
       <div className="container-custom">
         <ScrollReveal>
-          <div style={{display:'flex',flexWrap:'wrap',gap:'1rem',justifyContent:'space-between',alignItems:'flex-end',marginBottom:'3rem'}}>
+          <div style={{display:'flex',flexWrap:'wrap',gap:'1rem',justifyContent:'space-between',alignItems:'flex-end',marginBottom:'3.5rem'}}>
             <div>
               <p className="section-label">Lo que hacemos · Barcelona</p>
-              <h2 style={{fontSize:'clamp(1.8rem,4vw,3rem)',fontWeight:700,letterSpacing:'-0.03em',marginBottom:'0.5rem'}}>Servicios</h2>
-              <p style={{fontSize:'0.875rem',color:'var(--muted)',maxWidth:'340px',lineHeight:1.6}}>Estrategia, diseño, tecnología y automatización para marcas con ambición.</p>
+              <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'0.5rem'}}>Servicios</h2>
+              <p style={{fontSize:'0.9375rem',color:'var(--muted)',maxWidth:'380px',lineHeight:1.6}}>Estrategia, diseño, tecnología y automatización para marcas con ambición.</p>
             </div>
             <Link href="/services" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'0.5rem',fontSize:'0.875rem',fontWeight:500,color:'var(--muted)',textDecoration:'none',whiteSpace:'nowrap'}}>
               Ver los 6 servicios
@@ -111,9 +140,9 @@ function Services() {
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           {featured.map((s, i) => (
             <ScrollReveal key={s.title} delay={i * 55}>
-              <Link href={s.href} style={{display:'flex',flexDirection:'column',background:'white',border:'1px solid var(--border)',borderRadius:'16px',padding:'2rem',textDecoration:'none',height:'100%'}} className="card-lift">
-                <h3 style={{fontSize:'1.25rem',fontWeight:700,letterSpacing:'-0.02em',marginBottom:'0.75rem',lineHeight:1.25,color:'var(--fg)'}}>{s.title}</h3>
-                <p style={{fontSize:'0.875rem',color:'var(--muted)',lineHeight:1.65,marginBottom:'1.25rem',flex:1}}>{s.desc}</p>
+              <Link href={s.href} style={{display:'flex',flexDirection:'column',background:'white',border:'1px solid var(--border)',borderRadius:'16px',padding:'2.5rem',textDecoration:'none',height:'100%'}} className="card-lift">
+                <h3 style={{fontSize:'1.375rem',fontWeight:700,letterSpacing:'-0.02em',marginBottom:'0.75rem',lineHeight:1.25,color:'var(--fg)'}}>{s.title}</h3>
+                <p style={{fontSize:'0.9375rem',color:'var(--muted)',lineHeight:1.65,marginBottom:'1.5rem',flex:1}}>{s.desc}</p>
                 <div style={{display:'flex',flexWrap:'wrap',gap:'8px'}}>
                   {s.tags.map(tag => <span key={tag} className="tag-pill">{tag}</span>)}
                 </div>
@@ -142,32 +171,104 @@ function Services() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// CHARIOT — compact callout
+// CHARIOT — full section with terminal + capabilities + CTA
 // ═══════════════════════════════════════════════════════════
 function Chariot() {
+  const capabilities = [
+    { label: 'ANALISIS', title: 'Análisis de briefings', desc: 'Procesamos tu brief con IA para extraer insights clave y oportunidades estratégicas.' },
+    { label: 'CONTENIDO', title: 'Generación de contenido', desc: 'Copy, posts, emails y guiones optimizados para tu marca y audiencia.' },
+    { label: 'WORKFLOW', title: 'Automatización de workflows', desc: 'Conectamos herramientas y automatizamos procesos repetitivos de tu negocio.' },
+    { label: 'SEO', title: 'SEO técnico e investigación', desc: 'Auditorías, keyword research y optimización técnica impulsados por IA.' },
+    { label: 'DATOS', title: 'Análisis de datos', desc: 'Métricas, reportes y visualizaciones para decisiones basadas en datos reales.' },
+    { label: 'CODIGO', title: 'Asistencia en desarrollo', desc: 'Generación y revisión de código, testing automatizado y deployment.' },
+  ]
+
   return (
-    <section style={{background:'#06040E',position:'relative',overflow:'hidden',padding:'clamp(3rem,6vw,5rem) 0'}}>
+    <section style={{background:'#06040E',position:'relative',overflow:'hidden',padding:'clamp(4rem,8vw,7rem) 0'}}>
+      {/* Subtle grid background */}
+      <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(rgba(123,104,238,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(123,104,238,0.03) 1px,transparent 1px)',backgroundSize:'64px 64px',pointerEvents:'none'}} />
+
       <div className="container-custom" style={{position:'relative',zIndex:1}}>
+        {/* Header */}
         <ScrollReveal>
-          <div style={{borderRadius:'16px',border:'1px solid rgba(123,104,238,0.15)',background:'rgba(123,104,238,0.04)',padding:'clamp(1.5rem,4vw,2.5rem)'}}>
-            <div style={{display:'flex',flexWrap:'wrap',gap:'2rem',alignItems:'center',justifyContent:'space-between'}}>
-              <div style={{flex:'1 1 400px',maxWidth:'600px'}}>
-                <div style={{display:'inline-flex',alignItems:'center',gap:'8px',marginBottom:'1rem',padding:'5px 12px',borderRadius:'9999px',border:'1px solid rgba(123,104,238,0.25)',background:'rgba(123,104,238,0.1)'}}>
-                  <span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#7B68EE'}} className="animate-pulse" />
-                  <span style={{fontSize:'10px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.15em',color:'#7B68EE'}}>CHARIOT · Motor IA interno</span>
-                </div>
-                <h2 style={{fontSize:'clamp(1.25rem,3vw,1.75rem)',fontWeight:700,color:'white',letterSpacing:'-0.02em',lineHeight:1.2,marginBottom:'0.75rem'}}>
-                  IA local que amplifica nuestra creatividad
-                </h2>
-                <p style={{color:'#6B7280',lineHeight:1.7,fontSize:'0.875rem'}}>
-                  Análisis de briefings, generación de contenido, automatización de workflows — 100% local con Ollama, €0 de coste operativo. Entregamos más calidad en menos tiempo.
-                </p>
-              </div>
-              <Link href="/services#chariot" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'0.75rem 1.5rem',background:'#7B68EE',color:'white',borderRadius:'9999px',fontWeight:600,fontSize:'0.875rem',textDecoration:'none',flexShrink:0,transition:'opacity 0.2s'}}>
-                Saber más
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </Link>
+          <div style={{textAlign:'center',marginBottom:'4rem'}}>
+            <div style={{display:'inline-flex',alignItems:'center',gap:'8px',marginBottom:'1.5rem',padding:'6px 14px',borderRadius:'9999px',border:'1px solid rgba(123,104,238,0.25)',background:'rgba(123,104,238,0.1)'}}>
+              <span style={{width:'6px',height:'6px',borderRadius:'50%',background:'var(--chariot)'}} className="animate-pulse" />
+              <span style={{fontSize:'10px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.15em',color:'var(--chariot)'}}>CHARIOT · Motor IA interno</span>
             </div>
+            <h2 style={{fontSize:'clamp(2rem,5vw,3.5rem)',fontWeight:700,color:'white',letterSpacing:'-0.035em',lineHeight:1.1,marginBottom:'1rem',maxWidth:'700px',margin:'0 auto 1rem'}}>
+              IA local que amplifica nuestra creatividad
+            </h2>
+            <p style={{color:'#6B7280',lineHeight:1.7,fontSize:'clamp(0.9rem,1.5vw,1.05rem)',maxWidth:'560px',margin:'0 auto'}}>
+              100% local con Ollama, sin coste operativo. Entregamos más calidad en menos tiempo sin que tus datos salgan de nuestros servidores.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* Terminal mockup */}
+        <ScrollReveal delay={100}>
+          <div className="chariot-glow" style={{maxWidth:'680px',margin:'0 auto 4rem',borderRadius:'12px',border:'1px solid rgba(123,104,238,0.2)',background:'#0D0B18',overflow:'hidden'}}>
+            {/* Terminal header */}
+            <div style={{display:'flex',alignItems:'center',gap:'8px',padding:'12px 16px',borderBottom:'1px solid rgba(123,104,238,0.1)',background:'rgba(123,104,238,0.04)'}}>
+              <span style={{width:'10px',height:'10px',borderRadius:'50%',background:'#FF5F57'}} />
+              <span style={{width:'10px',height:'10px',borderRadius:'50%',background:'#FEBC2E'}} />
+              <span style={{width:'10px',height:'10px',borderRadius:'50%',background:'#28C840'}} />
+              <span style={{flex:1,textAlign:'center',fontSize:'11px',color:'rgba(255,255,255,0.25)',fontFamily:'monospace'}}>chariot@rud-studio</span>
+            </div>
+            {/* Terminal body */}
+            <div style={{padding:'1.25rem 1.5rem',fontFamily:'monospace',fontSize:'13px',lineHeight:1.8}}>
+              <p style={{color:'rgba(123,104,238,0.7)'}}>
+                <span style={{color:'var(--chariot)'}}>$</span> chariot analyze --brief client-brief.pdf
+              </p>
+              <p style={{color:'rgba(255,255,255,0.35)'}}>
+                Analizando brief... extrayendo insights clave...
+              </p>
+              <p style={{color:'rgba(255,255,255,0.35)'}}>
+                Competidores identificados: 12 | Oportunidades: 8
+              </p>
+              <p style={{color:'#28C840'}}>
+                Informe estratégico generado en 4.2s
+              </p>
+              <p style={{color:'rgba(123,104,238,0.7)',marginTop:'0.5rem'}}>
+                <span style={{color:'var(--chariot)'}}>$</span> chariot generate --content seo-blog
+              </p>
+              <p style={{color:'rgba(255,255,255,0.35)'}}>
+                Generando contenido SEO optimizado...
+              </p>
+              <p style={{color:'#28C840'}}>
+                3 artículos listos para revisión
+              </p>
+              <p style={{color:'rgba(123,104,238,0.7)',marginTop:'0.5rem'}}>
+                <span style={{color:'var(--chariot)'}}>$</span> <span className="cursor-blink" style={{display:'inline-block',width:'8px',height:'14px',background:'var(--chariot)',verticalAlign:'middle'}} />
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* 6 capability cards */}
+        <div className="grid md:grid-cols-3 gap-4" style={{marginBottom:'4rem'}}>
+          {capabilities.map((cap, i) => (
+            <ScrollReveal key={cap.title} delay={i * 60}>
+              <div style={{background:'rgba(123,104,238,0.04)',border:'1px solid rgba(123,104,238,0.12)',borderRadius:'14px',padding:'1.75rem'}}>
+                <span style={{display:'inline-block',marginBottom:'0.75rem',padding:'4px 10px',borderRadius:'6px',background:'rgba(123,104,238,0.12)',fontSize:'9px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.12em',color:'var(--chariot)'}}>{cap.label}</span>
+                <h3 style={{fontSize:'1rem',fontWeight:700,color:'white',marginBottom:'0.5rem'}}>{cap.title}</h3>
+                <p style={{fontSize:'0.8125rem',color:'#6B7280',lineHeight:1.65}}>{cap.desc}</p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+
+        {/* CTA banner */}
+        <ScrollReveal delay={300}>
+          <div style={{borderRadius:'16px',border:'1px solid rgba(123,104,238,0.2)',background:'rgba(123,104,238,0.06)',padding:'clamp(1.5rem,4vw,2.5rem)',display:'flex',flexWrap:'wrap',alignItems:'center',justifyContent:'space-between',gap:'1.5rem'}}>
+            <div style={{maxWidth:'500px'}}>
+              <h3 style={{fontSize:'1.25rem',fontWeight:700,color:'white',marginBottom:'0.5rem'}}>Sin coste extra para el cliente</h3>
+              <p style={{fontSize:'0.875rem',color:'#6B7280',lineHeight:1.65}}>CHARIOT viene incluido en todos nuestros proyectos. Tú recibes mejor resultado, más rápido, al mismo precio.</p>
+            </div>
+            <Link href="/services#chariot" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'0.75rem 1.5rem',background:'var(--chariot)',color:'white',borderRadius:'9999px',fontWeight:600,fontSize:'0.875rem',textDecoration:'none',flexShrink:0,transition:'opacity 0.2s'}}>
+              Saber más
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </Link>
           </div>
         </ScrollReveal>
       </div>
@@ -176,17 +277,17 @@ function Chariot() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// WORK — 3 clientes reales + testimonial
+// WORK — 3 clientes reales + testimonial + tu marca aquí
 // ═══════════════════════════════════════════════════════════
 function Work() {
   return (
     <section className="section-padding" style={{background:'#F0EDE6'}}>
       <div className="container-custom">
         <ScrollReveal>
-          <div style={{display:'flex',flexWrap:'wrap',gap:'1rem',justifyContent:'space-between',alignItems:'flex-end',marginBottom:'3rem'}}>
+          <div style={{display:'flex',flexWrap:'wrap',gap:'1rem',justifyContent:'space-between',alignItems:'flex-end',marginBottom:'3.5rem'}}>
             <div>
               <p className="section-label">Clientes & proyectos reales</p>
-              <h2 style={{fontSize:'clamp(1.8rem,4vw,3rem)',fontWeight:700,letterSpacing:'-0.03em'}}>Trabajo que habla.</h2>
+              <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em'}}>Trabajo que habla.</h2>
             </div>
             <Link href="/work" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',fontSize:'0.875rem',fontWeight:500,color:'var(--muted)',textDecoration:'none',whiteSpace:'nowrap'}}>
               Ver todo el portfolio
@@ -200,12 +301,12 @@ function Work() {
           <Link href="/work/idnt" style={{display:'block',textDecoration:'none',marginBottom:'1rem'}} className="group">
             <div style={{borderRadius:'16px',overflow:'hidden',background:'white',border:'1px solid var(--border)'}} className="card-lift">
               <div className="grid md:grid-cols-2">
-                <div style={{position:'relative',minHeight:'260px',overflow:'hidden'}}>
+                <div style={{position:'relative',minHeight:'280px',overflow:'hidden'}}>
                   <img src="/client-idnt-hero.gif" alt="IDNT® — Moda sostenible Barcelona, identidad visual y e-commerce Shopify"
                     loading="eager"
                     style={{width:'100%',height:'100%',objectFit:'cover',position:'absolute',inset:0,transition:'transform 0.7s'}} />
                   <div style={{position:'absolute',inset:0,background:'linear-gradient(to right,transparent,rgba(0,0,0,0.12))'}} />
-                  <span style={{position:'absolute',top:'1rem',left:'1rem',padding:'6px 12px',background:'rgba(0,0,0,0.4)',backdropFilter:'blur(8px)',borderRadius:'9999px',fontSize:'10px',fontFamily:'monospace',color:'rgba(255,255,255,0.9)'}}>↗ idnt.es</span>
+                  <span style={{position:'absolute',top:'1rem',left:'1rem',padding:'6px 12px',background:'rgba(0,0,0,0.4)',backdropFilter:'blur(8px)',borderRadius:'9999px',fontSize:'10px',fontFamily:'monospace',color:'rgba(255,255,255,0.9)'}}>idnt.es</span>
                 </div>
                 <div style={{padding:'clamp(1.5rem,4vw,2.5rem)',display:'flex',flexDirection:'column',justifyContent:'space-between'}}>
                   <div>
@@ -260,11 +361,11 @@ function Work() {
 
         {/* Testimonial */}
         <ScrollReveal delay={200}>
-          <div style={{borderRadius:'16px',background:'white',border:'1px solid var(--border)',padding:'clamp(1.5rem,4vw,2rem)',marginBottom:'1rem'}}>
+          <div style={{borderRadius:'16px',background:'white',border:'1px solid var(--border)',padding:'clamp(1.5rem,4vw,2.5rem)',marginBottom:'1rem'}}>
             <div style={{display:'flex',gap:'1rem',alignItems:'flex-start'}}>
-              <span style={{fontSize:'2rem',lineHeight:1,color:'var(--border)',fontFamily:'Georgia, serif',flexShrink:0}}>"</span>
+              <span style={{fontSize:'2.5rem',lineHeight:1,color:'var(--border)',fontFamily:'Georgia, serif',flexShrink:0}}>&ldquo;</span>
               <div>
-                <p style={{fontSize:'0.9375rem',color:'var(--fg)',lineHeight:1.7,fontStyle:'italic',marginBottom:'1rem'}}>
+                <p style={{fontSize:'1rem',color:'var(--fg)',lineHeight:1.7,fontStyle:'italic',marginBottom:'1rem'}}>
                   RUD entendió nuestra visión desde la primera llamada. La identidad que crearon para IDNT no es solo bonita — posiciona la marca exactamente donde queríamos estar.
                 </p>
                 <p style={{fontSize:'0.8125rem',fontWeight:600,color:'var(--fg)'}}>Fundadora, IDNT®</p>
@@ -274,7 +375,7 @@ function Work() {
           </div>
         </ScrollReveal>
 
-        {/* Próximo */}
+        {/* Tu marca aquí */}
         <ScrollReveal delay={240}>
           <div style={{border:'2px dashed #D1CDC6',borderRadius:'16px',padding:'2.5rem',display:'flex',flexWrap:'wrap',alignItems:'center',justifyContent:'space-between',gap:'1.5rem',background:'#F8F5F0'}}>
             <div>
@@ -291,30 +392,197 @@ function Work() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// WHY RUD — 3 items instead of 6
+// WHY RUD — 6 items
 // ═══════════════════════════════════════════════════════════
 function WhyRUD() {
   const items = [
     {title:'Estrategia antes de abrir Figma',desc:'Analizamos mercado, competidores y audiencia antes de proponer nada visual. Cada decisión de diseño tiene un porqué estratégico.'},
     {title:'Sin intermediarios — trato directo',desc:'Hablas con quien hace tu proyecto. Sin capas de gestión, sin teléfonos rotos, sin overhead de agencia grande.'},
     {title:'IA que amplifica, no que sustituye',desc:'CHARIOT, nuestro motor de IA interno, acelera procesos sin coste adicional para el cliente. Más calidad, menos tiempo.'},
+    {title:'Full-stack bajo un mismo techo',desc:'Branding, web, contenido, marketing y automatización. No necesitas coordinar 5 proveedores — todo fluye desde un equipo.'},
+    {title:'Resultados medibles desde el día 1',desc:'Lighthouse 95+, SEO técnico integrado, métricas de rendimiento. No entregamos solo diseño bonito — entregamos impacto.'},
+    {title:'Partners, no proveedores',desc:'Nos implicamos en tu crecimiento. Después de la entrega seguimos disponibles para iterar, optimizar y escalar tu marca.'},
   ]
   return (
     <section className="section-padding" style={{background:'#FAFAFA'}}>
       <div className="container-custom">
         <ScrollReveal>
           <p className="section-label">Por qué elegirnos</p>
-          <h2 style={{fontSize:'clamp(1.8rem,4vw,3rem)',fontWeight:700,letterSpacing:'-0.03em',marginBottom:'3rem',maxWidth:'600px'}}>
+          <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'3.5rem',maxWidth:'650px'}}>
             Lo que nos diferencia<br /><span style={{fontStyle:'italic',fontWeight:300,color:'#9CA3AF'}}>de otras agencias.</span>
           </h2>
         </ScrollReveal>
-        <div className="grid md:grid-cols-3" style={{gap:'1px',background:'var(--border)'}}>
-          {items.map(item => (
-            <div key={item.title} className="why-card" style={{background:'#FAFAFA',padding:'2rem'}}>
-              <h3 style={{fontWeight:700,fontSize:'1rem',marginBottom:'0.75rem'}}>{item.title}</h3>
-              <p style={{fontSize:'0.8125rem',color:'var(--muted)',lineHeight:1.65}}>{item.desc}</p>
-            </div>
+        <div className="grid md:grid-cols-3" style={{gap:'1px',background:'var(--border)',borderRadius:'16px',overflow:'hidden'}}>
+          {items.map((item, i) => (
+            <ScrollReveal key={item.title} delay={i * 50}>
+              <div className="why-card" style={{background:'#FAFAFA',padding:'2.25rem'}}>
+                <h3 style={{fontWeight:700,fontSize:'1.0625rem',marginBottom:'0.75rem',letterSpacing:'-0.01em'}}>{item.title}</h3>
+                <p style={{fontSize:'0.8125rem',color:'var(--muted)',lineHeight:1.65}}>{item.desc}</p>
+              </div>
+            </ScrollReveal>
           ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ═══════════════════════════════════════════════════════════
+// PRICING — 3 plans with Professional featured
+// ═══════════════════════════════════════════════════════════
+function Pricing() {
+  const plans = [
+    {
+      name: 'Starter',
+      price: '€2.500',
+      desc: 'Marca lista para lanzar',
+      delivery: '4-6 semanas',
+      featured: false,
+      features: [
+        'Sesión de Brand Strategy',
+        'Diseño de logo · 3 conceptos',
+        'Sistema de color y tipografía',
+        'Brand Guidelines básico',
+        'Formatos editables AI / EPS / SVG',
+        'Soporte email · 30 días',
+      ],
+    },
+    {
+      name: 'Professional',
+      price: '€7.500',
+      desc: 'Identidad + web completa',
+      delivery: '8-12 semanas',
+      featured: true,
+      features: [
+        'Todo en Starter',
+        'Identidad visual completa',
+        'Diseño web · hasta 5 páginas',
+        'Desarrollo Next.js / React',
+        'SEO técnico de base',
+        'Responsive + Lighthouse 95+',
+        '3 rondas de revisiones',
+        'Soporte prioritario · 60 días',
+      ],
+    },
+    {
+      name: 'Enterprise',
+      price: '€15.000+',
+      desc: 'Proyecto end-to-end',
+      delivery: '10-16 semanas',
+      featured: false,
+      features: [
+        'Todo en Professional',
+        'E-commerce Shopify',
+        'Copywriting estratégico completo',
+        'Motion branding & video',
+        'Estrategia de contenido',
+        'AI Automation con CHARIOT',
+        'Colateral de marketing',
+        'Retainer mensual opcional',
+      ],
+    },
+  ]
+
+  return (
+    <section className="section-padding" style={{background:'#F7F5F1'}}>
+      <div className="container-custom">
+        <ScrollReveal>
+          <div style={{textAlign:'center',marginBottom:'3.5rem'}}>
+            <p className="section-label">Inversión</p>
+            <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'0.75rem'}}>Precios transparentes</h2>
+            <p style={{fontSize:'0.9375rem',color:'var(--muted)',maxWidth:'460px',margin:'0 auto',lineHeight:1.65}}>Paquetes de precio fijo y alcance definido. Sin sorpresas, sin costes ocultos.</p>
+          </div>
+        </ScrollReveal>
+
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))',gap:'1.25rem',maxWidth:'1040px',margin:'0 auto'}}>
+          {plans.map((plan, i) => (
+            <ScrollReveal key={plan.name} delay={i * 80}>
+              <div style={{
+                borderRadius:'16px',
+                padding:'clamp(1.5rem,3vw,2.25rem)',
+                display:'flex',
+                flexDirection:'column',
+                height:'100%',
+                background: plan.featured ? '#0A0908' : 'white',
+                border: plan.featured ? '1px solid #0A0908' : '1px solid var(--border)',
+                boxShadow: plan.featured ? '0 24px 64px rgba(0,0,0,0.15)' : 'none',
+                transform: plan.featured ? 'scale(1.03)' : 'none',
+                position:'relative',
+                zIndex: plan.featured ? 2 : 1,
+              }}>
+                {plan.featured && (
+                  <span style={{display:'inline-block',marginBottom:'14px',padding:'5px 14px',background:'rgba(255,255,255,0.1)',borderRadius:'9999px',fontSize:'10px',fontWeight:600,color:'rgba(255,255,255,0.6)',width:'fit-content'}}>
+                    Mas popular
+                  </span>
+                )}
+                <h3 style={{fontSize:'1.25rem',fontWeight:700,marginBottom:'4px',color: plan.featured ? 'white' : 'var(--fg)'}}>{plan.name}</h3>
+                <p style={{fontSize:'0.75rem',marginBottom:'0.5rem',color: plan.featured ? 'rgba(255,255,255,0.4)' : '#9CA3AF'}}>{plan.desc}</p>
+                <p className="stat-number" style={{marginBottom:'6px',color: plan.featured ? 'white' : 'var(--fg)'}}>{plan.price}</p>
+                <p style={{fontSize:'11px',color: plan.featured ? 'rgba(255,255,255,0.3)' : '#C4BFB8',marginBottom:'1.25rem'}}>
+                  Entrega: {plan.delivery}
+                </p>
+
+                <ul style={{listStyle:'none',display:'flex',flexDirection:'column',gap:'10px',flex:1,marginBottom:'1.5rem'}}>
+                  {plan.features.map((f) => (
+                    <li key={f} style={{display:'flex',alignItems:'flex-start',gap:'10px',fontSize:'13px'}}>
+                      <svg style={{marginTop:2,flexShrink:0}} width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <circle cx="7" cy="7" r="7" fill={plan.featured ? 'rgba(255,255,255,0.1)' : '#F0EDE6'} />
+                        <path d="M4 7l2 2 4-4" stroke={plan.featured ? 'white' : '#0A0908'} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span style={{color: plan.featured ? 'rgba(255,255,255,0.65)' : 'var(--muted)',lineHeight:1.5}}>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/contact" className={plan.featured ? 'btn-secondary' : 'btn-primary'} style={{
+                  textAlign:'center',
+                  justifyContent:'center',
+                  width:'100%',
+                  ...(plan.featured ? {background:'white',color:'#0A0908',borderColor:'white'} : {}),
+                }}>
+                  Empezar con {plan.name}
+                </Link>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+
+        <ScrollReveal delay={260}>
+          <p style={{textAlign:'center',fontSize:'0.875rem',color:'#9CA3AF',marginTop:'2.5rem'}}>
+            ¿Proyecto específico?{' '}
+            <Link href="/contact" style={{color:'var(--fg)',fontWeight:500,textDecoration:'underline',textUnderlineOffset:'3px'}}>
+              Cuéntanos y hacemos presupuesto a medida
+            </Link>
+          </p>
+        </ScrollReveal>
+      </div>
+    </section>
+  )
+}
+
+// ═══════════════════════════════════════════════════════════
+// FAQ
+// ═══════════════════════════════════════════════════════════
+function FAQ() {
+  const faqs = [
+    { question: '¿Cuánto tarda un proyecto típico?', answer: 'Depende del alcance: un Starter son 4-6 semanas, un Professional 8-12 semanas, y un Enterprise 10-16 semanas. Siempre definimos timeline antes de empezar.' },
+    { question: '¿Trabajáis solo en Barcelona?', answer: 'Estamos basados en Barcelona pero trabajamos con clientes de toda España y Europa. Las reuniones pueden ser presenciales o remotas.' },
+    { question: '¿Los precios incluyen IVA?', answer: 'Los precios indicados no incluyen IVA (21%). El importe final con IVA se detalla claramente en el presupuesto antes de cualquier compromiso.' },
+    { question: '¿Puedo personalizar un paquete?', answer: 'Sí. Todos los paquetes son puntos de partida. Adaptamos el alcance, los entregables y el precio a tus necesidades y objetivos específicos.' },
+    { question: '¿Cómo se estructura el pago?', answer: '50% al inicio para reservar tu fecha, 50% restante en la entrega final. Para proyectos Enterprise podemos acordar pagos por hitos a lo largo del proyecto.' },
+    { question: '¿Qué pasa después de la entrega?', answer: 'Todos los paquetes incluyen soporte post-entrega. Además ofrecemos retainers mensuales para mantenimiento, optimización y crecimiento continuo.' },
+  ]
+
+  return (
+    <section className="section-padding" style={{background:'var(--warm)'}}>
+      <div className="container-custom">
+        <div style={{maxWidth:'720px',margin:'0 auto'}}>
+          <ScrollReveal>
+            <p className="section-label">FAQ</p>
+            <h2 style={{fontSize:'clamp(1.6rem,4vw,2.5rem)',fontWeight:700,letterSpacing:'-0.03em',marginBottom:'2.5rem'}}>Preguntas frecuentes</h2>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <FAQAccordion faqs={faqs} />
+          </ScrollReveal>
         </div>
       </div>
     </section>
@@ -326,16 +594,16 @@ function WhyRUD() {
 // ═══════════════════════════════════════════════════════════
 function CTA() {
   return (
-    <section style={{background:'#0A0908',padding:'clamp(4rem,8vw,6rem) 0',position:'relative',overflow:'hidden'}}>
+    <section style={{background:'#0A0908',padding:'clamp(5rem,10vw,8rem) 0',position:'relative',overflow:'hidden'}}>
       <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px)',backgroundSize:'80px 80px',pointerEvents:'none'}} />
       <div className="container-custom" style={{position:'relative'}}>
         <ScrollReveal>
-          <div style={{maxWidth:'700px'}}>
+          <div style={{maxWidth:'750px'}}>
             <p className="section-label" style={{color:'#333'}}>¿Listo?</p>
-            <h2 style={{fontSize:'clamp(2rem,5vw,4rem)',fontWeight:700,color:'white',letterSpacing:'-0.03em',lineHeight:1.05,marginBottom:'1.5rem'}}>
+            <h2 style={{fontSize:'clamp(2.2rem,5.5vw,4.5rem)',fontWeight:700,color:'white',letterSpacing:'-0.035em',lineHeight:1.05,marginBottom:'1.5rem'}}>
               Construyamos algo<br /><span style={{fontStyle:'italic',fontWeight:300,color:'#404040'}}>extraordinario juntos.</span>
             </h2>
-            <p style={{color:'#6B7280',fontSize:'clamp(0.9rem,2vw,1.1rem)',marginBottom:'2.5rem',maxWidth:'480px',lineHeight:1.7}}>
+            <p style={{color:'#6B7280',fontSize:'clamp(0.95rem,2vw,1.15rem)',marginBottom:'2.5rem',maxWidth:'500px',lineHeight:1.7}}>
               Cuéntanos tu proyecto. Respondemos en menos de 24 horas. Basados en Barcelona, trabajamos globalmente.
             </p>
             <div style={{display:'flex',flexWrap:'wrap',gap:'0.75rem',marginBottom:'1.5rem'}}>
@@ -409,7 +677,7 @@ function Footer() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// PAGE — distilled: Hero → Services → CHARIOT → Work → WhyRUD → CTA
+// PAGE — Hero → Stats → Services → CHARIOT → Work → WhyRUD → Pricing → FAQ → CTA
 // ═══════════════════════════════════════════════════════════
 export default function Home() {
   return (
@@ -417,10 +685,13 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Marquee />
+      <Stats />
       <Services />
       <Chariot />
       <Work />
       <WhyRUD />
+      <Pricing />
+      <FAQ />
       <CTA />
       <Footer />
     </main>

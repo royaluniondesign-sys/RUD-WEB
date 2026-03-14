@@ -132,9 +132,9 @@ body {
 
 /* ── Stats ───────────────────────────────── */
 .stat-number {
-  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
   font-weight: 700;
-  letter-spacing: -.04em;
+  letter-spacing: -.045em;
   line-height: 1;
 }
 
