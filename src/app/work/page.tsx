@@ -32,8 +32,8 @@ export default function Work() {
   return (
     <main>
       <Navbar />
-      <section className="hero-gradient pt-[68px]">
-        <div className="container-custom py-24 md:py-28">
+      <section className="hero-gradient" style={{paddingTop: 68}}>
+        <div className="container-custom" style={{paddingTop: 'clamp(2.5rem,6vw,5rem)', paddingBottom: 'clamp(2.5rem,6vw,4rem)'}}>
           <ScrollReveal>
             <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9CA3AF] mb-4">Portfolio · Proyectos reales</p>
             <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-bold leading-tight tracking-tight mb-6 max-w-3xl">
