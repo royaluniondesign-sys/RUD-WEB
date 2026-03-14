@@ -27,12 +27,12 @@ function Hero() {
           <span className="italic font-light" style={{color:'#A8A0A0'}}>posicionan de verdad.</span>
         </h1>
 
-        <p className="animate-fade-in-up anim-d2 text-[#6B7280] leading-relaxed mb-10"
-          style={{fontSize:'clamp(1rem,2vw,1.25rem)',maxWidth:'520px'}}>
+        <p className="animate-fade-in-up anim-d2 text-[#6B7280] leading-relaxed"
+          style={{fontSize:'clamp(1rem,2vw,1.25rem)',maxWidth:'520px',marginBottom:'3rem'}}>
           Agencia creativa full-stack en Barcelona. Branding estratégico, diseño web, e-commerce, motion y automatización con IA — todo bajo un mismo techo.
         </p>
 
-        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-4" style={{marginBottom:'3rem'}}>
+        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-4" style={{marginBottom:'3.5rem'}}>
           <Link href="/contact" className="btn-primary arrow-link">
             Hablemos de tu proyecto
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -392,32 +392,64 @@ function Work() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// WHY RUD — 6 items
+// WHY RUD — 6 cards con iconos
 // ═══════════════════════════════════════════════════════════
 function WhyRUD() {
   const items = [
-    {title:'Estrategia antes de abrir Figma',desc:'Analizamos mercado, competidores y audiencia antes de proponer nada visual. Cada decisión de diseño tiene un porqué estratégico.'},
-    {title:'Sin intermediarios — trato directo',desc:'Hablas con quien hace tu proyecto. Sin capas de gestión, sin teléfonos rotos, sin overhead de agencia grande.'},
-    {title:'IA que amplifica, no que sustituye',desc:'CHARIOT, nuestro motor de IA interno, acelera procesos sin coste adicional para el cliente. Más calidad, menos tiempo.'},
-    {title:'Full-stack bajo un mismo techo',desc:'Branding, web, contenido, marketing y automatización. No necesitas coordinar 5 proveedores — todo fluye desde un equipo.'},
-    {title:'Resultados medibles desde el día 1',desc:'Lighthouse 95+, SEO técnico integrado, métricas de rendimiento. No entregamos solo diseño bonito — entregamos impacto.'},
-    {title:'Partners, no proveedores',desc:'Nos implicamos en tu crecimiento. Después de la entrega seguimos disponibles para iterar, optimizar y escalar tu marca.'},
+    {
+      icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>,
+      title:'Estrategia antes de diseño',
+      desc:'Investigamos mercado, competidores y audiencia antes de abrir Figma. Cada decisión visual tiene un porqué estratégico.',
+    },
+    {
+      icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>,
+      title:'Trato directo, sin capas',
+      desc:'Hablas con quien diseña y desarrolla tu proyecto. Sin intermediarios, sin gestores, sin teléfonos rotos.',
+    },
+    {
+      icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>,
+      title:'IA integrada en cada proyecto',
+      desc:'CHARIOT analiza, genera y automatiza sin coste extra para ti. Entregas más rápidas y con más calidad.',
+    },
+    {
+      icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>,
+      title:'Full-stack bajo un techo',
+      desc:'Branding, web, e-commerce, contenido y automatización. Un equipo, una visión, cero fricción entre proveedores.',
+    },
+    {
+      icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>,
+      title:'SEO y rendimiento de serie',
+      desc:'Lighthouse 95+, Core Web Vitals en verde, schema.org, meta tags — cada web sale optimizada para Google desde el día uno.',
+    },
+    {
+      icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>,
+      title:'Partners a largo plazo',
+      desc:'No desaparecemos tras la entrega. Iteramos, optimizamos y escalamos tu marca contigo. Retainers flexibles.',
+    },
   ]
   return (
     <section className="section-padding" style={{background:'#FAFAFA'}}>
       <div className="container-custom">
         <ScrollReveal>
-          <p className="section-label">Por qué elegirnos</p>
-          <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'3.5rem',maxWidth:'650px'}}>
-            Lo que nos diferencia<br /><span style={{fontStyle:'italic',fontWeight:300,color:'#9CA3AF'}}>de otras agencias.</span>
-          </h2>
+          <div style={{textAlign:'center',marginBottom:'3.5rem'}}>
+            <p className="section-label">Por qué elegirnos</p>
+            <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'0.75rem'}}>
+              Lo que nos diferencia
+            </h2>
+            <p style={{fontSize:'0.9375rem',color:'var(--muted)',maxWidth:'480px',margin:'0 auto',lineHeight:1.65}}>
+              No somos otra agencia generalista. Esto es lo que hacemos diferente.
+            </p>
+          </div>
         </ScrollReveal>
-        <div className="grid md:grid-cols-3" style={{gap:'1px',background:'var(--border)',borderRadius:'16px',overflow:'hidden'}}>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {items.map((item, i) => (
-            <ScrollReveal key={item.title} delay={i * 50}>
-              <div className="why-card" style={{background:'#FAFAFA',padding:'2.25rem'}}>
-                <h3 style={{fontWeight:700,fontSize:'1.0625rem',marginBottom:'0.75rem',letterSpacing:'-0.01em'}}>{item.title}</h3>
-                <p style={{fontSize:'0.8125rem',color:'var(--muted)',lineHeight:1.65}}>{item.desc}</p>
+            <ScrollReveal key={item.title} delay={i * 60}>
+              <div className="card-lift" style={{background:'white',border:'1px solid var(--border)',borderRadius:'16px',padding:'2rem',height:'100%',display:'flex',flexDirection:'column'}}>
+                <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'var(--warm)',display:'flex',alignItems:'center',justifyContent:'center',color:'var(--fg)',marginBottom:'1.25rem',flexShrink:0}}>
+                  {item.icon}
+                </div>
+                <h3 style={{fontWeight:700,fontSize:'1.0625rem',marginBottom:'0.625rem',letterSpacing:'-0.01em',color:'var(--fg)'}}>{item.title}</h3>
+                <p style={{fontSize:'0.8125rem',color:'var(--muted)',lineHeight:1.65,flex:1}}>{item.desc}</p>
               </div>
             </ScrollReveal>
           ))}

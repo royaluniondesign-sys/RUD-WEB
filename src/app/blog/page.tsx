@@ -10,7 +10,7 @@ export const metadata = {
 
 const posts = [
   {
-    slug: 'ia-local-agencias-creativas-2026',
+    slug: 'ia-local-vs-nube-agencias-creativas',
     title: 'IA local en agencias creativas: por qué dejamos de pagar APIs y ganamos en calidad',
     date: 'Marzo 2026', category: 'IA & Tecnología', readTime: '8 min',
     image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&q=85',
@@ -18,35 +18,35 @@ const posts = [
     featured: true,
   },
   {
-    slug: 'errores-branding-ecommerce-shopify',
+    slug: 'branding-ecommerce-shopify-barcelona',
     title: 'Los 6 errores de branding que destruyen la conversión en tu tienda Shopify',
     date: 'Febrero 2026', category: 'E-commerce', readTime: '6 min',
     image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&q=85',
     excerpt: 'Logo que no funciona a 32px, paleta sin contraste accesible, tipografía ilegible en mobile. Hemos auditado decenas de tiendas en España.',
   },
   {
-    slug: 'identidad-visual-vs-logo-sistema',
+    slug: 'identidad-visual-vs-logo-diferencia',
     title: 'Logo vs. identidad visual: la diferencia que las marcas aprenden tarde y caro',
     date: 'Enero 2026', category: 'Branding', readTime: '5 min',
     image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=85',
     excerpt: 'Un logo es un símbolo. Una identidad es un sistema. La confusión entre los dos le cuesta a las empresas años de rebrandings innecesarios.',
   },
   {
-    slug: 'nextjs-vs-wordpress-cuando-usar-2026',
+    slug: 'nextjs-vs-wordpress-2026',
     title: 'Next.js vs. WordPress en 2026: cuándo usar cada uno (sin dogmas)',
     date: 'Enero 2026', category: 'Desarrollo Web', readTime: '7 min',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=85',
     excerpt: 'Después de construir proyectos en ambas plataformas nuestra respuesta es: depende. Next.js gana en performance. WordPress en autonomía del cliente.',
   },
   {
-    slug: 'estrategia-marca-antes-de-disenar',
+    slug: 'estrategia-marca-startups-barcelona',
     title: 'Por qué el 80% de las empresas diseñan antes de tener estrategia de marca',
     date: 'Diciembre 2025', category: 'Estrategia', readTime: '5 min',
     image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=85',
     excerpt: 'Hemos visto empresas gastar €30k en diseño y rebrandear 18 meses después. El error no fue el diseñador — fue no tener estrategia.',
   },
   {
-    slug: 'automatizar-agencia-n8n-chariot',
+    slug: 'automatizacion-marketing-agencias-n8n',
     title: 'Cómo automatizamos el 60% de nuestros workflows con n8n y €0 de coste',
     date: 'Noviembre 2025', category: 'Automatización', readTime: '9 min',
     image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=85',
