@@ -33,85 +33,93 @@ export default function Work() {
     <main>
       <Navbar />
       <section className="hero-gradient" style={{paddingTop: 68}}>
-        <div className="container-custom" style={{paddingTop: 'clamp(2.5rem,6vw,5rem)', paddingBottom: 'clamp(2.5rem,6vw,4rem)'}}>
+        <div className="container-custom" style={{paddingTop: 'clamp(3rem,7vw,5rem)', paddingBottom: 'clamp(2.5rem,5vw,4rem)'}}>
           <ScrollReveal>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9CA3AF] mb-4">Portfolio · Proyectos reales</p>
-            <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-bold leading-tight tracking-tight mb-6 max-w-3xl">
+            <p className="section-label">Portfolio · Proyectos reales</p>
+            <h1 style={{fontSize:'clamp(2.5rem,5vw,5rem)',fontWeight:700,lineHeight:1.05,letterSpacing:'-0.035em',marginBottom:'1.5rem',maxWidth:'800px'}}>
               Trabajo que habla por sí solo.
             </h1>
-            <p className="text-base md:text-lg text-[#6B7280] max-w-xl leading-relaxed">
+            <p style={{fontSize:'clamp(0.9375rem,1.5vw,1.0625rem)',color:'var(--muted)',maxWidth:'540px',lineHeight:1.7}}>
               Branding, diseño web, e-commerce y automatización IA para marcas con ambición. Cada proyecto empieza con una pregunta: ¿qué necesitas conseguir?
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="section-padding bg-[#F7F5F1]">
-        <div className="container-custom space-y-5">
-          {PROJECTS.map((p, i) => (
-            <ScrollReveal key={p.slug} delay={i * 80}>
-              <Link href={`/work/${p.slug}`} className="group block">
-                <div className="rounded-2xl overflow-hidden bg-white border border-[#E2DDD7] card-lift">
-                  {p.featured ? (
-                    <div className="grid md:grid-cols-2">
-                      <div className="relative h-72 md:h-auto min-h-[320px] overflow-hidden">
-                        <img src={p.img} alt={`${p.client} — ${p.type}`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                        {p.url && (
-                          <div className="absolute top-4 left-4">
-                            <span className="px-3 py-1.5 bg-white/20 backdrop-blur-sm border border-white/25 rounded-full text-[10px] font-mono text-white/80">↗ {p.url.replace('https://www.','')}</span>
-                          </div>
-                        )}
+      <section className="section-padding" style={{background:'var(--bg)'}}>
+        <div className="container-custom" style={{display:'flex',flexDirection:'column',gap:'1.5rem'}}>
+
+          {/* IDNT — Featured full-width */}
+          <ScrollReveal>
+            <Link href="/work/idnt" className="group block" style={{textDecoration:'none'}}>
+              <div className="card-lift" style={{borderRadius:'16px',overflow:'hidden',background:'white',border:'1px solid var(--border)'}}>
+                <div className="grid md:grid-cols-2">
+                  <div style={{position:'relative',minHeight:'320px',overflow:'hidden'}}>
+                    <img src="/client-idnt-hero.gif" alt="IDNT® — Moda sostenible Barcelona"
+                      style={{width:'100%',height:'100%',objectFit:'cover',position:'absolute',inset:0,transition:'transform 0.7s'}} />
+                    <div style={{position:'absolute',inset:0,background:'linear-gradient(to right,transparent,rgba(0,0,0,0.1))'}} />
+                    <span style={{position:'absolute',top:'1.25rem',left:'1.25rem',padding:'6px 14px',background:'rgba(0,0,0,0.4)',backdropFilter:'blur(8px)',borderRadius:'9999px',fontSize:'10px',fontFamily:'monospace',color:'rgba(255,255,255,0.9)'}}>↗ idnt.es</span>
+                  </div>
+                  <div style={{padding:'clamp(2rem,4vw,3rem)',display:'flex',flexDirection:'column',justifyContent:'space-between'}}>
+                    <div>
+                      <div style={{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'1.5rem'}}>
+                        {['E-commerce Shopify','Branding','Identidad Visual','Packaging','Automatizaciones'].map(t => <span key={t} className="tag-pill">{t}</span>)}
                       </div>
-                      <div className="p-8 md:p-10 flex flex-col justify-between">
-                        <div>
-                          <div className="flex flex-wrap gap-2 mb-5">
-                            {p.tags.map(t => <span key={t} className="tag-pill">{t}</span>)}
-                          </div>
-                          <h2 className="text-3xl font-bold mb-2 group-hover:underline decoration-2 underline-offset-4">{p.client}</h2>
-                          <p className="text-xs text-[#9CA3AF] font-medium mb-4">{p.type}</p>
-                          <p className="text-base text-[#6B7280] leading-relaxed">{p.desc}</p>
-                        </div>
-                        <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all">
-                          Ver proyecto completo
-                          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                        </div>
-                      </div>
+                      <h2 style={{fontSize:'clamp(1.75rem,3vw,2.25rem)',fontWeight:700,marginBottom:'0.5rem',color:'var(--fg)'}}>IDNT®</h2>
+                      <p style={{fontSize:'0.8125rem',color:'#9CA3AF',fontWeight:500,marginBottom:'1.25rem'}}>Moda orgánica sostenible · Barcelona</p>
+                      <p style={{fontSize:'0.9375rem',color:'var(--muted)',lineHeight:1.7}}>
+                        Ropa orgánica y sostenible hecha en Barcelona. Desarrollamos toda la identidad visual, e-commerce Shopify, packaging y automatizaciones de marketing.
+                      </p>
                     </div>
-                  ) : (
-                    <div className="flex flex-col md:flex-row">
-                      <div className="relative h-60 md:w-80 md:h-auto shrink-0 overflow-hidden">
-                        <img src={p.img} alt={`${p.client} — ${p.type}`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                      </div>
-                      <div className="p-8 flex flex-col justify-center">
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {p.tags.map(t => <span key={t} className="tag-pill">{t}</span>)}
-                        </div>
-                        <h2 className="text-2xl font-bold mb-1 group-hover:underline decoration-2 underline-offset-4">{p.client}</h2>
-                        <p className="text-xs text-[#9CA3AF] font-medium mb-3">{p.type}</p>
-                        <p className="text-sm text-[#6B7280] leading-relaxed max-w-lg">{p.desc}</p>
-                        <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all">
-                          Ver proyecto
-                          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                        </div>
-                      </div>
+                    <div className="arrow-link" style={{marginTop:'2rem',display:'inline-flex',alignItems:'center',gap:'8px',fontSize:'0.875rem',fontWeight:600,color:'var(--fg)'}}>
+                      Ver proyecto completo
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                     </div>
-                  )}
+                  </div>
                 </div>
-              </Link>
-            </ScrollReveal>
-          ))}
+              </div>
+            </Link>
+          </ScrollReveal>
+
+          {/* Aurum + BrandForce — same height grid */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {PROJECTS.filter(p => !p.featured).map((p, i) => (
+              <ScrollReveal key={p.slug} delay={(i+1)*80}>
+                <Link href={`/work/${p.slug}`} className="group block" style={{textDecoration:'none',height:'100%',display:'flex'}}>
+                  <div className="card-lift" style={{borderRadius:'16px',overflow:'hidden',background:'white',border:'1px solid var(--border)',display:'flex',flexDirection:'column',width:'100%'}}>
+                    <div style={{height:'220px',overflow:'hidden',position:'relative',flexShrink:0}}>
+                      <img src={p.img} alt={`${p.client} — ${p.type}`}
+                        loading="lazy"
+                        style={{width:'100%',height:'100%',objectFit:'cover',transition:'transform 0.7s'}} />
+                      <div style={{position:'absolute',inset:0,background:'linear-gradient(to top,rgba(0,0,0,0.3),transparent)'}} />
+                    </div>
+                    <div style={{padding:'1.75rem',flex:1,display:'flex',flexDirection:'column'}}>
+                      <div style={{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'1rem'}}>
+                        {p.tags.map(t => <span key={t} className="tag-pill">{t}</span>)}
+                      </div>
+                      <h2 style={{fontSize:'1.25rem',fontWeight:700,marginBottom:'0.375rem',color:'var(--fg)'}}>{p.client}</h2>
+                      <p style={{fontSize:'0.75rem',color:'#9CA3AF',fontWeight:500,marginBottom:'0.75rem'}}>{p.type}</p>
+                      <p style={{fontSize:'0.8125rem',color:'var(--muted)',lineHeight:1.65,flex:1}}>{p.desc}</p>
+                      <div className="arrow-link" style={{marginTop:'1.5rem',fontSize:'0.875rem',fontWeight:600,color:'var(--fg)',display:'inline-flex',alignItems:'center',gap:'8px'}}>
+                        Ver proyecto
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
 
           {/* CTA card */}
           <ScrollReveal delay={260}>
-            <div className="rounded-2xl border-2 border-dashed border-[#D1CDC6] bg-[#F8F5F0] p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div style={{border:'2px dashed #D1CDC6',borderRadius:'16px',padding:'clamp(2rem,4vw,3rem)',display:'flex',flexWrap:'wrap',alignItems:'center',justifyContent:'space-between',gap:'1.5rem',background:'#F8F5F0'}}>
               <div>
-                <p className="text-xs font-medium text-[#C4BFB8] uppercase tracking-widest mb-2">Próximo proyecto</p>
-                <h3 className="text-2xl font-bold text-[#A09898] mb-1">Tu marca aquí</h3>
-                <p className="text-sm text-[#C4BFB8]">Abiertos a nuevos proyectos · Barcelona y remoto</p>
+                <p style={{fontSize:'10px',fontWeight:500,color:'#C4BFB8',textTransform:'uppercase',letterSpacing:'0.12em',marginBottom:'0.5rem'}}>Próximo proyecto</p>
+                <h3 style={{fontSize:'1.375rem',fontWeight:700,color:'#A09898',marginBottom:'0.375rem'}}>Tu marca aquí</h3>
+                <p style={{fontSize:'0.8125rem',color:'#C4BFB8'}}>Abiertos a nuevos proyectos · Barcelona y remoto</p>
               </div>
-              <Link href="/contact" className="shrink-0 btn-primary">Empezar conversación</Link>
+              <Link href="/contact" className="btn-primary">Empezar conversación</Link>
             </div>
           </ScrollReveal>
         </div>

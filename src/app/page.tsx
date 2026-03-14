@@ -32,7 +32,7 @@ function Hero() {
           Agencia creativa full-stack en Barcelona. Branding estratégico, diseño web, e-commerce, motion y automatización con IA — todo bajo un mismo techo.
         </p>
 
-        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-4 mb-14">
+        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-4" style={{marginBottom:'3rem'}}>
           <Link href="/contact" className="btn-primary arrow-link">
             Hablemos de tu proyecto
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -40,7 +40,7 @@ function Hero() {
           <Link href="/work" className="btn-secondary">Ver trabajo real</Link>
         </div>
 
-        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-3">
+        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-3" style={{marginTop:'0'}}>
           {['Branding','Diseño Web','E-commerce Shopify','Motion Design','AI Automation','Identidad Visual'].map(t => (
             <span key={t} className="keyword-pill">{t}</span>
           ))}
@@ -428,131 +428,64 @@ function WhyRUD() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// PRICING — 3 plans with Professional featured
+// INVESTMENT — sutil, sin precios públicos (como agencia premium)
 // ═══════════════════════════════════════════════════════════
-function Pricing() {
-  const plans = [
-    {
-      name: 'Starter',
-      price: '€2.500',
-      desc: 'Marca lista para lanzar',
-      delivery: '4-6 semanas',
-      featured: false,
-      features: [
-        'Sesión de Brand Strategy',
-        'Diseño de logo · 3 conceptos',
-        'Sistema de color y tipografía',
-        'Brand Guidelines básico',
-        'Formatos editables AI / EPS / SVG',
-        'Soporte email · 30 días',
-      ],
-    },
-    {
-      name: 'Professional',
-      price: '€7.500',
-      desc: 'Identidad + web completa',
-      delivery: '8-12 semanas',
-      featured: true,
-      features: [
-        'Todo en Starter',
-        'Identidad visual completa',
-        'Diseño web · hasta 5 páginas',
-        'Desarrollo Next.js / React',
-        'SEO técnico de base',
-        'Responsive + Lighthouse 95+',
-        '3 rondas de revisiones',
-        'Soporte prioritario · 60 días',
-      ],
-    },
-    {
-      name: 'Enterprise',
-      price: '€15.000+',
-      desc: 'Proyecto end-to-end',
-      delivery: '10-16 semanas',
-      featured: false,
-      features: [
-        'Todo en Professional',
-        'E-commerce Shopify',
-        'Copywriting estratégico completo',
-        'Motion branding & video',
-        'Estrategia de contenido',
-        'AI Automation con CHARIOT',
-        'Colateral de marketing',
-        'Retainer mensual opcional',
-      ],
-    },
+function Investment() {
+  const tiers = [
+    {name:'Starter',desc:'Branding base: estrategia, logo, identidad y guidelines.',ideal:'Startups y proyectos nuevos',delivery:'4–6 semanas'},
+    {name:'Professional',desc:'Identidad completa + diseño web Next.js con SEO técnico.',ideal:'Marcas en crecimiento',delivery:'8–12 semanas',featured:true},
+    {name:'Enterprise',desc:'Proyecto end-to-end: identidad, web, e-commerce, contenido y automatización IA.',ideal:'Transformación completa',delivery:'10–16 semanas'},
   ]
-
   return (
     <section className="section-padding" style={{background:'#F7F5F1'}}>
       <div className="container-custom">
         <ScrollReveal>
           <div style={{textAlign:'center',marginBottom:'3.5rem'}}>
             <p className="section-label">Inversión</p>
-            <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'0.75rem'}}>Precios transparentes</h2>
-            <p style={{fontSize:'0.9375rem',color:'var(--muted)',maxWidth:'460px',margin:'0 auto',lineHeight:1.65}}>Paquetes de precio fijo y alcance definido. Sin sorpresas, sin costes ocultos.</p>
+            <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'0.75rem'}}>Cada proyecto es único</h2>
+            <p style={{fontSize:'0.9375rem',color:'var(--muted)',maxWidth:'500px',margin:'0 auto',lineHeight:1.65}}>Presupuestos a medida según lo que necesites. Alcance claro, timeline definido, sin sorpresas.</p>
           </div>
         </ScrollReveal>
 
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))',gap:'1.25rem',maxWidth:'1040px',margin:'0 auto'}}>
-          {plans.map((plan, i) => (
-            <ScrollReveal key={plan.name} delay={i * 80}>
+          {tiers.map((tier, i) => (
+            <ScrollReveal key={tier.name} delay={i * 80}>
               <div style={{
                 borderRadius:'16px',
-                padding:'clamp(1.5rem,3vw,2.25rem)',
+                padding:'2.25rem',
                 display:'flex',
                 flexDirection:'column',
                 height:'100%',
-                background: plan.featured ? '#0A0908' : 'white',
-                border: plan.featured ? '1px solid #0A0908' : '1px solid var(--border)',
-                boxShadow: plan.featured ? '0 24px 64px rgba(0,0,0,0.15)' : 'none',
-                transform: plan.featured ? 'scale(1.03)' : 'none',
-                position:'relative',
-                zIndex: plan.featured ? 2 : 1,
+                background: tier.featured ? '#0A0908' : 'white',
+                border: tier.featured ? '1px solid #0A0908' : '1px solid var(--border)',
+                boxShadow: tier.featured ? '0 24px 64px rgba(0,0,0,0.12)' : 'none',
               }}>
-                {plan.featured && (
-                  <span style={{display:'inline-block',marginBottom:'14px',padding:'5px 14px',background:'rgba(255,255,255,0.1)',borderRadius:'9999px',fontSize:'10px',fontWeight:600,color:'rgba(255,255,255,0.6)',width:'fit-content'}}>
-                    Mas popular
+                {tier.featured && (
+                  <span style={{display:'inline-block',marginBottom:'1rem',padding:'5px 14px',background:'rgba(255,255,255,0.1)',borderRadius:'9999px',fontSize:'10px',fontWeight:600,color:'rgba(255,255,255,0.6)',width:'fit-content'}}>
+                    Más solicitado
                   </span>
                 )}
-                <h3 style={{fontSize:'1.25rem',fontWeight:700,marginBottom:'4px',color: plan.featured ? 'white' : 'var(--fg)'}}>{plan.name}</h3>
-                <p style={{fontSize:'0.75rem',marginBottom:'0.5rem',color: plan.featured ? 'rgba(255,255,255,0.4)' : '#9CA3AF'}}>{plan.desc}</p>
-                <p className="stat-number" style={{marginBottom:'6px',color: plan.featured ? 'white' : 'var(--fg)'}}>{plan.price}</p>
-                <p style={{fontSize:'11px',color: plan.featured ? 'rgba(255,255,255,0.3)' : '#C4BFB8',marginBottom:'1.25rem'}}>
-                  Entrega: {plan.delivery}
-                </p>
-
-                <ul style={{listStyle:'none',display:'flex',flexDirection:'column',gap:'10px',flex:1,marginBottom:'1.5rem'}}>
-                  {plan.features.map((f) => (
-                    <li key={f} style={{display:'flex',alignItems:'flex-start',gap:'10px',fontSize:'13px'}}>
-                      <svg style={{marginTop:2,flexShrink:0}} width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <circle cx="7" cy="7" r="7" fill={plan.featured ? 'rgba(255,255,255,0.1)' : '#F0EDE6'} />
-                        <path d="M4 7l2 2 4-4" stroke={plan.featured ? 'white' : '#0A0908'} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span style={{color: plan.featured ? 'rgba(255,255,255,0.65)' : 'var(--muted)',lineHeight:1.5}}>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/contact" className={plan.featured ? 'btn-secondary' : 'btn-primary'} style={{
-                  textAlign:'center',
-                  justifyContent:'center',
-                  width:'100%',
-                  ...(plan.featured ? {background:'white',color:'#0A0908',borderColor:'white'} : {}),
-                }}>
-                  Empezar con {plan.name}
-                </Link>
+                <h3 style={{fontSize:'1.375rem',fontWeight:700,marginBottom:'0.75rem',color: tier.featured ? 'white' : 'var(--fg)'}}>{tier.name}</h3>
+                <p style={{fontSize:'0.875rem',color: tier.featured ? 'rgba(255,255,255,0.6)' : 'var(--muted)',lineHeight:1.65,marginBottom:'1.5rem',flex:1}}>{tier.desc}</p>
+                <div style={{paddingTop:'1.25rem',borderTop: tier.featured ? '1px solid rgba(255,255,255,0.1)' : '1px solid var(--border)'}}>
+                  <p style={{fontSize:'0.75rem',color: tier.featured ? 'rgba(255,255,255,0.35)' : '#C4BFB8',marginBottom:'0.25rem'}}>Ideal para: {tier.ideal}</p>
+                  <p style={{fontSize:'0.75rem',color: tier.featured ? 'rgba(255,255,255,0.35)' : '#C4BFB8'}}>Entrega: {tier.delivery}</p>
+                </div>
               </div>
             </ScrollReveal>
           ))}
         </div>
 
         <ScrollReveal delay={260}>
-          <p style={{textAlign:'center',fontSize:'0.875rem',color:'#9CA3AF',marginTop:'2.5rem'}}>
-            ¿Proyecto específico?{' '}
-            <Link href="/contact" style={{color:'var(--fg)',fontWeight:500,textDecoration:'underline',textUnderlineOffset:'3px'}}>
-              Cuéntanos y hacemos presupuesto a medida
+          <div style={{textAlign:'center',marginTop:'3rem'}}>
+            <Link href="/contact" className="btn-primary arrow-link">
+              Solicitar presupuesto personalizado
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
-          </p>
+            <p style={{fontSize:'0.8125rem',color:'#9CA3AF',marginTop:'1rem'}}>
+              Respondemos en menos de 24h · <Link href="/pricing" style={{color:'var(--fg)',fontWeight:500,textDecoration:'underline',textUnderlineOffset:'3px'}}>Ver precios orientativos</Link>
+            </p>
+          </div>
         </ScrollReveal>
       </div>
     </section>
@@ -690,7 +623,7 @@ export default function Home() {
       <Chariot />
       <Work />
       <WhyRUD />
-      <Pricing />
+      <Investment />
       <FAQ />
       <CTA />
       <Footer />
