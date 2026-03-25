@@ -11,7 +11,7 @@ const NAV = [
   { href: '/blog',     label: 'Blog' },
 ]
 
-export default function Navbar() {
+export default function Navbar({ light = false }: { light?: boolean }) {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen]         = useState(false)
   const path = usePathname()
@@ -29,7 +29,9 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [open])
 
-  const navBg = scrolled || open ? 'bg-[#F7F5F1] border-b border-[#E2DDD7]' : 'bg-transparent'
+  // isLight: over the video hero, not yet scrolled
+  const isLight = light && !scrolled && !open
+  const navBg   = scrolled || open ? 'bg-[#F7F5F1] border-b border-[#E2DDD7]' : 'bg-transparent'
 
   return (
     <>
@@ -39,7 +41,11 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="shrink-0" aria-label="RUD Studio — Inicio">
-            <img src="/logo-rud.svg" alt="RUD" style={{ height: 26, width: 'auto' }} />
+            <img
+              src={isLight ? '/logo-rud-white.svg' : '/logo-rud.svg'}
+              alt="RUD"
+              style={{ height: 26, width: 'auto', transition: 'opacity .2s' }}
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -49,7 +55,11 @@ export default function Navbar() {
               return (
                 <Link key={href} href={href}
                   data-active={active}
-                  className={`nav-link text-sm font-medium transition-colors ${active ? 'text-[#0A0908]' : 'text-[#6B7280] hover:text-[#0A0908]'}`}>
+                  className={`nav-link text-sm font-medium transition-colors px-2 py-1 rounded-md ${
+                    isLight
+                      ? `text-white/80 hover:text-white hover:bg-white/10 ${active ? 'text-white' : ''}`
+                      : `${active ? 'text-[#0A0908]' : 'text-[#6B7280] hover:text-[#0A0908]'}`
+                  }`}>
                   {label}
                 </Link>
               )
@@ -59,7 +69,11 @@ export default function Navbar() {
           {/* CTA desktop + hamburger mobile */}
           <div className="flex items-center gap-3">
             <Link href="/contact"
-              className="hidden md:inline-flex btn-primary"
+              className={`hidden md:inline-flex items-center transition-all duration-200 ${
+                isLight
+                  ? 'border border-white/40 text-white hover:bg-white/10 rounded-full font-medium text-sm'
+                  : 'btn-primary'
+              }`}
               style={{ padding: '.55rem 1.2rem', fontSize: '.85rem' }}>
               Hablemos
             </Link>
@@ -68,13 +82,15 @@ export default function Navbar() {
               onClick={() => setOpen(o => !o)}
               aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
               aria-expanded={open}
-              className="md:hidden flex flex-col items-center justify-center rounded-full bg-white border border-[#E2DDD7]"
+              className={`md:hidden flex flex-col items-center justify-center rounded-full border ${
+                isLight ? 'border-white/40 bg-white/10' : 'bg-white border-[#E2DDD7]'
+              }`}
               style={{ width: 40, height: 40, gap: 5, flexShrink: 0 }}>
               {[0, 1, 2].map(i => (
                 <span key={i} style={{
                   display: 'block',
                   height: 1.5,
-                  background: '#0A0908',
+                  background: isLight ? 'white' : '#0A0908',
                   borderRadius: 2,
                   transition: 'all .25s',
                   width: i === 1 ? (open ? 0 : 16) : 16,

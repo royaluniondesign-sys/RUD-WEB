@@ -5,45 +5,76 @@ import ScrollReveal from '@/components/ScrollReveal'
 import FAQAccordion from '@/components/FAQAccordion'
 
 // ═══════════════════════════════════════════════════════════
-// HERO
+// HERO — video background, Barlow + Instrument Serif
 // ═══════════════════════════════════════════════════════════
 function Hero() {
   return (
-    <section className="hero-gradient min-h-screen flex items-center pt-[68px] relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none"
-        style={{backgroundImage:'linear-gradient(rgba(10,9,8,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(10,9,8,.035) 1px,transparent 1px)',backgroundSize:'64px 64px'}} />
+    <section className="relative h-screen min-h-[640px] flex items-end justify-center overflow-hidden">
 
-      <div className="container-custom relative z-10" style={{paddingTop:'6rem',paddingBottom:'6rem'}}>
-        <div className="animate-fade-in-up mb-6">
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/80 border border-[#E2DDD7] rounded-full text-xs font-medium text-[#6B7280]">
-            <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-            Aceptando proyectos · Barcelona
-          </span>
+      {/* Full-screen background video — autoplay, loop, muted, no overlays */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_074215_04640ca7-042c-45d6-bb56-58b1e8a42489.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+
+      {/* Content — 250px breathing room from bottom */}
+      <div className="relative z-10 w-full container-custom flex flex-col items-center text-center"
+           style={{ paddingBottom: 250 }}>
+
+        {/* Liquid-glass badge */}
+        <div className="mb-10 animate-fade-in-up">
+          <div className="rounded-full p-[3px] inline-block" style={{ background: 'rgba(255,255,255,0.10)', backdropFilter: 'blur(4px)' }}>
+            <div className="rounded-full px-5 py-2 inline-flex items-center gap-2" style={{ background: 'rgba(255,255,255,0.90)', backdropFilter: 'blur(12px)' }}>
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+              <span className="text-xs font-medium text-[#171717] font-barlow tracking-wide">
+                Featured in Fortune
+              </span>
+            </div>
+          </div>
         </div>
 
-        <h1 className="animate-fade-in-up anim-d1 font-bold leading-[1.02] tracking-tight mb-8"
-          style={{fontSize:'clamp(2.6rem,6vw,5.8rem)',letterSpacing:'-0.035em',maxWidth:'900px'}}>
-          Creamos marcas que<br />
-          <span className="italic font-light" style={{color:'#A8A0A0'}}>posicionan de verdad.</span>
-        </h1>
+        {/* Headline with corner accents */}
+        <div className="relative inline-block animate-fade-in-up anim-d1">
+          <span className="absolute -top-2 -left-2 w-[7px] h-[7px] bg-white block" />
+          <span className="absolute -top-2 -right-2 w-[7px] h-[7px] bg-white block" />
+          <span className="absolute -bottom-2 -left-2 w-[7px] h-[7px] bg-white block" />
+          <span className="absolute -bottom-2 -right-2 w-[7px] h-[7px] bg-white block" />
+          <div className="px-10 py-4">
+            <h1>
+              <span className="block font-barlow text-white leading-tight"
+                    style={{ fontSize: 'clamp(2.4rem,6vw,4rem)', fontWeight: 300 }}>
+                Agency that makes your
+              </span>
+              <span className="block font-instrument-serif italic text-white leading-tight"
+                    style={{ fontSize: 'clamp(2.4rem,6vw,4rem)' }}>
+                brand unforgettable
+              </span>
+            </h1>
+          </div>
+        </div>
 
-        <p className="animate-fade-in-up anim-d2 text-[#6B7280] leading-relaxed"
-          style={{fontSize:'clamp(1rem,2vw,1.25rem)',maxWidth:'520px',marginBottom:'3rem'}}>
-          Agencia creativa full-stack en Barcelona. Branding estratégico, diseño web, e-commerce, motion y automatización con IA — todo bajo un mismo techo.
+        {/* Sub-headline */}
+        <p className="font-barlow text-base md:text-lg leading-relaxed max-w-lg mt-8 animate-fade-in-up anim-d2"
+           style={{ color: 'rgba(255,255,255,0.75)' }}>
+          Estrategia, identidad y ejecución digital — para marcas que quieren dejar huella. Barcelona. Globalmente.
         </p>
 
-        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-4" style={{marginBottom:'3.5rem'}}>
-          <Link href="/contact" className="btn-primary arrow-link">
+        {/* CTAs — sharp 2px radius, #f8f8f8 */}
+        <div className="flex flex-wrap justify-center gap-3 mt-8 animate-fade-in-up anim-d3">
+          <Link href="/contact"
+            className="font-barlow font-medium text-sm text-[#171717] bg-[#f8f8f8] hover:bg-white transition-colors duration-200 px-7 py-3.5"
+            style={{ borderRadius: 2 }}>
             Hablemos de tu proyecto
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </Link>
-          <Link href="/work" className="btn-secondary">Ver trabajo real</Link>
-        </div>
-
-        <div className="animate-fade-in-up anim-d3 flex flex-wrap gap-3" style={{marginTop:'0'}}>
-          {['Branding','Diseño Web','E-commerce Shopify','Motion Design','AI Automation','Identidad Visual'].map(t => (
-            <span key={t} className="keyword-pill">{t}</span>
-          ))}
+          <Link href="/work"
+            className="font-barlow font-medium text-sm text-[#171717] bg-[#f8f8f8] hover:bg-white transition-colors duration-200 px-7 py-3.5"
+            style={{ borderRadius: 2 }}>
+            Ver trabajo real
+          </Link>
         </div>
       </div>
     </section>
@@ -647,7 +678,7 @@ function Footer() {
 export default function Home() {
   return (
     <main>
-      <Navbar />
+      <Navbar light />
       <Hero />
       <Marquee />
       <Stats />
