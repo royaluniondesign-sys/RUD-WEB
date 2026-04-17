@@ -3,6 +3,9 @@ import { notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 
 const POSTS: Record<string, {
+  title: string; date: string; category: string; readTime: string;
+  image: string; content: string; excerpt: string;
+}> = {
   'aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st': {
     title: 'AURA: El Agente IA Autónomo que Lidera la Operación de RUD Studio desde Telegram',
     date: 'Abril 2026', category: 'IA & Tecnología', readTime: '4 min',
@@ -26,9 +29,6 @@ Barcelona siempre ha sido un faro de diseño y vanguardia en Europa. Con AURA, e
 
 El mensaje para las empresas que buscan un socio estratégico es claro: la tecnología debe trabajar para el negocio, no al revés. En RUD Studio, lideramos con el ejemplo. Si buscas una agencia que entienda la intersección exacta entre el diseño de alto nivel y la autonomía tecnológica, estamos listos para la conversación. El futuro de tu marca es inteligente, es eficiente y empieza con un mensaje en Telegram. El mañana de la gestión creativa ya está aquí, y se llama AURA.`,
   },
-  title: string; date: string; category: string; readTime: string;
-  image: string; content: string; excerpt: string;
-}> = {
   'ia-local-vs-nube-agencias-creativas': {
     title: 'IA local vs. nube: por qué las agencias creativas deberían reconsiderar dónde corre su IA',
     date: 'Marzo 2026', category: 'IA & Tecnología', readTime: '8 min',
