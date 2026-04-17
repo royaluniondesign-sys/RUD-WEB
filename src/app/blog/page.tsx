@@ -10,6 +10,14 @@ export const metadata = {
 
 const posts = [
   {
+    slug: 'aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st',
+    title: 'AURA: El Agente IA Autónomo que Lidera la Operación de RUD Studio desde Telegram',
+    date: 'Abril 2026', category: 'IA & Tecnología', readTime: '4 min',
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&q=85',
+    excerpt: 'AURA no es un chatbot; es el cerebro operativo de nuestra agencia creativa en Barcelona. Descubre cómo gestionamos proyectos y tecnología en tiempo real desde una app de mensajería.',
+    featured: false,
+  },
+  {
     slug: 'ia-local-vs-nube-agencias-creativas',
     title: 'IA local en agencias creativas: por qué dejamos de pagar APIs y ganamos en calidad',
     date: 'Marzo 2026', category: 'IA & Tecnología', readTime: '8 min',
