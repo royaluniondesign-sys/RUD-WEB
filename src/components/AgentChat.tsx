@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react'
 
 // ─── Actualiza estos @usernames cuando los bots estén listos ───────────────
-const HERMES_URL = 'https://t.me/RudHermesBot'   // Hermes · Ventas & proyectos
-const AURA_URL   = 'https://t.me/RudAuraBot'     // Aura   · Contenido & marca
+const HERMES_URL = 'https://t.me/rudserverbot'    // Hermes · Ventas & proyectos
+const AURA_URL   = 'https://t.me/rudagency_bot'   // Aura   · Contenido & marca
 const PHONE_URL  = 'tel:+34645593227'
 // ─────────────────────────────────────────────────────────────────────────────
 

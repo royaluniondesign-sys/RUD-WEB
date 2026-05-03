@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 
-const HERMES_URL = 'https://t.me/RudHermesBot'
+const HERMES_URL = 'https://t.me/rudserverbot'
 
 export const metadata = {
   title: 'Rótulos Luminosos Barcelona · Neón LED, Letras Corpóreas, Vinilos | RUD Studio',

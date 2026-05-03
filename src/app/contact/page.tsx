@@ -5,8 +5,8 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 
 // ─── Telegram agents (update @usernames when bots are live) ───────────────
-const HERMES_URL = 'https://t.me/RudHermesBot'
-const AURA_URL   = 'https://t.me/RudAuraBot'
+const HERMES_URL = 'https://t.me/rudserverbot'
+const AURA_URL   = 'https://t.me/rudagency_bot'
 // ─────────────────────────────────────────────────────────────────────────────
 
 const SERVICES = [
