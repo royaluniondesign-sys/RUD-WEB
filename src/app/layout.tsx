@@ -38,17 +38,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="geo.placename" content="Barcelona" />
         <meta name="geo.position" content="41.3851;2.1734" />
         {/* Google Analytics 4 */}
-        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-          <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
-            <script dangerouslySetInnerHTML={{ __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', { page_path: window.location.pathname });
-            `}} />
-          </>
-        )}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH9353K02R" />
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-FH9353K02R', { page_path: window.location.pathname });
+        `}} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
