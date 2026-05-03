@@ -6,6 +6,27 @@ const POSTS: Record<string, {
   title: string; date: string; category: string; readTime: string;
   image: string; content: string; excerpt: string;
 }> = {
+  'rotulos-luminosos-barcelona-precio-tipos-instalacion': {
+    title: 'Rótulos luminosos en Barcelona: tipos, precios y cómo elegir el correcto para tu negocio',
+    date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '7 min',
+    image: '/services/neon-shop.jpg',
+    excerpt: 'Neón LED, cajas de luz, letras corpóreas, vinilos. Todo lo que necesitas saber antes de pedir presupuesto para tu rótulo en Barcelona.',
+    content: `Si tienes un local en Barcelona y estás pensando en un rótulo, la primera pregunta suele ser la misma: ¿cuánto cuesta? Pero antes de hablar de precio, hay que entender qué tipo de rótulo necesitas realmente — porque la diferencia entre un neón LED y una caja de luz no es solo estética, es funcional y presupuestaria.
+
+Los rótulos luminosos se dividen en cuatro categorías principales: neón LED (la versión moderna del tubo de neón clásico), cajas de luz (estructura con frente iluminado, ideal para franquicias y comercios de alta rotación), letras corpóreas (volumétricas, con o sin iluminación, el estándar del retail premium) y vinilos de escaparate (la solución más económica para comunicar sin estructura).
+
+El neón LED ha ganado terreno en Barcelona en los últimos tres años por razones obvias: consume un 80% menos que el neón de vidrio clásico, dura entre 50.000 y 100.000 horas, y permite cualquier forma o tipografía. El coste oscila entre €600 y €2.500 dependiendo del tamaño y complejidad del diseño. Un neón pequeño para mostrador de entre 40 y 60 cm puede estar en €400-800. Un rótulo de fachada de 2 metros puede llegar a €1.500-2.500 instalado.
+
+Las letras corpóreas con iluminación lateral son el estándar para retail de moda, joyería y hostelería premium en Barcelona. El proceso incluye diseño, mecanizado CNC del volumen, acabado (lacado, espejado, cobre, negro mate) e instalación. Los precios varían enormemente: desde €800 para una palabra corta hasta €5.000 para una fachada completa con iluminación RGB.
+
+Las cajas de luz siguen siendo la opción preferida para franquicias y negocios que necesitan alta visibilidad nocturna con mantenimiento mínimo. La estructura de aluminio con frente de metacrilato o policarbonato iluminado por LED es robusta, impermeable y fácil de actualizar gráficamente. Precios desde €400 para un formato pequeño hasta €3.000 para una caja de luz de gran formato con estructura vista.
+
+Los vinilos de escaparate son otra categoría completamente distinta: no son rótulos luminosos pero son el complemento visual más usado en comercios de Barcelona. Permiten cambiar el mensaje estacional, delimitar el espacio visual del escaparate y comunicar promociones sin obra. El coste de un vinilo básico para un escaparate de 2 metros puede estar entre €150 y €400 con diseño e instalación incluidos.
+
+Antes de pedir presupuesto, hay tres preguntas que definen casi todo el proceso: ¿Es para interior o exterior? (los materiales y la protección IP son completamente distintos), ¿necesitas iluminación o no? (multiplica el coste por 2-3x pero también el impacto visual), y ¿cuál es el sistema de sujeción disponible en tu local? (fachada de obra, cristal, o estructura metálica cambia completamente la instalación).
+
+En RUD diseñamos y fabricamos rótulos luminosos en Barcelona con instalación incluida. El proceso es simple: visita técnica gratuita, propuesta con render en 48 horas, fabricación en 2-3 semanas e instalación. Si estás pensando en renovar la señalética de tu negocio en Barcelona, empieza por una consulta sin compromiso.`,
+  },
   'aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st': {
     title: 'AURA: El Agente IA Autónomo que Lidera la Operación de RUD Studio desde Telegram',
     date: 'Abril 2026', category: 'IA & Tecnología', readTime: '4 min',

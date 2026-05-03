@@ -10,6 +10,14 @@ export const metadata = {
 
 const posts = [
   {
+    slug: 'rotulos-luminosos-barcelona-precio-tipos-instalacion',
+    title: 'Rótulos luminosos en Barcelona: tipos, precios y cómo elegir el correcto para tu negocio',
+    date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '7 min',
+    image: '/services/neon-shop.jpg',
+    excerpt: 'Neón LED, cajas de luz, letras corpóreas, vinilos. Todo lo que necesitas saber antes de pedir presupuesto para tu rótulo en Barcelona.',
+    featured: true,
+  },
+  {
     slug: 'aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st',
     title: 'AURA: El Agente IA Autónomo que Lidera la Operación de RUD Studio desde Telegram',
     date: 'Abril 2026', category: 'IA & Tecnología', readTime: '4 min',

@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/pricing`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/blog/rotulos-luminosos-barcelona-precio-tipos-instalacion`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${base}/blog/aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
     { url: `${base}/blog/ia-local-vs-nube-agencias-creativas`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/blog/branding-ecommerce-shopify-barcelona`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/blog/identidad-visual-vs-logo-diferencia`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
