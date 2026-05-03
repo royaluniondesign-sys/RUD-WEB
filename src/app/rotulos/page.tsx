@@ -62,7 +62,7 @@ export default function Rotulos() {
       {/* HERO */}
       <section style={{ position: 'relative', height: '100vh', minHeight: 640, overflow: 'hidden', display: 'flex', alignItems: 'flex-end' }}>
         <img
-          src="/services/hero-rotulos.jpg"
+          src="/services/neon-shop.jpg"
           alt="Rótulos luminosos neón LED Barcelona — RUD Studio"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
         />
@@ -124,7 +124,7 @@ export default function Rotulos() {
           <ScrollReveal>
             <Link href="/contact?servicio=neon" style={{ display: 'block', textDecoration: 'none', marginBottom: '1rem' }} className="group">
               <div style={{ borderRadius: 12, overflow: 'hidden', position: 'relative', height: 'clamp(280px,38vw,500px)' }} className="card-lift">
-                <img src="/services/neon-led.jpg" alt="Neón LED personalizado a medida Barcelona"
+                <img src="/services/neon-interior.jpg" alt="Neón LED personalizado a medida Barcelona"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.7s' }} />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)' }} />
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: 'clamp(1.5rem,4vw,2.5rem)' }}>
@@ -150,16 +150,16 @@ export default function Rotulos() {
             {[
               {
                 href: '/contact?servicio=luminosos',
-                img: '/services/rotulos-luminosos.jpg',
-                alt: 'Rótulo luminoso caja de luz backlit LED Barcelona',
+                img: '/services/neon-open.jpg',
+                alt: 'Rótulo luminoso neón OPEN — señal iluminada para comercio',
                 tag: 'Más solicitado',
                 title: 'Rótulos Luminosos',
                 desc: 'Caja de luz, bandeja calada, backlit LED. Máxima visibilidad nocturna, consumo mínimo.',
               },
               {
                 href: '/contact?servicio=letras',
-                img: '/services/letras-corporeas.jpg',
-                alt: 'Letras corpóreas aluminio 3D Barcelona',
+                img: '/services/building-sign.jpg',
+                alt: 'Letras corpóreas y rótulo sobre fachada de edificio Barcelona',
                 tag: null,
                 title: 'Letras Corpóreas & 3D',
                 desc: 'Aluminio, metacrilato, madera, acero. Con o sin retroiluminación tipo halo.',
@@ -190,22 +190,22 @@ export default function Rotulos() {
             {[
               {
                 href: '/contact?servicio=vinilos',
-                img: '/services/vinilo-escaparate.jpg',
-                alt: 'Vinilos escaparate recortados impresos Barcelona',
+                img: '/services/storefront.jpg',
+                alt: 'Vinilos escaparate y gráfica en luna de comercio Barcelona',
                 title: 'Vinilos Escaparate',
                 desc: 'Impresos, esmerilados, recortados en plotter. Cambio estacional sin obra.',
               },
               {
                 href: '/contact?servicio=senaletica',
-                img: '/services/senaletica-interior.jpg',
-                alt: 'Señalética interior corporativa Barcelona',
+                img: '/services/wayfinding.jpg',
+                alt: 'Señalética wayfinding interior — dirección y orientación corporativa',
                 title: 'Señalética Interior',
                 desc: 'Directorios, identificación de espacios, señales de acceso y evacuación.',
               },
               {
                 href: '/contact?servicio=exterior',
-                img: '/services/publicidad-exterior.jpg',
-                alt: 'Publicidad exterior lonas banderolas Barcelona',
+                img: '/services/facade.jpg',
+                alt: 'Publicidad exterior en fachada de edificio — gran formato Barcelona',
                 title: 'Publicidad Exterior',
                 desc: 'Lonas, banderolas, vallas, fachadas y wrapping de vehículos.',
               },
@@ -266,12 +266,12 @@ export default function Rotulos() {
           </ScrollReveal>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(180px,1fr))', gap: 8 }}>
             {[
-              { src: '/services/neon-led.jpg',          alt: 'Neón LED personalizado instalado' },
-              { src: '/services/neon-open.jpg',          alt: 'Rótulo neón open — hostelería' },
-              { src: '/services/letras-corporeas.jpg',   alt: 'Letras corpóreas aluminio fachada' },
-              { src: '/services/rotulos-luminosos.jpg',  alt: 'Rótulo luminoso caja de luz backlit' },
-              { src: '/services/vinilo-escaparate.jpg',  alt: 'Vinilo escaparate recortado comercio' },
-              { src: '/services/senaletica-interior.jpg',alt: 'Señalética interior corporativa' },
+              { src: '/services/neon-led.jpg',            alt: 'Neón LED personalizado — letras luminosas a medida' },
+              { src: '/services/store-signage.jpg',       alt: 'Rótulo de tienda con iluminación — señal comercial' },
+              { src: '/services/retail-interior.jpg',     alt: 'Interior de local con señalética y gráfica' },
+              { src: '/services/vinilo-escaparate.jpg',   alt: 'Vinilo recortado en escaparate de comercio' },
+              { src: '/services/rotulos-luminosos.jpg',   alt: 'Caja de luz backlit LED — rótulo luminoso' },
+              { src: '/services/publicidad-exterior.jpg', alt: 'Publicidad exterior — lona gran formato edificio' },
             ].map((item, i) => (
               <ScrollReveal key={item.src} delay={i * 40}>
                 <div style={{ borderRadius: 8, overflow: 'hidden', aspectRatio: '1/1' }} className="card-lift">
