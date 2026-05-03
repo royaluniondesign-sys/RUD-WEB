@@ -31,7 +31,7 @@ function Hero() {
             <div className="rounded-full px-5 py-2 inline-flex items-center gap-2" style={{ background: 'rgba(255,255,255,0.90)', backdropFilter: 'blur(12px)' }}>
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
               <span className="text-xs font-medium text-[#171717] font-barlow tracking-wide">
-                Featured in Fortune
+                Aceptando proyectos · Barcelona
               </span>
             </div>
           </div>
@@ -47,34 +47,41 @@ function Hero() {
             <h1>
               <span className="block font-barlow text-white leading-tight"
                     style={{ fontSize: 'clamp(2.4rem,6vw,4rem)', fontWeight: 300 }}>
-                Agency that makes your
+                Rótulos luminosos, branding
               </span>
               <span className="block font-instrument-serif italic text-white leading-tight"
                     style={{ fontSize: 'clamp(2.4rem,6vw,4rem)' }}>
-                brand unforgettable
+                y diseño web en Barcelona.
               </span>
             </h1>
           </div>
         </div>
 
         {/* Sub-headline */}
-        <p className="font-barlow text-base md:text-lg leading-relaxed max-w-lg mt-8 animate-fade-in-up anim-d2"
+        <p className="font-barlow text-base md:text-lg leading-relaxed max-w-xl mt-8 animate-fade-in-up anim-d2"
            style={{ color: 'rgba(255,255,255,0.75)' }}>
-          Estrategia, identidad y ejecución digital — para marcas que quieren dejar huella. Barcelona. Globalmente.
+          Señalética corporativa, rótulos neón, vinilos de escaparate, identidad visual y webs de alto rendimiento — todo bajo un mismo techo.
         </p>
 
-        {/* CTAs — sharp 2px radius, #f8f8f8 */}
+        {/* CTAs */}
         <div className="flex flex-wrap justify-center gap-3 mt-8 animate-fade-in-up anim-d3">
+          <Link href="/services#rotulos"
+            className="font-barlow font-medium text-sm text-[#171717] bg-[#f8f8f8] hover:bg-white transition-colors duration-200 px-7 py-3.5"
+            style={{ borderRadius: 2 }}>
+            Ver rótulos y señalética →
+          </Link>
           <Link href="/contact"
-            className="font-barlow font-medium text-sm text-[#171717] bg-[#f8f8f8] hover:bg-white transition-colors duration-200 px-7 py-3.5"
+            className="font-barlow font-medium text-sm text-white border border-white/30 hover:border-white/60 transition-colors duration-200 px-7 py-3.5"
             style={{ borderRadius: 2 }}>
-            Hablemos de tu proyecto
+            Pedir presupuesto
           </Link>
-          <Link href="/work"
-            className="font-barlow font-medium text-sm text-[#171717] bg-[#f8f8f8] hover:bg-white transition-colors duration-200 px-7 py-3.5"
-            style={{ borderRadius: 2 }}>
-            Ver trabajo real
-          </Link>
+        </div>
+
+        {/* Keyword pills */}
+        <div className="flex flex-wrap justify-center gap-2 mt-8 animate-fade-in-up anim-d3">
+          {['Rótulos Luminosos','Señalética Corporativa','Vinilos Escaparates','Letras Corpóreas','Branding','Diseño Web','Neón LED','E-commerce Shopify'].map(t => (
+            <span key={t} style={{padding:'4px 12px',borderRadius:9999,fontSize:'11px',fontWeight:500,background:'rgba(255,255,255,0.1)',color:'rgba(255,255,255,0.65)',backdropFilter:'blur(4px)',border:'1px solid rgba(255,255,255,0.15)'}}>{t}</span>
+          ))}
         </div>
       </div>
     </section>
@@ -85,7 +92,7 @@ function Hero() {
 // MARQUEE
 // ═══════════════════════════════════════════════════════════
 function Marquee() {
-  const items = ['Brand Strategy','Identidad Visual','Diseño Web','Next.js','E-commerce Shopify','Motion Branding','Copywriting','SEO Técnico','AI Automation','Packaging','Fotografía','Marketing Digital']
+  const items = ['Brand Strategy','Identidad Visual','Señalética & Rótulos','Diseño Web','Next.js','E-commerce Shopify','Motion Branding','Rótulos Luminosos','Copywriting','SEO Técnico','AI Automation','Vinilos Escaparates','Packaging','Fotografía','Marketing Digital']
   const doubled = [...items,...items]
   return (
     <div style={{background:'#0A0908',padding:'14px 0',overflow:'hidden',borderTop:'1px solid #181614',borderBottom:'1px solid #181614'}}>
@@ -134,21 +141,23 @@ function Stats() {
 function Services() {
   const featured = [
     {
-      title:'Branding & Estrategia de Marca',
-      desc:'Posicionamiento competitivo, naming, arquitectura de marca y sistemas de identidad visual construidos para escalar.',
-      tags:['Brand Strategy','Naming','Visual Identity','Packaging','Brand Guidelines'],
-      href:'/services#branding',
+      title:'Rótulos Luminosos & Señalética',
+      desc:'Fabricamos e instalamos rótulos luminosos, neón LED, letras corpóreas y vinilos de escaparate en Barcelona. Tu identidad visual en el espacio físico — con el mismo nivel de acabado que tu web.',
+      tags:['Rótulos Luminosos','Neón LED','Letras Corpóreas','Vinilos Escaparate','Señalética Interior'],
+      href:'/services#rotulos',
+      accent: true,
     },
     {
-      title:'Diseño Web & Desarrollo Next.js',
-      desc:'UX/UI research, diseño en Figma y desarrollo en Next.js 15. Sitios que puntúan 95+ en Lighthouse y se posicionan en Google desde el día uno.',
-      tags:['UX Research','UI en Figma','Next.js 15','E-commerce Shopify','SEO técnico'],
-      href:'/services#web',
+      title:'Branding & Identidad Visual',
+      desc:'Posicionamiento competitivo, naming, arquitectura de marca y sistemas de identidad visual construidos para escalar. Base para todo lo demás.',
+      tags:['Brand Strategy','Naming','Logo System','Packaging','Brand Guidelines'],
+      href:'/services#branding',
+      accent: false,
     },
   ]
   const secondary = [
-    {title:'Contenido, Motion & Producción',desc:'Copywriting estratégico, dirección de arte, animaciones de marca y producción multiplataforma.',href:'/services#content'},
-    {title:'Marketing Digital & Growth',desc:'SEO orgánico, Google Ads, Meta Ads, email marketing y estrategia de contenido.',href:'/services#marketing'},
+    {title:'Diseño Web & Desarrollo Next.js',desc:'UX/UI research, diseño en Figma y desarrollo en Next.js. 95+ Lighthouse, SEO técnico y Core Web Vitals en verde desde el día uno.',href:'/services#web'},
+    {title:'Contenido, Motion & AI Automation',desc:'Copywriting estratégico, animaciones de marca y agentes de IA (Aura & Hermes) que automatizan tu negocio.',href:'/services#content'},
   ]
   return (
     <section className="section-padding" style={{background:'#F7F5F1'}}>
@@ -161,7 +170,7 @@ function Services() {
               <p style={{fontSize:'0.9375rem',color:'var(--muted)',maxWidth:'380px',lineHeight:1.6}}>Estrategia, diseño, tecnología y automatización para marcas con ambición.</p>
             </div>
             <Link href="/services" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'0.5rem',fontSize:'0.875rem',fontWeight:500,color:'var(--muted)',textDecoration:'none',whiteSpace:'nowrap'}}>
-              Ver los 6 servicios
+              Ver los 7 servicios
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
           </div>
@@ -171,11 +180,29 @@ function Services() {
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           {featured.map((s, i) => (
             <ScrollReveal key={s.title} delay={i * 55}>
-              <Link href={s.href} style={{display:'flex',flexDirection:'column',background:'white',border:'1px solid var(--border)',borderRadius:'16px',padding:'2.5rem',textDecoration:'none',height:'100%'}} className="card-lift">
-                <h3 style={{fontSize:'1.375rem',fontWeight:700,letterSpacing:'-0.02em',marginBottom:'0.75rem',lineHeight:1.25,color:'var(--fg)'}}>{s.title}</h3>
-                <p style={{fontSize:'0.9375rem',color:'var(--muted)',lineHeight:1.65,marginBottom:'1.5rem',flex:1}}>{s.desc}</p>
+              <Link href={s.href} style={{
+                display:'flex',flexDirection:'column',
+                background: s.accent ? '#0A0908' : 'white',
+                border: s.accent ? '1px solid #1A1816' : '1px solid var(--border)',
+                borderRadius:'16px',padding:'2.5rem',textDecoration:'none',height:'100%',
+                position:'relative',overflow:'hidden',
+              }} className="card-lift">
+                {s.accent && (
+                  <span style={{position:'absolute',top:'1.25rem',right:'1.25rem',fontSize:'9px',fontWeight:700,textTransform:'uppercase',letterSpacing:'.15em',color:'#D97706',padding:'4px 10px',borderRadius:9999,border:'1px solid rgba(217,119,6,.3)',background:'rgba(217,119,6,.1)'}}>
+                    FABRICACIÓN PROPIA
+                  </span>
+                )}
+                <h3 style={{fontSize:'1.375rem',fontWeight:700,letterSpacing:'-0.02em',marginBottom:'0.75rem',lineHeight:1.25,color: s.accent ? 'white' : 'var(--fg)'}}>{s.title}</h3>
+                <p style={{fontSize:'0.9375rem',color: s.accent ? 'rgba(255,255,255,0.55)' : 'var(--muted)',lineHeight:1.65,marginBottom:'1.5rem',flex:1}}>{s.desc}</p>
                 <div style={{display:'flex',flexWrap:'wrap',gap:'8px'}}>
-                  {s.tags.map(tag => <span key={tag} className="tag-pill">{tag}</span>)}
+                  {s.tags.map(tag => (
+                    <span key={tag} style={{
+                      padding:'4px 12px',borderRadius:9999,fontSize:'11px',fontWeight:500,
+                      background: s.accent ? 'rgba(255,255,255,0.08)' : '#F0EDE6',
+                      color: s.accent ? 'rgba(255,255,255,0.6)' : '#6B7280',
+                      border: s.accent ? '1px solid rgba(255,255,255,0.1)' : 'none',
+                    }}>{tag}</span>
+                  ))}
                 </div>
               </Link>
             </ScrollReveal>
@@ -202,9 +229,9 @@ function Services() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// CHARIOT — full section with terminal + capabilities + CTA
+// AURA — full section with terminal + capabilities + CTA
 // ═══════════════════════════════════════════════════════════
-function Chariot() {
+function AuraSection() {
   const capabilities = [
     { label: 'ANALISIS', title: 'Análisis de briefings', desc: 'Procesamos tu brief con IA para extraer insights clave y oportunidades estratégicas.' },
     { label: 'CONTENIDO', title: 'Generación de contenido', desc: 'Copy, posts, emails y guiones optimizados para tu marca y audiencia.' },
@@ -225,13 +252,13 @@ function Chariot() {
           <div style={{textAlign:'center',marginBottom:'4rem'}}>
             <div style={{display:'inline-flex',alignItems:'center',gap:'8px',marginBottom:'1.5rem',padding:'6px 14px',borderRadius:'9999px',border:'1px solid rgba(123,104,238,0.25)',background:'rgba(123,104,238,0.1)'}}>
               <span style={{width:'6px',height:'6px',borderRadius:'50%',background:'var(--chariot)'}} className="animate-pulse" />
-              <span style={{fontSize:'10px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.15em',color:'var(--chariot)'}}>CHARIOT · Motor IA interno</span>
+              <span style={{fontSize:'10px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.15em',color:'var(--chariot)'}}>AURA & HERMES · Agentes IA propios</span>
             </div>
             <h2 style={{fontSize:'clamp(2rem,5vw,3.5rem)',fontWeight:700,color:'white',letterSpacing:'-0.035em',lineHeight:1.1,marginBottom:'1rem',maxWidth:'700px',margin:'0 auto 1rem'}}>
-              IA local que amplifica nuestra creatividad
+              Aura & Hermes trabajan mientras tú duermes
             </h2>
             <p style={{color:'#6B7280',lineHeight:1.7,fontSize:'clamp(0.9rem,1.5vw,1.05rem)',maxWidth:'560px',margin:'0 auto'}}>
-              100% local con Ollama, sin coste operativo. Entregamos más calidad en menos tiempo sin que tus datos salgan de nuestros servidores.
+              Nuestros agentes de IA propios: Aura para contenido y comunicación, Hermes para operaciones y CRM. 100% local, sin coste recurrente, sin que tus datos salgan de tu servidor.
             </p>
           </div>
         </ScrollReveal>
@@ -244,12 +271,12 @@ function Chariot() {
               <span style={{width:'10px',height:'10px',borderRadius:'50%',background:'#FF5F57'}} />
               <span style={{width:'10px',height:'10px',borderRadius:'50%',background:'#FEBC2E'}} />
               <span style={{width:'10px',height:'10px',borderRadius:'50%',background:'#28C840'}} />
-              <span style={{flex:1,textAlign:'center',fontSize:'11px',color:'rgba(255,255,255,0.25)',fontFamily:'monospace'}}>chariot@rud-studio</span>
+              <span style={{flex:1,textAlign:'center',fontSize:'11px',color:'rgba(255,255,255,0.25)',fontFamily:'monospace'}}>aura@rud-studio</span>
             </div>
             {/* Terminal body */}
             <div style={{padding:'1.25rem 1.5rem',fontFamily:'monospace',fontSize:'13px',lineHeight:1.8}}>
               <p style={{color:'rgba(123,104,238,0.7)'}}>
-                <span style={{color:'var(--chariot)'}}>$</span> chariot analyze --brief client-brief.pdf
+                <span style={{color:'var(--chariot)'}}>$</span> aura analyze --brief client-brief.pdf
               </p>
               <p style={{color:'rgba(255,255,255,0.35)'}}>
                 Analizando brief... extrayendo insights clave...
@@ -261,7 +288,7 @@ function Chariot() {
                 Informe estratégico generado en 4.2s
               </p>
               <p style={{color:'rgba(123,104,238,0.7)',marginTop:'0.5rem'}}>
-                <span style={{color:'var(--chariot)'}}>$</span> chariot generate --content seo-blog
+                <span style={{color:'var(--chariot)'}}>$</span> aura generate --content seo-blog
               </p>
               <p style={{color:'rgba(255,255,255,0.35)'}}>
                 Generando contenido SEO optimizado...
@@ -294,9 +321,9 @@ function Chariot() {
           <div style={{borderRadius:'16px',border:'1px solid rgba(123,104,238,0.2)',background:'rgba(123,104,238,0.06)',padding:'clamp(1.5rem,4vw,2.5rem)',display:'flex',flexWrap:'wrap',alignItems:'center',justifyContent:'space-between',gap:'1.5rem'}}>
             <div style={{maxWidth:'500px'}}>
               <h3 style={{fontSize:'1.25rem',fontWeight:700,color:'white',marginBottom:'0.5rem'}}>Sin coste extra para el cliente</h3>
-              <p style={{fontSize:'0.875rem',color:'#6B7280',lineHeight:1.65}}>CHARIOT viene incluido en todos nuestros proyectos. Tú recibes mejor resultado, más rápido, al mismo precio.</p>
+              <p style={{fontSize:'0.875rem',color:'#6B7280',lineHeight:1.65}}>Aura & Hermes vienen incluidos en todos nuestros proyectos. Tú recibes mejor resultado, más rápido, al mismo precio.</p>
             </div>
-            <Link href="/services#chariot" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'0.75rem 1.5rem',background:'var(--chariot)',color:'white',borderRadius:'9999px',fontWeight:600,fontSize:'0.875rem',textDecoration:'none',flexShrink:0,transition:'opacity 0.2s'}}>
+            <Link href="/services#aura" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'0.75rem 1.5rem',background:'var(--chariot)',color:'white',borderRadius:'9999px',fontWeight:600,fontSize:'0.875rem',textDecoration:'none',flexShrink:0,transition:'opacity 0.2s'}}>
               Saber más
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
@@ -440,7 +467,7 @@ function WhyRUD() {
     {
       icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>,
       title:'IA integrada en cada proyecto',
-      desc:'CHARIOT analiza, genera y automatiza sin coste extra para ti. Entregas más rápidas y con más calidad.',
+      desc:'AURA analiza, genera y automatiza sin coste extra para ti. Entregas más rápidas y con más calidad.',
     },
     {
       icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>,
@@ -612,7 +639,7 @@ function CTA() {
               </Link>
             </div>
             <p style={{fontSize:'0.875rem',color:'#333'}}>
-              O escríbenos a <a href="mailto:hello@rud.studio" style={{color:'white',textDecoration:'none'}}>hello@rud.studio</a>
+              O escríbenos a <a href="mailto:hello@royaluniondesign.com" style={{color:'white',textDecoration:'none'}}>hello@royaluniondesign.com</a>
             </p>
           </div>
         </ScrollReveal>
@@ -634,13 +661,13 @@ function Footer() {
             <p style={{color:'#6B7280',fontSize:'0.8125rem',lineHeight:1.7,maxWidth:'220px'}}>
               Agencia creativa de branding, diseño web y automatización IA en Barcelona.
             </p>
-            <a href="mailto:hello@rud.studio" className="footer-link" style={{display:'inline-block',marginTop:'1rem',color:'#3D3D3D',fontSize:'0.75rem',textDecoration:'none'}}>hello@rud.studio</a>
+            <a href="mailto:hello@royaluniondesign.com" className="footer-link" style={{display:'inline-block',marginTop:'1rem',color:'#3D3D3D',fontSize:'0.75rem',textDecoration:'none'}}>hello@royaluniondesign.com</a>
           </div>
 
           {[
             {title:'Navegar',links:[['Trabajo','/work'],['Servicios','/services'],['Nosotros','/about'],['Precios','/pricing'],['Blog','/blog'],['Contacto','/contact']]},
-            {title:'Servicios',links:[['Branding','/services#branding'],['Identidad Visual','/services#identity'],['Diseño Web','/services#web'],['E-commerce','/services#ecommerce'],['AI Automation','/services#chariot']]},
-            {title:'Contacto',links:[['hello@rud.studio','mailto:hello@rud.studio'],['Barcelona, España','#'],['Instagram','https://instagram.com/royaluniondesign'],['LinkedIn','https://linkedin.com/company/royaluniondesign']]},
+            {title:'Servicios',links:[['Branding','/services#branding'],['Identidad Visual','/services#identity'],['Señalética & Rótulos','/services#rotulos'],['Diseño Web','/services#web'],['E-commerce','/services#ecommerce'],['AI Automation · Aura & Hermes','/services#aura']]},
+            {title:'Contacto',links:[['hello@royaluniondesign.com','mailto:hello@royaluniondesign.com'],['Barcelona, España','#'],['Instagram','https://instagram.com/royaluniondesign'],['LinkedIn','https://linkedin.com/company/royaluniondesign']]},
           ].map(col => (
             <div key={col.title}>
               <h4 style={{fontSize:'10px',fontWeight:600,textTransform:'uppercase',letterSpacing:'0.18em',color:'#3D3D3D',marginBottom:'1.25rem'}}>{col.title}</h4>
@@ -673,7 +700,7 @@ function Footer() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// PAGE — Hero → Stats → Services → CHARIOT → Work → WhyRUD → Pricing → FAQ → CTA
+// PAGE — Hero → Stats → Services → AURA → Work → WhyRUD → Pricing → FAQ → CTA
 // ═══════════════════════════════════════════════════════════
 export default function Home() {
   return (
@@ -683,7 +710,7 @@ export default function Home() {
       <Marquee />
       <Stats />
       <Services />
-      <Chariot />
+      <AuraSection />
       <Work />
       <WhyRUD />
       <Investment />

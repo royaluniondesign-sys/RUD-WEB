@@ -35,8 +35,8 @@ const faqsGeneral = [
     answer: 'Empezamos con una llamada de descubrimiento para entender tus objetivos y contexto. Luego creamos una propuesta detallada con alcance, plazos y precios. Una vez aprobada, avanzamos por fases definidas: estrategia, diseño, feedback y entrega final.',
   },
   {
-    question: '¿Qué es exactamente CHARIOT?',
-    answer: 'CHARIOT es nuestro super-agente de IA interno — no es un producto que vendemos, sino la herramienta que usamos para trabajar mejor. Analiza briefings, genera variantes, automatiza tareas y nos permite entregar más calidad en menos tiempo. Si quieres algo similar en tu empresa, hablemos.',
+    question: '¿Qué son exactamente AURA y Hermes?',
+    answer: 'AURA y Hermes son nuestros agentes de IA internos — no son un producto que vendemos, sino la ventaja competitiva que usamos para trabajar mejor. AURA analiza briefings, genera contenido y gestiona comunicación. Hermes automatiza flujos operativos y CRM. Corren 100% en local con Ollama: privacidad total, sin coste recurrente. Si quieres algo similar en tu empresa, hablemos.',
   },
   {
     question: '¿Ofrecéis soporte después de la entrega?',

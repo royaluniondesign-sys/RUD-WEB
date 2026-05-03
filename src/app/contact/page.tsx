@@ -102,8 +102,9 @@ export default function Contact() {
 
                 <div style={{display: 'flex', flexDirection: 'column', gap: '1.25rem'}}>
                   {[
-                    {label: 'Email', val: 'hello@rud.studio', href: 'mailto:hello@rud.studio'},
-                    {label: 'Ubicación', val: 'Barcelona, España', href: null},
+                    {label: 'Email', val: 'hello@royaluniondesign.com', href: 'mailto:hello@royaluniondesign.com'},
+                    {label: 'Teléfono', val: '645 59 32 27', href: 'tel:+34645593227'},
+                    {label: 'Ubicación', val: 'Barcelona & Cerdanyola del Vallès', href: null},
                     {label: 'Alcance', val: 'Barcelona · España · Global', href: null},
                   ].map(({label, val, href}) => (
                     <div key={label}>
@@ -147,7 +148,8 @@ export default function Contact() {
                       <option value="E-commerce Shopify">E-commerce Shopify</option>
                       <option value="Contenido & Motion">Contenido & Motion</option>
                       <option value="Marketing Digital">Marketing Digital</option>
-                      <option value="AI Automation con CHARIOT">AI Automation con CHARIOT</option>
+                      <option value="Señalética & Rótulos">Señalética & Rótulos</option>
+                      <option value="AI Automation (Aura & Hermes)">AI Automation (Aura & Hermes)</option>
                       <option value="Varios servicios">Varios servicios</option>
                     </select>
                   </div>
@@ -197,7 +199,7 @@ export default function Contact() {
                     )}
                   </button>
                   <p style={{fontSize: 12, textAlign: 'center', color: '#9CA3AF'}}>
-                    O escríbenos a <a href="mailto:hello@rud.studio" style={{color: '#0A0908', textDecoration: 'underline', textUnderlineOffset: 3}}>hello@rud.studio</a>
+                    O escríbenos a <a href="mailto:hello@royaluniondesign.com" style={{color: '#0A0908', textDecoration: 'underline', textUnderlineOffset: 3}}>hello@royaluniondesign.com</a>
                   </p>
                 </form>
               </ScrollReveal>
