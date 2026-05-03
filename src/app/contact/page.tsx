@@ -1,212 +1,365 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
-import ScrollReveal from '@/components/ScrollReveal'
 
-const inputStyle = {
-  width: '100%',
-  padding: '0.875rem 1rem',
-  border: '1.5px solid #E2DDD7',
-  borderRadius: '12px',
-  fontFamily: 'inherit',
-  fontSize: '0.9375rem',
-  color: '#0A0908',
-  background: '#FAFAFA',
-  outline: 'none',
-  WebkitAppearance: 'none' as const,
-}
+// ─── Telegram agents (update @usernames when bots are live) ───────────────
+const HERMES_URL = 'https://t.me/RudHermesBot'
+const AURA_URL   = 'https://t.me/RudAuraBot'
+// ─────────────────────────────────────────────────────────────────────────────
 
-const labelStyle = {
-  display: 'block',
-  fontSize: '0.75rem',
-  fontWeight: 600,
-  textTransform: 'uppercase' as const,
-  letterSpacing: '0.1em',
-  color: '#9CA3AF',
-  marginBottom: '0.5rem',
-}
+const SERVICES = [
+  { id: 'branding',   label: 'Branding & Identidad',   icon: '◈', color: '#0A0908' },
+  { id: 'web',        label: 'Diseño Web & Dev',        icon: '⬡', color: '#0A0908' },
+  { id: 'rotulos',    label: 'Rótulos & Señalética',    icon: '◎', color: '#0A0908' },
+  { id: 'ecommerce',  label: 'E-commerce Shopify',      icon: '⊞', color: '#0A0908' },
+  { id: 'ia',         label: 'AI Automation',           icon: '✦', color: '#7B68EE' },
+  { id: 'varios',     label: 'Varios servicios',        icon: '⋯', color: '#0A0908' },
+]
 
-type FormStatus = 'idle' | 'sending' | 'success' | 'error'
+const BUDGETS = [
+  { id: 'starter',      label: 'Hasta €5.000',     sub: 'Starter' },
+  { id: 'professional', label: '€5.000–€15.000',   sub: 'Professional' },
+  { id: 'enterprise',   label: '+€15.000',          sub: 'Enterprise' },
+  { id: 'tbd',          label: 'Por definir',       sub: 'Aún no lo sé' },
+]
+
+type Step = 1 | 2 | 3
+type Status = 'idle' | 'sending' | 'success' | 'error'
 
 export default function Contact() {
-  const [status, setStatus] = useState<FormStatus>('idle')
+  const [step, setStep] = useState<Step>(1)
+  const [service, setService] = useState('')
+  const [budget, setBudget] = useState('')
+  const [message, setMessage] = useState('')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState<Status>('idle')
   const [errorMsg, setErrorMsg] = useState('')
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setStatus('sending')
-    setErrorMsg('')
-
-    const form = e.currentTarget
-    const data = {
-      name: (form.elements.namedItem('name') as HTMLInputElement).value,
-      email: (form.elements.namedItem('email') as HTMLInputElement).value,
-      projectType: (form.elements.namedItem('projectType') as HTMLSelectElement).value,
-      budget: (form.elements.namedItem('budget') as HTMLSelectElement).value,
-      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
-    }
-
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ name, email, projectType: service, budget, message }),
       })
-
       if (!res.ok) {
         const body = await res.json()
-        throw new Error(body.error || 'Error al enviar el mensaje.')
+        throw new Error(body.error || 'Error al enviar.')
       }
-
       setStatus('success')
-      form.reset()
     } catch (err) {
       setStatus('error')
-      setErrorMsg(err instanceof Error ? err.message : 'Error inesperado. Escríbenos a hello@rud.studio')
+      setErrorMsg(err instanceof Error ? err.message : 'Error inesperado.')
     }
   }
 
+  const canGoStep2 = service !== ''
+  const canGoStep3 = message.trim().length > 10
+  const canSubmit  = name.trim() && email.includes('@')
+
+  if (status === 'success') {
+    return (
+      <main style={{ minHeight: '100vh', background: '#F7F5F1', display: 'flex', flexDirection: 'column' }}>
+        <Navbar />
+        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 'clamp(2rem,8vw,5rem) 1rem' }}>
+          <div style={{ maxWidth: 500, textAlign: 'center' }}>
+            <div style={{ width: 64, height: 64, borderRadius: '50%', background: '#F0FDF4', border: '1px solid #BBF7D0', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h1 style={{ fontSize: 'clamp(1.8rem,4vw,2.5rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: 12 }}>
+              Mensaje recibido.
+            </h1>
+            <p style={{ fontSize: 15, color: '#6B7280', lineHeight: 1.7, marginBottom: 32 }}>
+              Te respondemos en <strong style={{ color: '#0A0908' }}>menos de 24h</strong>. Mientras tanto, puedes hablar con nuestros agentes IA para resolver cualquier duda al instante.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, maxWidth: 320, margin: '0 auto 2rem' }}>
+              <a href={HERMES_URL} target="_blank" rel="noopener noreferrer"
+                style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 20px', borderRadius: 12, background: '#0A0908', color: 'white', textDecoration: 'none' }}>
+                <div style={{ width: 32, height: 32, borderRadius: 8, background: 'rgba(123,104,238,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7B68EE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+                </div>
+                <div style={{ textAlign: 'left' }}>
+                  <p style={{ fontSize: 13, fontWeight: 700, marginBottom: 1 }}>Chat con Hermes</p>
+                  <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)' }}>Ventas & proyectos · Telegram</p>
+                </div>
+              </a>
+            </div>
+            <Link href="/" style={{ fontSize: 14, color: '#9CA3AF', textDecoration: 'none' }}>← Volver al inicio</Link>
+          </div>
+        </div>
+      </main>
+    )
+  }
+
   return (
-    <main style={{minHeight: '100vh', background: '#F7F5F1'}}>
+    <main style={{ minHeight: '100vh', background: '#F7F5F1' }}>
       <Navbar />
-      <section className="hero-gradient" style={{paddingTop: 68}}>
-        <div className="container-custom" style={{paddingTop: 'clamp(3rem,7vw,5rem)', paddingBottom: 'clamp(3rem,7vw,5rem)'}}>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start">
 
-              {/* Info lado izquierdo */}
-              <ScrollReveal>
-                <p style={{fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#9CA3AF', marginBottom: 14}}>Hablemos</p>
-                <h1 style={{fontSize: 'clamp(2rem,4.5vw,3.5rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: 16}}>
-                  Cuéntanos tu proyecto.
-                </h1>
-                <p style={{color: '#6B7280', lineHeight: 1.7, marginBottom: '2rem', fontSize: 15}}>
-                  Respondemos en menos de 24 horas. Si tienes una idea, un reto de marca o un proyecto web, queremos escucharlo.
+      <div style={{ paddingTop: 68 }}>
+        <div className="container-custom" style={{ paddingTop: 'clamp(2.5rem,6vw,4rem)', paddingBottom: 'clamp(3rem,8vw,6rem)' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1.4fr)', gap: 'clamp(2rem,6vw,5rem)', alignItems: 'start' }}>
+
+            {/* ── LEFT: info ──────────────────────────────── */}
+            <div style={{ position: 'sticky', top: 96 }}>
+              <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#9CA3AF', marginBottom: 12 }}>Hablemos</p>
+              <h1 style={{ fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: 16 }}>
+                Cuéntanos tu proyecto.
+              </h1>
+              <p style={{ fontSize: 15, color: '#6B7280', lineHeight: 1.7, marginBottom: 32 }}>
+                Respondemos en menos de 24h. Sin compromiso.
+              </p>
+
+              {/* Quick chat via agents */}
+              <div style={{ background: '#0A0908', borderRadius: 16, padding: '20px', marginBottom: 28 }}>
+                <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#7B68EE', marginBottom: 12 }}>Respuesta inmediata</p>
+                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', lineHeight: 1.5, marginBottom: 14 }}>
+                  Habla con nuestros agentes IA ahora mismo.
                 </p>
-                {/* Qué pasa después */}
-                <div style={{background: 'white', borderRadius: 16, border: '1px solid #E2DDD7', padding: 'clamp(1.25rem,3vw,1.75rem)', marginBottom: '2rem'}}>
-                  <p style={{fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em', color: '#9CA3AF', marginBottom: 16}}>Qué pasa después</p>
-                  <div style={{display: 'flex', flexDirection: 'column', gap: 14}}>
-                    {[
-                      {step: '1', text: 'Respondemos en menos de 24h'},
-                      {step: '2', text: 'Llamada de 30 min sin compromiso'},
-                      {step: '3', text: 'Propuesta detallada en 5 días'},
-                    ].map(s => (
-                      <div key={s.step} style={{display: 'flex', alignItems: 'center', gap: 12}}>
-                        <span style={{width: 28, height: 28, borderRadius: '50%', background: '#F0EDE6', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700, color: '#0A0908', flexShrink: 0}}>{s.step}</span>
-                        <span style={{fontSize: 14, color: '#0A0908', fontWeight: 500}}>{s.text}</span>
-                      </div>
-                    ))}
-                  </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  <a href={HERMES_URL} target="_blank" rel="noopener noreferrer"
+                    style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 10, background: 'rgba(123,104,238,0.12)', border: '1px solid rgba(123,104,238,0.2)', textDecoration: 'none' }}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7B68EE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+                    <span style={{ fontSize: 13, fontWeight: 600, color: 'white' }}>Hermes</span>
+                    <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginLeft: 'auto' }}>Ventas →</span>
+                  </a>
+                  <a href={AURA_URL} target="_blank" rel="noopener noreferrer"
+                    style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 10, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', textDecoration: 'none' }}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                    <span style={{ fontSize: 13, fontWeight: 600, color: 'white' }}>Aura</span>
+                    <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginLeft: 'auto' }}>Estrategia →</span>
+                  </a>
                 </div>
+              </div>
 
-                <div style={{display: 'flex', flexDirection: 'column', gap: '1.25rem'}}>
-                  {[
-                    {label: 'Email', val: 'hello@royaluniondesign.com', href: 'mailto:hello@royaluniondesign.com'},
-                    {label: 'Teléfono', val: '645 59 32 27', href: 'tel:+34645593227'},
-                    {label: 'Ubicación', val: 'Barcelona & Cerdanyola del Vallès', href: null},
-                    {label: 'Alcance', val: 'Barcelona · España · Global', href: null},
-                  ].map(({label, val, href}) => (
-                    <div key={label}>
-                      <p style={{fontSize: 10, color: '#9CA3AF', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 4}}>{label}</p>
-                      {href
-                        ? <a href={href} style={{fontWeight: 600, fontSize: 15, color: '#0A0908', textDecoration: 'none'}}>{val}</a>
-                        : <p style={{fontWeight: 600, fontSize: 15}}>{val}</p>}
-                    </div>
-                  ))}
+              {/* Contact details */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                <div>
+                  <p style={{ fontSize: 10, color: '#9CA3AF', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 4 }}>Email</p>
+                  <a href="mailto:hello@royaluniondesign.com" style={{ fontWeight: 600, fontSize: 14, color: '#0A0908', textDecoration: 'none' }}>hello@royaluniondesign.com</a>
                 </div>
-              </ScrollReveal>
+                <div>
+                  <p style={{ fontSize: 10, color: '#9CA3AF', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 4 }}>Ubicación</p>
+                  <p style={{ fontWeight: 600, fontSize: 14 }}>Barcelona & Cerdanyola del Vallès</p>
+                </div>
+              </div>
+            </div>
 
-              {/* Formulario */}
-              <ScrollReveal delay={100}>
-                <form
-                  onSubmit={handleSubmit}
-                  style={{background: 'white', borderRadius: 20, border: '1px solid #E2DDD7', padding: 'clamp(1.5rem,4vw,2.5rem)', display: 'flex', flexDirection: 'column', gap: '1.25rem'}}
-                >
-                  <h2 style={{fontSize: '1.25rem', fontWeight: 700, marginBottom: 4}}>Envíanos un mensaje</h2>
-
-                  {/* Nombre + Email */}
-                  <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem'}}>
-                    <div style={{display: 'flex', flexDirection: 'column', gap: 0}}>
-                      <label htmlFor="contact-name" style={labelStyle}>Nombre</label>
-                      <input id="contact-name" name="name" type="text" required placeholder="Tu nombre" style={inputStyle} />
-                    </div>
-                    <div style={{display: 'flex', flexDirection: 'column', gap: 0}}>
-                      <label htmlFor="contact-email" style={labelStyle}>Email</label>
-                      <input id="contact-email" name="email" type="email" required placeholder="tu@email.com" style={inputStyle} />
-                    </div>
+            {/* ── RIGHT: multi-step form ───────────────── */}
+            <div>
+              {/* Progress */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 32 }}>
+                {([1, 2, 3] as Step[]).map((s) => (
+                  <div key={s} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <div style={{
+                      width: 28, height: 28, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      fontSize: 11, fontWeight: 700,
+                      background: step >= s ? '#0A0908' : '#E2DDD7',
+                      color: step >= s ? 'white' : '#9CA3AF',
+                      transition: 'all 0.3s',
+                    }}>{s}</div>
+                    {s < 3 && <div style={{ width: 32, height: 1, background: step > s ? '#0A0908' : '#E2DDD7', transition: 'background 0.3s' }} />}
                   </div>
+                ))}
+                <span style={{ marginLeft: 8, fontSize: 12, color: '#9CA3AF' }}>
+                  {step === 1 ? 'Servicio' : step === 2 ? 'Proyecto' : 'Contacto'}
+                </span>
+              </div>
 
-                  {/* Qué necesitas */}
-                  <div style={{display: 'flex', flexDirection: 'column', gap: 0}}>
-                    <label htmlFor="contact-type" style={labelStyle}>¿Qué necesitas?</label>
-                    <select id="contact-type" name="projectType" style={{...inputStyle, color: '#6B7280'}}>
-                      <option value="">Selecciona un servicio</option>
-                      <option value="Branding & Estrategia">Branding & Estrategia</option>
-                      <option value="Identidad Visual">Identidad Visual</option>
-                      <option value="Diseño Web & Desarrollo">Diseño Web & Desarrollo</option>
-                      <option value="E-commerce Shopify">E-commerce Shopify</option>
-                      <option value="Contenido & Motion">Contenido & Motion</option>
-                      <option value="Marketing Digital">Marketing Digital</option>
-                      <option value="Señalética & Rótulos">Señalética & Rótulos</option>
-                      <option value="AI Automation (Aura & Hermes)">AI Automation (Aura & Hermes)</option>
-                      <option value="Varios servicios">Varios servicios</option>
-                    </select>
-                  </div>
-
-                  {/* Presupuesto */}
-                  <div style={{display: 'flex', flexDirection: 'column', gap: 0}}>
-                    <label htmlFor="contact-budget" style={labelStyle}>Presupuesto estimado</label>
-                    <select id="contact-budget" name="budget" style={{...inputStyle, color: '#6B7280'}}>
-                      <option value="">Selecciona un rango</option>
-                      <option value="Starter — hasta €5.000">Starter — hasta €5.000</option>
-                      <option value="Professional — €5.000–€15.000">Professional — €5.000–€15.000</option>
-                      <option value="Enterprise — +€15.000">Enterprise — +€15.000</option>
-                      <option value="Por definir">Por definir</option>
-                    </select>
-                  </div>
-
-                  {/* Mensaje */}
-                  <div style={{display: 'flex', flexDirection: 'column', gap: 0}}>
-                    <label htmlFor="contact-message" style={labelStyle}>Mensaje</label>
-                    <textarea id="contact-message" name="message" rows={4} required
-                      placeholder="Cuéntanos brevemente tu proyecto, tu empresa y qué quieres conseguir..."
-                      style={{...inputStyle, resize: 'none', lineHeight: 1.6}} />
-                  </div>
-
-                  {/* Status messages */}
-                  {status === 'success' && (
-                    <div style={{padding: '0.875rem 1rem', borderRadius: 12, background: '#F0FDF4', border: '1px solid #BBF7D0', fontSize: 14, color: '#166534'}}>
-                      Mensaje enviado correctamente. Te respondemos en menos de 24h.
+              <form onSubmit={handleSubmit}>
+                {/* ── STEP 1: Service ─────────────────────── */}
+                {step === 1 && (
+                  <div style={{ animation: 'fadeSlideIn 0.3s ease' }}>
+                    <h2 style={{ fontSize: 'clamp(1.3rem,2.5vw,1.75rem)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: 8 }}>
+                      ¿Qué necesitas?
+                    </h2>
+                    <p style={{ fontSize: 14, color: '#6B7280', marginBottom: 24 }}>Selecciona el servicio principal de tu proyecto.</p>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(160px,1fr))', gap: 10, marginBottom: 28 }}>
+                      {SERVICES.map((s) => (
+                        <button
+                          key={s.id}
+                          type="button"
+                          onClick={() => setService(s.label)}
+                          style={{
+                            padding: '16px 14px',
+                            borderRadius: 14,
+                            border: service === s.label ? `2px solid ${s.id === 'ia' ? '#7B68EE' : '#0A0908'}` : '1.5px solid #E2DDD7',
+                            background: service === s.label ? (s.id === 'ia' ? 'rgba(123,104,238,0.06)' : '#F0EDE6') : 'white',
+                            cursor: 'pointer',
+                            textAlign: 'left' as const,
+                            transition: 'all 0.18s',
+                          }}
+                        >
+                          <span style={{ display: 'block', fontSize: 20, marginBottom: 8, color: service === s.label ? s.color : '#C4BFB8' }}>{s.icon}</span>
+                          <span style={{ fontSize: 13, fontWeight: 600, color: '#0A0908', lineHeight: 1.3 }}>{s.label}</span>
+                        </button>
+                      ))}
                     </div>
-                  )}
-                  {status === 'error' && (
-                    <div style={{padding: '0.875rem 1rem', borderRadius: 12, background: '#FEF2F2', border: '1px solid #FECACA', fontSize: 14, color: '#991B1B'}}>
-                      {errorMsg}
-                    </div>
-                  )}
-
-                  {/* Submit */}
-                  <button
-                    type="submit"
-                    disabled={status === 'sending'}
-                    className="btn-primary"
-                    style={{width: '100%', padding: '1rem', fontSize: 15, marginTop: 4, opacity: status === 'sending' ? 0.6 : 1}}
-                  >
-                    {status === 'sending' ? 'Enviando...' : 'Enviar mensaje'}
-                    {status !== 'sending' && (
+                    <button
+                      type="button"
+                      onClick={() => canGoStep2 && setStep(2)}
+                      disabled={!canGoStep2}
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: '#0A0908', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 14, border: 'none', cursor: canGoStep2 ? 'pointer' : 'not-allowed', opacity: canGoStep2 ? 1 : 0.4, transition: 'opacity 0.2s' }}>
+                      Continuar
                       <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </button>
+                  </div>
+                )}
+
+                {/* ── STEP 2: Project details ─────────────── */}
+                {step === 2 && (
+                  <div style={{ animation: 'fadeSlideIn 0.3s ease' }}>
+                    <h2 style={{ fontSize: 'clamp(1.3rem,2.5vw,1.75rem)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: 8 }}>
+                      Cuéntanos el proyecto
+                    </h2>
+                    <p style={{ fontSize: 14, color: '#6B7280', marginBottom: 24 }}>Brevemente: qué tienes, qué quieres conseguir.</p>
+
+                    {/* Budget */}
+                    <div style={{ marginBottom: 20 }}>
+                      <p style={{ fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#9CA3AF', marginBottom: 10 }}>Presupuesto estimado</p>
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 8 }}>
+                        {BUDGETS.map((b) => (
+                          <button
+                            key={b.id}
+                            type="button"
+                            onClick={() => setBudget(b.label)}
+                            style={{
+                              padding: '12px 14px',
+                              borderRadius: 12,
+                              border: budget === b.label ? '2px solid #0A0908' : '1.5px solid #E2DDD7',
+                              background: budget === b.label ? '#F0EDE6' : 'white',
+                              cursor: 'pointer',
+                              textAlign: 'left' as const,
+                              transition: 'all 0.15s',
+                            }}
+                          >
+                            <p style={{ fontSize: 13, fontWeight: 700, color: '#0A0908', marginBottom: 2 }}>{b.label}</p>
+                            <p style={{ fontSize: 11, color: '#9CA3AF' }}>{b.sub}</p>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Message */}
+                    <div style={{ marginBottom: 24 }}>
+                      <p style={{ fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#9CA3AF', marginBottom: 10 }}>Descripción del proyecto</p>
+                      <textarea
+                        value={message}
+                        onChange={e => setMessage(e.target.value)}
+                        rows={5}
+                        required
+                        placeholder="Ej: Tengo una cafetería en Barcelona y necesito un rótulo luminoso + vinilo en el escaparate. El local abre en 2 meses..."
+                        style={{ width: '100%', padding: '0.875rem 1rem', border: '1.5px solid #E2DDD7', borderRadius: 12, fontFamily: 'inherit', fontSize: 14, color: '#0A0908', background: '#FAFAFA', outline: 'none', resize: 'none', lineHeight: 1.6 }}
+                      />
+                      <p style={{ fontSize: 11, color: message.length > 10 ? '#22C55E' : '#C4BFB8', marginTop: 6, transition: 'color 0.2s' }}>
+                        {message.length > 10 ? '✓ Suficiente para continuar' : 'Mínimo unas líneas'}
+                      </p>
+                    </div>
+
+                    <div style={{ display: 'flex', gap: 10 }}>
+                      <button
+                        type="button"
+                        onClick={() => setStep(1)}
+                        style={{ padding: '0.875rem 1.25rem', borderRadius: 9999, border: '1.5px solid #E2DDD7', background: 'transparent', color: '#6B7280', fontWeight: 500, fontSize: 14, cursor: 'pointer' }}>
+                        ← Atrás
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => canGoStep3 && setStep(3)}
+                        disabled={!canGoStep3}
+                        style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: '#0A0908', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 14, border: 'none', cursor: canGoStep3 ? 'pointer' : 'not-allowed', opacity: canGoStep3 ? 1 : 0.4, transition: 'opacity 0.2s' }}>
+                        Continuar
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {/* ── STEP 3: Contact info ─────────────────── */}
+                {step === 3 && (
+                  <div style={{ animation: 'fadeSlideIn 0.3s ease' }}>
+                    <h2 style={{ fontSize: 'clamp(1.3rem,2.5vw,1.75rem)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: 8 }}>
+                      ¿Cómo te contactamos?
+                    </h2>
+                    <p style={{ fontSize: 14, color: '#6B7280', marginBottom: 24 }}>Último paso. Te respondemos en menos de 24h.</p>
+
+                    {/* Summary chip */}
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 20 }}>
+                      {service && <span style={{ padding: '4px 12px', borderRadius: 9999, background: '#F0EDE6', fontSize: 12, fontWeight: 500, color: '#0A0908' }}>{service}</span>}
+                      {budget  && <span style={{ padding: '4px 12px', borderRadius: 9999, background: '#F0EDE6', fontSize: 12, fontWeight: 500, color: '#0A0908' }}>{budget}</span>}
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 20 }}>
+                      <div>
+                        <label style={{ display: 'block', fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#9CA3AF', marginBottom: 6 }}>Nombre</label>
+                        <input
+                          type="text"
+                          value={name}
+                          onChange={e => setName(e.target.value)}
+                          required
+                          placeholder="Tu nombre"
+                          style={{ width: '100%', padding: '0.875rem 1rem', border: '1.5px solid #E2DDD7', borderRadius: 12, fontFamily: 'inherit', fontSize: 14, color: '#0A0908', background: '#FAFAFA', outline: 'none' }}
+                        />
+                      </div>
+                      <div>
+                        <label style={{ display: 'block', fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#9CA3AF', marginBottom: 6 }}>Email</label>
+                        <input
+                          type="email"
+                          value={email}
+                          onChange={e => setEmail(e.target.value)}
+                          required
+                          placeholder="tu@email.com"
+                          style={{ width: '100%', padding: '0.875rem 1rem', border: '1.5px solid #E2DDD7', borderRadius: 12, fontFamily: 'inherit', fontSize: 14, color: '#0A0908', background: '#FAFAFA', outline: 'none' }}
+                        />
+                      </div>
+                    </div>
+
+                    {status === 'error' && (
+                      <div style={{ padding: '0.875rem 1rem', borderRadius: 12, background: '#FEF2F2', border: '1px solid #FECACA', fontSize: 14, color: '#991B1B', marginBottom: 16 }}>
+                        {errorMsg}
+                      </div>
                     )}
-                  </button>
-                  <p style={{fontSize: 12, textAlign: 'center', color: '#9CA3AF'}}>
-                    O escríbenos a <a href="mailto:hello@royaluniondesign.com" style={{color: '#0A0908', textDecoration: 'underline', textUnderlineOffset: 3}}>hello@royaluniondesign.com</a>
-                  </p>
-                </form>
-              </ScrollReveal>
+
+                    <div style={{ display: 'flex', gap: 10, marginBottom: 16 }}>
+                      <button
+                        type="button"
+                        onClick={() => setStep(2)}
+                        style={{ padding: '0.875rem 1.25rem', borderRadius: 9999, border: '1.5px solid #E2DDD7', background: 'transparent', color: '#6B7280', fontWeight: 500, fontSize: 14, cursor: 'pointer' }}>
+                        ← Atrás
+                      </button>
+                      <button
+                        type="submit"
+                        disabled={!canSubmit || status === 'sending'}
+                        style={{ flex: 1, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, padding: '0.875rem 1.75rem', background: '#0A0908', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 15, border: 'none', cursor: (canSubmit && status !== 'sending') ? 'pointer' : 'not-allowed', opacity: (canSubmit && status !== 'sending') ? 1 : 0.4, transition: 'opacity 0.2s' }}>
+                        {status === 'sending' ? 'Enviando...' : 'Enviar mensaje'}
+                        {status !== 'sending' && <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>}
+                      </button>
+                    </div>
+                    <p style={{ fontSize: 12, color: '#9CA3AF', textAlign: 'center' }}>
+                      O escríbenos a <a href="mailto:hello@royaluniondesign.com" style={{ color: '#0A0908', textDecoration: 'underline', textUnderlineOffset: 3 }}>hello@royaluniondesign.com</a>
+                    </p>
+                  </div>
+                )}
+              </form>
+            </div>
 
           </div>
         </div>
-      </section>
+      </div>
+
+      <style>{`
+        @keyframes fadeSlideIn {
+          from { opacity: 0; transform: translateX(12px); }
+          to   { opacity: 1; transform: translateX(0); }
+        }
+        @media (max-width: 768px) {
+          .contact-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </main>
   )
 }

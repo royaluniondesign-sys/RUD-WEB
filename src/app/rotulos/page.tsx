@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 
+const HERMES_URL = 'https://t.me/RudHermesBot'
+
 export const metadata = {
   title: 'Rótulos Luminosos Barcelona · Neón LED, Letras Corpóreas, Vinilos | RUD Studio',
   description: 'Fabricación e instalación de rótulos luminosos, neón LED, letras corpóreas, vinilos de escaparate y señalética en Barcelona. Presupuesto en 24h sin compromiso.',
@@ -299,9 +301,10 @@ export default function Rotulos() {
                 style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 2rem', background: '#f8f8f8', color: '#171717', borderRadius: 9999, fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>
                 Pedir presupuesto →
               </Link>
-              <a href="tel:+34645593227"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 2rem', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.65)', borderRadius: 9999, fontSize: 14, textDecoration: 'none' }}>
-                645 59 32 27
+              <a href={HERMES_URL} target="_blank" rel="noopener noreferrer"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 2rem', border: '1px solid rgba(123,104,238,0.35)', background: 'rgba(123,104,238,0.08)', color: 'rgba(255,255,255,0.8)', borderRadius: 9999, fontSize: 14, textDecoration: 'none' }}>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7B68EE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+                Chat con Hermes
               </a>
             </div>
           </ScrollReveal>
