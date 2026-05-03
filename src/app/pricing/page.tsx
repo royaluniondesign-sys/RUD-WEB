@@ -175,14 +175,28 @@ export default function Pricing() {
             <div style={{ maxWidth: 720, margin: '0 auto' }}>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.25rem' }}>
                 {[
-                  { icon: '⏱', title: 'Respuesta en &lt;24h', desc: 'Respondemos el mismo día. Sin formularios eternos.' },
-                  { icon: '🎯', title: 'Propuesta a medida', desc: 'Sin plantillas. El alcance se ajusta a tu objetivo real.' },
-                  { icon: '🤝', title: 'Sin compromiso', desc: 'La propuesta es gratuita. Decides tú si seguimos.' },
-                  { icon: '💳', title: '50 / 50', desc: 'Mitad al inicio, mitad al entregar. Sin sorpresas.' },
+                  {
+                    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0908" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>,
+                    title: 'Respuesta en menos de 24h', desc: 'Respondemos el mismo día. Sin formularios eternos.',
+                  },
+                  {
+                    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0908" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>,
+                    title: 'Propuesta a medida', desc: 'Sin plantillas. El alcance se ajusta a tu objetivo real.',
+                  },
+                  {
+                    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0908" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>,
+                    title: 'Sin compromiso', desc: 'La propuesta es gratuita. Decides tú si seguimos.',
+                  },
+                  {
+                    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0908" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>,
+                    title: '50 / 50', desc: 'Mitad al inicio, mitad al entregar. Sin sorpresas.',
+                  },
                 ].map(c => (
                   <div key={c.title} style={{ background: 'white', border: '1px solid #E2DDD7', borderRadius: 14, padding: '1.5rem' }}>
-                    <div style={{ fontSize: '1.5rem', marginBottom: 10 }} dangerouslySetInnerHTML={{ __html: c.icon }} />
-                    <h3 style={{ fontSize: '0.9375rem', fontWeight: 700, marginBottom: 6 }} dangerouslySetInnerHTML={{ __html: c.title }} />
+                    <div style={{ width: 44, height: 44, borderRadius: 10, background: '#F0EDE6', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 12 }}>
+                      {c.icon}
+                    </div>
+                    <h3 style={{ fontSize: '0.9375rem', fontWeight: 700, marginBottom: 6 }}>{c.title}</h3>
                     <p style={{ fontSize: '0.8125rem', color: '#6B7280', lineHeight: 1.6 }}>{c.desc}</p>
                   </div>
                 ))}
@@ -224,8 +238,8 @@ export default function Pricing() {
                   Solicitar presupuesto
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                 </Link>
-                <a href="tel:+34611670830" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', border: '1px solid rgba(255,255,255,0.15)', color: 'white', borderRadius: 9999, fontWeight: 500, textDecoration: 'none', fontSize: 15 }}>
-                  611 67 08 30
+                <a href="tel:+34645593227" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', border: '1px solid rgba(255,255,255,0.15)', color: 'white', borderRadius: 9999, fontWeight: 500, textDecoration: 'none', fontSize: 15 }}>
+                  645 59 32 27
                 </a>
               </div>
             </div>

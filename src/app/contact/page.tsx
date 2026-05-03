@@ -103,7 +103,7 @@ export default function Contact() {
                 <div style={{display: 'flex', flexDirection: 'column', gap: '1.25rem'}}>
                   {[
                     {label: 'Email', val: 'hello@royaluniondesign.com', href: 'mailto:hello@royaluniondesign.com'},
-                    {label: 'Teléfono', val: '611 67 08 30', href: 'tel:+34611670830'},
+                    {label: 'Teléfono', val: '645 59 32 27', href: 'tel:+34645593227'},
                     {label: 'Ubicación', val: 'Barcelona & Cerdanyola del Vallès', href: null},
                     {label: 'Alcance', val: 'Barcelona · España · Global', href: null},
                   ].map(({label, val, href}) => (

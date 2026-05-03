@@ -229,9 +229,9 @@ function Services() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// CHARIOT — full section with terminal + capabilities + CTA
+// AURA — full section with terminal + capabilities + CTA
 // ═══════════════════════════════════════════════════════════
-function Chariot() {
+function AuraSection() {
   const capabilities = [
     { label: 'ANALISIS', title: 'Análisis de briefings', desc: 'Procesamos tu brief con IA para extraer insights clave y oportunidades estratégicas.' },
     { label: 'CONTENIDO', title: 'Generación de contenido', desc: 'Copy, posts, emails y guiones optimizados para tu marca y audiencia.' },
@@ -271,12 +271,12 @@ function Chariot() {
               <span style={{width:'10px',height:'10px',borderRadius:'50%',background:'#FF5F57'}} />
               <span style={{width:'10px',height:'10px',borderRadius:'50%',background:'#FEBC2E'}} />
               <span style={{width:'10px',height:'10px',borderRadius:'50%',background:'#28C840'}} />
-              <span style={{flex:1,textAlign:'center',fontSize:'11px',color:'rgba(255,255,255,0.25)',fontFamily:'monospace'}}>chariot@rud-studio</span>
+              <span style={{flex:1,textAlign:'center',fontSize:'11px',color:'rgba(255,255,255,0.25)',fontFamily:'monospace'}}>aura@rud-studio</span>
             </div>
             {/* Terminal body */}
             <div style={{padding:'1.25rem 1.5rem',fontFamily:'monospace',fontSize:'13px',lineHeight:1.8}}>
               <p style={{color:'rgba(123,104,238,0.7)'}}>
-                <span style={{color:'var(--chariot)'}}>$</span> chariot analyze --brief client-brief.pdf
+                <span style={{color:'var(--chariot)'}}>$</span> aura analyze --brief client-brief.pdf
               </p>
               <p style={{color:'rgba(255,255,255,0.35)'}}>
                 Analizando brief... extrayendo insights clave...
@@ -288,7 +288,7 @@ function Chariot() {
                 Informe estratégico generado en 4.2s
               </p>
               <p style={{color:'rgba(123,104,238,0.7)',marginTop:'0.5rem'}}>
-                <span style={{color:'var(--chariot)'}}>$</span> chariot generate --content seo-blog
+                <span style={{color:'var(--chariot)'}}>$</span> aura generate --content seo-blog
               </p>
               <p style={{color:'rgba(255,255,255,0.35)'}}>
                 Generando contenido SEO optimizado...
@@ -323,7 +323,7 @@ function Chariot() {
               <h3 style={{fontSize:'1.25rem',fontWeight:700,color:'white',marginBottom:'0.5rem'}}>Sin coste extra para el cliente</h3>
               <p style={{fontSize:'0.875rem',color:'#6B7280',lineHeight:1.65}}>Aura & Hermes vienen incluidos en todos nuestros proyectos. Tú recibes mejor resultado, más rápido, al mismo precio.</p>
             </div>
-            <Link href="/services#chariot" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'0.75rem 1.5rem',background:'var(--chariot)',color:'white',borderRadius:'9999px',fontWeight:600,fontSize:'0.875rem',textDecoration:'none',flexShrink:0,transition:'opacity 0.2s'}}>
+            <Link href="/services#aura" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'0.75rem 1.5rem',background:'var(--chariot)',color:'white',borderRadius:'9999px',fontWeight:600,fontSize:'0.875rem',textDecoration:'none',flexShrink:0,transition:'opacity 0.2s'}}>
               Saber más
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
@@ -467,7 +467,7 @@ function WhyRUD() {
     {
       icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>,
       title:'IA integrada en cada proyecto',
-      desc:'CHARIOT analiza, genera y automatiza sin coste extra para ti. Entregas más rápidas y con más calidad.',
+      desc:'AURA analiza, genera y automatiza sin coste extra para ti. Entregas más rápidas y con más calidad.',
     },
     {
       icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>,
@@ -666,7 +666,7 @@ function Footer() {
 
           {[
             {title:'Navegar',links:[['Trabajo','/work'],['Servicios','/services'],['Nosotros','/about'],['Precios','/pricing'],['Blog','/blog'],['Contacto','/contact']]},
-            {title:'Servicios',links:[['Branding','/services#branding'],['Identidad Visual','/services#identity'],['Señalética & Rótulos','/services#rotulos'],['Diseño Web','/services#web'],['E-commerce','/services#ecommerce'],['AI Automation · Aura & Hermes','/services#chariot']]},
+            {title:'Servicios',links:[['Branding','/services#branding'],['Identidad Visual','/services#identity'],['Señalética & Rótulos','/services#rotulos'],['Diseño Web','/services#web'],['E-commerce','/services#ecommerce'],['AI Automation · Aura & Hermes','/services#aura']]},
             {title:'Contacto',links:[['hello@royaluniondesign.com','mailto:hello@royaluniondesign.com'],['Barcelona, España','#'],['Instagram','https://instagram.com/royaluniondesign'],['LinkedIn','https://linkedin.com/company/royaluniondesign']]},
           ].map(col => (
             <div key={col.title}>
@@ -700,7 +700,7 @@ function Footer() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// PAGE — Hero → Stats → Services → CHARIOT → Work → WhyRUD → Pricing → FAQ → CTA
+// PAGE — Hero → Stats → Services → AURA → Work → WhyRUD → Pricing → FAQ → CTA
 // ═══════════════════════════════════════════════════════════
 export default function Home() {
   return (
@@ -710,7 +710,7 @@ export default function Home() {
       <Marquee />
       <Stats />
       <Services />
-      <Chariot />
+      <AuraSection />
       <Work />
       <WhyRUD />
       <Investment />

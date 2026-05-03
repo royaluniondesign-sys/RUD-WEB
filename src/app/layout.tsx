@@ -6,7 +6,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'RUD — Agencia de Branding, Diseño Web y Señalética en Barcelona',
   description: 'Agencia creativa full-stack en Barcelona. Branding estratégico, identidad visual, señalética y rótulos luminosos, diseño web Next.js, e-commerce Shopify, motion y automatización IA. Hablemos.',
-  keywords: 'agencia branding Barcelona,diseño web Barcelona,identidad visual Barcelona,rótulos luminosos Barcelona,señalética corporativa Barcelona,vinilos escaparates Barcelona,letras corpóreas Barcelona,rótulos neón Barcelona,e-commerce Shopify Barcelona,agencia creativa Barcelona,branding startup Barcelona,diseño web Next.js,automatización IA Barcelona,Royal Union Design,RUD Studio,CHARIOT AI',
+  keywords: 'agencia branding Barcelona,diseño web Barcelona,identidad visual Barcelona,rótulos luminosos Barcelona,señalética corporativa Barcelona,vinilos escaparates Barcelona,letras corpóreas Barcelona,rótulos neón Barcelona,e-commerce Shopify Barcelona,agencia creativa Barcelona,branding startup Barcelona,diseño web Next.js,automatización IA Barcelona,Royal Union Design,RUD Studio,AURA agentes IA,publicidad 360',
   authors: [{ name: 'RUD Studio', url: 'https://royaluniondesign.com' }],
   creator: 'RUD Studio',
   publisher: 'RUD Studio',

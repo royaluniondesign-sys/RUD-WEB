@@ -101,7 +101,7 @@ export async function POST(req: NextRequest) {
           <p style="font-size:14px;color:#6B7280;margin:0 0 28px;line-height:1.6">
             Si necesitas algo urgente, escríbenos directamente a
             <a href="mailto:hello@royaluniondesign.com" style="color:#0A0908;font-weight:600">hello@royaluniondesign.com</a>
-            o llámanos al <a href="tel:+34611670830" style="color:#0A0908;font-weight:600">611 67 08 30</a>.
+            o llámanos al <a href="tel:+34645593227" style="color:#0A0908;font-weight:600">645 59 32 27</a>.
           </p>
           <div style="padding-top:24px;border-top:1px solid #E2DDD7">
             <p style="font-size:12px;color:#C4BFB8;margin:0">RUD Studio · Royal Union Design · Barcelona &amp; Cerdanyola del Vallès</p>

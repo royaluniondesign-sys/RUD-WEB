@@ -100,7 +100,7 @@ const SERVICES = [
     dark: false,
   },
   {
-    id: 'chariot', num: '07', title: 'AI Automation · Aura & Hermes',
+    id: 'aura', num: '07', title: 'AI Automation · Aura & Hermes',
     tagline: 'Agentes de IA que trabajan mientras tú duermes.',
     desc: 'Implementamos agentes de IA autónomos adaptados a tu negocio — los mismos que usamos en RUD. Aura gestiona comunicación, análisis y contenido. Hermes automatiza flujos operativos, CRM y reporting. 100% local con Ollama, sin coste de API recurrente, sin subir tus datos a la nube.',
     deliverables: [

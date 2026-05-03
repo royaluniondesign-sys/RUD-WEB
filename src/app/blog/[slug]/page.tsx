@@ -119,7 +119,7 @@ Los workflows que más tiempo ahorran, en orden de impacto:
 
 Reportes automáticos de cliente: cada semana, n8n recoge datos de Google Analytics, Meta Ads y Shopify, los procesa con un modelo local, y genera un informe resumido que se envía automáticamente al cliente. Lo que antes tomaba 2 horas por cliente ahora toma 0 horas.
 
-Gestión de leads: cuando llega un formulario de contacto, CHARIOT analiza el brief, clasifica el tipo de proyecto, estima el presupuesto aproximado, y prepara un borrador de respuesta personalizada. Respondemos en menos de una hora a cualquier consulta, incluso fuera de horario.
+Gestión de leads: cuando llega un formulario de contacto, AURA analiza el brief, clasifica el tipo de proyecto, estima el presupuesto aproximado, y prepara un borrador de respuesta personalizada. Respondemos en menos de una hora a cualquier consulta, incluso fuera de horario.
 
 Publicaciones en redes: el calendario editorial se planifica una vez al mes, y n8n se encarga de publicar en el momento óptimo, adaptar el copy para cada plataforma y trackear el rendimiento.
 

@@ -58,7 +58,7 @@ const posts = [
     title: 'Cómo automatizamos el 60% de nuestros workflows con n8n y €0 de coste',
     date: 'Noviembre 2025', category: 'Automatización', readTime: '9 min',
     image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=85',
-    excerpt: 'n8n self-hosted + modelos locales + CHARIOT = automatización sin límites ni facturas. Reportes, publicaciones, leads, briefs automáticos.',
+    excerpt: 'n8n self-hosted + modelos locales + AURA = automatización sin límites ni facturas. Reportes, publicaciones, leads, briefs automáticos.',
   },
 ]
 
