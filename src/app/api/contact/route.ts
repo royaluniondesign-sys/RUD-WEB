@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
 function escapeHtml(str: string): string {
   return str
@@ -71,26 +71,12 @@ function buildAutoReply(safeName: string): string {
       <p style="font-size:14px;color:#6B7280;margin:0 0 28px;line-height:1.6">
         ¿Urgente? Escríbenos a
         <a href="mailto:hello@royaluniondesign.com" style="color:#0A0908;font-weight:600">hello@royaluniondesign.com</a>
-        o llámanos al <a href="tel:+34645593227" style="color:#0A0908;font-weight:600">645 59 32 27</a>.
       </p>
       <div style="padding-top:24px;border-top:1px solid #E2DDD7">
         <p style="font-size:12px;color:#C4BFB8;margin:0">RUD Studio · Royal Union Design · Barcelona</p>
       </div>
     </div>
   `
-}
-
-function createTransporter() {
-  return nodemailer.createTransport({
-    host: 'smtp.ionos.es',
-    port: 587,
-    secure: false,
-    auth: {
-      user: 'hello@royaluniondesign.com',
-      pass: process.env.IONOS_EMAIL_PASSWORD,
-    },
-    tls: { rejectUnauthorized: false },
-  })
 }
 
 export async function POST(req: NextRequest) {
@@ -115,34 +101,34 @@ export async function POST(req: NextRequest) {
     const safeBudget  = budget      ? escapeHtml(String(budget))      : '—'
     const safeMessage = escapeHtml(String(message))
 
-    const password = process.env.IONOS_EMAIL_PASSWORD
-    if (!password) {
-      console.log('[CONTACT LEAD — no SMTP config]', JSON.stringify({
-        ts: new Date().toISOString(), name, email, projectType, budget,
-        message: message.slice(0, 200),
-      }))
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
+      console.error('[CONTACT] RESEND_API_KEY not set — lead lost:', { name, email, projectType })
       return NextResponse.json({ success: true })
     }
 
-    const transporter = createTransporter()
+    const resend = new Resend(apiKey)
+    const from   = process.env.RESEND_FROM_EMAIL ?? 'noreply@royaluniondesign.com'
 
-    // Notificación interna → hello@royaluniondesign.com
-    await transporter.sendMail({
-      from: '"Web RUD Studio" <hello@royaluniondesign.com>',
-      to: 'hello@royaluniondesign.com',
-      replyTo: email,
+    // Notificación interna
+    const { error: err1 } = await resend.emails.send({
+      from: `RUD Web <${from}>`,
+      to:   ['hello@royaluniondesign.com'],
+      replyTo: safeEmail,
       subject: `🔔 Nuevo lead: ${safeName} · ${safeType}`,
       html: buildInternalEmail(safeName, safeEmail, safeType, safeBudget, safeMessage),
     })
+    if (err1) console.error('[Resend] internal email error:', JSON.stringify(err1))
 
     // Auto-respuesta al cliente
-    await transporter.sendMail({
-      from: '"RUD Studio" <hello@royaluniondesign.com>',
-      to: email,
+    const { error: err2 } = await resend.emails.send({
+      from: `RUD Studio <${from}>`,
+      to:   [safeEmail],
       replyTo: 'hello@royaluniondesign.com',
       subject: `Hemos recibido tu mensaje, ${safeName.split(' ')[0]} — RUD Studio`,
       html: buildAutoReply(safeName),
     })
+    if (err2) console.warn('[Resend] auto-reply error:', JSON.stringify(err2))
 
     return NextResponse.json({ success: true })
   } catch (err) {
