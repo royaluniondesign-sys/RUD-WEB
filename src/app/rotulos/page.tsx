@@ -4,9 +4,9 @@ import ScrollReveal from '@/components/ScrollReveal'
 
 
 export const metadata = {
-  title: 'Rótulos Luminosos Barcelona · Neón LED, Letras Corpóreas, Vinilos | RUD Studio',
-  description: 'Fabricación e instalación de rótulos luminosos, neón LED, letras corpóreas, vinilos de escaparate y señalética en Barcelona. Presupuesto en 24h sin compromiso.',
-  keywords: 'rótulos luminosos Barcelona, neón LED Barcelona, letras corpóreas Barcelona, vinilos escaparate Barcelona, señalética corporativa Barcelona, publicidad exterior Barcelona',
+  title: 'Rótulos Barcelona · Neón LED, Letras Corpóreas, Vinilos Escaparate | RUD Studio',
+  description: 'Empresa de rótulos en Barcelona. Fabricamos e instalamos rótulos personalizados: neón LED, letras corpóreas, rótulos luminosos, vinilos escaparate y señalética corporativa. Presupuesto en 24h.',
+  keywords: 'rótulos barcelona, rótulos personalizados barcelona, neón LED barcelona, letras corpóreas barcelona, vinilos escaparate barcelona, rótulos luminosos barcelona, señalética corporativa barcelona, empresa rótulos barcelona, fabricación rótulos barcelona',
 }
 
 const PROCESO = [
@@ -58,13 +58,34 @@ const PROCESO = [
 export default function Rotulos() {
   return (
     <main style={{ background: '#0A0908' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        name: 'RUD Studio — Rótulos Barcelona',
+        description: 'Empresa de rótulos personalizados en Barcelona. Fabricación e instalación de neón LED, letras corpóreas, rótulos luminosos, vinilos escaparate y señalética corporativa.',
+        url: 'https://royaluniondesign.com/rotulos',
+        areaServed: { '@type': 'City', name: 'Barcelona' },
+        address: { '@type': 'PostalAddress', addressLocality: 'Barcelona', addressRegion: 'Cataluña', addressCountry: 'ES' },
+        email: 'hello@royaluniondesign.com',
+        priceRange: '€€',
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Rótulos y señalética Barcelona',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Rótulos neón LED Barcelona' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Letras corpóreas Barcelona' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vinilos escaparate Barcelona' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Señalética corporativa Barcelona' } },
+          ]
+        }
+      }) }} />
       <Navbar light />
 
       {/* HERO */}
       <section style={{ position: 'relative', height: '100vh', minHeight: 640, overflow: 'hidden', display: 'flex', alignItems: 'flex-end' }}>
         <img
-          src="/services/neon-shop.jpg"
-          alt="Rótulos luminosos neón LED Barcelona — RUD Studio"
+          src="/services/hero-rotulos.jpg"
+          alt="Rótulos personalizados Barcelona — neón LED, letras corpóreas y señalética · RUD Studio"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
         />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.1) 100%)' }} />
@@ -82,7 +103,7 @@ export default function Rotulos() {
             <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.45)' }}>imposible de ignorar.</em>
           </h1>
           <p style={{ fontSize: 'clamp(0.95rem,1.8vw,1.1rem)', color: 'rgba(255,255,255,0.65)', maxWidth: '46ch', lineHeight: 1.7, marginBottom: '2.5rem' }}>
-            Diseñamos, fabricamos e instalamos rótulos luminosos, neón LED, letras corpóreas, vinilos y señalética corporativa en Barcelona y área metropolitana.
+            Empresa de rótulos personalizados en Barcelona. Fabricamos e instalamos neón LED, letras corpóreas, rótulos luminosos, vinilos de escaparate y señalética corporativa — con taller propio en BCN.
           </p>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '3rem' }}>
@@ -125,7 +146,7 @@ export default function Rotulos() {
           <ScrollReveal>
             <Link href="/contact?servicio=neon" style={{ display: 'block', textDecoration: 'none', marginBottom: '1rem' }} className="group">
               <div style={{ borderRadius: 16, overflow: 'hidden', position: 'relative', height: 'clamp(280px,38vw,500px)' }} className="card-lift">
-                <img src="/services/neon-interior.jpg" alt="Neón LED personalizado a medida Barcelona"
+                <img src="/services/neon-interior.jpg" alt="Rótulo neón LED personalizado a medida — neón de vidrio y flexible Barcelona"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.7s' }} />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)' }} />
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: 'clamp(1.5rem,4vw,2.5rem)' }}>
@@ -151,16 +172,16 @@ export default function Rotulos() {
             {[
               {
                 href: '/contact?servicio=luminosos',
-                img: '/services/neon-open.jpg',
-                alt: 'Rótulo luminoso neón OPEN — señal iluminada para comercio',
+                img: '/services/rotulos-luminosos.jpg',
+                alt: 'Rótulos luminosos Barcelona — caja de luz backlit LED para comercio',
                 tag: 'Más solicitado',
                 title: 'Rótulos Luminosos',
                 desc: 'Caja de luz, bandeja calada, backlit LED. Máxima visibilidad nocturna, consumo mínimo.',
               },
               {
                 href: '/contact?servicio=letras',
-                img: '/services/building-sign.jpg',
-                alt: 'Letras corpóreas y rótulo sobre fachada de edificio Barcelona',
+                img: '/services/letras-corporeas.jpg',
+                alt: 'Letras corpóreas Barcelona — aluminio, metacrilato y retroiluminación halo',
                 tag: null,
                 title: 'Letras Corpóreas & 3D',
                 desc: 'Aluminio, metacrilato, madera, acero. Con o sin retroiluminación tipo halo.',
@@ -191,22 +212,22 @@ export default function Rotulos() {
             {[
               {
                 href: '/contact?servicio=vinilos',
-                img: '/services/storefront.jpg',
-                alt: 'Vinilos escaparate y gráfica en luna de comercio Barcelona',
+                img: '/services/vinilo-escaparate.jpg',
+                alt: 'Vinilos escaparate Barcelona — gráfica recortada y esmerilada en luna de comercio',
                 title: 'Vinilos Escaparate',
                 desc: 'Impresos, esmerilados, recortados en plotter. Cambio estacional sin obra.',
               },
               {
                 href: '/contact?servicio=senaletica',
-                img: '/services/wayfinding.jpg',
-                alt: 'Señalética wayfinding interior — dirección y orientación corporativa',
+                img: '/services/senaletica-interior.jpg',
+                alt: 'Señalética interior Barcelona — directorios, wayfinding y señales corporativas',
                 title: 'Señalética Interior',
                 desc: 'Directorios, identificación de espacios, señales de acceso y evacuación.',
               },
               {
                 href: '/contact?servicio=exterior',
-                img: '/services/facade.jpg',
-                alt: 'Publicidad exterior en fachada de edificio — gran formato Barcelona',
+                img: '/services/publicidad-exterior.jpg',
+                alt: 'Publicidad exterior Barcelona — lonas gran formato, banderolas y fachadas',
                 title: 'Publicidad Exterior',
                 desc: 'Lonas, banderolas, vallas, fachadas y wrapping de vehículos.',
               },
@@ -267,12 +288,12 @@ export default function Rotulos() {
           </ScrollReveal>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(180px,1fr))', gap: 8 }}>
             {[
-              { src: '/services/neon-led.jpg',            alt: 'Neón LED personalizado — letras luminosas a medida' },
-              { src: '/services/store-signage.jpg',       alt: 'Rótulo de tienda con iluminación — señal comercial' },
-              { src: '/services/retail-interior.jpg',     alt: 'Interior de local con señalética y gráfica' },
-              { src: '/services/vinilo-escaparate.jpg',   alt: 'Vinilo recortado en escaparate de comercio' },
-              { src: '/services/rotulos-luminosos.jpg',   alt: 'Caja de luz backlit LED — rótulo luminoso' },
-              { src: '/services/publicidad-exterior.jpg', alt: 'Publicidad exterior — lona gran formato edificio' },
+              { src: '/services/neon-led.jpg',       alt: 'Neón LED personalizado Barcelona — letras y logos luminosos a medida' },
+              { src: '/services/neon-open.jpg',      alt: 'Rótulo OPEN neón — señal iluminada para comercios y hostelería Barcelona' },
+              { src: '/services/neon-shop.jpg',      alt: 'Rótulo luminoso en escaparate de tienda — neón personalizado Barcelona' },
+              { src: '/services/building-sign.jpg',  alt: 'Rótulo en fachada de edificio Barcelona — letras y señalética exterior' },
+              { src: '/services/store-signage.jpg',  alt: 'Señalización de local comercial — rótulo identificativo Barcelona' },
+              { src: '/services/facade.jpg',         alt: 'Rótulo exterior en fachada — publicidad y señalética gran formato BCN' },
             ].map((item, i) => (
               <ScrollReveal key={item.src} delay={i * 40}>
                 <div style={{ borderRadius: 12, overflow: 'hidden', aspectRatio: '1/1' }} className="card-lift">
@@ -281,6 +302,26 @@ export default function Rotulos() {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* SEO text block */}
+      <section style={{ background: 'white', paddingBlock: 'clamp(3rem,6vw,4.5rem)' }}>
+        <div className="container-custom" style={{ maxWidth: 760 }}>
+          <ScrollReveal>
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 12 }}>Empresa de rótulos en Barcelona</p>
+            <h2 style={{ fontSize: 'clamp(1.4rem,3vw,2rem)', fontWeight: 700, letterSpacing: '-.03em', marginBottom: 20 }}>
+              Rótulos personalizados fabricados en Barcelona
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '1.5rem' }}>
+              <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.8, margin: 0 }}>
+                RUD Studio es una empresa de rótulos en Barcelona con taller propio en Cerdanyola del Vallès. Fabricamos rótulos personalizados para comercios, restaurantes, hoteles y empresas: neón LED, letras corpóreas, rótulos luminosos tipo caja de luz, vinilos de escaparate y señalética corporativa.
+              </p>
+              <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.8, margin: 0 }}>
+                A diferencia de otras empresas de rótulos en Barcelona, controlamos todo el proceso — desde el diseño hasta la instalación — sin intermediarios. Eso nos permite entregar rótulos de mayor calidad, en menos tiempo y con presupuesto competitivo. Visita técnica gratuita y presupuesto en 24h.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
