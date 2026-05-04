@@ -114,20 +114,30 @@ export async function POST(req: NextRequest) {
     const { Resend } = await import('resend')
     const resend = new Resend(apiKey)
 
-    await resend.emails.send({
+    // Internal notification to RUD Studio
+    const { error: err1 } = await resend.emails.send({
       from: `Web RUD Studio <${from}>`,
       to: [toRUD],
-      replyTo: email,
+      replyTo: [email],
       subject: `🔔 Nuevo lead: ${safeName} · ${safeType}`,
       html: buildInternalEmail(safeName, safeEmail, safeType, safeBudget, safeMessage),
     })
+    if (err1) {
+      console.error('[Resend] internal email error:', JSON.stringify(err1))
+      throw new Error(`Resend internal: ${err1.message}`)
+    }
 
-    await resend.emails.send({
+    // Auto-reply to client (best-effort — don't fail if blocked by Resend sandbox)
+    const { error: err2 } = await resend.emails.send({
       from: `RUD Studio <${from}>`,
       to: [email],
+      replyTo: [toRUD],
       subject: `Hemos recibido tu mensaje, ${safeName.split(' ')[0]} — RUD Studio`,
       html: buildAutoReply(safeName, safeEmail),
     })
+    if (err2) {
+      console.warn('[Resend] auto-reply blocked (sandbox restriction):', JSON.stringify(err2))
+    }
 
     return NextResponse.json({ success: true })
   } catch (err) {

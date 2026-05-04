@@ -4,10 +4,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 
-// ─── Telegram agents (update @usernames when bots are live) ───────────────
-const HERMES_URL = 'https://t.me/rudserverbot'
-const AURA_URL   = 'https://t.me/rudagency_bot'
-// ─────────────────────────────────────────────────────────────────────────────
 
 const SERVICES = [
   { id: 'branding',   label: 'Branding & Identidad',   icon: '◈', color: '#0A0908' },
@@ -75,17 +71,17 @@ export default function Contact() {
               Mensaje recibido.
             </h1>
             <p style={{ fontSize: 15, color: '#6B7280', lineHeight: 1.7, marginBottom: 32 }}>
-              Te respondemos en <strong style={{ color: '#0A0908' }}>menos de 24h</strong>. Mientras tanto, puedes hablar con nuestros agentes IA para resolver cualquier duda al instante.
+              Te respondemos en <strong style={{ color: '#0A0908' }}>menos de 24h</strong>. Si tienes alguna duda urgente escríbenos directamente.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10, maxWidth: 320, margin: '0 auto 2rem' }}>
-              <a href={HERMES_URL} target="_blank" rel="noopener noreferrer"
+              <a href="mailto:hello@royaluniondesign.com"
                 style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 20px', borderRadius: 12, background: '#0A0908', color: 'white', textDecoration: 'none' }}>
-                <div style={{ width: 32, height: 32, borderRadius: 8, background: 'rgba(123,104,238,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7B68EE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+                <div style={{ width: 32, height: 32, borderRadius: 8, background: 'rgba(255,255,255,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </div>
                 <div style={{ textAlign: 'left' }}>
-                  <p style={{ fontSize: 13, fontWeight: 700, marginBottom: 1 }}>Chat con Hermes</p>
-                  <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)' }}>Ventas & proyectos · Telegram</p>
+                  <p style={{ fontSize: 13, fontWeight: 700, marginBottom: 1 }}>hello@royaluniondesign.com</p>
+                  <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)' }}>Respuesta garantizada en 24h</p>
                 </div>
               </a>
             </div>
@@ -114,25 +110,15 @@ export default function Contact() {
                 Respondemos en menos de 24h. Sin compromiso.
               </p>
 
-              {/* Quick chat via agents */}
+              {/* Quick chat */}
               <div style={{ background: '#0A0908', borderRadius: 16, padding: '20px', marginBottom: 28 }}>
-                <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#7B68EE', marginBottom: 12 }}>Respuesta inmediata</p>
+                <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#7B68EE', marginBottom: 12 }}>¿Tienes prisa?</p>
                 <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', lineHeight: 1.5, marginBottom: 14 }}>
-                  Habla con nuestros agentes IA ahora mismo.
+                  Usa el chat en la esquina inferior derecha — respuesta inmediata con Hermes, nuestro agente de ventas.
                 </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  <a href={HERMES_URL} target="_blank" rel="noopener noreferrer"
-                    style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 10, background: 'rgba(123,104,238,0.12)', border: '1px solid rgba(123,104,238,0.2)', textDecoration: 'none' }}>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7B68EE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
-                    <span style={{ fontSize: 13, fontWeight: 600, color: 'white' }}>Hermes</span>
-                    <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginLeft: 'auto' }}>Ventas →</span>
-                  </a>
-                  <a href={AURA_URL} target="_blank" rel="noopener noreferrer"
-                    style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 10, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', textDecoration: 'none' }}>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-                    <span style={{ fontSize: 13, fontWeight: 600, color: 'white' }}>Aura</span>
-                    <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginLeft: 'auto' }}>Estrategia →</span>
-                  </a>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 14px', borderRadius: 10, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#22C55E', flexShrink: 0, boxShadow: '0 0 5px rgba(34,197,94,0.6)' }} />
+                  <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)' }}>Hermes · Agente activo ahora</span>
                 </div>
               </div>
 

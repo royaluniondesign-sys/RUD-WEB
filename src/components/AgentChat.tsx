@@ -7,8 +7,6 @@ import {
   type ChatMessage,
 } from '@/lib/chatKnowledge'
 
-const HERMES_URL    = 'https://t.me/rudserverbot'
-const AURA_URL      = 'https://t.me/rudagency_bot'
 const FUNNEL_TRIGGER = 3
 
 function uid() { return Math.random().toString(36).slice(2) }
