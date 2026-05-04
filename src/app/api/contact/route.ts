@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
 
 function escapeHtml(str: string): string {
   return str
@@ -9,11 +10,14 @@ function escapeHtml(str: string): string {
     .replace(/'/g, '&#39;')
 }
 
-function buildInternalEmail(safeName: string, safeEmail: string, safeType: string, safeBudget: string, safeMessage: string): string {
+function buildInternalEmail(
+  safeName: string, safeEmail: string,
+  safeType: string, safeBudget: string, safeMessage: string
+): string {
   return `
     <div style="font-family:'Helvetica Neue',sans-serif;max-width:600px;margin:0 auto;padding:40px 24px;background:#FAFAFA;color:#0A0A0A;">
       <div style="margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid #E5E2DC;">
-        <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9CA3AF;">Nuevo mensaje desde royaluniondesign.com</span>
+        <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9CA3AF;">Nuevo mensaje — royaluniondesign.com</span>
         <h2 style="margin:8px 0 0;font-size:22px;font-weight:700;letter-spacing:-.02em;">RUD Studio</h2>
       </div>
       <table style="width:100%;border-collapse:collapse;margin-bottom:28px;">
@@ -30,12 +34,12 @@ function buildInternalEmail(safeName: string, safeEmail: string, safeType: strin
         <p style="margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9CA3AF">Mensaje</p>
         <p style="margin:0;font-size:15px;line-height:1.7;white-space:pre-wrap">${safeMessage}</p>
       </div>
-      <p style="font-size:12px;color:#9CA3AF;margin:0">Responde directamente a este email para contactar con ${safeName}.</p>
+      <p style="font-size:12px;color:#9CA3AF;margin:0">Responde a este email para contactar directamente con ${safeName}.</p>
     </div>
   `
 }
 
-function buildAutoReply(safeName: string, safeEmail: string): string {
+function buildAutoReply(safeName: string): string {
   return `
     <div style="font-family:'Helvetica Neue',sans-serif;max-width:600px;margin:0 auto;padding:40px 24px;background:#F7F5F1;color:#0A0A0A;">
       <div style="margin-bottom:32px">
@@ -52,7 +56,7 @@ function buildAutoReply(safeName: string, safeEmail: string): string {
         <div style="display:flex;flex-direction:column;gap:12px">
           <div style="display:flex;align-items:flex-start;gap:12px">
             <span style="width:24px;height:24px;border-radius:50%;background:#F0EDE6;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">1</span>
-            <span style="font-size:14px;color:#374151;line-height:1.5;padding-top:3px">Revisamos tu brief y lo analizamos en detalle</span>
+            <span style="font-size:14px;color:#374151;line-height:1.5;padding-top:3px">Revisamos tu brief en detalle</span>
           </div>
           <div style="display:flex;align-items:flex-start;gap:12px">
             <span style="width:24px;height:24px;border-radius:50%;background:#F0EDE6;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">2</span>
@@ -60,12 +64,12 @@ function buildAutoReply(safeName: string, safeEmail: string): string {
           </div>
           <div style="display:flex;align-items:flex-start;gap:12px">
             <span style="width:24px;height:24px;border-radius:50%;background:#F0EDE6;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">3</span>
-            <span style="font-size:14px;color:#374151;line-height:1.5;padding-top:3px">Propuesta detallada y personalizada en 5 días</span>
+            <span style="font-size:14px;color:#374151;line-height:1.5;padding-top:3px">Propuesta personalizada en 5 días</span>
           </div>
         </div>
       </div>
       <p style="font-size:14px;color:#6B7280;margin:0 0 28px;line-height:1.6">
-        Si necesitas algo urgente, escríbenos a
+        ¿Urgente? Escríbenos a
         <a href="mailto:hello@royaluniondesign.com" style="color:#0A0908;font-weight:600">hello@royaluniondesign.com</a>
         o llámanos al <a href="tel:+34645593227" style="color:#0A0908;font-weight:600">645 59 32 27</a>.
       </p>
@@ -76,17 +80,32 @@ function buildAutoReply(safeName: string, safeEmail: string): string {
   `
 }
 
+function createTransporter() {
+  return nodemailer.createTransport({
+    host: 'smtp.ionos.es',
+    port: 587,
+    secure: false,
+    auth: {
+      user: 'hello@royaluniondesign.com',
+      pass: process.env.IONOS_EMAIL_PASSWORD,
+    },
+    tls: { rejectUnauthorized: false },
+  })
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
     const { name, email, projectType, budget, message } = body
 
     if (!name || !email || !message) {
-      return NextResponse.json({ error: 'Nombre, email y mensaje son obligatorios.' }, { status: 400 })
+      return NextResponse.json(
+        { error: 'Nombre, email y mensaje son obligatorios.' },
+        { status: 400 }
+      )
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(email)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: 'Email no válido.' }, { status: 400 })
     }
 
@@ -96,52 +115,41 @@ export async function POST(req: NextRequest) {
     const safeBudget  = budget      ? escapeHtml(String(budget))      : '—'
     const safeMessage = escapeHtml(String(message))
 
-    const apiKey = process.env.RESEND_API_KEY
-    const from   = process.env.RESEND_FROM_EMAIL  ?? 'onboarding@resend.dev'
-    const toRUD  = process.env.CONTACT_TO_EMAIL   ?? 'hello@royaluniondesign.com'
-
-    if (!apiKey) {
-      // Log lead to server console — visible in Vercel function logs
-      console.log('[CONTACT LEAD]', JSON.stringify({
-        ts: new Date().toISOString(),
-        name, email, projectType, budget,
+    const password = process.env.IONOS_EMAIL_PASSWORD
+    if (!password) {
+      console.log('[CONTACT LEAD — no SMTP config]', JSON.stringify({
+        ts: new Date().toISOString(), name, email, projectType, budget,
         message: message.slice(0, 200),
       }))
-      // Return success so the user doesn't see an error
       return NextResponse.json({ success: true })
     }
 
-    const { Resend } = await import('resend')
-    const resend = new Resend(apiKey)
+    const transporter = createTransporter()
 
-    // Internal notification to RUD Studio
-    const { error: err1 } = await resend.emails.send({
-      from: `Web RUD Studio <${from}>`,
-      to: [toRUD],
-      replyTo: [email],
+    // Notificación interna → hello@royaluniondesign.com
+    await transporter.sendMail({
+      from: '"Web RUD Studio" <hello@royaluniondesign.com>',
+      to: 'hello@royaluniondesign.com',
+      replyTo: email,
       subject: `🔔 Nuevo lead: ${safeName} · ${safeType}`,
       html: buildInternalEmail(safeName, safeEmail, safeType, safeBudget, safeMessage),
     })
-    if (err1) {
-      console.error('[Resend] internal email error:', JSON.stringify(err1))
-      throw new Error(`Resend internal: ${err1.message}`)
-    }
 
-    // Auto-reply to client (best-effort — don't fail if blocked by Resend sandbox)
-    const { error: err2 } = await resend.emails.send({
-      from: `RUD Studio <${from}>`,
-      to: [email],
-      replyTo: [toRUD],
+    // Auto-respuesta al cliente
+    await transporter.sendMail({
+      from: '"RUD Studio" <hello@royaluniondesign.com>',
+      to: email,
+      replyTo: 'hello@royaluniondesign.com',
       subject: `Hemos recibido tu mensaje, ${safeName.split(' ')[0]} — RUD Studio`,
-      html: buildAutoReply(safeName, safeEmail),
+      html: buildAutoReply(safeName),
     })
-    if (err2) {
-      console.warn('[Resend] auto-reply blocked (sandbox restriction):', JSON.stringify(err2))
-    }
 
     return NextResponse.json({ success: true })
   } catch (err) {
     console.error('Contact API error:', err)
-    return NextResponse.json({ error: 'Error al enviar. Escríbenos a hello@royaluniondesign.com' }, { status: 500 })
+    return NextResponse.json(
+      { error: 'Error al enviar. Escríbenos a hello@royaluniondesign.com' },
+      { status: 500 }
+    )
   }
 }

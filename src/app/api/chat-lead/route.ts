@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
 
 export async function POST(req: NextRequest) {
   try {
@@ -8,15 +9,22 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
     }
 
-    const apiKey = process.env.RESEND_API_KEY
-    if (apiKey) {
-      const { Resend } = await import('resend')
-      const resend = new Resend(apiKey)
+    const password = process.env.IONOS_EMAIL_PASSWORD
+    if (password) {
+      const transporter = nodemailer.createTransport({
+        host: 'smtp.ionos.es',
+        port: 587,
+        secure: false,
+        auth: { user: 'hello@royaluniondesign.com', pass: password },
+        tls: { rejectUnauthorized: false },
+      })
+
       const timestamp = new Date().toLocaleString('es-ES', { timeZone: 'Europe/Madrid' })
 
-      await resend.emails.send({
-        from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
-        to: process.env.CONTACT_TO_EMAIL || 'hello@royaluniondesign.com',
+      await transporter.sendMail({
+        from: '"Web RUD Studio" <hello@royaluniondesign.com>',
+        to: 'hello@royaluniondesign.com',
+        replyTo: email,
         subject: `🎯 Nuevo lead en chat — ${name}`,
         html: `
           <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px">
@@ -32,6 +40,8 @@ export async function POST(req: NextRequest) {
           </div>
         `,
       })
+    } else {
+      console.log('[CHAT LEAD]', JSON.stringify({ name, email, page, ts: new Date().toISOString() }))
     }
 
     return NextResponse.json({ ok: true })
