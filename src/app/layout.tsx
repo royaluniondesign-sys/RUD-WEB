@@ -130,7 +130,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-FH9353K02R', { page_path: window.location.pathname });
+          gtag('config', 'G-FH9353K02R', {
+            page_path: window.location.pathname,
+            send_page_view: true,
+            cookie_flags: 'SameSite=None;Secure',
+            enhanced_measurement: { scroll: true, outbound_clicks: true, file_downloads: true }
+          });
+          gtag('set', 'user_properties', { site_language: 'es', site_region: 'barcelona' });
         `}} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { trackNavCTA } from '@/lib/analytics'
 
 const NAV = [
   { href: '/rotulos',  label: 'Rótulos' },
@@ -70,6 +71,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
           {/* CTA desktop + hamburger mobile */}
           <div className="flex items-center gap-3">
             <Link href="/contact"
+              onClick={() => trackNavCTA('Hablemos')}
               className={`hidden md:inline-flex items-center transition-all duration-200 ${
                 isLight
                   ? 'border border-white/40 text-white hover:bg-white/10 rounded-full font-medium text-sm'
@@ -120,6 +122,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
             </nav>
             <div className="mt-8">
               <Link href="/contact" className="btn-primary w-full"
+                onClick={() => trackNavCTA('Hablemos de tu proyecto — mobile')}
                 style={{ padding: '1rem', fontSize: '1rem' }}>
                 Hablemos de tu proyecto
               </Link>

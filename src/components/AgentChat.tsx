@@ -6,6 +6,7 @@ import {
   matchIntent, getFallback,
   type ChatMessage,
 } from '@/lib/chatKnowledge'
+import { trackChatOpen, trackChatMessage, trackChatLead } from '@/lib/analytics'
 
 const FUNNEL_TRIGGER = 3
 
@@ -224,6 +225,7 @@ export default function AgentChat() {
   }, [open, messages, gated])
 
   const handleGateSubmit = useCallback(async (name: string, email: string) => {
+    trackChatLead(window.location.pathname)
     try {
       await fetch('/api/chat-lead', {
         method: 'POST',
@@ -301,7 +303,10 @@ export default function AgentChat() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (input.trim()) sendMessage(input)
+    if (input.trim()) {
+      trackChatMessage(userCount + 1)
+      sendMessage(input)
+    }
   }
 
   if (!mounted) return null
@@ -395,7 +400,7 @@ export default function AgentChat() {
 
       {/* Floating trigger */}
       <button
-        onClick={() => { setOpen(v => !v); setPulsed(false) }}
+        onClick={() => { const next = !open; setOpen(next); setPulsed(false); if (next) trackChatOpen(window.location.pathname) }}
         aria-label={open ? 'Cerrar chat' : 'Abrir chat con agente Hermes'}
         style={{
           position: 'fixed',
