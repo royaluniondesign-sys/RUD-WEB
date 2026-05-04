@@ -43,7 +43,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
           {/* Logo */}
           <Link href="/" className="shrink-0" aria-label="RUD Studio — Inicio">
             <img
-              src={isLight ? '/logo-rud-white.svg' : '/logo-rud.svg'}
+              src={isLight ? '/logo-rud-web-blanco.svg' : '/logo-rud-web.svg'}
               alt="RUD"
               style={{ height: 26, width: 'auto', transition: 'opacity .2s' }}
             />
