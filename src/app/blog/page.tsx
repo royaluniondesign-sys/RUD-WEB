@@ -3,9 +3,9 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata = {
-  title: 'Blog — Branding, Diseño Web e IA · RUD Studio Barcelona',
-  description: 'Perspectivas reales sobre estrategia de marca, diseño web, e-commerce y automatización IA para empresas en Barcelona y España. Sin relleno.',
-  keywords: 'blog branding Barcelona, diseño web agencia, estrategia de marca, automatización IA, e-commerce Shopify, identidad visual, tendencias branding 2026',
+  title: 'Blog Rótulos, Branding y Diseño Web Barcelona — Guías y Recursos | RUD Studio',
+  description: 'Guías prácticas sobre rótulos luminosos en Barcelona, branding estratégico, diseño web, e-commerce Shopify y automatización IA. Consejos reales de una agencia que fabrica y diseña.',
+  keywords: 'blog rótulos Barcelona, guía neón LED Barcelona, blog branding Barcelona, cómo elegir rótulo luminoso, blog diseño web Barcelona, tendencias señalética 2026',
   alternates: { canonical: 'https://royaluniondesign.com/blog' },
 }
 
@@ -75,7 +75,7 @@ export default function Blog() {
   const [featured, ...rest] = posts
   return (
     <main style={{ minHeight: '100vh', background: '#F7F5F1' }}>
-      <Navbar />
+      <Navbar light />
 
       {/* Hero */}
       <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 340, background: '#0A0908' }}>

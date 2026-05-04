@@ -3,15 +3,16 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata = {
-  title: 'Sobre Nosotros — RUD Studio · Empresa de Rótulos y Branding en Barcelona',
-  description: 'Somos RUD Studio, empresa de rótulos luminosos, carteles, vinilos y branding en Barcelona. También diseño web y e-commerce. Un equipo creativo, un solo techo.',
+  title: 'Empresa de Rótulos y Branding en Barcelona — Quiénes Somos | RUD Studio',
+  description: 'RUD Studio: empresa de rótulos luminosos, señalética, branding y diseño web en Barcelona con taller propio. Fabricación, identidad visual y desarrollo web bajo un mismo techo desde Barcelona.',
+  keywords: 'empresa rótulos Barcelona, agencia branding Barcelona, fabricación rótulos luminosos Barcelona, quiénes somos, agencia creativa Barcelona, diseño y fabricación rótulos',
   alternates: { canonical: 'https://royaluniondesign.com/about' },
 }
 
 export default function About() {
   return (
     <main style={{ minHeight: '100vh', background: '#F7F5F1' }}>
-      <Navbar />
+      <Navbar light />
 
       {/* Hero */}
       <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 380, background: '#0A0908' }}>
