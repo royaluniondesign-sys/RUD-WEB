@@ -5,7 +5,7 @@ declare global {
   }
 }
 
-export const GA_ID = 'G-FH9353K02R'
+export const GA_ID = 'G-2CK3CM6Y03'
 
 function gtag(...args: unknown[]) {
   if (typeof window === 'undefined' || !window.gtag) return

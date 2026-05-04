@@ -125,12 +125,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="geo.placename" content="Barcelona" />
         <meta name="geo.position" content="41.3851;2.1734" />
         {/* Google Analytics 4 */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH9353K02R" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CK3CM6Y03" />
         <script dangerouslySetInnerHTML={{ __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-FH9353K02R', {
+          gtag('config', 'G-2CK3CM6Y03', {
             page_path: window.location.pathname,
             send_page_view: true,
             cookie_flags: 'SameSite=None;Secure',
