@@ -1,7 +1,7 @@
 {
   "env": {
     "RESEND_API_KEY": "re_MC8LLvrU_2nzMifuFEK2XyXnm17PZbnWH",
-    "RESEND_FROM_EMAIL": "onboarding@resend.dev",
+    "RESEND_FROM_EMAIL": "noreply@royaluniondesign.com",
     "CONTACT_TO_EMAIL": "hello@royaluniondesign.com"
   },
   "headers": [
