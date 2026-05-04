@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
 export async function POST(req: NextRequest) {
   try {
@@ -9,40 +9,34 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
     }
 
-    const password = process.env.IONOS_EMAIL_PASSWORD
-    if (password) {
-      const transporter = nodemailer.createTransport({
-        host: 'smtp.ionos.es',
-        port: 587,
-        secure: false,
-        auth: { user: 'hello@royaluniondesign.com', pass: password },
-        tls: { rejectUnauthorized: false },
-      })
-
-      const timestamp = new Date().toLocaleString('es-ES', { timeZone: 'Europe/Madrid' })
-
-      await transporter.sendMail({
-        from: '"Web RUD Studio" <hello@royaluniondesign.com>',
-        to: 'hello@royaluniondesign.com',
-        replyTo: email,
-        subject: `🎯 Nuevo lead en chat — ${name}`,
-        html: `
-          <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px">
-            <h2 style="margin:0 0 16px;font-size:20px">Nuevo lead capturado en el chat web</h2>
-            <table style="width:100%;border-collapse:collapse">
-              <tr><td style="padding:8px 0;color:#666;width:100px">Nombre</td><td style="padding:8px 0;font-weight:600">${name}</td></tr>
-              <tr><td style="padding:8px 0;color:#666">Email</td><td style="padding:8px 0;font-weight:600"><a href="mailto:${email}">${email}</a></td></tr>
-              <tr><td style="padding:8px 0;color:#666">Página</td><td style="padding:8px 0">${page || '/'}</td></tr>
-              <tr><td style="padding:8px 0;color:#666">Hora</td><td style="padding:8px 0">${timestamp}</td></tr>
-            </table>
-            <hr style="margin:20px 0;border:none;border-top:1px solid #eee">
-            <p style="color:#666;font-size:14px">Responde directamente en Telegram (<strong>@rudserverbot</strong>) o por email a <a href="mailto:${email}">${email}</a>.</p>
-          </div>
-        `,
-      })
-    } else {
-      console.log('[CHAT LEAD]', JSON.stringify({ name, email, page, ts: new Date().toISOString() }))
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
+      console.log('[CHAT LEAD — no API key]', JSON.stringify({ name, email, page, ts: new Date().toISOString() }))
+      return NextResponse.json({ ok: true })
     }
+
+    const resend = new Resend(apiKey)
+    const from   = process.env.RESEND_FROM_EMAIL ?? 'noreply@royaluniondesign.com'
+    const timestamp = new Date().toLocaleString('es-ES', { timeZone: 'Europe/Madrid' })
+
+    await resend.emails.send({
+      from: `RUD Web <${from}>`,
+      to:   ['hello@royaluniondesign.com'],
+      replyTo: email,
+      subject: `🎯 Nuevo lead en chat — ${name}`,
+      html: `
+        <div style="font-family:'Helvetica Neue',sans-serif;max-width:480px;margin:0 auto;padding:32px;background:#FAFAFA;">
+          <h2 style="margin:0 0 20px;font-size:18px;font-weight:700;letter-spacing:-.02em;">Nuevo lead capturado en el chat web</h2>
+          <table style="width:100%;border-collapse:collapse">
+            <tr><td style="padding:10px 0;color:#9CA3AF;font-size:12px;width:100px;border-bottom:1px solid #E5E2DC">Nombre</td><td style="padding:10px 0;font-weight:600;font-size:14px;border-bottom:1px solid #E5E2DC">${name}</td></tr>
+            <tr><td style="padding:10px 0;color:#9CA3AF;font-size:12px;border-bottom:1px solid #E5E2DC">Email</td><td style="padding:10px 0;font-size:14px;border-bottom:1px solid #E5E2DC"><a href="mailto:${email}" style="color:#0A0908;font-weight:600">${email}</a></td></tr>
+            <tr><td style="padding:10px 0;color:#9CA3AF;font-size:12px;border-bottom:1px solid #E5E2DC">Página</td><td style="padding:10px 0;font-size:14px;border-bottom:1px solid #E5E2DC">${page || '/'}</td></tr>
+            <tr><td style="padding:10px 0;color:#9CA3AF;font-size:12px">Hora</td><td style="padding:10px 0;font-size:14px">${timestamp}</td></tr>
+          </table>
+          <p style="color:#9CA3AF;font-size:12px;margin:20px 0 0;">Responde directamente a este email para contactar con el lead.</p>
+        </div>
+      `,
+    })
 
     return NextResponse.json({ ok: true })
   } catch (e) {
