@@ -102,16 +102,17 @@ export default function Contact() {
 
   return (
     <main style={{ minHeight: '100vh', background: '#F7F5F1' }}>
-      <Navbar />
+      <Navbar light />
 
       <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 260, background: '#0A0908' }}>
         <img src="/hero-contact.jpg" alt="" aria-hidden="true" loading="eager"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.35 }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(10,9,8,0.6) 0%,rgba(10,9,8,0.4) 100%)', pointerEvents: 'none' }} />
         <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingTop: 'clamp(2.5rem,6vw,4rem)', paddingBottom: 'clamp(2rem,4vw,3rem)' }}>
-          <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.45)', marginBottom: 12 }}>Contacto</p>
+          <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.45)', marginBottom: 12 }}>Presupuesto gratis · Barcelona</p>
           <h1 style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', fontWeight: 700, letterSpacing: '-0.03em', color: 'white', lineHeight: 1.1 }}>
-            Cuéntanos tu proyecto.
+            Pide presupuesto de rótulos, branding o web.{' '}
+            <span style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.4)' }}>Respondemos en 24h.</span>
           </h1>
         </div>
       </section>

@@ -5,8 +5,9 @@ import ScrollReveal from '@/components/ScrollReveal'
 import FAQAccordion from '@/components/FAQAccordion'
 
 export const metadata: Metadata = {
-  title: 'Precios — Branding, Diseño Web, Rótulos & IA · RUD Studio Barcelona',
-  description: 'Precios orientativos de branding, diseño web, rótulos luminosos, e-commerce y automatización IA en Barcelona. Presupuesto personalizado en 24h sin compromiso.',
+  title: 'Precios Rótulos Barcelona, Branding y Diseño Web — Tarifas | RUD Studio',
+  description: 'Precios orientativos de rótulos luminosos (desde 300€), neón LED (desde 1.800€), letras corpóreas (desde 2.500€), branding y diseño web en Barcelona. Presupuesto personalizado gratis en 24h.',
+  keywords: 'precio rótulos Barcelona, cuánto cuesta neón LED Barcelona, precio letras corpóreas Barcelona, tarifa branding Barcelona, precio diseño web Barcelona, presupuesto rótulos luminosos',
   alternates: { canonical: 'https://royaluniondesign.com/pricing' },
 }
 
@@ -95,7 +96,7 @@ const FAQS = [
 export default function Pricing() {
   return (
     <main style={{ background: '#F7F5F1' }}>
-      <Navbar />
+      <Navbar light />
 
       {/* Hero */}
       <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 360, background: '#0A0908' }}>

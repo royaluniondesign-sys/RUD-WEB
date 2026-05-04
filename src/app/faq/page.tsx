@@ -76,7 +76,7 @@ export default function FAQ() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
-      <Navbar />
+      <Navbar light />
 
       {/* Hero */}
       <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 340, background: '#0A0908' }}>

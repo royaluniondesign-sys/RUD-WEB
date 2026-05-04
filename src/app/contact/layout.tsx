@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contacto — Presupuesto Gratis en 24h · RUD Studio Barcelona',
-  description: 'Pide presupuesto sin compromiso para rótulos luminosos, carteles, vinilos, branding o diseño web en Barcelona. Respuesta en menos de 24 horas.',
-  keywords: 'presupuesto rótulos Barcelona,contacto agencia branding Barcelona,pedir presupuesto carteles Barcelona,vinilos escaparate presupuesto',
+  title: 'Presupuesto Rótulos Barcelona Gratis en 24h — Contacto | RUD Studio',
+  description: 'Pide presupuesto gratis para rótulos luminosos, neón LED, letras corpóreas, vinilos escaparate, branding o diseño web en Barcelona. Sin compromiso, respuesta en menos de 24h.',
+  keywords: 'presupuesto rótulos Barcelona, pedir presupuesto neón LED Barcelona, precio letras corpóreas Barcelona, contacto empresa rótulos Barcelona, presupuesto branding Barcelona, presupuesto diseño web Barcelona',
   alternates: { canonical: 'https://royaluniondesign.com/contact' },
   openGraph: {
     title: 'Contacto — Presupuesto Gratis en 24h · RUD Studio Barcelona',

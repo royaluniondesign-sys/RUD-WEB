@@ -3,9 +3,9 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata = {
-  title: 'Servicios — Rótulos, Carteles, Branding y Web en Barcelona · RUD Studio',
-  description: 'Fabricamos e instalamos rótulos luminosos, carteles, vinilos para escaparates y letras corpóreas en Barcelona. También branding completo, diseño web y e-commerce Shopify.',
-  keywords: 'rótulos luminosos Barcelona,carteles Barcelona,vinilos escaparate Barcelona,letras corpóreas Barcelona,señalética Barcelona,branding Barcelona,diseño web Barcelona,e-commerce Barcelona',
+  title: 'Servicios Barcelona — Rótulos Luminosos, Branding, Diseño Web y IA | RUD Studio',
+  description: 'RUD Studio: empresa de rótulos luminosos, neón LED, letras corpóreas y vinilos en Barcelona. Branding estratégico, diseño web Next.js, e-commerce Shopify y automatización IA. Todo bajo un techo.',
+  keywords: 'rótulos luminosos Barcelona, neón LED Barcelona, letras corpóreas Barcelona, vinilos escaparate Barcelona, branding Barcelona, agencia diseño web Barcelona, e-commerce Shopify Barcelona, señalética corporativa Barcelona, automatización IA Barcelona',
   alternates: { canonical: 'https://royaluniondesign.com/services' },
 }
 
@@ -121,7 +121,7 @@ const SERVICES = [
 export default function Services() {
   return (
     <main>
-      <Navbar />
+      <Navbar light />
 
       <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 380, background: '#0A0908' }}>
         <img src="/hero-services.jpg" alt="" aria-hidden="true" loading="eager"

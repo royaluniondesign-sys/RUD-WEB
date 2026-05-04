@@ -3,8 +3,9 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata = {
-  title: 'Trabajo & Proyectos — RUD Studio · Agencia creativa Barcelona',
-  description: 'Portfolio de proyectos reales de RUD. Branding, identidad visual, diseño web, e-commerce Shopify y automatización IA para clientes en Barcelona y España.',
+  title: 'Portfolio Branding y Diseño Web Barcelona — Proyectos Reales | RUD Studio',
+  description: 'Trabajos reales de RUD Studio: branding, identidad visual, e-commerce Shopify, rótulos luminosos y diseño web para empresas en Barcelona y España. Ve qué podemos hacer por ti.',
+  keywords: 'portfolio branding Barcelona, agencia diseño web Barcelona, proyectos identidad visual, e-commerce Shopify Barcelona, casos de éxito agencia Barcelona',
   alternates: { canonical: 'https://royaluniondesign.com/work' },
 }
 
@@ -32,19 +33,20 @@ const PROJECTS = [
 export default function Work() {
   return (
     <main>
-      <Navbar />
+      <Navbar light />
       <section style={{paddingTop: 68, position:'relative', overflow:'hidden', minHeight: 380, background:'#0A0908'}}>
         <img src="/hero-work.jpg" alt="" aria-hidden="true" loading="eager"
           style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover',opacity:0.42}} />
         <div style={{position:'absolute',inset:0,background:'linear-gradient(135deg,rgba(10,9,8,0.6) 0%,rgba(10,9,8,0.38) 100%)',pointerEvents:'none'}} />
         <div className="container-custom" style={{position:'relative',zIndex:1,paddingTop:'clamp(3rem,7vw,5rem)',paddingBottom:'clamp(2.5rem,5vw,4rem)'}}>
           <ScrollReveal>
-            <p style={{fontSize:10,fontWeight:600,textTransform:'uppercase',letterSpacing:'0.18em',color:'rgba(255,255,255,0.45)',marginBottom:12}}>Portfolio · Proyectos reales</p>
+            <p style={{fontSize:10,fontWeight:600,textTransform:'uppercase',letterSpacing:'0.18em',color:'rgba(255,255,255,0.45)',marginBottom:12}}>Portfolio · Proyectos reales · Barcelona</p>
             <h1 style={{fontSize:'clamp(2rem,5vw,5rem)',fontWeight:700,lineHeight:1.05,letterSpacing:'-0.035em',marginBottom:'1.25rem',maxWidth:'800px',color:'white'}}>
-              Trabajo que habla por sí solo.
+              Branding, rótulos y diseño web en Barcelona.{' '}
+              <em style={{fontStyle:'italic',fontWeight:300,color:'rgba(255,255,255,0.42)'}}>Proyectos reales.</em>
             </h1>
             <p style={{fontSize:'clamp(0.9rem,1.5vw,1.0625rem)',color:'rgba(255,255,255,0.62)',maxWidth:'540px',lineHeight:1.7}}>
-              Branding, diseño web, e-commerce y automatización IA para marcas con ambición. Cada proyecto empieza con una pregunta: ¿qué necesitas conseguir?
+              Identidad visual, e-commerce Shopify, rótulos luminosos y automatización IA para empresas en Barcelona y España. Resultados medibles, no solo diseño bonito.
             </p>
           </ScrollReveal>
         </div>
