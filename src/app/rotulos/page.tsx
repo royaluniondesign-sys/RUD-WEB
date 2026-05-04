@@ -151,7 +151,7 @@ export default function Rotulos() {
       {/* HERO */}
       <section style={{ position: 'relative', height: '100vh', minHeight: 640, overflow: 'hidden', display: 'flex', alignItems: 'flex-end' }}>
         <img
-          src="/services/hero-rotulos.jpg"
+          src="/services/hero-rotulos.avif"
           alt="Rótulos personalizados Barcelona — neón LED, letras corpóreas y señalética · RUD Studio"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
         />
@@ -213,7 +213,7 @@ export default function Rotulos() {
           <ScrollReveal>
             <Link href="/contact?servicio=neon" style={{ display: 'block', textDecoration: 'none', marginBottom: '1rem' }} className="group">
               <div style={{ borderRadius: 16, overflow: 'hidden', position: 'relative', height: 'clamp(280px,38vw,500px)' }} className="card-lift">
-                <img src="/services/neon-interior.jpg" alt="Rótulo neón LED personalizado a medida — neón de vidrio y flexible Barcelona"
+                <img src="/services/neon-interior.avif" alt="Rótulo neón LED personalizado a medida — neón de vidrio y flexible Barcelona"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.7s' }} />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)' }} />
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: 'clamp(1.5rem,4vw,2.5rem)' }}>
@@ -239,7 +239,7 @@ export default function Rotulos() {
             {[
               {
                 href: '/contact?servicio=luminosos',
-                img: '/services/rotulos-luminosos.jpg',
+                img: '/services/rotulos-luminosos.avif',
                 alt: 'Rótulos luminosos Barcelona — caja de luz backlit LED para comercio',
                 tag: 'Más solicitado',
                 title: 'Rótulos Luminosos',
@@ -247,7 +247,7 @@ export default function Rotulos() {
               },
               {
                 href: '/contact?servicio=letras',
-                img: '/services/letras-corporeas.jpg',
+                img: '/services/letras-corporeas.avif',
                 alt: 'Letras corpóreas Barcelona — aluminio, metacrilato y retroiluminación halo',
                 tag: null,
                 title: 'Letras Corpóreas & 3D',
@@ -279,21 +279,21 @@ export default function Rotulos() {
             {[
               {
                 href: '/contact?servicio=vinilos',
-                img: '/services/vinilo-escaparate.jpg',
+                img: '/services/vinilo-escaparate.avif',
                 alt: 'Vinilos escaparate Barcelona — gráfica recortada y esmerilada en luna de comercio',
                 title: 'Vinilos Escaparate',
                 desc: 'Impresos, esmerilados, recortados en plotter. Cambio estacional sin obra.',
               },
               {
                 href: '/contact?servicio=senaletica',
-                img: '/services/senaletica-interior.jpg',
+                img: '/services/senaletica-interior.avif',
                 alt: 'Señalética interior Barcelona — directorios, wayfinding y señales corporativas',
                 title: 'Señalética Interior',
                 desc: 'Directorios, identificación de espacios, señales de acceso y evacuación.',
               },
               {
                 href: '/contact?servicio=exterior',
-                img: '/services/publicidad-exterior.jpg',
+                img: '/services/publicidad-exterior.avif',
                 alt: 'Publicidad exterior Barcelona — lonas gran formato, banderolas y fachadas',
                 title: 'Publicidad Exterior',
                 desc: 'Lonas, banderolas, vallas, fachadas y wrapping de vehículos.',
@@ -355,12 +355,14 @@ export default function Rotulos() {
           </ScrollReveal>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(180px,1fr))', gap: 8 }}>
             {[
-              { src: '/services/neon-led.jpg',       alt: 'Neón LED personalizado Barcelona — letras y logos luminosos a medida' },
-              { src: '/services/neon-open.jpg',      alt: 'Rótulo OPEN neón — señal iluminada para comercios y hostelería Barcelona' },
-              { src: '/services/neon-shop.jpg',      alt: 'Rótulo luminoso en escaparate de tienda — neón personalizado Barcelona' },
-              { src: '/services/building-sign.jpg',  alt: 'Rótulo en fachada de edificio Barcelona — letras y señalética exterior' },
-              { src: '/services/store-signage.jpg',  alt: 'Señalización de local comercial — rótulo identificativo Barcelona' },
-              { src: '/services/facade.jpg',         alt: 'Rótulo exterior en fachada — publicidad y señalética gran formato BCN' },
+              { src: '/services/hero-rotulos.avif',      alt: 'Rótulo luminoso Barcelona — trabajo realizado por RUD Studio' },
+              { src: '/services/neon-interior.avif',     alt: 'Neón LED personalizado a medida — instalación RUD Studio Barcelona' },
+              { src: '/services/rotulos-luminosos.avif', alt: 'Rótulo luminoso caja de luz — fabricación propia RUD Barcelona' },
+              { src: '/services/letras-corporeas.avif',  alt: 'Letras corpóreas instaladas — aluminio y metacrilato RUD Studio' },
+              { src: '/services/vinilo-escaparate.avif', alt: 'Vinilo de escaparate — gráfica aplicada en local comercial Barcelona' },
+              { src: '/services/senaletica-interior.avif', alt: 'Señalética interior corporativa — instalación RUD Studio Barcelona' },
+              { src: '/services/publicidad-exterior.avif', alt: 'Publicidad exterior gran formato — RUD Studio Barcelona' },
+              { src: '/services/galeria-rotulos.avif',   alt: 'Detalle de rótulo personalizado — calidad RUD Studio Barcelona' },
             ].map((item, i) => (
               <ScrollReveal key={item.src} delay={i * 40}>
                 <div style={{ borderRadius: 12, overflow: 'hidden', aspectRatio: '1/1' }} className="card-lift">
