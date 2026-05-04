@@ -41,7 +41,7 @@ const localBusinessSchema = {
   'url': 'https://royaluniondesign.com',
   'logo': {
     '@type': 'ImageObject',
-    'url': 'https://royaluniondesign.com/logo-rud.svg',
+    'url': 'https://royaluniondesign.com/logo-rud-web.svg',
     'width': 200,
     'height': 60,
   },

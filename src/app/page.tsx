@@ -658,7 +658,7 @@ function Footer() {
       <div className="container-custom">
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:'2.5rem',marginBottom:'3rem'}}>
           <div>
-            <img src="/logo-rud.svg" alt="RUD Studio — Agencia creativa Barcelona" style={{height:'26px',marginBottom:'1.25rem',filter:'invert(1)',opacity:0.85}} loading="lazy" />
+            <img src="/logo-rud-web-blanco.svg" alt="RUD Studio — Agencia creativa Barcelona" style={{height:'26px',marginBottom:'1.25rem',opacity:0.85}} loading="lazy" />
             <p style={{color:'#6B7280',fontSize:'0.8125rem',lineHeight:1.7,maxWidth:'220px'}}>
               Agencia creativa de branding, diseño web y automatización IA en Barcelona.
             </p>
