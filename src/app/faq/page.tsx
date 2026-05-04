@@ -36,7 +36,7 @@ const faqsGeneral = [
   },
   {
     question: '¿Qué son exactamente AURA y Hermes?',
-    answer: 'AURA y Hermes son nuestros agentes de IA internos — no son un producto que vendemos, sino la ventaja competitiva que usamos para trabajar mejor. AURA analiza briefings, genera contenido y gestiona comunicación. Hermes automatiza flujos operativos y CRM. Corren 100% en local con Ollama: privacidad total, sin coste recurrente. Si quieres algo similar en tu empresa, hablemos.',
+    answer: 'Aura y Hermes son nuestros agentes de IA internos — no son un producto externo, sino la ventaja competitiva que nos permite entregar proyectos de mayor calidad en menos tiempo. Aura analiza briefings, genera contenido y gestiona comunicación. Hermes automatiza flujos operativos y CRM. Corren 100% en infraestructura local propia: privacidad total, sin coste recurrente, sin que tus datos salgan de tu servidor. Si quieres algo similar en tu empresa, hablemos.',
   },
   {
     question: '¿Ofrecéis soporte después de la entrega?',

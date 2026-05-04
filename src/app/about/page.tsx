@@ -113,13 +113,13 @@ export default function About() {
                 <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', color: '#7B68EE' }}>AURA & HERMES — nuestro motor interno</span>
               </div>
               <h2 style={{ fontSize: 'clamp(1.5rem,3.5vw,2.5rem)', fontWeight: 700, color: 'white', letterSpacing: '-0.03em', marginBottom: 20, lineHeight: 1.15 }}>
-                Nuestro Jarvis para la agencia.
+                Nuestro motor de IA autónomo y soberano.
               </h2>
               <p style={{ color: '#6B7280', lineHeight: 1.75, marginBottom: 20, fontSize: 14 }}>
                 AURA y Hermes son nuestros agentes de IA internos — no son un producto externo, son nuestra ventaja competitiva. Analizan briefings, generan contenido, automatizan workflows y nos permiten entregar proyectos de mayor calidad en menos tiempo, sin coste operativo adicional.
               </p>
               <p style={{ color: '#6B7280', lineHeight: 1.75, fontSize: 14 }}>
-                Corren 100% en infraestructura local con Ollama. Sin subir datos de clientes a servicios de terceros. Sin facturas mensuales de API. IA soberana, segura y eficiente — y la ofrecemos a nuestros clientes Enterprise sin coste extra.
+                Corren 100% en infraestructura local. Sin subir datos de clientes a servicios de terceros. Sin facturas mensuales de API. IA soberana, segura y eficiente — y la ofrecemos a nuestros clientes Enterprise sin coste extra.
               </p>
             </div>
           </ScrollReveal>

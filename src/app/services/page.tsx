@@ -102,12 +102,12 @@ const SERVICES = [
   {
     id: 'aura', num: '07', title: 'AI Automation · Aura & Hermes',
     tagline: 'Agentes de IA que trabajan mientras tú duermes.',
-    desc: 'Implementamos agentes de IA autónomos adaptados a tu negocio — los mismos que usamos en RUD. Aura gestiona comunicación, análisis y contenido. Hermes automatiza flujos operativos, CRM y reporting. 100% local con Ollama, sin coste de API recurrente, sin subir tus datos a la nube.',
+    desc: 'Implementamos agentes de IA autónomos adaptados a tu negocio — los mismos que usamos en RUD. Aura gestiona comunicación, análisis y contenido. Hermes automatiza flujos operativos, CRM y reporting. 100% en infraestructura local: sin coste de API recurrente, sin subir tus datos a la nube.',
     deliverables: [
       'Diagnóstico de procesos automatizables en tu empresa',
       'Agente Aura: análisis, generación de contenido y atención al cliente 24/7',
-      'Agente Hermes: automatización de flujos, leads y CRM con n8n',
-      'Implementación local con Ollama (modelos privados, sin coste de uso)',
+      'Agente Hermes: automatización de flujos, leads y CRM',
+      'Infraestructura local privada — datos soberanos, sin coste recurrente',
       'Voz clonada y avatar video para comunicación de marca',
       'Dashboard de BI con alertas proactivas',
       'Integración con tus herramientas existentes',
