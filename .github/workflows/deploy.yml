@@ -13,6 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set git identity for Vercel (local only, not pushed)
+        run: |
+          git config user.email "royaluniondesign@gmail.com"
+          git config user.name "RUD Studio"
+          git commit --allow-empty --amend --reset-author --no-edit
 
       - uses: actions/setup-node@v4
         with:
@@ -29,6 +37,3 @@ jobs:
 
       - name: Deploy prebuilt
         run: npx vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
-        env:
-          VERCEL_GIT_COMMIT_AUTHOR_LOGIN: royaluniondesign-sys
-          VERCEL_GIT_COMMIT_AUTHOR_EMAIL: royaluniondesign@gmail.com
