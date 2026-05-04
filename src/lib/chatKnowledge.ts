@@ -88,8 +88,8 @@ export const INTENTS: Intent[] = [
   // Contacto
   {
     patterns: ['contactar', 'contacto', 'empezar', 'comenzar', 'hablar', 'llamar', 'email', 'correo', 'whatsapp', 'reunión', 'reunion', 'llamada'],
-    response: `Encantados de hablar:\n\n📧 **Email** — hello@royaluniondesign.com\n📋 **Formulario** — royaluniondesign.com/contact\n💬 **Telegram** — Chat directo con nuestros agentes\n\nPreferimos empezar con una **llamada de 30 min sin compromiso**.`,
-    chips: ['Pedir presupuesto', 'Chat con Hermes', 'Chat con Aura'],
+    response: `Encantados de hablar:\n\n📧 **Email** — hello@royaluniondesign.com\n📋 **Formulario** — royaluniondesign.com/contact\n\nPreferimos empezar con una **llamada de 30 min sin compromiso**.`,
+    chips: ['Pedir presupuesto', 'Hablar con un asesor', 'Solicitar llamada'],
   },
 
   // Saludo
@@ -124,7 +124,7 @@ export const FUNNEL_MESSAGE: ChatMessage = {
   id: 'funnel',
   role: 'bot',
   text: 'Parece que tienes un proyecto claro 🎯\n\n¿Cómo prefieres continuar?',
-  chips: ['Pedir presupuesto por email', 'Chat con Hermes', 'Chat con Aura'],
+  chips: ['Pedir presupuesto', 'Hablar con un asesor', 'Solicitar llamada'],
 }
 
 export function matchIntent(input: string): Intent | null {

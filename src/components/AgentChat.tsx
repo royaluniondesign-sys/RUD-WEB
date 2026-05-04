@@ -85,31 +85,27 @@ function FunnelCard({ onClose }: { onClose: () => void }) {
     <div style={{ margin: '8px 0', background: '#0A0908', borderRadius: 16, padding: '16px', border: '1px solid rgba(255,255,255,0.08)' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
         <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#22C55E', boxShadow: '0 0 6px rgba(34,197,94,0.7)' }} />
-        <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: '#7B68EE' }}>Agentes disponibles</span>
+        <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: '#7B68EE' }}>Próximo paso</span>
       </div>
       <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', lineHeight: 1.5, marginBottom: 14 }}>
-        Parece que tienes un proyecto claro. Continúa con un agente para una propuesta personalizada.
+        Parece que tienes un proyecto claro. Cuéntanoslo y te preparamos una propuesta personalizada.
       </p>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 12 }}>
-        <a href={HERMES_URL} target="_blank" rel="noopener noreferrer"
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <Link href="/contact" onClick={onClose}
           style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 10, background: 'rgba(123,104,238,0.15)', border: '1px solid rgba(123,104,238,0.25)', textDecoration: 'none' }}>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7B68EE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
           <div>
-            <p style={{ fontSize: 12, fontWeight: 700, color: 'white', lineHeight: 1 }}>Hermes · Ventas & proyectos</p>
-            <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', marginTop: 2 }}>Telegram · Respuesta inmediata</p>
+            <p style={{ fontSize: 12, fontWeight: 700, color: 'white', lineHeight: 1 }}>Pedir presupuesto</p>
+            <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', marginTop: 2 }}>Respuesta en menos de 24h</p>
           </div>
-        </a>
-        <a href={AURA_URL} target="_blank" rel="noopener noreferrer"
+        </Link>
+        <Link href="/contact?tipo=llamada" onClick={onClose}
           style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 10, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', textDecoration: 'none' }}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           <div>
-            <p style={{ fontSize: 12, fontWeight: 700, color: 'white', lineHeight: 1 }}>Aura · Estrategia & contenido</p>
-            <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', marginTop: 2 }}>Telegram · Respuesta inmediata</p>
+            <p style={{ fontSize: 12, fontWeight: 700, color: 'white', lineHeight: 1 }}>Solicitar llamada</p>
+            <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', marginTop: 2 }}>30 min sin compromiso</p>
           </div>
-        </a>
-        <Link href="/contact" onClick={onClose}
-          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, padding: '10px 14px', borderRadius: 10, background: 'white', textDecoration: 'none' }}>
-          <span style={{ fontSize: 12, fontWeight: 700, color: '#0A0908' }}>Pedir presupuesto por email →</span>
         </Link>
       </div>
     </div>
@@ -258,15 +254,16 @@ export default function AgentChat() {
 
     const lower = text.toLowerCase()
 
-    // Direct Telegram redirects — highest priority
-    if (lower.includes('chat con hermes') || lower === 'hermes' || lower.includes('con hermes') || lower.includes('hablar hermes')) {
-      window.open(HERMES_URL, '_blank')
-      setMessages(prev => [...prev, { id: uid(), role: 'bot', text: 'Te he abierto el chat con Hermes en Telegram 🚀\n\nHasta pronto — responde cuando quieras.' }])
-      return
-    }
-    if (lower.includes('chat con aura') || lower === 'aura' || lower.includes('con aura') || lower.includes('hablar aura')) {
-      window.open(AURA_URL, '_blank')
-      setMessages(prev => [...prev, { id: uid(), role: 'bot', text: 'Te he abierto el chat con Aura en Telegram ✨\n\nHasta pronto — responde cuando quieras.' }])
+    // Navigation shortcuts — keep clients on the website
+    if (
+      lower.includes('chat con hermes') || lower.includes('hablar hermes') ||
+      lower.includes('chat con aura') || lower.includes('hablar aura') ||
+      lower.includes('con hermes') || lower.includes('con aura') ||
+      lower === 'hermes' || lower === 'aura' ||
+      lower.includes('hablar con un asesor') || lower.includes('solicitar llamada')
+    ) {
+      setOpen(false)
+      window.location.href = '/contact'
       return
     }
     if (lower.includes('pedir presupuesto') || lower.includes('presupuesto por email')) {
