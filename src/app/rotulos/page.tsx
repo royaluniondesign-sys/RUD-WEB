@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
+import { TrackedLink } from '@/components/TrackedLink'
 
 
 export const metadata = {
@@ -174,10 +175,10 @@ export default function Rotulos() {
           </p>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '3rem' }}>
-            <Link href="/contact?servicio=rotulos"
+            <TrackedLink href="/contact?servicio=rotulos" label="Pedir presupuesto gratis" location="hero-rotulos"
               style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: '#f8f8f8', color: '#171717', borderRadius: 9999, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>
               Pedir presupuesto gratis →
-            </Link>
+            </TrackedLink>
             <a href="#tipos"
               style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', border: '1px solid rgba(255,255,255,0.25)', color: 'rgba(255,255,255,0.8)', borderRadius: 9999, fontSize: 14, textDecoration: 'none' }}>
               Ver tipos de rótulo ↓
@@ -406,14 +407,14 @@ export default function Rotulos() {
               Mándanos fotos del espacio y las medidas por WhatsApp o email. Presupuesto detallado sin compromiso.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'center' }}>
-              <Link href="/contact?servicio=rotulos"
+              <TrackedLink href="/contact?servicio=rotulos" label="Pedir presupuesto" location="bottom-rotulos"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 2rem', background: '#f8f8f8', color: '#171717', borderRadius: 9999, fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>
                 Pedir presupuesto →
-              </Link>
-              <Link href="/contact?servicio=rotulos&tipo=llamada"
+              </TrackedLink>
+              <TrackedLink href="/contact?servicio=rotulos&tipo=llamada" label="Solicitar llamada" location="bottom-rotulos"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 2rem', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.75)', borderRadius: 9999, fontSize: 14, textDecoration: 'none' }}>
                 Solicitar llamada
-              </Link>
+              </TrackedLink>
             </div>
           </ScrollReveal>
         </div>

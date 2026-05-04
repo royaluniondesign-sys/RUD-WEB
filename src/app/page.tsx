@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 import FAQAccordion from '@/components/FAQAccordion'
+import { trackCTA, trackEmailClick, trackSocialClick } from '@/lib/analytics'
 
 // ═══════════════════════════════════════════════════════════
 // HERO — video background, Barlow + Instrument Serif
@@ -67,11 +68,13 @@ function Hero() {
         {/* CTAs */}
         <div className="flex flex-wrap justify-center gap-3 mt-8 animate-fade-in-up anim-d3">
           <Link href="/services#rotulos"
+            onClick={() => trackCTA('Ver rótulos y señalética', '/services#rotulos', 'hero')}
             className="font-barlow font-medium text-sm text-[#171717] bg-[#f8f8f8] hover:bg-white transition-colors duration-200 px-7 py-3.5"
             style={{ borderRadius: 2 }}>
             Ver rótulos y señalética →
           </Link>
           <Link href="/contact"
+            onClick={() => trackCTA('Pedir presupuesto', '/contact', 'hero')}
             className="font-barlow font-medium text-sm text-white border border-white/30 hover:border-white/60 transition-colors duration-200 px-7 py-3.5"
             style={{ borderRadius: 2 }}>
             Pedir presupuesto
@@ -442,7 +445,7 @@ function Work() {
               <h3 style={{fontSize:'1.25rem',fontWeight:700,color:'#A09898',marginBottom:'0.25rem'}}>Tu marca aquí</h3>
               <p style={{fontSize:'0.8125rem',color:'#C4BFB8'}}>Abiertos a nuevos proyectos · Barcelona y remoto</p>
             </div>
-            <Link href="/contact" className="btn-primary">Empezar conversación</Link>
+            <Link href="/contact" onClick={() => trackCTA('Empezar conversación', '/contact', 'portfolio-cta')} className="btn-primary">Empezar conversación</Link>
           </div>
         </ScrollReveal>
       </div>
@@ -569,7 +572,7 @@ function Investment() {
 
         <ScrollReveal delay={260}>
           <div style={{textAlign:'center',marginTop:'3rem'}}>
-            <Link href="/contact" className="btn-primary arrow-link">
+            <Link href="/contact" onClick={() => trackCTA('Solicitar presupuesto personalizado', '/contact', 'services-section')} className="btn-primary arrow-link">
               Solicitar presupuesto personalizado
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
@@ -631,16 +634,16 @@ function CTA() {
               Cuéntanos tu proyecto. Respondemos en menos de 24 horas. Basados en Barcelona, trabajamos globalmente.
             </p>
             <div style={{display:'flex',flexWrap:'wrap',gap:'0.75rem',marginBottom:'1.5rem'}}>
-              <Link href="/contact" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'1rem 2rem',background:'white',color:'#0A0908',borderRadius:'9999px',fontWeight:600,textDecoration:'none',fontSize:'0.9375rem',transition:'opacity 0.2s'}}>
+              <Link href="/contact" onClick={() => trackCTA('Iniciar conversación', '/contact', 'bottom-cta')} className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'1rem 2rem',background:'white',color:'#0A0908',borderRadius:'9999px',fontWeight:600,textDecoration:'none',fontSize:'0.9375rem',transition:'opacity 0.2s'}}>
                 Iniciar conversación
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </Link>
-              <Link href="/work" style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'1rem 2rem',border:'1px solid rgba(255,255,255,0.15)',color:'white',borderRadius:'9999px',fontWeight:500,textDecoration:'none',fontSize:'0.9375rem',transition:'border-color 0.2s'}}>
+              <Link href="/work" onClick={() => trackCTA('Ver trabajo', '/work', 'bottom-cta')} style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'1rem 2rem',border:'1px solid rgba(255,255,255,0.15)',color:'white',borderRadius:'9999px',fontWeight:500,textDecoration:'none',fontSize:'0.9375rem',transition:'border-color 0.2s'}}>
                 Ver trabajo
               </Link>
             </div>
             <p style={{fontSize:'0.875rem',color:'#333'}}>
-              O escríbenos a <a href="mailto:hello@royaluniondesign.com" style={{color:'white',textDecoration:'none'}}>hello@royaluniondesign.com</a>
+              O escríbenos a <a href="mailto:hello@royaluniondesign.com" onClick={() => trackEmailClick('hello@royaluniondesign.com', 'bottom-cta')} style={{color:'white',textDecoration:'none'}}>hello@royaluniondesign.com</a>
             </p>
           </div>
         </ScrollReveal>
@@ -678,7 +681,7 @@ function Footer() {
                     {href.startsWith('/') ? (
                       <Link href={href} className="footer-link" style={{fontSize:'0.8125rem',color:'#6B7280',textDecoration:'none',transition:'color 0.2s'}}>{label}</Link>
                     ) : (
-                      <a href={href} className="footer-link" style={{fontSize:'0.8125rem',color:'#6B7280',textDecoration:'none',transition:'color 0.2s'}} {...(href.startsWith('http') ? {target:'_blank',rel:'noopener noreferrer'} : {})}>{label}</a>
+                      <a href={href} className="footer-link" style={{fontSize:'0.8125rem',color:'#6B7280',textDecoration:'none',transition:'color 0.2s'}} onClick={() => { if (href.startsWith('http')) trackSocialClick(label.toLowerCase()); else if (href.startsWith('mailto:')) trackEmailClick(href.replace('mailto:',''), 'footer') }} {...(href.startsWith('http') ? {target:'_blank',rel:'noopener noreferrer'} : {})}>{label}</a>
                     )}
                   </li>
                 ))}
