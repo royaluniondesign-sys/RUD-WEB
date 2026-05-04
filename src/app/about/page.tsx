@@ -3,8 +3,8 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata = {
-  title: 'Sobre nosotros — RUD Studio · Agencia 360 Barcelona',
-  description: 'RUD es una agencia 360 en Barcelona. Desde rótulos luminosos y señalética hasta branding, diseño web, e-commerce y automatización IA. Todo bajo un mismo techo.',
+  title: 'Sobre Nosotros — RUD Studio · Empresa de Rótulos y Branding en Barcelona',
+  description: 'Somos RUD Studio, empresa de rótulos luminosos, carteles, vinilos y branding en Barcelona. También diseño web y e-commerce. Un equipo creativo, un solo techo.',
 }
 
 export default function About() {

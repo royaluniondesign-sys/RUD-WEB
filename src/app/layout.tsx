@@ -5,17 +5,17 @@ import AgentChat from '@/components/AgentChat'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'RUD — Agencia de Branding, Diseño Web y Señalética en Barcelona',
-  description: 'Agencia creativa full-stack en Barcelona. Branding estratégico, identidad visual, señalética y rótulos luminosos, diseño web Next.js, e-commerce Shopify, motion y automatización IA. Hablemos.',
-  keywords: 'agencia branding Barcelona,diseño web Barcelona,identidad visual Barcelona,rótulos luminosos Barcelona,señalética corporativa Barcelona,vinilos escaparates Barcelona,letras corpóreas Barcelona,rótulos neón Barcelona,e-commerce Shopify Barcelona,agencia creativa Barcelona,branding startup Barcelona,diseño web Next.js,automatización IA Barcelona,Royal Union Design,RUD Studio,AURA agentes IA,publicidad 360',
+  title: 'RUD Studio | Rótulos, Carteles, Branding y Diseño Web en Barcelona',
+  description: 'Empresa de rótulos luminosos, carteles y vinilos para escaparates en Barcelona. También branding, identidad visual y diseño web profesional. Presupuesto en 24h sin compromiso.',
+  keywords: 'rótulos Barcelona,carteles luminosos Barcelona,vinilos escaparate Barcelona,letras corpóreas Barcelona,rótulos neón Barcelona,rótulos LED Barcelona,señalética corporativa Barcelona,empresa rótulos Barcelona,branding Barcelona,agencia diseño web Barcelona,identidad visual Barcelona,e-commerce Shopify Barcelona,Royal Union Design,RUD Studio',
   authors: [{ name: 'RUD Studio', url: 'https://royaluniondesign.com' }],
   creator: 'RUD Studio',
   publisher: 'RUD Studio',
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://royaluniondesign.com' },
   openGraph: {
-    title: 'RUD — Agencia de Branding, Diseño Web y Señalética en Barcelona',
-    description: 'Agencia creativa full-stack en Barcelona. Branding, señalética y rótulos, diseño web, e-commerce y automatización IA.',
+    title: 'RUD Studio | Rótulos, Carteles, Branding y Diseño Web en Barcelona',
+    description: 'Empresa de rótulos luminosos, carteles y vinilos en Barcelona. Branding, diseño web y e-commerce. Presupuesto en 24h.',
     url: 'https://royaluniondesign.com',
     siteName: 'RUD Studio',
     locale: 'es_ES',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RUD — Agencia creativa Barcelona',
-    description: 'Branding, señalética y rótulos, diseño web, e-commerce y automatización IA en Barcelona.',
+    title: 'RUD Studio | Rótulos y Branding Barcelona',
+    description: 'Rótulos luminosos, carteles, vinilos y branding en Barcelona. Diseño web y e-commerce.',
     images: ['https://royaluniondesign.com/og-image.png'],
   },
 }

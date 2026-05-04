@@ -1,8 +1,8 @@
 {
   "env": {
     "RESEND_API_KEY": "re_MC8LLvrU_2nzMifuFEK2XyXnm17PZbnWH",
-    "RESEND_FROM_EMAIL": "noreply@royaluniondesign.com",
-    "CONTACT_TO_EMAIL": "hello@royaluniondesign.com"
+    "RESEND_FROM_EMAIL": "onboarding@resend.dev",
+    "CONTACT_TO_EMAIL": "royaluniondesign@gmail.com"
   },
   "headers": [
     {
@@ -17,7 +17,7 @@
     {
       "source": "/(.*)\\.(jpg|jpeg|png|gif|webp|svg|ico|woff|woff2)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=3600" }
       ]
     }
   ]

@@ -3,9 +3,9 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata = {
-  title: 'Servicios — Agencia creativa full-stack · RUD Studio Barcelona',
-  description: 'Branding estratégico, identidad visual, señalética y rótulos luminosos, diseño web Next.js, e-commerce, motion y automatización IA en Barcelona. Más allá del diseño estándar.',
-  keywords: 'agencia creativa barcelona, branding barcelona, diseño web barcelona, rótulos luminosos barcelona, señalética corporativa, vinilos escaparates barcelona, letras corpóreas, rótulos neón, identidad visual, e-commerce shopify',
+  title: 'Servicios — Rótulos, Carteles, Branding y Web en Barcelona · RUD Studio',
+  description: 'Fabricamos e instalamos rótulos luminosos, carteles, vinilos para escaparates y letras corpóreas en Barcelona. También branding completo, diseño web y e-commerce Shopify.',
+  keywords: 'rótulos luminosos Barcelona,carteles Barcelona,vinilos escaparate Barcelona,letras corpóreas Barcelona,señalética Barcelona,branding Barcelona,diseño web Barcelona,e-commerce Barcelona',
 }
 
 const SERVICES = [

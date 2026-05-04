@@ -5,8 +5,8 @@ import FAQAccordion from '@/components/FAQAccordion'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Preguntas Frecuentes — Agencia de Branding y Diseño Web Barcelona | RUD',
-  description: 'Resolvemos tus dudas sobre branding, diseño web, precios, plazos y proceso de trabajo. Agencia creativa en Barcelona.',
+  title: 'FAQ — Rótulos, Branding y Diseño Web Barcelona · Preguntas Frecuentes | RUD',
+  description: 'Preguntas frecuentes sobre rótulos luminosos, carteles, vinilos, branding y diseño web en Barcelona. Precios, plazos, proceso y más.',
 }
 
 const faqsGeneral = [
