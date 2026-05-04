@@ -53,9 +53,29 @@ const faqsGeneral = [
   },
 ]
 
+const faqPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': 'https://royaluniondesign.com/faq#faqpage',
+  'url': 'https://royaluniondesign.com/faq',
+  'name': 'Preguntas Frecuentes — RUD Studio Barcelona',
+  'mainEntity': faqsGeneral.map(({ question, answer }) => ({
+    '@type': 'Question',
+    'name': question,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': answer,
+    },
+  })),
+}
+
 export default function FAQ() {
   return (
     <main style={{ minHeight: '100vh', background: '#F7F5F1' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+      />
       <Navbar />
 
       {/* Hero */}
