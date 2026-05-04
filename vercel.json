@@ -1,7 +1,6 @@
 {
   "env": {
-    "RESEND_API_KEY": "re_MC8LLvrU_2nzMifuFEK2XyXnm17PZbnWH",
-    "RESEND_FROM_EMAIL": "noreply@royaluniondesign.com"
+    "IONOS_EMAIL_PASSWORD": "Royalbcn1*"
   },
   "headers": [
     {
