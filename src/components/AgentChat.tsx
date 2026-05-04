@@ -2,14 +2,14 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import {
-  WELCOME_MESSAGE, FUNNEL_MESSAGE,
+  WELCOME_MESSAGE,
   matchIntent, getFallback,
   type ChatMessage,
 } from '@/lib/chatKnowledge'
 
-const HERMES_URL = 'https://t.me/rudserverbot'
-const AURA_URL   = 'https://t.me/rudagency_bot'
-const FUNNEL_TRIGGER = 4   // messages before showing funnel CTA
+const HERMES_URL    = 'https://t.me/rudserverbot'
+const AURA_URL      = 'https://t.me/rudagency_bot'
+const FUNNEL_TRIGGER = 3
 
 function uid() { return Math.random().toString(36).slice(2) }
 
@@ -88,7 +88,7 @@ function FunnelCard({ onClose }: { onClose: () => void }) {
         <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: '#7B68EE' }}>Agentes disponibles</span>
       </div>
       <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', lineHeight: 1.5, marginBottom: 14 }}>
-        Parece que tienes un proyecto claro. Continúa con un agente real para obtener una propuesta personalizada.
+        Parece que tienes un proyecto claro. Continúa con un agente para una propuesta personalizada.
       </p>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 12 }}>
         <a href={HERMES_URL} target="_blank" rel="noopener noreferrer"
@@ -116,32 +116,132 @@ function FunnelCard({ onClose }: { onClose: () => void }) {
   )
 }
 
+// ── Email gate form ────────────────────────────────────────────────────────────
+function GateForm({ onSubmit }: { onSubmit: (name: string, email: string) => Promise<void> }) {
+  const [name, setName]       = useState('')
+  const [email, setEmail]     = useState('')
+  const [loading, setLoading] = useState(false)
+  const nameRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => { setTimeout(() => nameRef.current?.focus(), 150) }, [])
+
+  const valid = name.trim().length > 0 && email.includes('@') && email.includes('.')
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!valid || loading) return
+    setLoading(true)
+    await onSubmit(name.trim(), email.trim())
+  }
+
+  const inputStyle: React.CSSProperties = {
+    padding: '10px 14px',
+    borderRadius: 9999,
+    border: '1.5px solid #E2DDD7',
+    fontFamily: 'inherit',
+    fontSize: 13,
+    color: '#0A0908',
+    background: '#FAFAFA',
+    outline: 'none',
+    width: '100%',
+    boxSizing: 'border-box',
+  }
+
+  return (
+    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '28px 20px' }}>
+      <div style={{ marginBottom: 22 }}>
+        <p style={{ fontSize: 22, marginBottom: 8 }}>👋</p>
+        <p style={{ fontSize: 15, fontWeight: 700, color: '#0A0908', marginBottom: 6, lineHeight: 1.3 }}>Antes de empezar</p>
+        <p style={{ fontSize: 13, color: '#6B7280', lineHeight: 1.55 }}>
+          Déjame tu email para poder hacerte seguimiento si tienes un proyecto en mente.
+        </p>
+      </div>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+        <input
+          ref={nameRef}
+          value={name}
+          onChange={e => setName(e.target.value)}
+          placeholder="Tu nombre"
+          required
+          style={inputStyle}
+        />
+        <input
+          type="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          placeholder="tu@email.com"
+          required
+          style={inputStyle}
+        />
+        <button
+          type="submit"
+          disabled={!valid || loading}
+          style={{
+            padding: '11px',
+            borderRadius: 9999,
+            border: 'none',
+            background: valid && !loading ? '#0A0908' : '#E2DDD7',
+            color: 'white',
+            fontSize: 14,
+            fontWeight: 600,
+            cursor: valid && !loading ? 'pointer' : 'default',
+            fontFamily: 'inherit',
+            transition: 'background 0.2s',
+          }}
+        >
+          {loading ? 'Un momento...' : 'Empezar →'}
+        </button>
+      </form>
+      <p style={{ fontSize: 11, color: '#C4BFB8', textAlign: 'center', marginTop: 14 }}>
+        Sin spam. Solo para darte seguimiento.
+      </p>
+    </div>
+  )
+}
+
 // ── Main widget ────────────────────────────────────────────────────────────────
 export default function AgentChat() {
-  const [open, setOpen]         = useState(false)
-  const [mounted, setMounted]   = useState(false)
-  const [messages, setMessages] = useState<ChatMessage[]>([WELCOME_MESSAGE])
-  const [input, setInput]       = useState('')
-  const [typing, setTyping]     = useState(false)
+  const [open, setOpen]           = useState(false)
+  const [mounted, setMounted]     = useState(false)
+  const [gated, setGated]         = useState(false)
+  const [messages, setMessages]   = useState<ChatMessage[]>([WELCOME_MESSAGE])
+  const [input, setInput]         = useState('')
+  const [typing, setTyping]       = useState(false)
   const [userCount, setUserCount] = useState(0)
   const [showFunnel, setShowFunnel] = useState(false)
-  const [pulsed, setPulsed]     = useState(false)
+  const [pulsed, setPulsed]       = useState(false)
   const bottomRef = useRef<HTMLDivElement>(null)
   const inputRef  = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     setMounted(true)
-    // Pulse the button after 4s to draw attention
+    if (typeof sessionStorage !== 'undefined') {
+      setGated(sessionStorage.getItem('rud_lead_gated') === '1')
+    }
     const t = setTimeout(() => setPulsed(true), 4000)
     return () => clearTimeout(t)
   }, [])
 
   useEffect(() => {
-    if (open) {
+    if (open && gated) {
       setTimeout(() => bottomRef.current?.scrollIntoView({ behavior: 'smooth' }), 80)
       setTimeout(() => inputRef.current?.focus(), 100)
     }
-  }, [open, messages])
+  }, [open, messages, gated])
+
+  const handleGateSubmit = useCallback(async (name: string, email: string) => {
+    try {
+      await fetch('/api/chat-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, page: window.location.pathname }),
+      })
+    } catch {}
+    if (typeof sessionStorage !== 'undefined') {
+      sessionStorage.setItem('rud_lead_gated', '1')
+    }
+    setGated(true)
+  }, [])
 
   const sendMessage = useCallback(async (text: string) => {
     if (!text.trim()) return
@@ -153,21 +253,23 @@ export default function AgentChat() {
     const newCount = userCount + 1
     setUserCount(newCount)
 
-    // Simulate typing delay
     await new Promise(r => setTimeout(r, 700 + Math.random() * 600))
     setTyping(false)
 
-    // Special chip handlers
     const lower = text.toLowerCase()
-    if (lower.includes('chat con hermes') || lower === 'chat con hermes en telegram') {
+
+    // Direct Telegram redirects — highest priority
+    if (lower.includes('chat con hermes') || lower === 'hermes' || lower.includes('con hermes') || lower.includes('hablar hermes')) {
       window.open(HERMES_URL, '_blank')
+      setMessages(prev => [...prev, { id: uid(), role: 'bot', text: 'Te he abierto el chat con Hermes en Telegram 🚀\n\nHasta pronto — responde cuando quieras.' }])
       return
     }
-    if (lower.includes('chat con aura') || lower === 'chat con aura en telegram') {
+    if (lower.includes('chat con aura') || lower === 'aura' || lower.includes('con aura') || lower.includes('hablar aura')) {
       window.open(AURA_URL, '_blank')
+      setMessages(prev => [...prev, { id: uid(), role: 'bot', text: 'Te he abierto el chat con Aura en Telegram ✨\n\nHasta pronto — responde cuando quieras.' }])
       return
     }
-    if (lower.includes('pedir presupuesto')) {
+    if (lower.includes('pedir presupuesto') || lower.includes('presupuesto por email')) {
       setOpen(false)
       window.location.href = '/contact'
       return
@@ -175,6 +277,16 @@ export default function AgentChat() {
     if (lower.includes('ver trabajos')) {
       setOpen(false)
       window.location.href = '/work'
+      return
+    }
+    if (lower.includes('pedir demo') || lower.includes('ver caso de uso')) {
+      setOpen(false)
+      window.location.href = '/contact?servicio=ia'
+      return
+    }
+    if (lower.includes('ver servicios')) {
+      setOpen(false)
+      window.location.href = '/services'
       return
     }
 
@@ -187,7 +299,6 @@ export default function AgentChat() {
     }
     setMessages(prev => [...prev, botMsg])
 
-    // Show funnel after threshold
     if (newCount >= FUNNEL_TRIGGER && !showFunnel) {
       setShowFunnel(true)
     }
@@ -202,7 +313,6 @@ export default function AgentChat() {
 
   return (
     <>
-      {/* Backdrop */}
       {open && <div onClick={() => setOpen(false)} style={{ position: 'fixed', inset: 0, zIndex: 49 }} aria-hidden />}
 
       {/* Chat panel */}
@@ -247,38 +357,45 @@ export default function AgentChat() {
           </button>
         </div>
 
-        {/* Messages */}
-        <div style={{ flex: 1, overflowY: 'auto', padding: '14px 14px 8px', display: 'flex', flexDirection: 'column', gap: 2 }}>
-          {messages.map(msg => (
-            <Bubble key={msg.id} msg={msg} onChip={sendMessage} />
-          ))}
-          {typing && (
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 0 }}>
-              <div style={{ background: '#F0EDE6', borderRadius: '4px 16px 16px 16px' }}>
-                <TypingDots />
-              </div>
+        {/* Gate or chat */}
+        {!gated ? (
+          <GateForm onSubmit={handleGateSubmit} />
+        ) : (
+          <>
+            {/* Messages */}
+            <div style={{ flex: 1, overflowY: 'auto', padding: '14px 14px 8px', display: 'flex', flexDirection: 'column', gap: 2 }}>
+              {messages.map(msg => (
+                <Bubble key={msg.id} msg={msg} onChip={sendMessage} />
+              ))}
+              {typing && (
+                <div style={{ display: 'flex', alignItems: 'flex-start' }}>
+                  <div style={{ background: '#F0EDE6', borderRadius: '4px 16px 16px 16px' }}>
+                    <TypingDots />
+                  </div>
+                </div>
+              )}
+              {showFunnel && !typing && <FunnelCard onClose={() => setOpen(false)} />}
+              <div ref={bottomRef} />
             </div>
-          )}
-          {showFunnel && !typing && <FunnelCard onClose={() => setOpen(false)} />}
-          <div ref={bottomRef} />
-        </div>
 
-        {/* Input */}
-        <form onSubmit={handleSubmit} style={{ padding: '10px 12px', borderTop: '1px solid #F0EDE6', display: 'flex', gap: 8, flexShrink: 0 }}>
-          <input
-            ref={inputRef}
-            value={input}
-            onChange={e => setInput(e.target.value)}
-            placeholder="Escribe tu pregunta..."
-            style={{ flex: 1, padding: '9px 14px', borderRadius: 9999, border: '1.5px solid #E2DDD7', fontFamily: 'inherit', fontSize: 13, color: '#0A0908', background: '#FAFAFA', outline: 'none', minWidth: 0 }}
-          />
-          <button
-            type="submit"
-            disabled={!input.trim()}
-            style={{ width: 36, height: 36, borderRadius: '50%', border: 'none', background: input.trim() ? '#0A0908' : '#E2DDD7', cursor: input.trim() ? 'pointer' : 'default', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'background 0.2s' }}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
-          </button>
-        </form>
+            {/* Input */}
+            <form onSubmit={handleSubmit} style={{ padding: '10px 12px', borderTop: '1px solid #F0EDE6', display: 'flex', gap: 8, flexShrink: 0 }}>
+              <input
+                ref={inputRef}
+                value={input}
+                onChange={e => setInput(e.target.value)}
+                placeholder="Escribe tu pregunta..."
+                style={{ flex: 1, padding: '9px 14px', borderRadius: 9999, border: '1.5px solid #E2DDD7', fontFamily: 'inherit', fontSize: 13, color: '#0A0908', background: '#FAFAFA', outline: 'none', minWidth: 0 }}
+              />
+              <button
+                type="submit"
+                disabled={!input.trim()}
+                style={{ width: 36, height: 36, borderRadius: '50%', border: 'none', background: input.trim() ? '#0A0908' : '#E2DDD7', cursor: input.trim() ? 'pointer' : 'default', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'background 0.2s' }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+              </button>
+            </form>
+          </>
+        )}
       </div>
 
       {/* Floating trigger */}

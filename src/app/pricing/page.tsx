@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 }
 
 const ROTULOS = [
-  { name: 'Vinilo escaparate', desc: 'Impreso, esmerilado o recortado en plotter. Sin obra.', from: 'desde 150 €', detail: 'por m²' },
-  { name: 'Neón LED personalizado', desc: 'Cualquier tipografía o forma. Interior y exterior.', from: 'desde 800 €', detail: 'precio base' },
-  { name: 'Letras corpóreas', desc: 'Aluminio, metacrilato o madera. Con o sin retroiluminación halo.', from: 'desde 1.200 €', detail: 'precio base' },
-  { name: 'Rótulo luminoso', desc: 'Caja de luz, bandeja calada, backlit LED. Máxima visibilidad nocturna.', from: 'desde 1.500 €', detail: 'precio base' },
+  { name: 'Vinilo escaparate', desc: 'Impreso, esmerilado o recortado en plotter. Sin obra.', from: 'desde 300 €', detail: 'orientativo' },
+  { name: 'Neón LED personalizado', desc: 'Cualquier tipografía o forma. Interior y exterior.', from: 'desde 1.800 €', detail: 'orientativo' },
+  { name: 'Letras corpóreas', desc: 'Aluminio, metacrilato o madera. Con o sin retroiluminación halo.', from: 'desde 2.500 €', detail: 'orientativo' },
+  { name: 'Rótulo luminoso', desc: 'Caja de luz, bandeja calada, backlit LED. Máxima visibilidad nocturna.', from: 'desde 3.200 €', detail: 'orientativo' },
   { name: 'Señalética corporativa', desc: 'Wayfinding, directorios, accesos. Proyecto completo a medida.', from: 'Consultar', detail: 'a medida' },
   { name: 'Publicidad exterior', desc: 'Lonas, banderolas, vallas, wrapping de vehículos.', from: 'Consultar', detail: 'a medida' },
 ]
@@ -22,7 +22,7 @@ const TIERS = [
   {
     name: 'Starter',
     tagline: 'Marca lista para lanzar',
-    from: '2.500 €',
+    from: '5.500 €',
     ideal: 'Startups, freelancers y proyectos nuevos que necesitan una base sólida.',
     featured: false,
     includes: [
@@ -38,7 +38,7 @@ const TIERS = [
   {
     name: 'Professional',
     tagline: 'Identidad + web completa',
-    from: '6.500 €',
+    from: '12.000 €',
     ideal: 'Empresas en crecimiento que necesitan identidad visual y presencia web profesional.',
     featured: true,
     includes: [
@@ -56,7 +56,7 @@ const TIERS = [
   {
     name: 'Enterprise',
     tagline: 'Proyecto end-to-end',
-    from: '15.000 €',
+    from: '28.000 €',
     ideal: 'Marcas que buscan transformación completa: identidad, web, señalética y automatización IA.',
     featured: false,
     includes: [
@@ -74,12 +74,12 @@ const TIERS = [
 ]
 
 const ADDONS = [
-  { name: 'E-commerce Shopify', from: 'desde 4.500 €' },
-  { name: 'Blog & CMS integrado', from: 'desde 800 €' },
-  { name: 'Agente IA (Aura o Hermes)', from: 'desde 2.200 €' },
-  { name: 'Motion branding package', from: 'desde 1.200 €' },
-  { name: 'Copywriting web completo', from: 'desde 900 €' },
-  { name: 'Mantenimiento mensual', from: 'desde 250 €/mes' },
+  { name: 'E-commerce Shopify', from: 'desde 7.500 €' },
+  { name: 'Blog & CMS integrado', from: 'desde 1.500 €' },
+  { name: 'Agente IA (Aura o Hermes)', from: 'desde 5.500 €' },
+  { name: 'Motion branding package', from: 'desde 2.000 €' },
+  { name: 'Copywriting web completo', from: 'desde 1.800 €' },
+  { name: 'Mantenimiento mensual', from: 'desde 400 €/mes' },
 ]
 
 const FAQS = [
@@ -88,7 +88,7 @@ const FAQS = [
   { question: '¿Cómo se estructura el pago?', answer: '50% al inicio para reservar tu fecha en nuestra agenda, 50% en la entrega final. Para proyectos Enterprise podemos acordar pagos por hitos (30/30/40).' },
   { question: '¿Puedo contratar solo un servicio?', answer: 'Sí. Puedes contratar únicamente branding, solo web, solo rótulos o solo automatización IA. No es obligatorio el paquete completo. También podemos empezar con un Starter e ir escalando.' },
   { question: '¿Los rótulos incluyen instalación?', answer: 'Sí. El precio de los rótulos incluye diseño, fabricación en nuestro taller de Barcelona e instalación profesional en Barcelona y área metropolitana. Los permisos necesarios también están incluidos en proyectos de exterior.' },
-  { question: '¿Qué pasa después de la entrega?', answer: 'Todos los proyectos incluyen soporte post-entrega. Ofrecemos retainers mensuales desde 250 €/mes para mantenimiento, actualizaciones de contenido y crecimiento continuo.' },
+  { question: '¿Qué pasa después de la entrega?', answer: 'Todos los proyectos incluyen soporte post-entrega. Ofrecemos retainers mensuales desde 400 €/mes para mantenimiento, actualizaciones de contenido y crecimiento continuo.' },
 ]
 
 export default function Pricing() {
