@@ -1,7 +1,4 @@
 {
-  "env": {
-    "IONOS_EMAIL_PASSWORD": "Royalbcn1*"
-  },
   "headers": [
     {
       "source": "/(.*)",
