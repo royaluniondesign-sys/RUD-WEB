@@ -355,14 +355,14 @@ export default function Rotulos() {
           </ScrollReveal>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(180px,1fr))', gap: 8 }}>
             {[
-              { src: '/services/hero-rotulos.avif',      alt: 'Rótulo luminoso Barcelona — trabajo realizado por RUD Studio' },
-              { src: '/services/neon-interior.avif',     alt: 'Neón LED personalizado a medida — instalación RUD Studio Barcelona' },
-              { src: '/services/rotulos-luminosos.avif', alt: 'Rótulo luminoso caja de luz — fabricación propia RUD Barcelona' },
-              { src: '/services/letras-corporeas.avif',  alt: 'Letras corpóreas instaladas — aluminio y metacrilato RUD Studio' },
-              { src: '/services/vinilo-escaparate.avif', alt: 'Vinilo de escaparate — gráfica aplicada en local comercial Barcelona' },
-              { src: '/services/senaletica-interior.avif', alt: 'Señalética interior corporativa — instalación RUD Studio Barcelona' },
-              { src: '/services/publicidad-exterior.avif', alt: 'Publicidad exterior gran formato — RUD Studio Barcelona' },
-              { src: '/services/galeria-rotulos.avif',   alt: 'Detalle de rótulo personalizado — calidad RUD Studio Barcelona' },
+              { src: '/services/gal-1.avif', alt: 'Trabajo de rótulos RUD Studio Barcelona' },
+              { src: '/services/gal-2.avif', alt: 'Rótulo personalizado fabricado en Barcelona — RUD Studio' },
+              { src: '/services/gal-3.avif', alt: 'Neón LED a medida instalado en Barcelona — RUD Studio' },
+              { src: '/services/gal-4.avif', alt: 'Letras corpóreas en local comercial Barcelona — RUD Studio' },
+              { src: '/services/gal-5.avif', alt: 'Rótulo luminoso caja de luz Barcelona — RUD Studio' },
+              { src: '/services/gal-6.avif', alt: 'Señalética interior corporativa Barcelona — RUD Studio' },
+              { src: '/services/gal-7.avif', alt: 'Rótulo de fachada instalado en Barcelona — RUD Studio' },
+              { src: '/services/gal-8.avif', alt: 'Instalación de rótulo exterior Barcelona — RUD Studio' },
             ].map((item, i) => (
               <ScrollReveal key={item.src} delay={i * 40}>
                 <div style={{ borderRadius: 12, overflow: 'hidden', aspectRatio: '1/1' }} className="card-lift">
