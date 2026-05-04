@@ -29,3 +29,6 @@ jobs:
 
       - name: Deploy prebuilt
         run: npx vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_GIT_COMMIT_AUTHOR_LOGIN: royaluniondesign-sys
+          VERCEL_GIT_COMMIT_AUTHOR_EMAIL: royaluniondesign@gmail.com
