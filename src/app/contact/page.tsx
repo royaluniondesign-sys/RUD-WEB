@@ -3,6 +3,10 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
+import {
+  trackFormStart, trackFormStep, trackFormSubmitAttempt,
+  trackFormError, trackLead,
+} from '@/lib/analytics'
 
 
 const SERVICES = [
@@ -37,6 +41,7 @@ export default function Contact() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setStatus('sending')
+    trackFormSubmitAttempt()
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -48,9 +53,12 @@ export default function Contact() {
         throw new Error(body.error || 'Error al enviar.')
       }
       setStatus('success')
+      trackLead(service, budget)
     } catch (err) {
       setStatus('error')
-      setErrorMsg(err instanceof Error ? err.message : 'Error inesperado.')
+      const msg = err instanceof Error ? err.message : 'Error inesperado.'
+      setErrorMsg(msg)
+      trackFormError(msg)
     }
   }
 
@@ -181,7 +189,7 @@ export default function Contact() {
                         <button
                           key={s.id}
                           type="button"
-                          onClick={() => setService(s.label)}
+                          onClick={() => { if (!service) trackFormStart(); setService(s.label) }}
                           style={{
                             padding: '16px 14px',
                             borderRadius: 14,
@@ -199,7 +207,7 @@ export default function Contact() {
                     </div>
                     <button
                       type="button"
-                      onClick={() => canGoStep2 && setStep(2)}
+                      onClick={() => { if (canGoStep2) { trackFormStep(1, service); setStep(2) } }}
                       disabled={!canGoStep2}
                       style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: '#0A0908', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 14, border: 'none', cursor: canGoStep2 ? 'pointer' : 'not-allowed', opacity: canGoStep2 ? 1 : 0.4, transition: 'opacity 0.2s' }}>
                       Continuar
@@ -267,7 +275,7 @@ export default function Contact() {
                       </button>
                       <button
                         type="button"
-                        onClick={() => canGoStep3 && setStep(3)}
+                        onClick={() => { if (canGoStep3) { trackFormStep(2, message.slice(0, 30)); setStep(3) } }}
                         disabled={!canGoStep3}
                         style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: '#0A0908', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 14, border: 'none', cursor: canGoStep3 ? 'pointer' : 'not-allowed', opacity: canGoStep3 ? 1 : 0.4, transition: 'opacity 0.2s' }}>
                         Continuar
