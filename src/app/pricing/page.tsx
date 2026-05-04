@@ -97,18 +97,21 @@ export default function Pricing() {
       <Navbar />
 
       {/* Hero */}
-      <section className="hero-gradient" style={{ paddingTop: 68 }}>
-        <div className="container-custom" style={{ paddingBlock: 'clamp(3.5rem,8vw,6rem)', textAlign: 'center' }}>
+      <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 360, background: '#0A0908' }}>
+        <img src="/hero-pricing.jpg" alt="" aria-hidden="true" loading="eager"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.38 }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(10,9,8,0.6) 0%,rgba(10,9,8,0.4) 100%)', pointerEvents: 'none' }} />
+        <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingBlock: 'clamp(3.5rem,8vw,6rem)', textAlign: 'center' }}>
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#9CA3AF', marginBottom: 14 }}>Inversión</p>
-            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: 16, lineHeight: 1.1 }}>
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.45)', marginBottom: 14 }}>Inversión</p>
+            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: 16, lineHeight: 1.1, color: 'white' }}>
               Precios transparentes.{' '}
-              <em style={{ fontStyle: 'italic', fontWeight: 300, color: '#A8A0A0' }}>Propuestas a medida.</em>
+              <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.5)' }}>Propuestas a medida.</em>
             </h1>
-            <p style={{ fontSize: 'clamp(0.875rem,1.5vw,1rem)', color: '#6B7280', maxWidth: 520, margin: '0 auto 2rem', lineHeight: 1.7 }}>
+            <p style={{ fontSize: 'clamp(0.875rem,1.5vw,1rem)', color: 'rgba(255,255,255,0.62)', maxWidth: 520, margin: '0 auto 2rem', lineHeight: 1.7 }}>
               Los rangos que ves son orientativos. Cada proyecto recibe una propuesta personalizada — honesta, sin inflar presupuesto.
             </p>
-            <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 2rem', background: '#0A0908', color: 'white', borderRadius: 9999, fontWeight: 600, textDecoration: 'none', fontSize: 15 }}>
+            <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 2rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 600, textDecoration: 'none', fontSize: 15 }}>
               Pedir presupuesto gratis →
             </Link>
           </ScrollReveal>

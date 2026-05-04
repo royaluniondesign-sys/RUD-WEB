@@ -122,15 +122,18 @@ export default function Services() {
     <main>
       <Navbar />
 
-      <section className="hero-gradient" style={{ paddingTop: 68 }}>
-        <div className="container-custom" style={{ paddingBlock: 'clamp(3.5rem,8vw,6rem)' }}>
+      <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 380, background: '#0A0908' }}>
+        <img src="/hero-services.jpg" alt="" aria-hidden="true" loading="eager"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.38 }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(10,9,8,0.6) 0%,rgba(10,9,8,0.35) 100%)', pointerEvents: 'none' }} />
+        <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingBlock: 'clamp(3.5rem,8vw,6rem)' }}>
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 12 }}>Servicios · Barcelona</p>
-            <h1 style={{ fontSize: 'clamp(1.8rem,4.5vw,3.5rem)', fontWeight: 700, letterSpacing: '-.03em', lineHeight: 1.1, marginBottom: '1rem', maxWidth: '28ch' }}>
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: 'rgba(255,255,255,0.45)', marginBottom: 12 }}>Servicios · Barcelona</p>
+            <h1 style={{ fontSize: 'clamp(1.8rem,4.5vw,3.5rem)', fontWeight: 700, letterSpacing: '-.03em', lineHeight: 1.1, marginBottom: '1rem', maxWidth: '28ch', color: 'white' }}>
               Rótulos luminosos, branding y diseño web en Barcelona.{' '}
-              <span style={{ fontStyle: 'italic', fontWeight: 300, color: '#A8A0A0' }}>De la calle al pixel.</span>
+              <span style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.5)' }}>De la calle al pixel.</span>
             </h1>
-            <p style={{ fontSize: 'clamp(.875rem,1.5vw,1rem)', color: '#6B7280', maxWidth: '46ch', lineHeight: 1.7 }}>
+            <p style={{ fontSize: 'clamp(.875rem,1.5vw,1rem)', color: 'rgba(255,255,255,0.62)', maxWidth: '46ch', lineHeight: 1.7 }}>
               Branding estratégico, señalética y rótulos, diseño web, e-commerce, motion y automatización IA. De la estrategia al rótulo luminoso, todo bajo un mismo techo en Barcelona.
             </p>
           </ScrollReveal>

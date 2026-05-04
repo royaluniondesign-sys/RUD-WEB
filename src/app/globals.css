@@ -287,6 +287,28 @@ textarea:focus-visible {
   -webkit-overflow-scrolling: touch;
 }
 
+/* ── Mobile responsive ───────────────────── */
+@media (max-width: 640px) {
+  .hero-photo-section { min-height: 280px !important; }
+  .stat-number { font-size: 2rem !important; }
+  .about-grid { grid-template-columns: 1fr !important; }
+  .contact-info-gap { gap: 1rem !important; }
+  footer .grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .nav-logo { height: 22px !important; }
+  .section-padding {
+    padding-top: clamp(2rem, 6vw, 3.5rem);
+    padding-bottom: clamp(2rem, 6vw, 3.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .container-custom {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .stats-grid { grid-template-columns: 1fr 1fr !important; }
+}
+
 /* ── Reduced motion ─────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

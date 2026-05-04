@@ -58,16 +58,19 @@ export default function FAQ() {
       <Navbar />
 
       {/* Hero */}
-      <section className="hero-gradient" style={{ paddingTop: 68 }}>
-        <div className="container-custom" style={{ paddingTop: 'clamp(3.5rem,8vw,6rem)', paddingBottom: 'clamp(2.5rem,5vw,4rem)' }}>
+      <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 340, background: '#0A0908' }}>
+        <img src="/hero-faq.jpg" alt="" aria-hidden="true" loading="eager"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.35 }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom,rgba(10,9,8,0.45) 0%,rgba(10,9,8,0.7) 100%)', pointerEvents: 'none' }} />
+        <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingTop: 'clamp(3.5rem,8vw,6rem)', paddingBottom: 'clamp(2.5rem,5vw,4rem)' }}>
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#9CA3AF', marginBottom: 14 }}>FAQ</p>
-            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, letterSpacing: '-0.03em', color: '#0A0908', marginBottom: 16, lineHeight: 1.1, maxWidth: 600 }}>
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.45)', marginBottom: 14 }}>FAQ</p>
+            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, letterSpacing: '-0.03em', color: 'white', marginBottom: 16, lineHeight: 1.1, maxWidth: 600 }}>
               Preguntas frecuentes
             </h1>
-            <p style={{ fontSize: 'clamp(0.875rem,1.5vw,1.05rem)', color: '#6B7280', maxWidth: 520, lineHeight: 1.7 }}>
+            <p style={{ fontSize: 'clamp(0.875rem,1.5vw,1.05rem)', color: 'rgba(255,255,255,0.62)', maxWidth: 520, lineHeight: 1.7 }}>
               Todo lo que necesitas saber sobre trabajar con nosotros. ¿No encuentras tu respuesta?{' '}
-              <Link href="/contact" style={{ color: '#0A0908', fontWeight: 500, textDecoration: 'underline', textUnderlineOffset: 3 }}>
+              <Link href="/contact" style={{ color: 'white', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 3 }}>
                 Escríbenos.
               </Link>
             </p>

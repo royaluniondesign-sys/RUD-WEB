@@ -77,15 +77,18 @@ export default function Blog() {
       <Navbar />
 
       {/* Hero */}
-      <section className="hero-gradient" style={{ paddingTop: 68 }}>
-        <div className="container-custom" style={{ paddingTop: 'clamp(3.5rem,8vw,6rem)', paddingBottom: 'clamp(2.5rem,5vw,4rem)' }}>
+      <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 340, background: '#0A0908' }}>
+        <img src="/hero-blog.jpg" alt="" aria-hidden="true" loading="eager"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.40 }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(10,9,8,0.6) 0%,rgba(10,9,8,0.38) 100%)', pointerEvents: 'none' }} />
+        <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingTop: 'clamp(3.5rem,8vw,6rem)', paddingBottom: 'clamp(2.5rem,5vw,4rem)' }}>
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 14 }}>Blog · Perspectivas RUD</p>
-            <h1 style={{ fontSize: 'clamp(1.8rem,4.5vw,3.5rem)', fontWeight: 700, letterSpacing: '-.03em', lineHeight: 1.1, marginBottom: 16, maxWidth: '22ch' }}>
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: 'rgba(255,255,255,0.45)', marginBottom: 14 }}>Blog · Perspectivas RUD</p>
+            <h1 style={{ fontSize: 'clamp(1.8rem,4.5vw,3.5rem)', fontWeight: 700, letterSpacing: '-.03em', lineHeight: 1.1, marginBottom: 16, maxWidth: '22ch', color: 'white' }}>
               Branding, diseño y tecnología.{' '}
-              <span style={{ fontStyle: 'italic', fontWeight: 300, color: '#A8A0A0' }}>Sin filtros.</span>
+              <span style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.5)' }}>Sin filtros.</span>
             </h1>
-            <p style={{ fontSize: 'clamp(.875rem,1.5vw,1rem)', color: '#6B7280', maxWidth: '42ch', lineHeight: 1.7 }}>
+            <p style={{ fontSize: 'clamp(.875rem,1.5vw,1rem)', color: 'rgba(255,255,255,0.62)', maxWidth: '42ch', lineHeight: 1.7 }}>
               Lo que aprendemos construyendo marcas, webs y sistemas de IA en Barcelona. Artículos prácticos, sin relleno.
             </p>
           </ScrollReveal>

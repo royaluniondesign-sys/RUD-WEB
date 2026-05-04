@@ -13,15 +13,18 @@ export default function About() {
       <Navbar />
 
       {/* Hero */}
-      <section className="hero-gradient" style={{ paddingTop: 68 }}>
-        <div className="container-custom" style={{ paddingTop: 'clamp(3.5rem,8vw,6rem)', paddingBottom: 'clamp(2.5rem,5vw,4rem)' }}>
+      <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 380, background: '#0A0908' }}>
+        <img src="/hero-about.jpg" alt="" aria-hidden="true" loading="eager"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.42 }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(10,9,8,0.55) 0%,rgba(10,9,8,0.4) 100%)', pointerEvents: 'none' }} />
+        <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingTop: 'clamp(3.5rem,8vw,6rem)', paddingBottom: 'clamp(2.5rem,5vw,4rem)' }}>
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#9CA3AF', marginBottom: 14 }}>Sobre RUD</p>
-            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.03em', marginBottom: 20, maxWidth: 720 }}>
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.45)', marginBottom: 14 }}>Sobre RUD</p>
+            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.03em', marginBottom: 20, maxWidth: 720, color: 'white' }}>
               Agencia 360 en Barcelona.<br />
-              <span style={{ fontStyle: 'italic', fontWeight: 300, color: '#A8A0A0' }}>De la valla al píxel.</span>
+              <span style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.5)' }}>De la valla al píxel.</span>
             </h1>
-            <p style={{ fontSize: 'clamp(0.875rem,1.5vw,1.05rem)', color: '#6B7280', maxWidth: 560, lineHeight: 1.7 }}>
+            <p style={{ fontSize: 'clamp(0.875rem,1.5vw,1.05rem)', color: 'rgba(255,255,255,0.65)', maxWidth: 560, lineHeight: 1.7 }}>
               RUD es una agencia creativa full-stack basada en Barcelona. Fabricamos rótulos luminosos, creamos identidades de marca, desarrollamos webs y automatizamos negocios con IA — todo bajo un mismo techo, con la misma obsesión por el detalle.
             </p>
           </ScrollReveal>
