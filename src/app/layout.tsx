@@ -30,6 +30,91 @@ export const metadata: Metadata = {
   },
 }
 
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': 'https://royaluniondesign.com/#organization',
+  'name': 'RUD Studio',
+  'alternateName': 'Royal Union Design',
+  'description': 'Agencia creativa en Barcelona especializada en rótulos luminosos, señalética, branding, identidad visual, diseño web y automatización IA.',
+  'url': 'https://royaluniondesign.com',
+  'logo': {
+    '@type': 'ImageObject',
+    'url': 'https://royaluniondesign.com/logo-rud.svg',
+    'width': 200,
+    'height': 60,
+  },
+  'image': 'https://royaluniondesign.com/og-image.png',
+  'email': 'hello@rud.studio',
+  'priceRange': '€€',
+  'address': {
+    '@type': 'PostalAddress',
+    'addressLocality': 'Barcelona',
+    'addressRegion': 'CT',
+    'addressCountry': 'ES',
+  },
+  'geo': {
+    '@type': 'GeoCoordinates',
+    'latitude': 41.3851,
+    'longitude': 2.1734,
+  },
+  'areaServed': [
+    { '@type': 'City', 'name': 'Barcelona' },
+    { '@type': 'City', 'name': 'Cerdanyola del Vallès' },
+    { '@type': 'Country', 'name': 'España' },
+  ],
+  'hasOfferCatalog': {
+    '@type': 'OfferCatalog',
+    'name': 'Servicios RUD Studio',
+    'itemListElement': [
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Service',
+          'name': 'Rótulos Luminosos Barcelona',
+          'description': 'Fabricación e instalación de rótulos luminosos, neón LED, letras corpóreas y vinilos de escaparate en Barcelona.',
+          'url': 'https://royaluniondesign.com/rotulos',
+        },
+      },
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Service',
+          'name': 'Branding e Identidad Visual',
+          'description': 'Diseño de marca, identidad visual corporativa y sistema de diseño para empresas.',
+          'url': 'https://royaluniondesign.com/services',
+        },
+      },
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Service',
+          'name': 'Diseño Web y E-commerce',
+          'description': 'Diseño y desarrollo de sitios web profesionales, tiendas online Shopify y e-commerce en Barcelona.',
+          'url': 'https://royaluniondesign.com/services',
+        },
+      },
+    ],
+  },
+  'sameAs': [
+    'https://instagram.com/royaluniondesign',
+    'https://linkedin.com/company/royaluniondesign',
+    'https://behance.net/royaluniondesign',
+  ],
+}
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://royaluniondesign.com/#website',
+  'name': 'RUD Studio',
+  'url': 'https://royaluniondesign.com',
+  'inLanguage': 'es-ES',
+  'publisher': {
+    '@id': 'https://royaluniondesign.com/#organization',
+  },
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
@@ -51,20 +136,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            "name": "RUD Studio",
-            "alternateName": "Royal Union Design",
-            "description": "Agencia creativa de branding, señalética, diseño web y automatización IA en Barcelona.",
-            "url": "https://royaluniondesign.com",
-            "logo": "https://royaluniondesign.com/logo-rud.svg",
-            "email": "hello@rud.studio",
-            "address": { "@type": "PostalAddress", "addressLocality": "Barcelona", "addressRegion": "Cataluña", "addressCountry": "ES" },
-            "areaServed": ["Barcelona", "Cerdanyola del Vallès", "España", "Europa"],
-            "serviceType": ["Branding", "Identidad Visual", "Señalética", "Rótulos Luminosos", "Vinilos Escaparates", "Letras Corpóreas", "Rótulos Neón", "Diseño Web", "E-commerce", "AI Automation", "Motion Design"],
-            "sameAs": ["https://instagram.com/royaluniondesign","https://linkedin.com/company/royaluniondesign","https://behance.net/royaluniondesign"]
-          })}}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body>

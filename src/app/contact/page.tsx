@@ -115,9 +115,9 @@ export default function Contact() {
             {/* ── LEFT: info ──────────────────────────────── */}
             <div style={{ position: 'sticky', top: 96 }}>
               <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#9CA3AF', marginBottom: 12 }}>Hablemos</p>
-              <h1 style={{ fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: 16 }}>
+              <h2 style={{ fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: 16 }}>
                 Cuéntanos tu proyecto.
-              </h1>
+              </h2>
               <p style={{ fontSize: 15, color: '#6B7280', lineHeight: 1.7, marginBottom: 32 }}>
                 Respondemos en menos de 24h. Sin compromiso.
               </p>

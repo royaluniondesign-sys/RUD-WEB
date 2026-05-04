@@ -6,6 +6,7 @@ export const metadata = {
   title: 'Blog — Branding, Diseño Web e IA · RUD Studio Barcelona',
   description: 'Perspectivas reales sobre estrategia de marca, diseño web, e-commerce y automatización IA para empresas en Barcelona y España. Sin relleno.',
   keywords: 'blog branding Barcelona, diseño web agencia, estrategia de marca, automatización IA, e-commerce Shopify, identidad visual, tendencias branding 2026',
+  alternates: { canonical: 'https://royaluniondesign.com/blog' },
 }
 
 const posts = [

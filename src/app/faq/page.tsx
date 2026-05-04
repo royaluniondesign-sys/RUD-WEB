@@ -7,6 +7,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'FAQ — Rótulos, Branding y Diseño Web Barcelona · Preguntas Frecuentes | RUD',
   description: 'Preguntas frecuentes sobre rótulos luminosos, carteles, vinilos, branding y diseño web en Barcelona. Precios, plazos, proceso y más.',
+  alternates: { canonical: 'https://royaluniondesign.com/faq' },
 }
 
 const faqsGeneral = [

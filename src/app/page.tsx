@@ -15,6 +15,7 @@ function Hero() {
       <video
         className="absolute inset-0 w-full h-full object-cover"
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_074215_04640ca7-042c-45d6-bb56-58b1e8a42489.mp4"
+        poster="/hero-bg.jpg"
         autoPlay
         loop
         muted

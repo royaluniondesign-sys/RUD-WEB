@@ -5,6 +5,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 export const metadata = {
   title: 'Sobre Nosotros — RUD Studio · Empresa de Rótulos y Branding en Barcelona',
   description: 'Somos RUD Studio, empresa de rótulos luminosos, carteles, vinilos y branding en Barcelona. También diseño web y e-commerce. Un equipo creativo, un solo techo.',
+  alternates: { canonical: 'https://royaluniondesign.com/about' },
 }
 
 export default function About() {

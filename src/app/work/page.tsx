@@ -5,6 +5,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 export const metadata = {
   title: 'Trabajo & Proyectos — RUD Studio · Agencia creativa Barcelona',
   description: 'Portfolio de proyectos reales de RUD. Branding, identidad visual, diseño web, e-commerce Shopify y automatización IA para clientes en Barcelona y España.',
+  alternates: { canonical: 'https://royaluniondesign.com/work' },
 }
 
 const PROJECTS = [

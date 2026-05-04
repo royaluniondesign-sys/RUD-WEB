@@ -7,6 +7,7 @@ import FAQAccordion from '@/components/FAQAccordion'
 export const metadata: Metadata = {
   title: 'Precios — Branding, Diseño Web, Rótulos & IA · RUD Studio Barcelona',
   description: 'Precios orientativos de branding, diseño web, rótulos luminosos, e-commerce y automatización IA en Barcelona. Presupuesto personalizado en 24h sin compromiso.',
+  alternates: { canonical: 'https://royaluniondesign.com/pricing' },
 }
 
 const ROTULOS = [

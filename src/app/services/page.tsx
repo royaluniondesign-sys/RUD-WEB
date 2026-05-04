@@ -6,6 +6,7 @@ export const metadata = {
   title: 'Servicios — Rótulos, Carteles, Branding y Web en Barcelona · RUD Studio',
   description: 'Fabricamos e instalamos rótulos luminosos, carteles, vinilos para escaparates y letras corpóreas en Barcelona. También branding completo, diseño web y e-commerce Shopify.',
   keywords: 'rótulos luminosos Barcelona,carteles Barcelona,vinilos escaparate Barcelona,letras corpóreas Barcelona,señalética Barcelona,branding Barcelona,diseño web Barcelona,e-commerce Barcelona',
+  alternates: { canonical: 'https://royaluniondesign.com/services' },
 }
 
 const SERVICES = [
