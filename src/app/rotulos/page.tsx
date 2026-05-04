@@ -16,6 +16,83 @@ export const metadata = {
   },
 }
 
+const rotulosSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://royaluniondesign.com/rotulos#service',
+  'name': 'Rótulos y Señalética Barcelona',
+  'description': 'Fabricación e instalación de rótulos personalizados en Barcelona: neón LED, letras corpóreas, rótulos luminosos, vinilos de escaparate y señalética corporativa. Taller propio en Cerdanyola del Vallès.',
+  'url': 'https://royaluniondesign.com/rotulos',
+  'provider': {
+    '@id': 'https://royaluniondesign.com/#organization',
+  },
+  'areaServed': {
+    '@type': 'City',
+    'name': 'Barcelona',
+  },
+  'serviceType': 'Fabricación e instalación de rótulos',
+  'hasOfferCatalog': {
+    '@type': 'OfferCatalog',
+    'name': 'Tipos de rótulo',
+    'itemListElement': [
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Service',
+          'name': 'Rótulos Neón LED Barcelona',
+          'description': 'Neón LED flexible y neón de vidrio artesanal. Cualquier tipografía, logo o forma. Para escaparates, hostelería, retail y eventos.',
+          'url': 'https://royaluniondesign.com/contact?servicio=neon',
+        },
+      },
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Service',
+          'name': 'Rótulos Luminosos Barcelona',
+          'description': 'Caja de luz, bandeja calada, backlit LED. Máxima visibilidad nocturna con consumo mínimo.',
+          'url': 'https://royaluniondesign.com/contact?servicio=luminosos',
+        },
+      },
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Service',
+          'name': 'Letras Corpóreas y 3D Barcelona',
+          'description': 'Letras corpóreas en aluminio, metacrilato, madera y acero. Con o sin retroiluminación tipo halo.',
+          'url': 'https://royaluniondesign.com/contact?servicio=letras',
+        },
+      },
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Service',
+          'name': 'Vinilos Escaparate Barcelona',
+          'description': 'Vinilos impresos, esmerilados y recortados en plotter para escaparates. Cambio estacional sin obra.',
+          'url': 'https://royaluniondesign.com/contact?servicio=vinilos',
+        },
+      },
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Service',
+          'name': 'Señalética Interior Barcelona',
+          'description': 'Directorios, identificación de espacios, wayfinding y señales de acceso corporativas.',
+          'url': 'https://royaluniondesign.com/contact?servicio=senaletica',
+        },
+      },
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Service',
+          'name': 'Publicidad Exterior Barcelona',
+          'description': 'Lonas de gran formato, banderolas, vallas, fachadas y wrapping de vehículos.',
+          'url': 'https://royaluniondesign.com/contact?servicio=exterior',
+        },
+      },
+    ],
+  },
+}
+
 const PROCESO = [
   {
     n: '01',
@@ -65,27 +142,10 @@ const PROCESO = [
 export default function Rotulos() {
   return (
     <main style={{ background: '#0A0908' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'LocalBusiness',
-        name: 'RUD Studio — Rótulos Barcelona',
-        description: 'Empresa de rótulos personalizados en Barcelona. Fabricación e instalación de neón LED, letras corpóreas, rótulos luminosos, vinilos escaparate y señalética corporativa.',
-        url: 'https://royaluniondesign.com/rotulos',
-        areaServed: { '@type': 'City', name: 'Barcelona' },
-        address: { '@type': 'PostalAddress', addressLocality: 'Barcelona', addressRegion: 'Cataluña', addressCountry: 'ES' },
-        email: 'hello@royaluniondesign.com',
-        priceRange: '€€',
-        hasOfferCatalog: {
-          '@type': 'OfferCatalog',
-          name: 'Rótulos y señalética Barcelona',
-          itemListElement: [
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Rótulos neón LED Barcelona' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Letras corpóreas Barcelona' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vinilos escaparate Barcelona' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Señalética corporativa Barcelona' } },
-          ]
-        }
-      }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(rotulosSchema) }}
+      />
       <Navbar light />
 
       {/* HERO */}
