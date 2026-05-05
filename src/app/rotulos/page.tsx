@@ -4,13 +4,13 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Rótulos Barcelona · Neón LED, Letras Corpóreas, Vinilos Escaparate | RUD Studio',
-  description: 'Empresa de rótulos en Barcelona. Fabricamos e instalamos rótulos personalizados: neón LED, letras corpóreas, rótulos luminosos, vinilos escaparate y señalética corporativa. Presupuesto en 24h.',
+  title: 'Rótulos Barcelona · Neón LED, Letras Corpóreas, Vinilos | RUD Studio',
+  description: 'Empresa de rótulos en Barcelona con taller propio. Neón LED, letras corpóreas, rótulos luminosos y vinilos escaparate. Fabricación e instalación. Presupuesto gratis en 24h.',
   keywords: 'rótulos barcelona, rótulos personalizados barcelona, neón LED barcelona, letras corpóreas barcelona, vinilos escaparate barcelona, rótulos luminosos barcelona, señalética corporativa barcelona, empresa rótulos barcelona, fabricación rótulos barcelona',
   alternates: { canonical: 'https://royaluniondesign.com/rotulos' },
   openGraph: {
-    title: 'Rótulos Barcelona · Neón LED, Letras Corpóreas, Vinilos Escaparate | RUD Studio',
-    description: 'Empresa de rótulos en Barcelona. Neón LED, letras corpóreas, rótulos luminosos, vinilos escaparate y señalética. Presupuesto en 24h.',
+    title: 'Rótulos Barcelona · Neón LED, Letras Corpóreas, Vinilos | RUD Studio',
+    description: 'Empresa de rótulos en Barcelona con taller propio. Neón LED, letras corpóreas, rótulos luminosos y vinilos. Presupuesto gratis en 24h.',
     url: 'https://royaluniondesign.com/rotulos',
     images: [{ url: 'https://royaluniondesign.com/services/hero-rotulos.jpg', width: 1400, height: 1051 }],
   },
@@ -261,6 +261,22 @@ export default function Rotulos() {
           ))}
         </div>
       </div>
+
+      {/* ─── INTRO SEO ────────────────────────────────────────────────────── */}
+      <section style={{ background: '#0A0908', paddingTop: 'clamp(3rem,6vw,5rem)', paddingBottom: 0 }}>
+        <div className="container-custom">
+          <ScrollReveal>
+            <div style={{ maxWidth: '72ch', borderLeft: '2px solid rgba(255,255,255,0.08)', paddingLeft: 'clamp(1.25rem,3vw,2rem)' }}>
+              <p style={{ fontSize: 'clamp(0.9375rem,1.5vw,1.0625rem)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.8, marginBottom: '1rem' }}>
+                RUD Studio es una empresa de rótulos con taller propio en Barcelona. Fabricamos e instalamos rótulos luminosos, neón LED, letras corpóreas y vinilos de escaparate para locales comerciales, hostelería, hoteles y empresas de toda el área metropolitana.
+              </p>
+              <p style={{ fontSize: 'clamp(0.9375rem,1.5vw,1.0625rem)', color: 'rgba(255,255,255,0.35)', lineHeight: 1.8 }}>
+                Cada rótulo que fabricamos está diseñado para hacer tu local imposible de ignorar desde la calle. Utilizamos materiales de primera calidad y técnicas de fabricación propias para garantizar que el rótulo de tu negocio sea tan sólido y duradero como memorable — día y noche, llueva o haga sol.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
 
       {/* ─── TIPOS ─────────────────────────────────────────────────────────── */}
       <section id="tipos" style={{ background: '#0A0908', padding: 'clamp(4rem,8vw,7rem) 0' }}>
