@@ -88,7 +88,7 @@ export default function Services() {
             <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.2em', color: 'rgba(255,255,255,0.4)', marginBottom: 14 }}>
               Servicios · Barcelona
             </p>
-            <h1 style={{ fontSize: 'clamp(2rem,5vw,3.8rem)', fontWeight: 800, letterSpacing: '-.04em', lineHeight: 1.05, marginBottom: '1.25rem', maxWidth: '22ch', color: 'white' }}>
+            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: '1.25rem', maxWidth: '22ch', color: 'white' }}>
               Rótulos luminosos, branding y diseño web.{' '}
               <span style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.4)' }}>De la calle al pixel.</span>
             </h1>

@@ -139,31 +139,37 @@ function RotulosStrip() {
       titulo: 'Neón LED',
       kw: 'Rótulos neón LED Barcelona',
       desc: 'Neón flexible LED personalizado. Perfecto para escaparates, hostelería y locales comerciales. Bajo consumo, alta durabilidad.',
+      img: '/services/neon-interior.avif',
     },
     {
       titulo: 'Letras Corpóreas',
       kw: 'Letras corpóreas Barcelona',
       desc: 'Letras en volumen de acero, aluminio o poliestireno con o sin iluminación interior. Presencia máxima en fachada.',
+      img: '/services/letras-corporeas.avif',
     },
     {
       titulo: 'Cajas de Luz',
       kw: 'Rótulos luminosos Barcelona',
       desc: 'Cajas de luz LED con frente en vinilo, metacrilato o tela tensada. Visibilidad 24h con consumo mínimo.',
+      img: '/services/rotulos-luminosos.avif',
     },
     {
       titulo: 'Vinilos Escaparate',
       kw: 'Vinilos escaparate Barcelona',
       desc: 'Vinilos de corte, impresos y microperforados para escaparates y cristaleras. Instalación el mismo día.',
+      img: '/services/vinilo-escaparate.avif',
     },
     {
       titulo: 'Señalética Interior',
       kw: 'Señalética corporativa Barcelona',
       desc: 'Directorios, balizas, señales de evacuación y señalética de marca para oficinas, hoteles y comercios.',
+      img: '/services/senaletica-interior.avif',
     },
     {
       titulo: 'Publicidad Exterior',
       kw: 'Publicidad exterior Barcelona',
       desc: 'Banderolas, lamas, tótems y fachadas completas. Materiales adaptados a la intemperie y normativa local.',
+      img: '/services/publicidad-exterior.avif',
     },
   ]
 
@@ -171,7 +177,7 @@ function RotulosStrip() {
     <section style={{ background: '#0A0908', padding: 'clamp(4rem,7vw,6rem) 0' }}>
       <div className="container-custom">
         <ScrollReveal>
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '3rem' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '2.5rem' }}>
             <div>
               <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.16em', color: 'rgba(255,255,255,0.25)', marginBottom: '0.75rem' }}>
                 Empresa de rótulos · Barcelona
@@ -189,27 +195,32 @@ function RotulosStrip() {
           </div>
         </ScrollReveal>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(280px,1fr))', gap: 1, background: 'rgba(255,255,255,0.06)', borderRadius: 16, overflow: 'hidden' }}>
+        {/* Photo cluster — 3×2 grid */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8 }} className="rotulos-grid">
           {tipos.map((t, i) => (
-            <ScrollReveal key={t.titulo} delay={i * 50}>
-              <div style={{ background: '#0A0908', padding: 'clamp(1.25rem,3vw,1.75rem)', height: '100%' }}>
-                <p style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.14em', color: 'rgba(255,255,255,0.22)', marginBottom: '0.5rem' }}>{t.kw}</p>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: 'white', marginBottom: '0.625rem' }}>{t.titulo}</h3>
-                <p style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.4)', lineHeight: 1.65 }}>{t.desc}</p>
-              </div>
+            <ScrollReveal key={t.titulo} delay={i * 45}>
+              <Link href="/rotulos" style={{ display: 'block', borderRadius: 12, overflow: 'hidden', position: 'relative', aspectRatio: '4/3', textDecoration: 'none' }}>
+                <img src={t.img} alt={t.kw} loading={i < 3 ? 'eager' : 'lazy'}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
+                  className="rotulo-img" />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,9,8,0.88) 0%, rgba(10,9,8,0.2) 55%, transparent 100%)' }} />
+                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem 1.125rem' }}>
+                  <p style={{ fontSize: '9px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.14em', color: 'rgba(255,255,255,0.4)', marginBottom: 4 }}>{t.kw}</p>
+                  <p style={{ fontSize: '0.9375rem', fontWeight: 700, color: 'white', letterSpacing: '-0.01em', lineHeight: 1.2 }}>{t.titulo}</p>
+                </div>
+              </Link>
             </ScrollReveal>
           ))}
         </div>
 
         <ScrollReveal delay={200}>
-          <div style={{ marginTop: '2.5rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.25rem', padding: 'clamp(1.25rem,3vw,1.75rem)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div style={{ marginTop: '1.5rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.25rem', padding: 'clamp(1.25rem,3vw,1.75rem)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
             <p style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.5)', maxWidth: '420px', lineHeight: 1.6 }}>
               Visita técnica gratuita en Barcelona. Mándanos las medidas y el espacio — presupuesto en menos de 24h.
             </p>
             <Link href="/contact?servicio=rotulos"
               onClick={() => trackCTA('Pedir presupuesto rótulo', '/contact?servicio=rotulos', 'rotulos-strip-bottom')}
-              className="font-barlow font-semibold text-sm text-[#171717] bg-white hover:bg-[#f0f0f0] transition-colors duration-200 px-7 py-3.5"
-              style={{ borderRadius: 9999, textDecoration: 'none', display: 'inline-block', whiteSpace: 'nowrap' }}>
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 700, fontSize: 14, textDecoration: 'none', whiteSpace: 'nowrap' }}>
               Pedir presupuesto de rótulo →
             </Link>
           </div>
