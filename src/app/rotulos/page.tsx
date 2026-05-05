@@ -143,15 +143,15 @@ const PROCESO = [
 const FAQ = [
   {
     q: '¿Cuánto cuesta un rótulo neón LED en Barcelona?',
-    a: 'Desde 150€ para piezas pequeñas de decoración hasta 400–1.200€ para neón LED a medida de tamaño comercial. El neón de vidrio artesanal parte de 600€. El precio depende del tamaño, la complejidad del diseño y el tipo de instalación.',
+    a: 'El neón LED personalizado parte de 1.800€ para una instalación comercial completa — diseño, fabricación e instalación incluidos. El precio varía según el tamaño, la complejidad de la forma y el tipo de soporte. Pídenos medidas y te enviamos presupuesto en 24h.',
   },
   {
     q: '¿Cuánto cuesta un rótulo luminoso (caja de luz)?',
-    a: 'Los rótulos luminosos tipo caja de luz empiezan en 350€ para módulos estándar. Un rótulo de fachada comercial con instalación suele estar entre 600€ y 2.500€ según las dimensiones y el acabado. Te enviamos presupuesto detallado en 24h.',
+    a: 'Los rótulos luminosos tipo caja de luz parten de 3.200€ para una instalación comercial estándar con iluminación LED interior. El precio depende de las dimensiones, el acabado y la complejidad de la instalación. Solicita presupuesto sin compromiso.',
   },
   {
     q: '¿Cuánto cuestan las letras corpóreas?',
-    a: 'Las letras en metacrilato parten de 200€. En aluminio o acero con retroiluminación halo, desde 500€. Para fachadas de mayor formato o grandes volúmenes de letras, pedimos medidas y te presupuestamos sin compromiso.',
+    a: 'Las letras corpóreas en aluminio, metacrilato o madera parten de 2.500€ para un proyecto estándar con instalación incluida. El retroiluminado tipo halo o las letras de gran formato pueden superar ese precio según el proyecto. Te damos precio exacto con medidas.',
   },
   {
     q: '¿Cuánto tiempo tardáis en fabricar e instalar un rótulo?',

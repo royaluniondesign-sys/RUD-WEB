@@ -11,36 +11,7 @@ export const metadata = {
 
 const SERVICES = [
   {
-    id: 'branding', num: '01', title: 'Brand Strategy & Posicionamiento',
-    tagline: 'Antes del diseño, la estrategia.',
-    desc: 'No diseñamos logos — construimos sistemas de marca. Empezamos con auditoría de mercado, análisis competitivo profundo y workshops de posicionamiento. El resultado: una propuesta de valor diferenciada y una arquitectura de marca que guía cada decisión visual posterior.',
-    deliverables: [
-      'Auditoría de marca y análisis competitivo',
-      'Workshops de posicionamiento y propuesta de valor',
-      'Brand Architecture (casa de marcas, endorsed, standalone)',
-      'Messaging framework y tono de voz',
-      'Naming estratégico con análisis de disponibilidad',
-      'Tagline y narrativa de marca',
-    ],
-    dark: false,
-  },
-  {
-    id: 'identity', num: '02', title: 'Identidad Visual de Sistema',
-    tagline: 'Sistemas visuales que escalan décadas.',
-    desc: 'Una identidad de sistema no es solo un logo — es un lenguaje visual completo. Logo con variantes para todos los contextos, paleta de color con semántica definida, tipografía con jerarquía funcional, motion principles, iconografía propia y elementos gráficos. Todo documentado para que tu equipo interno lo use bien.',
-    deliverables: [
-      'Logo system completo (primario, secundario, favicon, monograma)',
-      'Paleta de color primaria, secundaria y semántica',
-      'Sistema tipográfico con jerarquía funcional',
-      'Motion identity principles y micro-animaciones',
-      'Iconografía y elementos gráficos propios',
-      'Brand Guidelines extenso (PDF + Figma editable)',
-      'Todas las aplicaciones: tarjetas, papelería, packaging, señalética',
-    ],
-    dark: false,
-  },
-  {
-    id: 'rotulos', num: '03', title: 'Rótulos Luminosos & Señalética Corporativa',
+    id: 'rotulos', num: '01', title: 'Rótulos Luminosos & Señalética Corporativa',
     tagline: 'Tu marca en la calle. Fabricación propia en Barcelona.',
     desc: 'Un negocio que no se ve desde la calle, no existe. Diseñamos, fabricamos e instalamos rótulos luminosos, neón LED, letras corpóreas y vinilos de escaparate que hacen que tu local sea imposible de ignorar. Mismo nivel de exigencia visual que el branding digital — pero en aluminio, metacrilato y luz.',
     deliverables: [
@@ -55,6 +26,35 @@ const SERVICES = [
     ],
     dark: false,
     highlight: true,
+  },
+  {
+    id: 'branding', num: '02', title: 'Brand Strategy & Posicionamiento',
+    tagline: 'Antes del diseño, la estrategia.',
+    desc: 'No diseñamos logos — construimos sistemas de marca. Empezamos con auditoría de mercado, análisis competitivo profundo y workshops de posicionamiento. El resultado: una propuesta de valor diferenciada y una arquitectura de marca que guía cada decisión visual posterior.',
+    deliverables: [
+      'Auditoría de marca y análisis competitivo',
+      'Workshops de posicionamiento y propuesta de valor',
+      'Brand Architecture (casa de marcas, endorsed, standalone)',
+      'Messaging framework y tono de voz',
+      'Naming estratégico con análisis de disponibilidad',
+      'Tagline y narrativa de marca',
+    ],
+    dark: false,
+  },
+  {
+    id: 'identity', num: '03', title: 'Identidad Visual de Sistema',
+    tagline: 'Sistemas visuales que escalan décadas.',
+    desc: 'Una identidad de sistema no es solo un logo — es un lenguaje visual completo. Logo con variantes para todos los contextos, paleta de color con semántica definida, tipografía con jerarquía funcional, motion principles, iconografía propia y elementos gráficos. Todo documentado para que tu equipo interno lo use bien.',
+    deliverables: [
+      'Logo system completo (primario, secundario, favicon, monograma)',
+      'Paleta de color primaria, secundaria y semántica',
+      'Sistema tipográfico con jerarquía funcional',
+      'Motion identity principles y micro-animaciones',
+      'Iconografía y elementos gráficos propios',
+      'Brand Guidelines extenso (PDF + Figma editable)',
+      'Todas las aplicaciones: tarjetas, papelería, packaging, señalética',
+    ],
+    dark: false,
   },
   {
     id: 'web', num: '04', title: 'Diseño Web & Desarrollo de Alto Rendimiento',
@@ -72,7 +72,7 @@ const SERVICES = [
     dark: false,
   },
   {
-    id: 'ecommerce', num: '05', title: 'E-commerce & Arquitectura de Conversión',
+    id: 'ecommerce', num: '05',  title: 'E-commerce & Arquitectura de Conversión',
     tagline: 'Tiendas que convierten, no solo se ven bien.',
     desc: 'E-commerce no es solo poner productos en línea. Es arquitectura de producto, UX de checkout sin fricción, integraciones ERP/PIM, logística inversa, email automation y estrategia post-venta. Construimos el sistema completo, no solo el escaparate.',
     deliverables: [
