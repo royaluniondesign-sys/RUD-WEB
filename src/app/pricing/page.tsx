@@ -24,7 +24,7 @@ const TIERS = [
   {
     name: 'Starter',
     tagline: 'Marca lista para lanzar',
-    from: '5.500 €',
+    from: '3.500 €',
     ideal: 'Startups, freelancers y proyectos nuevos que necesitan una base sólida.',
     featured: false,
     includes: [
@@ -40,7 +40,7 @@ const TIERS = [
   {
     name: 'Professional',
     tagline: 'Identidad + web completa',
-    from: '12.000 €',
+    from: '7.500 €',
     ideal: 'Empresas en crecimiento que necesitan identidad visual y presencia web profesional.',
     featured: true,
     includes: [
@@ -58,7 +58,7 @@ const TIERS = [
   {
     name: 'Enterprise',
     tagline: 'Proyecto end-to-end',
-    from: '28.000 €',
+    from: '18.000 €',
     ideal: 'Marcas que buscan transformación completa: identidad, web, señalética y automatización IA.',
     featured: false,
     includes: [
@@ -76,9 +76,9 @@ const TIERS = [
 ]
 
 const ADDONS = [
-  { name: 'E-commerce Shopify', from: 'desde 7.500 €' },
-  { name: 'Blog & CMS integrado', from: 'desde 1.500 €' },
-  { name: 'Agente IA (Aura o Hermes)', from: 'desde 5.500 €' },
+  { name: 'E-commerce Shopify', from: 'desde 4.500 €' },
+  { name: 'Blog & CMS integrado', from: 'desde 1.200 €' },
+  { name: 'Agente IA (Aura o Hermes)', from: 'desde 3.500 €' },
   { name: 'Motion branding package', from: 'desde 2.000 €' },
   { name: 'Copywriting web completo', from: 'desde 1.800 €' },
   { name: 'Mantenimiento mensual', from: 'desde 400 €/mes' },
@@ -168,7 +168,7 @@ export default function Pricing() {
             </div>
           </ScrollReveal>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 16, alignItems: 'start' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(280px,100%),1fr))', gap: 16, alignItems: 'start' }}>
             {TIERS.map((tier, i) => (
               <ScrollReveal key={tier.name} delay={i * 80}>
                 <div style={{
@@ -220,6 +220,7 @@ export default function Pricing() {
                     borderRadius: 9999, fontSize: 14, fontWeight: 600, textDecoration: 'none',
                     background: tier.featured ? 'white' : '#0A0908',
                     color: tier.featured ? '#0A0908' : 'white',
+                    width: '100%', boxSizing: 'border-box',
                   }}>
                     Solicitar {tier.name} →
                   </Link>
