@@ -96,7 +96,7 @@ export default function Services() {
               Fabricación propia en Barcelona. Branding estratégico, señalética, diseño web, e-commerce y automatización IA — todo bajo un mismo techo.
             </p>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <Link href="/rotulos" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.8rem 1.6rem', borderRadius: 9999, background: '#D97706', color: '#fff', fontWeight: 700, fontSize: 14 }}>
+              <Link href="/rotulos" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.8rem 1.6rem', borderRadius: 9999, background: '#0A0908', color: '#fff', fontWeight: 700, fontSize: 14 }}>
                 Ver rótulos →
               </Link>
               <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.8rem 1.6rem', borderRadius: 9999, border: '1.5px solid rgba(255,255,255,0.22)', color: '#fff', fontWeight: 600, fontSize: 14 }}>
@@ -115,19 +115,19 @@ export default function Services() {
               <div>
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
                   <span style={{ fontSize: 10, fontFamily: 'monospace', color: '#C4BFB8' }}>01</span>
-                  <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: '#D97706', padding: '3px 10px', borderRadius: 9999, border: '1px solid rgba(217,119,6,.3)', background: 'rgba(217,119,6,.08)' }}>
+                  <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: '#0A0908', padding: '3px 10px', borderRadius: 9999, border: '1px solid rgba(10,9,8,.15)', background: 'rgba(10,9,8,.04)' }}>
                     FABRICACIÓN PROPIA
                   </span>
                 </div>
                 <h2 style={{ fontSize: 'clamp(1.6rem,3.5vw,2.6rem)', fontWeight: 800, letterSpacing: '-.035em', lineHeight: 1.1, color: '#0A0908', maxWidth: '20ch' }}>
                   Rótulos Luminosos & Señalética Corporativa
                 </h2>
-                <p style={{ fontSize: 13, color: '#D97706', fontStyle: 'italic', marginTop: 8 }}>
+                <p style={{ fontSize: 13, color: '#0A0908', fontStyle: 'italic', marginTop: 8 }}>
                   Tu marca en la calle. Fabricación propia en Barcelona.
                 </p>
               </div>
               <Link href="/rotulos"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.8rem 1.6rem', borderRadius: 9999, background: '#D97706', color: '#fff', fontWeight: 700, fontSize: 14, flexShrink: 0 }}>
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.8rem 1.6rem', borderRadius: 9999, background: '#0A0908', color: '#fff', fontWeight: 700, fontSize: 14, flexShrink: 0 }}>
                 Ver todos los rótulos →
               </Link>
             </div>
@@ -163,7 +163,7 @@ export default function Services() {
                       'Vinilos para escaparates: decorativos y publicitarios',
                     ].map((d, j) => (
                       <li key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: 13 }}>
-                        <span style={{ flexShrink: 0, width: 5, height: 5, borderRadius: '50%', background: '#D97706', marginTop: 6 }} />
+                        <span style={{ flexShrink: 0, width: 5, height: 5, borderRadius: '50%', background: '#0A0908', marginTop: 6 }} />
                         <span style={{ color: '#6B7280', lineHeight: 1.6 }}>{d}</span>
                       </li>
                     ))}
@@ -179,7 +179,7 @@ export default function Services() {
                       'Instalación profesional en Barcelona y área metropolitana',
                     ].map((d, j) => (
                       <li key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: 13 }}>
-                        <span style={{ flexShrink: 0, width: 5, height: 5, borderRadius: '50%', background: '#D97706', marginTop: 6 }} />
+                        <span style={{ flexShrink: 0, width: 5, height: 5, borderRadius: '50%', background: '#0A0908', marginTop: 6 }} />
                         <span style={{ color: '#6B7280', lineHeight: 1.6 }}>{d}</span>
                       </li>
                     ))}
@@ -317,7 +317,7 @@ export default function Services() {
               </div>
               <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
                 <Link href="/rotulos"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.875rem 1.75rem', background: '#D97706', color: '#fff', borderRadius: 9999, fontWeight: 700, fontSize: 15, flexShrink: 0 }}>
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.875rem 1.75rem', background: '#0A0908', color: '#fff', borderRadius: 9999, fontWeight: 700, fontSize: 15, flexShrink: 0 }}>
                   Ver rótulos →
                 </Link>
                 <Link href="/contact"
