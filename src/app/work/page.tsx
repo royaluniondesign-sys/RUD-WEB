@@ -84,7 +84,7 @@ export default function Work() {
             <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.4)', marginBottom: 12 }}>
               Portfolio · Proyectos reales · Barcelona
             </p>
-            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.04em', marginBottom: '1.25rem', maxWidth: '22ch', color: 'white' }}>
+            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.03em', marginBottom: '1.25rem', maxWidth: '22ch', color: 'white' }}>
               Rótulos, branding y diseño web en Barcelona.{' '}
               <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.4)' }}>Proyectos reales.</em>
             </h1>
