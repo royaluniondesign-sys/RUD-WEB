@@ -270,8 +270,11 @@ export default function Rotulos() {
               <p style={{ fontSize: 'clamp(0.9375rem,1.5vw,1.0625rem)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.8, marginBottom: '1rem' }}>
                 RUD Studio es una empresa de rótulos con taller propio en Barcelona. Fabricamos e instalamos rótulos luminosos, neón LED, letras corpóreas y vinilos de escaparate para locales comerciales, hostelería, hoteles y empresas de toda el área metropolitana.
               </p>
-              <p style={{ fontSize: 'clamp(0.9375rem,1.5vw,1.0625rem)', color: 'rgba(255,255,255,0.35)', lineHeight: 1.8 }}>
+              <p style={{ fontSize: 'clamp(0.9375rem,1.5vw,1.0625rem)', color: 'rgba(255,255,255,0.35)', lineHeight: 1.8, marginBottom: '1rem' }}>
                 Cada rótulo que fabricamos está diseñado para hacer tu local imposible de ignorar desde la calle. Utilizamos materiales de primera calidad y técnicas de fabricación propias para garantizar que el rótulo de tu negocio sea tan sólido y duradero como memorable — día y noche, llueva o haga sol.
+              </p>
+              <p style={{ fontSize: 'clamp(0.875rem,1.4vw,1rem)', color: 'rgba(255,255,255,0.25)', lineHeight: 1.8 }}>
+                Además de rótulos, ofrecemos <Link href="/services" style={{ color: 'rgba(255,255,255,0.45)', textDecoration: 'underline', textDecorationColor: 'rgba(255,255,255,0.15)' }}>branding, diseño web y automatización IA</Link> — todo bajo el mismo techo. <Link href="/pricing" style={{ color: 'rgba(255,255,255,0.45)', textDecoration: 'underline', textDecorationColor: 'rgba(255,255,255,0.15)' }}>Consulta nuestros precios orientativos →</Link>
               </p>
             </div>
           </ScrollReveal>

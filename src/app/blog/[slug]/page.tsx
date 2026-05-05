@@ -2,6 +2,21 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 
+function renderParagraph(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/)
+  if (parts.length === 1) return text
+  return (
+    <>
+      {parts.map((part, i) => {
+        const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+        return m
+          ? <Link key={i} href={m[2]} style={{ color: '#7B68EE', textDecoration: 'underline', textDecorationColor: 'rgba(123,104,238,0.4)', fontWeight: 500 }}>{m[1]}</Link>
+          : <span key={i}>{part}</span>
+      })}
+    </>
+  )
+}
+
 const POSTS: Record<string, {
   title: string; date: string; category: string; readTime: string;
   image: string; content: string; excerpt: string;
@@ -25,7 +40,7 @@ Los vinilos de escaparate son otra categoría completamente distinta: no son ró
 
 Antes de pedir presupuesto, hay tres preguntas que definen casi todo el proceso: ¿Es para interior o exterior? (los materiales y la protección IP son completamente distintos), ¿necesitas iluminación o no? (multiplica el coste por 2-3x pero también el impacto visual), y ¿cuál es el sistema de sujeción disponible en tu local? (fachada de obra, cristal, o estructura metálica cambia completamente la instalación).
 
-En RUD diseñamos y fabricamos rótulos luminosos en Barcelona con instalación incluida. El proceso es simple: visita técnica gratuita, propuesta con render en 48 horas, fabricación en 2-3 semanas e instalación. Si estás pensando en renovar la señalética de tu negocio en Barcelona, empieza por una consulta sin compromiso.`,
+En RUD diseñamos y fabricamos [rótulos luminosos en Barcelona](/rotulos) con instalación incluida. El proceso es simple: visita técnica gratuita, propuesta con render en 48 horas, fabricación en 2-3 semanas e instalación. Si estás pensando en renovar la señalética de tu negocio en Barcelona, [consulta nuestros precios orientativos](/pricing) o empieza directamente con una visita técnica sin compromiso.`,
   },
   'aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st': {
     title: 'AURA: El Agente IA Autónomo que Lidera la Operación de RUD Studio desde Telegram',
@@ -53,7 +68,7 @@ El mensaje para las empresas que buscan un socio estratégico es claro: la tecno
   'ia-local-vs-nube-agencias-creativas': {
     title: 'IA local vs. nube: por qué las agencias creativas deberían reconsiderar dónde corre su IA',
     date: 'Marzo 2026', category: 'IA & Tecnología', readTime: '8 min',
-    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=85',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=85',
     excerpt: 'Llevamos un año corriendo modelos 100% locales en RUD con Ollama y aquí está lo que aprendimos.',
     content: `Las grandes plataformas de IA cobran por token, almacenan tus datos y pueden cambiar sus condiciones mañana. En RUD llevamos más de un año operando con modelos 100% locales — Qwen3:14b, Llama4, DeepSeek — a través de Ollama, y el resultado ha sido mejor de lo esperado en tres frentes: calidad comparable a GPT-4 en la mayoría de tareas creativas, coste operativo €0 al mes, y privacidad total de los datos de nuestros clientes.
 
@@ -80,7 +95,9 @@ Cuarto: inconsistencia entre el packaging y la web. El cliente compra online, re
 
 Quinto: CTAs con el mismo peso visual que el resto del contenido. El botón de compra debe ser lo más visible de la página. Si compite visualmente con el header, el footer y los banners promocionales, pierde.
 
-Sexto: brand voice inconsistente. El copy del producto, los emails automáticos, las notificaciones de Shopify — todo debe sonar como la misma persona hablando. La mayoría de tiendas mezclan tonos porque distintas personas escribieron distintas partes sin guidelines.`,
+Sexto: brand voice inconsistente. El copy del producto, los emails automáticos, las notificaciones de Shopify — todo debe sonar como la misma persona hablando. La mayoría de tiendas mezclan tonos porque distintas personas escribieron distintas partes sin guidelines.
+
+En RUD Studio combinamos [branding estratégico y desarrollo web](/services) para garantizar coherencia en todos los puntos de contacto de tu tienda. [Consulta nuestros precios de branding y e-commerce →](/pricing)`,
   },
   'identidad-visual-vs-logo-diferencia': {
     title: 'No compraste un logo. Compraste un activo estratégico (o no)',
@@ -112,7 +129,9 @@ El error que vemos repetidamente: elegir por preferencia tecnológica del desarr
 
 Para una landing page de una startup que no va a cambiar contenido frecuentemente → Next.js. Para una empresa con un equipo de marketing que publica 20 artículos al mes y gestiona eventos → WordPress o headless CMS con Next.js como frontend. Para un e-commerce → Shopify directamente, ninguno de los dos.
 
-Lo que nunca hacemos: recomendar WordPress cuando el cliente no va a tener a nadie que lo mantenga. Un WordPress desactualizado es uno de los vectores de ataque más comunes en la web. Si nadie va a actualizar los plugins y el core regularmente, Next.js + contenido estático es siempre la opción más segura.`,
+Lo que nunca hacemos: recomendar WordPress cuando el cliente no va a tener a nadie que lo mantenga. Un WordPress desactualizado es uno de los vectores de ataque más comunes en la web. Si nadie va a actualizar los plugins y el core regularmente, Next.js + contenido estático es siempre la opción más segura.
+
+¿Tienes dudas sobre qué plataforma elegir para tu proyecto? En RUD Studio desarrollamos webs en Next.js y tiendas en Shopify. [Conoce nuestros servicios de diseño web →](/services)`,
   },
   'estrategia-marca-startups-barcelona': {
     title: 'Por qué las startups de Barcelona gastan en diseño antes de tener estrategia de marca',
@@ -127,7 +146,9 @@ La estrategia de marca no es un documento aburrido que se archiva. Es la respues
 
 Sin respuestas sólidas a estas cuatro preguntas, cualquier decisión de diseño es arbitraria. El color que eliges, el tono de voz que usas, las imágenes que muestras — todo esto debería derivar de la estrategia, no de lo que le gusta al fundador o de lo que está de moda en Behance.
 
-El proceso que seguimos en RUD: primero una sesión de brand strategy de 3-4 horas donde trabajamos estas preguntas con el cliente, luego definimos el posicionamiento y los mensajes clave, y solo después abrimos Figma. El tiempo invertido en estrategia siempre se recupera en menos iteraciones de diseño y en una identidad que funciona porque está construida sobre una base real.`,
+El proceso que seguimos en RUD: primero una sesión de brand strategy de 3-4 horas donde trabajamos estas preguntas con el cliente, luego definimos el posicionamiento y los mensajes clave, y solo después abrimos Figma. El tiempo invertido en estrategia siempre se recupera en menos iteraciones de diseño y en una identidad que funciona porque está construida sobre una base real.
+
+Si tu startup está en Barcelona y quieres construir la marca bien desde el principio, [conoce nuestros servicios de branding](/services) o [revisa nuestros precios orientativos](/pricing).`,
   },
   'neon-led-barcelona-precio-instalacion': {
     title: 'Neón LED en Barcelona: precio, instalación y cómo elegir el tuyo',
@@ -144,7 +165,7 @@ El proceso desde que nos contactas hasta que el neón está en tu local es el si
 
 ¿Para qué tipo de local funciona mejor el neón LED? En hostelería (restaurantes, bares, cafeterías) es el rey indiscutible — genera contenido orgánico en redes sociales sin inversión publicitaria. En retail de moda, cosmética y bienestar añade personalidad y diferencia del resto de tiendas del pasillo o la calle. En oficinas y estudios creativos refuerza la identidad de marca en entornos de trabajo.
 
-En RUD fabricamos e instalamos neón LED en Barcelona con taller propio en Cerdanyola del Vallès. Visita técnica gratuita, render previo incluido, garantía de 2 años en todos los componentes. Si tienes medidas y una idea aproximada, podemos enviarte presupuesto orientativo en el mismo día.`,
+En RUD fabricamos e instalamos [neón LED en Barcelona](/rotulos) con taller propio en Cerdanyola del Vallès. Visita técnica gratuita, render previo incluido, garantía de 2 años en todos los componentes. Si tienes medidas y una idea aproximada, podemos enviarte [presupuesto orientativo](/pricing) en el mismo día.`,
   },
   'letras-corporeas-barcelona-tipos-precios': {
     title: 'Letras corpóreas en Barcelona: tipos, materiales y precios reales',
@@ -161,7 +182,7 @@ Precios orientativos en Barcelona: letras corpóreas básicas sin iluminación d
 
 El proceso de fabricación en RUD: diseño vectorial adaptado a tu logotipo, mecanizado CNC de cada letra, acabado (lacado en color Pantone, efecto cepillado, espejo dorado o cromado, negro mate), y montaje con perfilería oculta sobre la fachada o pared. La instalación no deja marcas visibles en el soporte.
 
-En Barcelona trabajamos en todos los barrios: Eixample, Gràcia, Sant Martí (22@), Sarrià-Sant Gervasi, Poble Nou y área metropolitana. Visita técnica gratuita, presupuesto en 48 horas, instalación con garantía.`,
+En Barcelona trabajamos en todos los barrios: Eixample, Gràcia, Sant Martí (22@), Sarrià-Sant Gervasi, Poble Nou y área metropolitana. Visita técnica gratuita, [presupuesto en 48 horas](/pricing), instalación con garantía. [Ver todos los tipos de rótulos que fabricamos →](/rotulos)`,
   },
   'vinilos-escaparate-barcelona-precio-instalacion': {
     title: 'Vinilos para escaparate en Barcelona: tipos, precios y cuándo usarlos',
@@ -176,7 +197,7 @@ Existen varios tipos de vinilo para escaparate, cada uno con sus característica
 
 El plazo de entrega es el punto fuerte de los vinilos: en 48-72 horas desde la aprobación del arte final podemos tener el vinilo instalado. Para aperturas de local o campañas de temporada es la solución más ágil.
 
-En RUD instalamos vinilos de escaparate en Barcelona para comercios, clínicas, despachos, hoteles y oficinas. Trabajamos tanto el diseño desde cero como la aplicación de artes que el cliente ya tiene. Visita técnica gratuita, presupuesto el mismo día para proyectos estándar.`,
+En RUD instalamos [vinilos de escaparate en Barcelona](/rotulos) para comercios, clínicas, despachos, hoteles y oficinas. Trabajamos tanto el diseño desde cero como la aplicación de artes que el cliente ya tiene. Visita técnica gratuita, [presupuesto el mismo día](/pricing) para proyectos estándar.`,
   },
   'automatizacion-marketing-agencias-n8n': {
     title: 'Cómo automatizamos el 60% de nuestros workflows de marketing con n8n (y €0 de coste)',
@@ -195,7 +216,9 @@ Publicaciones en redes: el calendario editorial se planifica una vez al mes, y n
 
 Seguimiento de proyectos: notificaciones automáticas cuando un proyecto lleva más de 48 horas sin actividad, recordatorios de revisiones pendientes, y alertas cuando se aproxima una fecha de entrega.
 
-La inversión para montar este stack: unas 40 horas de configuración inicial repartidas en dos semanas. El ahorro estimado: entre 15 y 20 horas semanales de trabajo manual. La amortización fue en el primer mes.`,
+La inversión para montar este stack: unas 40 horas de configuración inicial repartidas en dos semanas. El ahorro estimado: entre 15 y 20 horas semanales de trabajo manual. La amortización fue en el primer mes.
+
+¿Interesado en automatizar tu agencia o negocio? En RUD desarrollamos agentes IA y workflows de automatización. [Ver servicios de automatización IA →](/services)`,
   },
 }
 
@@ -210,7 +233,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${p.title} · RUD Studio Barcelona`,
     description: p.excerpt,
-    openGraph: { title: p.title, description: p.excerpt, images: [p.image] },
+    alternates: { canonical: `https://royaluniondesign.com/blog/${slug}` },
+    openGraph: { title: p.title, description: p.excerpt, images: [{ url: p.image }] },
   }
 }
 
@@ -252,7 +276,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <div className="container-custom" style={{ maxWidth: 720 }}>
           <article style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             {paragraphs.map((para, i) => (
-              <p key={i} style={{ fontSize: '1rem', color: '#3D3D3D', lineHeight: 1.8 }}>{para}</p>
+              <p key={i} style={{ fontSize: '1rem', color: '#3D3D3D', lineHeight: 1.8 }}>{renderParagraph(para)}</p>
             ))}
           </article>
 

@@ -123,7 +123,7 @@ export default function Services() {
                   Rótulos Luminosos & Señalética Corporativa
                 </h2>
                 <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7, marginTop: 10, maxWidth: '52ch' }}>
-                  Fabricamos e instalamos rótulos luminosos, neón LED, letras corpóreas y vinilos de escaparate en Barcelona desde nuestro taller propio. Cada rótulo se diseña y produce a medida para que tu local sea imposible de ignorar desde la calle, tanto de día como de noche.
+                  Fabricamos e instalamos rótulos luminosos, neón LED, letras corpóreas y vinilos de escaparate en Barcelona desde nuestro taller propio. Cada rótulo se diseña y produce a medida para que tu local sea imposible de ignorar desde la calle, tanto de día como de noche. <Link href="/pricing" style={{ color: '#6B7280', textDecoration: 'underline', textDecorationColor: 'rgba(107,114,128,0.4)' }}>Ver precios orientativos</Link>.
                 </p>
               </div>
               <Link href="/rotulos"
