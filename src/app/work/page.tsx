@@ -109,7 +109,7 @@ export default function Work() {
                 </h2>
               </div>
               <Link href="/rotulos"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.75rem 1.5rem', borderRadius: 9999, background: '#D97706', color: '#fff', fontWeight: 700, fontSize: 14, flexShrink: 0 }}>
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.75rem 1.5rem', borderRadius: 9999, background: '#0A0908', color: '#fff', fontWeight: 700, fontSize: 14, flexShrink: 0 }}>
                 Ver todos los rótulos →
               </Link>
             </div>
@@ -124,7 +124,7 @@ export default function Work() {
               <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: 'clamp(1.5rem,4vw,2.5rem)' }}>
                 <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: 16 }}>
                   <div>
-                    <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: '#D97706', padding: '3px 10px', borderRadius: 9999, border: '1px solid rgba(217,119,6,.5)', background: 'rgba(217,119,6,.15)', marginBottom: 10, display: 'inline-block' }}>
+                    <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: 'rgba(255,255,255,0.85)', padding: '3px 10px', borderRadius: 9999, border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(255,255,255,0.12)', marginBottom: 10, display: 'inline-block' }}>
                       {ROTULOS_PROJECTS[0].tag}
                     </span>
                     <h3 style={{ fontSize: 'clamp(1.2rem,2.5vw,1.75rem)', fontWeight: 800, color: '#fff', letterSpacing: '-.03em', lineHeight: 1.2 }}>
@@ -155,7 +155,7 @@ export default function Work() {
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,9,8,0.8) 0%, transparent 60%)' }} />
                   <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1.25rem' }}>
-                    <span style={{ fontSize: 10, color: '#D97706', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.15em' }}>{p.tag}</span>
+                    <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.75)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.15em' }}>{p.tag}</span>
                     <h3 style={{ fontSize: 15, fontWeight: 700, color: '#fff', marginTop: 4 }}>{p.nombre}</h3>
                     <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.55)', marginTop: 2 }}>{p.tipo} · {p.barrio}</p>
                   </div>
@@ -172,7 +172,7 @@ export default function Work() {
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,9,8,0.82) 0%, transparent 55%)' }} />
                   <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem' }}>
-                    <span style={{ fontSize: 10, color: '#D97706', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.15em' }}>{p.tag}</span>
+                    <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.75)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.15em' }}>{p.tag}</span>
                     <h3 style={{ fontSize: 13, fontWeight: 700, color: '#fff', marginTop: 3 }}>{p.nombre}</h3>
                     <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.5)', marginTop: 2 }}>{p.barrio}</p>
                   </div>
@@ -279,7 +279,7 @@ export default function Work() {
               </div>
               <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
                 <Link href="/rotulos"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.875rem 1.75rem', background: '#D97706', color: '#fff', borderRadius: 9999, fontWeight: 700, fontSize: 15 }}>
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.875rem 1.75rem', background: '#0A0908', color: '#fff', borderRadius: 9999, fontWeight: 700, fontSize: 15 }}>
                   Presupuesto rótulo →
                 </Link>
                 <Link href="/contact"

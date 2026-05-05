@@ -103,14 +103,14 @@ export default function Pricing() {
         <img src="/hero-pricing.jpg" alt="" aria-hidden="true" loading="eager"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.38 }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(10,9,8,0.6) 0%,rgba(10,9,8,0.4) 100%)', pointerEvents: 'none' }} />
-        <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingBlock: 'clamp(3.5rem,8vw,6rem)', textAlign: 'center' }}>
+        <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingBlock: 'clamp(3.5rem,8vw,6rem)' }}>
           <ScrollReveal>
             <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.45)', marginBottom: 14 }}>Inversión</p>
             <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: 16, lineHeight: 1.1, color: 'white' }}>
               Precios transparentes.{' '}
               <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.5)' }}>Propuestas a medida.</em>
             </h1>
-            <p style={{ fontSize: 'clamp(0.875rem,1.5vw,1rem)', color: 'rgba(255,255,255,0.62)', maxWidth: 520, margin: '0 auto 2rem', lineHeight: 1.7 }}>
+            <p style={{ fontSize: 'clamp(0.875rem,1.5vw,1rem)', color: 'rgba(255,255,255,0.62)', maxWidth: 520, marginBottom: '2rem', lineHeight: 1.7 }}>
               Los rangos que ves son orientativos. Cada proyecto recibe una propuesta personalizada — honesta, sin inflar presupuesto.
             </p>
             <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 2rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 600, textDecoration: 'none', fontSize: 15 }}>
@@ -161,10 +161,10 @@ export default function Pricing() {
       <section style={{ background: '#F7F5F1', paddingBlock: 'clamp(3rem,8vw,5.5rem)' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <div style={{ textAlign: 'center', marginBottom: 40 }}>
+            <div style={{ marginBottom: 40 }}>
               <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 8 }}>Proyectos digitales</p>
               <h2 style={{ fontSize: 'clamp(1.5rem,3.5vw,2.5rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: 8 }}>Branding · Web · IA</h2>
-              <p style={{ fontSize: 14, color: '#6B7280', maxWidth: 480, margin: '0 auto' }}>Alcances orientativos — adaptamos cada propuesta a lo que realmente necesitas.</p>
+              <p style={{ fontSize: 14, color: '#6B7280', maxWidth: 480 }}>Alcances orientativos — adaptamos cada propuesta a lo que realmente necesitas.</p>
             </div>
           </ScrollReveal>
 
@@ -251,17 +251,17 @@ export default function Pricing() {
       </section>
 
       {/* CTA dark */}
-      <section style={{ background: '#0A0908', paddingBlock: 'clamp(3.5rem,8vw,6rem)', textAlign: 'center' }}>
+      <section style={{ background: '#0A0908', paddingBlock: 'clamp(3.5rem,8vw,6rem)' }}>
         <div className="container-custom">
           <ScrollReveal>
             <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: 16 }}>Sin compromiso</p>
-            <h2 style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', fontWeight: 700, color: 'white', letterSpacing: '-0.03em', lineHeight: 1.15, maxWidth: '22ch', margin: '0 auto 16px' }}>
+            <h2 style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', fontWeight: 700, color: 'white', letterSpacing: '-0.03em', lineHeight: 1.15, maxWidth: '22ch', marginBottom: 16 }}>
               Presupuesto personalizado en menos de 24h.
             </h2>
-            <p style={{ fontSize: 15, color: '#6B7280', maxWidth: '44ch', margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
+            <p style={{ fontSize: 15, color: '#6B7280', maxWidth: '44ch', marginBottom: '2.5rem', lineHeight: 1.7 }}>
               Cuéntanos tu proyecto. Sin formularios kilométricos — solo lo esencial para prepararte una propuesta real.
             </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'flex-start' }}>
               <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 2rem', background: '#f8f8f8', color: '#0A0908', borderRadius: 9999, fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>
                 Pedir presupuesto →
               </Link>

@@ -426,7 +426,7 @@ export default function Rotulos() {
           </div>
 
           <ScrollReveal>
-            <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
+            <div style={{ marginTop: '2.5rem' }}>
               <TrackedLink href="/contact?servicio=rotulos" label="Tu local aquí" location="trabajos-rotulos"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 2rem', background: '#0A0908', color: 'white', borderRadius: 9999, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
                 Tu negocio, el siguiente →
@@ -545,18 +545,18 @@ export default function Rotulos() {
       </section>
 
       {/* ─── CTA FINAL ────────────────────────────────────────────────────── */}
-      <section style={{ background: '#0A0908', padding: 'clamp(5rem,10vw,8rem) 0', textAlign: 'center' }}>
+      <section style={{ background: '#0A0908', padding: 'clamp(5rem,10vw,8rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
             <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: '1rem' }}>Presupuesto gratuito · Respuesta en 24h</p>
-            <h2 style={{ fontSize: 'clamp(2.2rem,6vw,4.5rem)', fontWeight: 800, color: 'white', letterSpacing: '-0.04em', lineHeight: 1.0, maxWidth: '18ch', margin: '0 auto 1.5rem' }}>
+            <h2 style={{ fontSize: 'clamp(2.2rem,6vw,4.5rem)', fontWeight: 800, color: 'white', letterSpacing: '-0.04em', lineHeight: 1.0, maxWidth: '18ch', marginBottom: '1.5rem' }}>
               Manda las medidas.<br />
               <em style={{ fontWeight: 300, fontStyle: 'italic', color: 'rgba(255,255,255,0.3)' }}>Te respondemos hoy.</em>
             </h2>
-            <p style={{ fontSize: 15, color: '#6B7280', maxWidth: '42ch', margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
+            <p style={{ fontSize: 15, color: '#6B7280', maxWidth: '42ch', marginBottom: '2.5rem', lineHeight: 1.7 }}>
               Fotos del espacio + medidas aproximadas. Eso es todo lo que necesitamos para darte precio.
             </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'flex-start' }}>
               <a href="https://t.me/+34645593227?text=Hola%2C%20quiero%20presupuesto%20para%20un%20r%C3%B3tulo%20en%20Barcelona"
                 target="_blank" rel="noopener noreferrer"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '1rem 2.25rem', background: '#229ED9', color: 'white', borderRadius: 9999, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>

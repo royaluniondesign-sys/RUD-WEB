@@ -137,9 +137,9 @@ export default function FAQ() {
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
             <ScrollReveal>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: '2rem' }}>
-                <span style={{ width: 36, height: 36, borderRadius: 9999, background: 'rgba(217,119,6,.1)', border: '1px solid rgba(217,119,6,.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, flexShrink: 0 }}>◎</span>
+                <span style={{ width: 36, height: 36, borderRadius: 9999, background: 'rgba(10,9,8,.06)', border: '1px solid rgba(217,119,6,.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, flexShrink: 0 }}>◎</span>
                 <div>
-                  <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: '#D97706', marginBottom: 2 }}>Rótulos & Señalética</p>
+                  <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: '#0A0908', marginBottom: 2 }}>Rótulos & Señalética</p>
                   <h2 style={{ fontSize: 'clamp(1.1rem,2.5vw,1.5rem)', fontWeight: 700, letterSpacing: '-.02em', color: '#0A0908' }}>Preguntas sobre rótulos en Barcelona</h2>
                 </div>
               </div>
@@ -175,7 +175,7 @@ export default function FAQ() {
       <section style={{ background: '#F0EDE6', paddingBlock: 'clamp(3rem,8vw,5rem)' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <div style={{ maxWidth: 640, margin: '0 auto', textAlign: 'center' }}>
+            <div style={{ maxWidth: 640 }}>
               <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#9CA3AF', marginBottom: 14 }}>¿Más dudas?</p>
               <h2 style={{ fontSize: 'clamp(1.4rem,4vw,2.2rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: 12 }}>
                 Pregúntanos directamente
@@ -183,7 +183,7 @@ export default function FAQ() {
               <p style={{ color: '#6B7280', fontSize: 14, marginBottom: 32, lineHeight: 1.7 }}>
                 Respondemos en menos de 24 horas. Sin compromiso, sin formularios eternos.
               </p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'flex-start' }}>
                 <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.75rem 1.5rem', background: '#0A0908', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>
                   Iniciar conversación
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>

@@ -24,7 +24,7 @@ function Hero() {
       />
 
       {/* Content — 250px breathing room from bottom */}
-      <div className="relative z-10 w-full container-custom flex flex-col items-center text-center"
+      <div className="relative z-10 w-full container-custom flex flex-col items-start"
            style={{ paddingBottom: 250 }}>
 
         {/* Liquid-glass badge */}
@@ -60,23 +60,23 @@ function Hero() {
         </div>
 
         {/* Sub-headline */}
-        <p className="font-barlow text-base md:text-lg leading-relaxed max-w-xl mt-8 animate-fade-in-up anim-d2"
+        <p className="font-barlow text-base md:text-lg leading-relaxed max-w-2xl mt-8 animate-fade-in-up anim-d2"
            style={{ color: 'rgba(255,255,255,0.75)' }}>
           Señalética corporativa, rótulos neón, vinilos de escaparate, identidad visual y webs de alto rendimiento — todo bajo un mismo techo.
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-wrap justify-center gap-3 mt-8 animate-fade-in-up anim-d3">
+        <div className="flex flex-wrap gap-3 mt-8 animate-fade-in-up anim-d3">
           <Link href="/contact"
             onClick={() => trackCTA('Pedir presupuesto', '/contact', 'hero')}
             className="font-barlow font-semibold text-sm text-[#171717] bg-white hover:bg-[#f0f0f0] transition-colors duration-200 px-8 py-3.5"
-            style={{ borderRadius: 2 }}>
+            style={{ borderRadius: 9999 }}>
             Pedir presupuesto gratis →
           </Link>
           <Link href="/rotulos"
             onClick={() => trackCTA('Ver rótulos', '/rotulos', 'hero')}
             className="font-barlow font-medium text-sm text-white border border-white/30 hover:border-white/60 transition-colors duration-200 px-7 py-3.5"
-            style={{ borderRadius: 2 }}>
+            style={{ borderRadius: 9999 }}>
             Rótulos Barcelona
           </Link>
         </div>
@@ -185,7 +185,7 @@ function RotulosStrip() {
             </div>
             <Link href="/rotulos"
               onClick={() => trackCTA('Ver todos los rótulos', '/rotulos', 'rotulos-strip')}
-              style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.75rem 1.5rem', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.7)', borderRadius: 2, fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none', transition: 'border-color 0.2s', whiteSpace: 'nowrap' }}>
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.75rem 1.5rem', border: '1px solid rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.75)', borderRadius: 9999, fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none', whiteSpace: 'nowrap' }}>
               Ver todos los rótulos →
             </Link>
           </div>
@@ -211,7 +211,7 @@ function RotulosStrip() {
             <Link href="/contact?servicio=rotulos"
               onClick={() => trackCTA('Pedir presupuesto rótulo', '/contact?servicio=rotulos', 'rotulos-strip-bottom')}
               className="font-barlow font-semibold text-sm text-[#171717] bg-white hover:bg-[#f0f0f0] transition-colors duration-200 px-7 py-3.5"
-              style={{ borderRadius: 2, textDecoration: 'none', display: 'inline-block', whiteSpace: 'nowrap' }}>
+              style={{ borderRadius: 9999, textDecoration: 'none', display: 'inline-block', whiteSpace: 'nowrap' }}>
               Pedir presupuesto de rótulo →
             </Link>
           </div>
@@ -274,7 +274,7 @@ function Services() {
                 position:'relative',overflow:'hidden',
               }} className="card-lift">
                 {s.accent && (
-                  <span style={{position:'absolute',top:'1.25rem',right:'1.25rem',fontSize:'9px',fontWeight:700,textTransform:'uppercase',letterSpacing:'.15em',color:'#D97706',padding:'4px 10px',borderRadius:9999,border:'1px solid rgba(217,119,6,.3)',background:'rgba(217,119,6,.1)'}}>
+                  <span style={{position:'absolute',top:'1.25rem',right:'1.25rem',fontSize:'9px',fontWeight:700,textTransform:'uppercase',letterSpacing:'.15em',color:'rgba(255,255,255,0.5)',padding:'4px 10px',borderRadius:9999,border:'1px solid rgba(255,255,255,0.12)',background:'rgba(255,255,255,0.06)'}}>
                     FABRICACIÓN PROPIA
                   </span>
                 )}
@@ -324,7 +324,7 @@ function AuraSection() {
         <ScrollReveal>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '2rem' }}>
             <div style={{ maxWidth: '560px' }}>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '1rem', padding: '4px 12px', borderRadius: 2, border: '1px solid rgba(123,104,238,0.2)', background: 'rgba(123,104,238,0.06)' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '1rem', padding: '4px 12px', borderRadius: 9999, border: '1px solid rgba(123,104,238,0.2)', background: 'rgba(123,104,238,0.06)' }}>
                 <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--chariot)', display: 'inline-block' }} className="animate-pulse" />
                 <span style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.14em', color: 'var(--chariot)' }}>Aura & Hermes · IA propia</span>
               </div>
@@ -508,12 +508,12 @@ function WhyRUD() {
     <section className="section-padding" style={{background:'#FAFAFA'}}>
       <div className="container-custom">
         <ScrollReveal>
-          <div style={{textAlign:'center',marginBottom:'3.5rem'}}>
+          <div style={{marginBottom:'3.5rem'}}>
             <p className="section-label">Por qué elegirnos</p>
             <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'0.75rem'}}>
               Lo que nos diferencia
             </h2>
-            <p style={{fontSize:'0.9375rem',color:'var(--muted)',maxWidth:'480px',margin:'0 auto',lineHeight:1.65}}>
+            <p style={{fontSize:'0.9375rem',color:'var(--muted)',maxWidth:'480px',lineHeight:1.65}}>
               No somos otra agencia generalista. Esto es lo que hacemos diferente.
             </p>
           </div>
@@ -549,10 +549,10 @@ function Investment() {
     <section className="section-padding" style={{background:'#F7F5F1'}}>
       <div className="container-custom">
         <ScrollReveal>
-          <div style={{textAlign:'center',marginBottom:'3.5rem'}}>
+          <div style={{marginBottom:'3.5rem'}}>
             <p className="section-label">Inversión</p>
             <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'0.75rem'}}>Cada proyecto es único</h2>
-            <p style={{fontSize:'0.9375rem',color:'var(--muted)',maxWidth:'500px',margin:'0 auto',lineHeight:1.65}}>Presupuestos a medida según lo que necesites. Alcance claro, timeline definido, sin sorpresas.</p>
+            <p style={{fontSize:'0.9375rem',color:'var(--muted)',maxWidth:'500px',lineHeight:1.65}}>Presupuestos a medida según lo que necesites. Alcance claro, timeline definido, sin sorpresas.</p>
           </div>
         </ScrollReveal>
 
@@ -586,7 +586,7 @@ function Investment() {
         </div>
 
         <ScrollReveal delay={260}>
-          <div style={{textAlign:'center',marginTop:'3rem'}}>
+          <div style={{marginTop:'3rem'}}>
             <Link href="/contact" onClick={() => trackCTA('Solicitar presupuesto personalizado', '/contact', 'services-section')} className="btn-primary arrow-link">
               Solicitar presupuesto personalizado
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
