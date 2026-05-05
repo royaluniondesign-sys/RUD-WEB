@@ -129,6 +129,55 @@ Sin respuestas sólidas a estas cuatro preguntas, cualquier decisión de diseño
 
 El proceso que seguimos en RUD: primero una sesión de brand strategy de 3-4 horas donde trabajamos estas preguntas con el cliente, luego definimos el posicionamiento y los mensajes clave, y solo después abrimos Figma. El tiempo invertido en estrategia siempre se recupera en menos iteraciones de diseño y en una identidad que funciona porque está construida sobre una base real.`,
   },
+  'neon-led-barcelona-precio-instalacion': {
+    title: 'Neón LED en Barcelona: precio, instalación y cómo elegir el tuyo',
+    date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '6 min',
+    image: '/services/neon-interior.avif',
+    excerpt: 'Todo lo que necesitas saber sobre el neón LED en Barcelona: precios reales, plazos de fabricación, tipos de instalación y qué negocios lo usan más.',
+    content: `El neón LED es el rótulo que más se pide en Barcelona ahora mismo. Restaurantes, cafeterías, peluquerías, estudios de yoga, hoteles boutique — casi cualquier negocio que quiera presencia visual fuerte está apostando por él. En este artículo te explicamos cómo funciona, cuánto cuesta realmente y qué tienes que saber antes de hacer el pedido.
+
+El neón LED funciona con tubos de silicona flexible que albergan una tira LED en su interior. A diferencia del tubo fluorescente de gas de los años 80, el LED consume un 80% menos de energía, dura entre 50.000 y 100.000 horas y no se rompe con vibraciones. El resultado visual es prácticamente idéntico pero con ventajas técnicas que hacen que sea la opción lógica para instalaciones comerciales.
+
+¿Cuánto cuesta un neón LED en Barcelona? Los precios orientativos son: neón de mostrador (40-80 cm) entre 800 € y 1.400 €, neón de pared mediano (80-150 cm) entre 1.400 € y 2.200 €, neón de fachada o instalación grande (150 cm+) desde 2.200 € hasta 4.000 € o más según complejidad. Todos los precios incluyen diseño, fabricación e instalación.
+
+El proceso desde que nos contactas hasta que el neón está en tu local es el siguiente: primero te mandamos un presupuesto con render en menos de 48 horas. Una vez aprobado, fabricación en 10-15 días hábiles. La instalación en sí suele llevar entre 2 y 4 horas dependiendo del soporte.
+
+¿Para qué tipo de local funciona mejor el neón LED? En hostelería (restaurantes, bares, cafeterías) es el rey indiscutible — genera contenido orgánico en redes sociales sin inversión publicitaria. En retail de moda, cosmética y bienestar añade personalidad y diferencia del resto de tiendas del pasillo o la calle. En oficinas y estudios creativos refuerza la identidad de marca en entornos de trabajo.
+
+En RUD fabricamos e instalamos neón LED en Barcelona con taller propio en Cerdanyola del Vallès. Visita técnica gratuita, render previo incluido, garantía de 2 años en todos los componentes. Si tienes medidas y una idea aproximada, podemos enviarte presupuesto orientativo en el mismo día.`,
+  },
+  'letras-corporeas-barcelona-tipos-precios': {
+    title: 'Letras corpóreas en Barcelona: tipos, materiales y precios reales',
+    date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '6 min',
+    image: '/services/letras-corporeas.avif',
+    excerpt: 'Aluminio, metacrilato, retroiluminación halo. Todo sobre las letras corpóreas en Barcelona: qué son, qué materiales existen y cuánto cuestan.',
+    content: `Las letras corpóreas son el estándar del retail premium, la hostelería de nivel medio-alto y las sedes corporativas en Barcelona. Son letras en tres dimensiones que se instalan directamente sobre la fachada, una pared interior o un panel de fondo — y que comunican solidez, permanencia y cuidado por la imagen de marca.
+
+Los materiales más habituales son el aluminio (el más duradero y resistente a la intemperie, ideal para exterior), el metacrilato (ligero, con muchas opciones de color y acabado, muy usado en interior), la madera (acabado natural y cálido, muy demandado en restauración y retail lifestyle) y el poliestireno de alta densidad (más económico, para interiores donde no hay impacto físico directo).
+
+Precios orientativos en Barcelona: letras corpóreas básicas sin iluminación desde 2.500 €. Con retroiluminación halo (la luz sale por detrás de la letra creando un halo en la pared) desde 3.500 €. Con iluminación frontal LED desde 3.000 €. Los precios finales dependen de la cantidad de letras, el tamaño total de la instalación, el material elegido y la complejidad de la instalación en la fachada.
+
+¿Cuándo elegir letras corpóreas frente a un rótulo luminoso tipo caja de luz? Las letras corpóreas quedan mejor en fachadas donde quieres que la arquitectura se vea — el espacio entre letra y letra permite que la pared sea parte del diseño. La caja de luz tiene más impacto de noche porque ilumina una superficie mayor. Muchos locales combinan los dos: letras corpóreas para la identidad principal y caja de luz para información secundaria o precios.
+
+El proceso de fabricación en RUD: diseño vectorial adaptado a tu logotipo, mecanizado CNC de cada letra, acabado (lacado en color Pantone, efecto cepillado, espejo dorado o cromado, negro mate), y montaje con perfilería oculta sobre la fachada o pared. La instalación no deja marcas visibles en el soporte.
+
+En Barcelona trabajamos en todos los barrios: Eixample, Gràcia, Sant Martí (22@), Sarrià-Sant Gervasi, Poble Nou y área metropolitana. Visita técnica gratuita, presupuesto en 48 horas, instalación con garantía.`,
+  },
+  'vinilos-escaparate-barcelona-precio-instalacion': {
+    title: 'Vinilos para escaparate en Barcelona: tipos, precios y cuándo usarlos',
+    date: 'Abril 2026', category: 'Señalética & Rótulos', readTime: '5 min',
+    image: '/services/vinilo-escaparate.avif',
+    excerpt: 'Vinilos de corte, impresos, esmerilados, microperforados. Guía completa de vinilos para escaparates en Barcelona con precios reales y ejemplos.',
+    content: `El vinilo de escaparate es la solución de señalética más versátil y económica que existe. Sin obra, sin permisos especiales para la mayoría de casos, y con un impacto visual inmediato. Es el primer rótulo que muchos negocios instalan en Barcelona y, bien hecho, puede durar años y competir visualmente con instalaciones mucho más costosas.
+
+Existen varios tipos de vinilo para escaparate, cada uno con sus características. El vinilo de corte es el más básico: se corta en plotter según el diseño (textos, logos, siluetas) y se aplica directamente sobre el cristal. Sin fondo — el color del vinilo es el diseño. El más económico y rápido. El vinilo impreso permite reproducir fotografías, degradados, ilustraciones o cualquier elemento gráfico en alta resolución. Se puede imprimir con o sin blanco de base, y se lamina para protección UV. El vinilo esmerilado imita el cristal esmerilado y se usa para privacidad (zona baja del escaparate en clínicas, despachos o peluquerías) o como elemento decorativo con el logotipo recortado. El vinilo microperforado permite ver desde dentro hacia fuera con normalidad mientras que desde fuera se ve la imagen impresa — ideal para escaparates donde no se quiere reducir la luz natural.
+
+¿Cuánto cuesta un vinilo de escaparate en Barcelona? Los precios orientativos son: vinilo de corte básico (logotipo + texto) desde 150 € hasta 400 € con instalación. Vinilo impreso para un escaparate de 2 metros desde 300 € hasta 800 €. Vinilo esmerilado con logotipo recortado desde 250 €. Vinilo microperforado de gran formato desde 500 €. Los precios incluyen diseño, impresión e instalación.
+
+El plazo de entrega es el punto fuerte de los vinilos: en 48-72 horas desde la aprobación del arte final podemos tener el vinilo instalado. Para aperturas de local o campañas de temporada es la solución más ágil.
+
+En RUD instalamos vinilos de escaparate en Barcelona para comercios, clínicas, despachos, hoteles y oficinas. Trabajamos tanto el diseño desde cero como la aplicación de artes que el cliente ya tiene. Visita técnica gratuita, presupuesto el mismo día para proyectos estándar.`,
+  },
   'automatizacion-marketing-agencias-n8n': {
     title: 'Cómo automatizamos el 60% de nuestros workflows de marketing con n8n (y €0 de coste)',
     date: 'Noviembre 2025', category: 'Automatización', readTime: '9 min',

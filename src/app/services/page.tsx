@@ -159,7 +159,7 @@ export default function Services() {
                     {[
                       'Rótulos de caja de luz con iluminación LED',
                       'Letras corpóreas: aluminio, metacrilato, 3D retroiluminado',
-                      'Neón LED y neón de vidrio: interior y exterior',
+                      'Neón LED: interior y exterior, cualquier forma',
                       'Vinilos para escaparates: decorativos y publicitarios',
                     ].map((d, j) => (
                       <li key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: 13 }}>
