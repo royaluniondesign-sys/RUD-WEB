@@ -5,10 +5,45 @@ import FAQAccordion from '@/components/FAQAccordion'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'FAQ — Rótulos, Branding y Diseño Web Barcelona · Preguntas Frecuentes | RUD',
-  description: 'Preguntas frecuentes sobre rótulos luminosos, carteles, vinilos, branding y diseño web en Barcelona. Precios, plazos, proceso y más.',
+  title: 'FAQ Rótulos Barcelona — Precios, Plazos y Proceso | Preguntas Frecuentes RUD Studio',
+  description: 'Preguntas frecuentes sobre rótulos luminosos, neón LED, letras corpóreas y vinilos en Barcelona. Precios orientativos, plazos de fabricación, proceso y presupuesto gratis.',
   alternates: { canonical: 'https://royaluniondesign.com/faq' },
 }
+
+const faqsRotulos = [
+  {
+    question: '¿Cuánto cuesta un rótulo luminoso en Barcelona?',
+    answer: 'Depende del tipo. Un vinilo de escaparate desde 300 €. Un neón LED personalizado desde 1.800 €. Letras corpóreas desde 2.500 €. Un rótulo luminoso tipo caja de luz desde 3.200 €. Todos los precios incluyen diseño, fabricación e instalación en Barcelona. Pedimos presupuesto personalizado gratis — sin compromiso.',
+  },
+  {
+    question: '¿Cuánto tiempo tardáis en fabricar un rótulo?',
+    answer: 'Los vinilos de escaparate los entregamos en 48-72h. Para rótulos luminosos y letras corpóreas el plazo es de 5 a 10 días hábiles desde la aprobación del presupuesto. El neón LED puede llegar a 15 días según la complejidad de la forma. Acordamos fechas concretas antes de empezar.',
+  },
+  {
+    question: '¿Hacéis visita técnica gratuita?',
+    answer: 'Sí. La visita técnica es completamente gratuita y sin compromiso en Barcelona y área metropolitana (Cerdanyola del Vallès, Hospitalet, Badalona, Sant Cugat, Sabadell, Terrassa). En la visita medimos el espacio, evaluamos la estructura de sujeción y te asesoramos sobre el tipo de rótulo más adecuado.',
+  },
+  {
+    question: '¿Necesito licencia del ayuntamiento para poner un rótulo?',
+    answer: 'En Barcelona, cualquier rótulo en fachada requiere licencia de actividad y en muchos casos permiso de obras. Nosotros te asesoramos sobre los requisitos concretos para tu local y barrio — algunos tipos de señalética interior no requieren tramitación especial.',
+  },
+  {
+    question: '¿Podéis reproducir mi logo exactamente en el rótulo?',
+    answer: 'Sí. Partimos de tus archivos de identidad corporativa (AI, SVG, PDF) y los adaptamos al formato físico. Si no tienes los archivos en vectorial, podemos vectorizar el logo. El resultado es coherente 100% con tu marca.',
+  },
+  {
+    question: '¿Los rótulos LED tienen garantía?',
+    answer: 'Todos nuestros rótulos LED tienen garantía de fabricación de 2 años. Los componentes LED tienen una vida útil estimada de 50.000 horas (más de 10 años de uso comercial normal). Ofrecemos servicio de mantenimiento y reparación post-garantía.',
+  },
+  {
+    question: '¿Trabajáis fuera de Barcelona?',
+    answer: 'Principalmente trabajamos en Barcelona y el área metropolitana. Para proyectos en el resto de Cataluña o España, consúltanos — evaluamos cada proyecto según la complejidad y la logística de instalación.',
+  },
+  {
+    question: '¿Qué diferencia hay entre neón LED y un rótulo luminoso?',
+    answer: 'El neón LED es un tubo flexible que emite luz continua y se puede doblar en cualquier forma — ideal para tipografías y logos con curvas. Un rótulo luminoso (caja de luz) es una estructura cerrada con frente iluminado desde dentro — ideal para maximizar la visibilidad de marca con mantenimiento mínimo. Son complementarios y muchos locales usan los dos.',
+  },
+]
 
 const faqsGeneral = [
   {
@@ -58,14 +93,11 @@ const faqPageSchema = {
   '@type': 'FAQPage',
   '@id': 'https://royaluniondesign.com/faq#faqpage',
   'url': 'https://royaluniondesign.com/faq',
-  'name': 'Preguntas Frecuentes — RUD Studio Barcelona',
-  'mainEntity': faqsGeneral.map(({ question, answer }) => ({
+  'name': 'FAQ Rótulos Barcelona — Preguntas Frecuentes RUD Studio',
+  'mainEntity': [...faqsRotulos, ...faqsGeneral].map(({ question, answer }) => ({
     '@type': 'Question',
     'name': question,
-    'acceptedAnswer': {
-      '@type': 'Answer',
-      'text': answer,
-    },
+    'acceptedAnswer': { '@type': 'Answer', 'text': answer },
   })),
 }
 
@@ -99,11 +131,40 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* FAQ Accordion */}
+      {/* FAQ — Rótulos */}
+      <section style={{ background: '#fff', paddingBlock: 'clamp(3rem,8vw,5rem)' }}>
+        <div className="container-custom">
+          <div style={{ maxWidth: 720, margin: '0 auto' }}>
+            <ScrollReveal>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: '2rem' }}>
+                <span style={{ width: 36, height: 36, borderRadius: 9999, background: 'rgba(217,119,6,.1)', border: '1px solid rgba(217,119,6,.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, flexShrink: 0 }}>◎</span>
+                <div>
+                  <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: '#D97706', marginBottom: 2 }}>Rótulos & Señalética</p>
+                  <h2 style={{ fontSize: 'clamp(1.1rem,2.5vw,1.5rem)', fontWeight: 700, letterSpacing: '-.02em', color: '#0A0908' }}>Preguntas sobre rótulos en Barcelona</h2>
+                </div>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={80}>
+              <FAQAccordion faqs={faqsRotulos} />
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ — General */}
       <section style={{ background: '#FAFAFA', paddingBlock: 'clamp(3rem,8vw,5rem)' }}>
         <div className="container-custom">
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
-            <ScrollReveal delay={100}>
+            <ScrollReveal>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: '2rem' }}>
+                <span style={{ width: 36, height: 36, borderRadius: 9999, background: '#F0EDE6', border: '1px solid #E2DDD7', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, flexShrink: 0 }}>◈</span>
+                <div>
+                  <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 2 }}>Branding, Web & General</p>
+                  <h2 style={{ fontSize: 'clamp(1.1rem,2.5vw,1.5rem)', fontWeight: 700, letterSpacing: '-.02em', color: '#0A0908' }}>Preguntas generales sobre cómo trabajamos</h2>
+                </div>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={80}>
               <FAQAccordion faqs={faqsGeneral} />
             </ScrollReveal>
           </div>

@@ -80,7 +80,7 @@ export default function About() {
           </ScrollReveal>
           <div className="grid md:grid-cols-4 gap-4">
             {[
-              { num: '01', cat: 'Físico', title: 'Rótulos & Señalética', items: ['Rótulos luminosos LED', 'Letras corpóreas', 'Neón y neón LED', 'Vinilos escaparate', 'Señalética interior', 'Banderolas & POP'], color: '#D97706' },
+              { num: '01', cat: 'Físico', title: 'Rótulos & Señalética', items: ['Rótulos luminosos LED', 'Letras corpóreas', 'Neón LED personalizado', 'Vinilos escaparate', 'Señalética interior', 'Banderolas & POP'], color: '#D97706' },
               { num: '02', cat: 'Identidad', title: 'Branding & Marca', items: ['Brand strategy', 'Identidad visual', 'Logo system', 'Packaging', 'Brand guidelines', 'Naming'], color: '#7B68EE' },
               { num: '03', cat: 'Digital', title: 'Web & E-commerce', items: ['Diseño web Next.js', 'E-commerce Shopify', 'SEO técnico', 'UX/UI', 'CRO y conversión', 'Integraciones API'], color: '#06B6D4' },
               { num: '04', cat: 'Automatización', title: 'IA & Contenido', items: ['Agentes AURA & Hermes', 'Automatización n8n', 'Copywriting', 'Motion branding', 'Marketing digital', 'Workflows IA'], color: '#22C55E' },
@@ -190,12 +190,16 @@ export default function About() {
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '2rem' }}>
               <div>
                 <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.5rem)', fontWeight: 700, color: 'white', marginBottom: 10, letterSpacing: '-0.03em' }}>¿Trabajamos juntos?</h2>
-                <p style={{ color: '#6B7280', fontSize: 14 }}>Cuéntanos tu proyecto — respondemos en menos de 24h.</p>
+                <p style={{ color: '#6B7280', fontSize: 14 }}>Presupuesto gratis en 24h. Sin compromiso.</p>
               </div>
-              <Link href="/contact" style={{ flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: 'white', color: '#0A0908', fontWeight: 600, borderRadius: 9999, textDecoration: 'none', fontSize: 15 }}>
-                Contactar
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </Link>
+              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                <Link href="/rotulos" style={{ flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: '#D97706', color: '#fff', fontWeight: 700, borderRadius: 9999, textDecoration: 'none', fontSize: 15 }}>
+                  Presupuesto rótulo →
+                </Link>
+                <Link href="/contact" style={{ flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: 'white', color: '#0A0908', fontWeight: 600, borderRadius: 9999, textDecoration: 'none', fontSize: 15 }}>
+                  Contactar →
+                </Link>
+              </div>
             </div>
           </ScrollReveal>
         </div>

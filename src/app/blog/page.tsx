@@ -19,6 +19,28 @@ const posts = [
     featured: true,
   },
   {
+    slug: 'neon-led-barcelona-precio-instalacion',
+    title: 'Neón LED en Barcelona: precio, instalación y cómo elegir el tuyo',
+    date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '6 min',
+    image: '/services/neon-interior.avif',
+    excerpt: 'Todo lo que necesitas saber sobre el neón LED en Barcelona: precios reales, plazos de fabricación, tipos de instalación y qué negocios lo usan más.',
+    featured: true,
+  },
+  {
+    slug: 'letras-corporeas-barcelona-tipos-precios',
+    title: 'Letras corpóreas en Barcelona: tipos, materiales y precios reales',
+    date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '6 min',
+    image: '/services/letras-corporeas.avif',
+    excerpt: 'Aluminio, metacrilato, retroiluminación halo. Todo sobre las letras corpóreas en Barcelona: qué son, qué materiales existen y cuánto cuestan.',
+  },
+  {
+    slug: 'vinilos-escaparate-barcelona-precio-instalacion',
+    title: 'Vinilos para escaparate en Barcelona: tipos, precios y cuándo usarlos',
+    date: 'Abril 2026', category: 'Señalética & Rótulos', readTime: '5 min',
+    image: '/services/vinilo-escaparate.avif',
+    excerpt: 'Vinilos de corte, impresos, esmerilados, microperforados. Guía completa de vinilos para escaparates en Barcelona con precios reales y ejemplos.',
+  },
+  {
     slug: 'aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st',
     title: 'AURA: El Agente IA Autónomo que Lidera la Operación de RUD Studio desde Telegram',
     date: 'Abril 2026', category: 'IA & Tecnología', readTime: '4 min',
