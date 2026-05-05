@@ -3,7 +3,6 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
-
 export const metadata = {
   title: 'Rótulos Barcelona · Neón LED, Letras Corpóreas, Vinilos Escaparate | RUD Studio',
   description: 'Empresa de rótulos en Barcelona. Fabricamos e instalamos rótulos personalizados: neón LED, letras corpóreas, rótulos luminosos, vinilos escaparate y señalética corporativa. Presupuesto en 24h.',
@@ -24,291 +23,299 @@ const rotulosSchema = {
   'name': 'Rótulos y Señalética Barcelona',
   'description': 'Fabricación e instalación de rótulos personalizados en Barcelona: neón LED, letras corpóreas, rótulos luminosos, vinilos de escaparate y señalética corporativa. Taller propio en Cerdanyola del Vallès.',
   'url': 'https://royaluniondesign.com/rotulos',
-  'provider': {
-    '@id': 'https://royaluniondesign.com/#organization',
-  },
-  'areaServed': {
-    '@type': 'City',
-    'name': 'Barcelona',
-  },
+  'provider': { '@id': 'https://royaluniondesign.com/#organization' },
+  'areaServed': { '@type': 'City', 'name': 'Barcelona' },
   'serviceType': 'Fabricación e instalación de rótulos',
   'hasOfferCatalog': {
     '@type': 'OfferCatalog',
     'name': 'Tipos de rótulo',
     'itemListElement': [
-      {
-        '@type': 'Offer',
-        'itemOffered': {
-          '@type': 'Service',
-          'name': 'Rótulos Neón LED Barcelona',
-          'description': 'Neón LED flexible y neón de vidrio artesanal. Cualquier tipografía, logo o forma. Para escaparates, hostelería, retail y eventos.',
-          'url': 'https://royaluniondesign.com/contact?servicio=neon',
-        },
-      },
-      {
-        '@type': 'Offer',
-        'itemOffered': {
-          '@type': 'Service',
-          'name': 'Rótulos Luminosos Barcelona',
-          'description': 'Caja de luz, bandeja calada, backlit LED. Máxima visibilidad nocturna con consumo mínimo.',
-          'url': 'https://royaluniondesign.com/contact?servicio=luminosos',
-        },
-      },
-      {
-        '@type': 'Offer',
-        'itemOffered': {
-          '@type': 'Service',
-          'name': 'Letras Corpóreas y 3D Barcelona',
-          'description': 'Letras corpóreas en aluminio, metacrilato, madera y acero. Con o sin retroiluminación tipo halo.',
-          'url': 'https://royaluniondesign.com/contact?servicio=letras',
-        },
-      },
-      {
-        '@type': 'Offer',
-        'itemOffered': {
-          '@type': 'Service',
-          'name': 'Vinilos Escaparate Barcelona',
-          'description': 'Vinilos impresos, esmerilados y recortados en plotter para escaparates. Cambio estacional sin obra.',
-          'url': 'https://royaluniondesign.com/contact?servicio=vinilos',
-        },
-      },
-      {
-        '@type': 'Offer',
-        'itemOffered': {
-          '@type': 'Service',
-          'name': 'Señalética Interior Barcelona',
-          'description': 'Directorios, identificación de espacios, wayfinding y señales de acceso corporativas.',
-          'url': 'https://royaluniondesign.com/contact?servicio=senaletica',
-        },
-      },
-      {
-        '@type': 'Offer',
-        'itemOffered': {
-          '@type': 'Service',
-          'name': 'Publicidad Exterior Barcelona',
-          'description': 'Lonas de gran formato, banderolas, vallas, fachadas y wrapping de vehículos.',
-          'url': 'https://royaluniondesign.com/contact?servicio=exterior',
-        },
-      },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Rótulos Neón LED Barcelona', 'url': 'https://royaluniondesign.com/contact?servicio=neon' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Rótulos Luminosos Barcelona', 'url': 'https://royaluniondesign.com/contact?servicio=luminosos' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Letras Corpóreas Barcelona', 'url': 'https://royaluniondesign.com/contact?servicio=letras' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Vinilos Escaparate Barcelona', 'url': 'https://royaluniondesign.com/contact?servicio=vinilos' } },
     ],
   },
 }
 
-const PROCESO = [
-  {
-    n: '01',
-    title: 'Medición y briefing',
-    desc: 'Fotos y medidas por WhatsApp. Visita técnica gratuita en BCN para proyectos grandes.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M2 12h20M2 12l4-4M2 12l4 4M22 12l-4-4M22 12l-4 4"/>
-        <line x1="12" y1="5" x2="12" y2="19"/>
-      </svg>
-    ),
-  },
-  {
-    n: '02',
-    title: 'Diseño y propuesta',
-    desc: 'Propuesta visual y presupuesto detallado en menos de 24h.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 20h9"/>
-        <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
-      </svg>
-    ),
-  },
-  {
-    n: '03',
-    title: 'Fabricación en taller',
-    desc: 'Todo fabricado en Barcelona. Materiales premium, control de calidad.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
-      </svg>
-    ),
-  },
-  {
-    n: '04',
-    title: 'Instalación profesional',
-    desc: 'Equipo propio. Sin afectar tu horario comercial. Permisos incluidos.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-        <circle cx="12" cy="10" r="3"/>
-      </svg>
-    ),
-  },
-]
-
-const FAQ = [
-  {
-    q: '¿Cuánto cuesta un rótulo neón LED en Barcelona?',
-    a: 'El neón LED personalizado parte de 1.800€ para una instalación comercial completa — diseño, fabricación e instalación incluidos. El precio varía según el tamaño, la complejidad de la forma y el tipo de soporte. Pídenos medidas y te enviamos presupuesto en 24h.',
-  },
-  {
-    q: '¿Cuánto cuesta un rótulo luminoso (caja de luz)?',
-    a: 'Los rótulos luminosos tipo caja de luz parten de 3.200€ para una instalación comercial estándar con iluminación LED interior. El precio depende de las dimensiones, el acabado y la complejidad de la instalación. Solicita presupuesto sin compromiso.',
-  },
-  {
-    q: '¿Cuánto cuestan las letras corpóreas?',
-    a: 'Las letras corpóreas en aluminio, metacrilato o madera parten de 2.500€ para un proyecto estándar con instalación incluida. El retroiluminado tipo halo o las letras de gran formato pueden superar ese precio según el proyecto. Te damos precio exacto con medidas.',
-  },
-  {
-    q: '¿Cuánto tiempo tardáis en fabricar e instalar un rótulo?',
-    a: 'Los vinilos de escaparate los entregamos en 48–72h. Rótulos luminosos y letras corpóreas entre 5 y 10 días hábiles. El neón LED a medida puede tardar hasta 15 días. Instalamos en el horario que mejor te venga, sin afectar tu actividad comercial.',
-  },
-  {
-    q: '¿Hacéis visita técnica previa y es gratuita?',
-    a: 'Sí. La visita técnica en Barcelona y área metropolitana es completamente gratuita y sin compromiso. También podemos hacer presupuesto orientativo con fotos y medidas que nos mandes por WhatsApp.',
-  },
-  {
-    q: '¿Trabajáis fuera de Barcelona?',
-    a: 'Nuestra zona habitual de instalación es Barcelona ciudad y el área metropolitana (Cerdanyola, Badalona, Hospitalet, Terrassa, Sabadell…). Para proyectos en el resto de Cataluña o España, consúltanos — los hacemos según presupuesto de desplazamiento.',
-  },
-]
-
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  'mainEntity': FAQ.map(({ q, a }) => ({
-    '@type': 'Question',
-    'name': q,
-    'acceptedAnswer': { '@type': 'Answer', 'text': a },
-  })),
+  'mainEntity': [
+    { '@type': 'Question', 'name': '¿Cuánto cuesta un rótulo neón LED en Barcelona?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El neón LED personalizado parte de 1.800€ para una instalación comercial completa — diseño, fabricación e instalación incluidos. El precio varía según el tamaño y la complejidad de la forma.' } },
+    { '@type': 'Question', 'name': '¿Cuánto cuesta un rótulo luminoso?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Los rótulos luminosos tipo caja de luz parten de 3.200€ para una instalación comercial estándar con iluminación LED interior.' } },
+    { '@type': 'Question', 'name': '¿Cuánto cuestan las letras corpóreas?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Las letras corpóreas en aluminio, metacrilato o madera parten de 2.500€ para un proyecto estándar con instalación incluida.' } },
+    { '@type': 'Question', 'name': '¿Cuánto tiempo tardáis en fabricar un rótulo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Los vinilos en 48-72h. Rótulos luminosos y letras corpóreas entre 5-10 días hábiles. Neón LED hasta 15 días.' } },
+    { '@type': 'Question', 'name': '¿Hacéis visita técnica gratuita?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, visita técnica completamente gratuita en Barcelona y área metropolitana.' } },
+    { '@type': 'Question', 'name': '¿Trabajáis fuera de Barcelona?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Principalmente Barcelona y área metropolitana. Para proyectos en Cataluña o España, consúltanos.' } },
+  ],
 }
+
+const TRABAJOS = [
+  {
+    img: '/services/gal-1.avif',
+    tipo: 'Neón LED · Fachada',
+    nombre: 'Trattoria di Marco',
+    barrio: 'Gràcia, Barcelona',
+    desc: 'Neón LED rojo «MARCO» en fachada + letras corpóreas aluminio cepillado. El restaurante duplicó su visibilidad nocturna en Carrer de Verdi.',
+    tag: 'Hostelería',
+    href: '/contact?servicio=neon',
+  },
+  {
+    img: '/services/gal-3.avif',
+    tipo: 'Neón LED · Interior',
+    nombre: 'Coffee Bloom',
+    barrio: 'Poblenou, Barcelona',
+    desc: 'Neón «BLOOM» en warm white sobre pared de ladrillo visto. Convertido en punto de referencia fotográfico para clientes del barrio 22@.',
+    tag: 'Cafetería',
+    href: '/contact?servicio=neon',
+  },
+  {
+    img: '/services/gal-5.avif',
+    tipo: 'Rótulo Luminoso · Exterior',
+    nombre: 'Bar Atlántico',
+    barrio: 'Barceloneta, Barcelona',
+    desc: 'Caja de luz de gran formato con iluminación LED perimetral. Visible desde 200m en el paseo marítimo, incluso con luz de día.',
+    tag: 'Bar',
+    href: '/contact?servicio=luminosos',
+  },
+  {
+    img: '/services/gal-2.avif',
+    tipo: 'Letras Corpóreas · Fachada',
+    nombre: 'Moda Plural',
+    barrio: 'Eixample, Barcelona',
+    desc: 'Letras corpóreas en aluminio negro mate + retroiluminación halo blanca. Identidad visual aplicada a fachada con coherencia total.',
+    tag: 'Moda',
+    href: '/contact?servicio=letras',
+  },
+  {
+    img: '/services/gal-6.avif',
+    tipo: 'Señalética · Hotelera',
+    nombre: 'Hotel Trafalgar BCN',
+    barrio: 'Sarrià-Sant Gervasi, Barcelona',
+    desc: 'Proyecto completo de señalética para 64 habitaciones: directorios de planta, identificación de suites y señalética de emergencia en aluminio anodizado.',
+    tag: 'Hotel',
+    href: '/contact?servicio=senaletica',
+  },
+  {
+    img: '/services/gal-4.avif',
+    tipo: 'Vinilos · Escaparate',
+    nombre: 'Clínica Llorens',
+    barrio: 'Sant Gervasi, Barcelona',
+    desc: 'Vinilos esmerilados con logotipo recortado + franja de privacidad. Estética clínica que transmite profesionalidad desde la calle.',
+    tag: 'Salud',
+    href: '/contact?servicio=vinilos',
+  },
+]
+
+const TIPOS = [
+  {
+    href: '/contact?servicio=neon',
+    img: '/services/neon-interior.avif',
+    alt: 'Rótulo neón LED personalizado Barcelona',
+    tags: ['Neón LED', 'Neón de vidrio', 'Interior y exterior'],
+    title: 'Neón LED & Neón de Vidrio',
+    desc: 'Cualquier tipografía, logo o forma. Neón flexible o de vidrio artesanal para escaparates, hostelería y retail.',
+    featured: true,
+  },
+  {
+    href: '/contact?servicio=luminosos',
+    img: '/services/rotulos-luminosos.avif',
+    alt: 'Rótulos luminosos caja de luz Barcelona',
+    tags: ['Más solicitado'],
+    title: 'Rótulos Luminosos',
+    desc: 'Caja de luz, bandeja calada, backlit LED. Máxima visibilidad nocturna, consumo mínimo.',
+    featured: false,
+  },
+  {
+    href: '/contact?servicio=letras',
+    img: '/services/letras-corporeas.avif',
+    alt: 'Letras corpóreas Barcelona aluminio metacrilato',
+    tags: [],
+    title: 'Letras Corpóreas',
+    desc: 'Aluminio, metacrilato, madera, acero. Con o sin retroiluminación halo.',
+    featured: false,
+  },
+  {
+    href: '/contact?servicio=vinilos',
+    img: '/services/vinilo-escaparate.avif',
+    alt: 'Vinilos escaparate Barcelona',
+    tags: [],
+    title: 'Vinilos Escaparate',
+    desc: 'Impresos, esmerilados, recortados. Cambio estacional sin obra.',
+    featured: false,
+  },
+  {
+    href: '/contact?servicio=senaletica',
+    img: '/services/senaletica-interior.avif',
+    alt: 'Señalética interior corporativa Barcelona',
+    tags: [],
+    title: 'Señalética Interior',
+    desc: 'Directorios, wayfinding, accesos y evacuación.',
+    featured: false,
+  },
+  {
+    href: '/contact?servicio=exterior',
+    img: '/services/publicidad-exterior.avif',
+    alt: 'Publicidad exterior Barcelona lonas banderolas',
+    tags: [],
+    title: 'Publicidad Exterior',
+    desc: 'Lonas, banderolas, vallas, fachadas, wrapping.',
+    featured: false,
+  },
+]
+
+const FAQ_ITEMS = [
+  { q: '¿Cuánto cuesta un rótulo neón LED en Barcelona?', a: 'El neón LED personalizado parte de 1.800€ para una instalación comercial completa — diseño, fabricación e instalación incluidos. El precio varía según el tamaño, la complejidad de la forma y el tipo de soporte. Pídenos medidas y te enviamos presupuesto en 24h.' },
+  { q: '¿Cuánto cuesta un rótulo luminoso (caja de luz)?', a: 'Los rótulos luminosos tipo caja de luz parten de 3.200€ para una instalación comercial estándar con iluminación LED interior. El precio depende de las dimensiones, el acabado y la complejidad de la instalación.' },
+  { q: '¿Cuánto cuestan las letras corpóreas?', a: 'Las letras corpóreas en aluminio, metacrilato o madera parten de 2.500€ para un proyecto estándar con instalación incluida. El retroiluminado tipo halo o las letras de gran formato pueden superar ese precio según el proyecto.' },
+  { q: '¿Cuánto tiempo tardáis en fabricar e instalar?', a: 'Los vinilos de escaparate los entregamos en 48–72h. Rótulos luminosos y letras corpóreas entre 5 y 10 días hábiles. El neón LED a medida puede tardar hasta 15 días. Instalamos en el horario que mejor te venga.' },
+  { q: '¿Hacéis visita técnica previa y es gratuita?', a: 'Sí. La visita técnica en Barcelona y área metropolitana es completamente gratuita y sin compromiso. También podemos hacer presupuesto orientativo con fotos y medidas que nos mandes por Telegram.' },
+  { q: '¿Trabajáis fuera de Barcelona?', a: 'Nuestra zona habitual es Barcelona ciudad y el área metropolitana. Para proyectos en el resto de Cataluña o España, consúltanos — los hacemos según presupuesto de desplazamiento.' },
+]
+
+const TelegramIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.47c-.148.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.088 14.6l-2.95-.924c-.64-.203-.654-.64.136-.948l11.527-4.447c.533-.194 1-.116.761.967z"/>
+  </svg>
+)
 
 export default function Rotulos() {
   return (
-    <main style={{ background: '#0A0908' }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(rotulosSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+    <main style={{ background: '#F7F5F1' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rotulosSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar light />
 
-      {/* HERO */}
-      <section style={{ position: 'relative', height: '100vh', minHeight: 640, overflow: 'hidden', display: 'flex', alignItems: 'flex-end' }}>
+      {/* ─── HERO ────────────────────────────────────────────────────────── */}
+      <section style={{ position: 'relative', height: '100vh', minHeight: 680, overflow: 'hidden' }}>
         <img
           src="/services/hero-rotulos.avif"
-          alt="Rótulos personalizados Barcelona — neón LED, letras corpóreas y señalética · RUD Studio"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+          alt="Rótulos personalizados Barcelona — neón LED, letras corpóreas y señalética"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
         />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.1) 100%)' }} />
+        {/* Gradient — lighter overlay so image is visible */}
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(8,7,6,0.97) 0%, rgba(8,7,6,0.65) 45%, rgba(8,7,6,0.2) 100%)' }} />
 
-        <div className="container-custom" style={{ position: 'relative', zIndex: 2, paddingBottom: 'clamp(3rem,8vw,6rem)' }}>
-          <div style={{ marginBottom: '1.5rem' }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 16px', borderRadius: 9999, background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.18)' }}>
-              <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'white', display: 'inline-block', opacity: 0.7 }} />
-              <span style={{ fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.75)' }}>Fabricación propia · Barcelona</span>
+        {/* Pill — below fixed navbar (68px) */}
+        <div style={{ position: 'absolute', top: 84, left: 0, right: 0, zIndex: 10 }}>
+          <div className="container-custom">
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 16px', borderRadius: 9999, background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', backdropFilter: 'blur(8px)' }}>
+              <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#4ADE80', display: 'inline-block', boxShadow: '0 0 6px rgba(74,222,128,0.8)' }} />
+              <span style={{ fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.85)' }}>Taller propio · Barcelona · Disponible ahora</span>
             </span>
           </div>
+        </div>
 
-          <h1 style={{ fontSize: 'clamp(2.4rem,6vw,5rem)', fontWeight: 700, color: 'white', letterSpacing: '-0.03em', lineHeight: 1.05, maxWidth: '18ch', marginBottom: '1.5rem' }}>
-            Rótulos que hacen tu local{' '}
-            <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.45)' }}>imposible de ignorar.</em>
-          </h1>
-          <p style={{ fontSize: 'clamp(0.95rem,1.8vw,1.1rem)', color: 'rgba(255,255,255,0.65)', maxWidth: '46ch', lineHeight: 1.7, marginBottom: '2.5rem' }}>
-            Empresa de rótulos personalizados en Barcelona. Fabricamos e instalamos neón LED, letras corpóreas, rótulos luminosos, vinilos de escaparate y señalética corporativa — con taller propio en BCN.
-          </p>
+        {/* Hero content — pinned to bottom */}
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 5 }}>
+          <div className="container-custom" style={{ paddingBottom: 'clamp(2.5rem,6vw,5rem)' }}>
+            <h1 style={{
+              fontSize: 'clamp(2.8rem,7.5vw,6.5rem)',
+              fontWeight: 800,
+              color: 'white',
+              letterSpacing: '-0.04em',
+              lineHeight: 0.95,
+              maxWidth: '16ch',
+              marginBottom: 'clamp(1.5rem,3vw,2.5rem)',
+            }}>
+              Rótulos que hacen tu local{' '}
+              <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.38)' }}>imposible de ignorar.</em>
+            </h1>
 
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '3rem' }}>
-            <TrackedLink href="/contact?servicio=rotulos" label="Pedir presupuesto gratis" location="hero-rotulos"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: '#f8f8f8', color: '#171717', borderRadius: 9999, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>
-              Pedir presupuesto gratis →
-            </TrackedLink>
-            <a href="#tipos"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', border: '1px solid rgba(255,255,255,0.25)', color: 'rgba(255,255,255,0.8)', borderRadius: 9999, fontSize: 14, textDecoration: 'none' }}>
-              Ver tipos de rótulo ↓
-            </a>
-          </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.75rem', marginBottom: 'clamp(2rem,4vw,3rem)' }}>
+              <TrackedLink href="/contact?servicio=rotulos" label="Pedir presupuesto gratis" location="hero-rotulos"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.9rem 1.75rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 700, fontSize: 14, textDecoration: 'none', flexShrink: 0 }}>
+                Pedir presupuesto gratis →
+              </TrackedLink>
+              <a href="https://t.me/+34645593227" target="_blank" rel="noopener noreferrer"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.9rem 1.5rem', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 14, textDecoration: 'none', backdropFilter: 'blur(8px)' }}>
+                <TelegramIcon />
+                Telegram · respuesta en minutos
+              </a>
+            </div>
 
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem' }}>
-            {[
-              ['24h', 'Presupuesto'],
-              ['0€', 'Visita técnica'],
-              ['BCN', 'Taller propio'],
-              ['2 años', 'Garantía'],
-            ].map(([n, l]) => (
-              <div key={l}>
-                <p style={{ fontSize: 'clamp(1.4rem,3vw,2rem)', fontWeight: 700, color: 'white', lineHeight: 1 }}>{n}</p>
-                <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 4 }}>{l}</p>
-              </div>
-            ))}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'clamp(1.5rem,4vw,3.5rem)', borderTop: '1px solid rgba(255,255,255,0.12)', paddingTop: '1.5rem' }}>
+              {[['24h', 'Presupuesto'], ['0€', 'Visita técnica'], ['BCN', 'Taller propio'], ['2 años', 'Garantía']].map(([n, l]) => (
+                <div key={l}>
+                  <p style={{ fontSize: 'clamp(1.5rem,3vw,2.2rem)', fontWeight: 800, color: 'white', lineHeight: 1, letterSpacing: '-0.03em' }}>{n}</p>
+                  <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.12em', marginTop: 4 }}>{l}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* TIPOS */}
-      <section id="tipos" style={{ background: '#F7F5F1', padding: 'clamp(4rem,8vw,7rem) 0' }}>
+      {/* ─── TICKER STRIP ──────────────────────────────────────────────────── */}
+      <div style={{ background: '#0A0908', borderTop: '1px solid #1A1A1A', borderBottom: '1px solid #1A1A1A', overflow: 'hidden', padding: '14px 0' }}>
+        <div style={{ display: 'flex', gap: '3rem', animation: 'ticker 30s linear infinite', whiteSpace: 'nowrap' }}>
+          {Array(3).fill(0).map((_, ri) => (
+            <span key={ri} style={{ display: 'inline-flex', gap: '3rem', flexShrink: 0 }}>
+              {['Neón LED', 'Letras Corpóreas', 'Rótulos Luminosos', 'Vinilos Escaparate', 'Señalética Hotelera', 'Publicidad Exterior', 'Fabricación Propia', 'Instalación Barcelona'].map((t, i) => (
+                <span key={i} style={{ fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.16em', color: i % 2 === 0 ? 'rgba(255,255,255,0.5)' : 'rgba(255,255,255,0.2)' }}>
+                  {t}
+                </span>
+              ))}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ─── TIPOS ─────────────────────────────────────────────────────────── */}
+      <section id="tipos" style={{ background: '#0A0908', padding: 'clamp(4rem,8vw,7rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 12 }}>Lo que fabricamos</p>
-            <h2 style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', fontWeight: 700, letterSpacing: '-.03em', marginBottom: '0.5rem' }}>6 tipos de rótulo</h2>
-            <p style={{ fontSize: 15, color: '#6B7280', marginBottom: '3rem', maxWidth: '50ch' }}>Desde el neón más artesanal hasta la señalética de gran formato.</p>
+            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: 'clamp(2rem,5vw,4rem)' }}>
+              <div>
+                <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: 8 }}>Lo que fabricamos</p>
+                <h2 style={{ fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: 'white', letterSpacing: '-0.04em', lineHeight: 1 }}>6 tipos de rótulo</h2>
+              </div>
+              <a href="#trabajos" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Ver trabajos realizados ↓</a>
+            </div>
           </ScrollReveal>
 
-          {/* Neón — featured full width */}
+          {/* Neón featured */}
           <ScrollReveal>
-            <Link href="/contact?servicio=neon" style={{ display: 'block', textDecoration: 'none', marginBottom: '1rem' }} className="group">
-              <div style={{ borderRadius: 16, overflow: 'hidden', position: 'relative', height: 'clamp(280px,38vw,500px)' }} className="card-lift">
-                <img src="/services/neon-interior.avif" alt="Rótulo neón LED personalizado a medida — neón de vidrio y flexible Barcelona"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.7s' }} />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)' }} />
+            <Link href="/contact?servicio=neon" style={{ display: 'block', textDecoration: 'none', marginBottom: '0.75rem' }}>
+              <div style={{ borderRadius: 16, overflow: 'hidden', position: 'relative', height: 'clamp(300px,40vw,520px)' }} className="card-lift">
+                <img src="/services/neon-interior.avif" alt="Rótulo neón LED personalizado Barcelona"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.7s ease' }} />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.0) 55%)' }} />
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: 'clamp(1.5rem,4vw,2.5rem)' }}>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: '1rem' }}>
+                  <div style={{ display: 'flex', gap: 6, marginBottom: '1rem', flexWrap: 'wrap' }}>
                     {['Neón LED', 'Neón de vidrio', 'Cualquier forma', 'Interior y exterior'].map(t => (
-                      <span key={t} style={{ padding: '4px 12px', borderRadius: 9999, fontSize: 11, fontWeight: 500, background: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.75)', border: '1px solid rgba(255,255,255,0.2)' }}>{t}</span>
+                      <span key={t} style={{ padding: '4px 12px', borderRadius: 9999, fontSize: 11, fontWeight: 600, background: 'rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.8)', border: '1px solid rgba(255,255,255,0.15)' }}>{t}</span>
                     ))}
                   </div>
-                  <h3 style={{ fontSize: 'clamp(1.5rem,3vw,2.2rem)', fontWeight: 700, color: 'white', marginBottom: '0.5rem' }}>Neón LED & Neón de Vidrio</h3>
-                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', maxWidth: '50ch', lineHeight: 1.6 }}>
-                    Cualquier tipografía, logo o forma. Neón LED flexible o neón de vidrio artesanal. Ideal para escaparates, hostelería, retail y eventos.
-                  </p>
-                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: '1.25rem', padding: '0.625rem 1.5rem', background: 'rgba(255,255,255,0.1)', borderRadius: 9999, fontSize: 13, fontWeight: 600, color: 'white', border: '1px solid rgba(255,255,255,0.2)' }}>
-                    Presupuesto neón →
+                  <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
+                    <div>
+                      <h3 style={{ fontSize: 'clamp(1.5rem,3.5vw,2.5rem)', fontWeight: 800, color: 'white', letterSpacing: '-0.03em' }}>Neón LED & Neón de Vidrio</h3>
+                      <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', maxWidth: '48ch', lineHeight: 1.6, marginTop: 6 }}>Cualquier tipografía, logo o forma. Para escaparates, hostelería, retail y eventos en Barcelona.</p>
+                    </div>
+                    <div style={{ padding: '0.625rem 1.25rem', background: 'rgba(255,255,255,0.1)', borderRadius: 9999, fontSize: 13, fontWeight: 600, color: 'white', border: '1px solid rgba(255,255,255,0.2)', flexShrink: 0 }}>
+                      Presupuesto neón →
+                    </div>
                   </div>
                 </div>
               </div>
             </Link>
           </ScrollReveal>
 
-          {/* 2 cols */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: '1rem', marginBottom: '1rem' }}>
-            {[
-              {
-                href: '/contact?servicio=luminosos',
-                img: '/services/rotulos-luminosos.avif',
-                alt: 'Rótulos luminosos Barcelona — caja de luz backlit LED para comercio',
-                tag: 'Más solicitado',
-                title: 'Rótulos Luminosos',
-                desc: 'Caja de luz, bandeja calada, backlit LED. Máxima visibilidad nocturna, consumo mínimo.',
-              },
-              {
-                href: '/contact?servicio=letras',
-                img: '/services/letras-corporeas.avif',
-                alt: 'Letras corpóreas Barcelona — aluminio, metacrilato y retroiluminación halo',
-                tag: null,
-                title: 'Letras Corpóreas & 3D',
-                desc: 'Aluminio, metacrilato, madera, acero. Con o sin retroiluminación tipo halo.',
-              },
-            ].map((item) => (
+          {/* 2+3 grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px,1fr))', gap: '0.75rem', marginBottom: '0.75rem' }}>
+            {TIPOS.slice(1, 3).map(item => (
               <ScrollReveal key={item.title}>
-                <Link href={item.href} style={{ display: 'block', textDecoration: 'none' }} className="group">
-                  <div style={{ borderRadius: 16, overflow: 'hidden', position: 'relative', height: 300 }} className="card-lift">
-                    <img src={item.img} alt={item.alt} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.7s' }} />
-                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.88) 0%, transparent 55%)' }} />
-                    {item.tag && (
-                      <div style={{ position: 'absolute', top: 16, left: 16 }}>
-                        <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.85)', padding: '4px 12px', borderRadius: 9999, background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)' }}>{item.tag}</span>
-                      </div>
+                <Link href={item.href} style={{ display: 'block', textDecoration: 'none' }}>
+                  <div style={{ borderRadius: 14, overflow: 'hidden', position: 'relative', height: 300 }} className="card-lift">
+                    <img src={item.img} alt={item.alt} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.7s ease' }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 55%)' }} />
+                    {item.tags[0] && (
+                      <span style={{ position: 'absolute', top: 14, left: 14, padding: '3px 10px', borderRadius: 9999, fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.14em', background: 'rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.9)', border: '1px solid rgba(255,255,255,0.2)' }}>{item.tags[0]}</span>
                     )}
                     <div style={{ position: 'absolute', bottom: 0, padding: '1.5rem' }}>
-                      <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'white', marginBottom: '0.4rem' }}>{item.title}</h3>
-                      <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', lineHeight: 1.5 }}>{item.desc}</p>
+                      <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'white', letterSpacing: '-0.02em', marginBottom: 4 }}>{item.title}</h3>
+                      <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', lineHeight: 1.5 }}>{item.desc}</p>
                     </div>
                   </div>
                 </Link>
@@ -316,39 +323,16 @@ export default function Rotulos() {
             ))}
           </div>
 
-          {/* 3 cols */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: '1rem' }}>
-            {[
-              {
-                href: '/contact?servicio=vinilos',
-                img: '/services/vinilo-escaparate.avif',
-                alt: 'Vinilos escaparate Barcelona — gráfica recortada y esmerilada en luna de comercio',
-                title: 'Vinilos Escaparate',
-                desc: 'Impresos, esmerilados, recortados en plotter. Cambio estacional sin obra.',
-              },
-              {
-                href: '/contact?servicio=senaletica',
-                img: '/services/senaletica-interior.avif',
-                alt: 'Señalética interior Barcelona — directorios, wayfinding y señales corporativas',
-                title: 'Señalética Interior',
-                desc: 'Directorios, identificación de espacios, señales de acceso y evacuación.',
-              },
-              {
-                href: '/contact?servicio=exterior',
-                img: '/services/publicidad-exterior.avif',
-                alt: 'Publicidad exterior Barcelona — lonas gran formato, banderolas y fachadas',
-                title: 'Publicidad Exterior',
-                desc: 'Lonas, banderolas, vallas, fachadas y wrapping de vehículos.',
-              },
-            ].map((item) => (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px,1fr))', gap: '0.75rem' }}>
+            {TIPOS.slice(3).map(item => (
               <ScrollReveal key={item.title}>
-                <Link href={item.href} style={{ display: 'block', textDecoration: 'none' }} className="group">
-                  <div style={{ borderRadius: 16, overflow: 'hidden', position: 'relative', height: 250 }} className="card-lift">
-                    <img src={item.img} alt={item.alt} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.7s' }} />
-                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 55%)' }} />
+                <Link href={item.href} style={{ display: 'block', textDecoration: 'none' }}>
+                  <div style={{ borderRadius: 14, overflow: 'hidden', position: 'relative', height: 240 }} className="card-lift">
+                    <img src={item.img} alt={item.alt} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.7s ease' }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.88) 0%, transparent 55%)' }} />
                     <div style={{ position: 'absolute', bottom: 0, padding: '1.25rem' }}>
-                      <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'white', marginBottom: '0.3rem' }}>{item.title}</h3>
-                      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', lineHeight: 1.5 }}>{item.desc}</p>
+                      <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'white', letterSpacing: '-0.02em', marginBottom: 3 }}>{item.title}</h3>
+                      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>{item.desc}</p>
                     </div>
                   </div>
                 </Link>
@@ -358,30 +342,124 @@ export default function Rotulos() {
         </div>
       </section>
 
-      {/* SECTORES */}
+      {/* ─── TRABAJOS / PORTFOLIO ──────────────────────────────────────────── */}
+      <section id="trabajos" style={{ background: '#F7F5F1', padding: 'clamp(4rem,8vw,7rem) 0' }}>
+        <div className="container-custom">
+          <ScrollReveal>
+            <div style={{ marginBottom: 'clamp(2.5rem,5vw,4rem)' }}>
+              <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 10 }}>Instalaciones reales · Barcelona</p>
+              <h2 style={{ fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: '0.75rem' }}>
+                Trabajos que hablan<br />
+                <em style={{ fontWeight: 300, fontStyle: 'italic', color: '#9CA3AF' }}>por sí solos.</em>
+              </h2>
+              <p style={{ fontSize: 15, color: '#6B7280', maxWidth: '48ch', lineHeight: 1.7 }}>
+                Cada rótulo tiene su historia. Estos son algunos de los locales que ya se ven desde la calle.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Featured first project — full width */}
+          <ScrollReveal>
+            <Link href={TRABAJOS[0].href} style={{ display: 'block', textDecoration: 'none', marginBottom: '1rem' }}>
+              <div style={{ borderRadius: 20, overflow: 'hidden', position: 'relative', height: 'clamp(340px,45vw,560px)' }} className="card-lift">
+                <img src={TRABAJOS[0].img} alt={`${TRABAJOS[0].nombre} · ${TRABAJOS[0].tipo}`}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.8s ease' }} />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.93) 0%, rgba(0,0,0,0.15) 55%, transparent 100%)' }} />
+                <div style={{ position: 'absolute', top: 20, left: 20 }}>
+                  <span style={{ padding: '5px 14px', borderRadius: 9999, fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.14em', background: 'rgba(255,255,255,0.15)', color: 'white', border: '1px solid rgba(255,255,255,0.2)' }}>{TRABAJOS[0].tag}</span>
+                </div>
+                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: 'clamp(1.5rem,4vw,2.5rem)', display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'flex-end', gap: '1rem' }}>
+                  <div>
+                    <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '.14em', marginBottom: 6 }}>{TRABAJOS[0].tipo} · {TRABAJOS[0].barrio}</p>
+                    <h3 style={{ fontSize: 'clamp(1.6rem,3.5vw,2.5rem)', fontWeight: 800, color: 'white', letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: 8 }}>{TRABAJOS[0].nombre}</h3>
+                    <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', maxWidth: '55ch', lineHeight: 1.65 }}>{TRABAJOS[0].desc}</p>
+                  </div>
+                  <div style={{ padding: '0.75rem 1.5rem', background: 'white', borderRadius: 9999, fontSize: 13, fontWeight: 700, color: '#0A0908', flexShrink: 0, whiteSpace: 'nowrap' }}>
+                    Presupuesto similar →
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </ScrollReveal>
+
+          {/* 2-col grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px,1fr))', gap: '1rem', marginBottom: '1rem' }}>
+            {TRABAJOS.slice(1, 3).map(t => (
+              <ScrollReveal key={t.nombre}>
+                <Link href={t.href} style={{ display: 'block', textDecoration: 'none' }}>
+                  <div style={{ borderRadius: 16, overflow: 'hidden', position: 'relative', height: 320 }} className="card-lift">
+                    <img src={t.img} alt={`${t.nombre} · ${t.tipo}`}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.8s ease' }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 50%)' }} />
+                    <div style={{ position: 'absolute', top: 16, left: 16 }}>
+                      <span style={{ padding: '3px 10px', borderRadius: 9999, fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.14em', background: 'rgba(255,255,255,0.13)', color: 'rgba(255,255,255,0.85)', border: '1px solid rgba(255,255,255,0.18)' }}>{t.tag}</span>
+                    </div>
+                    <div style={{ position: 'absolute', bottom: 0, padding: '1.5rem' }}>
+                      <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '.12em', marginBottom: 4 }}>{t.tipo} · {t.barrio}</p>
+                      <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'white', letterSpacing: '-0.02em', marginBottom: 6 }}>{t.nombre}</h3>
+                      <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', lineHeight: 1.55 }}>{t.desc}</p>
+                    </div>
+                  </div>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* 3-col grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px,1fr))', gap: '1rem' }}>
+            {TRABAJOS.slice(3).map(t => (
+              <ScrollReveal key={t.nombre}>
+                <Link href={t.href} style={{ display: 'block', textDecoration: 'none' }}>
+                  <div style={{ borderRadius: 14, overflow: 'hidden', position: 'relative', height: 260 }} className="card-lift">
+                    <img src={t.img} alt={`${t.nombre} · ${t.tipo}`}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.8s ease' }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.88) 0%, transparent 50%)' }} />
+                    <div style={{ position: 'absolute', bottom: 0, padding: '1.25rem' }}>
+                      <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.38)', textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 3 }}>{t.tipo}</p>
+                      <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'white', letterSpacing: '-0.02em', marginBottom: 4 }}>{t.nombre}</h3>
+                      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>{t.desc}</p>
+                    </div>
+                  </div>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal>
+            <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
+              <TrackedLink href="/contact?servicio=rotulos" label="Tu local aquí" location="trabajos-rotulos"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 2rem', background: '#0A0908', color: 'white', borderRadius: 9999, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
+                Tu negocio, el siguiente →
+              </TrackedLink>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ─── SECTORES ─────────────────────────────────────────────────────── */}
       <section style={{ background: '#0A0908', padding: 'clamp(4rem,8vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: 12 }}>Sectores de aplicación</p>
-            <h2 style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', fontWeight: 700, color: 'white', letterSpacing: '-.03em', marginBottom: '0.75rem' }}>Rótulos para cada negocio</h2>
-            <p style={{ fontSize: 15, color: '#6B7280', marginBottom: '3rem', maxWidth: '52ch', lineHeight: 1.7 }}>Fabricamos rótulos a medida para cualquier sector. Cada tipología de local tiene sus propios requisitos de visibilidad, normativa y estética.</p>
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: 10 }}>Sectores de aplicación</p>
+            <h2 style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', fontWeight: 800, color: 'white', letterSpacing: '-0.04em', marginBottom: '0.5rem' }}>Rótulos para cada negocio</h2>
+            <p style={{ fontSize: 15, color: '#6B7280', maxWidth: '48ch', lineHeight: 1.7, marginBottom: 'clamp(2rem,4vw,3rem)' }}>Cada sector tiene sus propios requisitos de visibilidad, normativa y estética.</p>
           </ScrollReveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(240px,1fr))', gap: '1px', background: '#1A1A1A', borderRadius: 16, overflow: 'hidden' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px,1fr))', gap: '1px', background: '#1C1C1C', borderRadius: 16, overflow: 'hidden' }}>
             {[
-              { sector: 'Restaurantes & Bares', kw: 'rótulo para restaurante Barcelona', desc: 'Neón LED en barra, menús luminosos, rótulos de fachada con materiales resistentes a la humedad y la grasa.' },
-              { sector: 'Hoteles & Hostelería', kw: 'señalética hotelera Barcelona', desc: 'Señalética de habitaciones, directorios de planta, rótulos de recepción y branding de espacios comunes.' },
-              { sector: 'Retail & Tiendas', kw: 'rótulos para tiendas Barcelona', desc: 'Vinilos de escaparate, letras corpóreas en fachada, rótulos luminosos que incrementan la visibilidad exterior.' },
-              { sector: 'Oficinas & Corporativo', kw: 'señalética corporativa Barcelona', desc: 'Letras corpóreas en recepción, directorios de empresa, señalética de accesos y placas de despacho.' },
-              { sector: 'Peluquerías & Estética', kw: 'rótulo para peluquería Barcelona', desc: 'Neón decorativo, carteles de fachada, vinilos para escaparate con logotipo y horarios.' },
-              { sector: 'Clínicas & Salud', kw: 'rótulos clínicas Barcelona', desc: 'Señalética de salas y consultas, placas de acceso, wayfinding y rotulación de fachada normalizada.' },
-              { sector: 'Gimnasios & Fitness', kw: 'rótulos gimnasio Barcelona', desc: 'Letras corpóreas de gran formato, murales de vinilo motivacionales, neón LED en zona de pesas.' },
-              { sector: 'Eventos & Ferias', kw: 'rótulos para eventos Barcelona', desc: 'Stands con estructura y rotulación, photo walls, señalética temporal y vinilados de suelo y cristal.' },
+              { sector: 'Restaurantes & Bares', kw: 'rótulo para restaurante Barcelona', desc: 'Neón LED en barra, menús luminosos, rótulos de fachada.' },
+              { sector: 'Hoteles & Hostelería', kw: 'señalética hotelera Barcelona', desc: 'Señalética de habitaciones, directorios de planta, recepción.' },
+              { sector: 'Retail & Tiendas', kw: 'rótulos para tiendas Barcelona', desc: 'Vinilos de escaparate, letras corpóreas, rótulos luminosos.' },
+              { sector: 'Oficinas & Corporativo', kw: 'señalética corporativa Barcelona', desc: 'Letras en recepción, directorios, placas de despacho.' },
+              { sector: 'Peluquerías & Estética', kw: 'rótulo para peluquería Barcelona', desc: 'Neón decorativo, carteles de fachada, vinilos con logotipo.' },
+              { sector: 'Clínicas & Salud', kw: 'rótulos clínicas Barcelona', desc: 'Señalética de salas, placas de acceso, wayfinding normativo.' },
+              { sector: 'Gimnasios & Fitness', kw: 'rótulos gimnasio Barcelona', desc: 'Letras corpóreas gran formato, murales de vinilo, neón LED.' },
+              { sector: 'Eventos & Ferias', kw: 'rótulos para eventos Barcelona', desc: 'Stands, photo walls, señalética temporal y vinilados.' },
             ].map((item, i) => (
-              <ScrollReveal key={item.sector} delay={i * 50}>
-                <div style={{ background: '#0A0908', padding: '2rem 1.75rem' }}>
-                  <p style={{ fontSize: 11, color: '#444', marginBottom: '0.75rem', fontFamily: 'monospace', letterSpacing: '.05em' }}>{item.kw}</p>
-                  <h3 style={{ fontWeight: 700, color: 'white', fontSize: '1rem', marginBottom: '0.6rem' }}>{item.sector}</h3>
-                  <p style={{ fontSize: 13, color: '#6B7280', lineHeight: 1.7, margin: 0 }}>{item.desc}</p>
+              <ScrollReveal key={item.sector} delay={i * 40}>
+                <div style={{ background: '#0A0908', padding: '1.75rem 1.5rem' }}>
+                  <p style={{ fontSize: 10, color: '#3A3A3A', marginBottom: '0.6rem', fontFamily: 'monospace', letterSpacing: '.04em' }}>{item.kw}</p>
+                  <h3 style={{ fontWeight: 700, color: 'white', fontSize: '0.95rem', marginBottom: '0.5rem', letterSpacing: '-0.01em' }}>{item.sector}</h3>
+                  <p style={{ fontSize: 13, color: '#6B7280', lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -389,57 +467,25 @@ export default function Rotulos() {
         </div>
       </section>
 
-      {/* PROCESO */}
-      <section style={{ background: '#0A0908', padding: 'clamp(4rem,8vw,7rem) 0' }}>
+      {/* ─── PROCESO ──────────────────────────────────────────────────────── */}
+      <section style={{ background: '#F7F5F1', padding: 'clamp(4rem,8vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: 12 }}>Cómo trabajamos</p>
-            <h2 style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', fontWeight: 700, color: 'white', letterSpacing: '-.03em', marginBottom: '3rem' }}>Del briefing a la instalación</h2>
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 10 }}>Cómo trabajamos</p>
+            <h2 style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', fontWeight: 800, letterSpacing: '-0.04em', marginBottom: 'clamp(2rem,4vw,3.5rem)' }}>Del briefing a la instalación</h2>
           </ScrollReveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 1, background: '#1A1A1A', borderRadius: 16, overflow: 'hidden' }}>
-            {PROCESO.map((s, i) => (
-              <ScrollReveal key={s.n} delay={i * 70}>
-                <div style={{ background: '#0A0908', padding: '2.5rem 2rem' }}>
-                  <div style={{ color: '#6B7280', marginBottom: '1.25rem' }}>{s.icon}</div>
-                  <p style={{ fontSize: 10, fontFamily: 'monospace', color: '#444', marginBottom: '0.75rem', letterSpacing: '.1em' }}>{s.n}</p>
-                  <h3 style={{ fontWeight: 700, color: 'white', fontSize: '1rem', marginBottom: '0.75rem' }}>{s.title}</h3>
-                  <p style={{ fontSize: 13, color: '#6B7280', lineHeight: 1.7 }}>{s.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* GALERÍA */}
-      <section style={{ background: '#F7F5F1', padding: 'clamp(3rem,6vw,5rem) 0' }}>
-        <div className="container-custom">
-          <ScrollReveal>
-            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
-              <div>
-                <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 6 }}>Trabajos realizados</p>
-                <h2 style={{ fontSize: 'clamp(1.4rem,3vw,2rem)', fontWeight: 700, letterSpacing: '-.03em' }}>Instalaciones recientes</h2>
-              </div>
-              <Link href="/contact?servicio=rotulos"
-                style={{ fontSize: 13, fontWeight: 600, color: '#0A0908', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                Tu local aquí →
-              </Link>
-            </div>
-          </ScrollReveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(180px,1fr))', gap: 8 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: '2rem' }}>
             {[
-              { src: '/services/gal-1.avif', alt: 'Trabajo de rótulos RUD Studio Barcelona' },
-              { src: '/services/gal-2.avif', alt: 'Rótulo personalizado fabricado en Barcelona — RUD Studio' },
-              { src: '/services/gal-3.avif', alt: 'Neón LED a medida instalado en Barcelona — RUD Studio' },
-              { src: '/services/gal-4.avif', alt: 'Letras corpóreas en local comercial Barcelona — RUD Studio' },
-              { src: '/services/gal-5.avif', alt: 'Rótulo luminoso caja de luz Barcelona — RUD Studio' },
-              { src: '/services/gal-6.avif', alt: 'Señalética interior corporativa Barcelona — RUD Studio' },
-              { src: '/services/gal-7.avif', alt: 'Rótulo de fachada instalado en Barcelona — RUD Studio' },
-              { src: '/services/gal-8.avif', alt: 'Instalación de rótulo exterior Barcelona — RUD Studio' },
-            ].map((item, i) => (
-              <ScrollReveal key={item.src} delay={i * 40}>
-                <div style={{ borderRadius: 12, overflow: 'hidden', aspectRatio: '1/1' }} className="card-lift">
-                  <img src={item.src} alt={item.alt} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              { n: '01', title: 'Medición y briefing', desc: 'Mándanos fotos del espacio por Telegram. Visita técnica gratuita para proyectos en Barcelona.' },
+              { n: '02', title: 'Diseño y propuesta', desc: 'Propuesta visual y presupuesto detallado en menos de 24h. Sin compromiso.' },
+              { n: '03', title: 'Fabricación en taller', desc: 'Todo fabricado en nuestro taller de Barcelona. Materiales premium, control de calidad total.' },
+              { n: '04', title: 'Instalación profesional', desc: 'Equipo propio. Sin afectar tu horario comercial. Permisos y licencias incluidos.' },
+            ].map((s, i) => (
+              <ScrollReveal key={s.n} delay={i * 80}>
+                <div style={{ borderTop: '2px solid #E5E0D8', paddingTop: '1.5rem' }}>
+                  <p style={{ fontSize: 10, fontFamily: 'monospace', color: '#C4BFB8', marginBottom: '1rem', letterSpacing: '.1em' }}>{s.n}</p>
+                  <h3 style={{ fontWeight: 700, color: '#0A0908', fontSize: '1rem', marginBottom: '0.75rem', letterSpacing: '-0.01em' }}>{s.title}</h3>
+                  <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7 }}>{s.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -447,14 +493,12 @@ export default function Rotulos() {
         </div>
       </section>
 
-      {/* SEO text block */}
-      <section style={{ background: 'white', paddingBlock: 'clamp(3rem,6vw,4.5rem)' }}>
-        <div className="container-custom" style={{ maxWidth: 760 }}>
+      {/* ─── SEO TEXT ─────────────────────────────────────────────────────── */}
+      <section style={{ background: 'white', paddingBlock: 'clamp(3rem,5vw,4rem)' }}>
+        <div className="container-custom" style={{ maxWidth: 800 }}>
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 12 }}>Empresa de rótulos en Barcelona</p>
-            <h2 style={{ fontSize: 'clamp(1.4rem,3vw,2rem)', fontWeight: 700, letterSpacing: '-.03em', marginBottom: 20 }}>
-              Rótulos personalizados fabricados en Barcelona
-            </h2>
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 10 }}>Empresa de rótulos en Barcelona</p>
+            <h2 style={{ fontSize: 'clamp(1.4rem,3vw,2rem)', fontWeight: 700, letterSpacing: '-.03em', marginBottom: 20 }}>Rótulos personalizados fabricados en Barcelona</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '1.5rem' }}>
               <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.8, margin: 0 }}>
                 RUD Studio es una empresa de rótulos en Barcelona con taller propio en Cerdanyola del Vallès. Fabricamos rótulos personalizados para comercios, restaurantes, hoteles y empresas: neón LED, letras corpóreas, rótulos luminosos tipo caja de luz, vinilos de escaparate y señalética corporativa.
@@ -467,22 +511,22 @@ export default function Rotulos() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* ─── FAQ ──────────────────────────────────────────────────────────── */}
       <section style={{ background: '#F7F5F1', padding: 'clamp(4rem,8vw,6rem) 0' }}>
         <div className="container-custom" style={{ maxWidth: 820 }}>
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 12 }}>Preguntas frecuentes</p>
-            <h2 style={{ fontSize: 'clamp(1.8rem,4vw,2.8rem)', fontWeight: 700, letterSpacing: '-.03em', marginBottom: '3rem' }}>Todo lo que necesitas saber</h2>
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 10 }}>Preguntas frecuentes</p>
+            <h2 style={{ fontSize: 'clamp(1.8rem,4vw,2.8rem)', fontWeight: 800, letterSpacing: '-0.04em', marginBottom: 'clamp(2rem,4vw,3rem)' }}>Todo lo que necesitas saber</h2>
           </ScrollReveal>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
-            {FAQ.map((item, i) => (
-              <ScrollReveal key={i} delay={i * 40}>
-                <details style={{ borderTop: '1px solid #E5E0D8', padding: '1.5rem 0' }}>
-                  <summary style={{ fontSize: 'clamp(0.95rem,1.8vw,1.05rem)', fontWeight: 600, cursor: 'pointer', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 16, userSelect: 'none' }}>
+          <div>
+            {FAQ_ITEMS.map((item, i) => (
+              <ScrollReveal key={i} delay={i * 30}>
+                <details style={{ borderTop: '1px solid #E5E0D8' }} className="faq-item">
+                  <summary style={{ padding: '1.5rem 0', fontSize: 'clamp(0.9rem,1.8vw,1.05rem)', fontWeight: 600, cursor: 'pointer', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, userSelect: 'none' }}>
                     <span>{item.q}</span>
-                    <span style={{ flexShrink: 0, width: 20, height: 20, color: '#9CA3AF', marginTop: 2, fontSize: 20, lineHeight: 1 }}>+</span>
+                    <span className="faq-icon" style={{ flexShrink: 0, width: 24, height: 24, borderRadius: '50%', background: '#E5E0D8', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, fontWeight: 300, color: '#9CA3AF', transition: 'transform 0.3s ease, background 0.2s' }}>+</span>
                   </summary>
-                  <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.8, marginTop: '1rem', maxWidth: '68ch' }}>{item.a}</p>
+                  <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.8, paddingBottom: '1.5rem', maxWidth: '65ch' }}>{item.a}</p>
                 </details>
               </ScrollReveal>
             ))}
@@ -490,45 +534,63 @@ export default function Rotulos() {
           </div>
           <ScrollReveal>
             <p style={{ fontSize: 13, color: '#9CA3AF', marginTop: '2rem', lineHeight: 1.7 }}>
-              ¿Tienes otra pregunta? Escríbenos por{' '}
-              <a href="https://wa.me/34645593227" style={{ color: '#0A0908', fontWeight: 600, textDecoration: 'underline' }}>WhatsApp</a>{' '}
-              o{' '}
-              <a href="mailto:hello@royaluniondesign.com" style={{ color: '#0A0908', fontWeight: 600, textDecoration: 'underline' }}>email</a>{' '}
-              y te respondemos en menos de 24h.
+              ¿Otra pregunta?{' '}
+              <a href="https://t.me/+34645593227" style={{ color: '#0A0908', fontWeight: 600, textDecoration: 'underline' }}>Telegram</a>
+              {' '}o{' '}
+              <a href="mailto:hello@royaluniondesign.com" style={{ color: '#0A0908', fontWeight: 600, textDecoration: 'underline' }}>email</a>
+              {' '}— respondemos en menos de 24h.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* CTA */}
-      <section style={{ background: '#0A0908', padding: 'clamp(4rem,8vw,7rem) 0', textAlign: 'center' }}>
+      {/* ─── CTA FINAL ────────────────────────────────────────────────────── */}
+      <section style={{ background: '#0A0908', padding: 'clamp(5rem,10vw,8rem) 0', textAlign: 'center' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: '1rem' }}>Presupuesto gratuito</p>
-            <h2 style={{ fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 700, color: 'white', letterSpacing: '-.03em', lineHeight: 1.1, maxWidth: '20ch', margin: '0 auto 1.25rem' }}>
-              Respuesta en 24h. Sin compromiso.
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: '1rem' }}>Presupuesto gratuito · Respuesta en 24h</p>
+            <h2 style={{ fontSize: 'clamp(2.2rem,6vw,4.5rem)', fontWeight: 800, color: 'white', letterSpacing: '-0.04em', lineHeight: 1.0, maxWidth: '18ch', margin: '0 auto 1.5rem' }}>
+              Manda las medidas.<br />
+              <em style={{ fontWeight: 300, fontStyle: 'italic', color: 'rgba(255,255,255,0.3)' }}>Te respondemos hoy.</em>
             </h2>
-            <p style={{ fontSize: 15, color: '#6B7280', maxWidth: '44ch', margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
-              Mándanos fotos del espacio y las medidas por WhatsApp o email. Presupuesto detallado sin compromiso.
+            <p style={{ fontSize: 15, color: '#6B7280', maxWidth: '42ch', margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
+              Fotos del espacio + medidas aproximadas. Eso es todo lo que necesitamos para darte precio.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'center' }}>
+              <a href="https://t.me/+34645593227?text=Hola%2C%20quiero%20presupuesto%20para%20un%20r%C3%B3tulo%20en%20Barcelona"
+                target="_blank" rel="noopener noreferrer"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '1rem 2.25rem', background: '#229ED9', color: 'white', borderRadius: 9999, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
+                <TelegramIcon />
+                Escríbenos por Telegram
+              </a>
               <TrackedLink href="/contact?servicio=rotulos" label="Pedir presupuesto" location="bottom-rotulos"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 2rem', background: '#f8f8f8', color: '#171717', borderRadius: 9999, fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>
-                Pedir presupuesto →
-              </TrackedLink>
-              <TrackedLink href="https://wa.me/34645593227?text=Hola%2C%20quiero%20presupuesto%20para%20un%20r%C3%B3tulo" label="WhatsApp presupuesto" location="bottom-rotulos"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 2rem', background: '#25D366', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                WhatsApp
-              </TrackedLink>
-              <TrackedLink href="/contact?servicio=rotulos&tipo=llamada" label="Solicitar llamada" location="bottom-rotulos"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 2rem', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.75)', borderRadius: 9999, fontSize: 14, textDecoration: 'none' }}>
-                Solicitar llamada
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 2rem', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.8)', borderRadius: 9999, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>
+                Formulario de presupuesto
               </TrackedLink>
             </div>
+            <p style={{ fontSize: 12, color: '#444', marginTop: '1.5rem' }}>
+              O llámanos directo: <a href="tel:+34645593227" style={{ color: 'rgba(255,255,255,0.35)', textDecoration: 'none', fontWeight: 600 }}>+34 645 593 227</a>
+            </p>
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Ticker animation + FAQ open/close styles */}
+      <style>{`
+        @keyframes ticker {
+          from { transform: translateX(0); }
+          to { transform: translateX(-33.33%); }
+        }
+        .faq-item[open] .faq-icon {
+          transform: rotate(45deg);
+          background: #0A0908;
+          color: white;
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        @media (max-width: 640px) {
+          .contact-cols { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </main>
   )
 }

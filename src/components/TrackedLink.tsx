@@ -17,7 +17,7 @@ export function TrackedLink({ href, label, location, children, ...rest }: Props)
   const handleClick = () => {
     if (href.startsWith('tel:')) trackPhoneClick(location)
     else if (href.startsWith('mailto:')) trackEmailClick(href.replace('mailto:', ''), location)
-    else if (href.includes('wa.me') || href.includes('whatsapp')) trackWhatsAppClick(location)
+    else if (href.includes('wa.me') || href.includes('whatsapp') || href.includes('t.me') || href.includes('telegram')) trackWhatsAppClick(location)
     else trackCTA(label, href, location)
   }
   return (
@@ -31,7 +31,7 @@ export function TrackedA({ href, label, location, children, ...rest }: Props) {
   const handleClick = () => {
     if (href.startsWith('tel:')) trackPhoneClick(location)
     else if (href.startsWith('mailto:')) trackEmailClick(href.replace('mailto:', ''), location)
-    else if (href.includes('wa.me') || href.includes('whatsapp')) trackWhatsAppClick(location)
+    else if (href.includes('wa.me') || href.includes('whatsapp') || href.includes('t.me') || href.includes('telegram')) trackWhatsAppClick(location)
     else trackCTA(label, href, location)
   }
   return (
