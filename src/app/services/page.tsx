@@ -3,8 +3,8 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata = {
-  title: 'Servicios Barcelona — Rótulos Luminosos, Branding, Diseño Web y IA | RUD Studio',
-  description: 'RUD Studio: empresa de rótulos luminosos, neón LED, letras corpóreas y vinilos en Barcelona. Branding estratégico, diseño web Next.js, e-commerce Shopify y automatización IA. Todo bajo un techo.',
+  title: 'Servicios · Rótulos, Branding y Diseño Web Barcelona | RUD Studio',
+  description: 'Rótulos luminosos, neón LED, letras corpóreas, branding, diseño web Next.js y automatización IA en Barcelona. Fabricación propia. Presupuesto en 24h.',
   keywords: 'rótulos luminosos Barcelona, neón LED Barcelona, letras corpóreas Barcelona, vinilos escaparate Barcelona, branding Barcelona, agencia diseño web Barcelona, e-commerce Shopify Barcelona, señalética corporativa Barcelona, automatización IA Barcelona',
   alternates: { canonical: 'https://royaluniondesign.com/services' },
 }
@@ -122,8 +122,8 @@ export default function Services() {
                 <h2 style={{ fontSize: 'clamp(1.6rem,3.5vw,2.6rem)', fontWeight: 800, letterSpacing: '-.035em', lineHeight: 1.1, color: '#0A0908', maxWidth: '20ch' }}>
                   Rótulos Luminosos & Señalética Corporativa
                 </h2>
-                <p style={{ fontSize: 13, color: '#0A0908', fontStyle: 'italic', marginTop: 8 }}>
-                  Tu marca en la calle. Fabricación propia en Barcelona.
+                <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7, marginTop: 10, maxWidth: '52ch' }}>
+                  Fabricamos e instalamos rótulos luminosos, neón LED, letras corpóreas y vinilos de escaparate en Barcelona desde nuestro taller propio. Cada rótulo se diseña y produce a medida para que tu local sea imposible de ignorar desde la calle, tanto de día como de noche.
                 </p>
               </div>
               <Link href="/rotulos"
