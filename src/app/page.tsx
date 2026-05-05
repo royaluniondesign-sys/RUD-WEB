@@ -67,25 +67,18 @@ function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-wrap justify-center gap-3 mt-8 animate-fade-in-up anim-d3">
-          <Link href="/services#rotulos"
-            onClick={() => trackCTA('Ver rótulos y señalética', '/services#rotulos', 'hero')}
-            className="font-barlow font-medium text-sm text-[#171717] bg-[#f8f8f8] hover:bg-white transition-colors duration-200 px-7 py-3.5"
-            style={{ borderRadius: 2 }}>
-            Ver rótulos y señalética →
-          </Link>
           <Link href="/contact"
             onClick={() => trackCTA('Pedir presupuesto', '/contact', 'hero')}
+            className="font-barlow font-semibold text-sm text-[#171717] bg-white hover:bg-[#f0f0f0] transition-colors duration-200 px-8 py-3.5"
+            style={{ borderRadius: 2 }}>
+            Pedir presupuesto gratis →
+          </Link>
+          <Link href="/rotulos"
+            onClick={() => trackCTA('Ver rótulos', '/rotulos', 'hero')}
             className="font-barlow font-medium text-sm text-white border border-white/30 hover:border-white/60 transition-colors duration-200 px-7 py-3.5"
             style={{ borderRadius: 2 }}>
-            Pedir presupuesto
+            Rótulos Barcelona
           </Link>
-        </div>
-
-        {/* Keyword pills */}
-        <div className="flex flex-wrap justify-center gap-2 mt-8 animate-fade-in-up anim-d3">
-          {['Rótulos Luminosos','Señalética Corporativa','Vinilos Escaparates','Letras Corpóreas','Branding','Diseño Web','Neón LED','E-commerce Shopify'].map(t => (
-            <span key={t} style={{padding:'4px 12px',borderRadius:9999,fontSize:'11px',fontWeight:500,background:'rgba(255,255,255,0.1)',color:'rgba(255,255,255,0.65)',backdropFilter:'blur(4px)',border:'1px solid rgba(255,255,255,0.15)'}}>{t}</span>
-          ))}
         </div>
       </div>
     </section>
@@ -116,10 +109,10 @@ function Marquee() {
 // ═══════════════════════════════════════════════════════════
 function Stats() {
   const stats = [
-    { number: '50+', label: 'Proyectos entregados' },
-    { number: '95+', label: 'Lighthouse score medio' },
-    { number: '24h', label: 'Tiempo de respuesta' },
-    { number: '100%', label: 'Clientes satisfechos' },
+    { number: '+8', label: 'Años fabricando en BCN' },
+    { number: '24h', label: 'Presupuesto sin compromiso' },
+    { number: '0€', label: 'Visita técnica gratuita' },
+    { number: 'BCN', label: 'Taller propio en Barcelona' },
   ]
   return (
     <section style={{background:'#FAFAFA',padding:'clamp(3rem,6vw,5rem) 0'}}>
@@ -134,6 +127,95 @@ function Stats() {
             </ScrollReveal>
           ))}
         </div>
+      </div>
+    </section>
+  )
+}
+
+// ═══════════════════════════════════════════════════════════
+// RÓTULOS STRIP — tipos + keywords semánticas + CTA
+// ═══════════════════════════════════════════════════════════
+function RotulosStrip() {
+  const tipos = [
+    {
+      titulo: 'Neón LED',
+      kw: 'Rótulos neón LED Barcelona',
+      desc: 'Neón flexible LED personalizado. Perfecto para escaparates, hostelería y locales comerciales. Bajo consumo, alta durabilidad.',
+    },
+    {
+      titulo: 'Letras Corpóreas',
+      kw: 'Letras corpóreas Barcelona',
+      desc: 'Letras en volumen de acero, aluminio o poliestireno con o sin iluminación interior. Presencia máxima en fachada.',
+    },
+    {
+      titulo: 'Cajas de Luz',
+      kw: 'Rótulos luminosos Barcelona',
+      desc: 'Cajas de luz LED con frente en vinilo, metacrilato o tela tensada. Visibilidad 24h con consumo mínimo.',
+    },
+    {
+      titulo: 'Vinilos Escaparate',
+      kw: 'Vinilos escaparate Barcelona',
+      desc: 'Vinilos de corte, impresos y microperforados para escaparates y cristaleras. Instalación el mismo día.',
+    },
+    {
+      titulo: 'Señalética Interior',
+      kw: 'Señalética corporativa Barcelona',
+      desc: 'Directorios, balizas, señales de evacuación y señalética de marca para oficinas, hoteles y comercios.',
+    },
+    {
+      titulo: 'Publicidad Exterior',
+      kw: 'Publicidad exterior Barcelona',
+      desc: 'Banderolas, lamas, tótems y fachadas completas. Materiales adaptados a la intemperie y normativa local.',
+    },
+  ]
+
+  return (
+    <section style={{ background: '#0A0908', padding: 'clamp(4rem,7vw,6rem) 0' }}>
+      <div className="container-custom">
+        <ScrollReveal>
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '3rem' }}>
+            <div>
+              <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.16em', color: 'rgba(255,255,255,0.25)', marginBottom: '0.75rem' }}>
+                Empresa de rótulos · Barcelona
+              </p>
+              <h2 style={{ fontSize: 'clamp(1.75rem,4vw,2.75rem)', fontWeight: 700, color: 'white', letterSpacing: '-0.03em', lineHeight: 1.15, maxWidth: '480px' }}>
+                Fabricamos e instalamos<br />
+                <span style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.45)' }}>todo tipo de rótulos en BCN.</span>
+              </h2>
+            </div>
+            <Link href="/rotulos"
+              onClick={() => trackCTA('Ver todos los rótulos', '/rotulos', 'rotulos-strip')}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.75rem 1.5rem', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.7)', borderRadius: 2, fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none', transition: 'border-color 0.2s', whiteSpace: 'nowrap' }}>
+              Ver todos los rótulos →
+            </Link>
+          </div>
+        </ScrollReveal>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(280px,1fr))', gap: 1, background: 'rgba(255,255,255,0.06)', borderRadius: 2, overflow: 'hidden' }}>
+          {tipos.map((t, i) => (
+            <ScrollReveal key={t.titulo} delay={i * 50}>
+              <div style={{ background: '#0A0908', padding: 'clamp(1.25rem,3vw,1.75rem)', height: '100%' }}>
+                <p style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.14em', color: 'rgba(255,255,255,0.22)', marginBottom: '0.5rem' }}>{t.kw}</p>
+                <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: 'white', marginBottom: '0.625rem' }}>{t.titulo}</h3>
+                <p style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.4)', lineHeight: 1.65 }}>{t.desc}</p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+
+        <ScrollReveal delay={200}>
+          <div style={{ marginTop: '2.5rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.25rem', padding: 'clamp(1.25rem,3vw,1.75rem)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+            <p style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.5)', maxWidth: '420px', lineHeight: 1.6 }}>
+              Visita técnica gratuita en Barcelona. Mándanos las medidas y el espacio — presupuesto en menos de 24h.
+            </p>
+            <Link href="/contact?servicio=rotulos"
+              onClick={() => trackCTA('Pedir presupuesto rótulo', '/contact?servicio=rotulos', 'rotulos-strip-bottom')}
+              className="font-barlow font-semibold text-sm text-[#171717] bg-white hover:bg-[#f0f0f0] transition-colors duration-200 px-7 py-3.5"
+              style={{ borderRadius: 2, textDecoration: 'none', display: 'inline-block', whiteSpace: 'nowrap' }}>
+              Pedir presupuesto de rótulo →
+            </Link>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )
@@ -236,101 +318,34 @@ function Services() {
 // AURA — full section with terminal + capabilities + CTA
 // ═══════════════════════════════════════════════════════════
 function AuraSection() {
-  const capabilities = [
-    { label: 'ANALISIS', title: 'Análisis de briefings', desc: 'Procesamos tu brief con IA para extraer insights clave y oportunidades estratégicas.' },
-    { label: 'CONTENIDO', title: 'Generación de contenido', desc: 'Copy, posts, emails y guiones optimizados para tu marca y audiencia.' },
-    { label: 'WORKFLOW', title: 'Automatización de workflows', desc: 'Conectamos herramientas y automatizamos procesos repetitivos de tu negocio.' },
-    { label: 'SEO', title: 'SEO técnico e investigación', desc: 'Auditorías, keyword research y optimización técnica impulsados por IA.' },
-    { label: 'DATOS', title: 'Análisis de datos', desc: 'Métricas, reportes y visualizaciones para decisiones basadas en datos reales.' },
-    { label: 'CODIGO', title: 'Asistencia en desarrollo', desc: 'Generación y revisión de código, testing automatizado y deployment.' },
-  ]
-
   return (
-    <section style={{background:'#06040E',position:'relative',overflow:'hidden',padding:'clamp(4rem,8vw,7rem) 0'}}>
-      {/* Subtle grid background */}
-      <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(rgba(123,104,238,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(123,104,238,0.03) 1px,transparent 1px)',backgroundSize:'64px 64px',pointerEvents:'none'}} />
-
-      <div className="container-custom" style={{position:'relative',zIndex:1}}>
-        {/* Header */}
+    <section style={{ background: '#F7F5F1', borderTop: '1px solid #E5E2DC', padding: 'clamp(2.5rem,5vw,4rem) 0' }}>
+      <div className="container-custom">
         <ScrollReveal>
-          <div style={{textAlign:'center',marginBottom:'4rem'}}>
-            <div style={{display:'inline-flex',alignItems:'center',gap:'8px',marginBottom:'1.5rem',padding:'6px 14px',borderRadius:'9999px',border:'1px solid rgba(123,104,238,0.25)',background:'rgba(123,104,238,0.1)'}}>
-              <span style={{width:'6px',height:'6px',borderRadius:'50%',background:'var(--chariot)'}} className="animate-pulse" />
-              <span style={{fontSize:'10px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.15em',color:'var(--chariot)'}}>AURA & HERMES · Agentes IA propios</span>
-            </div>
-            <h2 style={{fontSize:'clamp(2rem,5vw,3.5rem)',fontWeight:700,color:'white',letterSpacing:'-0.035em',lineHeight:1.1,marginBottom:'1rem',maxWidth:'700px',margin:'0 auto 1rem'}}>
-              Aura & Hermes trabajan mientras tú duermes
-            </h2>
-            <p style={{color:'#6B7280',lineHeight:1.7,fontSize:'clamp(0.9rem,1.5vw,1.05rem)',maxWidth:'560px',margin:'0 auto'}}>
-              Nuestros agentes de IA propios: Aura para contenido y comunicación, Hermes para operaciones y CRM. 100% local, sin coste recurrente, sin que tus datos salgan de tu servidor.
-            </p>
-          </div>
-        </ScrollReveal>
-
-        {/* Terminal mockup */}
-        <ScrollReveal delay={100}>
-          <div className="chariot-glow" style={{maxWidth:'680px',margin:'0 auto 4rem',borderRadius:'12px',border:'1px solid rgba(123,104,238,0.2)',background:'#0D0B18',overflow:'hidden'}}>
-            {/* Terminal header */}
-            <div style={{display:'flex',alignItems:'center',gap:'8px',padding:'12px 16px',borderBottom:'1px solid rgba(123,104,238,0.1)',background:'rgba(123,104,238,0.04)'}}>
-              <span style={{width:'10px',height:'10px',borderRadius:'50%',background:'#FF5F57'}} />
-              <span style={{width:'10px',height:'10px',borderRadius:'50%',background:'#FEBC2E'}} />
-              <span style={{width:'10px',height:'10px',borderRadius:'50%',background:'#28C840'}} />
-              <span style={{flex:1,textAlign:'center',fontSize:'11px',color:'rgba(255,255,255,0.25)',fontFamily:'monospace'}}>aura@rud-studio</span>
-            </div>
-            {/* Terminal body */}
-            <div style={{padding:'1.25rem 1.5rem',fontFamily:'monospace',fontSize:'13px',lineHeight:1.8}}>
-              <p style={{color:'rgba(123,104,238,0.7)'}}>
-                <span style={{color:'var(--chariot)'}}>$</span> aura analyze --brief client-brief.pdf
-              </p>
-              <p style={{color:'rgba(255,255,255,0.35)'}}>
-                Analizando brief... extrayendo insights clave...
-              </p>
-              <p style={{color:'rgba(255,255,255,0.35)'}}>
-                Competidores identificados: 12 | Oportunidades: 8
-              </p>
-              <p style={{color:'#28C840'}}>
-                Informe estratégico generado en 4.2s
-              </p>
-              <p style={{color:'rgba(123,104,238,0.7)',marginTop:'0.5rem'}}>
-                <span style={{color:'var(--chariot)'}}>$</span> aura generate --content seo-blog
-              </p>
-              <p style={{color:'rgba(255,255,255,0.35)'}}>
-                Generando contenido SEO optimizado...
-              </p>
-              <p style={{color:'#28C840'}}>
-                3 artículos listos para revisión
-              </p>
-              <p style={{color:'rgba(123,104,238,0.7)',marginTop:'0.5rem'}}>
-                <span style={{color:'var(--chariot)'}}>$</span> <span className="cursor-blink" style={{display:'inline-block',width:'8px',height:'14px',background:'var(--chariot)',verticalAlign:'middle'}} />
-              </p>
-            </div>
-          </div>
-        </ScrollReveal>
-
-        {/* 6 capability cards */}
-        <div className="grid md:grid-cols-3 gap-4" style={{marginBottom:'4rem'}}>
-          {capabilities.map((cap, i) => (
-            <ScrollReveal key={cap.title} delay={i * 60}>
-              <div style={{background:'rgba(123,104,238,0.04)',border:'1px solid rgba(123,104,238,0.12)',borderRadius:'14px',padding:'1.75rem'}}>
-                <span style={{display:'inline-block',marginBottom:'0.75rem',padding:'4px 10px',borderRadius:'6px',background:'rgba(123,104,238,0.12)',fontSize:'9px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.12em',color:'var(--chariot)'}}>{cap.label}</span>
-                <h3 style={{fontSize:'1rem',fontWeight:700,color:'white',marginBottom:'0.5rem'}}>{cap.title}</h3>
-                <p style={{fontSize:'0.8125rem',color:'#6B7280',lineHeight:1.65}}>{cap.desc}</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '2rem' }}>
+            <div style={{ maxWidth: '560px' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '1rem', padding: '4px 12px', borderRadius: 2, border: '1px solid rgba(123,104,238,0.2)', background: 'rgba(123,104,238,0.06)' }}>
+                <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--chariot)', display: 'inline-block' }} className="animate-pulse" />
+                <span style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.14em', color: 'var(--chariot)' }}>Aura & Hermes · IA propia</span>
               </div>
-            </ScrollReveal>
-          ))}
-        </div>
-
-        {/* CTA banner */}
-        <ScrollReveal delay={300}>
-          <div style={{borderRadius:'16px',border:'1px solid rgba(123,104,238,0.2)',background:'rgba(123,104,238,0.06)',padding:'clamp(1.5rem,4vw,2.5rem)',display:'flex',flexWrap:'wrap',alignItems:'center',justifyContent:'space-between',gap:'1.5rem'}}>
-            <div style={{maxWidth:'500px'}}>
-              <h3 style={{fontSize:'1.25rem',fontWeight:700,color:'white',marginBottom:'0.5rem'}}>Sin coste extra para el cliente</h3>
-              <p style={{fontSize:'0.875rem',color:'#6B7280',lineHeight:1.65}}>Aura & Hermes vienen incluidos en todos nuestros proyectos. Tú recibes mejor resultado, más rápido, al mismo precio.</p>
+              <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.25rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.2, marginBottom: '0.75rem', color: 'var(--fg)' }}>
+                Agentes de IA que trabajan mientras tú duermes.
+              </h2>
+              <p style={{ fontSize: '0.9375rem', color: 'var(--muted)', lineHeight: 1.65, maxWidth: '460px' }}>
+                Aura gestiona contenido y comunicación. Hermes, operaciones y CRM. Incluidos en todos nuestros proyectos — sin coste extra, sin que tus datos salgan de tu servidor.
+              </p>
             </div>
-            <Link href="/services#aura" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'0.75rem 1.5rem',background:'var(--chariot)',color:'white',borderRadius:'9999px',fontWeight:600,fontSize:'0.875rem',textDecoration:'none',flexShrink:0,transition:'opacity 0.2s'}}>
-              Saber más
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </Link>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem', minWidth: '240px' }}>
+              {['Análisis de briefings con IA', 'Generación de contenido SEO', 'Automatización de workflows', 'CRM y seguimiento de clientes'].map(item => (
+                <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.625rem' }}>
+                  <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--chariot)', flexShrink: 0 }} />
+                  <span style={{ fontSize: '0.875rem', color: 'var(--muted)' }}>{item}</span>
+                </div>
+              ))}
+              <Link href="/services#aura" style={{ marginTop: '0.5rem', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.875rem', fontWeight: 600, color: 'var(--chariot)', textDecoration: 'none' }}>
+                Saber más sobre Aura →
+              </Link>
+            </div>
           </div>
         </ScrollReveal>
       </div>
@@ -713,6 +728,7 @@ export default function Home() {
       <Hero />
       <Marquee />
       <Stats />
+      <RotulosStrip />
       <Services />
       <AuraSection />
       <Work />
