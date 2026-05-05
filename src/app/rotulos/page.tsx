@@ -211,12 +211,12 @@ export default function Rotulos() {
         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 5 }}>
           <div className="container-custom" style={{ paddingBottom: 'clamp(2.5rem,6vw,5rem)' }}>
             <h1 style={{
-              fontSize: 'clamp(2.8rem,7.5vw,6.5rem)',
-              fontWeight: 800,
+              fontSize: 'clamp(2rem,5vw,4rem)',
+              fontWeight: 700,
               color: 'white',
-              letterSpacing: '-0.04em',
-              lineHeight: 0.95,
-              maxWidth: '16ch',
+              letterSpacing: '-0.03em',
+              lineHeight: 1.1,
+              maxWidth: '22ch',
               marginBottom: 'clamp(1.5rem,3vw,2.5rem)',
             }}>
               Rótulos que hacen tu local{' '}
