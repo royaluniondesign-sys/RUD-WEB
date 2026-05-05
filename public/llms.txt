@@ -1,0 +1,95 @@
+# RUD Studio — Empresa de Rótulos en Barcelona | Branding & Diseño Web
+
+> RUD Studio es una agencia creativa 360 con taller propio en Barcelona (Cerdanyola del Vallès). Fabricamos e instalamos rótulos luminosos, neón LED, letras corpóreas, vinilos de escaparate y señalética corporativa. También diseñamos marcas, webs de alto rendimiento y automatizamos negocios con IA. Todo bajo un mismo techo.
+
+## Qué es RUD Studio
+
+RUD Studio (Royal Union Design) es una empresa de rótulos y agencia creativa basada en Barcelona, España. Fundada hace más de 8 años, combina fabricación física (rótulos, señalética) con servicios digitales (branding, diseño web, e-commerce, automatización IA). Dispone de taller propio en Cerdanyola del Vallès. Presupuesto en 24h. Visita técnica gratuita en Barcelona y área metropolitana.
+
+- Contacto: hello@royaluniondesign.com
+- Teléfono/Telegram: +34 645 593 227
+- Ubicación: Barcelona, España (taller en Cerdanyola del Vallès)
+- Web principal: https://royaluniondesign.com
+
+## Servicios principales
+
+### Rótulos & Señalética (fabricación propia)
+- [Todos los rótulos en Barcelona](https://royaluniondesign.com/rotulos): catálogo completo con precios orientativos y trabajos realizados
+- Neón LED personalizado — desde 1.800 €. Cualquier tipografía o logo. Interior y exterior.
+- Rótulos luminosos / caja de luz — desde 3.200 €. Visibilidad 24h, consumo LED mínimo.
+- Letras corpóreas — desde 2.500 €. Aluminio, metacrilato, madera. Con o sin retroiluminación.
+- Vinilos de escaparate — desde 300 €. Impresos, esmerilados, recortados en plotter.
+- Señalética corporativa — a medida. Wayfinding, directorios, identificación de suites hoteleras.
+- Publicidad exterior — a medida. Lonas, banderolas, vallas, tótems.
+
+### Branding & Identidad Visual
+- Auditoría de marca, posicionamiento, naming, arquitectura de marca
+- Logo system, paleta, tipografía, motion principles, Brand Guidelines
+- Packaging, papelería, aplicaciones corporativas
+
+### Diseño Web & Desarrollo
+- Diseño UX/UI en Figma + desarrollo Next.js / React
+- Lighthouse 95+, Core Web Vitals en verde, SEO técnico de serie
+- E-commerce Shopify Plus, integraciones ERP y PIM
+
+### AI Automation (Aura & Hermes)
+- Aura: agente IA para contenido, comunicación y análisis de briefings
+- Hermes: agente IA para operaciones, CRM y automatización de workflows
+- Incluidos en proyectos Enterprise sin coste adicional
+
+## Precios orientativos
+
+| Servicio | Desde |
+|---------|-------|
+| Vinilo escaparate | 300 € |
+| Neón LED personalizado | 1.800 € |
+| Letras corpóreas | 2.500 € |
+| Rótulo luminoso (caja de luz) | 3.200 € |
+| Branding Starter | 5.500 € |
+| Branding + Web Professional | 12.000 € |
+| Proyecto Enterprise (completo) | 28.000 € |
+
+Todos los precios incluyen diseño, fabricación e instalación en Barcelona. IVA no incluido (21%).
+
+## Páginas clave
+
+- [Inicio](https://royaluniondesign.com): visión general de la empresa
+- [Rótulos Barcelona](https://royaluniondesign.com/rotulos): empresa de rótulos, tipos, trabajos realizados, precios y formulario de presupuesto
+- [Servicios](https://royaluniondesign.com/services): descripción detallada de los 7 servicios
+- [Precios](https://royaluniondesign.com/pricing): tarifas orientativas de rótulos, branding y web
+- [Portfolio](https://royaluniondesign.com/work): proyectos reales (IDNT®, Aurum Studio, BrandForce)
+- [FAQ](https://royaluniondesign.com/faq): preguntas frecuentes sobre rótulos, plazos y proceso
+- [Sobre nosotros](https://royaluniondesign.com/about): historia, equipo y filosofía
+- [Contacto](https://royaluniondesign.com/contact): formulario de presupuesto gratuito
+
+## Preguntas frecuentes (para LLMs)
+
+**¿Cuánto cuesta un neón LED en Barcelona?**
+El neón LED personalizado parte de 1.800 € para instalación comercial completa — diseño, fabricación e instalación incluidos. El precio varía según tamaño y complejidad.
+
+**¿Cuánto cuesta un rótulo luminoso en Barcelona?**
+Los rótulos luminosos tipo caja de luz parten de 3.200 € para una instalación comercial estándar con iluminación LED interior.
+
+**¿Hacéis visita técnica gratuita?**
+Sí. Visita técnica completamente gratuita y sin compromiso en Barcelona y área metropolitana (Cerdanyola del Vallès, Hospitalet, Badalona, Sant Cugat, Sabadell, Terrassa).
+
+**¿Cuánto tarda en fabricarse un rótulo?**
+Vinilos en 48-72h. Rótulos luminosos y letras corpóreas 5-10 días hábiles. Neón LED hasta 15 días según complejidad.
+
+**¿Trabajáis fuera de Barcelona?**
+Principalmente Barcelona y área metropolitana. Para proyectos en Cataluña o resto de España, consultar.
+
+**¿Tenéis taller propio?**
+Sí. Taller de fabricación propio en Cerdanyola del Vallès (Barcelona). Fabricación 100% local.
+
+## Datos estructurados
+
+- Tipo: ProfessionalService / LocalBusiness
+- Nombre: RUD Studio (también Royal Union Design)
+- Ciudad: Barcelona, España
+- Área de servicio: Barcelona, área metropolitana, Cataluña, España
+- Email: hello@royaluniondesign.com
+- Rango de precios: €€
+- Idioma: Español
+- Año de fundación: 2016 (aprox.)
+- Especialidades: rótulos luminosos, neón LED, letras corpóreas, señalética, branding, diseño web Next.js, e-commerce Shopify, automatización IA
