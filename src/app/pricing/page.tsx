@@ -99,9 +99,9 @@ export default function Pricing() {
       <Navbar light />
 
       {/* Hero */}
-      <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 360, background: '#0A0908' }}>
-        <img src="/hero-pricing.jpg" alt="" aria-hidden="true" loading="eager"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.38 }} />
+      <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 520, background: '#0A0908' }}>
+        <img src="/services/gal-4.avif" alt="" aria-hidden="true" loading="eager"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.45 }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(10,9,8,0.6) 0%,rgba(10,9,8,0.4) 100%)', pointerEvents: 'none' }} />
         <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingBlock: 'clamp(3.5rem,8vw,6rem)' }}>
           <ScrollReveal>

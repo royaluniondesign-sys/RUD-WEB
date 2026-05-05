@@ -92,7 +92,7 @@ export default function Contact() {
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10, maxWidth: 320, margin: '0 auto 2rem' }}>
               <a href="https://t.me/+34645593227"
-                style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 20px', borderRadius: 12, background: '#229ED9', color: 'white', textDecoration: 'none' }}>
+                style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 20px', borderRadius: 9999, background: '#229ED9', color: 'white', textDecoration: 'none' }}>
                 <div style={{ width: 32, height: 32, borderRadius: 8, background: 'rgba(255,255,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-2.012 9.486c-.148.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L6.24 14.605l-2.95-.921c-.641-.203-.654-.641.136-.953l11.527-4.444c.535-.194 1.003.13.61 1.96z"/></svg>
                 </div>
@@ -102,7 +102,7 @@ export default function Contact() {
                 </div>
               </a>
               <a href="mailto:hello@royaluniondesign.com"
-                style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 20px', borderRadius: 12, background: '#0A0908', color: 'white', textDecoration: 'none' }}>
+                style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 20px', borderRadius: 9999, background: '#0A0908', color: 'white', textDecoration: 'none' }}>
                 <div style={{ width: 32, height: 32, borderRadius: 8, background: 'rgba(255,255,255,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </div>
@@ -123,9 +123,9 @@ export default function Contact() {
     <main style={{ minHeight: '100vh', background: '#F7F5F1' }}>
       <Navbar light />
 
-      <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 260, background: '#0A0908' }}>
-        <img src="/hero-contact.jpg" alt="" aria-hidden="true" loading="eager"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.35 }} />
+      <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 420, background: '#0A0908' }}>
+        <img src="/services/vinilo-escaparate.avif" alt="" aria-hidden="true" loading="eager"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.45 }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(10,9,8,0.6) 0%,rgba(10,9,8,0.4) 100%)', pointerEvents: 'none' }} />
         <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingTop: 'clamp(2.5rem,6vw,4rem)', paddingBottom: 'clamp(2rem,4vw,3rem)' }}>
           <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.45)', marginBottom: 12 }}>Presupuesto gratis · Barcelona</p>
@@ -167,7 +167,7 @@ export default function Contact() {
                 <div>
                   <p style={{ fontSize: 10, color: '#9CA3AF', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 6 }}>Telegram · respuesta rápida</p>
                   <a href="https://t.me/+34645593227"
-                    style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '10px 16px', borderRadius: 10, background: '#229ED9', color: 'white', textDecoration: 'none', fontWeight: 600, fontSize: 14 }}>
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '10px 16px', borderRadius: 9999, background: '#229ED9', color: 'white', textDecoration: 'none', fontWeight: 600, fontSize: 14 }}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-2.012 9.486c-.148.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L6.24 14.605l-2.95-.921c-.641-.203-.654-.641.136-.953l11.527-4.444c.535-.194 1.003.13.61 1.96z"/></svg>
                     +34 645 593 227
                   </a>

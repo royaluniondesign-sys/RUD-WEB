@@ -66,17 +66,15 @@ function Hero() {
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-wrap gap-3 mt-8 animate-fade-in-up anim-d3">
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '2rem' }} className="animate-fade-in-up anim-d3">
           <Link href="/contact"
             onClick={() => trackCTA('Pedir presupuesto', '/contact', 'hero')}
-            className="font-barlow font-semibold text-sm text-[#171717] bg-white hover:bg-[#f0f0f0] transition-colors duration-200 px-8 py-3.5"
-            style={{ borderRadius: 9999 }}>
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 2rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 700, fontSize: 15, textDecoration: 'none', whiteSpace: 'nowrap' }}>
             Pedir presupuesto gratis →
           </Link>
           <Link href="/rotulos"
             onClick={() => trackCTA('Ver rótulos', '/rotulos', 'hero')}
-            className="font-barlow font-medium text-sm text-white border border-white/30 hover:border-white/60 transition-colors duration-200 px-7 py-3.5"
-            style={{ borderRadius: 9999 }}>
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', border: '1px solid rgba(255,255,255,0.3)', color: 'white', borderRadius: 9999, fontWeight: 500, fontSize: 15, textDecoration: 'none', whiteSpace: 'nowrap' }}>
             Rótulos Barcelona
           </Link>
         </div>
@@ -120,7 +118,7 @@ function Stats() {
         <div className="grid grid-cols-2 md:grid-cols-4" style={{gap:'1px',background:'var(--border)',borderRadius:'20px',overflow:'hidden'}}>
           {stats.map((stat, i) => (
             <ScrollReveal key={stat.label} delay={i * 80}>
-              <div style={{background:'#FAFAFA',padding:'clamp(1.5rem,4vw,2.5rem)',textAlign:'center'}}>
+              <div style={{background:'#FAFAFA',padding:'clamp(1.5rem,4vw,2.5rem)'}}>
                 <p className="stat-number" style={{color:'var(--fg)',marginBottom:'0.5rem'}}>{stat.number}</p>
                 <p style={{fontSize:'0.8125rem',color:'var(--muted)',fontWeight:500}}>{stat.label}</p>
               </div>
@@ -191,7 +189,7 @@ function RotulosStrip() {
           </div>
         </ScrollReveal>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(280px,1fr))', gap: 1, background: 'rgba(255,255,255,0.06)', borderRadius: 2, overflow: 'hidden' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(280px,1fr))', gap: 1, background: 'rgba(255,255,255,0.06)', borderRadius: 16, overflow: 'hidden' }}>
           {tipos.map((t, i) => (
             <ScrollReveal key={t.titulo} delay={i * 50}>
               <div style={{ background: '#0A0908', padding: 'clamp(1.25rem,3vw,1.75rem)', height: '100%' }}>
