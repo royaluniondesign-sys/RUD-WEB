@@ -52,9 +52,16 @@ export default function Contact() {
     setStatus('sending')
     trackFormSubmitAttempt()
     try {
+      // Read GA4 client_id from cookie (_ga=GA1.X.CLIENT_ID.TIMESTAMP)
+      const gaCookie = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('_ga='))
+      const gaClientId = gaCookie ? gaCookie.split('=').slice(1).join('=').split('.').slice(2).join('.') : undefined
+
       const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          ...(gaClientId ? { 'x-ga-client-id': gaClientId } : {}),
+        },
         body: JSON.stringify({ name, email, projectType: service, budget, message }),
       })
       if (!res.ok) {

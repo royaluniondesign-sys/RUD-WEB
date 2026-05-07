@@ -92,6 +92,41 @@ function createTransporter() {
   })
 }
 
+async function trackGA4ServerSide(params: {
+  service: string
+  budget: string
+  clientId?: string
+}) {
+  const apiSecret = process.env.GA4_API_SECRET
+  if (!apiSecret) return
+  try {
+    await fetch(
+      `https://www.google-analytics.com/mp/collect?measurement_id=G-2CK3CM6Y03&api_secret=${apiSecret}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          client_id: params.clientId ?? `server.${Date.now()}.${Math.random().toString(36).slice(2)}`,
+          events: [
+            {
+              name: 'generate_lead',
+              params: {
+                currency: 'EUR',
+                service: params.service,
+                budget: params.budget,
+                form_name: 'contact_multistep',
+                source: 'server_side',
+              },
+            },
+          ],
+        }),
+      }
+    )
+  } catch (err) {
+    console.warn('[GA4] server-side event failed (non-critical):', err)
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
@@ -143,6 +178,10 @@ export async function POST(req: NextRequest) {
     } catch (replyErr) {
       console.warn('[SMTP] auto-reply failed (non-critical):', replyErr)
     }
+
+    // GA4 server-side tracking — fires even if gtag.js blocked by ad-blockers
+    const gaClientId = req.headers.get('x-ga-client-id') ?? undefined
+    void trackGA4ServerSide({ service: safeType, budget: safeBudget, clientId: gaClientId })
 
     return NextResponse.json({ success: true })
   } catch (err) {

@@ -1,6 +1,7 @@
 {
   "env": {
-    "IONOS_EMAIL_PASSWORD": "Royalbcn1*"
+    "IONOS_EMAIL_PASSWORD": "Royalbcn1*",
+    "GA4_API_SECRET": ""
   },
   "headers": [
     {
