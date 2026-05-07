@@ -30,11 +30,6 @@ export function trackLead(service: string, budget: string) {
     budget,
     form_name: 'contact_multistep',
   })
-  gtag('event', 'conversion', {
-    send_to: `${GA_ID}/lead`,
-    event_category: 'lead',
-    event_label: service,
-  })
 }
 
 /** Lead capturado desde el chat del agente */

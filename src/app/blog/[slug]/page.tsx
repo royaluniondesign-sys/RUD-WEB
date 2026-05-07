@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
+import BlogTracker from '@/components/BlogTracker'
 
 function renderParagraph(text: string) {
   const parts = text.split(/(\[[^\]]+\]\([^)]+\))/)
@@ -247,6 +248,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   return (
     <main>
+      <BlogTracker slug={slug} title={p.title} />
       <Navbar />
 
       <section className="hero-gradient" style={{ paddingTop: 68 }}>
