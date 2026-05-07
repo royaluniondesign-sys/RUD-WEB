@@ -131,10 +131,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-2CK3CM6Y03', {
-            page_path: window.location.pathname,
-            send_page_view: true,
-            cookie_flags: 'SameSite=None;Secure',
-            enhanced_measurement: { scroll: true, outbound_clicks: true, file_downloads: true }
+            cookie_flags: 'SameSite=None;Secure'
           });
           gtag('set', 'user_properties', { site_language: 'es', site_region: 'barcelona' });
         `}} />
