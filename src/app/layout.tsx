@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import AgentChat from '@/components/AgentChat'
@@ -124,17 +125,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="geo.region" content="ES-CT" />
         <meta name="geo.placename" content="Barcelona" />
         <meta name="geo.position" content="41.3851;2.1734" />
-        {/* Google Analytics 4 */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CK3CM6Y03" />
-        <script dangerouslySetInnerHTML={{ __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-2CK3CM6Y03', {
-            cookie_flags: 'SameSite=None;Secure'
-          });
-          gtag('set', 'user_properties', { site_language: 'es', site_region: 'barcelona' });
-        `}} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
@@ -153,6 +143,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <AgentChat />
         <Analytics />
         <SpeedInsights />
+        {/* Google Analytics 4 — next/script garantiza carga correcta en App Router */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2CK3CM6Y03"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-2CK3CM6Y03', { cookie_flags: 'SameSite=None;Secure' });
+          gtag('set', 'user_properties', { site_language: 'es', site_region: 'barcelona' });
+        `}</Script>
       </body>
     </html>
   )
