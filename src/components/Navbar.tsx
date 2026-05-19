@@ -23,14 +23,12 @@ const NAV = [
 ]
 
 export default function Navbar({ light = false }: { light?: boolean }) {
-  const [scrolled, setScrolled]             = useState(false)
-  const [open, setOpen]                     = useState(false)
-  const [rotulosHover, setRotulosHover]     = useState(false)
+  const [scrolled, setScrolled]                   = useState(false)
+  const [open, setOpen]                           = useState(false)
+  const [rotulosHover, setRotulosHover]           = useState(false)
   const [mobileRotulosOpen, setMobileRotulosOpen] = useState(false)
-  const path = usePathname()
-  const dropdownRef = useRef<HTMLDivElement>(null)
-  const rotulosRef  = useRef<HTMLDivElement>(null)
-  let hoverTimeout: ReturnType<typeof setTimeout>
+  const path           = usePathname()
+  const hoverTimeout   = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20)
@@ -49,11 +47,11 @@ export default function Navbar({ light = false }: { light?: boolean }) {
   const navBg   = scrolled || open ? 'bg-[#F7F5F1] border-b border-[#E2DDD7]' : 'bg-transparent'
 
   const handleRotulosEnter = () => {
-    clearTimeout(hoverTimeout)
+    if (hoverTimeout.current) clearTimeout(hoverTimeout.current)
     setRotulosHover(true)
   }
   const handleRotulosLeave = () => {
-    hoverTimeout = setTimeout(() => setRotulosHover(false), 120)
+    hoverTimeout.current = setTimeout(() => setRotulosHover(false), 120)
   }
 
   return (
@@ -77,7 +75,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
               const active = path === href || path.startsWith(href + '/')
               if (hasDropdown) {
                 return (
-                  <div key={href} ref={rotulosRef}
+                  <div key={href}
                     style={{ position: 'relative' }}
                     onMouseEnter={handleRotulosEnter}
                     onMouseLeave={handleRotulosLeave}>
@@ -96,7 +94,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
                     </Link>
 
                     {/* Dropdown */}
-                    <div ref={dropdownRef}
+                    <div
                       style={{
                         position: 'absolute',
                         top: 'calc(100% + 8px)',
