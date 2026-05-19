@@ -694,7 +694,8 @@ function Footer() {
 
           {[
             {title:'Navegar',links:[['Trabajo','/work'],['Servicios','/services'],['Nosotros','/about'],['Precios','/pricing'],['Blog','/blog'],['Contacto','/contact']]},
-            {title:'Servicios',links:[['Branding','/services#branding'],['Identidad Visual','/services#identity'],['Señalética & Rótulos','/services#rotulos'],['Diseño Web','/services#web'],['E-commerce','/services#ecommerce'],['AI Automation · Aura & Hermes','/services#aura']]},
+            {title:'Rótulos',links:[['Neón LED Barcelona','/rotulos/neon-led-barcelona'],['Letras Corpóreas','/rotulos/letras-corporeas-barcelona'],['Vinilos Escaparate','/rotulos/vinilos-escaparate-barcelona'],['Cajas de Luz','/rotulos/cajas-de-luz-barcelona'],['Señalética Interior','/rotulos/senaletica-interior-barcelona'],['Publicidad Exterior','/rotulos/publicidad-exterior-barcelona']]},
+            {title:'Servicios',links:[['Branding','/services#branding'],['Identidad Visual','/services#identity'],['Diseño Web','/services#web'],['E-commerce','/services#ecommerce'],['AI Automation · Aura','/services#aura']]},
             {title:'Contacto',links:[['hello@royaluniondesign.com','mailto:hello@royaluniondesign.com'],['Barcelona, España','#'],['Instagram','https://instagram.com/royaluniondesign'],['LinkedIn','https://linkedin.com/company/royaluniondesign']]},
           ].map(col => (
             <div key={col.title}>
