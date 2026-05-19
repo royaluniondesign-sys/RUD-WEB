@@ -30,10 +30,12 @@ const rotulosSchema = {
     '@type': 'OfferCatalog',
     'name': 'Tipos de rótulo',
     'itemListElement': [
-      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Rótulos Neón LED Barcelona', 'url': 'https://royaluniondesign.com/contact?servicio=neon' } },
-      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Rótulos Luminosos Barcelona', 'url': 'https://royaluniondesign.com/contact?servicio=luminosos' } },
-      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Letras Corpóreas Barcelona', 'url': 'https://royaluniondesign.com/contact?servicio=letras' } },
-      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Vinilos Escaparate Barcelona', 'url': 'https://royaluniondesign.com/contact?servicio=vinilos' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Neón LED Barcelona', 'url': 'https://royaluniondesign.com/rotulos/neon-led-barcelona' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Cajas de Luz y Rótulos Luminosos Barcelona', 'url': 'https://royaluniondesign.com/rotulos/cajas-de-luz-barcelona' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Letras Corpóreas Barcelona', 'url': 'https://royaluniondesign.com/rotulos/letras-corporeas-barcelona' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Vinilos Escaparate Barcelona', 'url': 'https://royaluniondesign.com/rotulos/vinilos-escaparate-barcelona' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Señalética Interior Barcelona', 'url': 'https://royaluniondesign.com/rotulos/senaletica-interior-barcelona' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Publicidad Exterior Barcelona', 'url': 'https://royaluniondesign.com/rotulos/publicidad-exterior-barcelona' } },
     ],
   },
 }
@@ -110,7 +112,7 @@ const TRABAJOS = [
 
 const TIPOS = [
   {
-    href: '/contact?servicio=neon',
+    href: '/rotulos/neon-led-barcelona',
     img: '/services/neon-interior.avif',
     alt: 'Rótulo neón LED personalizado Barcelona',
     tags: ['Neón LED', 'Cualquier forma', 'Interior y exterior'],
@@ -119,7 +121,7 @@ const TIPOS = [
     featured: true,
   },
   {
-    href: '/contact?servicio=luminosos',
+    href: '/rotulos/cajas-de-luz-barcelona',
     img: '/services/rotulos-luminosos.avif',
     alt: 'Rótulos luminosos caja de luz Barcelona',
     tags: ['Más solicitado'],
@@ -128,7 +130,7 @@ const TIPOS = [
     featured: false,
   },
   {
-    href: '/contact?servicio=letras',
+    href: '/rotulos/letras-corporeas-barcelona',
     img: '/services/letras-corporeas.avif',
     alt: 'Letras corpóreas Barcelona aluminio metacrilato',
     tags: [],
@@ -137,7 +139,7 @@ const TIPOS = [
     featured: false,
   },
   {
-    href: '/contact?servicio=vinilos',
+    href: '/rotulos/vinilos-escaparate-barcelona',
     img: '/services/vinilo-escaparate.avif',
     alt: 'Vinilos escaparate Barcelona',
     tags: [],
@@ -146,7 +148,7 @@ const TIPOS = [
     featured: false,
   },
   {
-    href: '/contact?servicio=senaletica',
+    href: '/rotulos/senaletica-interior-barcelona',
     img: '/services/senaletica-interior.avif',
     alt: 'Señalética interior corporativa Barcelona',
     tags: [],
@@ -155,7 +157,7 @@ const TIPOS = [
     featured: false,
   },
   {
-    href: '/contact?servicio=exterior',
+    href: '/rotulos/publicidad-exterior-barcelona',
     img: '/services/publicidad-exterior.avif',
     alt: 'Publicidad exterior Barcelona lonas banderolas',
     tags: [],
