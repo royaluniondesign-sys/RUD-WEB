@@ -34,9 +34,11 @@ export default function Contact() {
     if (typeof window !== 'undefined') {
       const p = new URLSearchParams(window.location.search)
       const s = p.get('servicio')
-      if (s === 'rotulos') return 'Rótulos & Señalética'
+      if (['rotulos','neon','luminosos','letras','vinilos','cajas','senaletica','exterior'].includes(s ?? '')) return 'Rótulos & Señalética'
       if (s === 'branding') return 'Branding & Identidad'
       if (s === 'web') return 'Diseño Web & Dev'
+      if (s === 'ecommerce') return 'E-commerce Shopify'
+      if (s === 'ia') return 'AI Automation'
     }
     return ''
   })
