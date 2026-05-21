@@ -1,17 +1,17 @@
 'use client'
 import { useEffect } from 'react'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { initScrollDepth, initEngagementTimer, track } from '@/lib/analytics'
 
 export default function PageTracking() {
-  const pathname     = usePathname()
-  const searchParams = useSearchParams()
+  const pathname = usePathname()
 
   useEffect(() => {
-    // Fire page_view on every client-side route change (Next.js SPA navigation)
-    // GA4 only auto-fires page_view on the first hard load — soft navigations need this
+    // Explicit page_view on every SPA navigation.
+    // GA4's gtag('config') only fires on the initial hard load — client-side
+    // Next.js route changes need this explicit call.
     track('page_view', {
-      page_path:     pathname,
+      page_path: pathname,
       page_location: typeof window !== 'undefined' ? window.location.href : pathname,
     })
 
@@ -21,8 +21,7 @@ export default function PageTracking() {
       cleanScroll?.()
       cleanTimer?.()
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname, searchParams])
+  }, [pathname])
 
   return null
 }
