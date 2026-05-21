@@ -180,8 +180,9 @@ export async function POST(req: NextRequest) {
     }
 
     // GA4 server-side tracking — fires even if gtag.js blocked by ad-blockers
+    // Must be awaited so Vercel doesn't terminate the function before fetch completes
     const gaClientId = req.headers.get('x-ga-client-id') ?? undefined
-    void trackGA4ServerSide({ service: safeType, budget: safeBudget, clientId: gaClientId })
+    await trackGA4ServerSide({ service: safeType, budget: safeBudget, clientId: gaClientId })
 
     return NextResponse.json({ success: true })
   } catch (err) {
