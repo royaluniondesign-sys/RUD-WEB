@@ -52,6 +52,7 @@ const localBusinessSchema = {
   'priceRange': '€€',
   'address': {
     '@type': 'PostalAddress',
+    'streetAddress': 'Carrer Sant Salvador, 11, Local 6',
     'addressLocality': 'Cerdanyola del Vallès',
     'addressRegion': 'CT',
     'postalCode': '08290',
