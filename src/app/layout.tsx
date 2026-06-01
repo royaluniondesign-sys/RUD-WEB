@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import AgentChat from '@/components/AgentChat'
 import PageTracking from '@/components/PageTracking'
+import WhatsAppButton from '@/components/WhatsAppButton'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -51,18 +52,20 @@ const localBusinessSchema = {
   'priceRange': '€€',
   'address': {
     '@type': 'PostalAddress',
-    'addressLocality': 'Barcelona',
+    'addressLocality': 'Cerdanyola del Vallès',
     'addressRegion': 'CT',
+    'postalCode': '08290',
     'addressCountry': 'ES',
   },
   'geo': {
     '@type': 'GeoCoordinates',
-    'latitude': 41.3851,
-    'longitude': 2.1734,
+    'latitude': 41.4910,
+    'longitude': 2.1427,
   },
   'areaServed': [
     { '@type': 'City', 'name': 'Barcelona' },
     { '@type': 'City', 'name': 'Cerdanyola del Vallès' },
+    { '@type': 'AdministrativeArea', 'name': 'Vallès Occidental' },
     { '@type': 'Country', 'name': 'España' },
   ],
   'hasOfferCatalog': {
@@ -140,6 +143,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {children}
         <PageTracking />
+        <WhatsAppButton />
         <AgentChat />
         <Analytics />
         <SpeedInsights />
