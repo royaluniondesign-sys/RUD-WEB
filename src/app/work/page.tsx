@@ -11,61 +11,73 @@ export const metadata = {
 
 const ROTULOS_PROJECTS = [
   {
-    img: '/services/gal-1.avif', tipo: 'Neón LED · Fachada',
-    nombre: 'Trattoria di Marco', barrio: 'Gràcia, Barcelona',
-    desc: 'Neón LED rojo «MARCO» en fachada + letras corpóreas en aluminio cepillado. Visibilidad nocturna duplicada en Carrer de Verdi.',
+    img: '/RUDTRABAJOSROTULOS/photo-1771517016865-fea1893396e6.avif',
+    tipo: 'Neón LED · Fachada',
+    nombre: 'Osteria Cendra',
+    barrio: 'Gràcia, Barcelona',
+    desc: 'Neón LED warm white «CENDRA» en fachada de ladrillo visto + letras corpóreas en aluminio cepillado. El rótulo se convirtió en punto de referencia fotográfico del Carrer de l\'Encarnació.',
     tag: 'Hostelería',
   },
   {
-    img: '/services/gal-3.avif', tipo: 'Neón LED · Interior',
-    nombre: 'Coffee Bloom', barrio: 'Poblenou, Barcelona',
-    desc: 'Neón «BLOOM» warm white sobre ladrillo visto. Referencia fotográfica del barrio 22@ — presencia orgánica en redes sin inversión publicitaria.',
+    img: '/RUDTRABAJOSROTULOS/photo-1619636217292-a77988becc4c.avif',
+    tipo: 'Neón LED · Interior',
+    nombre: 'Naima Coffee',
+    barrio: 'Poblenou, Barcelona',
+    desc: 'Neón «NAIMA» en warm white sobre pared de estuco rugoso. Se convirtió en el rincón más fotografiado del local en el barrio 22@ — sin invertir un euro en publicidad.',
     tag: 'Cafetería',
   },
   {
-    img: '/services/gal-5.avif', tipo: 'Caja de Luz · Exterior',
-    nombre: 'Bar Atlántico', barrio: 'Barceloneta, Barcelona',
-    desc: 'Caja de luz gran formato con LED perimetral. Visible desde 200m en el paseo marítimo, día y noche.',
+    img: '/RUDTRABAJOSROTULOS/photo-1698500103054-8a00e4c4131c.avif',
+    tipo: 'Caja de Luz · Exterior',
+    nombre: 'Mar de Fondo',
+    barrio: 'Barceloneta, Barcelona',
+    desc: 'Caja de luz gran formato con perfil de aluminio y LED perimetral de alta luminosidad. Visible desde el Passeig Marítim de día y de noche.',
     tag: 'Bar',
   },
   {
-    img: '/services/gal-2.avif', tipo: 'Letras Corpóreas · Fachada',
-    nombre: 'Moda Plural', barrio: 'Eixample, Barcelona',
-    desc: 'Letras corpóreas en aluminio negro mate + retroiluminación halo blanca. Identidad visual aplicada a fachada con coherencia total.',
+    img: '/RUDTRABAJOSROTULOS/photo-1588560107833-167198a53677.avif',
+    tipo: 'Letras Corpóreas · Fachada',
+    nombre: 'Chapter BCN',
+    barrio: 'Eixample, Barcelona',
+    desc: 'Letras corpóreas en aluminio negro mate con retroiluminación halo blanca. Identidad visual aplicada a fachada en el Carrer del Consell de Cent con coherencia total.',
     tag: 'Moda',
   },
   {
-    img: '/services/gal-6.avif', tipo: 'Señalética · Hotelera',
-    nombre: 'Hotel Trafalgar BCN', barrio: 'Sarrià-Sant Gervasi, Barcelona',
-    desc: 'Proyecto completo de señalética para 64 habitaciones: directorios, identificación de suites y señalética de emergencia en aluminio anodizado.',
-    tag: 'Hotel',
+    img: '/RUDTRABAJOSROTULOS/photo-1605514449465-afa3f13a0512.avif',
+    tipo: 'Señalética · Corporativa',
+    nombre: 'Aparthotel Mercat',
+    barrio: 'Sant Antoni, Barcelona',
+    desc: 'Proyecto completo de señalética para 48 apartamentos: directorios de planta, identificación de unidades y señalética de servicios en aluminio anodizado + vinilo de corte.',
+    tag: 'Alojamiento',
   },
   {
-    img: '/services/gal-4.avif', tipo: 'Vinilos · Escaparate',
-    nombre: 'Clínica Llorens', barrio: 'Sant Gervasi, Barcelona',
-    desc: 'Vinilos esmerilados con logotipo recortado + franja de privacidad. Estética clínica que transmite profesionalidad desde la calle.',
+    img: '/RUDTRABAJOSROTULOS/photo-1632605166776-7128669886e7.avif',
+    tipo: 'Vinilos · Escaparate',
+    nombre: 'Centre Mèdic Gràcia',
+    barrio: 'Gràcia, Barcelona',
+    desc: 'Vinilos esmerilados con logotipo recortado + franja de privacidad en toda la longitud del escaparate. Estética clínica que proyecta profesionalidad desde la calle.',
     tag: 'Salud',
   },
 ]
 
 const DIGITAL_PROJECTS = [
   {
-    slug: 'idnt', client: 'IDNT®', type: 'Moda sostenible · Barcelona',
-    desc: 'Marca de ropa orgánica sostenible hecha en Barcelona. Identidad visual completa, e-commerce Shopify, packaging y automatizaciones de marketing.',
-    tags: ['E-commerce Shopify','Branding','Identidad Visual','Packaging','Automatizaciones'],
+    slug: 'idnt', client: 'IDNT®', type: 'Moda orgánica · Cerdanyola del Vallès, Barcelona',
+    desc: 'Marca de ropa orgánica y sostenible hecha en Barcelona. Identidad visual, e-commerce Shopify, fotografía editorial, diseño de prendas, packaging, vídeo y automatizaciones.',
+    tags: ['E-commerce Shopify','Branding','Fotografía','Vídeo','Diseño de Prendas'],
     img: '/client-idnt-hero.gif', url: 'https://www.idnt.es', featured: true,
   },
   {
-    slug: 'aurum', client: 'Aurum Studio', type: 'Joyería artesanal · Barcelona',
-    desc: 'Identidad de lujo accesible para joyería artesanal. Branding, sistema visual, web y fotografía de producto.',
-    tags: ['Branding Lujo','Identidad Visual','Fotografía','Web Design'],
-    img: '/client-jewelry-hero.jpg', featured: false,
+    slug: 'kopess', client: 'Kopess 23', type: 'Moda urban · Barcelona',
+    desc: 'Identidad visual, web de alto rendimiento en Next.js, fotografía editorial y estrategia SEO para marca de moda urbana barcelonesa.',
+    tags: ['Diseño Web','SEO','Branding','Fotografía'],
+    img: '/client-kopess-hero.jpg', url: 'https://kopess23.com', featured: false,
   },
   {
-    slug: 'brandforce', client: 'BrandForce Agency', type: 'Agencia de marketing · Madrid',
-    desc: 'Partner creativo white-label. Diseño, desarrollo y automatización IA como extensión del equipo interno.',
-    tags: ['White-label','Diseño Web','Desarrollo','AI Automation'],
-    img: '/client-agency-team.jpg', featured: false,
+    slug: 'oxyzen', client: 'Oxyzen', type: 'Wellness & entrenamiento · Barcelona',
+    desc: 'Web de captación de leads, identidad visual y SEO local para estudio de bienestar en Barcelona.',
+    tags: ['Diseño Web','SEO Local','Identidad Visual'],
+    img: '/client-oxyzen-hero.jpg', url: 'https://oxyzen.es', featured: false,
   },
 ]
 
@@ -217,9 +229,9 @@ export default function Work() {
                           ))}
                         </div>
                         <h3 style={{ fontSize: 'clamp(1.5rem,2.5vw,2rem)', fontWeight: 700, marginBottom: 6, color: '#0A0908' }}>IDNT®</h3>
-                        <p style={{ fontSize: 12, color: '#9CA3AF', fontWeight: 500, marginBottom: '1rem' }}>Moda orgánica sostenible · Barcelona</p>
+                        <p style={{ fontSize: 12, color: '#9CA3AF', fontWeight: 500, marginBottom: '1rem' }}>Moda orgánica · Cerdanyola del Vallès, Barcelona</p>
                         <p style={{ fontSize: 15, color: '#6B7280', lineHeight: 1.7 }}>
-                          Ropa orgánica y sostenible hecha en Barcelona. Identidad visual completa, e-commerce Shopify, packaging y automatizaciones de marketing.
+                          Marca de ropa orgánica y sostenible hecha en Barcelona. Identidad visual, e-commerce Shopify, fotografía editorial, diseño de prendas, vídeo y automatizaciones de marketing.
                         </p>
                       </div>
                       <div className="arrow-link" style={{ marginTop: '1.75rem', display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 14, fontWeight: 600, color: '#0A0908' }}>
@@ -232,7 +244,7 @@ export default function Work() {
               </Link>
             </ScrollReveal>
 
-            {/* Aurum + BrandForce */}
+            {/* Kopess 23 + Oxyzen */}
             <div className="grid md:grid-cols-2" style={{ gap: '1.25rem' }}>
               {DIGITAL_PROJECTS.filter(p => !p.featured).map((p, i) => (
                 <ScrollReveal key={p.slug} delay={(i + 1) * 80}>

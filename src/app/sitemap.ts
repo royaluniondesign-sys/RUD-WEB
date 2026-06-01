@@ -25,7 +25,7 @@ const ROTULOS_SLUGS = [
   'publicidad-exterior-barcelona',
 ]
 
-const WORK_SLUGS = ['idnt', 'aurum', 'brandforce']
+const WORK_SLUGS = ['idnt', 'kopess', 'oxyzen', 'aurum']
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()

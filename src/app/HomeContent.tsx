@@ -418,8 +418,8 @@ function Work() {
         {/* Aurum + BrandForce */}
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           {[
-            {slug:'aurum',name:'Aurum Studio',type:'Joyería artesanal · Barcelona',img:'/client-jewelry-hero.jpg',tags:['Branding Lujo','Identidad Visual','Web','Fotografía'],desc:'Identidad de lujo accesible para joyería artesanal barcelonesa.'},
-            {slug:'brandforce',name:'BrandForce Agency',type:'Agencia marketing · Madrid',img:'/client-agency-team.jpg',tags:['White-label','Desarrollo','AI Automation'],desc:'Partner creativo white-label para agencia de marketing.'},
+            {slug:'kopess',name:'Kopess 23',type:'Moda urban · Barcelona',img:'/client-kopess-hero.jpg',tags:['Diseño Web','SEO','Branding','Fotografía'],desc:'Web, SEO e identidad visual para marca de moda urbana barcelonesa.'},
+            {slug:'oxyzen',name:'Oxyzen',type:'Wellness · Barcelona',img:'/client-oxyzen-hero.jpg',tags:['Diseño Web','SEO Local','Identidad Visual'],desc:'Web de captación de leads y SEO local para estudio de bienestar.'},
           ].map((p, i) => (
             <ScrollReveal key={p.slug} delay={(i+1)*80}>
               <Link href={`/work/${p.slug}`} style={{display:'flex',flexDirection:'column',background:'white',borderRadius:'16px',overflow:'hidden',border:'1px solid var(--border)',textDecoration:'none',height:'100%'}} className="card-lift group">
@@ -452,10 +452,10 @@ function Work() {
               <span style={{fontSize:'2.5rem',lineHeight:1,color:'var(--border)',fontFamily:'Georgia, serif',flexShrink:0}}>&ldquo;</span>
               <div>
                 <p style={{fontSize:'1rem',color:'var(--fg)',lineHeight:1.7,fontStyle:'italic',marginBottom:'1rem'}}>
-                  RUD entendió nuestra visión desde la primera llamada. La identidad que crearon para IDNT no es solo bonita — posiciona la marca exactamente donde queríamos estar.
+                  RUD entendió nuestra visión desde la primera llamada. La identidad que crearon para IDNT no es solo bonita — posiciona la marca exactamente donde queríamos estar en el mercado del slow fashion en Barcelona.
                 </p>
-                <p style={{fontSize:'0.8125rem',fontWeight:600,color:'var(--fg)'}}>Fundadora, IDNT®</p>
-                <p style={{fontSize:'0.75rem',color:'#9CA3AF'}}>Moda sostenible · Barcelona</p>
+                <p style={{fontSize:'0.8125rem',fontWeight:600,color:'var(--fg)'}}>Kopess, Fundadora · IDNT® & Oxyzen</p>
+                <p style={{fontSize:'0.75rem',color:'#9CA3AF'}}>idnt.es · kopess23.com · oxyzen.es</p>
               </div>
             </div>
           </div>
