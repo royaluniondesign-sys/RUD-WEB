@@ -24,24 +24,54 @@ const POSTS: Record<string, {
 }> = {
   'rotulos-luminosos-barcelona-precio-tipos-instalacion': {
     title: 'Rótulos luminosos en Barcelona: tipos, precios y cómo elegir el correcto para tu negocio',
-    date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '7 min',
+    date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '12 min',
     image: '/services/neon-shop.jpg',
     excerpt: 'Neón LED, cajas de luz, letras corpóreas, vinilos. Todo lo que necesitas saber antes de pedir presupuesto para tu rótulo en Barcelona.',
     content: `Si tienes un local en Barcelona y estás pensando en un rótulo, la primera pregunta suele ser la misma: ¿cuánto cuesta? Pero antes de hablar de precio, hay que entender qué tipo de rótulo necesitas realmente — porque la diferencia entre un neón LED y una caja de luz no es solo estética, es funcional y presupuestaria.
 
-Los rótulos luminosos se dividen en cuatro categorías principales: neón LED (la versión moderna del tubo de neón clásico), cajas de luz (estructura con frente iluminado, ideal para franquicias y comercios de alta rotación), letras corpóreas (volumétricas, con o sin iluminación, el estándar del retail premium) y vinilos de escaparate (la solución más económica para comunicar sin estructura).
+**Los 4 tipos de rótulos luminosos en Barcelona**
 
-El neón LED ha ganado terreno en Barcelona en los últimos tres años por razones obvias: consume un 80% menos que el neón de vidrio clásico, dura entre 50.000 y 100.000 horas, y permite cualquier forma o tipografía. El coste oscila entre €600 y €2.500 dependiendo del tamaño y complejidad del diseño. Un neón pequeño para mostrador de entre 40 y 60 cm puede estar en €400-800. Un rótulo de fachada de 2 metros puede llegar a €1.500-2.500 instalado.
+Los rótulos luminosos se dividen en cuatro categorías principales: neón LED, cajas de luz, letras corpóreas y vinilos iluminados. Cada uno tiene su caso de uso óptimo, su rango de precios y sus condicionantes técnicos de instalación.
 
-Las letras corpóreas con iluminación lateral son el estándar para retail de moda, joyería y hostelería premium en Barcelona. El proceso incluye diseño, mecanizado CNC del volumen, acabado (lacado, espejado, cobre, negro mate) e instalación. Los precios varían enormemente: desde €800 para una palabra corta hasta €5.000 para una fachada completa con iluminación RGB.
+**Neón LED: el rey de los rótulos en 2026**
 
-Las cajas de luz siguen siendo la opción preferida para franquicias y negocios que necesitan alta visibilidad nocturna con mantenimiento mínimo. La estructura de aluminio con frente de metacrilato o policarbonato iluminado por LED es robusta, impermeable y fácil de actualizar gráficamente. Precios desde €400 para un formato pequeño hasta €3.000 para una caja de luz de gran formato con estructura vista.
+El neón LED ha ganado terreno en Barcelona en los últimos tres años por razones obvias: consume un 80% menos que el neón de vidrio clásico, dura entre 50.000 y 100.000 horas, y permite cualquier forma o tipografía. Los precios orientativos son: neón de mostrador (40-80 cm) desde 800 €, neón de pared mediano (80-150 cm) entre 1.400 € y 2.200 €, neón de fachada desde 2.200 €. Todos los precios incluyen diseño, fabricación e instalación.
 
-Los vinilos de escaparate son otra categoría completamente distinta: no son rótulos luminosos pero son el complemento visual más usado en comercios de Barcelona. Permiten cambiar el mensaje estacional, delimitar el espacio visual del escaparate y comunicar promociones sin obra. El coste de un vinilo básico para un escaparate de 2 metros puede estar entre €150 y €400 con diseño e instalación incluidos.
+El neón LED es especialmente eficaz en hostelería — restaurantes, bares y cafeterías de Barcelona que instalan un neón en pared generan contenido orgánico en redes sociales sin invertir en publicidad. El local se convierte en escenario fotográfico.
 
-Antes de pedir presupuesto, hay tres preguntas que definen casi todo el proceso: ¿Es para interior o exterior? (los materiales y la protección IP son completamente distintos), ¿necesitas iluminación o no? (multiplica el coste por 2-3x pero también el impacto visual), y ¿cuál es el sistema de sujeción disponible en tu local? (fachada de obra, cristal, o estructura metálica cambia completamente la instalación).
+**Letras corpóreas: el estándar del retail premium**
 
-En RUD diseñamos y fabricamos [rótulos luminosos en Barcelona](/rotulos) con instalación incluida. El proceso es simple: visita técnica gratuita, propuesta con render en 48 horas, fabricación en 2-3 semanas e instalación. Si estás pensando en renovar la señalética de tu negocio en Barcelona, [consulta nuestros precios orientativos](/pricing) o empieza directamente con una visita técnica sin compromiso.`,
+Las letras corpóreas son el estándar para retail de moda, joyería, hoteles boutique y sedes corporativas en Barcelona. Son letras tridimensionales que se instalan directamente sobre la fachada o pared interior, con o sin iluminación posterior (halo) o frontal. Los materiales más usados son el aluminio cepillado o lacado, el metacrilato translúcido para iluminación interior y la madera para proyectos de restauración lifestyle.
+
+Precios orientativos: letras corpóreas sin iluminación desde 2.500 €, con retroiluminación halo desde 3.500 €. El precio final depende del número de letras, el tamaño total, el material y la complejidad de la instalación en fachada. En Barcelona, la normativa del Ayuntamiento puede requerir licencia para instalaciones en fachadas de ciertos barrios — especialmente en el Eixample y zonas protegidas.
+
+**Cajas de luz: visibilidad 24h con mantenimiento mínimo**
+
+Las cajas de luz siguen siendo la opción preferida para franquicias y negocios que necesitan alta visibilidad nocturna con mantenimiento mínimo. La estructura de aluminio con frente de metacrilato o policarbonato iluminado por LED es robusta, impermeable y fácil de actualizar gráficamente — cambias el vinilo del frente sin tocar la estructura. Precios desde 800 € para un formato pequeño hasta 3.500 € para una caja de luz de gran formato con estructura vista.
+
+**Vinilos de escaparate: la solución más rápida y económica**
+
+Los vinilos de escaparate no son rótulos luminosos pero son el complemento visual más usado en comercios de Barcelona. Permiten cambiar el mensaje estacional, delimitar el espacio visual del escaparate y comunicar promociones sin obra ni permisos. El plazo de instalación es de 48-72 horas. Precios: vinilo de corte básico (logo + texto) desde 150 €, vinilo impreso desde 300 €, vinilo esmerilado desde 250 €.
+
+**¿Qué rótulo necesita tu negocio?**
+
+La elección depende de tres factores: el tipo de negocio y el sector, el espacio disponible (interior o exterior, tipo de fachada) y el presupuesto.
+
+Para hostelería y restauración: neón LED en interior o letras corpóreas en fachada. Para retail de moda y premium: letras corpóreas con halo. Para negocios que necesitan actualizar mensajes frecuentemente: caja de luz. Para aperturas rápidas o presupuestos ajustados: vinilo de escaparate como primera fase.
+
+**Normativa de rótulos en Barcelona**
+
+En Barcelona, los rótulos en fachada están regulados por la Ordenança sobre l'ús de les façanes i dels espais visibles des de la via pública. Las restricciones principales afectan a la altura máxima de los rótulos, la proporción respecto a la fachada, el uso de colores y materiales en zonas de protección patrimonial, y la iluminación en horario nocturno.
+
+Los barrios con más restricciones son el Gòtic, el Born, Gràcia y zonas catalogadas del Eixample. No obstante, en la mayoría de casos los rótulos de hasta 0,90 m de altura y que no superen el 10% de la superficie de la fachada pueden instalarse sin licencia de obra mayor. Para cualquier duda, realizamos consulta previa gratuita con los técnicos del Ayuntamiento.
+
+**El proceso de instalación en RUD**
+
+El proceso completo dura entre 2 y 4 semanas desde el primer contacto hasta el rótulo instalado. Paso 1: contacto con fotos del espacio y medidas aproximadas — respondemos en menos de 2 horas. Paso 2: propuesta con render 3D en menos de 48 horas, sin compromiso. Paso 3: aprobación y fabricación en taller propio en Cerdanyola del Vallès (10-15 días hábiles). Paso 4: instalación por nuestro equipo en el horario que mejor te vaya.
+
+Tenemos taller propio lo que nos permite controlar la calidad de cada pieza y cumplir plazos sin depender de terceros. Todos los rótulos incluyen 2 años de garantía en componentes y acabados.
+
+En RUD diseñamos y fabricamos [rótulos luminosos en Barcelona](/rotulos) con instalación incluida. Si estás pensando en renovar la señalética de tu negocio, [consulta nuestros precios](/pricing) o [pide presupuesto gratuito](/contact?servicio=rotulos) — tendrás render y precio en menos de 48 horas.`,
   },
   'aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st': {
     title: 'AURA: El Agente IA Autónomo que Lidera la Operación de RUD Studio desde Telegram',
@@ -153,52 +183,138 @@ Si tu startup está en Barcelona y quieres construir la marca bien desde el prin
   },
   'neon-led-barcelona-precio-instalacion': {
     title: 'Neón LED en Barcelona: precio, instalación y cómo elegir el tuyo',
-    date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '6 min',
+    date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '10 min',
     image: '/services/neon-interior.avif',
     excerpt: 'Todo lo que necesitas saber sobre el neón LED en Barcelona: precios reales, plazos de fabricación, tipos de instalación y qué negocios lo usan más.',
     content: `El neón LED es el rótulo que más se pide en Barcelona ahora mismo. Restaurantes, cafeterías, peluquerías, estudios de yoga, hoteles boutique — casi cualquier negocio que quiera presencia visual fuerte está apostando por él. En este artículo te explicamos cómo funciona, cuánto cuesta realmente y qué tienes que saber antes de hacer el pedido.
 
+**Cómo funciona el neón LED**
+
 El neón LED funciona con tubos de silicona flexible que albergan una tira LED en su interior. A diferencia del tubo fluorescente de gas de los años 80, el LED consume un 80% menos de energía, dura entre 50.000 y 100.000 horas y no se rompe con vibraciones. El resultado visual es prácticamente idéntico pero con ventajas técnicas que hacen que sea la opción lógica para instalaciones comerciales.
 
-¿Cuánto cuesta un neón LED en Barcelona? Los precios orientativos son: neón de mostrador (40-80 cm) entre 800 € y 1.400 €, neón de pared mediano (80-150 cm) entre 1.400 € y 2.200 €, neón de fachada o instalación grande (150 cm+) desde 2.200 € hasta 4.000 € o más según complejidad. Todos los precios incluyen diseño, fabricación e instalación.
+Existen dos variantes: neón sobre base transparente de acrílico (la más habitual, permite ver el fondo) y neón sobre base sólida (opaca, más estructurada). La primera es la preferida para instalaciones sobre pared donde quieres que el material de fondo sea parte del diseño. La segunda es mejor para instalaciones en escaparate o fachada donde necesitas que el rótulo sea independiente del soporte.
 
-El proceso desde que nos contactas hasta que el neón está en tu local es el siguiente: primero te mandamos un presupuesto con render en menos de 48 horas. Una vez aprobado, fabricación en 10-15 días hábiles. La instalación en sí suele llevar entre 2 y 4 horas dependiendo del soporte.
+**Precios del neón LED en Barcelona (2026)**
 
-¿Para qué tipo de local funciona mejor el neón LED? En hostelería (restaurantes, bares, cafeterías) es el rey indiscutible — genera contenido orgánico en redes sociales sin inversión publicitaria. En retail de moda, cosmética y bienestar añade personalidad y diferencia del resto de tiendas del pasillo o la calle. En oficinas y estudios creativos refuerza la identidad de marca en entornos de trabajo.
+Los precios reales de mercado para neón LED en Barcelona son: neón de mostrador (40-80 cm) entre 800 € y 1.400 €, neón de pared mediano (80-150 cm) entre 1.400 € y 2.200 €, neón de fachada o instalación grande (150 cm+) desde 2.200 € hasta 4.500 € o más según complejidad.
 
-En RUD fabricamos e instalamos [neón LED en Barcelona](/rotulos) con taller propio en Cerdanyola del Vallès. Visita técnica gratuita, render previo incluido, garantía de 2 años en todos los componentes. Si tienes medidas y una idea aproximada, podemos enviarte [presupuesto orientativo](/pricing) en el mismo día.`,
+Todos los precios incluyen diseño, render 3D previo para aprobación, fabricación, transformador y cable, base de montaje y mano de obra de instalación. El precio varía principalmente por tres factores: el tamaño total del neón (longitud del tubo), la complejidad del diseño (tipografías estándar vs. formas personalizadas complejas) y si la instalación requiere trabajos en altura o estructuras especiales.
+
+El transformador tiene un consumo eléctrico de aproximadamente 1W por cada 30 cm de tubo. Un neón de 1 metro consume unos 3-4W — prácticamente insignificante en la factura eléctrica.
+
+**Colores disponibles**
+
+Los colores estándar más pedidos son blanco cálido (el más fotografiable), blanco frío, rojo, azul, verde, amarillo y rosa. También existe la opción RGB con mando a distancia que permite cambiar de color — especialmente útil para discotecas, bares de copas y eventos. El precio del RGB es un 30-40% superior al neón de color fijo.
+
+**Para qué negocios funciona mejor el neón LED en Barcelona**
+
+En hostelería (restaurantes, bares, cafeterías) es el rey indiscutible. Un neón en la pared genera contenido orgánico en redes sociales: los clientes fotografían el local y lo publican sin que nadie se lo pida. Es publicidad gratuita con cada cliente satisfecho. Los locales que instalan neón en el [Poblenou](/rotulos/poblenou-barcelona), el [Eixample](/rotulos/eixample-barcelona) o [Gràcia](/rotulos/gracia-barcelona) reportan un aumento notable en el tagged content de Instagram.
+
+En retail de moda, cosmética y bienestar el neón añade personalidad y diferencia el local del resto de tiendas de la misma calle. En estudios de yoga, fitness y wellness el neón con una frase motivacional o el nombre del estudio es ya un estándar visual del sector. En hoteles boutique y apartamentos con encanto es el detalle que aparece en todas las fotos de los huéspedes.
+
+**Plazo de fabricación e instalación**
+
+El proceso completo dura entre 2 y 3 semanas desde el primer contacto. Los primeros 2 días: visita técnica (presencial o por fotos) y propuesta con render 3D. A los 10-15 días hábiles: fabricación completada en nuestro taller. En 1-2 días más: instalación en tu local, 2 a 4 horas de trabajo.
+
+La garantía es de 2 años en todos los componentes — transformador, tubo y base. Pasado ese periodo, el mantenimiento más habitual es la sustitución del transformador (coste aproximado: 80-120 €), ya que el tubo LED raramente falla antes de los 10 años.
+
+**Normativa para neón LED en Barcelona**
+
+Para instalar un neón LED en el interior de un local no se necesita ningún permiso especial — es una instalación eléctrica como cualquier otra luminaria. Para instalaciones en escaparate o fachada, aplica la normativa municipal de rótulos. En la mayoría de casos, un neón que no supera el 10% de la superficie de la fachada y está a menos de 0,90 m de altura puede instalarse sin licencia de obra mayor. Los barrios con restricciones más estrictas son el Gòtic, Born y ciertas zonas del Eixample catalogadas.
+
+Consulta siempre con tu instalador antes de iniciar el proceso — en RUD hacemos la consulta previa con el Ayuntamiento sin coste adicional para nuestros clientes.
+
+En RUD fabricamos e instalamos [neón LED en Barcelona](/rotulos/neon-led-barcelona) con taller propio en Cerdanyola del Vallès. Visita técnica gratuita, render previo incluido en el presupuesto, garantía de 2 años. Si tienes medidas y una idea aproximada, [pide presupuesto ahora](/contact?servicio=neon) y te enviamos render y precio en menos de 48 horas.`,
   },
   'letras-corporeas-barcelona-tipos-precios': {
     title: 'Letras corpóreas en Barcelona: tipos, materiales y precios reales',
-    date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '6 min',
+    date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '10 min',
     image: '/services/letras-corporeas.avif',
     excerpt: 'Aluminio, metacrilato, retroiluminación halo. Todo sobre las letras corpóreas en Barcelona: qué son, qué materiales existen y cuánto cuestan.',
-    content: `Las letras corpóreas son el estándar del retail premium, la hostelería de nivel medio-alto y las sedes corporativas en Barcelona. Son letras en tres dimensiones que se instalan directamente sobre la fachada, una pared interior o un panel de fondo — y que comunican solidez, permanencia y cuidado por la imagen de marca.
+    content: `Las letras corpóreas son el estándar del retail premium, la hostelería de nivel medio-alto y las sedes corporativas en Barcelona. Son letras en tres dimensiones que se instalan directamente sobre la fachada, una pared interior o un panel de fondo — y que comunican solidez, permanencia y cuidado por la imagen de marca. A diferencia del neón LED o la caja de luz, las letras corpóreas funcionan igual de bien de día que de noche, con o sin iluminación.
 
-Los materiales más habituales son el aluminio (el más duradero y resistente a la intemperie, ideal para exterior), el metacrilato (ligero, con muchas opciones de color y acabado, muy usado en interior), la madera (acabado natural y cálido, muy demandado en restauración y retail lifestyle) y el poliestireno de alta densidad (más económico, para interiores donde no hay impacto físico directo).
+**Tipos de letras corpóreas en Barcelona**
 
-Precios orientativos en Barcelona: letras corpóreas básicas sin iluminación desde 2.500 €. Con retroiluminación halo (la luz sale por detrás de la letra creando un halo en la pared) desde 3.500 €. Con iluminación frontal LED desde 3.000 €. Los precios finales dependen de la cantidad de letras, el tamaño total de la instalación, el material elegido y la complejidad de la instalación en la fachada.
+Las letras corpóreas se clasifican principalmente por su material y por el tipo de iluminación. En cuanto al material: aluminio (el más duradero y resistente a la intemperie, ideal para exterior, con acabados lacado, cepillado, espejo o bruto), metacrilato (ligero, translúcido u opaco, muchas opciones de color, el preferido para proyectos de interior con iluminación), madera (natural o lacada, muy demandada en restauración, cafeterías de especialidad y retail lifestyle), acero inoxidable (acabado espejo o cepillado, presencia máxima, especialmente en joyería y moda premium), y poliestireno de alta densidad (el más económico, para interiores sin impacto físico directo y eventos).
 
-¿Cuándo elegir letras corpóreas frente a un rótulo luminoso tipo caja de luz? Las letras corpóreas quedan mejor en fachadas donde quieres que la arquitectura se vea — el espacio entre letra y letra permite que la pared sea parte del diseño. La caja de luz tiene más impacto de noche porque ilumina una superficie mayor. Muchos locales combinan los dos: letras corpóreas para la identidad principal y caja de luz para información secundaria o precios.
+En cuanto a la iluminación: sin iluminación (las letras dependen de la luz ambiente del espacio), con retroiluminación halo (la luz LED sale por detrás de la letra creando un halo luminoso en la pared — el acabado más elegante y fotográfico), con iluminación frontal (los LEDs están en la cara visible de la letra, mayor brillo y visibilidad nocturna), y con iluminación interior translúcida (el cuerpo de metacrilato translúcido se ilumina desde dentro, especialmente vistoso en techo o con fondo oscuro).
 
-El proceso de fabricación en RUD: diseño vectorial adaptado a tu logotipo, mecanizado CNC de cada letra, acabado (lacado en color Pantone, efecto cepillado, espejo dorado o cromado, negro mate), y montaje con perfilería oculta sobre la fachada o pared. La instalación no deja marcas visibles en el soporte.
+**Precios de letras corpóreas en Barcelona (2026)**
 
-En Barcelona trabajamos en todos los barrios: Eixample, Gràcia, Sant Martí (22@), Sarrià-Sant Gervasi, Poble Nou y área metropolitana. Visita técnica gratuita, [presupuesto en 48 horas](/pricing), instalación con garantía. [Ver todos los tipos de rótulos que fabricamos →](/rotulos)`,
+Precios orientativos por tipo de instalación: letras corpóreas sin iluminación en aluminio lacado, instalación estándar de fachada, desde 2.500 € para proyectos de hasta 5 letras. Con retroiluminación halo en aluminio o metacrilato desde 3.500 €. Con iluminación frontal LED desde 3.000 €. Proyectos en acero inoxidable con espejo o efecto cobre desde 4.000 €.
+
+El precio final depende de: número de letras y caracteres, tamaño total de la instalación (alto de letra × ancho total), material y acabado, tipo de iluminación, y complejidad de la instalación (fachada de ladrillo vs. cristal vs. estructura metálica tienen coste de instalación diferente).
+
+Una instalación completa de letras corpóreas para una tienda del Eixample (nombre del negocio en aluminio cepillado con halo, letras de 30 cm de altura, 3 metros de ancho total) puede estar en un rango de 4.000 € a 6.000 € con instalación incluida.
+
+**Letras corpóreas vs. caja de luz vs. neón: ¿cuándo elegir cada una?**
+
+Las letras corpóreas quedan mejor en fachadas donde quieres que la arquitectura sea visible — el espacio entre letra y letra permite que el material de la fachada sea parte del diseño. Son la opción más elegante para negocios premium que quieren proyectar solidez y permanencia.
+
+La caja de luz tiene más impacto de noche porque ilumina una superficie mayor y el backlit crea más brillo desde la calle. Es la preferida para franquicias y negocios donde la visibilidad nocturna y la uniformidad de marca son prioritarias.
+
+El neón LED es el más fotogénico y el que mejor funciona en interior. Genera más contenido en redes sociales y es más versátil en formas. Su punto débil frente a las letras corpóreas es la percepción de solidez — el neón comunica creatividad y personalidad mientras que las letras corpóreas comunican institución y permanencia.
+
+**Proceso de fabricación y plazos**
+
+El proceso completo en RUD dura entre 3 y 5 semanas. Semana 1: visita técnica, toma de medidas de la fachada y propuesta con render fotorrealista de cómo quedará el rótulo instalado. Semana 2-3: aprobación del presupuesto y fabricación en nuestro taller de Cerdanyola del Vallès — mecanizado CNC de cada letra, acabado y control de calidad. Semana 4-5: instalación por nuestro equipo especializado con fijación oculta que no deja marcas visibles en el soporte.
+
+Todos los proyectos incluyen consulta sobre normativa municipal y, cuando es necesario, gestionamos la solicitud de licencia de actividad ante el Ayuntamiento de Barcelona.
+
+**¿Necesito licencia para instalar letras corpóreas en Barcelona?**
+
+Depende de la ubicación y las dimensiones. Para instalaciones en interior no se necesita licencia. Para instalaciones en fachada, la normativa del Ayuntamiento de Barcelona establece que los rótulos que no superen el 10% de la superficie de la fachada y tengan menos de 0,90 m de altura pueden instalarse sin licencia de obra mayor en la mayoría de zonas. En el Eixample, Gràcia y zonas de protección patrimonial las restricciones son más estrictas.
+
+En RUD realizamos sin coste adicional la consulta previa con los técnicos municipales para todos nuestros proyectos en Barcelona.
+
+En Barcelona trabajamos en todos los barrios: [Eixample](/rotulos/eixample-barcelona), [Gràcia](/rotulos/gracia-barcelona), [Poblenou](/rotulos/poblenou-barcelona), [Sarrià](/rotulos/sarria-barcelona), Sants y área metropolitana. Visita técnica gratuita, [presupuesto con render en 48 horas](/contact?servicio=letras), garantía 2 años. [Ver todos los tipos de rótulos →](/rotulos)`,
   },
   'vinilos-escaparate-barcelona-precio-instalacion': {
     title: 'Vinilos para escaparate en Barcelona: tipos, precios y cuándo usarlos',
-    date: 'Abril 2026', category: 'Señalética & Rótulos', readTime: '5 min',
+    date: 'Abril 2026', category: 'Señalética & Rótulos', readTime: '9 min',
     image: '/services/vinilo-escaparate.avif',
     excerpt: 'Vinilos de corte, impresos, esmerilados, microperforados. Guía completa de vinilos para escaparates en Barcelona con precios reales y ejemplos.',
-    content: `El vinilo de escaparate es la solución de señalética más versátil y económica que existe. Sin obra, sin permisos especiales para la mayoría de casos, y con un impacto visual inmediato. Es el primer rótulo que muchos negocios instalan en Barcelona y, bien hecho, puede durar años y competir visualmente con instalaciones mucho más costosas.
+    content: `El vinilo de escaparate es la solución de señalética más versátil y económica que existe para negocios en Barcelona. Sin obra, sin permisos especiales en la mayoría de casos, y con un impacto visual inmediato. Es el primer rótulo que muchos negocios instalan y, bien hecho, puede durar años y competir visualmente con instalaciones mucho más costosas.
 
-Existen varios tipos de vinilo para escaparate, cada uno con sus características. El vinilo de corte es el más básico: se corta en plotter según el diseño (textos, logos, siluetas) y se aplica directamente sobre el cristal. Sin fondo — el color del vinilo es el diseño. El más económico y rápido. El vinilo impreso permite reproducir fotografías, degradados, ilustraciones o cualquier elemento gráfico en alta resolución. Se puede imprimir con o sin blanco de base, y se lamina para protección UV. El vinilo esmerilado imita el cristal esmerilado y se usa para privacidad (zona baja del escaparate en clínicas, despachos o peluquerías) o como elemento decorativo con el logotipo recortado. El vinilo microperforado permite ver desde dentro hacia fuera con normalidad mientras que desde fuera se ve la imagen impresa — ideal para escaparates donde no se quiere reducir la luz natural.
+**Tipos de vinilos para escaparate**
 
-¿Cuánto cuesta un vinilo de escaparate en Barcelona? Los precios orientativos son: vinilo de corte básico (logotipo + texto) desde 150 € hasta 400 € con instalación. Vinilo impreso para un escaparate de 2 metros desde 300 € hasta 800 €. Vinilo esmerilado con logotipo recortado desde 250 €. Vinilo microperforado de gran formato desde 500 €. Los precios incluyen diseño, impresión e instalación.
+Existen cinco tipos principales de vinilo para escaparate, cada uno con su caso de uso óptimo.
 
-El plazo de entrega es el punto fuerte de los vinilos: en 48-72 horas desde la aprobación del arte final podemos tener el vinilo instalado. Para aperturas de local o campañas de temporada es la solución más ágil.
+El vinilo de corte es el más básico y económico: se corta en plotter según el diseño (textos, logos, siluetas geométricas) y se aplica directamente sobre el cristal. No tiene fondo — el color del vinilo es el diseño, y el cristal actúa como fondo. Ideal para comunicar el nombre del negocio, horarios, o un claim conciso. Duración aproximada: 5-7 años en exterior con buena exposición solar.
 
-En RUD instalamos [vinilos de escaparate en Barcelona](/rotulos) para comercios, clínicas, despachos, hoteles y oficinas. Trabajamos tanto el diseño desde cero como la aplicación de artes que el cliente ya tiene. Visita técnica gratuita, [presupuesto el mismo día](/pricing) para proyectos estándar.`,
+El vinilo impreso permite reproducir fotografías, degradados, ilustraciones o cualquier elemento gráfico complejo en alta resolución. Se imprime en plotter de gran formato, se lamina para protección UV y aplicación sobre cristal, y puede aplicarse con o sin blanco de base (el blanco de base mejora la opacidad y la viveza del color). Es la opción para campañas de temporada, promociones visuales y branding de alto impacto.
+
+El vinilo esmerilado imita el cristal esmerilado y se usa principalmente para privacidad (zona baja del escaparate en clínicas, despachos, centros de estética) o como elemento decorativo sofisticado con el logotipo recortado. Da un acabado premium y discreto muy demandado en negocios de servicios.
+
+El vinilo microperforado tiene perforaciones microscópicas que permiten ver desde dentro hacia fuera con total normalidad mientras que desde fuera se ve la imagen impresa. Ideal para escaparates donde no se quiere reducir la entrada de luz natural. Muy usado en agencias inmobiliarias, oficinas y tiendas que necesitan privacidad sin oscurecer el espacio.
+
+El vinilo translúcido se usa en cajas de luz y escaparates retroiluminados — permite que la luz pase a través de él creando un efecto de panel luminoso. Es el material estándar para las cajas de luz de gran formato.
+
+**Precios de vinilos para escaparate en Barcelona (2026)**
+
+Los precios reales del mercado en Barcelona son: vinilo de corte básico (logotipo + texto, escaparate de hasta 2 metros) desde 150 € hasta 400 € con diseño e instalación. Vinilo impreso para un escaparate de 2 metros desde 300 € hasta 800 € dependiendo de la complejidad gráfica. Vinilo esmerilado con logotipo recortado para escaparate estándar desde 250 €. Vinilo microperforado de gran formato (cristalera de más de 3 metros) desde 500 €.
+
+Los precios incluyen siempre diseño gráfico del arte final, impresión, laminado de protección, y mano de obra de instalación. En proyectos donde el cliente ya tiene el arte final en alta resolución, el precio baja entre un 15% y un 25%.
+
+**¿Cuánto dura un vinilo de escaparate?**
+
+La durabilidad depende principalmente de la exposición solar y la calidad del material. Los vinilos de calidad premium (Avery, Oracal, 3M) con laminado UV duran entre 5 y 7 años en fachadas con exposición directa al sol. En interior o con orientación norte, pueden durar 8-10 años sin problemas. Los vinilos de corte sin laminado para aplicaciones interiores tienen una vida útil de 3-5 años.
+
+La retirada del vinilo es limpia con los materiales correctos — no daña el cristal ni deja residuos permanentes si se hace con calor y los disolventes adecuados.
+
+**Plazo de instalación**
+
+El plazo de entrega es el punto fuerte de los vinilos frente a cualquier otro tipo de rótulo. Desde la aprobación del arte final: vinilo de corte en 24-48 horas, vinilo impreso en 48-72 horas. Para aperturas de local urgentes, en muchos casos podemos instalar en el mismo día si nos confirman antes de las 11:00.
+
+**¿Se necesita licencia para instalar un vinilo de escaparate en Barcelona?**
+
+Para la mayoría de vinilos de escaparate en Barcelona no se necesita licencia especial. El vinilo se considera un elemento gráfico temporal no estructural. Sin embargo, si el vinilo cubre más del 50% del cristal del escaparate en negocios en planta baja de edificios catalogados o en zonas de protección especial, puede requerirse comunicación previa al Ayuntamiento. En caso de duda, lo consultamos antes de presupuestar.
+
+**Casos de uso habituales en Barcelona**
+
+Los vinilos de escaparate en Barcelona se usan habitualmente en: tiendas de moda y complementos (cambios estacionales de campaña), clínicas dentales y centros de estética (privacidad y branding simultáneo), restaurantes y cafeterías (menú, horarios y personalidad en cristal), agencias inmobiliarias (cartelería de pisos en venta/alquiler a gran formato), estudios de pilates, yoga y fitness (wrap de cristalera con frases motivacionales), y oficinas y coworkings (señalética de planta, zonificación por cristal esmerilado).
+
+En RUD instalamos [vinilos de escaparate en Barcelona](/rotulos/vinilos-escaparate-barcelona) para comercios, clínicas, despachos, hoteles y oficinas en todos los barrios: [Eixample](/rotulos/eixample-barcelona), [Gràcia](/rotulos/gracia-barcelona), [Poblenou](/rotulos/poblenou-barcelona) y área metropolitana. Trabajamos el diseño desde cero o aplicamos artes que el cliente ya tiene. [Pide presupuesto ahora](/contact?servicio=vinilos) — respuesta en menos de 2 horas.`,
   },
   'automatizacion-marketing-agencias-n8n': {
     title: 'Cómo automatizamos el 60% de nuestros workflows de marketing con n8n (y €0 de coste)',
