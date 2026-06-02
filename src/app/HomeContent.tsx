@@ -3,24 +3,56 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 import FAQAccordion from '@/components/FAQAccordion'
+import { useEffect, useRef } from 'react'
 import { trackCTA, trackEmailClick, trackSocialClick } from '@/lib/analytics'
 
 // ═══════════════════════════════════════════════════════════
 // HERO — video background, Barlow + Instrument Serif
 // ═══════════════════════════════════════════════════════════
+const VIDEO_SRC = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_074215_04640ca7-042c-45d6-bb56-58b1e8a42489.mp4'
+
 function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const load = () => {
+      const v = videoRef.current
+      if (!v || v.src) return
+      v.src = VIDEO_SRC
+      v.load()
+      v.play().catch(() => {})
+    }
+    if (document.readyState === 'complete') {
+      load()
+    } else {
+      window.addEventListener('load', load, { once: true })
+    }
+  }, [])
+
   return (
     <section className="relative h-screen min-h-[640px] flex items-end justify-center overflow-hidden">
 
-      {/* Full-screen background video — autoplay, loop, muted, no overlays */}
-      <video
+      {/* Poster image — LCP element, shown immediately before video loads */}
+      <img
+        src="/hero-bg.webp"
+        alt=""
+        aria-hidden="true"
+        fetchPriority="high"
         className="absolute inset-0 w-full h-full object-cover"
-        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_074215_04640ca7-042c-45d6-bb56-58b1e8a42489.mp4"
-        poster="/hero-bg.jpg"
+        style={{ zIndex: 0 }}
+      />
+
+      {/* Background video — lazy-loaded after window.load */}
+      <video
+        ref={videoRef}
+        className="absolute inset-0 w-full h-full object-cover"
+        poster="/hero-bg.webp"
         autoPlay
         loop
         muted
         playsInline
+        preload="none"
+        style={{ zIndex: 1 }}
       />
 
       {/* Content — 250px breathing room from bottom */}
