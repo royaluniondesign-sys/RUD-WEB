@@ -19,13 +19,6 @@ function renderParagraph(text: string) {
 }
 
 const POSTS: Record<string, {
-  'branding-minimalista-2026-menos-ornamentos-y-mas-intencion-e': {
-    title: 'Branding minimalista 2026: Menos ornamentos y más intención estratégica',
-    date: 'Mayo 2026', category: 'Branding', readTime: '4 min',
-    image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=85',
-    excerpt: 'En 2026, el minimalismo deja de ser una moda estética para convertirse en una ventaja competitiva: descubre cómo la simplicidad radical potencia el valor de tu marca.',
-    content: `test`,
-  },
   title: string; date: string; category: string; readTime: string;
   image: string; content: string; excerpt: string;
 }> = {
