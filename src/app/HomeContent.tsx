@@ -419,7 +419,7 @@ function Work() {
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           {[
             {slug:'kopess',name:'Kopess 23',type:'Eventos & Catering · Barcelona',img:'https://kopess23.com/wp-content/uploads/2025/09/unsplash-rrYF1RfotSM.jpg',tags:['Diseño Web','WordPress','SEO','Branding'],desc:'Web, branding e identidad visual para empresa de eventos corporativos y catering premium en Barcelona.'},
-            {slug:'oxyzen',name:'Oxyzen',type:'Wellness · Barcelona',img:'/client-oxyzen-hero.jpg',tags:['Diseño Web','SEO Local','Identidad Visual'],desc:'Web de captación de leads y SEO local para estudio de bienestar.'},
+            {slug:'oxyzen',name:'Oxyzen Club',type:'Club Privado Premium · Eixample, Barcelona',img:'https://www.oxyzen.es/wp-content/uploads/2026/05/escorts-barcelona-pasillo-acuario-hero.jpg',tags:['Diseño Web','WordPress/Avada','SEO','Branding'],desc:'Web premium, branding gold-dark, SEO técnico y analytics GA4 para club privado en el Eixample de Barcelona.'},
           ].map((p, i) => (
             <ScrollReveal key={p.slug} delay={(i+1)*80}>
               <Link href={`/work/${p.slug}`} style={{display:'flex',flexDirection:'column',background:'white',borderRadius:'16px',overflow:'hidden',border:'1px solid var(--border)',textDecoration:'none',height:'100%'}} className="card-lift group">

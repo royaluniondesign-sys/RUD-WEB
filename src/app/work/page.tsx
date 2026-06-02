@@ -74,10 +74,10 @@ const DIGITAL_PROJECTS = [
     img: 'https://kopess23.com/wp-content/uploads/2025/09/unsplash-rrYF1RfotSM.jpg', url: 'https://kopess23.com', featured: false,
   },
   {
-    slug: 'oxyzen', client: 'Oxyzen', type: 'Wellness & entrenamiento · Barcelona',
-    desc: 'Web de captación de leads, identidad visual y SEO local para estudio de bienestar en Barcelona.',
-    tags: ['Diseño Web','SEO Local','Identidad Visual'],
-    img: '/client-oxyzen-hero.jpg', url: 'https://oxyzen.es', featured: false,
+    slug: 'oxyzen', client: 'Oxyzen Club', type: 'Club Privado Premium · Eixample, Barcelona',
+    desc: 'Web completa en WordPress/Avada, branding de lujo gold-dark, SEO técnico avanzado y analítica GA4 con 17 eventos personalizados para club privado premium en el Eixample.',
+    tags: ['Diseño Web','WordPress/Avada','SEO','Branding'],
+    img: 'https://www.oxyzen.es/wp-content/uploads/2026/05/escorts-barcelona-pasillo-acuario-hero.jpg', url: 'https://www.oxyzen.es', featured: false,
   },
 ]
 
