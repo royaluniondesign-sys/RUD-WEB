@@ -500,8 +500,8 @@ function Work() {
               <div style={{display:'flex',alignItems:'center',gap:'10px'}}>
                 <div style={{width:'32px',height:'32px',borderRadius:'50%',background:'rgba(255,255,255,0.12)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'13px',fontWeight:700,color:'white',flexShrink:0}}>K</div>
                 <div>
-                  <p style={{fontSize:'0.8125rem',fontWeight:600,color:'white',lineHeight:1.2}}>Kopess — Fundadora IDNT® &amp; Oxyzen</p>
-                  <p style={{fontSize:'0.75rem',color:'rgba(255,255,255,0.35)'}}>idnt.es · kopess23.com · oxyzen.es</p>
+                  <p style={{fontSize:'0.8125rem',fontWeight:600,color:'white',lineHeight:1.2}}>Kopess — Fundadora, IDNT®</p>
+                  <p style={{fontSize:'0.75rem',color:'rgba(255,255,255,0.35)'}}>idnt.es · Barcelona</p>
                 </div>
               </div>
             </div>
