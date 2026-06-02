@@ -483,38 +483,6 @@ function Work() {
           ))}
         </div>
 
-        {/* Social proof + CTA conversion block */}
-        <ScrollReveal delay={200}>
-          <div style={{borderRadius:'16px',background:'#0A0908',padding:'clamp(1.5rem,4vw,2.25rem)',marginBottom:'1rem',display:'flex',flexWrap:'wrap',alignItems:'center',justifyContent:'space-between',gap:'1.5rem'}}>
-            <div style={{flex:1,minWidth:'260px'}}>
-              {/* Stars */}
-              <div style={{display:'flex',gap:'4px',marginBottom:'0.875rem'}}>
-                {[1,2,3,4,5].map(s => (
-                  <svg key={s} width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                ))}
-                <span style={{fontSize:'12px',color:'rgba(255,255,255,0.4)',marginLeft:'6px',alignSelf:'center'}}>+12 reseñas</span>
-              </div>
-              <p style={{fontSize:'clamp(0.9375rem,2vw,1.0625rem)',color:'white',lineHeight:1.6,marginBottom:'1rem',fontStyle:'italic'}}>
-                "Web online en 3 semanas, top 3 en Google Barcelona en 2 meses. El branding de IDNT ahora habla solo."
-              </p>
-              <div style={{display:'flex',alignItems:'center',gap:'10px'}}>
-                <div style={{width:'32px',height:'32px',borderRadius:'50%',background:'rgba(255,255,255,0.12)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'13px',fontWeight:700,color:'white',flexShrink:0}}>K</div>
-                <div>
-                  <p style={{fontSize:'0.8125rem',fontWeight:600,color:'white',lineHeight:1.2}}>Kopess — Fundadora, IDNT®</p>
-                  <p style={{fontSize:'0.75rem',color:'rgba(255,255,255,0.35)'}}>idnt.es · Barcelona</p>
-                </div>
-              </div>
-            </div>
-            <div style={{display:'flex',flexDirection:'column',gap:'10px',flexShrink:0}}>
-              <Link href="/contact"
-                onClick={() => trackCTA('Quiero resultados como estos', '/contact', 'testimonial-cta')}
-                style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'0.875rem 1.5rem',background:'white',color:'#0A0908',borderRadius:'9999px',fontWeight:700,fontSize:'14px',textDecoration:'none',whiteSpace:'nowrap'}}>
-                Quiero resultados así →
-              </Link>
-              <p style={{fontSize:'11px',color:'rgba(255,255,255,0.3)',textAlign:'center'}}>Presupuesto en 24h · Sin compromiso</p>
-            </div>
-          </div>
-        </ScrollReveal>
 
         {/* Tu marca aquí */}
         <ScrollReveal delay={240}>
