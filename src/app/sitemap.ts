@@ -23,6 +23,11 @@ const ROTULOS_SLUGS = [
   'cajas-de-luz-barcelona',
   'senaletica-interior-barcelona',
   'publicidad-exterior-barcelona',
+  'eixample-barcelona',
+  'gracia-barcelona',
+  'poblenou-barcelona',
+  'sarria-barcelona',
+  'sants-barcelona',
 ]
 
 const WORK_SLUGS = ['idnt', 'kopess', 'oxyzen', 'aurum']
