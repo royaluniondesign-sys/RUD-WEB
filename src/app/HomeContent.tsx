@@ -140,36 +140,42 @@ function RotulosStrip() {
       kw: 'Rótulos neón LED Barcelona',
       desc: 'Neón flexible LED personalizado. Perfecto para escaparates, hostelería y locales comerciales. Bajo consumo, alta durabilidad.',
       img: '/services/neon-interior.avif',
+      href: '/rotulos/neon-led-barcelona',
     },
     {
       titulo: 'Letras Corpóreas',
       kw: 'Letras corpóreas Barcelona',
       desc: 'Letras en volumen de acero, aluminio o poliestireno con o sin iluminación interior. Presencia máxima en fachada.',
       img: '/services/letras-corporeas.avif',
+      href: '/rotulos/letras-corporeas-barcelona',
     },
     {
       titulo: 'Cajas de Luz',
       kw: 'Rótulos luminosos Barcelona',
       desc: 'Cajas de luz LED con frente en vinilo, metacrilato o tela tensada. Visibilidad 24h con consumo mínimo.',
       img: '/services/rotulos-luminosos.avif',
+      href: '/rotulos/cajas-de-luz-barcelona',
     },
     {
       titulo: 'Vinilos Escaparate',
       kw: 'Vinilos escaparate Barcelona',
       desc: 'Vinilos de corte, impresos y microperforados para escaparates y cristaleras. Instalación el mismo día.',
       img: '/services/vinilo-escaparate.avif',
+      href: '/rotulos/vinilos-escaparate-barcelona',
     },
     {
       titulo: 'Señalética Interior',
       kw: 'Señalética corporativa Barcelona',
       desc: 'Directorios, balizas, señales de evacuación y señalética de marca para oficinas, hoteles y comercios.',
       img: '/services/senaletica-interior.avif',
+      href: '/rotulos/senaletica-interior-barcelona',
     },
     {
       titulo: 'Publicidad Exterior',
       kw: 'Publicidad exterior Barcelona',
       desc: 'Banderolas, lamas, tótems y fachadas completas. Materiales adaptados a la intemperie y normativa local.',
       img: '/services/publicidad-exterior.avif',
+      href: '/rotulos/publicidad-exterior-barcelona',
     },
   ]
 
@@ -199,7 +205,7 @@ function RotulosStrip() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8 }} className="rotulos-grid">
           {tipos.map((t, i) => (
             <ScrollReveal key={t.titulo} delay={i * 45}>
-              <Link href="/rotulos" style={{ display: 'block', borderRadius: 12, overflow: 'hidden', position: 'relative', aspectRatio: '4/3', textDecoration: 'none' }}>
+              <Link href={t.href} style={{ display: 'block', borderRadius: 12, overflow: 'hidden', position: 'relative', aspectRatio: '4/3', textDecoration: 'none' }}>
                 <img src={t.img} alt={t.kw} loading={i < 3 ? 'eager' : 'lazy'}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
                   className="rotulo-img" />
