@@ -128,8 +128,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="geo.region" content="ES-CT" />
         <meta name="geo.placename" content="Barcelona" />
         <meta name="geo.position" content="41.3851;2.1734" />
+        {/* Preload hero poster — LCP element */}
+        <link rel="preload" href="/hero-bg.webp" as="image" fetchPriority="high" />
+        {/* Preconnect for fonts and video CDN */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://d8j0ntlcm91z4.cloudfront.net" />
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
