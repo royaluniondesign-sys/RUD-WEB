@@ -45,7 +45,7 @@ export default function About() {
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                   <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.75 }}>Somos una agencia 360: diseñamos y fabricamos rótulos luminosos, letras corpóreas, vinilos y señalética — y también creamos la identidad de marca, la web, el e-commerce y los automatismos que hacen crecer el negocio.</p>
-                  <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.75 }}>No somos solo "una agencia digital" ni solo "un taller de rótulos". Somos los dos. Eso nos da una visión completa de tu marca: coherencia desde la fachada hasta el checkout online.</p>
+                  <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.75 }}>No somos solo &ldquo;una agencia digital&rdquo; ni solo &ldquo;un taller de rótulos&rdquo;. Somos los dos. Eso nos da una visión completa de tu marca: coherencia desde la fachada hasta el checkout online.</p>
                   <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.75 }}>Trabajamos con estrategia antes que con diseño. No abrimos Figma ni encendemos la fresadora hasta entender tu mercado, tu competencia y tu cliente. El resultado es trabajo que posiciona, no solo decora.</p>
                 </div>
               </div>

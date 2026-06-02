@@ -36,7 +36,11 @@ export default function Navbar({ light = false }: { light?: boolean }) {
     return () => window.removeEventListener('scroll', fn)
   }, [])
 
-  useEffect(() => { setOpen(false); setMobileRotulosOpen(false) }, [path])
+  useEffect(() => {
+    if (open) setOpen(false)
+    if (mobileRotulosOpen) setMobileRotulosOpen(false)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [path])
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
