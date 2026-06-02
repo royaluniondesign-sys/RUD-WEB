@@ -418,7 +418,7 @@ function Work() {
         {/* Aurum + BrandForce */}
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           {[
-            {slug:'kopess',name:'Kopess 23',type:'Moda urban · Barcelona',img:'/client-kopess-hero.jpg',tags:['Diseño Web','SEO','Branding','Fotografía'],desc:'Web, SEO e identidad visual para marca de moda urbana barcelonesa.'},
+            {slug:'kopess',name:'Kopess 23',type:'Eventos & Catering · Barcelona',img:'https://kopess23.com/wp-content/uploads/2025/09/unsplash-rrYF1RfotSM.jpg',tags:['Diseño Web','WordPress','SEO','Branding'],desc:'Web, branding e identidad visual para empresa de eventos corporativos y catering premium en Barcelona.'},
             {slug:'oxyzen',name:'Oxyzen',type:'Wellness · Barcelona',img:'/client-oxyzen-hero.jpg',tags:['Diseño Web','SEO Local','Identidad Visual'],desc:'Web de captación de leads y SEO local para estudio de bienestar.'},
           ].map((p, i) => (
             <ScrollReveal key={p.slug} delay={(i+1)*80}>
