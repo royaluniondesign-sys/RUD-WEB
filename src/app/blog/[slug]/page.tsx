@@ -221,6 +221,23 @@ La inversión para montar este stack: unas 40 horas de configuración inicial re
 
 ¿Interesado en automatizar tu agencia o negocio? En RUD desarrollamos agentes IA y workflows de automatización. [Ver servicios de automatización IA →](/services)`,
   },
+  'cajas-de-luz-barcelona-precio-tipos': {
+    title: 'Cajas de luz en Barcelona: tipos, formatos y precios reales en 2026',
+    date: 'Junio 2026', category: 'Señalética & Rótulos', readTime: '5 min',
+    image: '/RUDTRABAJOSROTULOS/photo-1698500103054-8a00e4c4131c.avif',
+    excerpt: 'La caja de luz sigue siendo el rótulo más instalado en comercios de Barcelona. Guía completa de formatos, materiales y precios para 2026.',
+    content: `La caja de luz es el rótulo luminoso más instalado en comercios, franquicias y hostelería de Barcelona. Su combinación de alta visibilidad nocturna, durabilidad y fácil mantenimiento la convierten en la opción predeterminada para negocios que necesitan impacto visual sin complicaciones técnicas.
+
+Una caja de luz es básicamente una estructura de aluminio con un frente iluminado — fabricado en metacrilato o policarbonato — que difunde la luz de los LEDs interiores de forma uniforme. El resultado es una superficie luminosa continua con el logo o texto del negocio, perfectamente visible tanto de día como de noche.
+
+Existen dos grandes familias: la caja de luz con frente de vinilo impreso (más económica, el gráfico se imprime en vinilo adhesivo sobre el frente translúcido) y la caja de luz con frente fresado (más premium, el logo se freása directamente sobre el frente dejando pasar la luz solo por el diseño). La segunda opción da un acabado más limpio y profesional, similar al de las letras corpóreas.
+
+Los precios orientativos en Barcelona para 2026: caja de luz simple con vinilo impreso, formato pequeño (hasta 100×60 cm), desde 600 € instalada. Formato mediano (hasta 200×100 cm) entre 900 € y 1.600 €. Caja de luz con frente fresado premium, desde 1.200 € para formato pequeño. Cajas de doble cara (visibles desde los dos lados, habitual en marquesinas y banderolas) añaden aproximadamente un 40% al precio.
+
+¿Cuándo elegir caja de luz frente a otras opciones? La caja de luz es ideal cuando necesitas máxima visibilidad nocturna con superficie iluminada amplia, cuando el local cambia el gráfico frecuentemente (basta cambiar el vinilo), o cuando el presupuesto no permite letras corpóreas con retroiluminación. Es la opción estándar para franquicias porque permite aplicar el manual de marca con precisión y economía de escala.
+
+En RUD fabricamos e instalamos [cajas de luz en Barcelona](/rotulos/cajas-de-luz-barcelona) para todo tipo de comercios. Visita técnica gratuita, presupuesto con render en 48 horas, instalación con garantía de 2 años. [Pide presupuesto sin compromiso →](/pricing)`,
+  },
 }
 
 export async function generateStaticParams() {
