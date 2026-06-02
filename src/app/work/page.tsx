@@ -68,10 +68,10 @@ const DIGITAL_PROJECTS = [
     img: '/client-idnt-hero.gif', url: 'https://www.idnt.es', featured: true,
   },
   {
-    slug: 'kopess', client: 'Kopess 23', type: 'Moda urban · Barcelona',
-    desc: 'Identidad visual, web de alto rendimiento en Next.js, fotografía editorial y estrategia SEO para marca de moda urbana barcelonesa.',
-    tags: ['Diseño Web','SEO','Branding','Fotografía'],
-    img: '/client-kopess-hero.jpg', url: 'https://kopess23.com', featured: false,
+    slug: 'kopess', client: 'Kopess 23', type: 'Eventos & Catering · Barcelona',
+    desc: 'Web profesional, branding e identidad visual para empresa de eventos corporativos y catering premium en Barcelona. SEO orientado a captación B2B.',
+    tags: ['Diseño Web','WordPress','SEO','Branding'],
+    img: 'https://kopess23.com/wp-content/uploads/2025/09/unsplash-rrYF1RfotSM.jpg', url: 'https://kopess23.com', featured: false,
   },
   {
     slug: 'oxyzen', client: 'Oxyzen', type: 'Wellness & entrenamiento · Barcelona',
