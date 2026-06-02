@@ -209,10 +209,14 @@ export default function AgentChat() {
   const inputRef  = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    setMounted(true)
-    if (typeof sessionStorage !== 'undefined') {
-      setGated(sessionStorage.getItem('rud_lead_gated') === '1')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const init = () => {
+      setMounted(true)
+      if (typeof sessionStorage !== 'undefined') {
+        setGated(sessionStorage.getItem('rud_lead_gated') === '1')
+      }
     }
+    init()
     const t = setTimeout(() => setPulsed(true), 4000)
     return () => clearTimeout(t)
   }, [])
