@@ -278,6 +278,9 @@ textarea:focus-visible {
 /* ── Footer links ────────────────────────── */
 .footer-link:hover { color: white !important; }
 
+/* ── Hero service text links ─────────────── */
+.hero-service-link:hover { color: rgba(255,255,255,0.85) !important; }
+
 /* ── WhyRUD hover (CSS instead of JS mutation) */
 .why-card { transition: background .2s; }
 .why-card:hover { background: white !important; }

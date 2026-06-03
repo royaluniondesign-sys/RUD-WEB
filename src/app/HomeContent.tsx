@@ -106,10 +106,27 @@ function Hero() {
           </Link>
           <Link href="/rotulos"
             onClick={() => trackCTA('Ver rótulos', '/rotulos', 'hero')}
-            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', border: '1px solid rgba(255,255,255,0.3)', color: 'white', borderRadius: 9999, fontWeight: 500, fontSize: 15, textDecoration: 'none', whiteSpace: 'nowrap' }}>
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.5)', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 15, textDecoration: 'none', whiteSpace: 'nowrap', backdropFilter: 'blur(8px)' }}>
             Rótulos Barcelona
           </Link>
         </div>
+
+        {/* Local SEO anchors — text links, not decorative pills */}
+        <nav aria-label="Tipos de rótulos" className="animate-fade-in-up anim-d3" style={{ marginTop: '1.25rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem 1.25rem' }}>
+          {[
+            ['Neón LED', '/rotulos/neon-led-barcelona'],
+            ['Letras Corpóreas', '/rotulos/letras-corporeas-barcelona'],
+            ['Vinilos Escaparate', '/rotulos/vinilos-escaparate-barcelona'],
+            ['Cajas de Luz', '/rotulos/cajas-de-luz-barcelona'],
+            ['Señalética Interior', '/rotulos/senaletica-interior-barcelona'],
+          ].map(([label, href]) => (
+            <Link key={label} href={href}
+              style={{ fontSize: '12px', color: 'rgba(255,255,255,0.45)', textDecoration: 'none', fontWeight: 500, letterSpacing: '0.01em', transition: 'color 0.2s' }}
+              className="hero-service-link">
+              {label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </section>
   )
@@ -760,8 +777,8 @@ export default function HomeContent() {
       <Navbar light />
       <Hero />
       <Marquee />
-      <Stats />
       <RotulosStrip />
+      <Stats />
       <Services />
       <AuraSection />
       <Work />
