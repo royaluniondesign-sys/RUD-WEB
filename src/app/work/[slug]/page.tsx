@@ -129,6 +129,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${p.client} — Caso de estudio · RUD Studio Barcelona`,
     description: p.desc,
+    alternates: { canonical: `https://royaluniondesign.com/work/${slug}` },
   }
 }
 

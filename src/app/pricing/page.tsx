@@ -151,7 +151,7 @@ export default function Pricing() {
           <ScrollReveal>
             <div style={{ marginTop: 20, padding: '16px 22px', borderRadius: 12, background: '#F0EDE6', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
               <p style={{ fontSize: 13, color: '#6B7280' }}>✅ Visita técnica gratuita · Presupuesto en 24h · Instalación incluida</p>
-              <Link href="/contact?servicio=rotulos" style={{ fontSize: 13, fontWeight: 600, color: '#0A0908', textDecoration: 'none' }}>Pedir presupuesto →</Link>
+              <Link href="/contact" style={{ fontSize: 13, fontWeight: 600, color: '#0A0908', textDecoration: 'none' }}>Pedir presupuesto →</Link>
             </div>
           </ScrollReveal>
         </div>
@@ -215,7 +215,7 @@ export default function Pricing() {
                     <p style={{ fontSize: 11, color: tier.featured ? 'rgba(255,255,255,0.25)' : '#C4BFB8' }}>Entrega estimada: {tier.delivery}</p>
                   </div>
 
-                  <Link href={`/contact?tier=${tier.name.toLowerCase()}`} style={{
+                  <Link href="/contact" style={{
                     display: 'block', textAlign: 'center', padding: '0.875rem',
                     borderRadius: 9999, fontSize: 14, fontWeight: 600, textDecoration: 'none',
                     background: tier.featured ? 'white' : '#0A0908',
