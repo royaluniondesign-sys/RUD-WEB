@@ -72,7 +72,7 @@ function buildAutoReply(safeName: string): string {
       </div>
       <p style="font-size:14px;color:#6B7280;margin:0 0 28px;line-height:1.6">
         ¿Urgente? Escríbenos a
-        <a href="mailto:hello@rud.studio" style="color:#0A0908;font-weight:600">hello@rud.studio</a>
+        <a href="mailto:hello@royaluniondesign.com" style="color:#0A0908;font-weight:600">hello@royaluniondesign.com</a>
       </p>
       <div style="padding-top:24px;border-top:1px solid #E2DDD7">
         <p style="font-size:12px;color:#C4BFB8;margin:0">RUD Studio · Royal Union Design · Barcelona</p>

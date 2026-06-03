@@ -226,11 +226,11 @@ export default function Contact() {
                   <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.75)', margin: '2px 0 0', lineHeight: 1 }}>+34 645 593 227 · respuesta inmediata</p>
                 </div>
               </a>
-              <a href="mailto:hello@rud.studio"
+              <a href="mailto:hello@royaluniondesign.com"
                 style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 20px', borderRadius: 14, background: 'white', border: '1.5px solid #E2DDD7', color: '#0A0908', textDecoration: 'none' }}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 <div style={{ textAlign: 'left', flex: 1 }}>
-                  <p style={{ fontSize: 14, fontWeight: 600, margin: 0, lineHeight: 1.3 }}>hello@rud.studio</p>
+                  <p style={{ fontSize: 14, fontWeight: 600, margin: 0, lineHeight: 1.3 }}>hello@royaluniondesign.com</p>
                   <p style={{ fontSize: 12, color: '#9CA3AF', margin: '2px 0 0', lineHeight: 1 }}>Respuesta garantizada en 24h</p>
                 </div>
               </a>
@@ -315,8 +315,8 @@ export default function Contact() {
               </div>
               <div>
                 <p style={labelStyle}>Email</p>
-                <a href="mailto:hello@rud.studio" style={{ fontWeight: 600, fontSize: 15, color: '#0A0908', textDecoration: 'none' }}>
-                  hello@rud.studio
+                <a href="mailto:hello@royaluniondesign.com" style={{ fontWeight: 600, fontSize: 15, color: '#0A0908', textDecoration: 'none' }}>
+                  hello@royaluniondesign.com
                 </a>
               </div>
               <div>
@@ -582,7 +582,7 @@ export default function Contact() {
                   {status === 'error' && (
                     <div role="alert" style={{ padding: '0.875rem 1rem', borderRadius: 12, background: '#FEF2F2', border: '1px solid #FECACA', fontSize: 13, color: '#991B1B', marginBottom: 16, lineHeight: 1.5 }}>
                       <strong>Error:</strong> {errorMsg}. Inténtalo de nuevo o escríbenos a{' '}
-                      <a href="mailto:hello@rud.studio" style={{ color: '#991B1B', fontWeight: 600 }}>hello@rud.studio</a>
+                      <a href="mailto:hello@royaluniondesign.com" style={{ color: '#991B1B', fontWeight: 600 }}>hello@royaluniondesign.com</a>
                     </div>
                   )}
 
@@ -608,8 +608,8 @@ export default function Contact() {
                   </div>
                   <p style={{ fontSize: 12, color: '#9CA3AF', textAlign: 'center' }}>
                     O escríbenos a{' '}
-                    <a href="mailto:hello@rud.studio" style={{ color: '#0A0908', textDecoration: 'underline', textUnderlineOffset: 3 }}>
-                      hello@rud.studio
+                    <a href="mailto:hello@royaluniondesign.com" style={{ color: '#0A0908', textDecoration: 'underline', textUnderlineOffset: 3 }}>
+                      hello@royaluniondesign.com
                     </a>
                   </p>
                 </div>
