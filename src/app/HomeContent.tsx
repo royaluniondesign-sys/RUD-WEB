@@ -94,7 +94,7 @@ function Hero() {
         {/* Sub-headline */}
         <p className="font-barlow text-base md:text-lg leading-relaxed max-w-2xl mt-8 animate-fade-in-up anim-d2"
            style={{ color: 'rgba(255,255,255,0.75)' }}>
-          Señalética corporativa, rótulos neón, vinilos de escaparate, identidad visual y webs de alto rendimiento — todo bajo un mismo techo.
+          Fabricamos rótulos luminosos e instalamos señalética corporativa en Barcelona. Branding, identidad visual y diseño web de alto rendimiento — todo bajo un mismo techo.
         </p>
 
         {/* CTAs */}
@@ -273,8 +273,8 @@ function RotulosStrip() {
             <p style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.5)', maxWidth: '420px', lineHeight: 1.6 }}>
               Visita técnica gratuita en Barcelona. Mándanos las medidas y el espacio — presupuesto en menos de 24h.
             </p>
-            <Link href="/contact?servicio=rotulos"
-              onClick={() => trackCTA('Pedir presupuesto rótulo', '/contact?servicio=rotulos', 'rotulos-strip-bottom')}
+            <Link href="/contact"
+              onClick={() => trackCTA('Pedir presupuesto rótulo', '/contact', 'rotulos-strip-bottom')}
               style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 700, fontSize: 14, textDecoration: 'none', whiteSpace: 'nowrap' }}>
               Pedir presupuesto de rótulo →
             </Link>
@@ -461,7 +461,7 @@ function Work() {
                     </p>
                   </div>
                   <div className="arrow-link" style={{marginTop:'1.5rem',display:'inline-flex',alignItems:'center',gap:'8px',fontSize:'0.875rem',fontWeight:600,color:'var(--fg)'}}>
-                    Ver proyecto completo
+                    Ver caso IDNT®
                     <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   </div>
                 </div>
@@ -492,7 +492,7 @@ function Work() {
                   <p style={{fontSize:'0.75rem',color:'#9CA3AF',fontWeight:500,marginBottom:'0.5rem'}}>{p.type}</p>
                   <p style={{fontSize:'0.8125rem',color:'var(--muted)',lineHeight:1.6,flex:1}}>{p.desc}</p>
                   <div className="arrow-link" style={{marginTop:'1rem',fontSize:'0.8125rem',fontWeight:600,color:'var(--fg)',display:'inline-flex',alignItems:'center',gap:'8px'}}>
-                    Ver proyecto <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    Ver caso {p.name} <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   </div>
                 </div>
               </Link>
@@ -574,7 +574,7 @@ function WhyRUD() {
                 <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'var(--warm)',display:'flex',alignItems:'center',justifyContent:'center',color:'var(--fg)',marginBottom:'1.25rem',flexShrink:0}}>
                   {item.icon}
                 </div>
-                <h3 style={{fontWeight:700,fontSize:'1.0625rem',marginBottom:'0.625rem',letterSpacing:'-0.01em',color:'var(--fg)'}}>{item.title}</h3>
+                <p style={{fontWeight:700,fontSize:'1.0625rem',marginBottom:'0.625rem',letterSpacing:'-0.01em',color:'var(--fg)'}}>{item.title}</p>
                 <p style={{fontSize:'0.8125rem',color:'var(--muted)',lineHeight:1.65,flex:1}}>{item.desc}</p>
               </div>
             </ScrollReveal>
@@ -623,7 +623,7 @@ function Investment() {
                     Más solicitado
                   </span>
                 )}
-                <h3 style={{fontSize:'1.375rem',fontWeight:700,marginBottom:'0.75rem',color: tier.featured ? 'white' : 'var(--fg)'}}>{tier.name}</h3>
+                <p style={{fontSize:'1.375rem',fontWeight:700,marginBottom:'0.75rem',color: tier.featured ? 'white' : 'var(--fg)'}}>{tier.name}</p>
                 <p style={{fontSize:'0.875rem',color: tier.featured ? 'rgba(255,255,255,0.6)' : 'var(--muted)',lineHeight:1.65,marginBottom:'1.5rem',flex:1}}>{tier.desc}</p>
                 <div style={{paddingTop:'1.25rem',borderTop: tier.featured ? '1px solid rgba(255,255,255,0.1)' : '1px solid var(--border)'}}>
                   <p style={{fontSize:'0.75rem',color: tier.featured ? 'rgba(255,255,255,0.35)' : '#C4BFB8',marginBottom:'0.25rem'}}>Ideal para: {tier.ideal}</p>
