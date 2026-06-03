@@ -12,7 +12,7 @@ function escapeHtml(str: string): string {
 
 function buildInternalEmail(
   safeName: string, safeEmail: string,
-  safeType: string, safeBudget: string, safeMessage: string
+  safePhone: string, safeType: string, safeBudget: string, safeMessage: string
 ): string {
   return `
     <div style="font-family:'Helvetica Neue',sans-serif;max-width:600px;margin:0 auto;padding:40px 24px;background:#FAFAFA;color:#0A0A0A;">
@@ -25,6 +25,8 @@ function buildInternalEmail(
             <td style="padding:11px 0;border-bottom:1px solid #E5E2DC;font-size:14px;font-weight:600">${safeName}</td></tr>
         <tr><td style="padding:11px 0;border-bottom:1px solid #E5E2DC;font-size:12px;color:#9CA3AF">Email</td>
             <td style="padding:11px 0;border-bottom:1px solid #E5E2DC;font-size:14px"><a href="mailto:${safeEmail}" style="color:#0A0A0A">${safeEmail}</a></td></tr>
+        ${safePhone ? `<tr><td style="padding:11px 0;border-bottom:1px solid #E5E2DC;font-size:12px;color:#9CA3AF">Teléfono</td>
+            <td style="padding:11px 0;border-bottom:1px solid #E5E2DC;font-size:14px"><a href="tel:${safePhone}" style="color:#0A0A0A">${safePhone}</a></td></tr>` : ''}
         <tr><td style="padding:11px 0;border-bottom:1px solid #E5E2DC;font-size:12px;color:#9CA3AF">Servicio</td>
             <td style="padding:11px 0;border-bottom:1px solid #E5E2DC;font-size:14px">${safeType}</td></tr>
         <tr><td style="padding:11px 0;font-size:12px;color:#9CA3AF">Presupuesto</td>
@@ -70,7 +72,7 @@ function buildAutoReply(safeName: string): string {
       </div>
       <p style="font-size:14px;color:#6B7280;margin:0 0 28px;line-height:1.6">
         ¿Urgente? Escríbenos a
-        <a href="mailto:hello@royaluniondesign.com" style="color:#0A0908;font-weight:600">hello@royaluniondesign.com</a>
+        <a href="mailto:hello@rud.studio" style="color:#0A0908;font-weight:600">hello@rud.studio</a>
       </p>
       <div style="padding-top:24px;border-top:1px solid #E2DDD7">
         <p style="font-size:12px;color:#C4BFB8;margin:0">RUD Studio · Royal Union Design · Barcelona</p>
@@ -130,7 +132,7 @@ async function trackGA4ServerSide(params: {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, email, projectType, budget, message } = body
+    const { name, email, phone, projectType, budget, message } = body
 
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -145,6 +147,7 @@ export async function POST(req: NextRequest) {
 
     const safeName    = escapeHtml(String(name))
     const safeEmail   = escapeHtml(String(email))
+    const safePhone   = phone       ? escapeHtml(String(phone))       : ''
     const safeType    = projectType ? escapeHtml(String(projectType)) : '—'
     const safeBudget  = budget      ? escapeHtml(String(budget))      : '—'
     const safeMessage = escapeHtml(String(message))
@@ -163,7 +166,7 @@ export async function POST(req: NextRequest) {
       to: 'hello@royaluniondesign.com',
       replyTo: email,
       subject: `🔔 Nuevo lead: ${safeName} · ${safeType}`,
-      html: buildInternalEmail(safeName, safeEmail, safeType, safeBudget, safeMessage),
+      html: buildInternalEmail(safeName, safeEmail, safePhone, safeType, safeBudget, safeMessage),
     })
 
     // Auto-respuesta al cliente
