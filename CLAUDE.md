@@ -5,7 +5,7 @@
 - **Stack**: Next.js 16.1.6 / App Router / TypeScript / Tailwind CSS
 - **Deploy**: Vercel (auto-deploy desde main)
 - **Branch de trabajo**: `claude/plan-rud-redesign-UX7S7`
-- **Email**: hello@rud.studio / whitemelonis@gmail.com
+- **Email**: hello@royaluniondesign.com (único correo real — NO usar hello@rud.studio)
 
 ## Negocio
 RUD Studio — agencia creativa en Barcelona. Servicios:
