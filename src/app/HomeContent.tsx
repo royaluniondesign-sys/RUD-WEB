@@ -683,6 +683,37 @@ function FAQ() {
 // ═══════════════════════════════════════════════════════════
 // CTA
 // ═══════════════════════════════════════════════════════════
+function BlogHighlights() {
+  const posts = [
+    { href: '/blog/rotulos-luminosos-barcelona-precio-tipos-instalacion', category: 'Rótulos', title: 'Rótulos luminosos en Barcelona: tipos, precios y cómo elegir', date: 'Mayo 2026' },
+    { href: '/blog/neon-led-barcelona-precio-instalacion', category: 'Rótulos', title: 'Neón LED en Barcelona: precio, instalación y cómo elegir el tuyo', date: 'Mayo 2026' },
+    { href: '/blog/nextjs-vs-wordpress-2026', category: 'Web', title: 'Next.js vs. WordPress en 2026: cuándo usar cada uno', date: 'Enero 2026' },
+  ]
+  return (
+    <section style={{background:'#F7F5F1',padding:'clamp(3.5rem,7vw,5.5rem) 0',borderTop:'1px solid #E5E0D8'}}>
+      <div className="container-custom">
+        <ScrollReveal>
+          <div style={{display:'flex',alignItems:'baseline',justifyContent:'space-between',gap:16,flexWrap:'wrap',marginBottom:'clamp(1.5rem,3vw,2rem)'}}>
+            <h2 style={{fontSize:'clamp(1.2rem,2.5vw,1.6rem)',fontWeight:700,letterSpacing:'-0.03em',margin:0}}>Del blog</h2>
+            <Link href="/blog" style={{fontSize:13,fontWeight:600,color:'var(--muted)',textDecoration:'none'}}>Ver todos →</Link>
+          </div>
+        </ScrollReveal>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))',gap:'1rem'}}>
+          {posts.map((p, i) => (
+            <ScrollReveal key={p.href} delay={i * 60}>
+              <Link href={p.href} style={{display:'flex',flexDirection:'column',gap:8,padding:'1.25rem',background:'#fff',borderRadius:12,border:'1px solid #E5E0D8',textDecoration:'none',transition:'border-color 0.2s'}} className="card-lift">
+                <span style={{fontSize:10,fontWeight:700,textTransform:'uppercase',letterSpacing:'.12em',color:'#7B68EE'}}>{p.category}</span>
+                <p style={{fontSize:14,fontWeight:600,color:'#0A0908',lineHeight:1.4,flex:1,margin:0}}>{p.title}</p>
+                <span style={{fontSize:11,color:'#C4BFB8'}}>{p.date}</span>
+              </Link>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function CTA() {
   return (
     <section style={{background:'#0A0908',padding:'clamp(5rem,10vw,8rem) 0',position:'relative',overflow:'hidden'}}>
@@ -785,6 +816,7 @@ export default function HomeContent() {
       <WhyRUD />
       <Investment />
       <FAQ />
+      <BlogHighlights />
       <CTA />
       <Footer />
     </main>

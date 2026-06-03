@@ -565,6 +565,37 @@ export default function Rotulos() {
         </div>
       </section>
 
+      {/* ─── ZONAS ───────────────────────────────────────────────────────── */}
+      <section style={{ background: '#fff', padding: 'clamp(3rem,6vw,5rem) 0' }}>
+        <div className="container-custom">
+          <ScrollReveal>
+            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: '0.75rem' }}>Donde trabajamos</p>
+            <h2 style={{ fontSize: 'clamp(1.4rem,3vw,2rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: '0.5rem' }}>Instalamos en toda Barcelona y área metropolitana</h2>
+            <p style={{ fontSize: 14, color: '#6B7280', marginBottom: '2rem', maxWidth: '55ch', lineHeight: 1.7 }}>
+              Desde nuestro taller en Cerdanyola del Vallès cubrimos todos los barrios de Barcelona en menos de 30 minutos. Visita técnica gratuita en toda la ciudad.
+            </p>
+          </ScrollReveal>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(180px,1fr))', gap: '0.75rem' }}>
+            {[
+              { label: 'Eixample', href: '/rotulos/eixample-barcelona', note: 'Normativa fachadas Ayuntamiento' },
+              { label: 'Gràcia', href: '/rotulos/gracia-barcelona', note: 'Barrio de diseño y hostelería' },
+              { label: 'Poblenou / 22@', href: '/rotulos/poblenou-barcelona', note: 'Startups, retail y hostelería' },
+              { label: 'Sarrià – Sant Gervasi', href: '/rotulos/sarria-barcelona', note: 'Comercio premium y restauración' },
+              { label: 'Sants – Montjuïc', href: '/rotulos/sants-barcelona', note: 'Comercio de barrio y locales' },
+            ].map((zone) => (
+              <ScrollReveal key={zone.href}>
+                <Link href={zone.href}
+                  style={{ display: 'block', padding: '1rem 1.25rem', background: '#F7F5F1', borderRadius: 12, border: '1px solid #E5E0D8', textDecoration: 'none', transition: 'border-color 0.2s' }}
+                  className="card-lift">
+                  <p style={{ fontSize: 14, fontWeight: 700, color: '#0A0908', marginBottom: 4 }}>{zone.label}</p>
+                  <p style={{ fontSize: 11, color: '#9CA3AF', lineHeight: 1.5 }}>{zone.note}</p>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── CTA FINAL ────────────────────────────────────────────────────── */}
       <section style={{ background: '#0A0908', padding: 'clamp(5rem,10vw,8rem) 0' }}>
         <div className="container-custom">

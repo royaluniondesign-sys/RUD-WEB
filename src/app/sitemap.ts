@@ -3,6 +3,7 @@ import { MetadataRoute } from 'next'
 const BASE = 'https://royaluniondesign.com'
 
 const BLOG_SLUGS = [
+  'cajas-de-luz-barcelona-precio-tipos',
   'rotulos-luminosos-barcelona-precio-tipos-instalacion',
   'neon-led-barcelona-precio-instalacion',
   'letras-corporeas-barcelona-tipos-precios',

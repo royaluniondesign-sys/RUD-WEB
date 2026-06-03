@@ -11,12 +11,11 @@ export const metadata = {
 
 const posts = [
   {
-    slug: 'branding-minimalista-2026-menos-ornamentos-y-mas-intencion-e',
-    title: 'Branding minimalista 2026: Menos ornamentos y más intención estratégica',
-    date: 'Mayo 2026', category: 'Branding', readTime: '4 min',
-    image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=85',
-    excerpt: 'En 2026, el minimalismo deja de ser una moda estética para convertirse en una ventaja competitiva: descubre cómo la simplicidad radical potencia el valor de tu marca.',
-    featured: false,
+    slug: 'cajas-de-luz-barcelona-precio-tipos',
+    title: 'Cajas de luz en Barcelona: tipos, formatos y precios reales en 2026',
+    date: 'Junio 2026', category: 'Señalética & Rótulos', readTime: '5 min',
+    image: '/RUDTRABAJOSROTULOS/photo-1698500103054-8a00e4c4131c.avif',
+    excerpt: 'La caja de luz sigue siendo el rótulo más instalado en comercios de Barcelona. Guía completa de formatos, materiales y precios para 2026.',
   },
   {
     slug: 'rotulos-luminosos-barcelona-precio-tipos-instalacion',
