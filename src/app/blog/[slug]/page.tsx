@@ -11,7 +11,7 @@ function renderParagraph(text: string) {
       {parts.map((part, i) => {
         const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
         const bold = part.match(/^\*\*([^*]+)\*\*$/)
-        if (link) return <Link key={i} href={link[2]} style={{ color: '#7B68EE', textDecoration: 'underline', textDecorationColor: 'rgba(123,104,238,0.4)', fontWeight: 500 }}>{link[1]}</Link>
+        if (link) return <Link key={i} href={link[2]} style={{ color: '#BF4E30', textDecoration: 'underline', textDecorationColor: 'rgba(191,78,48,0.4)', fontWeight: 500 }}>{link[1]}</Link>
         if (bold) return <strong key={i}>{bold[1]}</strong>
         return <span key={i}>{part}</span>
       })}
@@ -411,7 +411,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             Blog
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
-            <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', color: '#7B68EE' }}>{p.category}</span>
+            <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', color: '#BF4E30' }}>{p.category}</span>
             <span style={{ fontSize: 10, color: '#C4BFB8' }}>·</span>
             <span style={{ fontSize: 10, color: '#C4BFB8' }}>{p.readTime} lectura</span>
             <span style={{ fontSize: 10, color: '#C4BFB8' }}>·</span>

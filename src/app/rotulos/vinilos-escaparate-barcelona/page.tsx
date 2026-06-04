@@ -232,7 +232,7 @@ export default function VinilosEscaparateBarcelona() {
             <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: '1rem' }}>Presupuesto el mismo día</p>
             <h2 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 800, color: 'white', letterSpacing: '-0.04em', lineHeight: 1.0, maxWidth: '18ch', marginBottom: '1.5rem' }}>
               Instalado en 48h.<br />
-              <em style={{ fontWeight: 300, fontStyle: 'italic', color: 'rgba(255,255,255,0.3)' }}>Mándanos las fotos.</em>
+              <em style={{ fontWeight: 300, fontStyle: 'italic', color: 'rgba(255,255,255,0.45)' }}>Mándanos las fotos.</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
               <TrackedLink href="/contact?servicio=vinilos" label="Presupuesto vinilos bottom" location="bottom-vinilos"

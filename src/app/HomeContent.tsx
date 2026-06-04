@@ -388,7 +388,7 @@ function AuraSection() {
         <ScrollReveal>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '2rem' }}>
             <div style={{ maxWidth: '560px' }}>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '1rem', padding: '4px 12px', borderRadius: 9999, border: '1px solid rgba(123,104,238,0.2)', background: 'rgba(123,104,238,0.06)' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '1rem', padding: '4px 12px', borderRadius: 9999, border: '1px solid rgba(191,78,48,0.2)', background: 'rgba(191,78,48,0.06)' }}>
                 <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--chariot)', display: 'inline-block' }} className="animate-pulse" />
                 <span style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.14em', color: 'var(--chariot)' }}>Aura & Hermes · IA propia</span>
               </div>
@@ -702,7 +702,7 @@ function BlogHighlights() {
           {posts.map((p, i) => (
             <ScrollReveal key={p.href} delay={i * 60}>
               <Link href={p.href} style={{display:'flex',flexDirection:'column',gap:8,padding:'1.25rem',background:'#fff',borderRadius:12,border:'1px solid #E5E0D8',textDecoration:'none',transition:'border-color 0.2s'}} className="card-lift">
-                <span style={{fontSize:10,fontWeight:700,textTransform:'uppercase',letterSpacing:'.12em',color:'#7B68EE'}}>{p.category}</span>
+                <span style={{fontSize:10,fontWeight:700,textTransform:'uppercase',letterSpacing:'.12em',color:'#BF4E30'}}>{p.category}</span>
                 <p style={{fontSize:14,fontWeight:600,color:'#0A0908',lineHeight:1.4,flex:1,margin:0}}>{p.title}</p>
                 <span style={{fontSize:11,color:'#C4BFB8'}}>{p.date}</span>
               </Link>
@@ -804,7 +804,7 @@ function Footer() {
 // ═══════════════════════════════════════════════════════════
 export default function HomeContent() {
   return (
-    <main>
+    <main id="main-content">
       <Navbar light />
       <Hero />
       <Marquee />
