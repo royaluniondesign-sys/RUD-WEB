@@ -50,7 +50,7 @@ const localBusinessSchema = {
     'height': 60,
   },
   'image': 'https://royaluniondesign.com/og-image.png',
-  'email': 'hello@rud.studio',
+  'email': 'hello@royaluniondesign.com',
   'priceRange': '€€',
   'address': {
     '@type': 'PostalAddress',

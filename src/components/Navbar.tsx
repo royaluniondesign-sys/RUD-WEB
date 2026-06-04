@@ -276,7 +276,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
                 Hablemos de tu proyecto
               </Link>
               <p className="text-center text-xs text-[#9CA3AF] mt-5">
-                hello@rud.studio · Barcelona
+                hello@royaluniondesign.com · Barcelona
               </p>
             </div>
           </div>

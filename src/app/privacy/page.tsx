@@ -23,7 +23,7 @@ export default function Privacy() {
               <p><strong style={{ color: '#0A0908' }}>Última actualización:</strong> Marzo 2026</p>
 
               <h2 style={{ fontSize: '1.125rem', fontWeight: 700, color: '#0A0908', marginTop: '0.5rem' }}>1. Responsable del tratamiento</h2>
-              <p>Royal Union Design (RUD Studio), con domicilio en Barcelona, España. Contacto: <a href="mailto:hello@rud.studio" style={{ color: '#0A0908', textDecoration: 'underline', textUnderlineOffset: 3 }}>hello@rud.studio</a></p>
+              <p>Royal Union Design (RUD Studio), con domicilio en Barcelona, España. Contacto: <a href="mailto:hello@royaluniondesign.com" style={{ color: '#0A0908', textDecoration: 'underline', textUnderlineOffset: 3 }}>hello@royaluniondesign.com</a></p>
 
               <h2 style={{ fontSize: '1.125rem', fontWeight: 700, color: '#0A0908', marginTop: '0.5rem' }}>2. Datos que recopilamos</h2>
               <p>Recopilamos únicamente los datos que nos proporcionas voluntariamente a través del formulario de contacto: nombre, email, tipo de proyecto, presupuesto estimado y mensaje. También utilizamos Vercel Analytics para métricas anónimas de uso del sitio.</p>
@@ -38,7 +38,7 @@ export default function Privacy() {
               <p>Conservamos tus datos durante el tiempo necesario para gestionar tu consulta y, en caso de iniciar una relación comercial, durante la duración del proyecto más el plazo legal de conservación fiscal.</p>
 
               <h2 style={{ fontSize: '1.125rem', fontWeight: 700, color: '#0A0908', marginTop: '0.5rem' }}>6. Derechos</h2>
-              <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición y portabilidad escribiendo a <a href="mailto:hello@rud.studio" style={{ color: '#0A0908', textDecoration: 'underline', textUnderlineOffset: 3 }}>hello@rud.studio</a>. Responderemos en un plazo máximo de 30 días.</p>
+              <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición y portabilidad escribiendo a <a href="mailto:hello@royaluniondesign.com" style={{ color: '#0A0908', textDecoration: 'underline', textUnderlineOffset: 3 }}>hello@royaluniondesign.com</a>. Responderemos en un plazo máximo de 30 días.</p>
 
               <h2 style={{ fontSize: '1.125rem', fontWeight: 700, color: '#0A0908', marginTop: '0.5rem' }}>7. Cookies y analítica</h2>
               <p>Este sitio utiliza Vercel Analytics y Vercel Speed Insights, que recopilan datos anónimos de rendimiento sin cookies de seguimiento. No utilizamos cookies de terceros ni herramientas de tracking publicitario.</p>
