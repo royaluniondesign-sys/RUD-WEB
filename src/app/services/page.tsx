@@ -255,30 +255,30 @@ export default function Services() {
       <section style={{ background: '#F7F5F1', paddingBottom: 'clamp(3.5rem,8vw,6rem)' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <div style={{ borderRadius: 20, overflow: 'hidden', border: '1px solid rgba(191,78,48,.2)', background: '#06040E' }}>
+            <div style={{ borderRadius: 20, overflow: 'hidden', border: '1px solid rgba(123,104,238,.2)', background: '#06040E' }}>
               <div className="grid md:grid-cols-2">
                 <div style={{ padding: 'clamp(1.5rem,4vw,2.5rem)' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: '1.25rem' }}>
                     <span style={{ fontSize: 10, fontFamily: 'monospace', color: '#3D3556' }}>06</span>
-                    <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: '#BF4E30', padding: '3px 10px', borderRadius: 9999, border: '1px solid rgba(191,78,48,.3)', background: 'rgba(191,78,48,.1)' }}>
+                    <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: '#7B68EE', padding: '3px 10px', borderRadius: 9999, border: '1px solid rgba(123,104,238,.3)', background: 'rgba(123,104,238,.1)' }}>
                       AURA & HERMES
                     </span>
                   </div>
                   <h3 style={{ fontSize: 'clamp(1.2rem,2.5vw,1.6rem)', fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 8 }}>
                     AI Automation · Aura & Hermes
                   </h3>
-                  <p style={{ fontSize: 12, color: '#BF4E30', fontStyle: 'italic', marginBottom: '1.25rem' }}>
+                  <p style={{ fontSize: 12, color: '#7B68EE', fontStyle: 'italic', marginBottom: '1.25rem' }}>
                     Agentes de IA que trabajan mientras tú duermes.
                   </p>
                   <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.75, marginBottom: '1.5rem' }}>
                     Implementamos agentes de IA autónomos — los mismos que usamos en RUD. Aura gestiona comunicación, análisis y contenido. Hermes automatiza flujos operativos, CRM y reporting. 100% en infraestructura local: sin coste de API recurrente, sin subir tus datos a la nube.
                   </p>
                   <Link href="/contact?servicio=ia"
-                    style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.7rem 1.4rem', borderRadius: 9999, fontWeight: 600, fontSize: 13, background: '#BF4E30', color: '#fff' }}>
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.7rem 1.4rem', borderRadius: 9999, fontWeight: 600, fontSize: 13, background: '#7B68EE', color: '#fff' }}>
                     Solicitar presupuesto →
                   </Link>
                 </div>
-                <div style={{ padding: 'clamp(1.5rem,4vw,2.5rem)', background: 'rgba(255,255,255,.02)', borderTop: '1px solid rgba(191,78,48,.1)' }}>
+                <div style={{ padding: 'clamp(1.5rem,4vw,2.5rem)', background: 'rgba(255,255,255,.02)', borderTop: '1px solid rgba(123,104,238,.1)' }}>
                   <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: '#3D3556', marginBottom: '1rem' }}>Entregables</p>
                   <ul style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                     {[
@@ -292,7 +292,7 @@ export default function Services() {
                       'Formación del equipo y documentación del sistema',
                     ].map((d, j) => (
                       <li key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: 13 }}>
-                        <span style={{ flexShrink: 0, width: 5, height: 5, borderRadius: '50%', background: '#BF4E30', marginTop: 6 }} />
+                        <span style={{ flexShrink: 0, width: 5, height: 5, borderRadius: '50%', background: '#7B68EE', marginTop: 6 }} />
                         <span style={{ color: '#6B7280', lineHeight: 1.6 }}>{d}</span>
                       </li>
                     ))}
