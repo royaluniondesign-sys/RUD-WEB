@@ -109,13 +109,13 @@ export default function About() {
 
       {/* AURA — nuestro motor interno */}
       <section style={{ background: '#06040E', paddingBlock: 'clamp(3rem,8vw,5rem)', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: 0, left: '33%', width: 600, height: 300, filter: 'blur(100px)', opacity: 0.12, background: 'radial-gradient(ellipse,#BF4E30,transparent)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: 0, left: '33%', width: 600, height: 300, filter: 'blur(100px)', opacity: 0.12, background: 'radial-gradient(ellipse,#7B68EE,transparent)', pointerEvents: 'none' }} />
         <div className="container-custom" style={{ position: 'relative' }}>
           <ScrollReveal>
             <div style={{ maxWidth: 640 }}>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 20, padding: '6px 12px', borderRadius: 9999, border: '1px solid rgba(191,78,48,0.25)', background: 'rgba(191,78,48,0.1)' }}>
-                <span style={{ width: 6, height: 6, background: '#BF4E30', borderRadius: '50%' }} className="animate-pulse" />
-                <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', color: '#BF4E30' }}>AURA & HERMES — nuestro motor interno</span>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 20, padding: '6px 12px', borderRadius: 9999, border: '1px solid rgba(123,104,238,0.25)', background: 'rgba(123,104,238,0.1)' }}>
+                <span style={{ width: 6, height: 6, background: '#7B68EE', borderRadius: '50%' }} className="animate-pulse" />
+                <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', color: '#7B68EE' }}>AURA & HERMES — nuestro motor interno</span>
               </div>
               <h2 style={{ fontSize: 'clamp(1.5rem,3.5vw,2.5rem)', fontWeight: 700, color: 'white', letterSpacing: '-0.03em', marginBottom: 20, lineHeight: 1.15 }}>
                 Nuestro motor de IA autónomo y soberano.
