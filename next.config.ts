@@ -15,6 +15,12 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.royaluniondesign.com' }],
+        destination: 'https://royaluniondesign.com/:path*',
+        permanent: true,
+      },
       { source: '/work/brandforce', destination: '/work', permanent: true },
     ]
   },

@@ -4,15 +4,16 @@ import Navbar from '@/components/Navbar'
 import BlogTracker from '@/components/BlogTracker'
 
 function renderParagraph(text: string) {
-  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/)
-  if (parts.length === 1) return text
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/)
+  if (parts.length === 1) return <>{text}</>
   return (
     <>
       {parts.map((part, i) => {
-        const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
-        return m
-          ? <Link key={i} href={m[2]} style={{ color: '#7B68EE', textDecoration: 'underline', textDecorationColor: 'rgba(123,104,238,0.4)', fontWeight: 500 }}>{m[1]}</Link>
-          : <span key={i}>{part}</span>
+        const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+        const bold = part.match(/^\*\*([^*]+)\*\*$/)
+        if (link) return <Link key={i} href={link[2]} style={{ color: '#7B68EE', textDecoration: 'underline', textDecorationColor: 'rgba(123,104,238,0.4)', fontWeight: 500 }}>{link[1]}</Link>
+        if (bold) return <strong key={i}>{bold[1]}</strong>
+        return <span key={i}>{part}</span>
       })}
     </>
   )
@@ -21,6 +22,7 @@ function renderParagraph(text: string) {
 const POSTS: Record<string, {
   title: string; date: string; category: string; readTime: string;
   image: string; content: string; excerpt: string;
+  faqs?: Array<{ q: string; a: string }>;
 }> = {
   'rotulos-luminosos-barcelona-precio-tipos-instalacion': {
     title: 'Rótulos luminosos en Barcelona: tipos, precios y cómo elegir el correcto para tu negocio',
@@ -72,6 +74,13 @@ El proceso completo dura entre 2 y 4 semanas desde el primer contacto hasta el r
 Tenemos taller propio lo que nos permite controlar la calidad de cada pieza y cumplir plazos sin depender de terceros. Todos los rótulos incluyen 2 años de garantía en componentes y acabados.
 
 En RUD diseñamos y fabricamos [rótulos luminosos en Barcelona](/rotulos) con instalación incluida. Si estás pensando en renovar la señalética de tu negocio, [consulta nuestros precios](/pricing) o [pide presupuesto gratuito](/contact?servicio=rotulos) — tendrás render y precio en menos de 48 horas.`,
+    faqs: [
+      { q: '¿Cuánto cuesta un rótulo luminoso en Barcelona?', a: 'El precio depende del tipo: una caja de luz parte de 800 €, las letras corpóreas desde 2.500 €, el neón LED desde 800 € (mostrador) hasta más de 2.200 € (fachada). Todos los precios incluyen diseño, fabricación e instalación en Barcelona.' },
+      { q: '¿Cuánto tarda en fabricarse un rótulo luminoso?', a: 'Los vinilos de escaparate están listos en 48-72 horas. Cajas de luz y letras corpóreas entre 5 y 10 días hábiles. El neón LED tiene un plazo de hasta 15 días por su proceso de fabricación personalizado.' },
+      { q: '¿Qué tipo de rótulo luminoso es mejor para un restaurante o bar?', a: 'Para hostelería el neón LED en interior es la opción más popular en 2026: genera contenido orgánico en redes sociales y es económico en consumo (hasta 80% menos que neón de vidrio). Para fachada, las letras corpóreas con retroiluminación halo ofrecen la mayor presencia visual.' },
+      { q: '¿Necesito licencia para poner un rótulo en Barcelona?', a: 'Depende del barrio y el tamaño. Rótulos de hasta 0,90 m de altura que no superen el 10% de la superficie de fachada generalmente no requieren licencia de obra mayor. En zonas protegidas como el Gòtic, Born o partes del Eixample las restricciones son más estrictas. Hacemos consulta previa gratuita con el Ayuntamiento.' },
+      { q: '¿Ofrecéis garantía en los rótulos?', a: 'Sí. Todos los rótulos fabricados en nuestro taller incluyen 2 años de garantía en componentes y acabados. Taller propio en Cerdanyola del Vallès, lo que nos permite resolver incidencias en menos de 24 horas sin depender de terceros.' },
+    ],
   },
   'aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st': {
     title: 'AURA: El Agente IA Autónomo que Lidera la Operación de RUD Studio desde Telegram',
@@ -369,6 +378,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: p.excerpt,
     alternates: { canonical: `https://royaluniondesign.com/blog/${slug}` },
     openGraph: { title: p.title, description: p.excerpt, images: [{ url: p.image }] },
+    other: p.faqs ? {
+      'script:ld+json': JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: p.faqs.map(({ q, a }) => ({
+          '@type': 'Question',
+          name: q,
+          acceptedAnswer: { '@type': 'Answer', text: a },
+        })),
+      }),
+    } : {},
   }
 }
 
@@ -410,16 +430,36 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       <section style={{ background: '#F7F5F1', paddingTop: '4rem', paddingBottom: '5rem' }}>
         <div className="container-custom" style={{ maxWidth: 720 }}>
           <article style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            {paragraphs.map((para, i) => (
-              <p key={i} style={{ fontSize: '1rem', color: '#3D3D3D', lineHeight: 1.8 }}>{renderParagraph(para)}</p>
-            ))}
+            {paragraphs.map((para, i) => {
+              const heading = para.match(/^\*\*(.+)\*\*$/)
+              if (heading) return (
+                <h2 key={i} style={{ fontSize: 'clamp(1.05rem,2vw,1.25rem)', fontWeight: 700, letterSpacing: '-0.02em', color: '#0A0908', marginTop: '0.5rem' }}>
+                  {heading[1]}
+                </h2>
+              )
+              return <p key={i} style={{ fontSize: '1rem', color: '#3D3D3D', lineHeight: 1.8 }}>{renderParagraph(para)}</p>
+            })}
           </article>
+
+          {p.faqs && (
+            <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #E2DDD7' }}>
+              <h2 style={{ fontSize: 'clamp(1.1rem,2vw,1.3rem)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: '1.5rem', color: '#0A0908' }}>Preguntas frecuentes</h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                {p.faqs.map(({ q, a }, i) => (
+                  <div key={i} style={{ padding: '1.25rem', background: '#fff', borderRadius: 12, border: '1px solid #E2DDD7' }}>
+                    <p style={{ fontSize: 14, fontWeight: 700, color: '#0A0908', marginBottom: 8 }}>{q}</p>
+                    <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7 }}>{a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #E2DDD7', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
             <div>
               <p style={{ fontSize: 12, color: '#9CA3AF', marginBottom: 6 }}>¿Quieres hablar de esto con nosotros?</p>
               <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '0.75rem 1.5rem', background: '#0A0908', color: '#fff', borderRadius: 9999, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>
-                Contactar → 
+                Contactar →
               </Link>
             </div>
             <Link href="/blog" style={{ fontSize: 13, color: '#6B7280', textDecoration: 'none' }}>
