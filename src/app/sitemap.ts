@@ -29,11 +29,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Geo-targeted landing pages — slightly lower than core services
   const geoSlugs: Array<{ slug: string; lastMod: string }> = [
-    { slug: 'eixample-barcelona',  lastMod: '2026-06-04' },
-    { slug: 'gracia-barcelona',    lastMod: '2026-06-04' },
-    { slug: 'poblenou-barcelona',  lastMod: '2026-06-04' },
-    { slug: 'sarria-barcelona',    lastMod: '2026-06-04' },
-    { slug: 'sants-barcelona',     lastMod: '2026-06-04' },
+    { slug: 'eixample-barcelona',         lastMod: '2026-06-04' },
+    { slug: 'gracia-barcelona',           lastMod: '2026-06-04' },
+    { slug: 'poblenou-barcelona',         lastMod: '2026-06-04' },
+    { slug: 'sarria-barcelona',           lastMod: '2026-06-04' },
+    { slug: 'sants-barcelona',            lastMod: '2026-06-04' },
+    { slug: 'cerdanyola-del-valles',      lastMod: '2026-06-04' },
+    { slug: 'hospitalet-de-llobregat',    lastMod: '2026-06-04' },
+    { slug: 'badalona-barcelona',         lastMod: '2026-06-04' },
+    { slug: 'born-barcelona',             lastMod: '2026-06-04' },
+    { slug: 'sant-cugat-del-valles',      lastMod: '2026-06-04' },
+    { slug: 'terrassa-barcelona',         lastMod: '2026-06-04' },
   ]
 
   const rotulosServices: MetadataRoute.Sitemap = coreServiceSlugs.map(({ slug, lastMod }) => ({

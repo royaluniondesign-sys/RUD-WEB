@@ -582,6 +582,12 @@ export default function Rotulos() {
               { label: 'Poblenou / 22@', href: '/rotulos/poblenou-barcelona', note: 'Startups, retail y hostelería' },
               { label: 'Sarrià – Sant Gervasi', href: '/rotulos/sarria-barcelona', note: 'Comercio premium y restauración' },
               { label: 'Sants – Montjuïc', href: '/rotulos/sants-barcelona', note: 'Comercio de barrio y locales' },
+              { label: 'Cerdanyola del Vallès', href: '/rotulos/cerdanyola-del-valles', note: 'Taller propio · instalación inmediata' },
+              { label: 'L\'Hospitalet', href: '/rotulos/hospitalet-de-llobregat', note: 'Gran Via, Fira, zona universitaria' },
+              { label: 'Badalona', href: '/rotulos/badalona-barcelona', note: 'Zona marítima, Pep Ventura, Can Ruti' },
+              { label: 'El Born', href: '/rotulos/born-barcelona', note: 'Boutiques, restaurantes de autor, galerías' },
+              { label: 'Sant Cugat del Vallès', href: '/rotulos/sant-cugat-del-valles', note: 'Tech, comercio histórico, restauración' },
+              { label: 'Terrassa', href: '/rotulos/terrassa-barcelona', note: 'Industria, eje comercial, hostelería' },
             ].map((zone) => (
               <ScrollReveal key={zone.href}>
                 <Link href={zone.href}
