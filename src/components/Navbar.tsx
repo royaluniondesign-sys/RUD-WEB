@@ -60,6 +60,12 @@ export default function Navbar({ light = false }: { light?: boolean }) {
 
   return (
     <>
+      <a href="#main-content"
+        style={{ position:'absolute', left:'-9999px', top:'auto', width:1, height:1, overflow:'hidden', zIndex:9999 }}
+        onFocus={e => Object.assign(e.currentTarget.style, { position:'fixed', left:'1rem', top:'1rem', width:'auto', height:'auto', overflow:'visible', padding:'0.5rem 1rem', background:'#0A0908', color:'#fff', borderRadius:8, fontWeight:600, fontSize:14 })}
+        onBlur={e => Object.assign(e.currentTarget.style, { position:'absolute', left:'-9999px', width:1, height:1, overflow:'hidden' })}>
+        Ir al contenido principal
+      </a>
       <nav className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${navBg}`}
            style={{ height: 68 }}>
         <div className="container-custom h-full flex items-center justify-between gap-4">
@@ -82,9 +88,17 @@ export default function Navbar({ light = false }: { light?: boolean }) {
                   <div key={href}
                     style={{ position: 'relative' }}
                     onMouseEnter={handleRotulosEnter}
-                    onMouseLeave={handleRotulosLeave}>
+                    onMouseLeave={handleRotulosLeave}
+                    onKeyDown={e => {
+                      if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setRotulosHover(true) }
+                      if (e.key === 'Escape') setRotulosHover(false)
+                    }}>
                     <Link href={href}
                       data-active={active}
+                      aria-haspopup="true"
+                      aria-expanded={rotulosHover}
+                      onFocus={handleRotulosEnter}
+                      onBlur={handleRotulosLeave}
                       className={`nav-link text-sm font-medium transition-colors px-2 py-1 rounded-md inline-flex items-center gap-1 ${
                         isLight
                           ? `text-white/80 hover:text-white hover:bg-white/10 ${active ? 'text-white' : ''}`

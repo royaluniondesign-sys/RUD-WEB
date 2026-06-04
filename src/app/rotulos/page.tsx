@@ -202,7 +202,7 @@ export default function Rotulos() {
         {/* Pill — below fixed navbar (68px) */}
         <div style={{ position: 'absolute', top: 84, left: 0, right: 0, zIndex: 10 }}>
           <div className="container-custom">
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 16px', borderRadius: 9999, background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', backdropFilter: 'blur(8px)' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 16px', borderRadius: 9999, background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)' }}>
               <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#4ADE80', display: 'inline-block', boxShadow: '0 0 6px rgba(74,222,128,0.8)' }} />
               <span style={{ fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.85)' }}>Taller propio · Barcelona · Disponible ahora</span>
             </span>
@@ -222,7 +222,7 @@ export default function Rotulos() {
               marginBottom: 'clamp(1.5rem,3vw,2.5rem)',
             }}>
               Rótulos que hacen tu local{' '}
-              <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.38)' }}>imposible de ignorar.</em>
+              <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.50)' }}>imposible de ignorar.</em>
             </h1>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.75rem', marginBottom: 'clamp(2rem,4vw,3rem)' }}>
@@ -231,7 +231,7 @@ export default function Rotulos() {
                 Pedir presupuesto gratis →
               </TrackedLink>
               <a href="https://t.me/+34645593227" target="_blank" rel="noopener noreferrer"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.9rem 1.5rem', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 14, textDecoration: 'none', backdropFilter: 'blur(8px)' }}>
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.9rem 1.5rem', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>
                 <TelegramIcon />
                 Telegram · respuesta en minutos
               </a>
@@ -272,11 +272,11 @@ export default function Rotulos() {
               <p style={{ fontSize: 'clamp(0.9375rem,1.5vw,1.0625rem)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.8, marginBottom: '1rem' }}>
                 RUD Studio es una empresa de rótulos con taller propio en Barcelona. Fabricamos e instalamos rótulos luminosos, neón LED, letras corpóreas y vinilos de escaparate para locales comerciales, hostelería, hoteles y empresas de toda el área metropolitana.
               </p>
-              <p style={{ fontSize: 'clamp(0.9375rem,1.5vw,1.0625rem)', color: 'rgba(255,255,255,0.35)', lineHeight: 1.8, marginBottom: '1rem' }}>
+              <p style={{ fontSize: 'clamp(0.9375rem,1.5vw,1.0625rem)', color: 'rgba(255,255,255,0.82)', lineHeight: 1.8, marginBottom: '1rem' }}>
                 Cada rótulo que fabricamos está diseñado para hacer tu local imposible de ignorar desde la calle. Utilizamos materiales de primera calidad y técnicas de fabricación propias para garantizar que el rótulo de tu negocio sea tan sólido y duradero como memorable — día y noche, llueva o haga sol.
               </p>
-              <p style={{ fontSize: 'clamp(0.875rem,1.4vw,1rem)', color: 'rgba(255,255,255,0.25)', lineHeight: 1.8 }}>
-                Además de rótulos, ofrecemos <Link href="/services" style={{ color: 'rgba(255,255,255,0.45)', textDecoration: 'underline', textDecorationColor: 'rgba(255,255,255,0.15)' }}>branding, diseño web y automatización IA</Link> — todo bajo el mismo techo. <Link href="/pricing" style={{ color: 'rgba(255,255,255,0.45)', textDecoration: 'underline', textDecorationColor: 'rgba(255,255,255,0.15)' }}>Consulta nuestros precios orientativos →</Link>
+              <p style={{ fontSize: 'clamp(0.875rem,1.4vw,1rem)', color: 'rgba(255,255,255,0.75)', lineHeight: 1.8 }}>
+                Además de rótulos, ofrecemos <Link href="/services" style={{ color: 'rgba(255,255,255,0.78)', textDecoration: 'underline', textDecorationColor: 'rgba(255,255,255,0.15)' }}>branding, diseño web y automatización IA</Link> — todo bajo el mismo techo. <Link href="/pricing" style={{ color: 'rgba(255,255,255,0.78)', textDecoration: 'underline', textDecorationColor: 'rgba(255,255,255,0.15)' }}>Consulta nuestros precios orientativos →</Link>
               </p>
             </div>
           </ScrollReveal>
@@ -609,7 +609,7 @@ export default function Rotulos() {
             <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: '1rem' }}>Presupuesto gratuito · Respuesta en 24h</p>
             <h2 style={{ fontSize: 'clamp(2.2rem,6vw,4.5rem)', fontWeight: 800, color: 'white', letterSpacing: '-0.04em', lineHeight: 1.0, maxWidth: '18ch', marginBottom: '1.5rem' }}>
               Manda las medidas.<br />
-              <em style={{ fontWeight: 300, fontStyle: 'italic', color: 'rgba(255,255,255,0.3)' }}>Te respondemos hoy.</em>
+              <em style={{ fontWeight: 300, fontStyle: 'italic', color: 'rgba(255,255,255,0.45)' }}>Te respondemos hoy.</em>
             </h2>
             <p style={{ fontSize: 15, color: '#6B7280', maxWidth: '42ch', marginBottom: '2.5rem', lineHeight: 1.7 }}>
               Fotos del espacio + medidas aproximadas. Eso es todo lo que necesitamos para darte precio.

@@ -84,18 +84,18 @@ function FunnelCard({ onClose }: { onClose: () => void }) {
     <div style={{ margin: '8px 0', background: '#0A0908', borderRadius: 16, padding: '16px', border: '1px solid rgba(255,255,255,0.08)' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
         <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#22C55E', boxShadow: '0 0 6px rgba(34,197,94,0.7)' }} />
-        <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: '#7B68EE' }}>Próximo paso</span>
+        <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: '#BF4E30' }}>Próximo paso</span>
       </div>
       <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', lineHeight: 1.5, marginBottom: 14 }}>
         Parece que tienes un proyecto claro. Cuéntanoslo y te preparamos una propuesta personalizada.
       </p>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         <Link href="/contact" onClick={onClose}
-          style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 10, background: 'rgba(123,104,238,0.15)', border: '1px solid rgba(123,104,238,0.25)', textDecoration: 'none' }}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7B68EE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+          style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 10, background: 'rgba(191,78,48,0.15)', border: '1px solid rgba(191,78,48,0.25)', textDecoration: 'none' }}>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#BF4E30" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
           <div>
             <p style={{ fontSize: 12, fontWeight: 700, color: 'white', lineHeight: 1 }}>Pedir presupuesto</p>
-            <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', marginTop: 2 }}>Respuesta en menos de 24h</p>
+            <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.65)', marginTop: 2 }}>Respuesta en menos de 24h</p>
           </div>
         </Link>
         <Link href="/contact?tipo=llamada" onClick={onClose}
@@ -103,7 +103,7 @@ function FunnelCard({ onClose }: { onClose: () => void }) {
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           <div>
             <p style={{ fontSize: 12, fontWeight: 700, color: 'white', lineHeight: 1 }}>Solicitar llamada</p>
-            <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', marginTop: 2 }}>30 min sin compromiso</p>
+            <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.65)', marginTop: 2 }}>30 min sin compromiso</p>
           </div>
         </Link>
       </div>
@@ -422,7 +422,7 @@ export default function AgentChat() {
           color: 'white',
           cursor: 'pointer',
           boxShadow: pulsed && !open
-            ? '0 0 0 6px rgba(123,104,238,0.18), 0 8px 32px rgba(0,0,0,0.35)'
+            ? '0 0 0 6px rgba(191,78,48,0.18), 0 8px 32px rgba(0,0,0,0.35)'
             : '0 8px 32px rgba(0,0,0,0.3)',
           transition: 'all 0.2s cubic-bezier(.22,1,.36,1)',
           animation: pulsed && !open ? 'chatPulse 2s ease-in-out infinite' : 'none',
@@ -435,14 +435,14 @@ export default function AgentChat() {
         }
         <span style={{ fontSize: 13, fontWeight: 600 }}>{open ? 'Cerrar' : 'Hablar con Hermes'}</span>
         {!open && (
-          <span style={{ padding: '2px 7px', borderRadius: 9999, background: 'rgba(123,104,238,0.25)', border: '1px solid rgba(123,104,238,0.35)', fontSize: 10, fontWeight: 700, color: '#A89BF0' }}>IA</span>
+          <span style={{ padding: '2px 7px', borderRadius: 9999, background: 'rgba(191,78,48,0.25)', border: '1px solid rgba(191,78,48,0.35)', fontSize: 10, fontWeight: 700, color: '#A89BF0' }}>IA</span>
         )}
       </button>
 
       <style>{`
         @keyframes chatPulse {
-          0%,100% { box-shadow: 0 0 0 0 rgba(123,104,238,0), 0 8px 32px rgba(0,0,0,0.3); }
-          50%      { box-shadow: 0 0 0 8px rgba(123,104,238,0.15), 0 8px 32px rgba(0,0,0,0.3); }
+          0%,100% { box-shadow: 0 0 0 0 rgba(191,78,48,0), 0 8px 32px rgba(0,0,0,0.3); }
+          50%      { box-shadow: 0 0 0 8px rgba(191,78,48,0.15), 0 8px 32px rgba(0,0,0,0.3); }
         }
         @keyframes typingDot {
           0%,60%,100% { transform: translateY(0); opacity: 0.4; }

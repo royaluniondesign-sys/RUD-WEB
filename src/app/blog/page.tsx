@@ -143,7 +143,7 @@ export default function Blog() {
                   <div style={{ padding: 'clamp(1.25rem,3vw,2rem)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <div>
                       <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10, marginBottom: 14 }}>
-                        <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.15em', color: '#7B68EE' }}>{featured.category}</span>
+                        <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.15em', color: '#BF4E30' }}>{featured.category}</span>
                         <span style={{ fontSize: 10, color: '#C4BFB8' }}>{featured.readTime} lectura</span>
                         <span style={{ fontSize: 10, color: '#C4BFB8' }}>{featured.date}</span>
                       </div>
@@ -170,7 +170,7 @@ export default function Blog() {
                     </div>
                     <div style={{ padding: 'clamp(1rem,2.5vw,1.25rem)', display: 'flex', flexDirection: 'column', flex: 1 }}>
                       <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8, marginBottom: 10 }}>
-                        <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.12em', color: '#7B68EE' }}>{post.category}</span>
+                        <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.12em', color: '#BF4E30' }}>{post.category}</span>
                         <span style={{ fontSize: 10, color: '#C4BFB8' }}>{post.readTime}</span>
                       </div>
                       <h2 style={{ fontSize: 'clamp(.95rem,1.8vw,1.05rem)', fontWeight: 700, lineHeight: 1.4, marginBottom: 8, flex: 1 }}>{post.title}</h2>

@@ -203,7 +203,7 @@ export default function Contact() {
   // ── SUCCESS ─────────────────────────────────────────────────────────────────
   if (status === 'success') {
     return (
-      <main style={{ minHeight: '100dvh', background: '#F7F5F1', display: 'flex', flexDirection: 'column' }}>
+      <main id="main-content" style={{ minHeight: '100dvh', background: '#F7F5F1', display: 'flex', flexDirection: 'column' }}>
         <Navbar />
         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 'clamp(2rem,8vw,5rem) 1.5rem' }}>
           <div style={{ maxWidth: 480, width: '100%', textAlign: 'center' }}>
@@ -536,14 +536,14 @@ export default function Contact() {
                         Nombre <span style={{ color: '#EF4444' }}>*</span>
                       </label>
                       <input
-                        id="name" type="text"
+                        id="name" type="text" aria-describedby="name-error"
                         value={name} onChange={e => setName(e.target.value)}
                         onBlur={() => setTouched(t => ({ ...t, name: true }))}
                         required autoComplete="name" placeholder="Tu nombre"
                         style={{ ...inputBase, borderColor: touched.name && !name.trim() ? '#EF4444' : '#E2DDD7' }}
                       />
                       {touched.name && !name.trim() && (
-                        <p style={{ fontSize: 11, color: '#EF4444', marginTop: 4 }}>Campo requerido</p>
+                        <p id="name-error" style={{ fontSize: 11, color: '#EF4444', marginTop: 4 }} role="alert">Campo requerido</p>
                       )}
                     </div>
                     <div>
@@ -551,14 +551,14 @@ export default function Contact() {
                         Email <span style={{ color: '#EF4444' }}>*</span>
                       </label>
                       <input
-                        id="email" type="email"
+                        id="email" type="email" aria-describedby="email-error"
                         value={email} onChange={e => setEmail(e.target.value)}
                         onBlur={() => setTouched(t => ({ ...t, email: true }))}
                         required autoComplete="email" placeholder="tu@email.com"
                         style={{ ...inputBase, borderColor: touched.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? '#EF4444' : '#E2DDD7' }}
                       />
                       {touched.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && (
-                        <p style={{ fontSize: 11, color: '#EF4444', marginTop: 4 }}>Email válido requerido</p>
+                        <p id="email-error" style={{ fontSize: 11, color: '#EF4444', marginTop: 4 }} role="alert">Email válido requerido</p>
                       )}
                     </div>
                   </div>
