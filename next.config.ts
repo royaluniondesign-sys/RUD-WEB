@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
     ],
     deviceSizes: [640, 750, 828, 1080, 1200, 1440, 1920],
   },
+  async redirects() {
+    return [
+      { source: '/work/brandforce', destination: '/work', permanent: true },
+    ]
+  },
   async headers() {
     return [
       {
