@@ -2,79 +2,93 @@ import { MetadataRoute } from 'next'
 
 const BASE = 'https://royaluniondesign.com'
 
-const BLOG_SLUGS = [
-  'cajas-de-luz-barcelona-precio-tipos',
-  'rotulos-luminosos-barcelona-precio-tipos-instalacion',
-  'neon-led-barcelona-precio-instalacion',
-  'letras-corporeas-barcelona-tipos-precios',
-  'vinilos-escaparate-barcelona-precio-instalacion',
-  'aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st',
-  'ia-local-vs-nube-agencias-creativas',
-  'branding-ecommerce-shopify-barcelona',
-  'identidad-visual-vs-logo-diferencia',
-  'nextjs-vs-wordpress-2026',
-  'estrategia-marca-startups-barcelona',
-  'automatizacion-marketing-agencias-n8n',
-]
-
-const ROTULOS_SLUGS = [
-  'neon-led-barcelona',
-  'letras-corporeas-barcelona',
-  'vinilos-escaparate-barcelona',
-  'cajas-de-luz-barcelona',
-  'senaletica-interior-barcelona',
-  'publicidad-exterior-barcelona',
-  'eixample-barcelona',
-  'gracia-barcelona',
-  'poblenou-barcelona',
-  'sarria-barcelona',
-  'sants-barcelona',
-]
-
-const WORK_SLUGS = ['idnt', 'kopess', 'oxyzen', 'aurum']
+const d = (s: string) => new Date(s)
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
-
   const core: MetadataRoute.Sitemap = [
-    { url: BASE,                  lastModified: now, changeFrequency: 'weekly',  priority: 1.0 },
-    { url: `${BASE}/rotulos`,     lastModified: now, changeFrequency: 'weekly',  priority: 0.95 },
-    { url: `${BASE}/services`,    lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${BASE}/pricing`,     lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${BASE}/contact`,     lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${BASE}/about`,       lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/work`,        lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/blog`,        lastModified: now, changeFrequency: 'weekly',  priority: 0.8 },
-    { url: `${BASE}/faq`,         lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
+    { url: BASE,               lastModified: d('2026-06-04'), changeFrequency: 'weekly',  priority: 1.0  },
+    { url: `${BASE}/rotulos`,  lastModified: d('2026-06-04'), changeFrequency: 'weekly',  priority: 0.95 },
+    { url: `${BASE}/contact`,  lastModified: d('2026-06-04'), changeFrequency: 'monthly', priority: 0.90 },
+    { url: `${BASE}/pricing`,  lastModified: d('2026-05-01'), changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${BASE}/services`, lastModified: d('2026-05-01'), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE}/blog`,     lastModified: d('2026-06-04'), changeFrequency: 'weekly',  priority: 0.80 },
+    { url: `${BASE}/work`,     lastModified: d('2026-05-01'), changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE}/about`,    lastModified: d('2026-04-01'), changeFrequency: 'monthly', priority: 0.70 },
+    { url: `${BASE}/faq`,      lastModified: d('2026-04-01'), changeFrequency: 'monthly', priority: 0.68 },
   ]
 
-  const rotelosSubpages: MetadataRoute.Sitemap = ROTULOS_SLUGS.map((slug) => ({
+  // Core service pages — high commercial intent, max priority after home
+  const coreServiceSlugs: Array<{ slug: string; lastMod: string }> = [
+    { slug: 'neon-led-barcelona',          lastMod: '2026-05-15' },
+    { slug: 'letras-corporeas-barcelona',  lastMod: '2026-05-15' },
+    { slug: 'cajas-de-luz-barcelona',      lastMod: '2026-05-15' },
+    { slug: 'vinilos-escaparate-barcelona',lastMod: '2026-05-15' },
+    { slug: 'senaletica-interior-barcelona',lastMod: '2026-05-01' },
+    { slug: 'publicidad-exterior-barcelona',lastMod: '2026-05-01' },
+  ]
+
+  // Geo-targeted landing pages — slightly lower than core services
+  const geoSlugs: Array<{ slug: string; lastMod: string }> = [
+    { slug: 'eixample-barcelona',  lastMod: '2026-06-04' },
+    { slug: 'gracia-barcelona',    lastMod: '2026-06-04' },
+    { slug: 'poblenou-barcelona',  lastMod: '2026-06-04' },
+    { slug: 'sarria-barcelona',    lastMod: '2026-06-04' },
+    { slug: 'sants-barcelona',     lastMod: '2026-06-04' },
+  ]
+
+  const rotulosServices: MetadataRoute.Sitemap = coreServiceSlugs.map(({ slug, lastMod }) => ({
     url: `${BASE}/rotulos/${slug}`,
-    lastModified: now,
+    lastModified: d(lastMod),
     changeFrequency: 'monthly' as const,
     priority: 0.88,
   }))
 
-  const rotuloBlogSlugs = [
-    'rotulos-luminosos-barcelona-precio-tipos-instalacion',
-    'neon-led-barcelona-precio-instalacion',
-    'letras-corporeas-barcelona-tipos-precios',
-    'vinilos-escaparate-barcelona-precio-instalacion',
+  const rotulosGeo: MetadataRoute.Sitemap = geoSlugs.map(({ slug, lastMod }) => ({
+    url: `${BASE}/rotulos/${slug}`,
+    lastModified: d(lastMod),
+    changeFrequency: 'monthly' as const,
+    priority: 0.82,
+  }))
+
+  // Blog posts — rótulos guides > branding/web > IA/tech
+  const blogEntries: Array<{ slug: string; lastMod: string; priority: number }> = [
+    // Rótulos guides — high commercial value, 0.75
+    { slug: 'cajas-de-luz-barcelona-precio-tipos',                              lastMod: '2026-06-04', priority: 0.75 },
+    { slug: 'rotulos-luminosos-barcelona-precio-tipos-instalacion',             lastMod: '2026-05-20', priority: 0.75 },
+    { slug: 'neon-led-barcelona-precio-instalacion',                            lastMod: '2026-05-20', priority: 0.75 },
+    { slug: 'letras-corporeas-barcelona-tipos-precios',                         lastMod: '2026-05-20', priority: 0.75 },
+    { slug: 'vinilos-escaparate-barcelona-precio-instalacion',                  lastMod: '2026-04-15', priority: 0.75 },
+    // Branding & web — medium value, 0.65
+    { slug: 'branding-ecommerce-shopify-barcelona',                             lastMod: '2026-02-01', priority: 0.65 },
+    { slug: 'identidad-visual-vs-logo-diferencia',                              lastMod: '2026-01-15', priority: 0.65 },
+    { slug: 'estrategia-marca-startups-barcelona',                              lastMod: '2025-12-01', priority: 0.65 },
+    { slug: 'nextjs-vs-wordpress-2026',                                         lastMod: '2026-01-15', priority: 0.65 },
+    // IA / automation — lower priority for rótulos business
+    { slug: 'ia-local-vs-nube-agencias-creativas',                              lastMod: '2026-03-01', priority: 0.55 },
+    { slug: 'aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st',     lastMod: '2026-04-01', priority: 0.55 },
+    { slug: 'automatizacion-marketing-agencias-n8n',                            lastMod: '2025-11-01', priority: 0.55 },
   ]
 
-  const blog: MetadataRoute.Sitemap = BLOG_SLUGS.map((slug) => ({
+  const blog: MetadataRoute.Sitemap = blogEntries.map(({ slug, lastMod, priority }) => ({
     url: `${BASE}/blog/${slug}`,
-    lastModified: now,
+    lastModified: d(lastMod),
     changeFrequency: 'monthly' as const,
-    priority: rotuloBlogSlugs.includes(slug) ? 0.75 : 0.65,
+    priority,
   }))
 
-  const work: MetadataRoute.Sitemap = WORK_SLUGS.map((slug) => ({
+  const workEntries: Array<{ slug: string; lastMod: string }> = [
+    { slug: 'idnt',    lastMod: '2026-03-01' },
+    { slug: 'kopess',  lastMod: '2026-04-01' },
+    { slug: 'oxyzen',  lastMod: '2026-05-01' },
+    { slug: 'aurum',   lastMod: '2026-02-01' },
+  ]
+
+  const work: MetadataRoute.Sitemap = workEntries.map(({ slug, lastMod }) => ({
     url: `${BASE}/work/${slug}`,
-    lastModified: now,
+    lastModified: d(lastMod),
     changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    priority: 0.70,
   }))
 
-  return [...core, ...rotelosSubpages, ...blog, ...work]
+  return [...core, ...rotulosServices, ...rotulosGeo, ...blog, ...work]
 }
