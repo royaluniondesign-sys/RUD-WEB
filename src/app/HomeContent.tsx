@@ -7,12 +7,13 @@ import { useEffect, useRef } from 'react'
 import { trackCTA, trackEmailClick, trackSocialClick } from '@/lib/analytics'
 
 // ═══════════════════════════════════════════════════════════
-// HERO — video background, Barlow + Instrument Serif
+// HERO — video background, Space Grotesk (web font system)
 // ═══════════════════════════════════════════════════════════
 const VIDEO_SRC = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_074215_04640ca7-042c-45d6-bb56-58b1e8a42489.mp4'
 
 function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const overlayRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const load = () => {
@@ -21,6 +22,10 @@ function Hero() {
       v.src = VIDEO_SRC
       v.load()
       v.play().catch(() => {})
+      v.addEventListener('canplay', () => {
+        v.style.opacity = '1'
+        if (overlayRef.current) overlayRef.current.style.opacity = '0'
+      }, { once: true })
     }
     if (document.readyState === 'complete') {
       load()
@@ -30,75 +35,57 @@ function Hero() {
   }, [])
 
   return (
-    <section className="relative h-screen min-h-[640px] flex items-end justify-center overflow-hidden">
+    <section style={{ position: 'relative', height: '100svh', minHeight: 640, display: 'flex', alignItems: 'flex-end', overflow: 'hidden', background: '#0A0908' }}>
 
-      {/* Poster image — LCP element, shown immediately before video loads */}
+      {/* Poster — LCP, se ve inmediatamente */}
       <img
         src="/hero-bg.webp"
         alt=""
         aria-hidden="true"
         fetchPriority="high"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ zIndex: 0 }}
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
       />
 
-      {/* Background video — lazy-loaded after window.load */}
+      {/* Video — fade in cuando está listo */}
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover"
-        poster="/hero-bg.webp"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="none"
-        style={{ zIndex: 1 }}
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1, opacity: 0, transition: 'opacity 1.2s ease' }}
+        autoPlay loop muted playsInline preload="none"
       />
 
-      {/* Content — 250px breathing room from bottom */}
-      <div className="relative z-10 w-full container-custom flex flex-col items-start"
-           style={{ paddingBottom: 250 }}>
+      {/* Gradient overlay */}
+      <div style={{ position: 'absolute', inset: 0, zIndex: 2, background: 'linear-gradient(to top, rgba(10,9,8,0.88) 0%, rgba(10,9,8,0.45) 50%, rgba(10,9,8,0.2) 100%)' }} />
 
-        {/* Liquid-glass badge */}
-        <div className="mb-10 animate-fade-in-up">
-          <div className="rounded-full p-[3px] inline-block" style={{ background: 'rgba(255,255,255,0.10)', backdropFilter: 'blur(4px)' }}>
-            <div className="rounded-full px-5 py-2 inline-flex items-center gap-2" style={{ background: 'rgba(255,255,255,0.90)', backdropFilter: 'blur(12px)' }}>
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-xs font-medium text-[#171717] font-barlow tracking-wide">
-                Aceptando proyectos · Barcelona
-              </span>
-            </div>
+      {/* Poster fade-out overlay (se oculta cuando el vídeo carga) */}
+      <div ref={overlayRef} style={{ position: 'absolute', inset: 0, zIndex: 3, background: 'transparent', transition: 'opacity 0.8s ease', pointerEvents: 'none' }} />
+
+      {/* Content */}
+      <div className="container-custom" style={{ position: 'relative', zIndex: 10, paddingBottom: 'clamp(3rem,10vw,7rem)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+
+        {/* Badge */}
+        <div className="animate-fade-in-up" style={{ marginBottom: '2rem' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.10)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.18)', borderRadius: 9999, padding: '6px 16px' }}>
+            <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#22c55e', display: 'inline-block', animation: 'pulse 2s infinite' }} />
+            <span style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.85)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+              Aceptando proyectos · Barcelona
+            </span>
           </div>
         </div>
 
-        {/* Headline with corner accents */}
-        <div className="relative inline-block animate-fade-in-up anim-d1">
-          <span className="absolute -top-2 -left-2 w-[7px] h-[7px] bg-white block" />
-          <span className="absolute -top-2 -right-2 w-[7px] h-[7px] bg-white block" />
-          <span className="absolute -bottom-2 -left-2 w-[7px] h-[7px] bg-white block" />
-          <span className="absolute -bottom-2 -right-2 w-[7px] h-[7px] bg-white block" />
-          <div className="px-10 py-4">
-            <h1>
-              <span className="block font-barlow text-white leading-tight"
-                    style={{ fontSize: 'clamp(2.4rem,6vw,4rem)', fontWeight: 300 }}>
-                Rótulos luminosos, branding
-              </span>
-              <span className="block font-instrument-serif italic text-white leading-tight"
-                    style={{ fontSize: 'clamp(2.4rem,6vw,4rem)' }}>
-                y diseño web en Barcelona.
-              </span>
-            </h1>
-          </div>
-        </div>
+        {/* H1 — Space Grotesk, peso y tamaño consistentes con el resto de la web */}
+        <h1 className="animate-fade-in-up anim-d1" style={{ fontSize: 'clamp(2.6rem,6.5vw,5rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.03em', color: 'white', maxWidth: '16ch', marginBottom: '1.5rem' }}>
+          Rótulos, branding<br />
+          <span style={{ color: 'rgba(255,255,255,0.45)', fontWeight: 300 }}>y diseño web</span><br />
+          en Barcelona.
+        </h1>
 
         {/* Sub-headline */}
-        <p className="font-barlow text-base md:text-lg leading-relaxed max-w-2xl mt-8 animate-fade-in-up anim-d2"
-           style={{ color: 'rgba(255,255,255,0.75)' }}>
+        <p className="animate-fade-in-up anim-d2" style={{ fontSize: 'clamp(0.95rem,1.6vw,1.1rem)', color: 'rgba(255,255,255,0.65)', maxWidth: '48ch', lineHeight: 1.7, marginBottom: '2.25rem' }}>
           Fabricamos rótulos luminosos e instalamos señalética corporativa en Barcelona. Branding, identidad visual y diseño web de alto rendimiento — todo bajo un mismo techo.
         </p>
 
         {/* CTAs */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '2rem' }} className="animate-fade-in-up anim-d3">
+        <div className="animate-fade-in-up anim-d3" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.5rem' }}>
           <Link href="/contact"
             onClick={() => trackCTA('Pedir presupuesto', '/contact', 'hero')}
             style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 2rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 700, fontSize: 15, textDecoration: 'none', whiteSpace: 'nowrap' }}>
@@ -106,13 +93,13 @@ function Hero() {
           </Link>
           <Link href="/rotulos"
             onClick={() => trackCTA('Ver rótulos', '/rotulos', 'hero')}
-            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.5)', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 15, textDecoration: 'none', whiteSpace: 'nowrap', backdropFilter: 'blur(8px)' }}>
-            Rótulos Barcelona
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.25)', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 15, textDecoration: 'none', whiteSpace: 'nowrap', backdropFilter: 'blur(8px)' }}>
+            Ver rótulos
           </Link>
         </div>
 
-        {/* Local SEO anchors — text links, not decorative pills */}
-        <nav aria-label="Tipos de rótulos" className="animate-fade-in-up anim-d3" style={{ marginTop: '1.25rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem 1.25rem' }}>
+        {/* SEO anchors */}
+        <nav aria-label="Tipos de rótulos" className="animate-fade-in-up anim-d3" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem 1.5rem' }}>
           {[
             ['Neón LED', '/rotulos/neon-led-barcelona'],
             ['Letras Corpóreas', '/rotulos/letras-corporeas-barcelona'],
@@ -121,7 +108,7 @@ function Hero() {
             ['Señalética Interior', '/rotulos/senaletica-interior-barcelona'],
           ].map(([label, href]) => (
             <Link key={label} href={href}
-              style={{ fontSize: '12px', color: 'rgba(255,255,255,0.45)', textDecoration: 'none', fontWeight: 500, letterSpacing: '0.01em', transition: 'color 0.2s' }}
+              style={{ fontSize: '12px', color: 'rgba(255,255,255,0.38)', textDecoration: 'none', fontWeight: 500, letterSpacing: '0.04em', transition: 'color 0.2s' }}
               className="hero-service-link">
               {label}
             </Link>
