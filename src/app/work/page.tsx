@@ -77,6 +77,24 @@ const ROTULOS_PROJECTS = [
 
 const DIGITAL_PROJECTS = [
   {
+    slug: 'sante', client: 'Santé Café & Brunch', type: 'Hostelería · Barcelona',
+    desc: 'Rótulo neón LED warm amber sobre caja de luz negra mate. Instalado en fachada, se convirtió en el elemento diferenciador del local y en el punto de referencia visual del barrio.',
+    tags: ['Neón LED','Caja de Luz','Señalética Fachada','Rotulación Hostelería'],
+    img: '/trabajos/sante-cafe-brunch-neon-led-caja-luz-barcelona.jpg', featured: true,
+  },
+  {
+    slug: 'novae', client: 'Novae Consulting', type: 'Consultoría · Barcelona',
+    desc: 'Señalética corporativa completa: vinilos esmerilados de privacidad con logo corporativo recortado en cristal. Instalación en oficina de planta diáfana en Barcelona.',
+    tags: ['Vinilos Corporativos','Señalética Interior','Vinilo Cristal','Oficina'],
+    img: '/trabajos/novae-consulting-vinilo-esmerilado-cristal-corporativo-barcelona.jpg', featured: false,
+  },
+  {
+    slug: 'lumina', client: 'Clínica Lumina Estética', type: 'Clínica Estética · Barcelona',
+    desc: 'Letras corpóreas en acero inoxidable acabado dorado espejo con retroiluminación halo LED cálido. Instaladas sobre pared blanca en recepción de clínica estética premium en Barcelona.',
+    tags: ['Letras Corpóreas','Retroiluminación Halo','Acero Dorado','Señalética Clínica'],
+    img: '/trabajos/clinica-lumina-estetica-letras-corporeas-doradas-retroiluminadas-barcelona.jpg', featured: false,
+  },
+  {
     slug: 'idnt', client: 'IDNT®', type: 'Moda orgánica · Cerdanyola del Vallès, Barcelona',
     desc: 'Marca de ropa orgánica y sostenible hecha en Barcelona. Identidad visual, e-commerce Shopify, fotografía editorial, diseño de prendas, packaging, vídeo y automatizaciones.',
     tags: ['E-commerce Shopify','Branding','Fotografía','Vídeo','Diseño de Prendas'],

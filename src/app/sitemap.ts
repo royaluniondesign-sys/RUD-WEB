@@ -83,6 +83,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   const workEntries: Array<{ slug: string; lastMod: string }> = [
+    { slug: 'sante',   lastMod: '2026-06-10' },
+    { slug: 'novae',   lastMod: '2026-06-10' },
+    { slug: 'lumina',  lastMod: '2026-06-10' },
     { slug: 'idnt',    lastMod: '2026-03-01' },
     { slug: 'kopess',  lastMod: '2026-04-01' },
     { slug: 'oxyzen',  lastMod: '2026-05-01' },
