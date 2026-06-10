@@ -130,6 +130,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${p.client} — Caso de estudio · RUD Studio Barcelona`,
     description: p.desc,
     alternates: { canonical: `https://royaluniondesign.com/work/${slug}` },
+    openGraph: {
+      title: `${p.client} — Caso de estudio · RUD Studio`,
+      description: p.desc,
+      url: `https://royaluniondesign.com/work/${slug}`,
+      siteName: 'RUD Studio',
+      locale: 'es_ES',
+      type: 'article',
+      images: [{ url: 'https://royaluniondesign.com/og-image.png', width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${p.client} | RUD Studio`,
+      description: p.desc.slice(0, 150),
+      images: ['https://royaluniondesign.com/og-image.png'],
+    },
   }
 }
 

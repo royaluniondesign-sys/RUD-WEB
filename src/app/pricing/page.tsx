@@ -9,6 +9,21 @@ export const metadata: Metadata = {
   description: 'Precios orientativos de rótulos luminosos (desde 300€), neón LED (desde 1.800€), letras corpóreas (desde 2.500€), branding y diseño web en Barcelona. Presupuesto personalizado gratis en 24h.',
   keywords: 'precio rótulos Barcelona, cuánto cuesta neón LED Barcelona, precio letras corpóreas Barcelona, tarifa branding Barcelona, precio diseño web Barcelona, presupuesto rótulos luminosos',
   alternates: { canonical: 'https://royaluniondesign.com/pricing' },
+  openGraph: {
+    title: 'Precios Rótulos, Branding y Diseño Web Barcelona | RUD Studio',
+    description: 'Neón LED desde 1.800€, letras corpóreas desde 2.500€, rótulo luminoso desde 3.200€. Presupuesto gratis en 24h.',
+    url: 'https://royaluniondesign.com/pricing',
+    siteName: 'RUD Studio',
+    locale: 'es_ES',
+    type: 'website',
+    images: [{ url: 'https://royaluniondesign.com/og-image.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Precios Rótulos Barcelona | RUD Studio',
+    description: 'Neón LED desde 1.800€, letras corpóreas desde 2.500€. Presupuesto gratis en 24h.',
+    images: ['https://royaluniondesign.com/og-image.png'],
+  },
 }
 
 const ROTULOS = [
