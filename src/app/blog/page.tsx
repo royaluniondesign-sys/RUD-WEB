@@ -7,6 +7,21 @@ export const metadata = {
   description: 'Guías prácticas sobre rótulos luminosos en Barcelona, branding estratégico, diseño web, e-commerce Shopify y automatización IA. Consejos reales de una agencia que fabrica y diseña.',
   keywords: 'blog rótulos Barcelona, guía neón LED Barcelona, blog branding Barcelona, cómo elegir rótulo luminoso, blog diseño web Barcelona, tendencias señalética 2026',
   alternates: { canonical: 'https://royaluniondesign.com/blog' },
+  openGraph: {
+    title: 'Blog Rótulos, Branding y Diseño Web Barcelona | RUD Studio',
+    description: 'Guías reales sobre rótulos luminosos, branding y diseño web en Barcelona. Precios, procesos y consejos de una agencia que fabrica y diseña.',
+    url: 'https://royaluniondesign.com/blog',
+    siteName: 'RUD Studio',
+    locale: 'es_ES',
+    type: 'website',
+    images: [{ url: 'https://royaluniondesign.com/og-image.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog RUD Studio — Rótulos y Branding Barcelona',
+    description: 'Guías reales sobre rótulos luminosos, branding y diseño web en Barcelona.',
+    images: ['https://royaluniondesign.com/og-image.png'],
+  },
 }
 
 const posts = [

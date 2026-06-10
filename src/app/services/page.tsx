@@ -7,6 +7,21 @@ export const metadata = {
   description: 'Rótulos luminosos, neón LED, letras corpóreas, branding, diseño web Next.js y automatización IA en Barcelona. Fabricación propia. Presupuesto en 24h.',
   keywords: 'rótulos luminosos Barcelona, neón LED Barcelona, letras corpóreas Barcelona, vinilos escaparate Barcelona, branding Barcelona, agencia diseño web Barcelona, e-commerce Shopify Barcelona, señalética corporativa Barcelona, automatización IA Barcelona',
   alternates: { canonical: 'https://royaluniondesign.com/services' },
+  openGraph: {
+    title: 'Servicios · Rótulos, Branding y Diseño Web Barcelona | RUD Studio',
+    description: 'Rótulos luminosos, neón LED, letras corpóreas, branding y diseño web en Barcelona. Fabricación propia. Presupuesto en 24h.',
+    url: 'https://royaluniondesign.com/services',
+    siteName: 'RUD Studio',
+    locale: 'es_ES',
+    type: 'website',
+    images: [{ url: 'https://royaluniondesign.com/og-image.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Servicios | RUD Studio Barcelona',
+    description: 'Rótulos luminosos, branding y diseño web en Barcelona. Fabricación propia. Presupuesto en 24h.',
+    images: ['https://royaluniondesign.com/og-image.png'],
+  },
 }
 
 const ROTULOS_TYPES = [
@@ -73,9 +88,33 @@ const DIGITAL_SERVICES = [
   },
 ]
 
+const servicesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': 'https://royaluniondesign.com/services#services',
+  'name': 'RUD Studio — Servicios',
+  'url': 'https://royaluniondesign.com/services',
+  'description': 'Rótulos luminosos, neón LED, letras corpóreas, branding, diseño web y automatización IA en Barcelona.',
+  'provider': { '@id': 'https://royaluniondesign.com/#organization' },
+  'areaServed': { '@type': 'City', 'name': 'Barcelona' },
+  'hasOfferCatalog': {
+    '@type': 'OfferCatalog',
+    'name': 'Servicios RUD Studio',
+    'itemListElement': [
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Rótulos Luminosos', 'url': 'https://royaluniondesign.com/rotulos' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Neón LED Barcelona', 'url': 'https://royaluniondesign.com/rotulos/neon-led-barcelona' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Letras Corpóreas Barcelona', 'url': 'https://royaluniondesign.com/rotulos/letras-corporeas-barcelona' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Branding e Identidad Visual', 'url': 'https://royaluniondesign.com/services#branding' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Diseño Web Barcelona', 'url': 'https://royaluniondesign.com/services#web' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'E-commerce Shopify Barcelona', 'url': 'https://royaluniondesign.com/services#ecommerce' } },
+    ],
+  },
+}
+
 export default function Services() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
       <Navbar light />
 
       {/* ── Hero ──────────────────────────── */}
