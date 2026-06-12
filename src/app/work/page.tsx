@@ -80,7 +80,7 @@ const DIGITAL_PROJECTS = [
     slug: 'sante', client: 'Santé Café & Brunch', type: 'Hostelería · Barcelona',
     desc: 'Rótulo neón LED warm amber sobre caja de luz negra mate. Instalado en fachada, se convirtió en el elemento diferenciador del local y en el punto de referencia visual del barrio.',
     tags: ['Neón LED','Caja de Luz','Señalética Fachada','Rotulación Hostelería'],
-    img: '/trabajos/sante-cafe-brunch-neon-led-caja-luz-barcelona.jpg', featured: true,
+    img: '/trabajos/sante-cafe-brunch-neon-led-caja-luz-barcelona.jpg', featured: false,
   },
   {
     slug: 'novae', client: 'Novae Consulting', type: 'Consultoría · Barcelona',
