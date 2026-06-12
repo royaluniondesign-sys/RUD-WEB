@@ -62,40 +62,34 @@ function Hero() {
       {/* Content */}
       <div className="container-custom" style={{ position: 'relative', zIndex: 10, paddingBottom: 'clamp(3rem,10vw,7rem)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
 
-        {/* Badge */}
-        <div className="animate-fade-in-up" style={{ marginBottom: '2rem' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.10)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.18)', borderRadius: 9999, padding: '6px 16px' }}>
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#22c55e', display: 'inline-block', animation: 'pulse 2s infinite' }} />
-            <span style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.85)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-              Aceptando proyectos — Barcelona
-            </span>
-          </div>
-        </div>
-
-        {/* H1 — bold, fills the screen */}
-        <h1 className="animate-fade-in-up anim-d1" style={{ fontSize: 'clamp(3.5rem,8.5vw,9rem)', fontWeight: 800, lineHeight: 0.97, letterSpacing: '-0.04em', color: 'white', maxWidth: '14ch', marginBottom: '1.75rem' }}>
-          <span className="text-neon">Rótulos,</span><br />
-          branding<br />
-          <span style={{ color: 'rgba(255,255,255,0.38)', fontWeight: 300, fontStyle: 'italic' }}>y diseño web.</span>
+        {/* H1 — Barlow Condensed, duties-scale */}
+        <h1 className="animate-fade-in-up display" style={{ fontSize: 'clamp(5rem,12vw,14rem)', color: 'white', maxWidth: '12ch', marginBottom: '2rem' }}>
+          <span className="text-neon">Rótulos</span><br />
+          y branding<br />
+          <em style={{ color: 'rgba(255,255,255,0.4)', fontFamily: 'Barlow Condensed, sans-serif' }}>en Barcelona.</em>
         </h1>
 
-        {/* Sub-headline */}
-        <p className="animate-fade-in-up anim-d2" style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.5)', maxWidth: '42ch', lineHeight: 1.65, marginBottom: '2rem' }}>
-          Fabricamos rótulos luminosos e instalamos señalética en Barcelona. Branding y web de alto rendimiento — todo bajo un mismo techo.
-        </p>
+        {/* Duties-style meta block — mono, small, dashes */}
+        <div className="animate-fade-in-up anim-d2 mono-label" style={{ color: 'rgba(255,255,255,0.4)', marginBottom: '2.5rem' }}>
+          RUD STUDIO — (TALLER DE RÓTULOS Y ESTUDIO CREATIVO)<br/>
+          FABRICAMOS:<br/>
+          — Neón LED · Letras corpóreas · Cajas de luz<br/>
+          — Vinilos · Señalética · Publicidad exterior<br/>
+          taller: CERDANYOLA DEL VALLÈS · BCN
+        </div>
 
-        {/* CTAs */}
-        <div className="animate-fade-in-up anim-d3" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.5rem' }}>
+        {/* CTAs — minimal, flat */}
+        <div className="animate-fade-in-up anim-d3" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
           <Link href="/contact"
             onClick={() => trackCTA('Pedir presupuesto', '/contact', 'hero')}
             className="hero-cta-primary"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 2rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 700, fontSize: 15, textDecoration: 'none', whiteSpace: 'nowrap' }}>
-            Pedir presupuesto gratis →
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 2rem', background: 'white', color: '#0A0908', borderRadius: 4, fontWeight: 700, fontSize: 13, textDecoration: 'none', whiteSpace: 'nowrap', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+            Pedir presupuesto
           </Link>
           <Link href="/rotulos"
             onClick={() => trackCTA('Ver rótulos', '/rotulos', 'hero')}
             className="hero-cta-secondary"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.25)', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 15, textDecoration: 'none', whiteSpace: 'nowrap', backdropFilter: 'blur(8px)' }}>
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', border: '1px solid rgba(255,255,255,0.28)', color: 'rgba(255,255,255,0.75)', borderRadius: 4, fontWeight: 500, fontSize: 13, textDecoration: 'none', whiteSpace: 'nowrap', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
             Ver rótulos
           </Link>
         </div>
@@ -210,9 +204,9 @@ function RotulosStrip() {
               <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.16em', color: 'rgba(255,255,255,0.38)', marginBottom: '0.75rem' }}>
                 Empresa de rótulos · Barcelona
               </p>
-              <h2 style={{ fontSize: 'clamp(1.75rem,4vw,2.75rem)', fontWeight: 700, color: 'white', letterSpacing: '-0.03em', lineHeight: 1.15, maxWidth: '480px' }}>
-                Fabricamos e instalamos<br />
-                <span style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.45)' }}>todo tipo de <span className="text-neon">rótulos</span> en BCN.</span>
+              <h2 className="display" style={{ fontSize: 'clamp(3.5rem,8vw,9rem)', color: 'white' }}>
+                <span className="text-neon">Rótulos</span><br />
+                <em style={{ color: 'rgba(255,255,255,0.42)', fontFamily: 'Barlow Condensed, sans-serif' }}>luminosos.</em>
               </h2>
             </div>
             <Link href="/rotulos"
@@ -293,7 +287,7 @@ function Services() {
       <div className="container-custom">
         <ScrollReveal>
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-end',marginBottom:'2.5rem',flexWrap:'wrap',gap:'1rem'}}>
-            <h2 style={{fontSize:'clamp(1.75rem,3.5vw,2.75rem)',fontWeight:700,letterSpacing:'-0.035em',color:'white'}}>Servicios</h2>
+            <h2 className="display" style={{fontSize:'clamp(3.5rem,8vw,9rem)',color:'white'}}>Servicios</h2>
             <Link href="/services" style={{fontSize:'0.8125rem',fontWeight:500,color:'rgba(255,255,255,0.38)',textDecoration:'none',whiteSpace:'nowrap'}}>
               Ver todos →
             </Link>
@@ -326,14 +320,13 @@ function Services() {
 // ═══════════════════════════════════════════════════════════
 function Work() {
   return (
-    <section className="section-padding" style={{background:'#FFFFFF', borderTop:'1px solid var(--border)'}}>
+    <section className="section-padding" style={{background:'var(--bg)', borderTop:'1px solid var(--border)'}}>
       <div className="container-custom">
         <ScrollReveal>
           <div style={{display:'flex',flexWrap:'wrap',gap:'1rem',justifyContent:'space-between',alignItems:'flex-end',marginBottom:'2.5rem'}}>
-            <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em'}}>Trabajo que habla.</h2>
-            <Link href="/work" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',fontSize:'0.875rem',fontWeight:500,color:'var(--muted)',textDecoration:'none',whiteSpace:'nowrap'}}>
-              Ver portfolio
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <h2 className="display" style={{fontSize:'clamp(3.5rem,8vw,9rem)',color:'var(--fg)'}}>Trabajo</h2>
+            <Link href="/work" className="mono-label arrow-link" style={{color:'var(--muted)',textDecoration:'none',whiteSpace:'nowrap'}}>
+              Ver todo →
             </Link>
           </div>
         </ScrollReveal>
@@ -367,21 +360,6 @@ function Work() {
         </div>
 
 
-        {/* Próximo proyecto */}
-        <ScrollReveal delay={240}>
-          <Link href="/contact" onClick={() => trackCTA('Empezar conversación', '/contact', 'portfolio-cta')} className="next-project-card" style={{ display: 'block', background: '#0A0908', borderRadius: '16px', padding: 'clamp(1.75rem,4vw,2.5rem)', textDecoration: 'none' }}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem' }}>
-              <div>
-                <p style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.14em', color: 'rgba(255,255,255,0.35)', marginBottom: '0.625rem' }}>Próximo proyecto</p>
-                <h3 style={{ fontSize: 'clamp(1.1rem,2.5vw,1.375rem)', fontWeight: 700, color: 'white', marginBottom: '0.25rem', letterSpacing: '-0.02em' }}>Aceptando 1 proyecto nuevo</h3>
-                <p style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.42)' }}>Barcelona y remoto · ¿Es el tuyo?</p>
-              </div>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 700, fontSize: 14, whiteSpace: 'nowrap', flexShrink: 0 }}>
-                Empezar conversación →
-              </span>
-            </div>
-          </Link>
-        </ScrollReveal>
       </div>
     </section>
   )
@@ -575,23 +553,23 @@ function CTA() {
       <div className="container-custom" style={{position:'relative'}}>
         <ScrollReveal>
           <div style={{maxWidth:'750px'}}>
-            <h2 style={{fontSize:'clamp(3rem,7.5vw,8rem)',fontWeight:800,color:'white',letterSpacing:'-0.045em',lineHeight:0.95,marginBottom:'2rem'}}>
-              Construyamos<br />algo<br /><span style={{fontStyle:'italic',fontWeight:300,color:'rgba(255,255,255,0.4)'}}>extraordinario.</span>
+            <h2 className="display" style={{fontSize:'clamp(4rem,10vw,11rem)',color:'white',marginBottom:'2rem'}}>
+              ¿Necesitas<br />un rótulo<br /><em style={{color:'rgba(255,255,255,0.4)',fontFamily:'Barlow Condensed,sans-serif'}}>en Barcelona?</em>
             </h2>
-            <p style={{color:'rgba(255,255,255,0.5)',fontSize:'clamp(0.95rem,2vw,1.15rem)',marginBottom:'2.5rem',maxWidth:'500px',lineHeight:1.7}}>
-              Cuéntanos tu proyecto. Respondemos en menos de 24 horas. Basados en Barcelona, trabajamos globalmente.
+            <p style={{color:'rgba(255,255,255,0.5)',fontSize:'clamp(0.95rem,2vw,1.15rem)',marginBottom:'2.5rem',maxWidth:'460px',lineHeight:1.7}}>
+              Taller propio en Cerdanyola del Vallès. Visita técnica gratuita. Presupuesto en 24h.
             </p>
             <div style={{display:'flex',flexWrap:'wrap',gap:'0.75rem',marginBottom:'1.5rem'}}>
-              <Link href="/contact" onClick={() => trackCTA('Iniciar conversación', '/contact', 'bottom-cta')} className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'1rem 2rem',background:'white',color:'#0A0908',borderRadius:'9999px',fontWeight:600,textDecoration:'none',fontSize:'0.9375rem',transition:'opacity 0.2s'}}>
-                Iniciar conversación
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </Link>
-              <Link href="/work" onClick={() => trackCTA('Ver trabajo', '/work', 'bottom-cta')} style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'1rem 2rem',border:'1px solid rgba(255,255,255,0.15)',color:'white',borderRadius:'9999px',fontWeight:500,textDecoration:'none',fontSize:'0.9375rem',transition:'border-color 0.2s'}}>
-                Ver trabajo
+              <a href="https://wa.me/34645593227" onClick={() => trackCTA('WhatsApp CTA', 'whatsapp', 'bottom-cta')} style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'1rem 2rem',background:'white',color:'#0A0908',borderRadius:'9999px',fontWeight:700,textDecoration:'none',fontSize:'0.9375rem'}}>
+                +34 645 593 227
+              </a>
+              <Link href="/contact" onClick={() => trackCTA('Pedir presupuesto', '/contact', 'bottom-cta')} style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'1rem 2rem',border:'1px solid rgba(255,255,255,0.15)',color:'white',borderRadius:'9999px',fontWeight:500,textDecoration:'none',fontSize:'0.9375rem'}}>
+                Pedir presupuesto
               </Link>
             </div>
             <p style={{fontSize:'0.875rem',color:'rgba(255,255,255,0.4)'}}>
-              O escríbenos a <a href="mailto:hello@royaluniondesign.com" onClick={() => trackEmailClick('hello@royaluniondesign.com', 'bottom-cta')} style={{color:'rgba(255,255,255,0.75)',textDecoration:'none'}}>hello@royaluniondesign.com</a>
+              <a href="mailto:hello@royaluniondesign.com" onClick={() => trackEmailClick('hello@royaluniondesign.com', 'bottom-cta')} style={{color:'rgba(255,255,255,0.75)',textDecoration:'none'}}>hello@royaluniondesign.com</a>
+              {' '}· Carrer Sant Salvador 11, Local 6 · Cerdanyola del Vallès
             </p>
           </div>
         </ScrollReveal>
@@ -662,13 +640,8 @@ export default function HomeContent() {
       <Hero />
       <Marquee />
       <RotulosStrip />
-      <Stats />
       <Services />
       <Work />
-      <WhyRUD />
-      <Investment />
-      <FAQ />
-      <BlogHighlights />
       <CTA />
       <Footer />
     </main>
