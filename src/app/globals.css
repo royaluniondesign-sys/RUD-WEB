@@ -565,3 +565,199 @@ textarea:focus-visible {
   .marquee-track { animation: none; }
   html { scroll-behavior: auto; }
 }
+
+/* ══════════════════════════════════════════════
+   DUTIES.XYZ PATTERN — text-mask reveal
+   ══════════════════════════════════════════════ */
+
+/* Contenedor — overflow:hidden actúa como máscara */
+.text-mask {
+  overflow: hidden;
+  display: block;
+}
+
+/* Estado inicial: texto abajo, invisible por la máscara */
+.rl {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+/* Estado final */
+.rl.in { transform: translateY(0%); }
+
+/* Stagger para líneas adicionales dentro del mismo grupo */
+.rl-d1 { transition-delay: 0.11s; }
+.rl-d2 { transition-delay: 0.22s; }
+.rl-d3 { transition-delay: 0.34s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rl { transform: none; transition: none; }
+}
+
+/* ── Projects grid — duties.xyz style ── */
+.project-row {
+  border-top: 1px solid var(--border);
+  padding-bottom: clamp(24px, 4vw, 40px);
+}
+
+.project-images {
+  display: grid;
+  height: clamp(260px, 36vw, 404px);
+}
+.project-images.wide   { grid-template-columns: 65% 35%; }
+.project-images.narrow { grid-template-columns: 32% 68%; }
+
+.img-cell {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+}
+
+.img-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-cell:hover img { transform: scale(1.04); }
+
+/* "VER PROYECTO →" overlay */
+.vp-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(241, 240, 238, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 10px 22px;
+  font-family: 'PP Neue Montreal Mono', 'Space Mono', monospace;
+  font-size: 11px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--fg); white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 8px;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+  pointer-events: none;
+}
+.img-cell:hover .vp-btn { opacity: 1; }
+
+/* Project label row */
+.project-label {
+  padding: 14px 0 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-family: 'PP Neue Montreal Mono', 'Space Mono', monospace;
+  font-size: 12px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--fg);
+}
+.p-name  { min-width: 140px; }
+.p-scope { display: flex; align-items: center; gap: 7px; color: var(--muted); font-weight: 400; }
+.p-dot   { width: 5px; height: 5px; background: var(--muted); border-radius: 50%; flex-shrink: 0; }
+
+/* Explore all work — centered link */
+.explore-wrap {
+  text-align: center;
+  padding: clamp(60px, 10vw, 100px) 20px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.explore-link {
+  font-family: 'AS Therma Bold Condensed', 'Bebas Neue', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 3.5rem);
+  font-weight: 400; text-transform: uppercase;
+  letter-spacing: -0.04em; line-height: 1;
+  color: var(--fg); text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.22s;
+}
+.explore-link:hover { opacity: 0.5; }
+
+/* ── Overview 3-col ── */
+.ov-item {
+  display: grid;
+  grid-template-columns: 180px 1fr 38%;
+  border-bottom: 1px solid var(--border);
+  min-height: 280px;
+}
+.ov-label-col {
+  padding: 24px 20px;
+  border-right: 1px solid var(--border);
+  display: flex; align-items: flex-start;
+}
+.ov-content-col {
+  padding: clamp(20px, 3vw, 36px);
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+.ov-heading-text {
+  font-family: 'AS Therma Bold Condensed', 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 4.5vw, 5rem);
+  font-weight: 400; text-transform: uppercase;
+  letter-spacing: -0.04em; line-height: 0.88;
+  color: var(--fg); display: block;
+}
+.ov-body {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 0.875rem; line-height: 1.65;
+  color: var(--muted); max-width: 44ch;
+}
+.ov-img-col { overflow: hidden; }
+.ov-img-col img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  min-height: 280px;
+}
+
+/* ── Footer wordmark ── */
+.footer-wordmark {
+  background: var(--fg);
+  overflow: hidden;
+  text-align: center;
+  padding: clamp(32px,5vw,52px) 10px clamp(20px,3vw,32px);
+  border-top: 1px solid #111;
+}
+.footer-wordmark-text {
+  font-family: 'AS Therma Bold Condensed', 'Bebas Neue', sans-serif;
+  font-size: clamp(72px, 19vw, 240px);
+  font-weight: 400; text-transform: uppercase;
+  letter-spacing: -0.05em; line-height: 0.85;
+  color: var(--bg); display: block;
+}
+
+/* ── Responsive para el nuevo patrón ── */
+@media (max-width: 768px) {
+  .project-images.wide,
+  .project-images.narrow {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .img-cell { height: 260px; }
+
+  .ov-item {
+    grid-template-columns: 1fr;
+  }
+  .ov-label-col {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+  }
+  .ov-content-col {
+    border-right: none;
+    padding: 20px 0;
+  }
+  .ov-img-col { min-height: 220px; }
+  .ov-img-col img { min-height: 220px; }
+}
+
+@media (max-width: 480px) {
+  .project-label { flex-direction: column; align-items: flex-start; }
+}
