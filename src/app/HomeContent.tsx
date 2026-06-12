@@ -67,7 +67,7 @@ function Hero() {
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.10)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.18)', borderRadius: 9999, padding: '6px 16px' }}>
             <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#22c55e', display: 'inline-block', animation: 'pulse 2s infinite' }} />
             <span style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.85)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-              Aceptando proyectos · Barcelona
+              Aceptando proyectos — Barcelona
             </span>
           </div>
         </div>
@@ -109,14 +109,14 @@ function Hero() {
 // MARQUEE
 // ═══════════════════════════════════════════════════════════
 function Marquee() {
-  const items = ['Brand Strategy','Identidad Visual','Señalética & Rótulos','Diseño Web','Next.js','E-commerce Shopify','Motion Branding','Rótulos Luminosos','Copywriting','SEO Técnico','AI Automation','Vinilos Escaparates','Packaging','Fotografía','Marketing Digital']
+  const items = ['Neón LED','Acero inoxidable','Aluminio','Vinilo de corte','Metacrilato','Policarbonato','Retroiluminación LED','Termoformado','Impresión UV','Corte láser','Letras corpóreas','Cajas de luz','Señalética de marca','Vinilos escaparate','Publicidad exterior']
   const doubled = [...items,...items]
   return (
     <div className="dark-grain" style={{background:'#0A0908',padding:'14px 0',overflow:'hidden',borderTop:'1px solid #181614',borderBottom:'1px solid #181614'}}>
       <div className="marquee-track" style={{display:'flex',whiteSpace:'nowrap'}}>
         {doubled.map((item, i) => (
-          <span key={`marquee-${item}-${i}`} style={{display:'inline-flex',alignItems:'center',gap:'2rem',fontSize:'0.8125rem',fontWeight:500,color:'rgba(255,255,255,0.35)',flexShrink:0,marginRight:'2rem'}}>
-            {item} <span style={{color:'rgba(255,255,255,0.12)',fontSize:'0.6rem'}}>◆</span>
+          <span key={`marquee-${item}-${i}`} style={{display:'inline-flex',alignItems:'center',gap:'2.5rem',fontSize:'0.8125rem',fontWeight:500,color:'rgba(255,255,255,0.32)',flexShrink:0,marginRight:'2.5rem'}}>
+            {item}
           </span>
         ))}
       </div>
@@ -309,20 +309,8 @@ function Services() {
                 borderBottom:'1px solid rgba(255,255,255,0.08)',
                 textDecoration:'none',gap:'2rem',
               }}>
-                <div style={{display:'flex',alignItems:'baseline',gap:'1.75rem',minWidth:0}}>
-                  <span style={{fontSize:'10px',color:'rgba(255,255,255,0.22)',fontWeight:700,letterSpacing:'.15em',flexShrink:0}}>{s.num}</span>
-                  <h3 style={{fontSize:'clamp(1.35rem,3.2vw,2.5rem)',fontWeight:700,letterSpacing:'-0.03em',color:'white',lineHeight:1.1,margin:0}}>{s.title}</h3>
-                </div>
-                <div style={{display:'flex',alignItems:'center',gap:'0.875rem',flexShrink:0}}>
-                  <div style={{display:'flex',gap:'6px',flexWrap:'wrap',justifyContent:'flex-end'}} className="md:flex hidden">
-                    {s.tags.map(t => (
-                      <span key={t} style={{padding:'3px 9px',borderRadius:9999,fontSize:'10px',fontWeight:500,background:'rgba(255,255,255,0.06)',color:'rgba(255,255,255,0.38)'}}>
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  <svg className="svc-arrow" style={{opacity:0.3,flexShrink:0}} width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                </div>
+                <h3 style={{fontSize:'clamp(1.35rem,3.2vw,2.5rem)',fontWeight:700,letterSpacing:'-0.03em',color:'white',lineHeight:1.1,margin:0}}>{s.title}</h3>
+                <svg className="svc-arrow" style={{opacity:0.3,flexShrink:0}} width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </Link>
             </ScrollReveal>
           ))}
@@ -358,21 +346,15 @@ function Work() {
           ].map((p, i) => (
             <ScrollReveal key={p.name} delay={i * 60}>
               <Link href={p.href} className="work-row" style={{
-                display:'grid',gridTemplateColumns:'40px 1fr auto',alignItems:'center',
+                display:'grid',gridTemplateColumns:'1fr auto',alignItems:'center',
                 gap:'clamp(1rem,3vw,2.5rem)',padding:'1.75rem 0',
                 borderBottom:'1px solid var(--border)',textDecoration:'none',
               }}>
-                <span style={{fontSize:'10px',fontWeight:700,letterSpacing:'.15em',color:'#C4BFB8',fontFamily:'monospace'}}>{p.num}</span>
                 <div>
                   <h3 className="work-row-name" style={{fontSize:'clamp(1.35rem,3.2vw,2.5rem)',fontWeight:700,letterSpacing:'-0.03em',color:'var(--fg)',lineHeight:1.1,margin:0}}>{p.name}</h3>
                   <p style={{fontSize:'0.75rem',color:'var(--muted)',marginTop:'0.375rem'}}>{p.type}</p>
                 </div>
                 <div style={{display:'flex',alignItems:'center',gap:'1rem',flexShrink:0}}>
-                  <div style={{display:'flex',gap:'6px',flexWrap:'wrap',justifyContent:'flex-end'}} className="hidden md:flex">
-                    {p.tags.map(t => (
-                      <span key={t} style={{padding:'2px 8px',borderRadius:9999,fontSize:'10px',fontWeight:500,background:'rgba(10,9,8,0.05)',color:'var(--muted)'}}>{t}</span>
-                    ))}
-                  </div>
                   <img src={p.img} alt="" aria-hidden="true" loading="lazy" className="work-row-img"
                     style={{width:52,height:52,objectFit:'cover',borderRadius:8,opacity:0.55,flexShrink:0}} />
                   <svg className="work-row-arrow" style={{opacity:0.25,flexShrink:0}} width="20" height="20" viewBox="0 0 16 16" fill="none">
@@ -457,14 +439,9 @@ function WhyRUD() {
         <div>
           {items.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 50}>
-              <div className="why-editorial-row" style={{borderBottom: i < items.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none'}}>
-                <span style={{fontSize:'clamp(3rem,5vw,5rem)',fontWeight:800,letterSpacing:'-0.06em',lineHeight:1,color:'rgba(255,255,255,0.11)'}}>
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <div>
-                  <p style={{fontWeight:700,fontSize:'1.0625rem',marginBottom:'0.5rem',letterSpacing:'-0.01em',color:'white'}}>{item.title}</p>
-                  <p style={{fontSize:'0.8125rem',color:'rgba(255,255,255,0.38)',lineHeight:1.65}}>{item.desc}</p>
-                </div>
+              <div style={{borderBottom: i < items.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none', padding:'1.75rem 0'}}>
+                <p style={{fontWeight:700,fontSize:'1.0625rem',marginBottom:'0.5rem',letterSpacing:'-0.01em',color:'white'}}>{item.title}</p>
+                <p style={{fontSize:'0.8125rem',color:'rgba(255,255,255,0.38)',lineHeight:1.65}}>{item.desc}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -479,9 +456,9 @@ function WhyRUD() {
 // ═══════════════════════════════════════════════════════════
 function Investment() {
   const tiers = [
-    {name:'Starter',desc:'Branding base: estrategia, logo, identidad y guidelines.',ideal:'Startups y proyectos nuevos',delivery:'4–6 semanas'},
-    {name:'Professional',desc:'Identidad completa + diseño web Next.js con SEO técnico.',ideal:'Marcas en crecimiento',delivery:'8–12 semanas',featured:true},
-    {name:'Enterprise',desc:'Proyecto end-to-end: identidad, web, e-commerce, contenido y automatización IA.',ideal:'Transformación completa',delivery:'10–16 semanas'},
+    {name:'Identidad',desc:'Branding base: estrategia, logo, identidad y guidelines.',ideal:'Proyectos nuevos',delivery:'4–6 semanas'},
+    {name:'Identidad + Web',desc:'Identidad completa + diseño web Next.js con SEO técnico.',ideal:'Marcas en crecimiento',delivery:'8–12 semanas',featured:true},
+    {name:'Proyecto completo',desc:'Identidad, web, e-commerce, contenido y automatización. Todo bajo un techo.',ideal:'Transformación completa',delivery:'10–16 semanas'},
   ]
   return (
     <section className="section-padding" style={{background:'#FFFFFF', borderTop:'1px solid var(--border)'}}>
