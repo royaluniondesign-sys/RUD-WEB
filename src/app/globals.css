@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+/* ── Self-hosted commercial fonts ───────────────────────────────────────────
+   Drop files into /public/fonts/ — browser picks them up automatically.
+   Fallbacks (Bebas Neue, Space Mono) load from Google Fonts in the meantime.
+   ────────────────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'AS Therma Bold Condensed';
+  src: url('/fonts/AS-Therma-Bold-Condensed.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal Mono';
+  src: url('/fonts/PPNeueMontreal-Mono.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #F1F0EE;
   --fg: #1A1A1A;
@@ -22,25 +42,27 @@ body {
   max-width: 100vw;
 }
 
-/* ── Display font — Barlow Condensed, duties-style ───────── */
+/* ── Display font — AS Therma Bold Condensed → Bebas Neue fallback ── */
 .display {
-  font-family: 'Barlow Condensed', 'Space Grotesk', sans-serif !important;
-  font-weight: 900 !important;
+  font-family: 'AS Therma Bold Condensed', 'Bebas Neue', 'Anton', sans-serif !important;
+  font-weight: 400 !important;
   text-transform: uppercase !important;
   letter-spacing: -0.04em !important;
-  line-height: 0.88 !important;
+  word-spacing: -0.08em !important;
+  line-height: 0.85 !important;
 }
 .display em, .display i {
-  font-style: italic;
-  font-weight: 700;
+  font-style: normal;
+  opacity: 0.28;
+  font-weight: 400;
 }
 
-/* ── Mono label — metadata, scope, status ────────────────── */
+/* ── Mono label — PP Neue Montreal Mono → Space Mono fallback ── */
 .mono-label {
-  font-family: 'Space Grotesk', monospace;
+  font-family: 'PP Neue Montreal Mono', 'Space Mono', 'Courier New', monospace;
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   line-height: 1.7;
 }
@@ -183,6 +205,11 @@ body {
 
 @keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:.3} }
 .animate-pulse { animation: pulse-dot 2.2s ease-in-out infinite; }
+
+@keyframes menuIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 /* ── Marquee ─────────────────────────────── */
 @keyframes marquee-left {
@@ -450,7 +477,7 @@ textarea:focus-visible {
 .service-row h3 {
   transition: color .18s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.service-row:hover h3 { color: var(--chariot) !important; }
+.service-row:hover h3 { opacity: 0.6; }
 .service-row .svc-arrow {
   transition: transform .22s cubic-bezier(0.16, 1, 0.3, 1), opacity .18s;
 }
