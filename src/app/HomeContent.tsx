@@ -88,32 +88,18 @@ function Hero() {
         <div className="animate-fade-in-up anim-d3" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.5rem' }}>
           <Link href="/contact"
             onClick={() => trackCTA('Pedir presupuesto', '/contact', 'hero')}
+            className="hero-cta-primary"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 2rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 700, fontSize: 15, textDecoration: 'none', whiteSpace: 'nowrap' }}>
             Pedir presupuesto gratis →
           </Link>
           <Link href="/rotulos"
             onClick={() => trackCTA('Ver rótulos', '/rotulos', 'hero')}
+            className="hero-cta-secondary"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.25)', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 15, textDecoration: 'none', whiteSpace: 'nowrap', backdropFilter: 'blur(8px)' }}>
             Ver rótulos
           </Link>
         </div>
 
-        {/* SEO anchors */}
-        <nav aria-label="Tipos de rótulos" className="animate-fade-in-up anim-d3" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem 1.5rem' }}>
-          {[
-            ['Neón LED', '/rotulos/neon-led-barcelona'],
-            ['Letras Corpóreas', '/rotulos/letras-corporeas-barcelona'],
-            ['Vinilos Escaparate', '/rotulos/vinilos-escaparate-barcelona'],
-            ['Cajas de Luz', '/rotulos/cajas-de-luz-barcelona'],
-            ['Señalética Interior', '/rotulos/senaletica-interior-barcelona'],
-          ].map(([label, href]) => (
-            <Link key={label} href={href}
-              style={{ fontSize: '12px', color: 'rgba(255,255,255,0.38)', textDecoration: 'none', fontWeight: 500, letterSpacing: '0.04em', transition: 'color 0.2s' }}
-              className="hero-service-link">
-              {label}
-            </Link>
-          ))}
-        </nav>
       </div>
     </section>
   )
@@ -221,7 +207,7 @@ function RotulosStrip() {
         <ScrollReveal>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '2.5rem' }}>
             <div>
-              <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.16em', color: 'rgba(255,255,255,0.25)', marginBottom: '0.75rem' }}>
+              <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.16em', color: 'rgba(255,255,255,0.38)', marginBottom: '0.75rem' }}>
                 Empresa de rótulos · Barcelona
               </p>
               <h2 style={{ fontSize: 'clamp(1.75rem,4vw,2.75rem)', fontWeight: 700, color: 'white', letterSpacing: '-0.03em', lineHeight: 1.15, maxWidth: '480px' }}>
@@ -245,7 +231,7 @@ function RotulosStrip() {
                 <img src={t.img} alt={t.kw} loading={i < 3 ? 'eager' : 'lazy'}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
                   className="rotulo-img" />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,9,8,0.88) 0%, rgba(10,9,8,0.2) 55%, transparent 100%)' }} />
+                <div className="rotulo-overlay" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,9,8,0.88) 0%, rgba(10,9,8,0.2) 55%, transparent 100%)' }} />
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem 1.125rem' }}>
                   <p style={{ fontSize: '9px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.14em', color: 'rgba(255,255,255,0.4)', marginBottom: 4 }}>{t.kw}</p>
                   <p style={{ fontSize: '0.9375rem', fontWeight: 700, color: 'white', letterSpacing: '-0.01em', lineHeight: 1.2 }}>{t.titulo}</p>
@@ -365,44 +351,6 @@ function Services() {
   )
 }
 
-// ═══════════════════════════════════════════════════════════
-// AURA — full section with terminal + capabilities + CTA
-// ═══════════════════════════════════════════════════════════
-function AuraSection() {
-  return (
-    <section style={{ background: '#F7F5F1', borderTop: '1px solid #E5E2DC', padding: 'clamp(2.5rem,5vw,4rem) 0' }}>
-      <div className="container-custom">
-        <ScrollReveal>
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '2rem' }}>
-            <div style={{ maxWidth: '560px' }}>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '1rem', padding: '4px 12px', borderRadius: 9999, border: '1px solid rgba(191,78,48,0.2)', background: 'rgba(191,78,48,0.06)' }}>
-                <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--chariot)', display: 'inline-block' }} className="animate-pulse" />
-                <span style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.14em', color: 'var(--chariot)' }}>Aura & Hermes · IA propia</span>
-              </div>
-              <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.25rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.2, marginBottom: '0.75rem', color: 'var(--fg)' }}>
-                Agentes de IA que trabajan mientras tú duermes.
-              </h2>
-              <p style={{ fontSize: '0.9375rem', color: 'var(--muted)', lineHeight: 1.65, maxWidth: '460px' }}>
-                Aura gestiona contenido y comunicación. Hermes, operaciones y CRM. Incluidos en todos nuestros proyectos — sin coste extra, sin que tus datos salgan de tu servidor.
-              </p>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem', minWidth: '240px' }}>
-              {['Análisis de briefings con IA', 'Generación de contenido SEO', 'Automatización de workflows', 'CRM y seguimiento de clientes'].map(item => (
-                <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.625rem' }}>
-                  <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--chariot)', flexShrink: 0 }} />
-                  <span style={{ fontSize: '0.875rem', color: 'var(--muted)' }}>{item}</span>
-                </div>
-              ))}
-              <Link href="/services#aura" style={{ marginTop: '0.5rem', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.875rem', fontWeight: 600, color: 'var(--chariot)', textDecoration: 'none' }}>
-                Saber más sobre Aura →
-              </Link>
-            </div>
-          </div>
-        </ScrollReveal>
-      </div>
-    </section>
-  )
-}
 
 // ═══════════════════════════════════════════════════════════
 // WORK — 3 clientes reales + testimonial + tu marca aquí
@@ -427,7 +375,7 @@ function Work() {
         {/* IDNT featured */}
         <ScrollReveal>
           <Link href="/work/idnt" style={{display:'block',textDecoration:'none',marginBottom:'1rem'}} className="group">
-            <div style={{borderRadius:'16px',overflow:'hidden',background:'white',border:'1px solid var(--border)'}} className="card-lift">
+            <div style={{borderRadius:'16px',overflow:'hidden',background:'white',border:'1px solid var(--border)'}} className="card-lift card-featured">
               <div className="grid md:grid-cols-2">
                 <div style={{position:'relative',minHeight:'280px',overflow:'hidden'}}>
                   <img src="/client-idnt-hero.gif" alt="IDNT® — Moda sostenible Barcelona, identidad visual y e-commerce Shopify"
@@ -488,16 +436,20 @@ function Work() {
         </div>
 
 
-        {/* Tu marca aquí */}
+        {/* Próximo proyecto */}
         <ScrollReveal delay={240}>
-          <div style={{border:'2px dashed #D1CDC6',borderRadius:'16px',padding:'2.5rem',display:'flex',flexWrap:'wrap',alignItems:'center',justifyContent:'space-between',gap:'1.5rem',background:'#F8F5F0'}}>
-            <div>
-              <p style={{fontSize:'10px',fontWeight:500,color:'#C4BFB8',textTransform:'uppercase',letterSpacing:'0.12em',marginBottom:'0.5rem'}}>Próximo proyecto</p>
-              <h3 style={{fontSize:'1.25rem',fontWeight:700,color:'#A09898',marginBottom:'0.25rem'}}>Tu marca aquí</h3>
-              <p style={{fontSize:'0.8125rem',color:'#C4BFB8'}}>Abiertos a nuevos proyectos · Barcelona y remoto</p>
+          <Link href="/contact" onClick={() => trackCTA('Empezar conversación', '/contact', 'portfolio-cta')} className="next-project-card" style={{ display: 'block', background: '#0A0908', borderRadius: '16px', padding: 'clamp(1.75rem,4vw,2.5rem)', textDecoration: 'none' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem' }}>
+              <div>
+                <p style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.14em', color: 'rgba(255,255,255,0.35)', marginBottom: '0.625rem' }}>Próximo proyecto</p>
+                <h3 style={{ fontSize: 'clamp(1.1rem,2.5vw,1.375rem)', fontWeight: 700, color: 'white', marginBottom: '0.25rem', letterSpacing: '-0.02em' }}>Aceptando 1 proyecto nuevo</h3>
+                <p style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.42)' }}>Barcelona y remoto · ¿Es el tuyo?</p>
+              </div>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 1.75rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 700, fontSize: 14, whiteSpace: 'nowrap', flexShrink: 0 }}>
+                Empezar conversación →
+              </span>
             </div>
-            <Link href="/contact" onClick={() => trackCTA('Empezar conversación', '/contact', 'portfolio-cta')} className="btn-primary">Empezar conversación</Link>
-          </div>
+          </Link>
         </ScrollReveal>
       </div>
     </section>
@@ -557,8 +509,8 @@ function WhyRUD() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {items.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 60}>
-              <div className="card-lift" style={{background:'white',border:'1px solid var(--border)',borderRadius:'16px',padding:'2rem',height:'100%',display:'flex',flexDirection:'column'}}>
-                <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'var(--warm)',display:'flex',alignItems:'center',justifyContent:'center',color:'var(--fg)',marginBottom:'1.25rem',flexShrink:0}}>
+              <div className="card-lift why-card" style={{background:'white',border:'1px solid var(--border)',borderRadius:'16px',padding:'2rem',height:'100%',display:'flex',flexDirection:'column'}}>
+                <div className="why-icon" style={{width:'48px',height:'48px',borderRadius:'12px',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'1.25rem',flexShrink:0}}>
                   {item.icon}
                 </div>
                 <p style={{fontWeight:700,fontSize:'1.0625rem',marginBottom:'0.625rem',letterSpacing:'-0.01em',color:'var(--fg)'}}>{item.title}</p>
@@ -586,7 +538,6 @@ function Investment() {
       <div className="container-custom">
         <ScrollReveal>
           <div style={{marginBottom:'3.5rem'}}>
-            <p className="section-label">Inversión</p>
             <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'0.75rem'}}>Cada proyecto es único</h2>
             <p style={{fontSize:'0.9375rem',color:'var(--muted)',maxWidth:'500px',lineHeight:1.65}}>Presupuestos a medida según lo que necesites. Alcance claro, timeline definido, sin sorpresas.</p>
           </div>
@@ -655,7 +606,6 @@ function FAQ() {
       <div className="container-custom">
         <div style={{maxWidth:'720px'}}>
           <ScrollReveal>
-            <p className="section-label">FAQ</p>
             <h2 style={{fontSize:'clamp(1.6rem,4vw,2.5rem)',fontWeight:700,letterSpacing:'-0.03em',marginBottom:'2.5rem'}}>Preguntas frecuentes</h2>
           </ScrollReveal>
           <ScrollReveal delay={100}>
@@ -708,11 +658,10 @@ function CTA() {
       <div className="container-custom" style={{position:'relative'}}>
         <ScrollReveal>
           <div style={{maxWidth:'750px'}}>
-            <p className="section-label" style={{color:'#333'}}>¿Listo?</p>
             <h2 style={{fontSize:'clamp(2.2rem,5.5vw,4.5rem)',fontWeight:700,color:'white',letterSpacing:'-0.035em',lineHeight:1.05,marginBottom:'1.5rem'}}>
-              Construyamos algo<br /><span style={{fontStyle:'italic',fontWeight:300,color:'#404040'}}>extraordinario juntos.</span>
+              Construyamos algo<br /><span style={{fontStyle:'italic',fontWeight:300,color:'rgba(255,255,255,0.55)'}}>extraordinario juntos.</span>
             </h2>
-            <p style={{color:'#6B7280',fontSize:'clamp(0.95rem,2vw,1.15rem)',marginBottom:'2.5rem',maxWidth:'500px',lineHeight:1.7}}>
+            <p style={{color:'rgba(255,255,255,0.5)',fontSize:'clamp(0.95rem,2vw,1.15rem)',marginBottom:'2.5rem',maxWidth:'500px',lineHeight:1.7}}>
               Cuéntanos tu proyecto. Respondemos en menos de 24 horas. Basados en Barcelona, trabajamos globalmente.
             </p>
             <div style={{display:'flex',flexWrap:'wrap',gap:'0.75rem',marginBottom:'1.5rem'}}>
@@ -724,8 +673,8 @@ function CTA() {
                 Ver trabajo
               </Link>
             </div>
-            <p style={{fontSize:'0.875rem',color:'#333'}}>
-              O escríbenos a <a href="mailto:hello@royaluniondesign.com" onClick={() => trackEmailClick('hello@royaluniondesign.com', 'bottom-cta')} style={{color:'white',textDecoration:'none'}}>hello@royaluniondesign.com</a>
+            <p style={{fontSize:'0.875rem',color:'rgba(255,255,255,0.4)'}}>
+              O escríbenos a <a href="mailto:hello@royaluniondesign.com" onClick={() => trackEmailClick('hello@royaluniondesign.com', 'bottom-cta')} style={{color:'rgba(255,255,255,0.75)',textDecoration:'none'}}>hello@royaluniondesign.com</a>
             </p>
           </div>
         </ScrollReveal>
@@ -798,7 +747,6 @@ export default function HomeContent() {
       <RotulosStrip />
       <Stats />
       <Services />
-      <AuraSection />
       <Work />
       <WhyRUD />
       <Investment />

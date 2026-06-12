@@ -42,9 +42,6 @@ body {
     var(--bg);
 }
 
-/* ── Hero font utilities ─────────────────── */
-.font-barlow           { font-family: 'Barlow', sans-serif; }
-.font-instrument-serif { font-family: 'Instrument Serif', serif; }
 
 /* ── Botones ─────────────────────────────── */
 .btn-primary {
@@ -204,12 +201,23 @@ body {
 
 /* ── Card hover ──────────────────────────── */
 .card-lift {
-  transition: transform .3s cubic-bezier(.22,1,.36,1),
-              box-shadow .3s cubic-bezier(.22,1,.36,1);
+  transition: transform .38s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow .38s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .card-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0,0,0,.07);
+  transform: translateY(-5px);
+  box-shadow: 0 24px 64px rgba(0,0,0,.09);
+}
+.card-lift:active {
+  transform: scale(0.98) !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,.05) !important;
+  transition-duration: 120ms !important;
+}
+
+/* IDNT featured card — deeper, slower lift */
+.card-featured.card-lift:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 36px 80px rgba(0,0,0,.13);
 }
 
 /* ── Rótulos photo cluster ───────────────────── */
@@ -239,10 +247,57 @@ body {
 
 /* ── Inline arrow nudge ─────────────────── */
 .arrow-link svg {
-  transition: transform .2s cubic-bezier(.22,1,.36,1);
+  transition: transform .22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .arrow-link:hover svg {
-  transform: translateX(3px);
+  transform: translateX(4px);
+}
+
+/* ── Hero CTAs — physical press feedback ──── */
+.hero-cta-primary {
+  transition: opacity .18s, transform .18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.hero-cta-primary:hover { opacity: .88; transform: translateY(-1px); }
+.hero-cta-primary:active { transform: scale(0.97) !important; transition-duration: 100ms !important; }
+
+.hero-cta-secondary {
+  transition: background .18s, border-color .18s, transform .18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.hero-cta-secondary:hover { background: rgba(255,255,255,0.16) !important; transform: translateY(-1px); }
+.hero-cta-secondary:active { transform: scale(0.97) !important; transition-duration: 100ms !important; }
+
+/* ── Next project dark CTA card ──────────── */
+.next-project-card {
+  transition: transform .38s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow .38s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.next-project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.32);
+}
+.next-project-card:active {
+  transform: scale(0.99) !important;
+  transition-duration: 120ms !important;
+}
+
+/* ── Rotulos overlay — gradient lightens on hover */
+.rotulo-overlay {
+  transition: background 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.rotulos-grid a:hover .rotulo-overlay {
+  background: linear-gradient(to top, rgba(10,9,8,0.55) 0%, rgba(10,9,8,0.08) 45%, transparent 100%) !important;
+}
+
+/* ── Hover guard — touch devices don't get hover animations */
+@media (hover: none) {
+  .card-lift:hover,
+  .card-featured.card-lift:hover,
+  .hero-cta-primary:hover,
+  .hero-cta-secondary:hover,
+  .next-project-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 /* ── Input focus glow ────────────────────── */
@@ -281,9 +336,19 @@ textarea:focus-visible {
 /* ── Hero service text links ─────────────── */
 .hero-service-link:hover { color: rgba(255,255,255,0.85) !important; }
 
-/* ── WhyRUD hover (CSS instead of JS mutation) */
-.why-card { transition: background .2s; }
+/* ── WhyRUD cards — icon reveal on hover */
+.why-card { transition: background .2s cubic-bezier(0.16, 1, 0.3, 1); }
 .why-card:hover { background: white !important; }
+.why-icon {
+  background: var(--warm);
+  color: var(--fg);
+  transition: background .28s cubic-bezier(0.16, 1, 0.3, 1),
+              color .28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.why-card:hover .why-icon {
+  background: var(--fg);
+  color: white;
+}
 
 /* ── Mobile nav overlay ──────────────────── */
 .mobile-nav {
