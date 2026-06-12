@@ -124,17 +124,14 @@ export default function Work() {
         <img src="/services/gal-2.avif" alt="" aria-hidden="true" loading="eager"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.45 }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(10,9,8,0.7) 0%,rgba(10,9,8,0.38) 100%)' }} />
-        <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingBlock: 'clamp(3.5rem,8vw,6rem)' }}>
+        <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingBlock: 'clamp(4rem,9vw,7rem)' }}>
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.4)', marginBottom: 12 }}>
-              Portfolio · Proyectos reales · Barcelona
-            </p>
-            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.03em', marginBottom: '1.25rem', maxWidth: '22ch', color: 'white' }}>
-              Rótulos, branding y diseño web en Barcelona.{' '}
-              <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.4)' }}>Proyectos reales.</em>
+            <h1 style={{ fontSize: 'clamp(3rem,7vw,7rem)', fontWeight: 800, lineHeight: 0.97, letterSpacing: '-0.045em', marginBottom: '1.5rem', maxWidth: '16ch', color: 'white' }}>
+              Trabajo<br />
+              <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.38)' }}>que habla.</em>
             </h1>
-            <p style={{ fontSize: 'clamp(0.875rem,1.5vw,1rem)', color: 'rgba(255,255,255,0.6)', maxWidth: '44ch', lineHeight: 1.7 }}>
-              Señalética, rótulos luminosos, identidad visual, e-commerce y automatización IA para empresas en Barcelona. Resultados medibles, no solo diseño bonito.
+            <p style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.5)', maxWidth: '42ch', lineHeight: 1.65 }}>
+              Rótulos luminosos, branding, e-commerce y web para empresas en Barcelona. Resultados medibles.
             </p>
           </ScrollReveal>
         </div>
@@ -146,11 +143,8 @@ export default function Work() {
           <ScrollReveal>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: 24, marginBottom: 'clamp(2rem,4vw,3rem)' }}>
               <div>
-                <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.2em', color: '#C4BFB8', marginBottom: 10 }}>
-                  Fabricación propia · Barcelona
-                </p>
-                <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.4rem)', fontWeight: 800, letterSpacing: '-.04em', lineHeight: 1.1, color: '#0A0908' }}>
-                  Rótulos que transforman negocios.
+                <h2 style={{ fontSize: 'clamp(2rem,4.5vw,4rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 1.0, color: '#0A0908' }}>
+                  Rótulos que<br />transforman negocios.
                 </h2>
               </div>
               <Link href="/rotulos"
@@ -229,14 +223,11 @@ export default function Work() {
       </section>
 
       {/* ── Digital projects ─────────────────── */}
-      <section style={{ background: '#F7F5F1', paddingBlock: 'clamp(3.5rem,8vw,6rem)' }}>
+      <section style={{ background: '#0A0908', paddingBlock: 'clamp(3.5rem,8vw,6rem)' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.2em', color: '#9CA3AF', marginBottom: 10 }}>
-              Branding & digital
-            </p>
-            <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.4rem)', fontWeight: 800, letterSpacing: '-.04em', lineHeight: 1.1, color: '#0A0908', marginBottom: 'clamp(2rem,4vw,3rem)' }}>
-              Identidad visual, web y e-commerce.
+            <h2 style={{ fontSize: 'clamp(2rem,5vw,4.5rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 1.0, color: 'white', marginBottom: 'clamp(2rem,4vw,3rem)' }}>
+              Branding & digital.
             </h2>
           </ScrollReveal>
 
@@ -244,9 +235,9 @@ export default function Work() {
             {/* IDNT — Featured */}
             <ScrollReveal>
               <Link href="/work/idnt" style={{ display: 'block', textDecoration: 'none' }}>
-                <div className="card-lift" style={{ borderRadius: 16, overflow: 'hidden', background: 'white', border: '1px solid #E2DDD7' }}>
+                <div className="card-lift" style={{ borderRadius: 16, overflow: 'hidden', background: '#FFFFFF' }}>
                   <div className="grid md:grid-cols-2">
-                    <div style={{ position: 'relative', minHeight: 300, overflow: 'hidden' }}>
+                    <div style={{ position: 'relative', minHeight: 320, overflow: 'hidden' }}>
                       <img src="/client-idnt-hero.gif" alt="IDNT® — Moda sostenible Barcelona"
                         style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} />
                       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right,transparent,rgba(0,0,0,0.1))' }} />
@@ -258,13 +249,13 @@ export default function Work() {
                       <div>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: '1.25rem' }}>
                           {['E-commerce Shopify','Branding','Identidad Visual','Packaging','Automatizaciones'].map(t => (
-                            <span key={t} style={{ padding: '4px 12px', borderRadius: 9999, fontSize: 11, fontWeight: 500, background: '#F0EDE6', color: '#6B7280' }}>{t}</span>
+                            <span key={t} style={{ padding: '4px 12px', borderRadius: 9999, fontSize: 11, fontWeight: 500, background: '#F0F0F0', color: '#6B7280' }}>{t}</span>
                           ))}
                         </div>
-                        <h3 style={{ fontSize: 'clamp(1.5rem,2.5vw,2rem)', fontWeight: 700, marginBottom: 6, color: '#0A0908' }}>IDNT®</h3>
+                        <h3 style={{ fontSize: 'clamp(1.75rem,3vw,2.5rem)', fontWeight: 800, marginBottom: 6, color: '#0A0908', letterSpacing: '-0.03em' }}>IDNT®</h3>
                         <p style={{ fontSize: 12, color: '#9CA3AF', fontWeight: 500, marginBottom: '1rem' }}>Moda orgánica · Cerdanyola del Vallès, Barcelona</p>
                         <p style={{ fontSize: 15, color: '#6B7280', lineHeight: 1.7 }}>
-                          Marca de ropa orgánica y sostenible hecha en Barcelona. Identidad visual, e-commerce Shopify, fotografía editorial, diseño de prendas, vídeo y automatizaciones de marketing.
+                          Marca de ropa orgánica y sostenible hecha en Barcelona. Identidad visual, e-commerce Shopify, fotografía editorial, diseño de prendas, vídeo y automatizaciones.
                         </p>
                       </div>
                       <div className="arrow-link" style={{ marginTop: '1.75rem', display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 14, fontWeight: 600, color: '#0A0908' }}>
@@ -281,22 +272,22 @@ export default function Work() {
             <div className="grid md:grid-cols-2" style={{ gap: '1.25rem' }}>
               {DIGITAL_PROJECTS.filter(p => !p.featured).map((p, i) => (
                 <ScrollReveal key={p.slug} delay={(i + 1) * 80}>
-                  <Link href={`/work/${p.slug}`} style={{ display: 'flex', flexDirection: 'column', background: 'white', borderRadius: 16, overflow: 'hidden', border: '1px solid #E2DDD7', textDecoration: 'none', height: '100%' }} className="card-lift">
+                  <Link href={`/work/${p.slug}`} style={{ display: 'flex', flexDirection: 'column', background: '#141210', borderRadius: 16, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.07)', textDecoration: 'none', height: '100%' }} className="card-lift">
                     <div style={{ height: 220, overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
                       <img src={p.img} alt={`${p.client} — ${p.type}`} loading="lazy"
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top,rgba(0,0,0,0.32),transparent)' }} />
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top,rgba(0,0,0,0.45),transparent)' }} />
                     </div>
                     <div style={{ padding: '1.75rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: '0.875rem' }}>
                         {p.tags.map(t => (
-                          <span key={t} style={{ padding: '4px 12px', borderRadius: 9999, fontSize: 11, fontWeight: 500, background: '#F0EDE6', color: '#6B7280' }}>{t}</span>
+                          <span key={t} style={{ padding: '4px 10px', borderRadius: 9999, fontSize: 10, fontWeight: 500, background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.45)' }}>{t}</span>
                         ))}
                       </div>
-                      <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: 4, color: '#0A0908' }}>{p.client}</h3>
-                      <p style={{ fontSize: 12, color: '#9CA3AF', fontWeight: 500, marginBottom: '0.625rem' }}>{p.type}</p>
-                      <p style={{ fontSize: 13, color: '#6B7280', lineHeight: 1.65, flex: 1 }}>{p.desc}</p>
-                      <div className="arrow-link" style={{ marginTop: '1.25rem', fontSize: 13, fontWeight: 600, color: '#0A0908', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                      <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: 4, color: 'white', letterSpacing: '-0.02em' }}>{p.client}</h3>
+                      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', fontWeight: 500, marginBottom: '0.625rem' }}>{p.type}</p>
+                      <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', lineHeight: 1.65, flex: 1 }}>{p.desc}</p>
+                      <div className="arrow-link" style={{ marginTop: '1.25rem', fontSize: 13, fontWeight: 600, color: 'white', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
                         Ver proyecto
                         <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </div>
@@ -310,26 +301,26 @@ export default function Work() {
       </section>
 
       {/* ── CTA ─────────────────────────── */}
-      <section style={{ background: '#0A0908', padding: 'clamp(3rem,8vw,5.5rem) 0' }}>
+      <section style={{ background: '#0A0908', padding: 'clamp(4rem,9vw,7rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '2rem' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '2rem' }}>
               <div>
-                <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.5rem)', fontWeight: 800, letterSpacing: '-.03em', color: '#fff', marginBottom: 8 }}>
-                  Tu marca, aquí.
+                <h2 style={{ fontSize: 'clamp(2.5rem,6vw,6rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 0.97, color: '#fff', marginBottom: 16 }}>
+                  Tu marca,<br /><em style={{ fontWeight: 300, fontStyle: 'italic', color: 'rgba(255,255,255,0.4)' }}>aquí.</em>
                 </h2>
-                <p style={{ fontSize: 14, color: '#6B7280' }}>
-                  Abiertos a nuevos proyectos. Presupuesto sin compromiso en 24h.
+                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.38)' }}>
+                  Abiertos a nuevos proyectos · Presupuesto en 24h
                 </p>
               </div>
               <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-                <Link href="/rotulos"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.875rem 1.75rem', background: '#0A0908', color: '#fff', borderRadius: 9999, fontWeight: 700, fontSize: 15 }}>
-                  Presupuesto rótulo →
-                </Link>
                 <Link href="/contact"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.875rem 1.75rem', background: '#fff', color: '#0A0908', borderRadius: 9999, fontWeight: 600, fontSize: 15 }}>
-                  Contactar →
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.875rem 2rem', background: '#fff', color: '#0A0908', borderRadius: 9999, fontWeight: 700, fontSize: 15 }}>
+                  Iniciar conversación →
+                </Link>
+                <Link href="/rotulos"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.875rem 1.75rem', border: '1px solid rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.75)', borderRadius: 9999, fontWeight: 500, fontSize: 15 }}>
+                  Ver rótulos
                 </Link>
               </div>
             </div>

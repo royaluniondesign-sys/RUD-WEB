@@ -72,16 +72,16 @@ function Hero() {
           </div>
         </div>
 
-        {/* H1 — Space Grotesk, peso y tamaño consistentes con el resto de la web */}
-        <h1 className="animate-fade-in-up anim-d1" style={{ fontSize: 'clamp(2.6rem,6.5vw,5rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.03em', color: 'white', maxWidth: '16ch', marginBottom: '1.5rem' }}>
-          Rótulos, branding<br />
-          <span style={{ color: 'rgba(255,255,255,0.45)', fontWeight: 300 }}>y diseño web</span><br />
-          en Barcelona.
+        {/* H1 — bold, fills the screen */}
+        <h1 className="animate-fade-in-up anim-d1" style={{ fontSize: 'clamp(3.5rem,8.5vw,9rem)', fontWeight: 800, lineHeight: 0.97, letterSpacing: '-0.04em', color: 'white', maxWidth: '14ch', marginBottom: '1.75rem' }}>
+          Rótulos,<br />
+          branding<br />
+          <span style={{ color: 'rgba(255,255,255,0.38)', fontWeight: 300, fontStyle: 'italic' }}>y diseño web.</span>
         </h1>
 
         {/* Sub-headline */}
-        <p className="animate-fade-in-up anim-d2" style={{ fontSize: 'clamp(0.95rem,1.6vw,1.1rem)', color: 'rgba(255,255,255,0.65)', maxWidth: '48ch', lineHeight: 1.7, marginBottom: '2.25rem' }}>
-          Fabricamos rótulos luminosos e instalamos señalética corporativa en Barcelona. Branding, identidad visual y diseño web de alto rendimiento — todo bajo un mismo techo.
+        <p className="animate-fade-in-up anim-d2" style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.5)', maxWidth: '42ch', lineHeight: 1.65, marginBottom: '2rem' }}>
+          Fabricamos rótulos luminosos e instalamos señalética en Barcelona. Branding y web de alto rendimiento — todo bajo un mismo techo.
         </p>
 
         {/* CTAs */}
@@ -259,88 +259,70 @@ function RotulosStrip() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// SERVICES — featured 2 + compact 2
+// SERVICES — typographic list, no cards
 // ═══════════════════════════════════════════════════════════
 function Services() {
-  const featured = [
+  const items = [
     {
-      title:'Rótulos Luminosos & Señalética',
-      desc:'Fabricamos e instalamos rótulos luminosos, neón LED, letras corpóreas y vinilos de escaparate en Barcelona. Tu identidad visual en el espacio físico — con el mismo nivel de acabado que tu web.',
-      tags:['Rótulos Luminosos','Neón LED','Letras Corpóreas','Vinilos Escaparate','Señalética Interior'],
-      href:'/services#rotulos',
-      accent: true,
+      num: '01',
+      title: 'Rótulos Luminosos & Señalética',
+      tags: ['Neón LED', 'Letras Corpóreas', 'Vinilos', 'Cajas de Luz'],
+      href: '/services#rotulos',
     },
     {
-      title:'Branding & Identidad Visual',
-      desc:'Posicionamiento competitivo, naming, arquitectura de marca y sistemas de identidad visual construidos para escalar. Base para todo lo demás.',
-      tags:['Brand Strategy','Naming','Logo System','Packaging','Brand Guidelines'],
-      href:'/services#branding',
-      accent: false,
+      num: '02',
+      title: 'Branding & Identidad Visual',
+      tags: ['Brand Strategy', 'Naming', 'Logo System', 'Guidelines'],
+      href: '/services#branding',
     },
-  ]
-  const secondary = [
-    {title:'Diseño Web & Desarrollo Next.js',desc:'UX/UI research, diseño en Figma y desarrollo en Next.js. 95+ Lighthouse, SEO técnico y Core Web Vitals en verde desde el día uno.',href:'/services#web'},
-    {title:'Contenido, Motion & AI Automation',desc:'Copywriting estratégico, animaciones de marca y agentes de IA (Aura & Hermes) que automatizan tu negocio.',href:'/services#content'},
+    {
+      num: '03',
+      title: 'Diseño Web & E-commerce',
+      tags: ['Next.js', 'Shopify', 'SEO', 'Core Web Vitals'],
+      href: '/services#web',
+    },
+    {
+      num: '04',
+      title: 'Contenido, Motion & AI',
+      tags: ['Copywriting', 'Motion', 'Automatización IA'],
+      href: '/services#content',
+    },
   ]
   return (
     <section className="section-padding" style={{background:'#0A0908'}}>
       <div className="container-custom">
         <ScrollReveal>
-          <div style={{display:'flex',flexWrap:'wrap',gap:'1rem',justifyContent:'space-between',alignItems:'flex-end',marginBottom:'3.5rem'}}>
-            <div>
-              <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'0.5rem',color:'white'}}>Servicios</h2>
-              <p style={{fontSize:'0.9375rem',color:'rgba(255,255,255,0.38)',maxWidth:'380px',lineHeight:1.6}}>Estrategia, diseño, tecnología y automatización para marcas con ambición.</p>
-            </div>
-            <Link href="/services" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'0.5rem',fontSize:'0.875rem',fontWeight:500,color:'rgba(255,255,255,0.45)',textDecoration:'none',whiteSpace:'nowrap'}}>
-              Ver los 7 servicios
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-end',marginBottom:'2.5rem',flexWrap:'wrap',gap:'1rem'}}>
+            <h2 style={{fontSize:'clamp(1.75rem,3.5vw,2.75rem)',fontWeight:700,letterSpacing:'-0.035em',color:'white'}}>Servicios</h2>
+            <Link href="/services" style={{fontSize:'0.8125rem',fontWeight:500,color:'rgba(255,255,255,0.38)',textDecoration:'none',whiteSpace:'nowrap'}}>
+              Ver todos →
             </Link>
           </div>
         </ScrollReveal>
 
-        {/* Featured services — larger */}
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
-          {featured.map((s, i) => (
+        <div style={{borderTop:'1px solid rgba(255,255,255,0.08)'}}>
+          {items.map((s, i) => (
             <ScrollReveal key={s.title} delay={i * 55}>
-              <Link href={s.href} style={{
-                display:'flex',flexDirection:'column',
-                background: s.accent ? '#141210' : '#FFFFFF',
-                border: s.accent ? '1px solid rgba(255,255,255,0.07)' : 'none',
-                borderRadius:'16px',padding:'2.5rem',textDecoration:'none',height:'100%',
-                position:'relative',overflow:'hidden',
-              }} className="card-lift">
-                {s.accent && (
-                  <span style={{position:'absolute',top:'1.25rem',right:'1.25rem',fontSize:'9px',fontWeight:700,textTransform:'uppercase',letterSpacing:'.15em',color:'rgba(255,255,255,0.5)',padding:'4px 10px',borderRadius:9999,border:'1px solid rgba(255,255,255,0.12)',background:'rgba(255,255,255,0.06)'}}>
-                    FABRICACIÓN PROPIA
-                  </span>
-                )}
-                <h3 style={{fontSize:'1.375rem',fontWeight:700,letterSpacing:'-0.02em',marginBottom:'0.75rem',lineHeight:1.25,color: s.accent ? 'white' : 'var(--fg)'}}>{s.title}</h3>
-                <p style={{fontSize:'0.9375rem',color: s.accent ? 'rgba(255,255,255,0.55)' : 'var(--muted)',lineHeight:1.65,marginBottom:'1.5rem',flex:1}}>{s.desc}</p>
-                <div style={{display:'flex',flexWrap:'wrap',gap:'8px'}}>
-                  {s.tags.map(tag => (
-                    <span key={tag} style={{
-                      padding:'4px 12px',borderRadius:9999,fontSize:'11px',fontWeight:500,
-                      background: s.accent ? 'rgba(255,255,255,0.08)' : '#F0F0F0',
-                      color: s.accent ? 'rgba(255,255,255,0.6)' : '#6B7280',
-                      border: s.accent ? '1px solid rgba(255,255,255,0.1)' : 'none',
-                    }}>{tag}</span>
-                  ))}
+              <Link href={s.href} className="service-row" style={{
+                display:'flex',alignItems:'center',justifyContent:'space-between',
+                padding:'1.75rem 0',
+                borderBottom:'1px solid rgba(255,255,255,0.08)',
+                textDecoration:'none',gap:'2rem',
+              }}>
+                <div style={{display:'flex',alignItems:'baseline',gap:'1.75rem',minWidth:0}}>
+                  <span style={{fontSize:'10px',color:'rgba(255,255,255,0.22)',fontWeight:700,letterSpacing:'.15em',flexShrink:0}}>{s.num}</span>
+                  <h3 style={{fontSize:'clamp(1.35rem,3.2vw,2.5rem)',fontWeight:700,letterSpacing:'-0.03em',color:'white',lineHeight:1.1,margin:0}}>{s.title}</h3>
                 </div>
-              </Link>
-            </ScrollReveal>
-          ))}
-        </div>
-
-        {/* Secondary services — compact */}
-        <div className="grid md:grid-cols-2 gap-4">
-          {secondary.map((s, i) => (
-            <ScrollReveal key={s.title} delay={(i+2) * 55}>
-              <Link href={s.href} className="arrow-link card-lift" style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:'1rem',background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.07)',borderRadius:'16px',padding:'1.25rem 1.5rem',textDecoration:'none'}}>
-                <div>
-                  <h3 style={{fontSize:'1rem',fontWeight:700,color:'white',marginBottom:'4px'}}>{s.title}</h3>
-                  <p style={{fontSize:'0.8125rem',color:'rgba(255,255,255,0.38)',lineHeight:1.5}}>{s.desc}</p>
+                <div style={{display:'flex',alignItems:'center',gap:'0.875rem',flexShrink:0}}>
+                  <div style={{display:'flex',gap:'6px',flexWrap:'wrap',justifyContent:'flex-end'}} className="md:flex hidden">
+                    {s.tags.map(t => (
+                      <span key={t} style={{padding:'3px 9px',borderRadius:9999,fontSize:'10px',fontWeight:500,background:'rgba(255,255,255,0.06)',color:'rgba(255,255,255,0.38)'}}>
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <svg className="svc-arrow" style={{opacity:0.3,flexShrink:0}} width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </div>
-                <svg style={{flexShrink:0}} width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </Link>
             </ScrollReveal>
           ))}
@@ -507,7 +489,7 @@ function WhyRUD() {
           {items.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 50}>
               <div className="why-editorial-row" style={{borderBottom: i < items.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none'}}>
-                <span style={{fontSize:'clamp(1.75rem,3vw,2.5rem)',fontWeight:800,letterSpacing:'-0.05em',lineHeight:1,color:'rgba(255,255,255,0.1)'}}>
+                <span style={{fontSize:'clamp(3rem,5vw,5rem)',fontWeight:800,letterSpacing:'-0.06em',lineHeight:1,color:'rgba(255,255,255,0.11)'}}>
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <div>
@@ -647,8 +629,8 @@ function CTA() {
       <div className="container-custom" style={{position:'relative'}}>
         <ScrollReveal>
           <div style={{maxWidth:'750px'}}>
-            <h2 style={{fontSize:'clamp(2.2rem,5.5vw,4.5rem)',fontWeight:700,color:'white',letterSpacing:'-0.035em',lineHeight:1.05,marginBottom:'1.5rem'}}>
-              Construyamos algo<br /><span style={{fontStyle:'italic',fontWeight:300,color:'rgba(255,255,255,0.55)'}}>extraordinario juntos.</span>
+            <h2 style={{fontSize:'clamp(3rem,7.5vw,8rem)',fontWeight:800,color:'white',letterSpacing:'-0.045em',lineHeight:0.95,marginBottom:'2rem'}}>
+              Construyamos<br />algo<br /><span style={{fontStyle:'italic',fontWeight:300,color:'rgba(255,255,255,0.4)'}}>extraordinario.</span>
             </h2>
             <p style={{color:'rgba(255,255,255,0.5)',fontSize:'clamp(0.95rem,2vw,1.15rem)',marginBottom:'2.5rem',maxWidth:'500px',lineHeight:1.7}}>
               Cuéntanos tu proyecto. Respondemos en menos de 24 horas. Basados en Barcelona, trabajamos globalmente.
