@@ -1,75 +1,11 @@
 'use client'
 import Link from 'next/link'
-import { useEffect, useRef, useState } from 'react'
+import ScrollReveal from '@/components/ScrollReveal'
+import { useState } from 'react'
 import { trackCTA, trackEmailClick, trackSocialClick } from '@/lib/analytics'
 
 // ═══════════════════════════════════════════════════════════
-// LINE REVEAL — duties.xyz style slide-up text animation
-// ═══════════════════════════════════════════════════════════
-function useReveal(threshold = 0.15) {
-  const ref = useRef<HTMLElement>(null)
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect() } },
-      { threshold }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [threshold])
-
-  return { ref, visible }
-}
-
-interface LineRevealProps {
-  children: React.ReactNode
-  delay?: number
-  className?: string
-  style?: React.CSSProperties
-}
-
-function LineReveal({ children, delay = 0, className = '', style = {} }: LineRevealProps) {
-  const { ref, visible } = useReveal()
-  return (
-    <div style={{ overflow: 'hidden' }}>
-      <div
-        ref={ref as React.Ref<HTMLDivElement>}
-        className={className}
-        style={{
-          transform: visible ? 'translateY(0)' : 'translateY(110%)',
-          opacity: visible ? 1 : 0,
-          transition: `transform 0.72s cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, opacity 0.5s ease ${delay}ms`,
-          ...style,
-        }}
-      >
-        {children}
-      </div>
-    </div>
-  )
-}
-
-function BlockReveal({ children, delay = 0, style = {} }: { children: React.ReactNode; delay?: number; style?: React.CSSProperties }) {
-  const { ref, visible } = useReveal(0.1)
-  return (
-    <div
-      ref={ref as React.Ref<HTMLDivElement>}
-      style={{
-        transform: visible ? 'translateY(0)' : 'translateY(28px)',
-        opacity: visible ? 1 : 0,
-        transition: `transform 0.65s cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, opacity 0.55s ease ${delay}ms`,
-        ...style,
-      }}
-    >
-      {children}
-    </div>
-  )
-}
-
-// ═══════════════════════════════════════════════════════════
-// FLOATING MENU — duties-style fixed bottom pill
+// FLOATING MENU
 // ═══════════════════════════════════════════════════════════
 function FloatingMenu() {
   const [open, setOpen] = useState(false)
@@ -89,9 +25,9 @@ function FloatingMenu() {
           }}
         >
           {[
-            ['TRABAJO', '/work'],
-            ['SERVICIOS', '/services'],
-            ['ROTULOS', '/rotulos'],
+            ['TRABAJO',  '/work'],
+            ['SERVICIOS','/services'],
+            ['ROTULOS',  '/rotulos'],
             ['NOSOTROS', '/about'],
             ['CONTACTO', '/contact'],
           ].map(([label, href], i) => (
@@ -106,9 +42,7 @@ function FloatingMenu() {
                 textDecoration: 'none',
                 lineHeight: 1,
                 display: 'block',
-                opacity: 0,
-                transform: 'translateY(20px)',
-                animation: `menuIn 0.45s cubic-bezier(0.16,1,0.3,1) ${i * 55}ms forwards`,
+                animation: `menuIn 0.45s cubic-bezier(0.16,1,0.3,1) ${i * 55}ms both`,
               }}
             >
               {label}
@@ -147,7 +81,7 @@ function FloatingMenu() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// HERO — duties-style: cream bg, dark condensed text, no video
+// HERO
 // ═══════════════════════════════════════════════════════════
 function Hero() {
   return (
@@ -159,13 +93,10 @@ function Hero() {
       flexDirection: 'column',
       overflow: 'hidden',
     }}>
-
-      {/* Top-left logo */}
       <div style={{ position: 'absolute', top: '1.5rem', left: 'clamp(1rem, 5vw, 2.5rem)', zIndex: 10 }}>
         <img src="/logo-rud-web.svg" alt="RUD Studio" style={{ height: 22, opacity: 0.85 }} />
       </div>
 
-      {/* Top-right status */}
       <div style={{ position: 'absolute', top: '1.5rem', right: 'clamp(1rem, 5vw, 2.5rem)', zIndex: 10 }}>
         <div className="mono-label" style={{ color: 'var(--muted)', textAlign: 'right', lineHeight: 1.9 }}>
           <div>ESTADO</div>
@@ -177,7 +108,6 @@ function Hero() {
         </div>
       </div>
 
-      {/* Main — pushed to bottom */}
       <div className="container-custom" style={{
         flex: 1,
         display: 'flex',
@@ -186,15 +116,11 @@ function Hero() {
         paddingBottom: 'clamp(5rem, 14vw, 9rem)',
         paddingTop: '6rem',
       }}>
+        <p className="animate-fade-in-up mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
+          RUD STUDIO — TALLER DE ROTULOS & ESTUDIO CREATIVO, BARCELONA
+        </p>
 
-        <div style={{ overflow: 'hidden', marginBottom: '1.5rem' }}>
-          <p className="mono-label animate-fade-in-up" style={{ color: 'var(--muted)' }}>
-            RUD STUDIO — TALLER DE ROTULOS & ESTUDIO CREATIVO, BARCELONA
-          </p>
-        </div>
-
-        {/* H1 — three lines, each with its own reveal */}
-        <h1 className="display animate-fade-in-up anim-d1" style={{
+        <h1 className="animate-fade-in-up anim-d1 display" style={{
           fontSize: 'clamp(5rem, 21vw, 26rem)',
           color: 'var(--fg)',
           marginBottom: 'clamp(2.5rem, 5vw, 4rem)',
@@ -205,7 +131,6 @@ function Hero() {
           <em>BARCELONA</em>
         </h1>
 
-        {/* Bottom row */}
         <div className="animate-fade-in-up anim-d2" style={{
           display: 'flex',
           flexWrap: 'wrap',
@@ -238,7 +163,6 @@ function Hero() {
             </Link>
           </div>
         </div>
-
       </div>
     </section>
   )
@@ -248,13 +172,13 @@ function Hero() {
 // MARQUEE
 // ═══════════════════════════════════════════════════════════
 function Marquee() {
-  const items = ['NEON LED','ACERO INOX','ALUMINIO','VINILO DE CORTE','METACRILATO','POLICARBONATO','LED','TERMOFORMADO','IMPRESION UV','CORTE LASER','LETRAS CORPOREAS','CAJAS DE LUZ','SENALETICA','VINILOS','PUBLICIDAD EXTERIOR']
+  const items = ['NEON LED','ACERO INOX','ALUMINIO','VINILO DE CORTE','METACRILATO','LED','TERMOFORMADO','IMPRESION UV','CORTE LASER','LETRAS CORPOREAS','CAJAS DE LUZ','SENALETICA','VINILOS','PUBLICIDAD EXTERIOR']
   const doubled = [...items, ...items]
   return (
     <div style={{ background: 'var(--warm)', padding: '12px 0', overflow: 'hidden', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
-      <div className="marquee-track" style={{ display: 'flex', whiteSpace: 'nowrap' }}>
+      <div className="marquee-track">
         {doubled.map((item, i) => (
-          <span key={`marquee-${item}-${i}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '2.5rem', fontSize: '0.75rem', fontWeight: 500, color: 'var(--muted)', flexShrink: 0, marginRight: '2.5rem', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+          <span key={`m-${item}-${i}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '2.5rem', fontSize: '0.75rem', fontWeight: 500, color: 'var(--muted)', flexShrink: 0, marginRight: '2.5rem', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
             {item}
           </span>
         ))}
@@ -264,7 +188,7 @@ function Marquee() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// ROTULOS — duties-style vertical list
+// ROTULOS — lista vertical duties-style
 // ═══════════════════════════════════════════════════════════
 function RotulosStrip() {
   const tipos = [
@@ -279,31 +203,27 @@ function RotulosStrip() {
   return (
     <section style={{ background: 'var(--bg)', padding: 'clamp(4rem,7vw,6rem) 0', borderTop: '1px solid var(--border)' }}>
       <div className="container-custom">
-
-        <BlockReveal style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '3rem' }}>
-          <div>
-            <LineReveal delay={0}>
+        <ScrollReveal>
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '3rem' }}>
+            <div>
               <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>Empresa de rotulos · Barcelona</p>
-            </LineReveal>
-            <div style={{ overflow: 'hidden' }}>
               <h2 className="display" style={{ fontSize: 'clamp(3.5rem,9vw,10rem)', color: 'var(--fg)' }}>
                 ROTULOS<br /><em>LUMINOSOS</em>
               </h2>
             </div>
+            <Link href="/rotulos" onClick={() => trackCTA('Ver todos los rotulos', '/rotulos', 'rotulos-strip')}
+              className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)', paddingBottom: 2 }}>
+              Ver todos →
+            </Link>
           </div>
-          <Link href="/rotulos" onClick={() => trackCTA('Ver todos los rotulos', '/rotulos', 'rotulos-strip')}
-            className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)', paddingBottom: 2 }}>
-            Ver todos →
-          </Link>
-        </BlockReveal>
+        </ScrollReveal>
 
         <div style={{ borderTop: '1px solid var(--border)' }}>
           {tipos.map((t, i) => (
-            <BlockReveal key={t.titulo} delay={i * 55}>
+            <ScrollReveal key={t.titulo} delay={i * 50}>
               <Link href={t.href} className="service-row" style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                padding: '1.75rem 0',
-                borderBottom: '1px solid var(--border)',
+                padding: '1.75rem 0', borderBottom: '1px solid var(--border)',
                 textDecoration: 'none', gap: '2rem',
               }}>
                 <div>
@@ -314,11 +234,11 @@ function RotulosStrip() {
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="var(--fg)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </Link>
-            </BlockReveal>
+            </ScrollReveal>
           ))}
         </div>
 
-        <BlockReveal delay={200}>
+        <ScrollReveal delay={200}>
           <div style={{ marginTop: '2rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.25rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
             <p className="mono-label" style={{ color: 'var(--muted)' }}>Visita tecnica gratuita · Presupuesto en 24h · Taller propio BCN</p>
             <Link href="/contact" onClick={() => trackCTA('Pedir presupuesto rotulo', '/contact', 'rotulos-strip-bottom')}
@@ -326,15 +246,14 @@ function RotulosStrip() {
               PEDIR PRESUPUESTO →
             </Link>
           </div>
-        </BlockReveal>
-
+        </ScrollReveal>
       </div>
     </section>
   )
 }
 
 // ═══════════════════════════════════════════════════════════
-// SERVICES — typographic rows, duties-style
+// SERVICES
 // ═══════════════════════════════════════════════════════════
 function Services() {
   const items = [
@@ -346,22 +265,21 @@ function Services() {
   return (
     <section className="section-padding" style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)' }}>
       <div className="container-custom">
-        <BlockReveal style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem', flexWrap: 'wrap', gap: '1rem' }}>
-          <div style={{ overflow: 'hidden' }}>
+        <ScrollReveal>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem', flexWrap: 'wrap', gap: '1rem' }}>
             <h2 className="display" style={{ fontSize: 'clamp(3.5rem, 9vw, 10rem)', color: 'var(--fg)' }}>SERVICIOS</h2>
+            <Link href="/services" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
+              Ver todos →
+            </Link>
           </div>
-          <Link href="/services" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
-            Ver todos →
-          </Link>
-        </BlockReveal>
+        </ScrollReveal>
 
         <div style={{ borderTop: '1px solid var(--border)' }}>
           {items.map((s, i) => (
-            <BlockReveal key={s.title} delay={i * 55}>
+            <ScrollReveal key={s.title} delay={i * 55}>
               <Link href={s.href} className="service-row" style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                padding: '2rem 0',
-                borderBottom: '1px solid var(--border)',
+                padding: '2rem 0', borderBottom: '1px solid var(--border)',
                 textDecoration: 'none', gap: '2rem',
               }}>
                 <div>
@@ -372,7 +290,7 @@ function Services() {
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="var(--fg)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </Link>
-            </BlockReveal>
+            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -381,61 +299,56 @@ function Services() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// OVERVIEW — duties.xyz style: WHAT WE DO / HOW IT HELPS etc
+// OVERVIEW — duties.xyz style: 2-col rows
 // ═══════════════════════════════════════════════════════════
 function Overview() {
   const items = [
     {
       tag: 'QUE HACEMOS',
       title: 'FABRICAMOS ROTULOS Y CONSTRUIMOS MARCAS',
-      body: 'Taller propio de rotulacion en Cerdanyola del Valles. Fabricamos neon LED, letras corporeas, cajas de luz y senaletica. Tambien hacemos branding completo y webs que convierten.',
+      body: 'Taller propio en Cerdanyola del Valles. Fabricamos neon LED, letras corporeas, cajas de luz y senaletica. Tambien hacemos branding completo y webs que convierten.',
     },
     {
       tag: 'COMO AYUDA',
       title: 'TU MARCA VISIBLE 24H EN LA CALLE',
-      body: 'Un rotulo bien hecho no es un gasto — es el comercial que trabaja mientras duermes. Combinamos fabricacion de precision con identidad de marca para que tu negocio destaque.',
+      body: 'Un rotulo bien hecho no es un gasto — es el comercial que trabaja mientras duermes. Precision de fabricacion + identidad de marca.',
     },
     {
       tag: 'PARA QUIEN',
-      title: 'COMERCIOS, HOSTELERICA Y EMPRESAS EN BCN',
-      body: 'Hosteleria, retail, oficinas corporativas, franquicias. Si tienes un local o necesitas hacer visible tu marca en Barcelona, somos tu equipo.',
+      title: 'COMERCIOS, HOSTELERIA Y EMPRESAS EN BCN',
+      body: 'Retail, restaurantes, oficinas corporativas, franquicias. Si tienes local o necesitas hacer visible tu marca en Barcelona, somos tu equipo.',
     },
     {
       tag: 'CUANDO EMPEZAR',
       title: 'PRESUPUESTO EN 24H, VISITA TECNICA GRATIS',
-      body: 'Contacta hoy. En menos de 24h tienes presupuesto detallado. Si necesitas visita tecnica para medir y asesorarte, la hacemos sin coste ni compromiso.',
+      body: 'Contacta hoy. En menos de 24h tienes presupuesto detallado. Visita tecnica para medir y asesorarte sin coste ni compromiso.',
     },
   ]
 
   return (
     <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
       <div className="container-custom">
-
-        <BlockReveal style={{ marginBottom: '3.5rem' }}>
-          <LineReveal delay={0}>
-            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>Overview</p>
-          </LineReveal>
-          <div style={{ overflow: 'hidden' }}>
-            <h2 className="display" style={{ fontSize: 'clamp(3rem,7vw,8rem)', color: 'var(--fg)' }}>
-              POR QUE<br /><em>TRABAJAR CON NOSOTROS</em>
-            </h2>
-          </div>
-        </BlockReveal>
+        <ScrollReveal>
+          <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>Overview</p>
+          <h2 className="display" style={{ fontSize: 'clamp(3rem,7vw,8rem)', color: 'var(--fg)', marginBottom: '3.5rem' }}>
+            POR QUE<br /><em>TRABAJAR CON NOSOTROS</em>
+          </h2>
+        </ScrollReveal>
 
         <div style={{ borderTop: '1px solid var(--border)' }}>
           {items.map((item, i) => (
-            <BlockReveal key={item.tag} delay={i * 70}>
+            <ScrollReveal key={item.tag} delay={i * 70}>
               <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'clamp(120px, 22%, 200px) 1fr',
+                gridTemplateColumns: 'clamp(100px, 20%, 180px) 1fr',
                 gap: 'clamp(1rem,3vw,3rem)',
                 padding: '2.25rem 0',
                 borderBottom: '1px solid var(--border)',
                 alignItems: 'start',
               }}>
-                <p className="mono-label" style={{ color: 'var(--muted)', paddingTop: '0.25rem' }}>{item.tag}</p>
+                <p className="mono-label" style={{ color: 'var(--muted)', paddingTop: '0.2rem' }}>{item.tag}</p>
                 <div>
-                  <h3 className="display" style={{ fontSize: 'clamp(1.25rem,2.8vw,3.5rem)', color: 'var(--fg)', marginBottom: '0.85rem' }}>
+                  <h3 className="display" style={{ fontSize: 'clamp(1.5rem,3vw,4rem)', color: 'var(--fg)', marginBottom: '0.85rem' }}>
                     {item.title}
                   </h3>
                   <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7, maxWidth: '52ch', fontFamily: "'Space Grotesk', sans-serif" }}>
@@ -443,38 +356,37 @@ function Overview() {
                   </p>
                 </div>
               </div>
-            </BlockReveal>
+            </ScrollReveal>
           ))}
         </div>
-
       </div>
     </section>
   )
 }
 
 // ═══════════════════════════════════════════════════════════
-// WORK — duties-style horizontal rows with image
+// WORK
 // ═══════════════════════════════════════════════════════════
 function Work() {
   return (
     <section className="section-padding" style={{ background: '#FFFFFF', borderTop: '1px solid var(--border)' }}>
       <div className="container-custom">
-        <BlockReveal style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem' }}>
-          <div style={{ overflow: 'hidden' }}>
+        <ScrollReveal>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem' }}>
             <h2 className="display" style={{ fontSize: 'clamp(3.5rem, 9vw, 10rem)', color: 'var(--fg)' }}>TRABAJO</h2>
+            <Link href="/work" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
+              Ver todo →
+            </Link>
           </div>
-          <Link href="/work" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
-            Ver todo →
-          </Link>
-        </BlockReveal>
+        </ScrollReveal>
 
         <div style={{ borderTop: '1px solid var(--border)' }}>
           {[
-            { name: 'IDNT®',       type: 'Moda sostenible · Barcelona',      scope: 'E-commerce Shopify · Branding · Identidad Visual', img: '/client-idnt-hero.gif', href: '/work/idnt' },
-            { name: 'KOPESS 23',   type: 'Eventos & Catering · Barcelona',   scope: 'Diseno Web · WordPress · SEO', img: 'https://kopess23.com/wp-content/uploads/2025/09/unsplash-rrYF1RfotSM.jpg', href: '/work/kopess' },
-            { name: 'OXYZEN CLUB', type: 'Club Privado Premium · Eixample',  scope: 'WordPress/Avada · Branding · SEO', img: 'https://www.oxyzen.es/wp-content/uploads/2026/05/escorts-barcelona-pasillo-acuario-hero.jpg', href: '/work/oxyzen' },
+            { name: 'IDNT®',       scope: 'E-commerce Shopify · Branding · Identidad Visual', img: '/client-idnt-hero.gif', href: '/work/idnt' },
+            { name: 'KOPESS 23',   scope: 'Diseno Web · WordPress · SEO', img: 'https://kopess23.com/wp-content/uploads/2025/09/unsplash-rrYF1RfotSM.jpg', href: '/work/kopess' },
+            { name: 'OXYZEN CLUB', scope: 'WordPress/Avada · Branding · SEO', img: 'https://www.oxyzen.es/wp-content/uploads/2026/05/escorts-barcelona-pasillo-acuario-hero.jpg', href: '/work/oxyzen' },
           ].map((p, i) => (
-            <BlockReveal key={p.name} delay={i * 60}>
+            <ScrollReveal key={p.name} delay={i * 60}>
               <Link href={p.href} className="work-row" style={{
                 display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'center',
                 gap: 'clamp(1rem,3vw,2.5rem)', padding: '2rem 0',
@@ -492,7 +404,7 @@ function Work() {
                   </svg>
                 </div>
               </Link>
-            </BlockReveal>
+            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -515,12 +427,12 @@ function Stats() {
       <div className="container-custom">
         <div className="grid grid-cols-2 md:grid-cols-4">
           {stats.map((stat, i) => (
-            <BlockReveal key={stat.label} delay={i * 80}>
+            <ScrollReveal key={stat.label} delay={i * 80}>
               <div style={{ padding: 'clamp(1.5rem,4vw,2.5rem)', borderRight: i < 3 ? '1px solid var(--border)' : 'none' }}>
                 <p className="stat-number" style={{ color: 'var(--fg)', marginBottom: '0.5rem' }}>{stat.number}</p>
                 <p className="mono-label" style={{ color: 'var(--muted)' }}>{stat.label}</p>
               </div>
-            </BlockReveal>
+            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -529,25 +441,21 @@ function Stats() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// CTA — duties-style light
+// CTA
 // ═══════════════════════════════════════════════════════════
 function CTA() {
   return (
     <section style={{ background: 'var(--bg)', padding: 'clamp(5rem,10vw,8rem) 0', borderTop: '1px solid var(--border)' }}>
       <div className="container-custom">
-        <BlockReveal>
-          <LineReveal delay={0}>
-            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Taller propio · Cerdanyola del Valles · BCN
-            </p>
-          </LineReveal>
-          <div style={{ overflow: 'hidden', marginBottom: '3rem' }}>
-            <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)' }}>
-              FABRICAMOS<br />
-              TU ROTULO<br />
-              <em>EN BARCELONA</em>
-            </h2>
-          </div>
+        <ScrollReveal>
+          <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
+            Taller propio · Cerdanyola del Valles · BCN
+          </p>
+          <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+            FABRICAMOS<br />
+            TU ROTULO<br />
+            <em>EN BARCELONA</em>
+          </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
             <a
               href="https://wa.me/34645593227"
@@ -574,7 +482,7 @@ function CTA() {
               hello@royaluniondesign.com
             </a>
           </div>
-        </BlockReveal>
+        </ScrollReveal>
       </div>
     </section>
   )
@@ -597,10 +505,10 @@ function Footer() {
           </div>
 
           {[
-            { title: 'Navegar', links: [['Trabajo', '/work'], ['Servicios', '/services'], ['Nosotros', '/about'], ['Precios', '/pricing'], ['Blog', '/blog'], ['Contacto', '/contact']] },
-            { title: 'Rotulos', links: [['Neon LED Barcelona', '/rotulos/neon-led-barcelona'], ['Letras Corporeas', '/rotulos/letras-corporeas-barcelona'], ['Vinilos Escaparate', '/rotulos/vinilos-escaparate-barcelona'], ['Cajas de Luz', '/rotulos/cajas-de-luz-barcelona'], ['Senaletica Interior', '/rotulos/senaletica-interior-barcelona'], ['Publicidad Exterior', '/rotulos/publicidad-exterior-barcelona']] },
-            { title: 'Servicios', links: [['Branding', '/services#branding'], ['Identidad Visual', '/services#identity'], ['Diseno Web', '/services#web'], ['E-commerce', '/services#ecommerce'], ['AI Automation · Aura', '/services#aura']] },
-            { title: 'Contacto', links: [['hello@royaluniondesign.com', 'mailto:hello@royaluniondesign.com'], ['Barcelona, Espana', '#'], ['Instagram', 'https://instagram.com/royaluniondesign'], ['LinkedIn', 'https://linkedin.com/company/royaluniondesign']] },
+            { title: 'Navegar',   links: [['Trabajo','/work'],['Servicios','/services'],['Nosotros','/about'],['Precios','/pricing'],['Blog','/blog'],['Contacto','/contact']] },
+            { title: 'Rotulos',   links: [['Neon LED Barcelona','/rotulos/neon-led-barcelona'],['Letras Corporeas','/rotulos/letras-corporeas-barcelona'],['Vinilos Escaparate','/rotulos/vinilos-escaparate-barcelona'],['Cajas de Luz','/rotulos/cajas-de-luz-barcelona'],['Senaletica Interior','/rotulos/senaletica-interior-barcelona'],['Publicidad Exterior','/rotulos/publicidad-exterior-barcelona']] },
+            { title: 'Servicios', links: [['Branding','/services#branding'],['Identidad Visual','/services#identity'],['Diseno Web','/services#web'],['E-commerce','/services#ecommerce'],['AI Automation · Aura','/services#aura']] },
+            { title: 'Contacto',  links: [['hello@royaluniondesign.com','mailto:hello@royaluniondesign.com'],['Barcelona, Espana','#'],['Instagram','https://instagram.com/royaluniondesign'],['LinkedIn','https://linkedin.com/company/royaluniondesign']] },
           ].map(col => (
             <div key={col.title}>
               <h4 style={{ fontSize: '10px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#3D3D3D', marginBottom: '1.25rem' }}>{col.title}</h4>
@@ -611,7 +519,7 @@ function Footer() {
                       <Link href={href} className="footer-link" style={{ fontSize: '0.8125rem', color: '#6B7280', textDecoration: 'none' }}>{label}</Link>
                     ) : (
                       <a href={href} className="footer-link" style={{ fontSize: '0.8125rem', color: '#6B7280', textDecoration: 'none' }}
-                        onClick={() => { if (href.startsWith('http')) trackSocialClick(label.toLowerCase()); else if (href.startsWith('mailto:')) trackEmailClick(href.replace('mailto:', ''), 'footer') }}
+                        onClick={() => { if (href.startsWith('http')) trackSocialClick(label.toLowerCase()); else if (href.startsWith('mailto:')) trackEmailClick(href.replace('mailto:',''),'footer') }}
                         {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{label}</a>
                     )}
                   </li>
@@ -624,7 +532,7 @@ function Footer() {
         <div style={{ paddingTop: '2rem', borderTop: '1px solid #1A1A1A', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
           <p style={{ fontSize: '11px', color: '#2D2D2D' }}>© 2026 RUD Studio · Royal Union Design · Barcelona, Espana</p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            {[['Privacidad', '/privacy'], ['Terminos', '/terms']].map(([l, h]) => (
+            {[['Privacidad','/privacy'],['Terminos','/terms']].map(([l,h]) => (
               <Link key={l} href={h} style={{ fontSize: '11px', color: '#2D2D2D', textDecoration: 'none' }}>{l}</Link>
             ))}
           </div>
@@ -635,7 +543,7 @@ function Footer() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// ROOT EXPORT
+// ROOT
 // ═══════════════════════════════════════════════════════════
 export default function HomeContent() {
   return (
