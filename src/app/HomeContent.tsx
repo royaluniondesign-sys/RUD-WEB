@@ -74,7 +74,7 @@ function Hero() {
 
         {/* H1 — bold, fills the screen */}
         <h1 className="animate-fade-in-up anim-d1" style={{ fontSize: 'clamp(3.5rem,8.5vw,9rem)', fontWeight: 800, lineHeight: 0.97, letterSpacing: '-0.04em', color: 'white', maxWidth: '14ch', marginBottom: '1.75rem' }}>
-          Rótulos,<br />
+          <span className="text-neon">Rótulos,</span><br />
           branding<br />
           <span style={{ color: 'rgba(255,255,255,0.38)', fontWeight: 300, fontStyle: 'italic' }}>y diseño web.</span>
         </h1>
@@ -112,7 +112,7 @@ function Marquee() {
   const items = ['Brand Strategy','Identidad Visual','Señalética & Rótulos','Diseño Web','Next.js','E-commerce Shopify','Motion Branding','Rótulos Luminosos','Copywriting','SEO Técnico','AI Automation','Vinilos Escaparates','Packaging','Fotografía','Marketing Digital']
   const doubled = [...items,...items]
   return (
-    <div style={{background:'#0A0908',padding:'14px 0',overflow:'hidden',borderTop:'1px solid #181614',borderBottom:'1px solid #181614'}}>
+    <div className="dark-grain" style={{background:'#0A0908',padding:'14px 0',overflow:'hidden',borderTop:'1px solid #181614',borderBottom:'1px solid #181614'}}>
       <div className="marquee-track" style={{display:'flex',whiteSpace:'nowrap'}}>
         {doubled.map((item, i) => (
           <span key={`marquee-${item}-${i}`} style={{display:'inline-flex',alignItems:'center',gap:'2rem',fontSize:'0.8125rem',fontWeight:500,color:'rgba(255,255,255,0.35)',flexShrink:0,marginRight:'2rem'}}>
@@ -202,7 +202,7 @@ function RotulosStrip() {
   ]
 
   return (
-    <section style={{ background: '#0A0908', padding: 'clamp(4rem,7vw,6rem) 0' }}>
+    <section className="dark-grain" style={{ background: '#0A0908', padding: 'clamp(4rem,7vw,6rem) 0' }}>
       <div className="container-custom">
         <ScrollReveal>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '2.5rem' }}>
@@ -212,7 +212,7 @@ function RotulosStrip() {
               </p>
               <h2 style={{ fontSize: 'clamp(1.75rem,4vw,2.75rem)', fontWeight: 700, color: 'white', letterSpacing: '-0.03em', lineHeight: 1.15, maxWidth: '480px' }}>
                 Fabricamos e instalamos<br />
-                <span style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.45)' }}>todo tipo de rótulos en BCN.</span>
+                <span style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.45)' }}>todo tipo de <span className="text-neon">rótulos</span> en BCN.</span>
               </h2>
             </div>
             <Link href="/rotulos"
@@ -223,11 +223,11 @@ function RotulosStrip() {
           </div>
         </ScrollReveal>
 
-        {/* Photo cluster — 3×2 grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8 }} className="rotulos-grid">
+        {/* Photo cluster — bento grid, Neón LED as hero */}
+        <div style={{ gap: 8 }} className="rotulos-bento">
           {tipos.map((t, i) => (
             <ScrollReveal key={t.titulo} delay={i * 45}>
-              <Link href={t.href} style={{ display: 'block', borderRadius: 12, overflow: 'hidden', position: 'relative', aspectRatio: '4/3', textDecoration: 'none' }}>
+              <Link href={t.href} style={{ borderRadius: 12, overflow: 'hidden', position: 'relative', textDecoration: 'none' }}>
                 <img src={t.img} alt={t.kw} loading={i < 3 ? 'eager' : 'lazy'}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
                   className="rotulo-img" />
@@ -289,7 +289,7 @@ function Services() {
     },
   ]
   return (
-    <section className="section-padding" style={{background:'#0A0908'}}>
+    <section className="section-padding dark-grain" style={{background:'#0A0908'}}>
       <div className="container-custom">
         <ScrollReveal>
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-end',marginBottom:'2.5rem',flexWrap:'wrap',gap:'1rem'}}>
@@ -341,74 +341,43 @@ function Work() {
     <section className="section-padding" style={{background:'#FFFFFF', borderTop:'1px solid var(--border)'}}>
       <div className="container-custom">
         <ScrollReveal>
-          <div style={{display:'flex',flexWrap:'wrap',gap:'1rem',justifyContent:'space-between',alignItems:'flex-end',marginBottom:'3.5rem'}}>
-            <div>
-              <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em'}}>Trabajo que habla.</h2>
-            </div>
+          <div style={{display:'flex',flexWrap:'wrap',gap:'1rem',justifyContent:'space-between',alignItems:'flex-end',marginBottom:'2.5rem'}}>
+            <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em'}}>Trabajo que habla.</h2>
             <Link href="/work" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',fontSize:'0.875rem',fontWeight:500,color:'var(--muted)',textDecoration:'none',whiteSpace:'nowrap'}}>
-              Ver todo el portfolio
+              Ver portfolio
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
           </div>
         </ScrollReveal>
 
-        {/* IDNT featured */}
-        <ScrollReveal>
-          <Link href="/work/idnt" style={{display:'block',textDecoration:'none',marginBottom:'1rem'}} className="group">
-            <div style={{borderRadius:'16px',overflow:'hidden',background:'white',border:'1px solid var(--border)'}} className="card-lift card-featured">
-              <div className="grid md:grid-cols-2">
-                <div style={{position:'relative',minHeight:'280px',overflow:'hidden'}}>
-                  <img src="/client-idnt-hero.gif" alt="IDNT® — Moda sostenible Barcelona, identidad visual y e-commerce Shopify"
-                    loading="eager"
-                    style={{width:'100%',height:'100%',objectFit:'cover',position:'absolute',inset:0,transition:'transform 0.7s'}} />
-                  <div style={{position:'absolute',inset:0,background:'linear-gradient(to right,transparent,rgba(0,0,0,0.12))'}} />
-                  <span style={{position:'absolute',top:'1rem',left:'1rem',padding:'6px 12px',background:'rgba(0,0,0,0.4)',backdropFilter:'blur(8px)',borderRadius:'9999px',fontSize:'10px',fontFamily:'monospace',color:'rgba(255,255,255,0.9)'}}>idnt.es</span>
-                </div>
-                <div style={{padding:'clamp(1.5rem,4vw,2.5rem)',display:'flex',flexDirection:'column',justifyContent:'space-between'}}>
-                  <div>
-                    <div style={{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'1.25rem'}}>
-                      {['E-commerce Shopify','Branding','Identidad Visual','Packaging'].map(t => <span key={t} className="tag-pill">{t}</span>)}
-                    </div>
-                    <h3 style={{fontSize:'clamp(1.5rem,3vw,2rem)',fontWeight:700,marginBottom:'0.5rem',color:'var(--fg)'}}>IDNT®</h3>
-                    <p style={{fontSize:'0.75rem',color:'#9CA3AF',fontWeight:500,marginBottom:'1rem'}}>Moda orgánica sostenible · Barcelona</p>
-                    <p style={{fontSize:'0.9rem',color:'var(--muted)',lineHeight:1.7}}>
-                      Ropa orgánica y sostenible hecha en Barcelona. Desarrollamos toda la identidad visual, e-commerce Shopify, packaging y automatizaciones de marketing.
-                    </p>
-                  </div>
-                  <div className="arrow-link" style={{marginTop:'1.5rem',display:'inline-flex',alignItems:'center',gap:'8px',fontSize:'0.875rem',fontWeight:600,color:'var(--fg)'}}>
-                    Ver caso IDNT®
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Link>
-        </ScrollReveal>
-
-        {/* Aurum + BrandForce */}
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
+        <div style={{borderTop:'1px solid var(--border)'}}>
           {[
-            {slug:'kopess',name:'Kopess 23',type:'Eventos & Catering · Barcelona',img:'https://kopess23.com/wp-content/uploads/2025/09/unsplash-rrYF1RfotSM.jpg',tags:['Diseño Web','WordPress','SEO','Branding'],desc:'Web, branding e identidad visual para empresa de eventos corporativos y catering premium en Barcelona.'},
-            {slug:'oxyzen',name:'Oxyzen Club',type:'Club Privado Premium · Eixample, Barcelona',img:'https://www.oxyzen.es/wp-content/uploads/2026/05/escorts-barcelona-pasillo-acuario-hero.jpg',tags:['Diseño Web','WordPress/Avada','SEO','Branding'],desc:'Web premium, branding gold-dark, SEO técnico y analytics GA4 para club privado en el Eixample de Barcelona.'},
+            {num:'01',name:'IDNT®',type:'Moda sostenible · Barcelona',tags:['E-commerce Shopify','Branding','Identidad Visual'],img:'/client-idnt-hero.gif',href:'/work/idnt'},
+            {num:'02',name:'Kopess 23',type:'Eventos & Catering · Barcelona',tags:['Diseño Web','WordPress','SEO'],img:'https://kopess23.com/wp-content/uploads/2025/09/unsplash-rrYF1RfotSM.jpg',href:'/work/kopess'},
+            {num:'03',name:'Oxyzen Club',type:'Club Privado Premium · Eixample',tags:['WordPress/Avada','Branding','SEO'],img:'https://www.oxyzen.es/wp-content/uploads/2026/05/escorts-barcelona-pasillo-acuario-hero.jpg',href:'/work/oxyzen'},
           ].map((p, i) => (
-            <ScrollReveal key={p.slug} delay={(i+1)*80}>
-              <Link href={`/work/${p.slug}`} style={{display:'flex',flexDirection:'column',background:'white',borderRadius:'16px',overflow:'hidden',border:'1px solid var(--border)',textDecoration:'none',height:'100%'}} className="card-lift group">
-                <div style={{height:'200px',overflow:'hidden',position:'relative'}}>
-                  <img src={p.img} alt={`${p.name} — ${p.type}`}
-                    loading="lazy"
-                    style={{width:'100%',height:'100%',objectFit:'cover',transition:'transform 0.7s'}} />
-                  <div style={{position:'absolute',inset:0,background:'linear-gradient(to top,rgba(0,0,0,0.35),transparent)'}} />
+            <ScrollReveal key={p.name} delay={i * 60}>
+              <Link href={p.href} className="work-row" style={{
+                display:'grid',gridTemplateColumns:'40px 1fr auto',alignItems:'center',
+                gap:'clamp(1rem,3vw,2.5rem)',padding:'1.75rem 0',
+                borderBottom:'1px solid var(--border)',textDecoration:'none',
+              }}>
+                <span style={{fontSize:'10px',fontWeight:700,letterSpacing:'.15em',color:'#C4BFB8',fontFamily:'monospace'}}>{p.num}</span>
+                <div>
+                  <h3 className="work-row-name" style={{fontSize:'clamp(1.35rem,3.2vw,2.5rem)',fontWeight:700,letterSpacing:'-0.03em',color:'var(--fg)',lineHeight:1.1,margin:0}}>{p.name}</h3>
+                  <p style={{fontSize:'0.75rem',color:'var(--muted)',marginTop:'0.375rem'}}>{p.type}</p>
                 </div>
-                <div style={{padding:'1.25rem',flex:1,display:'flex',flexDirection:'column'}}>
-                  <div style={{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'0.75rem'}}>
-                    {p.tags.map(t => <span key={t} className="tag-pill">{t}</span>)}
+                <div style={{display:'flex',alignItems:'center',gap:'1rem',flexShrink:0}}>
+                  <div style={{display:'flex',gap:'6px',flexWrap:'wrap',justifyContent:'flex-end'}} className="hidden md:flex">
+                    {p.tags.map(t => (
+                      <span key={t} style={{padding:'2px 8px',borderRadius:9999,fontSize:'10px',fontWeight:500,background:'rgba(10,9,8,0.05)',color:'var(--muted)'}}>{t}</span>
+                    ))}
                   </div>
-                  <h3 style={{fontSize:'1.1rem',fontWeight:700,marginBottom:'0.25rem',color:'var(--fg)'}}>{p.name}</h3>
-                  <p style={{fontSize:'0.75rem',color:'#9CA3AF',fontWeight:500,marginBottom:'0.5rem'}}>{p.type}</p>
-                  <p style={{fontSize:'0.8125rem',color:'var(--muted)',lineHeight:1.6,flex:1}}>{p.desc}</p>
-                  <div className="arrow-link" style={{marginTop:'1rem',fontSize:'0.8125rem',fontWeight:600,color:'var(--fg)',display:'inline-flex',alignItems:'center',gap:'8px'}}>
-                    Ver caso {p.name} <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </div>
+                  <img src={p.img} alt="" aria-hidden="true" loading="lazy" className="work-row-img"
+                    style={{width:52,height:52,objectFit:'cover',borderRadius:8,opacity:0.55,flexShrink:0}} />
+                  <svg className="work-row-arrow" style={{opacity:0.25,flexShrink:0}} width="20" height="20" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="#0A0908" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </div>
               </Link>
             </ScrollReveal>
@@ -473,7 +442,7 @@ function WhyRUD() {
     },
   ]
   return (
-    <section className="section-padding" style={{background:'#0A0908'}}>
+    <section className="section-padding dark-grain" style={{background:'#0A0908'}}>
       <div className="container-custom">
         <ScrollReveal>
           <div style={{marginBottom:'3rem'}}>
@@ -624,7 +593,7 @@ function BlogHighlights() {
 
 function CTA() {
   return (
-    <section style={{background:'#0A0908',padding:'clamp(5rem,10vw,8rem) 0',position:'relative',overflow:'hidden'}}>
+    <section className="dark-grain" style={{background:'#0A0908',padding:'clamp(5rem,10vw,8rem) 0',position:'relative',overflow:'hidden'}}>
       <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px)',backgroundSize:'80px 80px',pointerEvents:'none'}} />
       <div className="container-custom" style={{position:'relative'}}>
         <ScrollReveal>
