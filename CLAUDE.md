@@ -4,7 +4,7 @@
 - **Web**: royaluniondesign.com
 - **Stack**: Next.js 16.1.6 / App Router / TypeScript / Tailwind CSS
 - **Deploy**: Vercel (auto-deploy desde main)
-- **Branch de trabajo**: `claude/plan-rud-redesign-UX7S7`
+- **Branch de trabajo**: `claude/eloquent-maxwell-2kn7ug`
 - **Email**: hello@royaluniondesign.com (único correo real — NO usar hello@rud.studio)
 
 ## Negocio
@@ -21,26 +21,30 @@ Teléfono: +34 645 593 227
 - **GA4 Numeric ID**: 421905332725
 - Eventos configurados en `/src/lib/analytics.ts`: trackLead, trackCTA, trackFormStep, trackWhatsAppClick, trackScrollDepth, trackEngagement, etc.
 - **Audiencias activas**: Alta Intención, Interés en Rótulos, Abrieron el Chat, Leads Formulario
-- **Estado (junio 2026)**: 109 usuarios/28 días, tráfico mayormente directo (propio equipo) + bots (Council Bluffs, Aspen). Solo ~15 usuarios reales. 3 leads convertidos. SEO en fase inicial.
+- **Estado (junio 2026)**: 109 usuarios/28 días, tráfico mayormente directo (propio equipo) + bots. Solo ~15 usuarios reales. 3 leads convertidos. SEO en fase inicial.
 - **YA ESTÁ HECHO**: Search Console conectado, Google Business Profile activo, eventos GA4 configurados, audiencias creadas. NO volver a sugerir esto.
 
 ## Clientes en portfolio
-- **IDNT®** — moda orgánica Barcelona. Slug: `idnt`. E-commerce Shopify + branding.
+### Rótulos (fotos reales en /public/trabajos/)
+- **Santé Café & Brunch** — neón LED caja de luz fachada. Slug: `sante`. Foto real: `sante-cafe-brunch-neon-led-caja-luz-barcelona.jpg`
+- **Novae Consulting** — vinilos esmerilados cristal corporativo. Slug: `novae`. Foto real: `novae-consulting-vinilo-esmerilado-cristal-corporativo-barcelona.jpg`
+- **Clínica Lumina Estética** — letras corpóreas doradas retroiluminadas. Slug: `lumina`. Foto real: `clinica-lumina-estetica-letras-corporeas-doradas-retroiluminadas-barcelona.jpg`
+
+### Branding & Digital
+- **IDNT®** — moda orgánica Barcelona. Slug: `idnt`. E-commerce Shopify + branding. Web: idnt.es
 - **Kopess 23** — eventos & catering Barcelona. Slug: `kopess`. WordPress + SEO. Web: kopess23.com
 - **Oxyzen Club** — club privado premium Eixample Barcelona. Slug: `oxyzen`. WordPress/Avada + branding gold-dark + GA4 17 eventos. Web: oxyzen.es. **No es wellness — es club privado adultos.**
-- **Aurum Studio** — slug: `aurum`
+- **Aurum Studio** — slug: `aurum` (caso de estudio existe en /work/[slug]/page.tsx pero NO está en work/page.tsx todavía)
+
+## Notas sobre portfolio
+- `ROTULOS_PROJECTS` en `work/page.tsx` son proyectos de ejemplo/placeholder con fotos de stock (Unsplash). No son clientes reales.
+- Los clientes reales de rótulos (Santé, Novae, Lumina) están en `DIGITAL_PROJECTS` y tienen sus case studies en `/work/[slug]`.
 
 ## Estructura de archivos clave
 - `src/app/HomeContent.tsx` — home page completa ('use client')
-- `src/app/work/page.tsx` — portfolio index (DIGITAL_PROJECTS array)
+- `src/app/work/page.tsx` — portfolio index (ROTULOS_PROJECTS + DIGITAL_PROJECTS arrays)
 - `src/app/work/[slug]/page.tsx` — casos de estudio individuales
-- `src/app/rotulos/` — páginas de rótulos:
-  - `/rotulos/neon-led-barcelona`
-  - `/rotulos/letras-corporeas-barcelona`
-  - `/rotulos/cajas-de-luz-barcelona`
-  - `/rotulos/vinilos-escaparate-barcelona`
-  - `/rotulos/senaletica-interior-barcelona`
-  - `/rotulos/publicidad-exterior-barcelona`
+- `src/app/rotulos/` — páginas de rótulos por tipo y zona
 - `src/lib/analytics.ts` — todos los eventos GA4
 - `src/app/layout.tsx` — layout global, schema.org, GA4 script
 - `src/app/globals.css` — variables CSS, fuentes
@@ -62,5 +66,5 @@ Teléfono: +34 645 593 227
 ```bash
 npm run dev       # desarrollo local puerto 3000
 npm run build     # build producción
-git push -u origin claude/plan-rud-redesign-UX7S7
+git push origin claude/eloquent-maxwell-2kn7ug
 ```
