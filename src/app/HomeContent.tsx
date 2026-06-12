@@ -135,14 +135,14 @@ function Stats() {
     { number: 'BCN', label: 'Taller propio en Barcelona' },
   ]
   return (
-    <section style={{background:'#FAFAFA',padding:'clamp(3rem,6vw,5rem) 0'}}>
+    <section style={{background:'#FFFFFF', borderTop:'1px solid var(--border)', padding:'clamp(3rem,6vw,5rem) 0'}}>
       <div className="container-custom">
-        <div className="grid grid-cols-2 md:grid-cols-4" style={{gap:'1px',background:'var(--border)',borderRadius:'20px',overflow:'hidden'}}>
+        <div className="grid grid-cols-2 md:grid-cols-4">
           {stats.map((stat, i) => (
             <ScrollReveal key={stat.label} delay={i * 80}>
-              <div style={{background:'#FAFAFA',padding:'clamp(1.5rem,4vw,2.5rem)'}}>
+              <div style={{padding:'clamp(1.5rem,4vw,2.5rem)', borderRight: i < 3 ? '1px solid var(--border)' : 'none'}}>
                 <p className="stat-number" style={{color:'var(--fg)',marginBottom:'0.5rem'}}>{stat.number}</p>
-                <p style={{fontSize:'0.8125rem',color:'var(--muted)',fontWeight:500}}>{stat.label}</p>
+                <p style={{fontSize:'0.8125rem',color:'var(--muted)',fontWeight:500,lineHeight:1.4}}>{stat.label}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -283,16 +283,15 @@ function Services() {
     {title:'Contenido, Motion & AI Automation',desc:'Copywriting estratégico, animaciones de marca y agentes de IA (Aura & Hermes) que automatizan tu negocio.',href:'/services#content'},
   ]
   return (
-    <section className="section-padding" style={{background:'#F7F5F1'}}>
+    <section className="section-padding" style={{background:'#0A0908'}}>
       <div className="container-custom">
         <ScrollReveal>
           <div style={{display:'flex',flexWrap:'wrap',gap:'1rem',justifyContent:'space-between',alignItems:'flex-end',marginBottom:'3.5rem'}}>
             <div>
-              <p className="section-label">Lo que hacemos · Barcelona</p>
-              <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'0.5rem'}}>Servicios</h2>
-              <p style={{fontSize:'0.9375rem',color:'var(--muted)',maxWidth:'380px',lineHeight:1.6}}>Estrategia, diseño, tecnología y automatización para marcas con ambición.</p>
+              <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'0.5rem',color:'white'}}>Servicios</h2>
+              <p style={{fontSize:'0.9375rem',color:'rgba(255,255,255,0.38)',maxWidth:'380px',lineHeight:1.6}}>Estrategia, diseño, tecnología y automatización para marcas con ambición.</p>
             </div>
-            <Link href="/services" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'0.5rem',fontSize:'0.875rem',fontWeight:500,color:'var(--muted)',textDecoration:'none',whiteSpace:'nowrap'}}>
+            <Link href="/services" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'0.5rem',fontSize:'0.875rem',fontWeight:500,color:'rgba(255,255,255,0.45)',textDecoration:'none',whiteSpace:'nowrap'}}>
               Ver los 7 servicios
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
@@ -305,8 +304,8 @@ function Services() {
             <ScrollReveal key={s.title} delay={i * 55}>
               <Link href={s.href} style={{
                 display:'flex',flexDirection:'column',
-                background: s.accent ? '#0A0908' : 'white',
-                border: s.accent ? '1px solid #1A1816' : '1px solid var(--border)',
+                background: s.accent ? '#141210' : '#FFFFFF',
+                border: s.accent ? '1px solid rgba(255,255,255,0.07)' : 'none',
                 borderRadius:'16px',padding:'2.5rem',textDecoration:'none',height:'100%',
                 position:'relative',overflow:'hidden',
               }} className="card-lift">
@@ -321,7 +320,7 @@ function Services() {
                   {s.tags.map(tag => (
                     <span key={tag} style={{
                       padding:'4px 12px',borderRadius:9999,fontSize:'11px',fontWeight:500,
-                      background: s.accent ? 'rgba(255,255,255,0.08)' : '#F0EDE6',
+                      background: s.accent ? 'rgba(255,255,255,0.08)' : '#F0F0F0',
                       color: s.accent ? 'rgba(255,255,255,0.6)' : '#6B7280',
                       border: s.accent ? '1px solid rgba(255,255,255,0.1)' : 'none',
                     }}>{tag}</span>
@@ -336,12 +335,12 @@ function Services() {
         <div className="grid md:grid-cols-2 gap-4">
           {secondary.map((s, i) => (
             <ScrollReveal key={s.title} delay={(i+2) * 55}>
-              <Link href={s.href} className="arrow-link card-lift" style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:'1rem',background:'white',border:'1px solid var(--border)',borderRadius:'16px',padding:'1.25rem 1.5rem',textDecoration:'none'}}>
+              <Link href={s.href} className="arrow-link card-lift" style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:'1rem',background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.07)',borderRadius:'16px',padding:'1.25rem 1.5rem',textDecoration:'none'}}>
                 <div>
-                  <h3 style={{fontSize:'1rem',fontWeight:700,color:'var(--fg)',marginBottom:'4px'}}>{s.title}</h3>
-                  <p style={{fontSize:'0.8125rem',color:'var(--muted)',lineHeight:1.5}}>{s.desc}</p>
+                  <h3 style={{fontSize:'1rem',fontWeight:700,color:'white',marginBottom:'4px'}}>{s.title}</h3>
+                  <p style={{fontSize:'0.8125rem',color:'rgba(255,255,255,0.38)',lineHeight:1.5}}>{s.desc}</p>
                 </div>
-                <svg style={{flexShrink:0}} width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="var(--muted)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg style={{flexShrink:0}} width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </Link>
             </ScrollReveal>
           ))}
@@ -357,12 +356,11 @@ function Services() {
 // ═══════════════════════════════════════════════════════════
 function Work() {
   return (
-    <section className="section-padding" style={{background:'#F0EDE6'}}>
+    <section className="section-padding" style={{background:'#FFFFFF', borderTop:'1px solid var(--border)'}}>
       <div className="container-custom">
         <ScrollReveal>
           <div style={{display:'flex',flexWrap:'wrap',gap:'1rem',justifyContent:'space-between',alignItems:'flex-end',marginBottom:'3.5rem'}}>
             <div>
-              <p className="section-label">Clientes & proyectos reales</p>
               <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em'}}>Trabajo que habla.</h2>
             </div>
             <Link href="/work" className="arrow-link" style={{display:'inline-flex',alignItems:'center',gap:'8px',fontSize:'0.875rem',fontWeight:500,color:'var(--muted)',textDecoration:'none',whiteSpace:'nowrap'}}>
@@ -493,28 +491,29 @@ function WhyRUD() {
     },
   ]
   return (
-    <section className="section-padding" style={{background:'#FAFAFA'}}>
+    <section className="section-padding" style={{background:'#0A0908'}}>
       <div className="container-custom">
         <ScrollReveal>
-          <div style={{marginBottom:'3.5rem'}}>
-            <p className="section-label">Por qué elegirnos</p>
-            <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'0.75rem'}}>
+          <div style={{marginBottom:'3rem'}}>
+            <h2 style={{fontSize:'clamp(2rem,4.5vw,3.5rem)',fontWeight:700,letterSpacing:'-0.035em',marginBottom:'0.5rem',color:'white'}}>
               Lo que nos diferencia
             </h2>
-            <p style={{fontSize:'0.9375rem',color:'var(--muted)',maxWidth:'480px',lineHeight:1.65}}>
-              No somos otra agencia generalista. Esto es lo que hacemos diferente.
+            <p style={{fontSize:'0.9375rem',color:'rgba(255,255,255,0.35)',maxWidth:'480px',lineHeight:1.65}}>
+              No somos otra agencia generalista.
             </p>
           </div>
         </ScrollReveal>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div>
           {items.map((item, i) => (
-            <ScrollReveal key={item.title} delay={i * 60}>
-              <div className="card-lift why-card" style={{background:'white',border:'1px solid var(--border)',borderRadius:'16px',padding:'2rem',height:'100%',display:'flex',flexDirection:'column'}}>
-                <div className="why-icon" style={{width:'48px',height:'48px',borderRadius:'12px',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'1.25rem',flexShrink:0}}>
-                  {item.icon}
+            <ScrollReveal key={item.title} delay={i * 50}>
+              <div className="why-editorial-row" style={{borderBottom: i < items.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none'}}>
+                <span style={{fontSize:'clamp(1.75rem,3vw,2.5rem)',fontWeight:800,letterSpacing:'-0.05em',lineHeight:1,color:'rgba(255,255,255,0.1)'}}>
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div>
+                  <p style={{fontWeight:700,fontSize:'1.0625rem',marginBottom:'0.5rem',letterSpacing:'-0.01em',color:'white'}}>{item.title}</p>
+                  <p style={{fontSize:'0.8125rem',color:'rgba(255,255,255,0.38)',lineHeight:1.65}}>{item.desc}</p>
                 </div>
-                <p style={{fontWeight:700,fontSize:'1.0625rem',marginBottom:'0.625rem',letterSpacing:'-0.01em',color:'var(--fg)'}}>{item.title}</p>
-                <p style={{fontSize:'0.8125rem',color:'var(--muted)',lineHeight:1.65,flex:1}}>{item.desc}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -534,7 +533,7 @@ function Investment() {
     {name:'Enterprise',desc:'Proyecto end-to-end: identidad, web, e-commerce, contenido y automatización IA.',ideal:'Transformación completa',delivery:'10–16 semanas'},
   ]
   return (
-    <section className="section-padding" style={{background:'#F7F5F1'}}>
+    <section className="section-padding" style={{background:'#FFFFFF', borderTop:'1px solid var(--border)'}}>
       <div className="container-custom">
         <ScrollReveal>
           <div style={{marginBottom:'3.5rem'}}>
@@ -543,42 +542,32 @@ function Investment() {
           </div>
         </ScrollReveal>
 
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))',gap:'1.25rem',maxWidth:'1040px'}}>
+        <div style={{borderTop:'1px solid var(--border)'}}>
           {tiers.map((tier, i) => (
             <ScrollReveal key={tier.name} delay={i * 80}>
-              <div style={{
-                borderRadius:'16px',
-                padding:'2.25rem',
-                display:'flex',
-                flexDirection:'column',
-                height:'100%',
-                background: tier.featured ? '#0A0908' : 'white',
-                border: tier.featured ? '1px solid #0A0908' : '1px solid var(--border)',
-                boxShadow: tier.featured ? '0 24px 64px rgba(0,0,0,0.12)' : 'none',
-              }}>
-                {tier.featured && (
-                  <span style={{display:'inline-block',marginBottom:'1rem',padding:'5px 14px',background:'rgba(255,255,255,0.1)',borderRadius:'9999px',fontSize:'10px',fontWeight:600,color:'rgba(255,255,255,0.6)',width:'fit-content'}}>
-                    Más solicitado
-                  </span>
-                )}
-                <p style={{fontSize:'1.375rem',fontWeight:700,marginBottom:'0.75rem',color: tier.featured ? 'white' : 'var(--fg)'}}>{tier.name}</p>
-                <p style={{fontSize:'0.875rem',color: tier.featured ? 'rgba(255,255,255,0.6)' : 'var(--muted)',lineHeight:1.65,marginBottom:'1.5rem',flex:1}}>{tier.desc}</p>
-                <div style={{paddingTop:'1.25rem',borderTop: tier.featured ? '1px solid rgba(255,255,255,0.1)' : '1px solid var(--border)'}}>
-                  <p style={{fontSize:'0.75rem',color: tier.featured ? 'rgba(255,255,255,0.35)' : '#C4BFB8',marginBottom:'0.25rem'}}>Ideal para: {tier.ideal}</p>
-                  <p style={{fontSize:'0.75rem',color: tier.featured ? 'rgba(255,255,255,0.35)' : '#C4BFB8'}}>Entrega: {tier.delivery}</p>
+              <div className="investment-row" style={{borderBottom:'1px solid var(--border)'}}>
+                <div>
+                  <p style={{fontSize:'1.25rem',fontWeight:700,letterSpacing:'-0.02em',color:'var(--fg)',marginBottom: tier.featured ? '0.375rem' : 0}}>{tier.name}</p>
+                  {tier.featured && (
+                    <span style={{fontSize:'9px',fontWeight:700,textTransform:'uppercase',letterSpacing:'.14em',color:'#BF4E30'}}>Más solicitado</span>
+                  )}
                 </div>
+                <div>
+                  <p style={{fontSize:'0.9375rem',color:'var(--muted)',lineHeight:1.65,marginBottom:'0.375rem'}}>{tier.desc}</p>
+                  <p style={{fontSize:'0.75rem',color:'#C4BFB8'}}>Entrega: {tier.delivery} · Para: {tier.ideal}</p>
+                </div>
+                <Link href="/contact" onClick={() => trackCTA(`Solicitar ${tier.name}`, '/contact', 'investment')}
+                  style={{display:'inline-flex',alignItems:'center',gap:6,padding:'0.625rem 1.375rem',border:'1px solid var(--border)',borderRadius:9999,fontSize:'0.8125rem',fontWeight:600,color:'var(--fg)',textDecoration:'none',whiteSpace:'nowrap',flexShrink:0,transition:'border-color 0.2s'}}>
+                  Solicitar →
+                </Link>
               </div>
             </ScrollReveal>
           ))}
         </div>
 
         <ScrollReveal delay={260}>
-          <div style={{marginTop:'3rem'}}>
-            <Link href="/contact" onClick={() => trackCTA('Solicitar presupuesto personalizado', '/contact', 'services-section')} className="btn-primary arrow-link">
-              Solicitar presupuesto personalizado
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </Link>
-            <p style={{fontSize:'0.8125rem',color:'#9CA3AF',marginTop:'1rem'}}>
+          <div style={{marginTop:'2.5rem'}}>
+            <p style={{fontSize:'0.8125rem',color:'#9CA3AF'}}>
               Respondemos en menos de 24h · <Link href="/pricing" style={{color:'var(--fg)',fontWeight:500,textDecoration:'underline',textUnderlineOffset:'3px'}}>Ver precios orientativos</Link>
             </p>
           </div>
@@ -602,7 +591,7 @@ function FAQ() {
   ]
 
   return (
-    <section className="section-padding" style={{background:'var(--warm)'}}>
+    <section className="section-padding" style={{background:'#F5F5F5'}}>
       <div className="container-custom">
         <div style={{maxWidth:'720px'}}>
           <ScrollReveal>
@@ -627,7 +616,7 @@ function BlogHighlights() {
     { href: '/blog/nextjs-vs-wordpress-2026', category: 'Web', title: 'Next.js vs. WordPress en 2026: cuándo usar cada uno', date: 'Enero 2026' },
   ]
   return (
-    <section style={{background:'#F7F5F1',padding:'clamp(3.5rem,7vw,5.5rem) 0',borderTop:'1px solid #E5E0D8'}}>
+    <section style={{background:'#FFFFFF',padding:'clamp(3.5rem,7vw,5.5rem) 0',borderTop:'1px solid var(--border)'}}>
       <div className="container-custom">
         <ScrollReveal>
           <div style={{display:'flex',alignItems:'baseline',justifyContent:'space-between',gap:16,flexWrap:'wrap',marginBottom:'clamp(1.5rem,3vw,2rem)'}}>
@@ -638,7 +627,7 @@ function BlogHighlights() {
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))',gap:'1rem'}}>
           {posts.map((p, i) => (
             <ScrollReveal key={p.href} delay={i * 60}>
-              <Link href={p.href} style={{display:'flex',flexDirection:'column',gap:8,padding:'1.25rem',background:'#fff',borderRadius:12,border:'1px solid #E5E0D8',textDecoration:'none',transition:'border-color 0.2s'}} className="card-lift">
+              <Link href={p.href} style={{display:'flex',flexDirection:'column',gap:8,padding:'1.25rem',background:'#fff',borderRadius:12,border:'1px solid var(--border)',textDecoration:'none',transition:'border-color 0.2s'}} className="card-lift">
                 <span style={{fontSize:10,fontWeight:700,textTransform:'uppercase',letterSpacing:'.12em',color:'#BF4E30'}}>{p.category}</span>
                 <p style={{fontSize:14,fontWeight:600,color:'#0A0908',lineHeight:1.4,flex:1,margin:0}}>{p.title}</p>
                 <span style={{fontSize:11,color:'#C4BFB8'}}>{p.date}</span>

@@ -127,7 +127,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es">
       <head>
-        <meta name="theme-color" content="#F7F5F1" />
+        <meta name="theme-color" content="#FFFFFF" />
         <meta name="geo.region" content="ES-CT" />
         <meta name="geo.placename" content="Barcelona" />
         <meta name="geo.position" content="41.3851;2.1734" />

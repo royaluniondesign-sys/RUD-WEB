@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #F7F5F1;
+  --bg: #FFFFFF;
   --fg: #0A0908;
   --muted: #6B7280;
-  --border: #E2DDD7;
+  --border: #E8E4E0;
   --surface: #FFFFFF;
   --warm: #F0EDE6;
   --chariot: #BF4E30;
@@ -361,6 +361,36 @@ textarea:focus-visible {
   -webkit-overflow-scrolling: touch;
 }
 
+/* ── Investment tiers — table rows ──────── */
+.investment-row {
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  gap: 2.5rem;
+  padding: 2.25rem 0;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .investment-row {
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
+  }
+}
+
+/* ── WhyRUD editorial rows ───────────────── */
+.why-editorial-row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  align-items: start;
+}
+@media (max-width: 480px) {
+  .why-editorial-row {
+    grid-template-columns: 56px 1fr;
+    gap: 1.25rem;
+  }
+}
+
 /* ── Mobile responsive ───────────────────── */
 @media (max-width: 640px) {
   .hero-photo-section { min-height: 280px !important; }
@@ -380,7 +410,6 @@ textarea:focus-visible {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .stats-grid { grid-template-columns: 1fr 1fr !important; }
 }
 
 /* ── Reduced motion ─────────────────────── */
