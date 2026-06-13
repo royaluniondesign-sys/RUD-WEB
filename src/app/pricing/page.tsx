@@ -27,21 +27,19 @@ export const metadata: Metadata = {
 }
 
 const ROTULOS = [
-  { name: 'Vinilo escaparate', desc: 'Impreso, esmerilado o recortado en plotter. Sin obra.', from: 'desde 300 €', detail: 'orientativo' },
-  { name: 'Neón LED personalizado', desc: 'Cualquier tipografía o forma. Interior y exterior.', from: 'desde 1.800 €', detail: 'orientativo' },
-  { name: 'Letras corpóreas', desc: 'Aluminio, metacrilato o madera. Con o sin retroiluminación halo.', from: 'desde 2.500 €', detail: 'orientativo' },
-  { name: 'Rótulo luminoso', desc: 'Caja de luz, bandeja calada, backlit LED. Máxima visibilidad nocturna.', from: 'desde 3.200 €', detail: 'orientativo' },
-  { name: 'Señalética corporativa', desc: 'Wayfinding, directorios, accesos. Proyecto completo a medida.', from: 'Consultar', detail: 'a medida' },
-  { name: 'Publicidad exterior', desc: 'Lonas, banderolas, vallas, wrapping de vehículos.', from: 'Consultar', detail: 'a medida' },
+  { name: 'VINILO ESCAPARATE', desc: 'Impreso, esmerilado o recortado en plotter. Sin obra.', from: 'desde 300 €' },
+  { name: 'NEÓN LED PERSONALIZADO', desc: 'Cualquier tipografía o forma. Interior y exterior.', from: 'desde 1.800 €' },
+  { name: 'LETRAS CORPÓREAS', desc: 'Aluminio, metacrilato o madera. Con o sin retroiluminación halo.', from: 'desde 2.500 €' },
+  { name: 'RÓTULO LUMINOSO', desc: 'Caja de luz, bandeja calada, backlit LED. Máxima visibilidad nocturna.', from: 'desde 3.200 €' },
+  { name: 'SEÑALÉTICA CORPORATIVA', desc: 'Wayfinding, directorios, accesos. Proyecto completo a medida.', from: 'Consultar' },
+  { name: 'PUBLICIDAD EXTERIOR', desc: 'Lonas, banderolas, vallas, wrapping de vehículos.', from: 'Consultar' },
 ]
 
 const TIERS = [
   {
-    name: 'Starter',
+    name: 'STARTER',
     tagline: 'Marca lista para lanzar',
     from: '3.500 €',
-    ideal: 'Startups, freelancers y proyectos nuevos que necesitan una base sólida.',
-    featured: false,
     includes: [
       'Sesión de Estrategia de Marca (90 min)',
       'Diseño de logo · 3 conceptos',
@@ -53,11 +51,9 @@ const TIERS = [
     delivery: '4–6 semanas',
   },
   {
-    name: 'Professional',
+    name: 'PROFESSIONAL',
     tagline: 'Identidad + web completa',
     from: '7.500 €',
-    ideal: 'Empresas en crecimiento que necesitan identidad visual y presencia web profesional.',
-    featured: true,
     includes: [
       'Todo en Starter',
       'Identidad visual completa con motion',
@@ -71,11 +67,9 @@ const TIERS = [
     delivery: '8–12 semanas',
   },
   {
-    name: 'Enterprise',
+    name: 'ENTERPRISE',
     tagline: 'Proyecto end-to-end',
     from: '18.000 €',
-    ideal: 'Marcas que buscan transformación completa: identidad, web, señalética y automatización IA.',
-    featured: false,
     includes: [
       'Todo en Professional',
       'Señalética & Rótulos corporativos',
@@ -91,12 +85,12 @@ const TIERS = [
 ]
 
 const ADDONS = [
-  { name: 'E-commerce Shopify', from: 'desde 4.500 €' },
-  { name: 'Blog & CMS integrado', from: 'desde 1.200 €' },
-  { name: 'Agente IA (Aura o Hermes)', from: 'desde 3.500 €' },
-  { name: 'Motion branding package', from: 'desde 2.000 €' },
-  { name: 'Copywriting web completo', from: 'desde 1.800 €' },
-  { name: 'Mantenimiento mensual', from: 'desde 400 €/mes' },
+  { name: 'E-COMMERCE SHOPIFY', from: 'desde 4.500 €' },
+  { name: 'BLOG & CMS INTEGRADO', from: 'desde 1.200 €' },
+  { name: 'AGENTE IA (AURA O HERMES)', from: 'desde 3.500 €' },
+  { name: 'MOTION BRANDING PACKAGE', from: 'desde 2.000 €' },
+  { name: 'COPYWRITING WEB COMPLETO', from: 'desde 1.800 €' },
+  { name: 'MANTENIMIENTO MENSUAL', from: 'desde 400 €/mes' },
 ]
 
 const FAQS = [
@@ -110,135 +104,114 @@ const FAQS = [
 
 export default function Pricing() {
   return (
-    <main style={{ background: '#F7F5F1' }}>
+    <main style={{ background: 'var(--bg)' }}>
       <Navbar light />
 
-      {/* Hero */}
-      <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 520, background: '#0A0908' }}>
-        <img src="/services/gal-4.avif" alt="" aria-hidden="true" loading="eager"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.45 }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(10,9,8,0.6) 0%,rgba(10,9,8,0.4) 100%)', pointerEvents: 'none' }} />
-        <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingBlock: 'clamp(3.5rem,8vw,6rem)' }}>
-          <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.45)', marginBottom: 14 }}>Inversión</p>
-            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: 16, lineHeight: 1.1, color: 'white' }}>
-              Precios transparentes.{' '}
-              <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.5)' }}>Propuestas a medida.</em>
-            </h1>
-            <p style={{ fontSize: 'clamp(0.875rem,1.5vw,1rem)', color: 'rgba(255,255,255,0.62)', maxWidth: 520, marginBottom: '2rem', lineHeight: 1.7 }}>
-              Los rangos que ves son orientativos. Cada proyecto recibe una propuesta personalizada — honesta, sin inflar presupuesto.
+      {/* ── HERO ──────────────────────────────────────────── */}
+      <section style={{
+        background: 'var(--bg)', minHeight: '70svh',
+        display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+        paddingTop: '8rem', paddingBottom: 'clamp(3rem, 6vw, 5rem)',
+        overflow: 'hidden',
+      }}>
+        <div className="container-custom">
+          <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
+            RUD STUDIO — PRECIOS · BARCELONA
+          </p>
+          <h1 style={{ margin: 0 }}>
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>PRECIOS</span>
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>TRANSPARENTES</span>
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>BARCELONA</span>
+          </h1>
+          <div style={{
+            display: 'flex', flexWrap: 'wrap', alignItems: 'center',
+            justifyContent: 'space-between', gap: '1.5rem',
+            paddingTop: '1.5rem', marginTop: 'clamp(2rem, 4vw, 3rem)',
+            borderTop: '1px solid var(--border)',
+          }}>
+            <p className="mono-label" style={{ color: 'var(--muted)' }}>
+              Orientativos · Propuesta personalizada en 24h · Sin compromiso
             </p>
-            <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.875rem 2rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 600, textDecoration: 'none', fontSize: 15 }}>
-              Pedir presupuesto gratis →
+            <Link href="/contact" className="mono-label"
+              style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+              PEDIR PRESUPUESTO GRATIS →
             </Link>
-          </ScrollReveal>
+          </div>
         </div>
       </section>
 
-      {/* Rótulos & señalética */}
-      <section style={{ background: 'white', paddingBlock: 'clamp(3rem,8vw,5.5rem)' }}>
+      {/* ── RÓTULOS — lista tipográfica ───────────────────── */}
+      <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginBottom: 36 }}>
-              <div>
-                <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 8 }}>Fabricación propia · Barcelona</p>
-                <h2 style={{ fontSize: 'clamp(1.5rem,3.5vw,2.5rem)', fontWeight: 700, letterSpacing: '-0.03em' }}>Rótulos & Señalética</h2>
-              </div>
-              <Link href="/rotulos" style={{ fontSize: 13, fontWeight: 600, color: '#6B7280', textDecoration: 'none' }}>Ver página de rótulos →</Link>
-            </div>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — FABRICACIÓN PROPIA · BARCELONA</p>
+            <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              RÓTULOS<br /><em>& SEÑALÉTICA</em>
+            </h2>
           </ScrollReveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(280px,1fr))', gap: 12 }}>
+
+          <div style={{ borderTop: '1px solid var(--border)' }}>
             {ROTULOS.map((item, i) => (
-              <ScrollReveal key={item.name} delay={i * 50}>
-                <div style={{ padding: '20px 22px', borderRadius: 14, border: '1px solid #E2DDD7', background: '#FAFAFA', display: 'flex', flexDirection: 'column', height: '100%' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10, gap: 12 }}>
-                    <h3 style={{ fontSize: 14, fontWeight: 700, color: '#0A0908', lineHeight: 1.3 }}>{item.name}</h3>
-                    <div style={{ textAlign: 'right', flexShrink: 0 }}>
-                      <p style={{ fontSize: 14, fontWeight: 700, color: '#0A0908', lineHeight: 1, whiteSpace: 'nowrap' }}>{item.from}</p>
-                      <p style={{ fontSize: 10, color: '#9CA3AF', marginTop: 3 }}>{item.detail}</p>
-                    </div>
+              <ScrollReveal key={item.name} delay={i * 40}>
+                <div style={{
+                  display: 'grid', gridTemplateColumns: '1fr auto', gap: '2rem',
+                  padding: '1.75rem 0', borderBottom: '1px solid var(--border)', alignItems: 'start',
+                }}>
+                  <div>
+                    <h3 className="display" style={{ fontSize: 'clamp(1.5rem, 3vw, 3.5rem)', color: 'var(--fg)', margin: 0 }}>{item.name}</h3>
+                    <p className="mono-label" style={{ color: 'var(--muted)', marginTop: '0.5rem' }}>{item.desc}</p>
                   </div>
-                  <p style={{ fontSize: 13, color: '#6B7280', lineHeight: 1.6, flex: 1 }}>{item.desc}</p>
+                  <p className="display" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 3rem)', color: 'var(--fg)', whiteSpace: 'nowrap', textAlign: 'right', paddingTop: '0.25rem' }}>{item.from}</p>
                 </div>
               </ScrollReveal>
             ))}
           </div>
+
           <ScrollReveal>
-            <div style={{ marginTop: 20, padding: '16px 22px', borderRadius: 12, background: '#F0EDE6', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
-              <p style={{ fontSize: 13, color: '#6B7280' }}>✅ Visita técnica gratuita · Presupuesto en 24h · Instalación incluida</p>
-              <Link href="/contact" style={{ fontSize: 13, fontWeight: 600, color: '#0A0908', textDecoration: 'none' }}>Pedir presupuesto →</Link>
+            <div style={{ marginTop: '2rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.25rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
+              <p className="mono-label" style={{ color: 'var(--muted)' }}>Visita técnica gratuita · Presupuesto en 24h · Instalación incluida</p>
+              <Link href="/rotulos" className="mono-label"
+                style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+                VER RÓTULOS →
+              </Link>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Proyectos digitales — 3 tiers */}
-      <section style={{ background: '#F7F5F1', paddingBlock: 'clamp(3rem,8vw,5.5rem)' }}>
+      {/* ── PAQUETES DIGITALES — lista tipográfica ────────── */}
+      <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <div style={{ marginBottom: 40 }}>
-              <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 8 }}>Proyectos digitales</p>
-              <h2 style={{ fontSize: 'clamp(1.5rem,3.5vw,2.5rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: 8 }}>Branding · Web · IA</h2>
-              <p style={{ fontSize: 14, color: '#6B7280', maxWidth: 480 }}>Alcances orientativos — adaptamos cada propuesta a lo que realmente necesitas.</p>
-            </div>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — BRANDING · WEB · IA</p>
+            <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              PAQUETES<br /><em>DIGITALES</em>
+            </h2>
           </ScrollReveal>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(280px,100%),1fr))', gap: 16, alignItems: 'start' }}>
+          <div style={{ borderTop: '1px solid var(--border)' }}>
             {TIERS.map((tier, i) => (
-              <ScrollReveal key={tier.name} delay={i * 80}>
+              <ScrollReveal key={tier.name} delay={i * 60}>
                 <div style={{
-                  borderRadius: 20,
-                  padding: 'clamp(1.5rem,3vw,2rem)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  background: tier.featured ? '#0A0908' : 'white',
-                  border: tier.featured ? 'none' : '1px solid #E2DDD7',
-                  boxShadow: tier.featured ? '0 24px 64px rgba(0,0,0,0.15)' : 'none',
-                  position: 'relative',
-                  marginTop: tier.featured ? 0 : 0,
+                  display: 'grid', gridTemplateColumns: '1fr 1fr auto', gap: '3rem',
+                  padding: '2.5rem 0', borderBottom: '1px solid var(--border)', alignItems: 'start',
                 }}>
-                  {tier.featured && (
-                    <span style={{ display: 'inline-block', alignSelf: 'flex-start', marginBottom: 14, padding: '5px 14px', background: 'rgba(255,255,255,0.1)', borderRadius: 9999, fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.05em' }}>
-                      ★ Más solicitado
-                    </span>
-                  )}
-
-                  <p style={{ fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', color: tier.featured ? '#6B7280' : '#9CA3AF', marginBottom: 6 }}>{tier.name}</p>
-                  <div style={{ display: 'flex', alignItems: 'baseline', gap: 4, marginBottom: 4 }}>
-                    <span style={{ fontSize: 11, color: tier.featured ? '#6B7280' : '#9CA3AF' }}>desde</span>
-                    <span style={{ fontSize: 'clamp(1.8rem,3.5vw,2.4rem)', fontWeight: 700, color: tier.featured ? 'white' : '#0A0908', letterSpacing: '-0.03em' }}>{tier.from}</span>
+                  <div>
+                    <h3 className="display" style={{ fontSize: 'clamp(2rem, 4vw, 5rem)', color: 'var(--fg)', margin: 0 }}>{tier.name}</h3>
+                    <p className="mono-label" style={{ color: 'var(--muted)', marginTop: '0.5rem' }}>{tier.tagline} · {tier.delivery}</p>
                   </div>
-                  <p style={{ fontSize: 13, color: tier.featured ? 'rgba(255,255,255,0.4)' : '#9CA3AF', marginBottom: 20 }}>{tier.tagline}</p>
-
-                  <div style={{ padding: '12px 14px', borderRadius: 12, marginBottom: 20, background: tier.featured ? 'rgba(255,255,255,0.04)' : '#F8F6F2' }}>
-                    <p style={{ fontSize: 12, color: tier.featured ? 'rgba(255,255,255,0.4)' : '#9CA3AF', lineHeight: 1.5 }}>{tier.ideal}</p>
-                  </div>
-
-                  <ul style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 24 }}>
-                    {tier.includes.map((item, j) => (
-                      <li key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: 13 }}>
-                        <svg style={{ marginTop: 2, flexShrink: 0 }} width="14" height="14" viewBox="0 0 14 14" fill="none">
-                          <circle cx="7" cy="7" r="7" fill={tier.featured ? 'rgba(255,255,255,0.08)' : '#F0EDE6'} />
-                          <path d="M4 7l2 2 4-4" stroke={tier.featured ? 'rgba(255,255,255,0.7)' : '#0A0908'} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                        <span style={{ color: tier.featured ? 'rgba(255,255,255,0.65)' : '#6B7280', lineHeight: 1.5 }}>{item}</span>
-                      </li>
+                  <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', paddingTop: '0.5rem' }}>
+                    {tier.includes.map((inc, j) => (
+                      <li key={j} className="mono-label" style={{ color: 'var(--muted)' }}>— {inc}</li>
                     ))}
                   </ul>
-
-                  <div style={{ paddingTop: '1rem', borderTop: tier.featured ? '1px solid rgba(255,255,255,0.08)' : '1px solid #E2DDD7', marginBottom: 16 }}>
-                    <p style={{ fontSize: 11, color: tier.featured ? 'rgba(255,255,255,0.25)' : '#C4BFB8' }}>Entrega estimada: {tier.delivery}</p>
+                  <div style={{ textAlign: 'right' }}>
+                    <p className="display" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 3rem)', color: 'var(--fg)', whiteSpace: 'nowrap' }}>desde<br />{tier.from}</p>
+                    <Link href="/contact" className="mono-label"
+                      style={{ display: 'inline-block', marginTop: '1rem', color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+                      SOLICITAR →
+                    </Link>
                   </div>
-
-                  <Link href="/contact" style={{
-                    display: 'block', textAlign: 'center', padding: '0.875rem',
-                    borderRadius: 9999, fontSize: 14, fontWeight: 600, textDecoration: 'none',
-                    background: tier.featured ? 'white' : '#0A0908',
-                    color: tier.featured ? '#0A0908' : 'white',
-                    width: '100%', boxSizing: 'border-box',
-                  }}>
-                    Solicitar {tier.name} →
-                  </Link>
                 </div>
               </ScrollReveal>
             ))}
@@ -246,19 +219,25 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* Add-ons */}
-      <section style={{ background: 'white', paddingBlock: 'clamp(2.5rem,6vw,4rem)' }}>
+      {/* ── ADD-ONS ──────────────────────────────────────── */}
+      <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 8 }}>Extras</p>
-            <h2 style={{ fontSize: 'clamp(1.3rem,2.5vw,1.8rem)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: 24 }}>Add-ons & servicios adicionales</h2>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>03 — EXTRAS</p>
+            <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              ADD-ONS
+            </h2>
           </ScrollReveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(220px,1fr))', gap: 10 }}>
+
+          <div style={{ borderTop: '1px solid var(--border)' }}>
             {ADDONS.map((a, i) => (
               <ScrollReveal key={a.name} delay={i * 40}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 18px', borderRadius: 12, border: '1px solid #E2DDD7', background: '#FAFAFA', gap: 12 }}>
-                  <span style={{ fontSize: 13, fontWeight: 600, color: '#0A0908' }}>{a.name}</span>
-                  <span style={{ fontSize: 13, fontWeight: 700, color: '#6B7280', flexShrink: 0 }}>{a.from}</span>
+                <div style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                  padding: '1.25rem 0', borderBottom: '1px solid var(--border)', gap: '2rem',
+                }}>
+                  <h3 className="display" style={{ fontSize: 'clamp(1.25rem, 2.5vw, 3rem)', color: 'var(--fg)', margin: 0 }}>{a.name}</h3>
+                  <p className="mono-label" style={{ color: 'var(--muted)', whiteSpace: 'nowrap' }}>{a.from}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -266,37 +245,39 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* CTA dark */}
-      <section style={{ background: '#0A0908', paddingBlock: 'clamp(3.5rem,8vw,6rem)' }}>
+      {/* ── FAQS ─────────────────────────────────────────── */}
+      <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: 16 }}>Sin compromiso</p>
-            <h2 style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', fontWeight: 700, color: 'white', letterSpacing: '-0.03em', lineHeight: 1.15, maxWidth: '22ch', marginBottom: 16 }}>
-              Presupuesto personalizado en menos de 24h.
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>PREGUNTAS FRECUENTES</p>
+            <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              LO QUE<br /><em>MÁS PREGUNTAN</em>
             </h2>
-            <p style={{ fontSize: 15, color: '#6B7280', maxWidth: '44ch', marginBottom: '2.5rem', lineHeight: 1.7 }}>
-              Cuéntanos tu proyecto. Sin formularios kilométricos — solo lo esencial para prepararte una propuesta real.
+          </ScrollReveal>
+          <FAQAccordion faqs={FAQS} />
+        </div>
+      </section>
+
+      {/* ── CTA ───────────────────────────────────────────── */}
+      <section style={{ background: 'var(--bg)', padding: 'clamp(5rem,10vw,8rem) 0', borderTop: '1px solid var(--border)' }}>
+        <div className="container-custom">
+          <ScrollReveal>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
+              Presupuesto personalizado · Menos de 24h
             </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'flex-start' }}>
-              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 2rem', background: '#f8f8f8', color: '#0A0908', borderRadius: 9999, fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>
-                Pedir presupuesto →
+            <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              CUÉNTANOS<br /><em>TU PROYECTO</em>
+            </h2>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
+              <Link href="/contact" className="mono-label"
+                style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+                PEDIR PRESUPUESTO →
               </Link>
-              <Link href="/work" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 2rem', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.7)', borderRadius: 9999, fontSize: 14, textDecoration: 'none' }}>
+              <Link href="/work" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
                 Ver trabajos
               </Link>
             </div>
           </ScrollReveal>
-        </div>
-      </section>
-
-      {/* FAQs */}
-      <section style={{ background: '#F7F5F1', paddingBlock: 'clamp(3rem,8vw,5rem)' }}>
-        <div className="container-custom" style={{ maxWidth: 720 }}>
-          <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 8 }}>Preguntas frecuentes</p>
-            <h2 style={{ fontSize: 'clamp(1.3rem,2.5vw,1.8rem)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: 28 }}>Lo que más nos preguntan</h2>
-          </ScrollReveal>
-          <FAQAccordion faqs={FAQS} />
         </div>
       </section>
     </main>

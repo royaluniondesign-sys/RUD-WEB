@@ -118,95 +118,93 @@ const faqPageSchema = {
 
 export default function FAQ() {
   return (
-    <main style={{ minHeight: '100vh', background: '#F7F5F1' }}>
+    <main style={{ background: 'var(--bg)' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
       <Navbar light />
 
-      {/* Hero */}
-      <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 520, background: '#0A0908' }}>
-        <img src="/services/letras-corporeas.avif" alt="" aria-hidden="true" loading="eager"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.45 }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(10,9,8,0.65) 0%,rgba(10,9,8,0.42) 100%)', pointerEvents: 'none' }} />
-        <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingTop: 'clamp(3.5rem,8vw,6rem)', paddingBottom: 'clamp(2.5rem,5vw,4rem)' }}>
-          <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.45)', marginBottom: 14 }}>FAQ</p>
-            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, letterSpacing: '-0.03em', color: 'white', marginBottom: 16, lineHeight: 1.1, maxWidth: 600 }}>
-              Preguntas frecuentes
-            </h1>
-            <p style={{ fontSize: 'clamp(0.875rem,1.5vw,1.05rem)', color: 'rgba(255,255,255,0.62)', maxWidth: 520, lineHeight: 1.7 }}>
-              Todo lo que necesitas saber sobre trabajar con nosotros. ¿No encuentras tu respuesta?{' '}
-              <Link href="/contact" style={{ color: 'white', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 3 }}>
-                Escríbenos.
-              </Link>
+      {/* ── HERO ─────────────────────────────────────────────── */}
+      <section style={{
+        background: 'var(--bg)', minHeight: '60svh',
+        display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+        paddingTop: '8rem', paddingBottom: 'clamp(3rem, 6vw, 5rem)',
+      }}>
+        <div className="container-custom">
+          <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
+            RUD STUDIO — FAQ · BARCELONA
+          </p>
+          <h1 style={{ margin: 0 }}>
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>PREGUNTAS</span>
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>FRECUENTES</span>
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>BARCELONA</span>
+          </h1>
+          <div style={{
+            display: 'flex', flexWrap: 'wrap', alignItems: 'center',
+            justifyContent: 'space-between', gap: '1.5rem',
+            paddingTop: '1.5rem', marginTop: 'clamp(2rem, 4vw, 3rem)',
+            borderTop: '1px solid var(--border)',
+          }}>
+            <p className="mono-label" style={{ color: 'var(--muted)' }}>
+              Rótulos · Precios · Plazos · Proceso
             </p>
+            <Link href="/contact" className="mono-label"
+              style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+              HACER UNA PREGUNTA →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ — Rótulos ──────────────────────────────────────── */}
+      <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
+        <div className="container-custom">
+          <ScrollReveal>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — RÓTULOS & SEÑALÉTICA</p>
+            <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              PREGUNTAS SOBRE<br /><em>RÓTULOS</em>
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={80}>
+            <FAQAccordion faqs={faqsRotulos} />
           </ScrollReveal>
         </div>
       </section>
 
-      {/* FAQ — Rótulos */}
-      <section style={{ background: '#fff', paddingBlock: 'clamp(3rem,8vw,5rem)' }}>
-        <div className="container-custom">
-          <div style={{ maxWidth: 720, margin: '0 auto' }}>
-            <ScrollReveal>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: '2rem' }}>
-                <span style={{ width: 36, height: 36, borderRadius: 9999, background: 'rgba(10,9,8,.06)', border: '1px solid rgba(217,119,6,.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, flexShrink: 0 }}>◎</span>
-                <div>
-                  <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: '#0A0908', marginBottom: 2 }}>Rótulos & Señalética</p>
-                  <h2 style={{ fontSize: 'clamp(1.1rem,2.5vw,1.5rem)', fontWeight: 700, letterSpacing: '-.02em', color: '#0A0908' }}>Preguntas sobre rótulos en Barcelona</h2>
-                </div>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={80}>
-              <FAQAccordion faqs={faqsRotulos} />
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ — General */}
-      <section style={{ background: '#FAFAFA', paddingBlock: 'clamp(3rem,8vw,5rem)' }}>
-        <div className="container-custom">
-          <div style={{ maxWidth: 720, margin: '0 auto' }}>
-            <ScrollReveal>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: '2rem' }}>
-                <span style={{ width: 36, height: 36, borderRadius: 9999, background: '#F0EDE6', border: '1px solid #E2DDD7', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, flexShrink: 0 }}>◈</span>
-                <div>
-                  <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 2 }}>Branding, Web & General</p>
-                  <h2 style={{ fontSize: 'clamp(1.1rem,2.5vw,1.5rem)', fontWeight: 700, letterSpacing: '-.02em', color: '#0A0908' }}>Preguntas generales sobre cómo trabajamos</h2>
-                </div>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={80}>
-              <FAQAccordion faqs={faqsGeneral} />
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section style={{ background: '#F0EDE6', paddingBlock: 'clamp(3rem,8vw,5rem)' }}>
+      {/* ── FAQ — General ──────────────────────────────────────── */}
+      <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <div style={{ maxWidth: 640 }}>
-              <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#9CA3AF', marginBottom: 14 }}>¿Más dudas?</p>
-              <h2 style={{ fontSize: 'clamp(1.4rem,4vw,2.2rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: 12 }}>
-                Pregúntanos directamente
-              </h2>
-              <p style={{ color: '#6B7280', fontSize: 14, marginBottom: 32, lineHeight: 1.7 }}>
-                Respondemos en menos de 24 horas. Sin compromiso, sin formularios eternos.
-              </p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'flex-start' }}>
-                <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.75rem 1.5rem', background: '#0A0908', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>
-                  Iniciar conversación
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                </Link>
-                <a href="mailto:hello@royaluniondesign.com" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.75rem 1.5rem', border: '1.5px solid #E2DDD7', color: '#0A0908', borderRadius: 9999, fontWeight: 500, fontSize: 14, textDecoration: 'none' }}>
-                  hello@royaluniondesign.com
-                </a>
-              </div>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — BRANDING, WEB & GENERAL</p>
+            <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              CÓMO<br /><em>TRABAJAMOS</em>
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={80}>
+            <FAQAccordion faqs={faqsGeneral} />
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ── CTA ───────────────────────────────────────────────── */}
+      <section style={{ background: 'var(--bg)', padding: 'clamp(5rem,10vw,8rem) 0', borderTop: '1px solid var(--border)' }}>
+        <div className="container-custom">
+          <ScrollReveal>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
+              ¿No encuentras tu respuesta? · Respondemos en 24h
+            </p>
+            <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              PREGÚNTANOS<br /><em>DIRECTAMENTE</em>
+            </h2>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
+              <Link href="/contact" className="mono-label"
+                style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+                INICIAR CONVERSACIÓN →
+              </Link>
+              <a href="mailto:hello@royaluniondesign.com" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
+                hello@royaluniondesign.com
+              </a>
             </div>
           </ScrollReveal>
         </div>

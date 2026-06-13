@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
+import ScrollReveal from '@/components/ScrollReveal'
 import {
   trackFormStart, trackFormStep, trackFormSubmitAttempt,
   trackFormError, trackLead, trackWhatsAppClick,
@@ -11,75 +12,12 @@ import {
 // ─── Data ──────────────────────────────────────────────────────────────────────
 
 const SERVICES = [
-  {
-    id: 'rotulos',
-    label: 'Rótulos & Señalética',
-    sub: 'Neón LED, letras, vinilos, cajas de luz',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 5.196 11.703L15 17H9l-2.196-3.297A7 7 0 0 1 12 2z"/>
-      </svg>
-    ),
-  },
-  {
-    id: 'branding',
-    label: 'Branding & Identidad',
-    sub: 'Logo, sistema visual, guidelines',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
-        <line x1="12" y1="2" x2="12" y2="22"/>
-        <line x1="2" y1="8.5" x2="22" y2="8.5"/>
-      </svg>
-    ),
-  },
-  {
-    id: 'web',
-    label: 'Diseño Web & Dev',
-    sub: 'Next.js, WordPress, SEO técnico',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 18 22 12 16 6"/>
-        <polyline points="8 6 2 12 8 18"/>
-      </svg>
-    ),
-  },
-  {
-    id: 'ecommerce',
-    label: 'E-commerce Shopify',
-    sub: 'Tienda online, integración, marketing',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-        <line x1="3" y1="6" x2="21" y2="6"/>
-        <path d="M16 10a4 4 0 01-8 0"/>
-      </svg>
-    ),
-  },
-  {
-    id: 'ia',
-    label: 'Automatización IA',
-    sub: 'Agentes IA, flujos n8n, CRM',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="3"/>
-        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
-      </svg>
-    ),
-  },
-  {
-    id: 'varios',
-    label: 'Varios / Asesoría',
-    sub: 'Proyecto integral o me orientáis',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="7" height="7" rx="1"/>
-        <rect x="14" y="3" width="7" height="7" rx="1"/>
-        <rect x="3" y="14" width="7" height="7" rx="1"/>
-        <rect x="14" y="14" width="7" height="7" rx="1"/>
-      </svg>
-    ),
-  },
+  { id: 'rotulos',   label: 'Rótulos & Señalética',  sub: 'Neón LED, letras, vinilos, cajas de luz' },
+  { id: 'branding',  label: 'Branding & Identidad',   sub: 'Logo, sistema visual, guidelines' },
+  { id: 'web',       label: 'Diseño Web & Dev',        sub: 'Next.js, WordPress, SEO técnico' },
+  { id: 'ecommerce', label: 'E-commerce Shopify',      sub: 'Tienda online, integración, marketing' },
+  { id: 'ia',        label: 'Automatización IA',       sub: 'Agentes IA, flujos n8n, CRM' },
+  { id: 'varios',    label: 'Varios / Asesoría',       sub: 'Proyecto integral o me orientáis' },
 ]
 
 const BUDGETS = [
@@ -111,7 +49,7 @@ const Spinner = () => (
 )
 
 const CheckIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--fg)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="20 6 9 17 4 12"/>
   </svg>
 )
@@ -127,18 +65,18 @@ const WAIcon = ({ size = 18 }: { size?: number }) => (
 const inputBase: React.CSSProperties = {
   width: '100%', boxSizing: 'border-box',
   padding: '0.875rem 1rem',
-  border: '1.5px solid #E2DDD7',
-  borderRadius: 12,
+  border: '1px solid var(--border)',
+  borderRadius: 0,
   fontFamily: 'inherit', fontSize: 14,
-  color: '#0A0908', background: '#FAFAFA',
+  color: 'var(--fg)', background: 'var(--bg)',
   outline: 'none',
-  transition: 'border-color 0.18s, background 0.18s',
+  transition: 'border-color 0.18s',
 }
 
 const labelStyle: React.CSSProperties = {
-  display: 'block', fontSize: 11, fontWeight: 600,
-  textTransform: 'uppercase', letterSpacing: '0.12em',
-  color: '#9CA3AF', marginBottom: 6,
+  display: 'block', fontSize: 11, fontWeight: 500,
+  textTransform: 'uppercase', letterSpacing: '0.06em',
+  color: 'var(--muted)', marginBottom: 6, fontFamily: 'var(--font-mono, "Space Mono", monospace)',
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -203,39 +141,31 @@ export default function Contact() {
   // ── SUCCESS ─────────────────────────────────────────────────────────────────
   if (status === 'success') {
     return (
-      <main id="main-content" style={{ minHeight: '100dvh', background: '#F7F5F1', display: 'flex', flexDirection: 'column' }}>
-        <Navbar />
+      <main id="main-content" style={{ minHeight: '100dvh', background: 'var(--bg)', display: 'flex', flexDirection: 'column' }}>
+        <Navbar light />
         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 'clamp(2rem,8vw,5rem) 1.5rem' }}>
-          <div style={{ maxWidth: 480, width: '100%', textAlign: 'center' }}>
-            <div style={{ width: 56, height: 56, borderRadius: '50%', background: '#0A0908', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.75rem' }}>
+          <div style={{ maxWidth: 520, width: '100%' }}>
+            <div style={{ paddingBottom: '2rem', marginBottom: '2rem', borderBottom: '1px solid var(--border)' }}>
               <CheckIcon />
             </div>
-            <h1 style={{ fontSize: 'clamp(2rem,5vw,2.75rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: '0.75rem' }}>
-              Mensaje recibido.
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1rem' }}>MENSAJE RECIBIDO</p>
+            <h1 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 6rem)', color: 'var(--fg)', marginBottom: '1.5rem' }}>
+              EN MENOS<br /><em>DE 24H</em>
             </h1>
-            <p style={{ fontSize: 15, color: '#6B7280', lineHeight: 1.7, maxWidth: '36ch', margin: '0 auto 2rem' }}>
-              Te respondemos en <strong style={{ color: '#0A0908' }}>menos de 24h</strong>. Si tienes alguna duda urgente escríbenos por WhatsApp.
+            <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75, marginBottom: '2.5rem' }}>
+              Te respondemos en <strong style={{ color: 'var(--fg)' }}>menos de 24h</strong>. Si tienes alguna duda urgente escríbenos por WhatsApp.
             </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: '2rem' }}>
+            <div style={{ paddingTop: '1.5rem', borderTop: '1px solid var(--border)', display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'center' }}>
               <a href={WA_LINK}
                 onClick={() => trackWhatsAppClick('success-state')}
-                style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 20px', borderRadius: 14, background: '#25D366', color: 'white', textDecoration: 'none', cursor: 'pointer' }}>
-                <span style={{ color: 'white', flexShrink: 0 }}><WAIcon size={20} /></span>
-                <div style={{ textAlign: 'left', flex: 1 }}>
-                  <p style={{ fontSize: 14, fontWeight: 700, margin: 0, lineHeight: 1.3 }}>Confirmar por WhatsApp</p>
-                  <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.75)', margin: '2px 0 0', lineHeight: 1 }}>+34 645 593 227 · respuesta inmediata</p>
-                </div>
+                className="mono-label"
+                style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+                WHATSAPP +34 645 593 227 →
               </a>
-              <a href="mailto:hello@royaluniondesign.com"
-                style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 20px', borderRadius: 14, background: 'white', border: '1.5px solid #E2DDD7', color: '#0A0908', textDecoration: 'none' }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <div style={{ textAlign: 'left', flex: 1 }}>
-                  <p style={{ fontSize: 14, fontWeight: 600, margin: 0, lineHeight: 1.3 }}>hello@royaluniondesign.com</p>
-                  <p style={{ fontSize: 12, color: '#9CA3AF', margin: '2px 0 0', lineHeight: 1 }}>Respuesta garantizada en 24h</p>
-                </div>
-              </a>
+              <Link href="/" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
+                Volver al inicio
+              </Link>
             </div>
-            <Link href="/" style={{ fontSize: 13, color: '#9CA3AF', textDecoration: 'none' }}>← Volver al inicio</Link>
           </div>
         </div>
       </main>
@@ -244,381 +174,378 @@ export default function Contact() {
 
   // ── MAIN ────────────────────────────────────────────────────────────────────
   return (
-    <main style={{ minHeight: '100dvh', background: '#F7F5F1' }}>
+    <main style={{ minHeight: '100dvh', background: 'var(--bg)' }}>
       <Navbar light />
 
       {/* ── HERO ───────────────────────────────────────────────────────────── */}
-      <section style={{ paddingTop: 68, position: 'relative', background: '#0A0908', overflow: 'hidden' }}>
-        <img src="/services/hero-rotulos.avif" alt="" aria-hidden="true" loading="eager"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.28 }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(10,9,8,0.4) 0%, rgba(10,9,8,0.88) 100%)', pointerEvents: 'none' }} />
-        <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingBlock: 'clamp(3rem,7vw,5rem)' }}>
-          <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', color: 'rgba(255,255,255,0.35)', marginBottom: 16 }}>
-            RUD Studio · Barcelona
+      <section style={{
+        background: 'var(--bg)', minHeight: '50svh',
+        display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+        paddingTop: '8rem', paddingBottom: 'clamp(3rem, 6vw, 5rem)',
+      }}>
+        <div className="container-custom">
+          <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
+            RUD STUDIO — CONTACTO · BARCELONA
           </p>
-          <h1 style={{ fontSize: 'clamp(2.2rem,5.5vw,4rem)', fontWeight: 700, letterSpacing: '-0.03em', color: 'white', lineHeight: 1.05, marginBottom: '0.875rem', maxWidth: '20ch' }}>
-            Cuéntanos tu proyecto.{' '}
-            <span style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.3)' }}>Respondemos en 24h.</span>
+          <h1 style={{ margin: 0 }}>
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>CUÉNTANOS</span>
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>TU PROYECTO</span>
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>BARCELONA</span>
           </h1>
-          <p style={{ fontSize: 'clamp(0.875rem,1.5vw,1rem)', color: 'rgba(255,255,255,0.5)', maxWidth: '40ch', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-            Visita técnica gratuita en Barcelona. Presupuesto honesto y sin compromiso.
-          </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-            {['Presupuesto en 24h', 'Visita técnica gratis', '+8 años en Barcelona', 'Sin compromiso'].map(chip => (
-              <span key={chip} style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 11px', borderRadius: 9999, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', fontSize: 11, fontWeight: 500, color: 'rgba(255,255,255,0.55)' }}>
-                <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
-                  <circle cx="5" cy="5" r="4.5" stroke="rgba(255,255,255,0.35)"/>
-                  <polyline points="2.5,5 4,6.5 7.5,3.5" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                {chip}
-              </span>
-            ))}
+          <div style={{
+            display: 'flex', flexWrap: 'wrap', alignItems: 'center',
+            justifyContent: 'space-between', gap: '1.5rem',
+            paddingTop: '1.5rem', marginTop: 'clamp(2rem, 4vw, 3rem)',
+            borderTop: '1px solid var(--border)',
+          }}>
+            <p className="mono-label" style={{ color: 'var(--muted)' }}>
+              Presupuesto en 24h · Visita técnica gratis · Sin compromiso
+            </p>
+            <a href={WA_LINK}
+              onClick={() => trackWhatsAppClick('hero')}
+              className="mono-label"
+              style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+              WHATSAPP →
+            </a>
           </div>
         </div>
       </section>
 
       {/* ── BODY ───────────────────────────────────────────────────────────── */}
-      <div className="container-custom" style={{ paddingTop: 'clamp(2.5rem,6vw,4rem)', paddingBottom: 'clamp(3rem,8vw,6rem)' }}>
-        <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 330px) minmax(0, 1fr)', gap: 'clamp(2rem,6vw,5rem)', alignItems: 'start' }}>
+      <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)' }}>
+        <div className="container-custom" style={{ paddingTop: 'clamp(3rem,6vw,5rem)', paddingBottom: 'clamp(4rem,8vw,7rem)' }}>
+          <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 340px) minmax(0, 1fr)', gap: 'clamp(3rem,6vw,7rem)', alignItems: 'start' }}>
 
-          {/* ── LEFT PANEL ─────────────────────────────────────────────────── */}
-          <aside className="contact-aside" style={{ position: 'sticky', top: 96 }}>
-            <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#9CA3AF', marginBottom: 10 }}>Hablemos</p>
-            <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.1rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: 12, color: '#0A0908' }}>
-              Hablas con quien diseña y fabrica.
-            </h2>
-            <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7, marginBottom: 28 }}>
-              Sin comerciales, sin intermediarios. El equipo que lleva tu proyecto responde directamente.
-            </p>
-
-            {/* WhatsApp quick CTA */}
-            <div style={{ background: '#0A0908', borderRadius: 16, padding: 20, marginBottom: 28 }}>
-              <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.16em', color: '#22C55E', marginBottom: 10 }}>¿Tienes prisa?</p>
-              <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, marginBottom: 14 }}>
-                Escríbenos por WhatsApp. Puedes mandar fotos del espacio directamente — respondemos en minutos.
+            {/* ── LEFT PANEL ─────────────────────────────────────────────────── */}
+            <aside className="contact-aside" style={{ position: 'sticky', top: 96 }}>
+              <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>HABLA CON QUIEN DISEÑA</p>
+              <h2 className="display" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 4rem)', color: 'var(--fg)', marginBottom: '1.5rem' }}>
+                SIN<br /><em>INTERMEDIARIOS</em>
+              </h2>
+              <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75, marginBottom: '2rem' }}>
+                El equipo que lleva tu proyecto responde directamente. Sin comerciales, sin teléfonos rotos.
               </p>
-              <a href={WA_LINK}
-                onClick={() => trackWhatsAppClick('contact-sidebar')}
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '10px 16px', borderRadius: 10, background: '#25D366', color: 'white', textDecoration: 'none', fontWeight: 600, fontSize: 13, cursor: 'pointer', transition: 'opacity 0.18s' }}>
-                <WAIcon size={14} />
-                Escribir por WhatsApp
-              </a>
-            </div>
 
-            {/* Contact list */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-              <div>
-                <p style={labelStyle}>Teléfono &amp; WhatsApp</p>
-                <a href="tel:+34645593227" style={{ fontWeight: 600, fontSize: 15, color: '#0A0908', textDecoration: 'none', display: 'block' }}>
-                  +34 645 593 227
-                </a>
-              </div>
-              <div>
-                <p style={labelStyle}>Email</p>
-                <a href="mailto:hello@royaluniondesign.com" style={{ fontWeight: 600, fontSize: 15, color: '#0A0908', textDecoration: 'none' }}>
-                  hello@royaluniondesign.com
-                </a>
-              </div>
-              <div>
-                <p style={labelStyle}>Taller</p>
-                <p style={{ fontWeight: 600, fontSize: 14, color: '#0A0908', lineHeight: 1.5, margin: 0 }}>
-                  Carrer Sant Salvador 11, L6<br />
-                  <span style={{ fontWeight: 400, color: '#6B7280', fontSize: 13 }}>Cerdanyola del Vallès · Barcelona</span>
-                </p>
-              </div>
-            </div>
-          </aside>
-
-          {/* ── FORM ───────────────────────────────────────────────────────── */}
-          <div>
-            {/* Progress bar */}
-            <div style={{ marginBottom: 32 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 9 }}>
-                {STEP_LABELS.map((label, i) => (
-                  <span key={label} style={{
-                    fontSize: 11,
-                    fontWeight: step === i + 1 ? 700 : step > i + 1 ? 500 : 400,
-                    color: step >= i + 1 ? '#0A0908' : '#C4BFB8',
-                    transition: 'color 0.3s',
-                  }}>
-                    {i + 1}. {label}
-                  </span>
-                ))}
-              </div>
-              <div style={{ height: 2, background: '#E2DDD7', borderRadius: 9999, overflow: 'hidden' }}>
-                <div style={{
-                  height: '100%', background: '#0A0908', borderRadius: 9999,
-                  width: `${barWidth}%`,
-                  transition: 'width 0.4s cubic-bezier(0.4,0,0.2,1)',
-                }} />
-              </div>
-            </div>
-
-            <form onSubmit={handleSubmit} noValidate>
-
-              {/* ── STEP 1 ────────────────────────────────────────────────── */}
-              {step === 1 && (
-                <div style={{ animation: 'fadeUp 0.28s ease-out' }}>
-                  <h2 style={{ fontSize: 'clamp(1.3rem,2.5vw,1.75rem)', fontWeight: 700, letterSpacing: '-0.025em', marginBottom: 6, color: '#0A0908' }}>
-                    ¿Qué necesitas?
-                  </h2>
-                  <p style={{ fontSize: 14, color: '#6B7280', marginBottom: 22, lineHeight: 1.6 }}>
-                    Selecciona el servicio principal — puedes detallar más en el siguiente paso.
-                  </p>
-
-                  <div className="service-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10, marginBottom: 28 }}>
-                    {SERVICES.map((s) => {
-                      const selected = service === s.label
-                      return (
-                        <button
-                          key={s.id}
-                          type="button"
-                          aria-pressed={selected}
-                          onClick={() => { if (!service) trackFormStart(); setService(s.label) }}
-                          style={{
-                            padding: '14px 12px',
-                            borderRadius: 14,
-                            border: selected ? '2px solid #0A0908' : '1.5px solid #E2DDD7',
-                            background: selected ? '#F0EDE6' : 'white',
-                            cursor: 'pointer',
-                            textAlign: 'left',
-                            transition: 'all 0.18s ease',
-                            outline: 'none',
-                          }}
-                        >
-                          <span style={{ display: 'block', marginBottom: 10, color: selected ? '#0A0908' : '#C4BFB8', transition: 'color 0.18s' }}>
-                            {s.icon}
-                          </span>
-                          <span style={{ display: 'block', fontSize: 12, fontWeight: 700, color: '#0A0908', lineHeight: 1.2, marginBottom: 3 }}>
-                            {s.label}
-                          </span>
-                          <span style={{ display: 'block', fontSize: 10, color: '#9CA3AF', lineHeight: 1.4 }}>
-                            {s.sub}
-                          </span>
-                        </button>
-                      )
-                    })}
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={() => { if (canGoStep2) { trackFormStep(1, service); setStep(2) } }}
-                    disabled={!canGoStep2}
-                    style={{
-                      display: 'inline-flex', alignItems: 'center', gap: 8,
-                      padding: '0.875rem 1.75rem',
-                      background: canGoStep2 ? '#0A0908' : '#E2DDD7',
-                      color: canGoStep2 ? 'white' : '#C4BFB8',
-                      borderRadius: 9999, fontWeight: 600, fontSize: 14,
-                      border: 'none', cursor: canGoStep2 ? 'pointer' : 'not-allowed',
-                      transition: 'all 0.2s ease',
-                    }}>
-                    Continuar <ArrowRight />
-                  </button>
+              <div style={{ borderTop: '1px solid var(--border)' }}>
+                <div style={{ padding: '1.25rem 0', borderBottom: '1px solid var(--border)' }}>
+                  <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.4rem' }}>WHATSAPP</p>
+                  <a href={WA_LINK}
+                    onClick={() => trackWhatsAppClick('contact-sidebar')}
+                    style={{ fontSize: '0.9375rem', fontWeight: 600, color: 'var(--fg)', textDecoration: 'none' }}>
+                    +34 645 593 227 →
+                  </a>
                 </div>
-              )}
-
-              {/* ── STEP 2 ────────────────────────────────────────────────── */}
-              {step === 2 && (
-                <div style={{ animation: 'fadeUp 0.28s ease-out' }}>
-                  <h2 style={{ fontSize: 'clamp(1.3rem,2.5vw,1.75rem)', fontWeight: 700, letterSpacing: '-0.025em', marginBottom: 6, color: '#0A0908' }}>
-                    Cuéntanos más
-                  </h2>
-                  <p style={{ fontSize: 14, color: '#6B7280', marginBottom: 24, lineHeight: 1.6 }}>
-                    Cuanta más info nos das, mejor propuesta podemos prepararte.
+                <div style={{ padding: '1.25rem 0', borderBottom: '1px solid var(--border)' }}>
+                  <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.4rem' }}>EMAIL</p>
+                  <a href="mailto:hello@royaluniondesign.com"
+                    style={{ fontSize: '0.9375rem', fontWeight: 600, color: 'var(--fg)', textDecoration: 'none' }}>
+                    hello@royaluniondesign.com
+                  </a>
+                </div>
+                <div style={{ padding: '1.25rem 0', borderBottom: '1px solid var(--border)' }}>
+                  <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.4rem' }}>TALLER</p>
+                  <p style={{ fontSize: '0.875rem', color: 'var(--fg)', lineHeight: 1.6, margin: 0 }}>
+                    Carrer Sant Salvador 11, L6<br />
+                    <span style={{ color: 'var(--muted)', fontSize: '0.8125rem' }}>Cerdanyola del Vallès · Barcelona</span>
                   </p>
+                </div>
+              </div>
+            </aside>
 
-                  {/* Budget */}
-                  <div style={{ marginBottom: 22 }}>
-                    <p style={labelStyle}>
-                      Presupuesto estimado{' '}
-                      <span style={{ fontSize: 10, textTransform: 'none', letterSpacing: 0, color: '#C4BFB8', fontWeight: 400 }}>
-                        (opcional)
-                      </span>
+            {/* ── FORM ───────────────────────────────────────────────────────── */}
+            <div>
+              {/* Progress */}
+              <div style={{ marginBottom: '2.5rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
+                  {STEP_LABELS.map((label, i) => (
+                    <span key={label} className="mono-label" style={{
+                      color: step >= i + 1 ? 'var(--fg)' : 'var(--border)',
+                      transition: 'color 0.3s',
+                    }}>
+                      {i + 1}. {label}
+                    </span>
+                  ))}
+                </div>
+                <div style={{ height: 1, background: 'var(--border)' }}>
+                  <div style={{
+                    height: '100%', background: 'var(--fg)',
+                    width: `${barWidth}%`,
+                    transition: 'width 0.4s cubic-bezier(0.4,0,0.2,1)',
+                  }} />
+                </div>
+              </div>
+
+              <form onSubmit={handleSubmit} noValidate>
+
+                {/* ── STEP 1 ────────────────────────────────────────────────── */}
+                {step === 1 && (
+                  <div style={{ animation: 'fadeUp 0.28s ease-out' }}>
+                    <h2 className="display" style={{ fontSize: 'clamp(2rem, 4vw, 5rem)', color: 'var(--fg)', marginBottom: '0.5rem' }}>
+                      ¿QUÉ NECESITAS?
+                    </h2>
+                    <p style={{ fontSize: '0.875rem', color: 'var(--muted)', marginBottom: '2rem', lineHeight: 1.65 }}>
+                      Selecciona el servicio principal — puedes detallar más en el siguiente paso.
                     </p>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }}>
-                      {BUDGETS.map((b) => {
-                        const sel = budget === b.label
+
+                    <div style={{ borderTop: '1px solid var(--border)', marginBottom: '2rem' }}>
+                      {SERVICES.map((s) => {
+                        const selected = service === s.label
                         return (
                           <button
-                            key={b.id}
+                            key={s.id}
                             type="button"
-                            aria-pressed={sel}
-                            onClick={() => setBudget(sel ? '' : b.label)}
+                            aria-pressed={selected}
+                            onClick={() => { if (!service) trackFormStart(); setService(s.label) }}
                             style={{
-                              padding: '12px 14px', borderRadius: 12,
-                              border: sel ? '2px solid #0A0908' : '1.5px solid #E2DDD7',
-                              background: sel ? '#F0EDE6' : 'white',
+                              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                              width: '100%', padding: '1rem 0',
+                              borderBottom: '1px solid var(--border)',
+                              background: 'transparent', border: 'none',
+                              borderTop: 'none',
+                              borderLeft: 'none', borderRight: 'none',
                               cursor: 'pointer', textAlign: 'left',
-                              transition: 'all 0.15s ease', outline: 'none',
-                            }}>
-                            <p style={{ fontSize: 13, fontWeight: 700, color: '#0A0908', margin: 0 }}>{b.label}</p>
-                            <p style={{ fontSize: 11, color: '#9CA3AF', margin: '3px 0 0' }}>{b.sub}</p>
+                              outline: 'none',
+                            }}
+                          >
+                            <div>
+                              <p style={{ fontSize: 'clamp(1rem, 2.5vw, 1.5rem)', fontWeight: 400, color: selected ? 'var(--fg)' : 'var(--muted)', fontFamily: 'var(--font-display, "Bebas Neue", Anton, sans-serif)', textTransform: 'uppercase', letterSpacing: '-0.02em', margin: 0, lineHeight: 1, transition: 'color 0.18s' }}>
+                                {s.label}
+                              </p>
+                              <p className="mono-label" style={{ color: 'var(--muted)', marginTop: '0.3rem' }}>{s.sub}</p>
+                            </div>
+                            {selected && (
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }}>
+                                <polyline points="2 8 6 12 14 4" stroke="var(--fg)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                              </svg>
+                            )}
                           </button>
                         )
                       })}
                     </div>
-                  </div>
 
-                  {/* Message */}
-                  <div style={{ marginBottom: 24 }}>
-                    <label htmlFor="message" style={labelStyle}>
-                      Descripción del proyecto <span style={{ color: '#EF4444' }}>*</span>
-                    </label>
-                    <textarea
-                      id="message"
-                      value={message}
-                      onChange={e => setMessage(e.target.value)}
-                      rows={5}
-                      required
-                      placeholder="Ej: Tengo una cafetería en Gràcia y necesito un rótulo luminoso + vinilos en el escaparate. Abre en marzo, local nuevo de 30m²..."
-                      style={{ ...inputBase, resize: 'vertical', lineHeight: 1.6 }}
-                    />
-                    <p style={{ fontSize: 11, marginTop: 6, color: message.length > 10 ? '#16A34A' : '#C4BFB8', transition: 'color 0.2s' }}>
-                      {message.length > 10 ? '✓ Listo para continuar' : `Mínimo unas líneas · ${message.length}/10 caracteres`}
-                    </p>
-                  </div>
-
-                  <div style={{ display: 'flex', gap: 10 }}>
-                    <button type="button" onClick={() => setStep(1)}
-                      style={{ padding: '0.875rem 1.25rem', borderRadius: 9999, border: '1.5px solid #E2DDD7', background: 'transparent', color: '#6B7280', fontWeight: 500, fontSize: 14, cursor: 'pointer', transition: 'all 0.15s' }}>
-                      ← Atrás
-                    </button>
                     <button
                       type="button"
-                      onClick={() => { if (canGoStep3) { trackFormStep(2, message.slice(0, 30)); setStep(3) } }}
-                      disabled={!canGoStep3}
+                      onClick={() => { if (canGoStep2) { trackFormStep(1, service); setStep(2) } }}
+                      disabled={!canGoStep2}
+                      className="mono-label"
                       style={{
-                        display: 'inline-flex', alignItems: 'center', gap: 8,
-                        padding: '0.875rem 1.75rem',
-                        background: canGoStep3 ? '#0A0908' : '#E2DDD7',
-                        color: canGoStep3 ? 'white' : '#C4BFB8',
-                        borderRadius: 9999, fontWeight: 600, fontSize: 14,
-                        border: 'none', cursor: canGoStep3 ? 'pointer' : 'not-allowed',
-                        transition: 'all 0.2s ease',
+                        color: canGoStep2 ? 'var(--fg)' : 'var(--border)',
+                        background: 'none', border: 'none',
+                        borderBottom: `1px solid ${canGoStep2 ? 'var(--fg)' : 'var(--border)'}`,
+                        paddingBottom: 2, cursor: canGoStep2 ? 'pointer' : 'not-allowed',
+                        transition: 'all 0.2s',
                       }}>
-                      Continuar <ArrowRight />
+                      CONTINUAR →
                     </button>
                   </div>
-                </div>
-              )}
+                )}
 
-              {/* ── STEP 3 ────────────────────────────────────────────────── */}
-              {step === 3 && (
-                <div style={{ animation: 'fadeUp 0.28s ease-out' }}>
-                  <h2 style={{ fontSize: 'clamp(1.3rem,2.5vw,1.75rem)', fontWeight: 700, letterSpacing: '-0.025em', marginBottom: 6, color: '#0A0908' }}>
-                    ¿Cómo te contactamos?
-                  </h2>
-                  <p style={{ fontSize: 14, color: '#6B7280', marginBottom: 20, lineHeight: 1.6 }}>
-                    Último paso. Prometemos no spamear.
-                  </p>
+                {/* ── STEP 2 ────────────────────────────────────────────────── */}
+                {step === 2 && (
+                  <div style={{ animation: 'fadeUp 0.28s ease-out' }}>
+                    <h2 className="display" style={{ fontSize: 'clamp(2rem, 4vw, 5rem)', color: 'var(--fg)', marginBottom: '0.5rem' }}>
+                      CUÉNTANOS MÁS
+                    </h2>
+                    <p style={{ fontSize: '0.875rem', color: 'var(--muted)', marginBottom: '2rem', lineHeight: 1.65 }}>
+                      Cuanta más info nos das, mejor propuesta podemos prepararte.
+                    </p>
 
-                  {/* Summary chips */}
-                  {(service || budget) && (
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 22 }}>
-                      {service && (
-                        <span style={{ padding: '5px 12px', borderRadius: 9999, background: '#0A0908', color: 'white', fontSize: 12, fontWeight: 500 }}>
-                          {service}
-                        </span>
-                      )}
-                      {budget && (
-                        <span style={{ padding: '5px 12px', borderRadius: 9999, background: '#F0EDE6', color: '#0A0908', fontSize: 12, fontWeight: 500 }}>
-                          {budget}
-                        </span>
-                      )}
+                    {/* Budget */}
+                    <div style={{ marginBottom: '1.75rem' }}>
+                      <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>
+                        PRESUPUESTO ESTIMADO <span style={{ opacity: 0.5 }}>(OPCIONAL)</span>
+                      </p>
+                      <div style={{ borderTop: '1px solid var(--border)' }}>
+                        {BUDGETS.map((b) => {
+                          const sel = budget === b.label
+                          return (
+                            <button
+                              key={b.id}
+                              type="button"
+                              aria-pressed={sel}
+                              onClick={() => setBudget(sel ? '' : b.label)}
+                              style={{
+                                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                                width: '100%', padding: '0.875rem 0',
+                                borderBottom: '1px solid var(--border)',
+                                background: 'transparent', border: 'none',
+                                borderTop: 'none', borderLeft: 'none', borderRight: 'none',
+                                cursor: 'pointer', outline: 'none',
+                              }}>
+                              <div>
+                                <p style={{ fontSize: '0.9375rem', fontWeight: 500, color: sel ? 'var(--fg)' : 'var(--muted)', margin: 0, transition: 'color 0.15s' }}>{b.label}</p>
+                                <p className="mono-label" style={{ color: 'var(--muted)', marginTop: 2 }}>{b.sub}</p>
+                              </div>
+                              {sel && (
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }}>
+                                  <polyline points="2 8 6 12 14 4" stroke="var(--fg)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                              )}
+                            </button>
+                          )
+                        })}
+                      </div>
                     </div>
-                  )}
 
-                  {/* Name + Email */}
-                  <div className="fields-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 14 }}>
-                    <div>
-                      <label htmlFor="name" style={labelStyle}>
-                        Nombre <span style={{ color: '#EF4444' }}>*</span>
+                    {/* Message */}
+                    <div style={{ marginBottom: '2rem' }}>
+                      <label htmlFor="message" style={labelStyle}>
+                        DESCRIPCIÓN DEL PROYECTO <span style={{ color: '#EF4444' }}>*</span>
+                      </label>
+                      <textarea
+                        id="message"
+                        value={message}
+                        onChange={e => setMessage(e.target.value)}
+                        rows={5}
+                        required
+                        placeholder="Ej: Tengo una cafetería en Gràcia y necesito un rótulo luminoso + vinilos en el escaparate. Abre en marzo, local nuevo de 30m²..."
+                        style={{ ...inputBase, resize: 'vertical', lineHeight: 1.6 }}
+                      />
+                      <p className="mono-label" style={{ marginTop: 6, color: message.length > 10 ? 'var(--fg)' : 'var(--muted)', transition: 'color 0.2s' }}>
+                        {message.length > 10 ? '✓ LISTO PARA CONTINUAR' : `MÍNIMO UNAS LÍNEAS · ${message.length}/10`}
+                      </p>
+                    </div>
+
+                    <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+                      <button type="button" onClick={() => setStep(1)}
+                        className="mono-label"
+                        style={{ background: 'none', border: 'none', color: 'var(--muted)', cursor: 'pointer', padding: 0 }}>
+                        ← ATRÁS
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => { if (canGoStep3) { trackFormStep(2, message.slice(0, 30)); setStep(3) } }}
+                        disabled={!canGoStep3}
+                        className="mono-label"
+                        style={{
+                          color: canGoStep3 ? 'var(--fg)' : 'var(--border)',
+                          background: 'none', border: 'none',
+                          borderBottom: `1px solid ${canGoStep3 ? 'var(--fg)' : 'var(--border)'}`,
+                          paddingBottom: 2, cursor: canGoStep3 ? 'pointer' : 'not-allowed',
+                          transition: 'all 0.2s',
+                        }}>
+                        CONTINUAR →
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {/* ── STEP 3 ────────────────────────────────────────────────── */}
+                {step === 3 && (
+                  <div style={{ animation: 'fadeUp 0.28s ease-out' }}>
+                    <h2 className="display" style={{ fontSize: 'clamp(2rem, 4vw, 5rem)', color: 'var(--fg)', marginBottom: '0.5rem' }}>
+                      ¿CÓMO TE<br /><em>CONTACTAMOS?</em>
+                    </h2>
+                    <p style={{ fontSize: '0.875rem', color: 'var(--muted)', marginBottom: '2rem', lineHeight: 1.65 }}>
+                      Último paso. Prometemos no spamear.
+                    </p>
+
+                    {/* Summary */}
+                    {(service || budget) && (
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: '1.5rem' }}>
+                        {service && (
+                          <span className="mono-label" style={{ padding: '4px 10px', border: '1px solid var(--fg)', color: 'var(--fg)' }}>
+                            {service}
+                          </span>
+                        )}
+                        {budget && (
+                          <span className="mono-label" style={{ padding: '4px 10px', border: '1px solid var(--border)', color: 'var(--muted)' }}>
+                            {budget}
+                          </span>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Name + Email */}
+                    <div className="fields-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 14 }}>
+                      <div>
+                        <label htmlFor="name" style={labelStyle}>
+                          NOMBRE <span style={{ color: '#EF4444' }}>*</span>
+                        </label>
+                        <input
+                          id="name" type="text" aria-describedby="name-error"
+                          value={name} onChange={e => setName(e.target.value)}
+                          onBlur={() => setTouched(t => ({ ...t, name: true }))}
+                          required autoComplete="name" placeholder="Tu nombre"
+                          style={{ ...inputBase, borderColor: touched.name && !name.trim() ? '#EF4444' : 'var(--border)' }}
+                        />
+                        {touched.name && !name.trim() && (
+                          <p id="name-error" className="mono-label" style={{ color: '#EF4444', marginTop: 4 }} role="alert">CAMPO REQUERIDO</p>
+                        )}
+                      </div>
+                      <div>
+                        <label htmlFor="email" style={labelStyle}>
+                          EMAIL <span style={{ color: '#EF4444' }}>*</span>
+                        </label>
+                        <input
+                          id="email" type="email" aria-describedby="email-error"
+                          value={email} onChange={e => setEmail(e.target.value)}
+                          onBlur={() => setTouched(t => ({ ...t, email: true }))}
+                          required autoComplete="email" placeholder="tu@email.com"
+                          style={{ ...inputBase, borderColor: touched.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? '#EF4444' : 'var(--border)' }}
+                        />
+                        {touched.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && (
+                          <p id="email-error" className="mono-label" style={{ color: '#EF4444', marginTop: 4 }} role="alert">EMAIL VÁLIDO REQUERIDO</p>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Phone */}
+                    <div style={{ marginBottom: '2rem' }}>
+                      <label htmlFor="phone" style={labelStyle}>
+                        TELÉFONO / WHATSAPP <span style={{ opacity: 0.5 }}>(OPCIONAL)</span>
                       </label>
                       <input
-                        id="name" type="text" aria-describedby="name-error"
-                        value={name} onChange={e => setName(e.target.value)}
-                        onBlur={() => setTouched(t => ({ ...t, name: true }))}
-                        required autoComplete="name" placeholder="Tu nombre"
-                        style={{ ...inputBase, borderColor: touched.name && !name.trim() ? '#EF4444' : '#E2DDD7' }}
+                        id="phone" type="tel"
+                        value={phone} onChange={e => setPhone(e.target.value)}
+                        autoComplete="tel" placeholder="+34 600 000 000"
+                        style={inputBase}
                       />
-                      {touched.name && !name.trim() && (
-                        <p id="name-error" style={{ fontSize: 11, color: '#EF4444', marginTop: 4 }} role="alert">Campo requerido</p>
-                      )}
                     </div>
-                    <div>
-                      <label htmlFor="email" style={labelStyle}>
-                        Email <span style={{ color: '#EF4444' }}>*</span>
-                      </label>
-                      <input
-                        id="email" type="email" aria-describedby="email-error"
-                        value={email} onChange={e => setEmail(e.target.value)}
-                        onBlur={() => setTouched(t => ({ ...t, email: true }))}
-                        required autoComplete="email" placeholder="tu@email.com"
-                        style={{ ...inputBase, borderColor: touched.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? '#EF4444' : '#E2DDD7' }}
-                      />
-                      {touched.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && (
-                        <p id="email-error" style={{ fontSize: 11, color: '#EF4444', marginTop: 4 }} role="alert">Email válido requerido</p>
-                      )}
+
+                    {status === 'error' && (
+                      <div role="alert" style={{ padding: '0.875rem 1rem', background: 'var(--warm)', border: '1px solid var(--border)', fontSize: '0.8125rem', color: 'var(--fg)', marginBottom: 16, lineHeight: 1.5 }}>
+                        <strong>Error:</strong> {errorMsg}. Inténtalo de nuevo o escríbenos a{' '}
+                        <a href="mailto:hello@royaluniondesign.com" style={{ color: 'var(--fg)', fontWeight: 600 }}>hello@royaluniondesign.com</a>
+                      </div>
+                    )}
+
+                    <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', marginBottom: '1rem', flexWrap: 'wrap' }}>
+                      <button type="button" onClick={() => setStep(2)}
+                        className="mono-label"
+                        style={{ background: 'none', border: 'none', color: 'var(--muted)', cursor: 'pointer', padding: 0 }}>
+                        ← ATRÁS
+                      </button>
+                      <button
+                        type="submit"
+                        disabled={!canSubmit || status === 'sending'}
+                        className="mono-label"
+                        style={{
+                          color: canSubmit && status !== 'sending' ? 'var(--fg)' : 'var(--border)',
+                          background: 'none', border: 'none',
+                          borderBottom: `1px solid ${canSubmit && status !== 'sending' ? 'var(--fg)' : 'var(--border)'}`,
+                          paddingBottom: 2,
+                          cursor: canSubmit && status !== 'sending' ? 'pointer' : 'not-allowed',
+                          display: 'inline-flex', alignItems: 'center', gap: 6,
+                          transition: 'all 0.2s',
+                        }}>
+                        {status === 'sending' ? <><Spinner /> ENVIANDO…</> : <>ENVIAR MENSAJE →</>}
+                      </button>
                     </div>
+                    <p className="mono-label" style={{ color: 'var(--muted)' }}>
+                      O ESCRÍBENOS A{' '}
+                      <a href="mailto:hello@royaluniondesign.com" style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)' }}>
+                        HELLO@ROYALUNIONDESIGN.COM
+                      </a>
+                    </p>
                   </div>
+                )}
 
-                  {/* Phone optional */}
-                  <div style={{ marginBottom: 22 }}>
-                    <label htmlFor="phone" style={labelStyle}>
-                      Teléfono / WhatsApp{' '}
-                      <span style={{ fontSize: 10, textTransform: 'none', letterSpacing: 0, color: '#C4BFB8', fontWeight: 400 }}>
-                        (opcional — respuesta más rápida)
-                      </span>
-                    </label>
-                    <input
-                      id="phone" type="tel"
-                      value={phone} onChange={e => setPhone(e.target.value)}
-                      autoComplete="tel" placeholder="+34 600 000 000"
-                      style={inputBase}
-                    />
-                  </div>
-
-                  {status === 'error' && (
-                    <div role="alert" style={{ padding: '0.875rem 1rem', borderRadius: 12, background: '#FEF2F2', border: '1px solid #FECACA', fontSize: 13, color: '#991B1B', marginBottom: 16, lineHeight: 1.5 }}>
-                      <strong>Error:</strong> {errorMsg}. Inténtalo de nuevo o escríbenos a{' '}
-                      <a href="mailto:hello@royaluniondesign.com" style={{ color: '#991B1B', fontWeight: 600 }}>hello@royaluniondesign.com</a>
-                    </div>
-                  )}
-
-                  <div style={{ display: 'flex', gap: 10, marginBottom: 14, flexWrap: 'wrap' }}>
-                    <button type="button" onClick={() => setStep(2)}
-                      style={{ padding: '0.875rem 1.25rem', borderRadius: 9999, border: '1.5px solid #E2DDD7', background: 'transparent', color: '#6B7280', fontWeight: 500, fontSize: 14, cursor: 'pointer' }}>
-                      ← Atrás
-                    </button>
-                    <button
-                      type="submit"
-                      disabled={!canSubmit || status === 'sending'}
-                      style={{
-                        flex: 1, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-                        padding: '0.875rem 1.75rem', minWidth: 160,
-                        background: canSubmit && status !== 'sending' ? '#0A0908' : '#E2DDD7',
-                        color:      canSubmit && status !== 'sending' ? 'white'   : '#C4BFB8',
-                        borderRadius: 9999, fontWeight: 600, fontSize: 15,
-                        border: 'none', cursor: canSubmit && status !== 'sending' ? 'pointer' : 'not-allowed',
-                        transition: 'all 0.2s ease',
-                      }}>
-                      {status === 'sending' ? <><Spinner /> Enviando…</> : <>Enviar mensaje <ArrowRight /></>}
-                    </button>
-                  </div>
-                  <p style={{ fontSize: 12, color: '#9CA3AF', textAlign: 'center' }}>
-                    O escríbenos a{' '}
-                    <a href="mailto:hello@royaluniondesign.com" style={{ color: '#0A0908', textDecoration: 'underline', textUnderlineOffset: 3 }}>
-                      hello@royaluniondesign.com
-                    </a>
-                  </p>
-                </div>
-              )}
-
-            </form>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <style>{`
         @keyframes fadeUp {
@@ -629,10 +556,8 @@ export default function Contact() {
           to { transform: rotate(360deg); }
         }
         textarea:focus, input:focus {
-          border-color: #0A0908 !important;
-          background: white !important;
+          border-color: var(--fg) !important;
         }
-        button[aria-pressed="true"] { outline: none; }
         @media (max-width: 768px) {
           .contact-grid {
             grid-template-columns: 1fr !important;
@@ -641,14 +566,11 @@ export default function Contact() {
             position: static !important;
             order: 2;
             padding-top: 2.5rem;
-            border-top: 1px solid #E2DDD7;
+            border-top: 1px solid var(--border);
             margin-top: 1rem;
           }
           .fields-grid {
             grid-template-columns: 1fr !important;
-          }
-          .service-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
           }
         }
       `}</style>

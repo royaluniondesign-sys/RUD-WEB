@@ -176,9 +176,9 @@ function Hero() {
         </p>
 
         <h1 style={{ marginBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
-          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(5rem, 21vw, 26rem)', lineHeight: 0.85, display: 'block' }}>RÓTULOS</span></div>
-          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(5rem, 21vw, 26rem)', lineHeight: 0.85, display: 'block' }}>Y BRANDING</span></div>
-          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(5rem, 21vw, 26rem)', lineHeight: 0.85, display: 'block', opacity: 0.28 }}>BARCELONA</span></div>
+          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>RÓTULOS</span></div>
+          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>Y BRANDING</span></div>
+          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>BARCELONA</span></div>
         </h1>
 
         <div style={{
@@ -267,7 +267,7 @@ function WorkProjects() {
               <span className="p-name">{row.left.client} · {row.right.client}</span>
               <span className="p-scope">
                 <span className="p-dot" />
-                Scope ({row.left.scope} / {row.right.scope})
+                {row.left.scope} · {row.right.scope}
               </span>
             </div>
           </div>
@@ -397,7 +397,7 @@ function RotulosStrip() {
               }}>
                 <div>
                   <h3 className="display" style={{ fontSize: 'clamp(2rem,5.5vw,6.5rem)', color: 'var(--fg)', margin: 0, lineHeight: 1 }}>{t.titulo}</h3>
-                  <p className="mono-label" style={{ color: 'var(--muted)', marginTop: '0.5rem' }}>SCOPE ({t.scope})</p>
+                  <p className="mono-label" style={{ color: 'var(--muted)', marginTop: '0.5rem' }}>{t.scope}</p>
                 </div>
                 <svg className="svc-arrow" style={{ opacity: 0.2, flexShrink: 0 }} width="20" height="20" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="var(--fg)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

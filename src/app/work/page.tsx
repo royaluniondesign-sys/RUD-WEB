@@ -30,7 +30,7 @@ const ROTULOS_PROJECTS = [
     tipo: 'Neón LED · Fachada',
     nombre: 'Osteria Cendra',
     barrio: 'Gràcia, Barcelona',
-    desc: 'Neón LED warm white «CENDRA» en fachada de ladrillo visto + letras corpóreas en aluminio cepillado. El rótulo se convirtió en punto de referencia fotográfico del Carrer de l\'Encarnació.',
+    desc: 'Neón LED warm white «CENDRA» en fachada de ladrillo visto + letras corpóreas en aluminio cepillado.',
     tag: 'Hostelería',
   },
   {
@@ -38,7 +38,7 @@ const ROTULOS_PROJECTS = [
     tipo: 'Neón LED · Interior',
     nombre: 'Naima Coffee',
     barrio: 'Poblenou, Barcelona',
-    desc: 'Neón «NAIMA» en warm white sobre pared de estuco rugoso. Se convirtió en el rincón más fotografiado del local en el barrio 22@ — sin invertir un euro en publicidad.',
+    desc: 'Neón «NAIMA» en warm white sobre pared de estuco rugoso. El rincón más fotografiado del local.',
     tag: 'Cafetería',
   },
   {
@@ -46,7 +46,7 @@ const ROTULOS_PROJECTS = [
     tipo: 'Caja de Luz · Exterior',
     nombre: 'Mar de Fondo',
     barrio: 'Barceloneta, Barcelona',
-    desc: 'Caja de luz gran formato con perfil de aluminio y LED perimetral de alta luminosidad. Visible desde el Passeig Marítim de día y de noche.',
+    desc: 'Caja de luz gran formato con perfil de aluminio y LED perimetral de alta luminosidad.',
     tag: 'Bar',
   },
   {
@@ -54,7 +54,7 @@ const ROTULOS_PROJECTS = [
     tipo: 'Letras Corpóreas · Fachada',
     nombre: 'Chapter BCN',
     barrio: 'Eixample, Barcelona',
-    desc: 'Letras corpóreas en aluminio negro mate con retroiluminación halo blanca. Identidad visual aplicada a fachada en el Carrer del Consell de Cent con coherencia total.',
+    desc: 'Letras corpóreas en aluminio negro mate con retroiluminación halo blanca.',
     tag: 'Moda',
   },
   {
@@ -62,7 +62,7 @@ const ROTULOS_PROJECTS = [
     tipo: 'Señalética · Corporativa',
     nombre: 'Aparthotel Mercat',
     barrio: 'Sant Antoni, Barcelona',
-    desc: 'Proyecto completo de señalética para 48 apartamentos: directorios de planta, identificación de unidades y señalética de servicios en aluminio anodizado + vinilo de corte.',
+    desc: 'Proyecto completo de señalética para 48 apartamentos en aluminio anodizado + vinilo de corte.',
     tag: 'Alojamiento',
   },
   {
@@ -70,259 +70,151 @@ const ROTULOS_PROJECTS = [
     tipo: 'Vinilos · Escaparate',
     nombre: 'Centre Mèdic Gràcia',
     barrio: 'Gràcia, Barcelona',
-    desc: 'Vinilos esmerilados con logotipo recortado + franja de privacidad en toda la longitud del escaparate. Estética clínica que proyecta profesionalidad desde la calle.',
+    desc: 'Vinilos esmerilados con logotipo recortado + franja de privacidad en todo el escaparate.',
     tag: 'Salud',
   },
 ]
 
-const DIGITAL_PROJECTS = [
+const PROJECT_ROWS = [
   {
-    slug: 'sante', client: 'Santé Café & Brunch', type: 'Hostelería · Barcelona',
-    desc: 'Rótulo neón LED warm amber sobre caja de luz negra mate. Instalado en fachada, se convirtió en el elemento diferenciador del local y en el punto de referencia visual del barrio.',
-    tags: ['Neón LED','Caja de Luz','Señalética Fachada','Rotulación Hostelería'],
-    img: '/trabajos/sante-cafe-brunch-neon-led-caja-luz-barcelona.jpg', featured: false,
+    layout: 'wide' as const,
+    left:  { slug: 'sante',  img: '/trabajos/sante-cafe-brunch-neon-led-caja-luz-barcelona.jpg',                               client: 'SANTÉ',       type: 'Hostelería · Barcelona',             scope: 'Neón LED · Caja de Luz' },
+    right: { slug: 'lumina', img: '/trabajos/clinica-lumina-estetica-letras-corporeas-doradas-retroiluminadas-barcelona.jpg',  client: 'LUMINA',      type: 'Clínica Estética · Barcelona',       scope: 'Letras Corpóreas · Halo LED' },
   },
   {
-    slug: 'novae', client: 'Novae Consulting', type: 'Consultoría · Barcelona',
-    desc: 'Señalética corporativa completa: vinilos esmerilados de privacidad con logo corporativo recortado en cristal. Instalación en oficina de planta diáfana en Barcelona.',
-    tags: ['Vinilos Corporativos','Señalética Interior','Vinilo Cristal','Oficina'],
-    img: '/trabajos/novae-consulting-vinilo-esmerilado-cristal-corporativo-barcelona.jpg', featured: false,
+    layout: 'narrow' as const,
+    left:  { slug: 'novae', img: '/trabajos/novae-consulting-vinilo-esmerilado-cristal-corporativo-barcelona.jpg',             client: 'NOVAE',       type: 'Consultoría · Barcelona',            scope: 'Vinilos Corporativos' },
+    right: { slug: 'idnt',  img: '/client-idnt-hero.gif',                                                                     client: 'IDNT®',       type: 'Moda orgánica · Cerdanyola',        scope: 'E-commerce Shopify · Branding' },
   },
   {
-    slug: 'lumina', client: 'Clínica Lumina Estética', type: 'Clínica Estética · Barcelona',
-    desc: 'Letras corpóreas en acero inoxidable acabado dorado espejo con retroiluminación halo LED cálido. Instaladas sobre pared blanca en recepción de clínica estética premium en Barcelona.',
-    tags: ['Letras Corpóreas','Retroiluminación Halo','Acero Dorado','Señalética Clínica'],
-    img: '/trabajos/clinica-lumina-estetica-letras-corporeas-doradas-retroiluminadas-barcelona.jpg', featured: false,
-  },
-  {
-    slug: 'idnt', client: 'IDNT®', type: 'Moda orgánica · Cerdanyola del Vallès, Barcelona',
-    desc: 'Marca de ropa orgánica y sostenible hecha en Barcelona. Identidad visual, e-commerce Shopify, fotografía editorial, diseño de prendas, packaging, vídeo y automatizaciones.',
-    tags: ['E-commerce Shopify','Branding','Fotografía','Vídeo','Diseño de Prendas'],
-    img: '/client-idnt-hero.gif', url: 'https://www.idnt.es', featured: true,
-  },
-  {
-    slug: 'kopess', client: 'Kopess 23', type: 'Eventos & Catering · Barcelona',
-    desc: 'Web profesional, branding e identidad visual para empresa de eventos corporativos y catering premium en Barcelona. SEO orientado a captación B2B.',
-    tags: ['Diseño Web','WordPress','SEO','Branding'],
-    img: 'https://kopess23.com/wp-content/uploads/2025/09/unsplash-rrYF1RfotSM.jpg', url: 'https://kopess23.com', featured: false,
-  },
-  {
-    slug: 'oxyzen', client: 'Oxyzen Club', type: 'Club Privado Premium · Eixample, Barcelona',
-    desc: 'Web completa en WordPress/Avada, branding de lujo gold-dark, SEO técnico avanzado y analítica GA4 con 17 eventos personalizados para club privado premium en el Eixample.',
-    tags: ['Diseño Web','WordPress/Avada','SEO','Branding'],
-    img: 'https://www.oxyzen.es/wp-content/uploads/2026/05/escorts-barcelona-pasillo-acuario-hero.jpg', url: 'https://www.oxyzen.es', featured: false,
+    layout: 'wide' as const,
+    left:  { slug: 'kopess', img: 'https://kopess23.com/wp-content/uploads/2025/09/unsplash-rrYF1RfotSM.jpg',                client: 'KOPESS 23',   type: 'Eventos & Catering · Barcelona',     scope: 'WordPress · SEO' },
+    right: { slug: 'oxyzen', img: 'https://www.oxyzen.es/wp-content/uploads/2026/05/escorts-barcelona-pasillo-acuario-hero.jpg', client: 'OXYZEN CLUB', type: 'Club Privado · Eixample, Barcelona', scope: 'Web · Branding Gold' },
   },
 ]
 
 export default function Work() {
   return (
-    <main>
+    <main style={{ background: 'var(--bg)' }}>
       <Navbar light />
 
-      {/* ── Hero ──────────────────────────── */}
-      <section style={{ paddingTop: 68, position: 'relative', overflow: 'hidden', minHeight: 520, background: '#0A0908' }}>
-        <img src="/services/gal-2.avif" alt="" aria-hidden="true" loading="eager"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.45 }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(10,9,8,0.7) 0%,rgba(10,9,8,0.38) 100%)' }} />
-        <div className="container-custom" style={{ position: 'relative', zIndex: 1, paddingBlock: 'clamp(4rem,9vw,7rem)' }}>
-          <ScrollReveal>
-            <h1 style={{ fontSize: 'clamp(3rem,7vw,7rem)', fontWeight: 800, lineHeight: 0.97, letterSpacing: '-0.045em', marginBottom: '1.5rem', maxWidth: '16ch', color: 'white' }}>
-              Trabajo<br />
-              <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'rgba(255,255,255,0.38)' }}>que habla.</em>
-            </h1>
-            <p style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.5)', maxWidth: '42ch', lineHeight: 1.65 }}>
-              Rótulos luminosos, branding, e-commerce y web para empresas en Barcelona. Resultados medibles.
+      {/* ── HERO ──────────────────────────────────────────── */}
+      <section style={{
+        background: 'var(--bg)', minHeight: '70svh',
+        display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+        paddingTop: '8rem', paddingBottom: 'clamp(3rem, 6vw, 5rem)',
+        overflow: 'hidden',
+      }}>
+        <div className="container-custom">
+          <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
+            RUD STUDIO — PORTFOLIO · BARCELONA
+          </p>
+          <h1 style={{ margin: 0 }}>
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>TRABAJO</span>
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>QUE HABLA</span>
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>BARCELONA</span>
+          </h1>
+          <div style={{
+            display: 'flex', flexWrap: 'wrap', alignItems: 'center',
+            justifyContent: 'space-between', gap: '1.5rem',
+            paddingTop: '1.5rem', marginTop: 'clamp(2rem, 4vw, 3rem)',
+            borderTop: '1px solid var(--border)',
+          }}>
+            <p className="mono-label" style={{ color: 'var(--muted)' }}>
+              Rótulos · Branding · E-commerce · Diseño Web
             </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ── RÓTULOS portfolio ────────────────── */}
-      <section style={{ background: '#fff', paddingBlock: 'clamp(3.5rem,8vw,6rem)' }}>
-        <div className="container-custom">
-          <ScrollReveal>
-            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: 24, marginBottom: 'clamp(2rem,4vw,3rem)' }}>
-              <div>
-                <h2 style={{ fontSize: 'clamp(2rem,4.5vw,4rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 1.0, color: '#0A0908' }}>
-                  Rótulos que<br />transforman negocios.
-                </h2>
-              </div>
-              <Link href="/rotulos"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.75rem 1.5rem', borderRadius: 9999, background: '#0A0908', color: '#fff', fontWeight: 700, fontSize: 14, flexShrink: 0 }}>
-                Ver todos los rótulos →
-              </Link>
-            </div>
-          </ScrollReveal>
-
-          {/* Featured first project — full width */}
-          <ScrollReveal>
-            <div style={{ borderRadius: 16, overflow: 'hidden', marginBottom: 10, position: 'relative', aspectRatio: '16/7' }}>
-              <img src={ROTULOS_PROJECTS[0].img} alt={ROTULOS_PROJECTS[0].nombre}
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,9,8,0.85) 0%, rgba(10,9,8,0.3) 50%, transparent 100%)' }} />
-              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: 'clamp(1.5rem,4vw,2.5rem)' }}>
-                <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: 16 }}>
-                  <div>
-                    <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.18em', color: 'rgba(255,255,255,0.85)', padding: '3px 10px', borderRadius: 9999, border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(255,255,255,0.12)', marginBottom: 10, display: 'inline-block' }}>
-                      {ROTULOS_PROJECTS[0].tag}
-                    </span>
-                    <h3 style={{ fontSize: 'clamp(1.2rem,2.5vw,1.75rem)', fontWeight: 800, color: '#fff', letterSpacing: '-.03em', lineHeight: 1.2 }}>
-                      {ROTULOS_PROJECTS[0].nombre}
-                    </h3>
-                    <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginTop: 4, marginBottom: 8 }}>
-                      {ROTULOS_PROJECTS[0].tipo} · {ROTULOS_PROJECTS[0].barrio}
-                    </p>
-                    <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.75)', maxWidth: '52ch', lineHeight: 1.6 }}>
-                      {ROTULOS_PROJECTS[0].desc}
-                    </p>
-                  </div>
-                  <Link href="/contact?servicio=neon"
-                    style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.7rem 1.4rem', borderRadius: 9999, background: '#fff', color: '#0A0908', fontWeight: 700, fontSize: 13, flexShrink: 0 }}>
-                    Pedir presupuesto →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          {/* 2+3 grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 10, marginBottom: 10 }}>
-            {ROTULOS_PROJECTS.slice(1, 3).map((p, i) => (
-              <ScrollReveal key={i} delay={i * 60}>
-                <div style={{ borderRadius: 14, overflow: 'hidden', position: 'relative', aspectRatio: '4/3' }}>
-                  <img src={p.img} alt={p.nombre} loading="lazy"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,9,8,0.8) 0%, transparent 60%)' }} />
-                  <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1.25rem' }}>
-                    <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.75)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.15em' }}>{p.tag}</span>
-                    <h3 style={{ fontSize: 15, fontWeight: 700, color: '#fff', marginTop: 4 }}>{p.nombre}</h3>
-                    <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.55)', marginTop: 2 }}>{p.tipo} · {p.barrio}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 10 }}>
-            {ROTULOS_PROJECTS.slice(3, 6).map((p, i) => (
-              <ScrollReveal key={i} delay={i * 60}>
-                <div style={{ borderRadius: 14, overflow: 'hidden', position: 'relative', aspectRatio: '4/3' }}>
-                  <img src={p.img} alt={p.nombre} loading="lazy"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,9,8,0.82) 0%, transparent 55%)' }} />
-                  <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem' }}>
-                    <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.75)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.15em' }}>{p.tag}</span>
-                    <h3 style={{ fontSize: 13, fontWeight: 700, color: '#fff', marginTop: 3 }}>{p.nombre}</h3>
-                    <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.5)', marginTop: 2 }}>{p.barrio}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
+            <Link href="/contact" className="mono-label"
+              style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+              INICIAR PROYECTO →
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ── Digital projects ─────────────────── */}
-      <section style={{ background: '#0A0908', paddingBlock: 'clamp(3.5rem,8vw,6rem)' }}>
-        <div className="container-custom">
-          <ScrollReveal>
-            <h2 style={{ fontSize: 'clamp(2rem,5vw,4.5rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 1.0, color: 'white', marginBottom: 'clamp(2rem,4vw,3rem)' }}>
-              Branding & digital.
-            </h2>
-          </ScrollReveal>
+      {/* ── PROYECTOS — grid editorial ────────────────────── */}
+      <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)' }}>
+        <div className="container-custom" style={{ paddingTop: 'clamp(3rem, 6vw, 5rem)' }}>
+          {PROJECT_ROWS.map((row, ri) => (
+            <div key={ri} className="project-row">
+              <div className={`project-images ${row.layout}`}>
+                <Link href={`/work/${row.left.slug}`} className="img-cell" aria-label={`Ver proyecto ${row.left.client}`}>
+                  <img src={row.left.img} alt={row.left.client} loading={ri === 0 ? 'eager' : 'lazy'} />
+                  <span className="vp-btn">VER PROYECTO →</span>
+                </Link>
+                <Link href={`/work/${row.right.slug}`} className="img-cell" aria-label={`Ver proyecto ${row.right.client}`}>
+                  <img src={row.right.img} alt={row.right.client} loading="lazy" />
+                  <span className="vp-btn">VER PROYECTO →</span>
+                </Link>
+              </div>
+              <div className="project-label">
+                <span className="p-name">{row.left.client} · {row.right.client}</span>
+                <span className="p-scope">
+                  <span className="p-dot" />
+                  {row.left.scope} · {row.right.scope}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-            {/* IDNT — Featured */}
+        {/* ── RÓTULOS — lista de proyectos ──────────────── */}
+        <div style={{ borderTop: '1px solid var(--border)', marginTop: 'clamp(2rem, 4vw, 3rem)' }}>
+          <div className="container-custom" style={{ padding: 'clamp(3rem,6vw,5rem) 0' }}>
             <ScrollReveal>
-              <Link href="/work/idnt" style={{ display: 'block', textDecoration: 'none' }}>
-                <div className="card-lift" style={{ borderRadius: 16, overflow: 'hidden', background: '#FFFFFF' }}>
-                  <div className="grid md:grid-cols-2">
-                    <div style={{ position: 'relative', minHeight: 320, overflow: 'hidden' }}>
-                      <img src="/client-idnt-hero.gif" alt="IDNT® — Moda sostenible Barcelona"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} />
-                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right,transparent,rgba(0,0,0,0.1))' }} />
-                      <span style={{ position: 'absolute', top: '1.25rem', left: '1.25rem', padding: '6px 14px', background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(8px)', borderRadius: 9999, fontSize: 10, fontFamily: 'monospace', color: 'rgba(255,255,255,0.9)' }}>
-                        ↗ idnt.es
-                      </span>
-                    </div>
-                    <div style={{ padding: 'clamp(2rem,4vw,2.5rem)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                      <div>
-                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: '1.25rem' }}>
-                          {['E-commerce Shopify','Branding','Identidad Visual','Packaging','Automatizaciones'].map(t => (
-                            <span key={t} style={{ padding: '4px 12px', borderRadius: 9999, fontSize: 11, fontWeight: 500, background: '#F0F0F0', color: '#6B7280' }}>{t}</span>
-                          ))}
-                        </div>
-                        <h3 style={{ fontSize: 'clamp(1.75rem,3vw,2.5rem)', fontWeight: 800, marginBottom: 6, color: '#0A0908', letterSpacing: '-0.03em' }}>IDNT®</h3>
-                        <p style={{ fontSize: 12, color: '#9CA3AF', fontWeight: 500, marginBottom: '1rem' }}>Moda orgánica · Cerdanyola del Vallès, Barcelona</p>
-                        <p style={{ fontSize: 15, color: '#6B7280', lineHeight: 1.7 }}>
-                          Marca de ropa orgánica y sostenible hecha en Barcelona. Identidad visual, e-commerce Shopify, fotografía editorial, diseño de prendas, vídeo y automatizaciones.
-                        </p>
-                      </div>
-                      <div className="arrow-link" style={{ marginTop: '1.75rem', display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 14, fontWeight: 600, color: '#0A0908' }}>
-                        Ver proyecto completo
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+              <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>RÓTULOS EN BARCELONA</p>
+              <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+                INSTALACIONES<br /><em>RECIENTES</em>
+              </h2>
             </ScrollReveal>
 
-            {/* Kopess 23 + Oxyzen */}
-            <div className="grid md:grid-cols-2" style={{ gap: '1.25rem' }}>
-              {DIGITAL_PROJECTS.filter(p => !p.featured).map((p, i) => (
-                <ScrollReveal key={p.slug} delay={(i + 1) * 80}>
-                  <Link href={`/work/${p.slug}`} style={{ display: 'flex', flexDirection: 'column', background: '#141210', borderRadius: 16, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.07)', textDecoration: 'none', height: '100%' }} className="card-lift">
-                    <div style={{ height: 220, overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
-                      <img src={p.img} alt={`${p.client} — ${p.type}`} loading="lazy"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top,rgba(0,0,0,0.45),transparent)' }} />
+            <div style={{ borderTop: '1px solid var(--border)' }}>
+              {ROTULOS_PROJECTS.map((p, i) => (
+                <ScrollReveal key={p.nombre} delay={i * 50}>
+                  <div style={{
+                    display: 'grid', gridTemplateColumns: '180px 1fr 40%', gap: '2rem',
+                    padding: '1.5rem 0', borderBottom: '1px solid var(--border)', alignItems: 'center',
+                  }}>
+                    <div style={{ position: 'relative', overflow: 'hidden', borderRadius: 0, aspectRatio: '4/3' }}>
+                      <img src={p.img} alt={p.nombre} loading="lazy"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                     </div>
-                    <div style={{ padding: '1.75rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: '0.875rem' }}>
-                        {p.tags.map(t => (
-                          <span key={t} style={{ padding: '4px 10px', borderRadius: 9999, fontSize: 10, fontWeight: 500, background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.45)' }}>{t}</span>
-                        ))}
-                      </div>
-                      <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: 4, color: 'white', letterSpacing: '-0.02em' }}>{p.client}</h3>
-                      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', fontWeight: 500, marginBottom: '0.625rem' }}>{p.type}</p>
-                      <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', lineHeight: 1.65, flex: 1 }}>{p.desc}</p>
-                      <div className="arrow-link" style={{ marginTop: '1.25rem', fontSize: 13, fontWeight: 600, color: 'white', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-                        Ver proyecto
-                        <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                      </div>
+                    <div>
+                      <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.5rem' }}>{p.tipo} · {p.barrio}</p>
+                      <h3 className="display" style={{ fontSize: 'clamp(1.5rem, 3vw, 3.5rem)', color: 'var(--fg)', margin: 0 }}>{p.nombre}</h3>
                     </div>
-                  </Link>
+                    <p style={{ fontSize: '0.8125rem', color: 'var(--muted)', lineHeight: 1.65 }}>{p.desc}</p>
+                  </div>
                 </ScrollReveal>
               ))}
             </div>
           </div>
         </div>
+
+        <div className="explore-wrap" style={{ borderTop: '1px solid var(--border)' }}>
+          <Link href="/rotulos" className="explore-link">
+            ( VER TODOS LOS RÓTULOS )
+          </Link>
+        </div>
       </section>
 
-      {/* ── CTA ─────────────────────────── */}
-      <section style={{ background: '#0A0908', padding: 'clamp(4rem,9vw,7rem) 0' }}>
+      {/* ── CTA ───────────────────────────────────────────── */}
+      <section style={{ background: 'var(--warm)', padding: 'clamp(5rem,10vw,8rem) 0', borderTop: '1px solid var(--border)' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '2rem' }}>
-              <div>
-                <h2 style={{ fontSize: 'clamp(2.5rem,6vw,6rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 0.97, color: '#fff', marginBottom: 16 }}>
-                  Tu marca,<br /><em style={{ fontWeight: 300, fontStyle: 'italic', color: 'rgba(255,255,255,0.4)' }}>aquí.</em>
-                </h2>
-                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.38)' }}>
-                  Abiertos a nuevos proyectos · Presupuesto en 24h
-                </p>
-              </div>
-              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-                <Link href="/contact"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.875rem 2rem', background: '#fff', color: '#0A0908', borderRadius: 9999, fontWeight: 700, fontSize: 15 }}>
-                  Iniciar conversación →
-                </Link>
-                <Link href="/rotulos"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '.875rem 1.75rem', border: '1px solid rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.75)', borderRadius: 9999, fontWeight: 500, fontSize: 15 }}>
-                  Ver rótulos
-                </Link>
-              </div>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
+              Abiertos a nuevos proyectos · Presupuesto en 24h
+            </p>
+            <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              TU MARCA<br /><em>AQUÍ</em>
+            </h2>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
+              <Link href="/contact" className="mono-label"
+                style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+                INICIAR CONVERSACIÓN →
+              </Link>
+              <Link href="/rotulos" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
+                Ver rótulos
+              </Link>
             </div>
           </ScrollReveal>
         </div>
