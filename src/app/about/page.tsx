@@ -96,7 +96,7 @@ export default function About() {
           <div className="grid md:grid-cols-4 gap-4">
             {[
               { num: '01', cat: 'Físico', title: 'Rótulos & Señalética', items: ['Rótulos luminosos LED', 'Letras corpóreas', 'Neón LED personalizado', 'Vinilos escaparate', 'Señalética interior', 'Banderolas & POP'], color: 'rgba(255,255,255,0.75)' },
-              { num: '02', cat: 'Identidad', title: 'Branding & Marca', items: ['Brand strategy', 'Identidad visual', 'Logo system', 'Packaging', 'Brand guidelines', 'Naming'], color: '#BF4E30' },
+              { num: '02', cat: 'Identidad', title: 'Branding & Marca', items: ['Estrategia de marca', 'Identidad visual', 'Sistema de logo', 'Packaging', 'Manual de marca', 'Naming'], color: '#BF4E30' },
               { num: '03', cat: 'Digital', title: 'Web & E-commerce', items: ['Diseño web Next.js', 'E-commerce Shopify', 'SEO técnico', 'UX/UI', 'CRO y conversión', 'Integraciones API'], color: '#06B6D4' },
               { num: '04', cat: 'Automatización', title: 'IA & Contenido', items: ['Agentes AURA & Hermes', 'Automatización n8n', 'Copywriting', 'Motion branding', 'Marketing digital', 'Workflows IA'], color: '#22C55E' },
             ].map((col, i) => (

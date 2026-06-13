@@ -43,10 +43,10 @@ const TIERS = [
     ideal: 'Startups, freelancers y proyectos nuevos que necesitan una base sólida.',
     featured: false,
     includes: [
-      'Sesión de Brand Strategy (90 min)',
+      'Sesión de Estrategia de Marca (90 min)',
       'Diseño de logo · 3 conceptos',
       'Sistema de color y tipografía',
-      'Brand Guidelines básico (PDF)',
+      'Manual de Marca básico (PDF)',
       'Formatos editables AI / SVG / PNG',
       'Soporte email · 30 días',
     ],
@@ -83,8 +83,8 @@ const TIERS = [
       'Copywriting estratégico completo',
       'Motion branding & video',
       'Agentes IA · Aura & Hermes',
-      'Dashboard BI y automatizaciones',
-      'Retainer mensual opcional',
+      'Panel BI y automatizaciones',
+      'Contrato de mantenimiento mensual opcional',
     ],
     delivery: '10–16 semanas',
   },
@@ -105,7 +105,7 @@ const FAQS = [
   { question: '¿Cómo se estructura el pago?', answer: '50% al inicio para reservar tu fecha en nuestra agenda, 50% en la entrega final. Para proyectos Enterprise podemos acordar pagos por hitos (30/30/40).' },
   { question: '¿Puedo contratar solo un servicio?', answer: 'Sí. Puedes contratar únicamente branding, solo web, solo rótulos o solo automatización IA. No es obligatorio el paquete completo. También podemos empezar con un Starter e ir escalando.' },
   { question: '¿Los rótulos incluyen instalación?', answer: 'Sí. El precio de los rótulos incluye diseño, fabricación en nuestro taller de Barcelona e instalación profesional en Barcelona y área metropolitana. Los permisos necesarios también están incluidos en proyectos de exterior.' },
-  { question: '¿Qué pasa después de la entrega?', answer: 'Todos los proyectos incluyen soporte post-entrega. Ofrecemos retainers mensuales desde 400 €/mes para mantenimiento, actualizaciones de contenido y crecimiento continuo.' },
+  { question: '¿Qué pasa después de la entrega?', answer: 'Todos los proyectos incluyen soporte post-entrega. Ofrecemos contratos de mantenimiento mensual desde 400 €/mes para mantenimiento, actualizaciones de contenido y crecimiento continuo.' },
 ]
 
 export default function Pricing() {

@@ -69,7 +69,7 @@ function FloatingMenu() {
           {([
             ['TRABAJO',   '/work'],
             ['SERVICIOS', '/services'],
-            ['ROTULOS',   '/rotulos'],
+            ['RÓTULOS',   '/rotulos'],
             ['NOSOTROS',  '/about'],
             ['CONTACTO',  '/contact'],
           ] as const).map(([label, href], i) => (
@@ -161,7 +161,7 @@ function Hero() {
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#22C55E', display: 'inline-block', flexShrink: 0 }} />
             EN TALLER
           </div>
-          <div>CERDANYOLA DEL VALLES</div>
+          <div>CERDANYOLA DEL VALLÈS</div>
         </div>
       </div>
 
@@ -172,11 +172,11 @@ function Hero() {
         paddingTop: '6rem',
       }}>
         <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          RUD STUDIO — TALLER DE ROTULOS &amp; ESTUDIO CREATIVO, BARCELONA
+          RUD STUDIO — TALLER DE RÓTULOS &amp; ESTUDIO CREATIVO, BARCELONA
         </p>
 
         <h1 style={{ marginBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
-          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(5rem, 21vw, 26rem)', lineHeight: 0.85, display: 'block' }}>ROTULOS</span></div>
+          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(5rem, 21vw, 26rem)', lineHeight: 0.85, display: 'block' }}>RÓTULOS</span></div>
           <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(5rem, 21vw, 26rem)', lineHeight: 0.85, display: 'block' }}>Y BRANDING</span></div>
           <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(5rem, 21vw, 26rem)', lineHeight: 0.85, display: 'block', opacity: 0.28 }}>BARCELONA</span></div>
         </h1>
@@ -187,8 +187,8 @@ function Hero() {
           paddingTop: '1.5rem', borderTop: '1px solid var(--border)',
         }}>
           <div className="mono-label" style={{ color: 'var(--muted)' }}>
-            Scope (Rotulos Luminosos, Branding, Web &amp; E-commerce)<br />
-            currently: ON-DUTY · BCN
+            Servicios: Rótulos Luminosos, Branding, Web &amp; E-commerce<br />
+            actualmente: EN ACTIVO · BCN
           </div>
           <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
             <Link href="/contact" onClick={() => trackCTA('Pedir presupuesto', '/contact', 'hero')}
@@ -198,7 +198,7 @@ function Hero() {
             </Link>
             <Link href="/rotulos" onClick={() => trackCTA('Ver rotulos', '/rotulos', 'hero')}
               className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
-              VER ROTULOS
+              VER RÓTULOS
             </Link>
           </div>
         </div>
@@ -211,7 +211,7 @@ function Hero() {
 // MARQUEE
 // ═══════════════════════════════════════════════════════════
 function Marquee() {
-  const items = ['NEON LED','ACERO INOX','ALUMINIO','VINILO DE CORTE','METACRILATO','LED','TERMOFORMADO','IMPRESION UV','CORTE LASER','LETRAS CORPOREAS','CAJAS DE LUZ','SENALETICA','VINILOS','PUBLICIDAD EXTERIOR']
+  const items = ['NEÓN LED','ACERO INOX','ALUMINIO','VINILO DE CORTE','METACRILATO','LED','TERMOFORMADO','IMPRESIÓN UV','CORTE LÁSER','LETRAS CORPÓREAS','CAJAS DE LUZ','SEÑALÉTICA','VINILOS','PUBLICIDAD EXTERIOR']
   const doubled = [...items, ...items]
   return (
     <div style={{ background: 'var(--bg)', padding: '12px 0', overflow: 'hidden', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
@@ -288,30 +288,30 @@ function WorkProjects() {
 // ═══════════════════════════════════════════════════════════
 const OV_ITEMS = [
   {
-    tag:  'QUE HACEMOS',
-    title: ['FABRICAMOS ROTULOS', 'Y CONSTRUIMOS MARCAS'],
-    body: 'Taller propio en Cerdanyola del Valles. Fabricamos neon LED, letras corporeas, cajas de luz y senaletica. Branding completo y webs que convierten.',
+    tag:  'QUÉ HACEMOS',
+    title: ['FABRICAMOS RÓTULOS', 'Y CONSTRUIMOS MARCAS'],
+    body: 'Taller propio en Cerdanyola del Vallès. Fabricamos neón LED, letras corpóreas, cajas de luz y señalética. Branding completo y webs que convierten.',
     img:  '/services/hero-rotulos.jpg',
     alt:  'Taller de rótulos RUD Studio Barcelona',
   },
   {
-    tag:  'COMO AYUDA',
+    tag:  'CÓMO AYUDA',
     title: ['TU MARCA VISIBLE', '24H EN LA CALLE'],
-    body: 'Un rotulo bien hecho no es un gasto — es el comercial que trabaja mientras duermes. Precision de fabricacion + identidad coherente.',
+    body: 'Un rótulo bien hecho no es un gasto — es el comercial que trabaja mientras duermes. Precisión de fabricación + identidad coherente.',
     img:  '/trabajos/sante-cafe-brunch-neon-led-caja-luz-barcelona.jpg',
     alt:  'Rótulo neón LED Santé Café & Brunch Barcelona',
   },
   {
-    tag:  'PARA QUIEN',
-    title: ['COMERCIOS, HOSTELERIA', 'Y EMPRESAS EN BCN'],
-    body: 'Retail, restaurantes, oficinas, clinicas, franquicias. Si tienes local o necesitas hacer visible tu marca en Barcelona, somos tu equipo.',
+    tag:  'PARA QUIÉN',
+    title: ['COMERCIOS, HOSTELERÍA', 'Y EMPRESAS EN BCN'],
+    body: 'Retail, restaurantes, oficinas, clínicas, franquicias. Si tienes local o necesitas hacer visible tu marca en Barcelona, somos tu equipo.',
     img:  '/trabajos/novae-consulting-vinilo-esmerilado-cristal-corporativo-barcelona.jpg',
     alt:  'Señalética corporativa Novae Consulting Barcelona',
   },
   {
-    tag:  'CUANDO EMPEZAR',
-    title: ['PRESUPUESTO EN 24H,', 'VISITA TECNICA GRATIS'],
-    body: 'Contacta hoy. Menos de 24h para tener presupuesto detallado. Visita tecnica para medir y asesorarte sin coste ni compromiso.',
+    tag:  'CUÁNDO EMPEZAR',
+    title: ['PRESUPUESTO EN 24H,', 'VISITA TÉCNICA GRATIS'],
+    body: 'Contacta hoy. Menos de 24h para tener presupuesto detallado. Visita técnica para medir y asesorarte sin coste ni compromiso.',
     img:  '/trabajos/clinica-lumina-estetica-letras-corporeas-doradas-retroiluminadas-barcelona.jpg',
     alt:  'Letras corpóreas Clínica Lumina Estética Barcelona',
   },
@@ -322,9 +322,9 @@ function Overview() {
     <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)' }}>
       <div className="container-custom" style={{ paddingTop: 'clamp(3rem,6vw,5rem)', paddingBottom: 'clamp(1rem,2vw,2rem)' }}>
         <ScrollReveal>
-          <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.5rem' }}>Overview</p>
+          <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.5rem' }}>Resumen</p>
           <h2 className="rg display" style={{ fontSize: 'clamp(3rem,7vw,8rem)', color: 'var(--fg)', lineHeight: 0.87 }}>
-            <div className="text-mask"><span className="rl">POR QUE</span></div>
+            <div className="text-mask"><span className="rl">POR QUÉ</span></div>
             <div className="text-mask"><span className="rl" style={{ opacity: 0.28 }}>TRABAJAR CON NOSOTROS</span></div>
           </h2>
         </ScrollReveal>
@@ -361,12 +361,12 @@ function Overview() {
 // ═══════════════════════════════════════════════════════════
 function RotulosStrip() {
   const tipos = [
-    { titulo: 'NEON LED',            scope: 'Escaparates, Hosteleria, Retail, Bajo consumo',       href: '/rotulos/neon-led-barcelona' },
-    { titulo: 'LETRAS CORPOREAS',    scope: 'Fachadas, Acero inox, Aluminio, Retroiluminado',      href: '/rotulos/letras-corporeas-barcelona' },
+    { titulo: 'NEÓN LED',            scope: 'Escaparates, Hostelería, Retail, Bajo consumo',       href: '/rotulos/neon-led-barcelona' },
+    { titulo: 'LETRAS CORPÓREAS',    scope: 'Fachadas, Acero inox, Aluminio, Retroiluminado',      href: '/rotulos/letras-corporeas-barcelona' },
     { titulo: 'CAJAS DE LUZ',        scope: 'LED, Metacrilato, Tela tensada, Visibilidad 24h',     href: '/rotulos/cajas-de-luz-barcelona' },
-    { titulo: 'VINILOS ESCAPARATE',  scope: 'Corte, Impreso, Microperforado, Instalacion express', href: '/rotulos/vinilos-escaparate-barcelona' },
-    { titulo: 'SENALETICA',          scope: 'Oficinas, Hoteles, Comercios, Marca corporativa',     href: '/rotulos/senaletica-interior-barcelona' },
-    { titulo: 'PUBLICIDAD EXTERIOR', scope: 'Banderolas, Totems, Fachadas, Intemperie',            href: '/rotulos/publicidad-exterior-barcelona' },
+    { titulo: 'VINILOS ESCAPARATE',  scope: 'Corte, Impreso, Microperforado, Instalación express', href: '/rotulos/vinilos-escaparate-barcelona' },
+    { titulo: 'SEÑALÉTICA',          scope: 'Oficinas, Hoteles, Comercios, Marca corporativa',     href: '/rotulos/senaletica-interior-barcelona' },
+    { titulo: 'PUBLICIDAD EXTERIOR', scope: 'Banderolas, Tótems, Fachadas, Intemperie',            href: '/rotulos/publicidad-exterior-barcelona' },
   ]
 
   return (
@@ -375,9 +375,9 @@ function RotulosStrip() {
         <ScrollReveal>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '3rem' }}>
             <div>
-              <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>Empresa de rotulos · Barcelona</p>
+              <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>Empresa de rótulos · Barcelona</p>
               <h2 className="display" style={{ fontSize: 'clamp(3.5rem,9vw,10rem)', color: 'var(--fg)' }}>
-                ROTULOS<br /><em>LUMINOSOS</em>
+                RÓTULOS<br /><em>LUMINOSOS</em>
               </h2>
             </div>
             <Link href="/rotulos" onClick={() => trackCTA('Ver todos los rotulos', '/rotulos', 'rotulos-strip')}
@@ -409,7 +409,7 @@ function RotulosStrip() {
 
         <ScrollReveal delay={200}>
           <div style={{ marginTop: '2rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.25rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
-            <p className="mono-label" style={{ color: 'var(--muted)' }}>Visita tecnica gratuita · Presupuesto en 24h · Taller propio BCN</p>
+            <p className="mono-label" style={{ color: 'var(--muted)' }}>Visita técnica gratuita · Presupuesto en 24h · Taller propio BCN</p>
             <Link href="/contact" onClick={() => trackCTA('Pedir presupuesto rotulo', '/contact', 'rotulos-strip-bottom')}
               className="mono-label" style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
               PEDIR PRESUPUESTO →
@@ -426,10 +426,10 @@ function RotulosStrip() {
 // ═══════════════════════════════════════════════════════════
 function Services() {
   const items = [
-    { title: 'ROTULOS LUMINOSOS & SENALETICA', scope: 'NEON LED · LETRAS CORPOREAS · VINILOS · CAJAS DE LUZ', href: '/services#rotulos' },
-    { title: 'BRANDING & IDENTIDAD VISUAL',    scope: 'Brand Strategy · Naming · Logo System · Guidelines',  href: '/services#branding' },
+    { title: 'RÓTULOS LUMINOSOS & SEÑALÉTICA', scope: 'NEÓN LED · LETRAS CORPÓREAS · VINILOS · CAJAS DE LUZ', href: '/services#rotulos' },
+    { title: 'BRANDING & IDENTIDAD VISUAL',    scope: 'Estrategia de Marca · Naming · Sistema de Logo · Manual de Marca', href: '/services#branding' },
     { title: 'WEB & E-COMMERCE',               scope: 'Next.js · Shopify · SEO · Core Web Vitals',           href: '/services#web' },
-    { title: 'MOTION, CONTENIDO & AI',         scope: 'Copywriting · Motion · Automatizacion IA',            href: '/services#content' },
+    { title: 'MOTION, CONTENIDO & IA',         scope: 'Copywriting · Motion · Automatización IA',            href: '/services#content' },
   ]
   return (
     <section className="section-padding" style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)' }}>
@@ -470,9 +470,9 @@ function Services() {
 // ═══════════════════════════════════════════════════════════
 function Stats() {
   const stats = [
-    { number: '+8',  label: 'Anos fabricando en BCN' },
+    { number: '+8',  label: 'Años fabricando en BCN' },
     { number: '24h', label: 'Presupuesto sin compromiso' },
-    { number: '0€',  label: 'Visita tecnica gratuita' },
+    { number: '0€',  label: 'Visita técnica gratuita' },
     { number: 'BCN', label: 'Taller propio en Barcelona' },
   ]
   return (
@@ -502,10 +502,10 @@ function CTA() {
       <div className="container-custom">
         <ScrollReveal>
           <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-            Taller propio · Cerdanyola del Valles · BCN
+            Taller propio · Cerdanyola del Vallès · BCN
           </p>
           <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-            FABRICAMOS<br />TU ROTULO<br /><em>EN BARCELONA</em>
+            FABRICAMOS<br />TU RÓTULO<br /><em>EN BARCELONA</em>
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
             <a href="https://wa.me/34645593227"
@@ -542,7 +542,7 @@ function Footer() {
             <div>
               <img src="/logo-rud-web-blanco.svg" alt="RUD Studio" style={{ height: '26px', marginBottom: '1.25rem', opacity: 0.85 }} loading="lazy" />
               <p style={{ color: '#6B7280', fontSize: '0.8125rem', lineHeight: 1.7, maxWidth: '220px' }}>
-                Agencia creativa de branding, diseno web y automatizacion IA en Barcelona.
+                Agencia creativa de branding, diseño web y automatización IA en Barcelona.
               </p>
               <a href="mailto:hello@royaluniondesign.com" className="footer-link"
                 style={{ display: 'inline-block', marginTop: '1rem', color: '#3D3D3D', fontSize: '0.75rem', textDecoration: 'none' }}>
@@ -552,9 +552,9 @@ function Footer() {
 
             {([
               { title: 'Navegar',   links: [['Trabajo','/work'],['Servicios','/services'],['Nosotros','/about'],['Precios','/pricing'],['Blog','/blog'],['Contacto','/contact']] as [string,string][] },
-              { title: 'Rotulos',   links: [['Neon LED Barcelona','/rotulos/neon-led-barcelona'],['Letras Corporeas','/rotulos/letras-corporeas-barcelona'],['Vinilos Escaparate','/rotulos/vinilos-escaparate-barcelona'],['Cajas de Luz','/rotulos/cajas-de-luz-barcelona'],['Senaletica Interior','/rotulos/senaletica-interior-barcelona'],['Publicidad Exterior','/rotulos/publicidad-exterior-barcelona']] as [string,string][] },
-              { title: 'Servicios', links: [['Branding','/services#branding'],['Identidad Visual','/services#identity'],['Diseno Web','/services#web'],['E-commerce','/services#ecommerce'],['AI Automation · Aura','/services#aura']] as [string,string][] },
-              { title: 'Contacto',  links: [['hello@royaluniondesign.com','mailto:hello@royaluniondesign.com'],['Barcelona, Espana','#'],['Instagram','https://instagram.com/royaluniondesign'],['LinkedIn','https://linkedin.com/company/royaluniondesign']] as [string,string][] },
+              { title: 'Rótulos',   links: [['Neón LED Barcelona','/rotulos/neon-led-barcelona'],['Letras Corpóreas','/rotulos/letras-corporeas-barcelona'],['Vinilos Escaparate','/rotulos/vinilos-escaparate-barcelona'],['Cajas de Luz','/rotulos/cajas-de-luz-barcelona'],['Señalética Interior','/rotulos/senaletica-interior-barcelona'],['Publicidad Exterior','/rotulos/publicidad-exterior-barcelona']] as [string,string][] },
+              { title: 'Servicios', links: [['Branding','/services#branding'],['Identidad Visual','/services#identity'],['Diseño Web','/services#web'],['E-commerce','/services#ecommerce'],['Automatización IA · Aura','/services#aura']] as [string,string][] },
+              { title: 'Contacto',  links: [['hello@royaluniondesign.com','mailto:hello@royaluniondesign.com'],['Barcelona, España','#'],['Instagram','https://instagram.com/royaluniondesign'],['LinkedIn','https://linkedin.com/company/royaluniondesign']] as [string,string][] },
             ]).map(col => (
               <div key={col.title}>
                 <h4 style={{ fontSize: '10px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.18em', color: '#3D3D3D', marginBottom: '1.25rem' }}>{col.title}</h4>
@@ -577,9 +577,9 @@ function Footer() {
           </div>
 
           <div style={{ paddingTop: '2rem', borderTop: '1px solid #1A1A1A', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
-            <p style={{ fontSize: '11px', color: '#2D2D2D' }}>© 2026 RUD Studio · Royal Union Design · Barcelona, Espana</p>
+            <p style={{ fontSize: '11px', color: '#2D2D2D' }}>© 2026 RUD Studio · Royal Union Design · Barcelona, España</p>
             <div style={{ display: 'flex', gap: '1.5rem' }}>
-              {([['Privacidad','/privacy'],['Terminos','/terms']] as [string,string][]).map(([l,h]) => (
+              {([['Privacidad','/privacy'],['Términos','/terms']] as [string,string][]).map(([l,h]) => (
                 <Link key={l} href={h} style={{ fontSize: '11px', color: '#2D2D2D', textDecoration: 'none' }}>{l}</Link>
               ))}
             </div>

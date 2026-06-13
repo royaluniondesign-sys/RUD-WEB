@@ -35,15 +35,15 @@ const ROTULOS_TYPES = [
 
 const DIGITAL_SERVICES = [
   {
-    num: '02', id: 'branding', title: 'Brand Strategy & Identidad Visual',
+    num: '02', id: 'branding', title: 'Estrategia de Marca & Identidad Visual',
     tagline: 'Antes del diseño, la estrategia.',
-    desc: 'No diseñamos logos — construimos sistemas de marca. Auditoría de mercado, análisis competitivo, workshops de posicionamiento y brand architecture completa. Logo system, paleta, tipografía, motion principles y Brand Guidelines extenso.',
+    desc: 'No diseñamos logos — construimos sistemas de marca. Auditoría de mercado, análisis competitivo, workshops de posicionamiento y arquitectura de marca completa. Sistema de logo, paleta, tipografía, principios de motion y Manual de Marca extenso.',
     deliverables: [
       'Auditoría de marca y análisis competitivo',
       'Workshops de posicionamiento y propuesta de valor',
-      'Logo system completo con variantes',
+      'Sistema de logo completo con variantes',
       'Paleta de color y sistema tipográfico',
-      'Brand Guidelines (PDF + Figma editable)',
+      'Manual de Marca (PDF + Figma editable)',
     ],
     accent: '#0A0908',
   },
@@ -52,7 +52,7 @@ const DIGITAL_SERVICES = [
     tagline: '95+ Lighthouse. Core Web Vitals verde. Siempre.',
     desc: 'UX research, wireframes, diseño UI pixel-perfect en Figma y desarrollo Next.js / Shopify. Sin compromisos de performance: 95+ Lighthouse y Core Web Vitals en verde desde el día uno.',
     deliverables: [
-      'UX Research y arquitectura de información',
+      'Investigación UX y arquitectura de información',
       'Diseño UI en Figma (pixel-perfect, responsive)',
       'Desarrollo Next.js / React / Shopify Plus',
       'SEO técnico: schema.org, sitemap, meta tags',
@@ -304,7 +304,7 @@ export default function Services() {
                     </span>
                   </div>
                   <h3 style={{ fontSize: 'clamp(1.2rem,2.5vw,1.6rem)', fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 8 }}>
-                    AI Automation · Aura & Hermes
+                    Automatización IA · Aura & Hermes
                   </h3>
                   <p style={{ fontSize: 12, color: '#7B68EE', fontStyle: 'italic', marginBottom: '1.25rem' }}>
                     Agentes de IA que trabajan mientras tú duermes.
@@ -326,7 +326,7 @@ export default function Services() {
                       'Agente Hermes: automatización de flujos, leads y CRM',
                       'Infraestructura local privada — datos soberanos',
                       'Voz clonada y avatar video para comunicación de marca',
-                      'Dashboard de BI con alertas proactivas',
+                      'Panel BI con alertas proactivas',
                       'Integración con tus herramientas existentes',
                       'Formación del equipo y documentación del sistema',
                     ].map((d, j) => (

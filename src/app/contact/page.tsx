@@ -58,7 +58,7 @@ const SERVICES = [
   },
   {
     id: 'ia',
-    label: 'AI Automation',
+    label: 'Automatización IA',
     sub: 'Agentes IA, flujos n8n, CRM',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -152,7 +152,7 @@ export default function Contact() {
     if (s === 'branding')  return 'Branding & Identidad'
     if (s === 'web')       return 'Diseño Web & Dev'
     if (s === 'ecommerce') return 'E-commerce Shopify'
-    if (s === 'ia')        return 'AI Automation'
+    if (s === 'ia')        return 'Automatización IA'
     return ''
   })
   const [budget,  setBudget]  = useState('')

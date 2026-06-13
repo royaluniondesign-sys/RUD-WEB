@@ -74,8 +74,8 @@ const faqsGeneral = [
     answer: '50% al inicio para confirmar tu fecha de proyecto, 50% restante en la entrega final. Para proyectos grandes (€10k+) podemos acordar pagos por hitos durante el proyecto. Facturamos con IVA español (21%).',
   },
   {
-    question: '¿Podéis trabajar con assets de marca existentes?',
-    answer: 'Por supuesto. Podemos construir sobre, refinar o evolucionar tus assets de marca existentes en lugar de empezar desde cero. Evaluamos lo que tienes durante la fase de descubrimiento y te recomendamos el mejor camino.',
+    question: '¿Podéis trabajar con recursos de marca existentes?',
+    answer: 'Por supuesto. Podemos construir sobre, refinar o evolucionar tus recursos de marca existentes en lugar de empezar desde cero. Evaluamos lo que tienes durante la fase de descubrimiento y te recomendamos el mejor camino.',
   },
   {
     question: '¿Trabajáis con clientes internacionales?',
@@ -91,7 +91,7 @@ const faqsGeneral = [
   },
   {
     question: '¿Ofrecéis soporte después de la entrega?',
-    answer: 'Sí — ofrecemos retainers mensuales para gestión de marca, mantenimiento web, producción de contenido y soporte técnico. Muchos clientes se quedan con nosotros como partners a largo plazo más allá del proyecto inicial.',
+    answer: 'Sí — ofrecemos contratos de mantenimiento mensual para gestión de marca, mantenimiento web, producción de contenido y soporte técnico. Muchos clientes se quedan con nosotros como partners a largo plazo más allá del proyecto inicial.',
   },
   {
     question: '¿Qué formatos de archivo recibo?',
@@ -99,7 +99,7 @@ const faqsGeneral = [
   },
   {
     question: '¿Trabajáis con otras agencias como partners?',
-    answer: 'Sí — trabajamos en modo white-label para agencias que necesitan capacidad extra de diseño, desarrollo o automatización IA sin ampliar su equipo fijo. Discreción total.',
+    answer: 'Sí — trabajamos en modo marca blanca para agencias que necesitan capacidad extra de diseño, desarrollo o automatización IA sin ampliar su equipo fijo. Discreción total.',
   },
 ]
 
