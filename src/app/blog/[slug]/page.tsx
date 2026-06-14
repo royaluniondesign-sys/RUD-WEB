@@ -400,72 +400,86 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const paragraphs = p.content.split('\n\n').filter(Boolean)
 
   return (
-    <main>
+    <main style={{ background: 'var(--bg)' }}>
       <BlogTracker slug={slug} title={p.title} />
-      <Navbar />
+      <Navbar light />
 
-      <section className="hero-gradient" style={{ paddingTop: 68 }}>
-        <div className="container-custom" style={{ paddingTop: '3rem', paddingBottom: '2rem', maxWidth: 760 }}>
-          <Link href="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, color: '#6B7280', marginBottom: '1.5rem', textDecoration: 'none' }}>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            Blog
-          </Link>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
-            <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', color: '#BF4E30' }}>{p.category}</span>
-            <span style={{ fontSize: 10, color: '#C4BFB8' }}>·</span>
-            <span style={{ fontSize: 10, color: '#C4BFB8' }}>{p.readTime} lectura</span>
-            <span style={{ fontSize: 10, color: '#C4BFB8' }}>·</span>
-            <span style={{ fontSize: 10, color: '#C4BFB8' }}>{p.date}</span>
-          </div>
-          <h1 style={{ fontSize: 'clamp(1.6rem,3.5vw,2.5rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, marginBottom: '1rem' }}>{p.title}</h1>
-          <p style={{ fontSize: '1rem', color: '#6B7280', lineHeight: 1.7 }}>{p.excerpt}</p>
+      {/* Hero */}
+      <section style={{ background: 'var(--bg)', paddingTop: 68, paddingBottom: 'clamp(3rem,6vw,5rem)' }}>
+        <div className="container-custom" style={{ paddingTop: 'clamp(3rem,7vw,5rem)' }}>
+          <nav style={{ marginBottom: '2rem' }}>
+            <Link href="/blog" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
+              ← BLOG
+            </Link>
+          </nav>
+          <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
+            {p.category} · {p.readTime} LECTURA · {p.date}
+          </p>
+          <h1 className="display" style={{ fontSize: 'clamp(3rem,8vw,9rem)', lineHeight: 0.85, color: 'var(--fg)', marginBottom: '2rem', maxWidth: '18ch' }}>
+            {p.title.toUpperCase()}
+          </h1>
+          <p style={{ fontSize: '1.125rem', color: 'var(--muted)', lineHeight: 1.7, maxWidth: '60ch' }}>{p.excerpt}</p>
         </div>
       </section>
 
-      <div style={{ height: 'clamp(200px,40vw,420px)', overflow: 'hidden', position: 'relative' }}>
+      {/* Hero image */}
+      <div style={{ height: 'clamp(220px,40vw,480px)', overflow: 'hidden', position: 'relative' }}>
         <img src={p.image} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.2))' }} />
       </div>
 
-      <section style={{ background: '#F7F5F1', paddingTop: '4rem', paddingBottom: '5rem' }}>
+      {/* Content */}
+      <section style={{ background: 'var(--bg)', paddingTop: 'clamp(3rem,6vw,5rem)', paddingBottom: 'clamp(4rem,8vw,7rem)' }}>
         <div className="container-custom" style={{ maxWidth: 720 }}>
           <article style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             {paragraphs.map((para, i) => {
               const heading = para.match(/^\*\*(.+)\*\*$/)
               if (heading) return (
-                <h2 key={i} style={{ fontSize: 'clamp(1.05rem,2vw,1.25rem)', fontWeight: 700, letterSpacing: '-0.02em', color: '#0A0908', marginTop: '0.5rem' }}>
+                <h2 key={i} style={{ fontSize: 'clamp(1.05rem,2vw,1.25rem)', fontWeight: 700, letterSpacing: '-0.02em', color: 'var(--fg)', marginTop: '1rem', borderTop: '1px solid var(--border)', paddingTop: '1.5rem' }}>
                   {heading[1]}
                 </h2>
               )
-              return <p key={i} style={{ fontSize: '1rem', color: '#3D3D3D', lineHeight: 1.8 }}>{renderParagraph(para)}</p>
+              return <p key={i} style={{ fontSize: '1rem', color: 'var(--fg)', lineHeight: 1.8 }}>{renderParagraph(para)}</p>
             })}
           </article>
 
           {p.faqs && (
-            <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #E2DDD7' }}>
-              <h2 style={{ fontSize: 'clamp(1.1rem,2vw,1.3rem)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: '1.5rem', color: '#0A0908' }}>Preguntas frecuentes</h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--border)' }}>
+              <h2 style={{ fontSize: 'clamp(1.1rem,2vw,1.3rem)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: '1.5rem', color: 'var(--fg)' }}>Preguntas frecuentes</h2>
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
                 {p.faqs.map(({ q, a }, i) => (
-                  <div key={i} style={{ padding: '1.25rem', background: '#fff', borderRadius: 12, border: '1px solid #E2DDD7' }}>
-                    <p style={{ fontSize: 14, fontWeight: 700, color: '#0A0908', marginBottom: 8 }}>{q}</p>
-                    <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7 }}>{a}</p>
+                  <div key={i} style={{ padding: '1.5rem 0', borderTop: '1px solid var(--border)' }}>
+                    <p style={{ fontSize: 15, fontWeight: 700, color: 'var(--fg)', marginBottom: 10 }}>{q}</p>
+                    <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7 }}>{a}</p>
                   </div>
                 ))}
               </div>
             </div>
           )}
 
-          <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #E2DDD7', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
-            <div>
-              <p style={{ fontSize: 12, color: '#9CA3AF', marginBottom: 6 }}>¿Quieres hablar de esto con nosotros?</p>
-              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '0.75rem 1.5rem', background: '#0A0908', color: '#fff', borderRadius: 9999, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>
-                Contactar →
-              </Link>
-            </div>
-            <Link href="/blog" style={{ fontSize: 13, color: '#6B7280', textDecoration: 'none' }}>
-              ← Volver al blog
+          <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--border)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
+            <Link href="/blog" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
+              ← VOLVER AL BLOG
+            </Link>
+            <Link href="/contact" className="mono-label" style={{ color: 'var(--fg)', borderBottom: '1px solid var(--fg)', paddingBottom: 2, textDecoration: 'none' }}>
+              CONTACTAR →
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section style={{ background: 'var(--warm)', paddingBlock: 'clamp(4rem,10vw,8rem)' }}>
+        <div className="container-custom">
+          <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>¿Necesitas rótulos o branding?</p>
+          <h2 className="display" style={{ fontSize: 'clamp(3rem,9vw,8rem)', lineHeight: 0.85, color: 'var(--fg)', marginBottom: '0.5rem' }}>
+            ¿NECESITAS
+          </h2>
+          <h2 className="display" style={{ fontSize: 'clamp(3rem,9vw,8rem)', lineHeight: 0.85, color: 'var(--border)', marginBottom: '3rem' }}>
+            RÓTULOS?
+          </h2>
+          <Link href="/contact" className="mono-label" style={{ color: 'var(--fg)', borderBottom: '1px solid var(--fg)', paddingBottom: 3, textDecoration: 'none' }}>
+            PIDE PRESUPUESTO →
+          </Link>
         </div>
       </section>
     </main>

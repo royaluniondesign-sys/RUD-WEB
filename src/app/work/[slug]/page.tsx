@@ -223,117 +223,124 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   if (!p) notFound()
 
   return (
-    <main>
-      <Navbar />
+    <main style={{ background: 'var(--bg)' }}>
+      <Navbar light />
 
-      {/* Header */}
-      <section className="hero-gradient" style={{ paddingTop: 68 }}>
-        <div className="container-custom" style={{ paddingBlock: 'clamp(3rem,7vw,5rem)' }}>
+      {/* Hero */}
+      <section style={{ background: 'var(--bg)', minHeight: '60svh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', paddingTop: '8rem', paddingBottom: 'clamp(3rem, 6vw, 5rem)' }}>
+        <div className="container-custom">
           <ScrollReveal>
-            <Link href="/work" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, color: '#6B7280', marginBottom: '1.5rem' }}
-              className="hover:text-[#0A0908] transition-colors">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              Portfolio
-            </Link>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: '1.25rem' }}>
-              {p.tags.map(t => <span key={t} className="tag-pill">{t}</span>)}
+            <nav style={{ marginBottom: '1.5rem' }}>
+              <Link href="/work" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
+                ← PORTFOLIO
+              </Link>
+            </nav>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
+              {p.type}
+            </p>
+            <h1 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 14rem)', lineHeight: 0.85, color: 'var(--fg)', marginBottom: '2rem' }}>
+              {p.client.toUpperCase()}
+            </h1>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+              {p.tags.map((t: string) => (
+                <span key={t} className="mono-label" style={{ color: 'var(--muted)', padding: '0.4rem 0.875rem', border: '1px solid var(--border)' }}>{t}</span>
+              ))}
             </div>
-            <h1 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 700, letterSpacing: '-.04em', marginBottom: 8 }}>{p.client}</h1>
-            <p style={{ fontSize: 'clamp(.875rem,1.5vw,1.1rem)', color: '#6B7280' }}>{p.type}</p>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Hero image */}
-      <div style={{ position: 'relative', height: 'clamp(220px,45vw,520px)', overflow: 'hidden' }}>
+      <div style={{ position: 'relative', height: 'clamp(260px,48vw,560px)', overflow: 'hidden' }}>
         <img src={p.hero} alt={`${p.client} — RUD Studio`}
           style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,.25))' }} />
         {p.url && (
           <a href={p.url} target="_blank" rel="noopener noreferrer"
-            style={{ position: 'absolute', bottom: 20, right: 20, padding: '8px 16px', background: 'rgba(255,255,255,.2)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,.3)', borderRadius: 9999, color: '#fff', fontSize: 12, fontWeight: 500 }}>
+            style={{ position: 'absolute', bottom: 20, right: 20, padding: '8px 20px', background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--fg)', fontSize: 11, fontFamily: 'monospace', textTransform: 'uppercase', letterSpacing: '0.1em', textDecoration: 'none' }}>
             Visitar web ↗
           </a>
         )}
       </div>
 
-      {/* Content */}
-      <section className="section-padding" style={{ background: '#F7F5F1' }}>
+      {/* Challenge */}
+      <section style={{ background: 'var(--bg)', paddingBlock: 'clamp(3rem,7vw,5rem)' }}>
         <div className="container-custom">
-          <div style={{ display: 'grid', gap: '3rem' }}>
-            <style>{`@media(min-width:768px){#case-grid{grid-template-columns:1fr 300px!important}}`}</style>
-            <div id="case-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2.5rem', alignItems: 'start' }}>
-
-              {/* Main content */}
-              <div>
-                <ScrollReveal>
-                  <h2 style={{ fontSize: '1.35rem', fontWeight: 700, marginBottom: '0.875rem' }}>El desafío</h2>
-                  <p style={{ fontSize: 15, color: '#6B7280', lineHeight: 1.75, marginBottom: '2rem' }}>{p.challenge}</p>
-                </ScrollReveal>
-                <ScrollReveal delay={80}>
-                  <h2 style={{ fontSize: '1.35rem', fontWeight: 700, marginBottom: '0.875rem' }}>Lo que hicimos</h2>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.875rem', marginBottom: '2rem' }}>
-                    {p.work.map((w, i) => (
-                      <div key={i} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
-                        <span style={{ flexShrink: 0, width: 22, height: 22, borderRadius: '50%', background: '#F0EDE6', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontFamily: 'monospace', color: '#9CA3AF', marginTop: 2 }}>{i+1}</span>
-                        <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.7 }}>{w}</p>
-                      </div>
-                    ))}
-                  </div>
-                </ScrollReveal>
-
-                {/* Images grid */}
-                {p.images.length > 0 && (
-                  <ScrollReveal delay={140}>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.75rem' }}>
-                      {p.images.map((img, i) => (
-                        <div key={i} style={{ borderRadius: 12, overflow: 'hidden', aspectRatio: '4/3' }}>
-                          <img src={img} alt={`${p.client} ${i+1}`}
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                        </div>
-                      ))}
-                    </div>
-                  </ScrollReveal>
-                )}
+          <ScrollReveal>
+            <div style={{ display: 'grid', gap: '2rem' }}>
+              <style>{`@media(min-width:768px){#challenge-grid{grid-template-columns:200px 1fr!important}}`}</style>
+              <div id="challenge-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.5rem', paddingBottom: '3rem', borderBottom: '1px solid var(--border)' }}>
+                <p className="mono-label" style={{ color: 'var(--muted)' }}>EL DESAFÍO</p>
+                <p style={{ fontSize: '1rem', color: 'var(--fg)', lineHeight: 1.8, maxWidth: '70ch' }}>{p.challenge}</p>
               </div>
-
-              {/* Sidebar */}
-              <ScrollReveal delay={60}>
-                <div style={{ position: 'sticky', top: 88, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  <div style={{ background: '#fff', borderRadius: 16, padding: '1.5rem', border: '1px solid #E2DDD7' }}>
-                    <h3 style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: '1.25rem' }}>Detalles</h3>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                      {Object.entries(p.details).map(([k, v]) => (
-                        <div key={k}>
-                          <p style={{ fontSize: 10, color: '#9CA3AF', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 3 }}>{k}</p>
-                          <p style={{ fontSize: 14, fontWeight: 600 }}>{v}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div style={{ background: '#F0EDE6', borderRadius: 16, padding: '1.5rem' }}>
-                    <p style={{ fontSize: 13, color: '#6B7280', lineHeight: 1.6, marginBottom: '1rem' }}>¿Proyecto similar? Hablemos.</p>
-                    <Link href="/contact" className="btn-primary" style={{ display: 'block', textAlign: 'center', width: '100%' }}>Contactar</Link>
-                  </div>
-                </div>
-              </ScrollReveal>
             </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Work done */}
+      <section style={{ background: 'var(--warm)', paddingBlock: 'clamp(3rem,7vw,5rem)' }}>
+        <div className="container-custom">
+          <ScrollReveal>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '2.5rem' }}>LO QUE HICIMOS</p>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              {p.work.map((w: string, i: number) => (
+                <div key={i} style={{ display: 'grid', gridTemplateColumns: '3rem 1fr', gap: '1.5rem', paddingBlock: '1.5rem', borderTop: '1px solid var(--border)', alignItems: 'start' }}>
+                  <span className="mono-label" style={{ color: 'var(--border)' }}>0{i + 1}</span>
+                  <p style={{ fontSize: '0.9375rem', color: 'var(--fg)', lineHeight: 1.75 }}>{w}</p>
+                </div>
+              ))}
+              <div style={{ borderTop: '1px solid var(--border)' }} />
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Gallery */}
+      {p.images.length > 0 && (
+        <section style={{ background: 'var(--bg)', paddingBlock: 'clamp(3rem,7vw,5rem)' }}>
+          <div className="container-custom">
+            <ScrollReveal>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1px', background: 'var(--border)' }}>
+                {p.images.map((img: string, i: number) => (
+                  <div key={i} style={{ aspectRatio: '4/3', overflow: 'hidden', background: 'var(--warm)' }}>
+                    <img src={img} alt={`${p.client} ${i + 1}`}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
           </div>
+        </section>
+      )}
+
+      {/* Details */}
+      <section style={{ background: 'var(--bg)', paddingBlock: 'clamp(3rem,7vw,5rem)' }}>
+        <div className="container-custom">
+          <ScrollReveal>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              {Object.entries(p.details).map(([k, v]) => (
+                <div key={k} style={{ display: 'grid', gridTemplateColumns: '180px 1fr', gap: '1.5rem', paddingBlock: '1.25rem', borderTop: '1px solid var(--border)', alignItems: 'baseline' }}>
+                  <p className="mono-label" style={{ color: 'var(--muted)' }}>{k.toUpperCase()}</p>
+                  <p style={{ fontSize: '0.9375rem', color: 'var(--fg)', fontWeight: 500 }}>{v as string}</p>
+                </div>
+              ))}
+              <div style={{ borderTop: '1px solid var(--border)' }} />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Next project */}
-      <section style={{ background: '#F0EDE6', borderTop: '1px solid #E2DDD7', padding: '3rem 0' }}>
+      <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)', paddingBlock: 'clamp(4rem,8vw,7rem)' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
-              <p style={{ fontSize: 12, color: '#9CA3AF' }}>Siguiente proyecto</p>
-              <Link href={`/work/${p.nextSlug}`}
-                style={{ fontSize: 'clamp(1.1rem,2.5vw,1.5rem)', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-                {p.next}
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </Link>
-            </div>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>SIGUIENTE PROYECTO</p>
+            <Link href={`/work/${p.nextSlug}`} style={{ textDecoration: 'none', display: 'block' }}>
+              <span className="display" style={{ fontSize: 'clamp(3rem,10vw,10rem)', lineHeight: 0.85, color: 'var(--fg)', display: 'block' }}>
+                {p.next.toUpperCase()}
+              </span>
+              <span className="mono-label" style={{ color: 'var(--muted)', marginTop: '1.5rem', display: 'inline-block' }}>VER CASO →</span>
+            </Link>
           </ScrollReveal>
         </div>
       </section>

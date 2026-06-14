@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 
 export default function Terms() {
   return (
-    <main style={{ minHeight: '100vh', background: '#F7F5F1' }}>
-      <Navbar />
+    <main style={{ minHeight: '100vh', background: 'var(--bg)' }}>
+      <Navbar light />
       <section style={{ paddingTop: 68 }}>
         <div className="container-custom" style={{ paddingTop: 'clamp(3rem,8vw,5rem)', paddingBottom: 'clamp(3rem,8vw,5rem)' }}>
           <div style={{ maxWidth: 720 }}>
-            <p className="section-label">Legal</p>
-            <h1 style={{ fontSize: 'clamp(2rem,4vw,3rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: '2rem' }}>
-              Términos y Condiciones
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1rem' }}>RUD STUDIO — LEGAL</p>
+            <h1 className="display" style={{ fontSize: 'clamp(2.5rem, 6vw, 6rem)', color: 'var(--fg)', marginBottom: '2rem' }}>
+              TÉRMINOS Y CONDICIONES
             </h1>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', fontSize: '0.9375rem', color: '#6B7280', lineHeight: 1.75 }}>

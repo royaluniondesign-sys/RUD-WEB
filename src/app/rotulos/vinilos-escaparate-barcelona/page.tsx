@@ -72,82 +72,78 @@ const TIPOS_VINILO = [
 
 export default function VinilosEscaparateBarcelona() {
   return (
-    <main style={{ background: '#F7F5F1' }}>
+    <main style={{ background: 'var(--bg)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar light />
 
       {/* HERO */}
-      <section style={{ position: 'relative', minHeight: '70vh', display: 'flex', alignItems: 'flex-end', overflow: 'hidden' }}>
-        <img
-          src="/services/vinilo-escaparate.avif"
-          alt="Vinilos de escaparate Barcelona — instalación en 48h"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
-        />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(8,7,6,0.97) 0%, rgba(8,7,6,0.55) 50%, rgba(8,7,6,0.15) 100%)' }} />
-        <div className="container-custom" style={{ position: 'relative', zIndex: 2, paddingBottom: 'clamp(2.5rem,6vw,5rem)', paddingTop: 120 }}>
+      <section style={{ background: 'var(--bg)', minHeight: '60svh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', paddingTop: '8rem', paddingBottom: 'clamp(3rem, 6vw, 5rem)' }}>
+        <div className="container-custom">
           <nav style={{ marginBottom: '1.5rem' }}>
-            <Link href="/rotulos" style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontWeight: 500 }}>
-              ← Rótulos Barcelona
+            <Link href="/rotulos" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
+              ← RÓTULOS BARCELONA
             </Link>
           </nav>
-          <p style={{ fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: 'rgba(255,255,255,0.4)', marginBottom: '1rem' }}>
-            Instalación en 48-72h · Sin obra · Removible
+          <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
+            RUD STUDIO — BARCELONA · INSTALACIÓN EN 48-72H · SIN OBRA · REMOVIBLE
           </p>
-          <h1 style={{ fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: 'white', letterSpacing: '-0.03em', lineHeight: 1.1, maxWidth: '22ch', marginBottom: '1.5rem' }}>
-            Vinilos para escaparates en Barcelona{' '}
-            <em style={{ fontWeight: 300, fontStyle: 'italic', color: 'rgba(255,255,255,0.4)' }}>listos en 48h.</em>
+          <h1>
+            <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}>VINILOS</span>
+            <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}>ESCAPARATE</span>
+            <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block', opacity: 0.28 }}>BARCELONA</span>
           </h1>
-          <p style={{ fontSize: 'clamp(0.9rem,1.6vw,1.05rem)', color: 'rgba(255,255,255,0.6)', maxWidth: '50ch', lineHeight: 1.7, marginBottom: '2rem' }}>
-            Corte, impreso, esmerilado o microperforado. Diseño, impresión e instalación en un solo servicio. La solución más ágil para dar imagen a tu local en Barcelona.
-          </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
-            <TrackedLink href="/contact?servicio=vinilos" label="Presupuesto vinilos" location="hero-vinilos"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.9rem 1.75rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
-              Pedir presupuesto gratis →
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', paddingTop: '1.5rem', marginTop: 'clamp(2rem, 4vw, 3rem)', borderTop: '1px solid var(--border)' }}>
+            <p className="mono-label" style={{ color: 'var(--muted)' }}>CORTE · IMPRESO · ESMERILADO · MICROPERFORADO</p>
+            <TrackedLink href="/contact?servicio=vinilos" label="Presupuesto vinilos" location="hero-vinilos" className="mono-label" style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+              PEDIR PRESUPUESTO GRATIS →
             </TrackedLink>
-            <a href="https://t.me/+34645593227" target="_blank" rel="noopener noreferrer"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.9rem 1.5rem', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: 'white', borderRadius: 9999, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>
-              Telegram · respuesta el mismo día
-            </a>
           </div>
         </div>
       </section>
 
       {/* TIPOS */}
-      <section style={{ background: '#0A0908', padding: 'clamp(4rem,8vw,6rem) 0' }}>
+      <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: 10 }}>Tipos de vinilo</p>
-            <h2 style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', fontWeight: 800, color: 'white', letterSpacing: '-0.04em', marginBottom: 'clamp(2rem,4vw,3rem)' }}>
-              ¿Qué tipo de vinilo necesitas?
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — TIPOS DE VINILO</p>
+            <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              ¿QUÉ TIPO<br /><em>NECESITAS?</em>
             </h2>
           </ScrollReveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px,1fr))', gap: '1px', background: '#1C1C1C', borderRadius: 16, overflow: 'hidden' }}>
+          <div>
             {TIPOS_VINILO.map((t, i) => (
-              <ScrollReveal key={t.tipo} delay={i * 60}>
-                <div style={{ background: '#0A0908', padding: '2rem 1.75rem' }}>
-                  <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'white', marginBottom: '0.4rem', letterSpacing: '-0.02em' }}>{t.tipo}</h3>
-                  <p style={{ fontSize: 11, color: '#6B7280', textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: '1rem' }}>{t.uso}</p>
-                  <p style={{ fontSize: 13, color: '#4B5563', lineHeight: 1.7, marginBottom: '1rem' }}>{t.desc}</p>
-                  <p style={{ fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.5)' }}>{t.desde}</p>
+              <ScrollReveal key={t.tipo} delay={i * 40}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '2rem', padding: '1.5rem 0', borderTop: '1px solid var(--border)', alignItems: 'start' }}>
+                  <div>
+                    <p style={{ fontWeight: 600, fontSize: '1rem', color: 'var(--fg)', marginBottom: '0.25rem' }}>{t.tipo}</p>
+                    <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.5rem' }}>{t.uso}</p>
+                    <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>{t.desc}</p>
+                  </div>
+                  <p style={{ fontWeight: 700, fontSize: '1.125rem', color: 'var(--fg)', whiteSpace: 'nowrap' }}>{t.desde}</p>
                 </div>
               </ScrollReveal>
             ))}
+            <div style={{ borderTop: '1px solid var(--border)' }} />
           </div>
+          <ScrollReveal>
+            <p style={{ fontSize: '0.8125rem', color: 'var(--muted)', marginTop: '1.5rem', lineHeight: 1.7 }}>
+              Todos los precios incluyen diseño, fabricación e instalación. IVA no incluido.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* SECTORES */}
-      <section style={{ background: '#F7F5F1', padding: 'clamp(4rem,8vw,6rem) 0' }}>
-        <div className="container-custom" style={{ maxWidth: 860 }}>
+      <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
+        <div className="container-custom">
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#9CA3AF', marginBottom: 10 }}>¿Para quién?</p>
-            <h2 style={{ fontSize: 'clamp(1.8rem,4vw,2.8rem)', fontWeight: 800, letterSpacing: '-0.04em', marginBottom: 'clamp(1.5rem,3vw,2.5rem)' }}>
-              Sectores que más nos piden vinilos
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — APLICACIONES</p>
+            <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              SECTORES<br /><em>& USOS</em>
             </h2>
           </ScrollReveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px,1fr))', gap: '1.5rem' }}>
+          <div>
             {[
               { sector: 'Comercios & retail', desc: 'Cambia el escaparate por temporadas, comunica promociones y colecciones sin obra. ROI inmediato.' },
               { sector: 'Clínicas & salud', desc: 'Vinilos esmerilados para privacidad en ventanas de sala de espera + logotipo recortado en puerta.' },
@@ -156,102 +152,124 @@ export default function VinilosEscaparateBarcelona() {
               { sector: 'Apertura de local', desc: 'El primer rótulo que se instala en una apertura. Imagen desde el primer día, entrega urgente.' },
               { sector: 'Franquicias', desc: 'Aplicación de manual de identidad en escaparates de toda la red. Precios especiales por volumen.' },
             ].map((s, i) => (
-              <ScrollReveal key={s.sector} delay={i * 50}>
-                <div style={{ borderTop: '2px solid #E5E0D8', paddingTop: '1.5rem' }}>
-                  <h3 style={{ fontWeight: 700, fontSize: '0.95rem', color: '#0A0908', marginBottom: '0.6rem' }}>{s.sector}</h3>
-                  <p style={{ fontSize: 13, color: '#6B7280', lineHeight: 1.7 }}>{s.desc}</p>
+              <ScrollReveal key={s.sector} delay={i * 40}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', padding: '1.5rem 0', borderTop: '1px solid var(--border)', alignItems: 'start' }}>
+                  <p style={{ fontWeight: 600, fontSize: '0.95rem', color: 'var(--fg)' }}>{s.sector}</p>
+                  <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>{s.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
+            <div style={{ borderTop: '1px solid var(--border)' }} />
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESO */}
+      <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
+        <div className="container-custom">
+          <ScrollReveal>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>03 — CÓMO FUNCIONA</p>
+            <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              DEL BOCETO<br /><em>A LA PARED</em>
+            </h2>
+          </ScrollReveal>
+          <div>
+            {[
+              { n: '01', t: 'Contacto y medidas', d: 'Mándanos fotos del escaparate y medidas aproximadas. Respondemos el mismo día con presupuesto.' },
+              { n: '02', t: 'Arte final aprobado', d: 'Recibes el diseño en 24h para aprobación. Sin coste adicional, revisiones incluidas.' },
+              { n: '03', t: 'Impresión en taller', d: 'Imprimimos en alta resolución en nuestro taller. Laminación UV incluida en todos los vinilos impresos.' },
+              { n: '04', t: 'Instalación en 48-72h', d: 'Nuestro equipo instala en el cristal en el horario que mejor te vaya. Sin obra, sin polvo.' },
+            ].map((s, i) => (
+              <ScrollReveal key={s.n} delay={i * 60}>
+                <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr 1fr', gap: '2rem', padding: '1.75rem 0', borderTop: '1px solid var(--border)', alignItems: 'start' }}>
+                  <p className="mono-label" style={{ color: 'var(--muted)' }}>{s.n}</p>
+                  <p style={{ fontWeight: 600, fontSize: '0.95rem', color: 'var(--fg)' }}>{s.t}</p>
+                  <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>{s.d}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+            <div style={{ borderTop: '1px solid var(--border)' }} />
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section style={{ background: 'white', padding: 'clamp(3.5rem,7vw,5rem) 0' }}>
-        <div className="container-custom" style={{ maxWidth: 780 }}>
+      <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
+        <div className="container-custom">
           <ScrollReveal>
-            <h2 style={{ fontSize: 'clamp(1.5rem,3vw,2.2rem)', fontWeight: 800, letterSpacing: '-0.03em', marginBottom: 'clamp(1.5rem,3vw,2.5rem)' }}>
-              Preguntas frecuentes · Vinilos escaparate Barcelona
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>04 — PREGUNTAS FRECUENTES</p>
+            <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              PREGUNTAS<br /><em>FRECUENTES</em>
             </h2>
           </ScrollReveal>
           <div>
             {faqSchema.mainEntity.map((item, i) => (
               <ScrollReveal key={i} delay={i * 30}>
-                <details style={{ borderTop: '1px solid #E5E0D8' }} className="faq-item">
-                  <summary style={{ padding: '1.25rem 0', fontSize: '0.95rem', fontWeight: 600, cursor: 'pointer', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, userSelect: 'none' }}>
+                <details style={{ borderTop: '1px solid var(--border)' }}>
+                  <summary style={{ padding: '1.25rem 0', fontSize: '0.95rem', fontWeight: 600, cursor: 'pointer', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, userSelect: 'none', color: 'var(--fg)' }}>
                     <span>{item.name}</span>
-                    <span className="faq-icon" style={{ flexShrink: 0, width: 22, height: 22, borderRadius: '50%', background: '#E5E0D8', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 15, fontWeight: 300, color: '#9CA3AF', transition: 'transform 0.3s ease, background 0.2s' }}>+</span>
+                    <span style={{ flexShrink: 0, width: 22, height: 22, border: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, fontWeight: 300, color: 'var(--muted)' }}>+</span>
                   </summary>
-                  <p style={{ fontSize: 14, color: '#6B7280', lineHeight: 1.8, paddingBottom: '1.25rem', maxWidth: '65ch' }}>{item.acceptedAnswer.text}</p>
+                  <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.8, paddingBottom: '1.25rem', maxWidth: '65ch' }}>{item.acceptedAnswer.text}</p>
                 </details>
               </ScrollReveal>
             ))}
-            <div style={{ borderTop: '1px solid #E5E0D8' }} />
+            <div style={{ borderTop: '1px solid var(--border)' }} />
           </div>
-          <ScrollReveal>
-            <p style={{ fontSize: 13, color: '#9CA3AF', marginTop: '1.5rem' }}>
-              Más info en:{' '}
-              <Link href="/blog/vinilos-escaparate-barcelona-precio-instalacion" style={{ color: '#0A0908', fontWeight: 600, textDecoration: 'underline' }}>
-                Guía completa de vinilos para escaparate en Barcelona →
-              </Link>
-            </p>
-          </ScrollReveal>
         </div>
       </section>
 
       {/* OTROS TIPOS */}
-      <section style={{ background: '#0A0908', padding: 'clamp(3rem,6vw,5rem) 0' }}>
+      <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: 10 }}>Más tipos de rótulo</p>
-            <h2 style={{ fontSize: 'clamp(1.4rem,3vw,2rem)', fontWeight: 800, color: 'white', letterSpacing: '-0.03em', marginBottom: '1.5rem' }}>También fabricamos</h2>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>TAMBIÉN FABRICAMOS</p>
+            <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              MÁS TIPOS<br /><em>DE RÓTULO</em>
+            </h2>
           </ScrollReveal>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+          <div>
             {[
               { href: '/rotulos/neon-led-barcelona', label: 'Neón LED' },
               { href: '/rotulos/letras-corporeas-barcelona', label: 'Letras Corpóreas' },
               { href: '/rotulos/cajas-de-luz-barcelona', label: 'Cajas de Luz' },
               { href: '/rotulos/senaletica-interior-barcelona', label: 'Señalética Interior' },
               { href: '/rotulos/publicidad-exterior-barcelona', label: 'Publicidad Exterior' },
-              { href: '/rotulos', label: 'Ver todos los rótulos →' },
-            ].map(item => (
-              <Link key={item.href} href={item.href}
-                style={{ padding: '0.75rem 1.5rem', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.7)', borderRadius: 9999, fontSize: 13, fontWeight: 600, textDecoration: 'none', display: 'inline-block' }}>
-                {item.label}
-              </Link>
+              { href: '/rotulos', label: 'Ver todos los rótulos' },
+            ].map((item, i) => (
+              <ScrollReveal key={item.href} delay={i * 30}>
+                <Link href={item.href} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.25rem 0', borderTop: '1px solid var(--border)', textDecoration: 'none', color: 'var(--fg)', gap: '2rem' }}>
+                  <span style={{ fontWeight: 600, fontSize: '0.95rem' }}>{item.label}</span>
+                  <span className="mono-label" style={{ color: 'var(--muted)' }}>→</span>
+                </Link>
+              </ScrollReveal>
             ))}
+            <div style={{ borderTop: '1px solid var(--border)' }} />
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section style={{ background: '#0A0908', padding: 'clamp(4rem,8vw,7rem) 0', borderTop: '1px solid #1A1A1A' }}>
+      <section style={{ background: 'var(--bg)', padding: 'clamp(5rem,10vw,8rem) 0', borderTop: '1px solid var(--border)' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.18em', color: '#6B7280', marginBottom: '1rem' }}>Presupuesto el mismo día</p>
-            <h2 style={{ fontSize: 'clamp(2rem,5vw,4rem)', fontWeight: 800, color: 'white', letterSpacing: '-0.04em', lineHeight: 1.0, maxWidth: '18ch', marginBottom: '1.5rem' }}>
-              Instalado en 48h.<br />
-              <em style={{ fontWeight: 300, fontStyle: 'italic', color: 'rgba(255,255,255,0.45)' }}>Mándanos las fotos.</em>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
+              Presupuesto gratuito · Respondemos en 24h
+            </p>
+            <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+              PIDE TU<br /><em>PRESUPUESTO</em>
             </h2>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
-              <TrackedLink href="/contact?servicio=vinilos" label="Presupuesto vinilos bottom" location="bottom-vinilos"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 2rem', background: 'white', color: '#0A0908', borderRadius: 9999, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
-                Pedir presupuesto →
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
+              <TrackedLink href="/contact?servicio=vinilos" label="Presupuesto vinilos bottom" location="bottom-vinilos" className="mono-label" style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+                SOLICITAR PRESUPUESTO →
               </TrackedLink>
-              <Link href="/rotulos"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '1rem 1.75rem', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.7)', borderRadius: 9999, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>
-                ← Todos los rótulos
-              </Link>
+              <a href="https://t.me/+34645593227" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
+                TELEGRAM · RESPUESTA INMEDIATA
+              </a>
             </div>
           </ScrollReveal>
         </div>
       </section>
-
-      <style>{`
-        .faq-item[open] .faq-icon { transform: rotate(45deg); background: #0A0908; color: white; }
-        .faq-item summary::-webkit-details-marker { display: none; }
-      `}</style>
     </main>
   )
 }
