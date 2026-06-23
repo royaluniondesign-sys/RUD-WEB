@@ -7,12 +7,12 @@ export const metadata = {
   title: 'Rótulos Eixample Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
   description: 'Rótulos a medida en el Eixample Barcelona: neón LED, letras corpóreas, cajas de luz y vinilos. Cumplimos la normativa de fachadas del Ayuntamiento. Presupuesto en 24h.',
   keywords: 'rótulos Eixample Barcelona, rótulos Passeig de Gràcia, rótulo Eixample normativa fachada, neón LED Eixample, letras corpóreas Eixample, señalética Eixample Barcelona',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/eixample-barcelona' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/eixample-barcelona' },
   openGraph: {
     title: 'Rótulos Eixample Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
     description: 'Rótulos a medida en el Eixample: neón LED, letras corpóreas, cajas de luz. Normativa municipal incluida. Presupuesto gratis en 24h.',
-    url: 'https://royaluniondesign.com/rotulos/eixample-barcelona',
-    images: [{ url: 'https://royaluniondesign.com/services/neon-interior.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/eixample-barcelona',
+    images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },
 }
 
@@ -21,9 +21,9 @@ const schema = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://royaluniondesign.com/#organization',
+      '@id': 'https://www.royaluniondesign.com/#organization',
       name: 'RUD Studio',
-      url: 'https://royaluniondesign.com',
+      url: 'https://www.royaluniondesign.com',
       telephone: '+34645593227',
       email: 'hello@royaluniondesign.com',
       address: {
@@ -36,14 +36,14 @@ const schema = {
     },
     {
       '@type': 'Service',
-      '@id': 'https://royaluniondesign.com/rotulos/eixample-barcelona#service',
+      '@id': 'https://www.royaluniondesign.com/rotulos/eixample-barcelona#service',
       name: 'Rótulos Eixample Barcelona',
       description: 'Fabricación e instalación de rótulos a medida en el Eixample de Barcelona. Neón LED, letras corpóreas, cajas de luz, vinilos. Cumplimos normativa municipal de fachadas.',
-      url: 'https://royaluniondesign.com/rotulos/eixample-barcelona',
-      provider: { '@id': 'https://royaluniondesign.com/#organization' },
+      url: 'https://www.royaluniondesign.com/rotulos/eixample-barcelona',
+      provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
       areaServed: { '@type': 'Place', name: 'Eixample, Barcelona' },
       serviceType: 'Fabricación e instalación de rótulos',
-      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
     },
   ],
 }

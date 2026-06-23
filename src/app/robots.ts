@@ -12,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'anthropic-ai', allow: '/' },
       { userAgent: 'cohere-ai', allow: '/' },
     ],
-    sitemap: 'https://royaluniondesign.com/sitemap.xml',
+    sitemap: 'https://www.royaluniondesign.com/sitemap.xml',
   }
 }

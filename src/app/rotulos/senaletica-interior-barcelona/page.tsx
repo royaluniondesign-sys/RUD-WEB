@@ -7,26 +7,26 @@ export const metadata = {
   title: 'Señalética Interior Barcelona · Corporativa y Hotelera | RUD Studio',
   description: 'Señalética interior en Barcelona para oficinas, hoteles, clínicas y empresas. Directorios, wayfinding, señalización de accesos. Presupuesto en 24h.',
   keywords: 'señalética interior Barcelona, señalética corporativa Barcelona, señalética hotelera Barcelona, wayfinding Barcelona, señalización oficinas Barcelona, señalética clínicas Barcelona, directorios corporativos Barcelona',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/senaletica-interior-barcelona' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/senaletica-interior-barcelona' },
   openGraph: {
     title: 'Señalética Interior Barcelona · Corporativa y Hotelera | RUD Studio',
     description: 'Señalética interior para oficinas, hoteles y clínicas en Barcelona. Directorios, wayfinding y señalización de accesos. Presupuesto en 24h.',
-    url: 'https://royaluniondesign.com/rotulos/senaletica-interior-barcelona',
-    images: [{ url: 'https://royaluniondesign.com/services/senaletica-interior.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/senaletica-interior-barcelona',
+    images: [{ url: 'https://www.royaluniondesign.com/services/senaletica-interior.avif' }],
   },
 }
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  '@id': 'https://royaluniondesign.com/rotulos/senaletica-interior-barcelona#service',
+  '@id': 'https://www.royaluniondesign.com/rotulos/senaletica-interior-barcelona#service',
   name: 'Señalética interior Barcelona',
   description: 'Diseño y fabricación de señalética interior corporativa y hotelera en Barcelona. Directorios, wayfinding, señalización de accesos y emergencias.',
-  url: 'https://royaluniondesign.com/rotulos/senaletica-interior-barcelona',
-  provider: { '@id': 'https://royaluniondesign.com/#organization' },
+  url: 'https://www.royaluniondesign.com/rotulos/senaletica-interior-barcelona',
+  provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
   areaServed: { '@type': 'City', name: 'Barcelona' },
   serviceType: 'Fabricación de señalética interior',
-  isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+  isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
 }
 
 const TIPOS = [

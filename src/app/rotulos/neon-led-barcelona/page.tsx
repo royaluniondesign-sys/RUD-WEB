@@ -7,26 +7,26 @@ export const metadata = {
   title: 'Neón LED Barcelona · Fabricación e Instalación a Medida | RUD Studio',
   description: 'Neón LED personalizado en Barcelona: cualquier forma, tipografía o logotipo. Fabricación en taller propio, instalación incluida. Presupuesto gratis en 24h.',
   keywords: 'neón LED Barcelona, rótulo neón LED Barcelona, neón personalizado Barcelona, neón LED precio Barcelona, neón LED escaparate Barcelona, neón LED hostelería Barcelona',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/neon-led-barcelona' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/neon-led-barcelona' },
   openGraph: {
     title: 'Neón LED Barcelona · Fabricación e Instalación | RUD Studio',
     description: 'Neón LED personalizado en Barcelona: cualquier forma o tipografía, instalación incluida, garantía 2 años.',
-    url: 'https://royaluniondesign.com/rotulos/neon-led-barcelona',
-    images: [{ url: 'https://royaluniondesign.com/services/neon-interior.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/neon-led-barcelona',
+    images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },
 }
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  '@id': 'https://royaluniondesign.com/rotulos/neon-led-barcelona#service',
+  '@id': 'https://www.royaluniondesign.com/rotulos/neon-led-barcelona#service',
   name: 'Neón LED personalizado Barcelona',
   description: 'Fabricación e instalación de neón LED a medida en Barcelona. Cualquier forma, tipografía o logotipo. Taller propio, garantía 2 años.',
-  url: 'https://royaluniondesign.com/rotulos/neon-led-barcelona',
-  provider: { '@id': 'https://royaluniondesign.com/#organization' },
+  url: 'https://www.royaluniondesign.com/rotulos/neon-led-barcelona',
+  provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
   areaServed: { '@type': 'City', name: 'Barcelona' },
   serviceType: 'Fabricación de neón LED',
-  isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+  isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'EUR',

@@ -45,7 +45,7 @@ function buildAutoReply(safeName: string): string {
   return `
     <div style="font-family:'Helvetica Neue',sans-serif;max-width:600px;margin:0 auto;padding:40px 24px;background:#F7F5F1;color:#0A0A0A;">
       <div style="margin-bottom:32px">
-        <img src="https://royaluniondesign.com/logo-rud-web.svg" alt="RUD Studio" style="height:28px;opacity:.85" />
+        <img src="https://www.royaluniondesign.com/logo-rud-web.svg" alt="RUD Studio" style="height:28px;opacity:.85" />
       </div>
       <h1 style="font-size:24px;font-weight:700;letter-spacing:-.03em;margin:0 0 12px;line-height:1.2">
         Gracias, ${safeName.split(' ')[0]}.

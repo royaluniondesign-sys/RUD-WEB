@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 
-const BASE = 'https://royaluniondesign.com'
+const BASE = 'https://www.royaluniondesign.com'
 
 const d = (s: string) => new Date(s)
 

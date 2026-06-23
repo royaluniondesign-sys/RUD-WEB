@@ -7,12 +7,12 @@ export const metadata = {
   title: 'Rótulos Terrassa · Neón LED, Letras Corpóreas e Instalación | RUD Studio',
   description: 'Empresa de rótulos en Terrassa: neón LED, letras corpóreas, cajas de luz y señalética para comercios, industria y hostelería. Fabricación propia en Cerdanyola del Vallès. Presupuesto gratis.',
   keywords: 'rótulos Terrassa, neón LED Terrassa, letras corpóreas Terrassa, rótulo luminoso Terrassa, señalética Terrassa Barcelona',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/terrassa-barcelona' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/terrassa-barcelona' },
   openGraph: {
     title: 'Rótulos Terrassa · Neón LED, Letras Corpóreas e Instalación | RUD Studio',
     description: 'Empresa de rótulos en Terrassa: neón LED, letras corpóreas, cajas de luz y señalética para comercios, industria y hostelería. Fabricación propia en Cerdanyola del Vallès. Presupuesto gratis.',
-    url: 'https://royaluniondesign.com/rotulos/terrassa-barcelona',
-    images: [{ url: 'https://royaluniondesign.com/services/neon-interior.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/terrassa-barcelona',
+    images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },
 }
 
@@ -21,9 +21,9 @@ const schema = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://royaluniondesign.com/#organization',
+      '@id': 'https://www.royaluniondesign.com/#organization',
       name: 'RUD Studio',
-      url: 'https://royaluniondesign.com',
+      url: 'https://www.royaluniondesign.com',
       telephone: '+34645593227',
       email: 'hello@royaluniondesign.com',
       address: {
@@ -36,14 +36,14 @@ const schema = {
     },
     {
       '@type': 'Service',
-      '@id': 'https://royaluniondesign.com/rotulos/terrassa-barcelona#service',
+      '@id': 'https://www.royaluniondesign.com/rotulos/terrassa-barcelona#service',
       name: 'Rótulos Terrassa',
       description: 'Fabricación e instalación de rótulos a medida en Terrassa. Neón LED, letras corpóreas, cajas de luz y señalética para comercios, industria y hostelería. Fabricación propia en Cerdanyola del Vallès.',
-      url: 'https://royaluniondesign.com/rotulos/terrassa-barcelona',
-      provider: { '@id': 'https://royaluniondesign.com/#organization' },
+      url: 'https://www.royaluniondesign.com/rotulos/terrassa-barcelona',
+      provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
       areaServed: { '@type': 'Place', name: 'Terrassa' },
       serviceType: 'Fabricación e instalación de rótulos',
-      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
     },
   ],
 }

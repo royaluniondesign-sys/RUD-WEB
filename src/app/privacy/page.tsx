@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar'
 export const metadata: Metadata = {
   title: 'Política de Privacidad — RUD Studio',
   description: 'Política de privacidad de RUD Studio. Cómo tratamos tus datos personales.',
-  alternates: { canonical: 'https://royaluniondesign.com/privacy' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/privacy' },
   robots: { index: false, follow: false },
 }
 

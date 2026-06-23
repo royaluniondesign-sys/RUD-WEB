@@ -7,12 +7,12 @@ export const metadata = {
   title: 'Rótulos Cerdanyola del Vallès · Neón LED y Letras Corpóreas | RUD Studio',
   description: 'Empresa de rótulos en Cerdanyola del Vallès con taller propio. Neón LED, letras corpóreas, cajas de luz y vinilos. Fabricamos e instalamos en el mismo día. Presupuesto gratis en 2h.',
   keywords: 'rótulos Cerdanyola del Vallès, neón LED Cerdanyola, letras corpóreas Cerdanyola, rótulo luminoso Cerdanyola del Vallès, señalética Cerdanyola',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/cerdanyola-del-valles' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/cerdanyola-del-valles' },
   openGraph: {
     title: 'Rótulos Cerdanyola del Vallès · Neón LED y Letras Corpóreas | RUD Studio',
     description: 'Empresa de rótulos en Cerdanyola del Vallès con taller propio. Neón LED, letras corpóreas, cajas de luz y vinilos. Presupuesto gratis en 2h.',
-    url: 'https://royaluniondesign.com/rotulos/cerdanyola-del-valles',
-    images: [{ url: 'https://royaluniondesign.com/services/neon-interior.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/cerdanyola-del-valles',
+    images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },
 }
 
@@ -21,9 +21,9 @@ const schema = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://royaluniondesign.com/#organization',
+      '@id': 'https://www.royaluniondesign.com/#organization',
       name: 'RUD Studio',
-      url: 'https://royaluniondesign.com',
+      url: 'https://www.royaluniondesign.com',
       telephone: '+34645593227',
       email: 'hello@royaluniondesign.com',
       address: {
@@ -36,14 +36,14 @@ const schema = {
     },
     {
       '@type': 'Service',
-      '@id': 'https://royaluniondesign.com/rotulos/cerdanyola-del-valles#service',
+      '@id': 'https://www.royaluniondesign.com/rotulos/cerdanyola-del-valles#service',
       name: 'Rótulos Cerdanyola del Vallès',
       description: 'Fabricación e instalación de rótulos a medida en Cerdanyola del Vallès. Neón LED, letras corpóreas, cajas de luz, vinilos. Taller propio en el Carrer Sant Salvador 11.',
-      url: 'https://royaluniondesign.com/rotulos/cerdanyola-del-valles',
-      provider: { '@id': 'https://royaluniondesign.com/#organization' },
+      url: 'https://www.royaluniondesign.com/rotulos/cerdanyola-del-valles',
+      provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
       areaServed: { '@type': 'Place', name: 'Cerdanyola del Vallès' },
       serviceType: 'Fabricación e instalación de rótulos',
-      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
     },
   ],
 }

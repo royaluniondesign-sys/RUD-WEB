@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar'
 export const metadata: Metadata = {
   title: 'Términos y Condiciones — RUD Studio',
   description: 'Términos y condiciones de uso del sitio web de RUD Studio.',
-  alternates: { canonical: 'https://royaluniondesign.com/terms' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/terms' },
   robots: { index: false, follow: false },
 }
 

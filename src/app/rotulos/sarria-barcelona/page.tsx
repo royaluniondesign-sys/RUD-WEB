@@ -7,12 +7,12 @@ export const metadata = {
   title: 'Rótulos Sarrià Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
   description: 'Rótulos de alta calidad en Sarrià-Sant Gervasi, Zona Alta de Barcelona: letras corpóreas premium, neón LED, señalética para tiendas de lujo, clínicas privadas y restaurantes de alto standing. Presupuesto en 24h.',
   keywords: 'rótulos Sarrià Barcelona, rótulos Sant Gervasi Barcelona, rótulos Zona Alta Barcelona, letras corpóreas premium Barcelona, señalética clínicas privadas Barcelona, rótulos tiendas lujo Barcelona',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/sarria-barcelona' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/sarria-barcelona' },
   openGraph: {
     title: 'Rótulos Sarrià Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
     description: 'Rótulos premium en Sarrià-Sant Gervasi: letras corpóreas de lujo, neón LED, señalética para negocios de alto standing. Presupuesto gratis en 24h.',
-    url: 'https://royaluniondesign.com/rotulos/sarria-barcelona',
-    images: [{ url: 'https://royaluniondesign.com/services/neon-interior.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/sarria-barcelona',
+    images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },
 }
 
@@ -21,9 +21,9 @@ const schema = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://royaluniondesign.com/#organization',
+      '@id': 'https://www.royaluniondesign.com/#organization',
       name: 'RUD Studio',
-      url: 'https://royaluniondesign.com',
+      url: 'https://www.royaluniondesign.com',
       telephone: '+34645593227',
       email: 'hello@royaluniondesign.com',
       address: {
@@ -36,14 +36,14 @@ const schema = {
     },
     {
       '@type': 'Service',
-      '@id': 'https://royaluniondesign.com/rotulos/sarria-barcelona#service',
+      '@id': 'https://www.royaluniondesign.com/rotulos/sarria-barcelona#service',
       name: 'Rótulos Sarrià Barcelona',
       description: 'Fabricación e instalación de rótulos premium en Sarrià-Sant Gervasi y la Zona Alta de Barcelona. Letras corpóreas, neón LED y señalética exclusiva para negocios de alto standing.',
-      url: 'https://royaluniondesign.com/rotulos/sarria-barcelona',
-      provider: { '@id': 'https://royaluniondesign.com/#organization' },
+      url: 'https://www.royaluniondesign.com/rotulos/sarria-barcelona',
+      provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
       areaServed: { '@type': 'Place', name: 'Sarrià-Sant Gervasi, Barcelona' },
       serviceType: 'Fabricación e instalación de rótulos',
-      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
     },
   ],
 }

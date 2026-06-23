@@ -7,26 +7,26 @@ export const metadata = {
   title: 'Publicidad Exterior Barcelona · Lonas, Banderolas, Vallas | RUD Studio',
   description: 'Publicidad exterior en Barcelona: lonas, banderolas, vallas publicitarias, wrapping de vehículos y fachadas. Diseño, impresión e instalación. Presupuesto en 24h.',
   keywords: 'publicidad exterior Barcelona, lonas publicitarias Barcelona, banderolas Barcelona, vallas publicitarias Barcelona, wrapping vehículos Barcelona, rótulos fachada Barcelona, publicidad gran formato Barcelona',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/publicidad-exterior-barcelona' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/publicidad-exterior-barcelona' },
   openGraph: {
     title: 'Publicidad Exterior Barcelona · Lonas y Banderolas | RUD Studio',
     description: 'Publicidad exterior en Barcelona: lonas, banderolas y vallas. Diseño, impresión e instalación. Presupuesto en 24h.',
-    url: 'https://royaluniondesign.com/rotulos/publicidad-exterior-barcelona',
-    images: [{ url: 'https://royaluniondesign.com/services/publicidad-exterior.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/publicidad-exterior-barcelona',
+    images: [{ url: 'https://www.royaluniondesign.com/services/publicidad-exterior.avif' }],
   },
 }
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  '@id': 'https://royaluniondesign.com/rotulos/publicidad-exterior-barcelona#service',
+  '@id': 'https://www.royaluniondesign.com/rotulos/publicidad-exterior-barcelona#service',
   name: 'Publicidad exterior Barcelona',
   description: 'Diseño, impresión e instalación de publicidad exterior en Barcelona: lonas, banderolas, vallas, wrapping de vehículos y fachadas.',
-  url: 'https://royaluniondesign.com/rotulos/publicidad-exterior-barcelona',
-  provider: { '@id': 'https://royaluniondesign.com/#organization' },
+  url: 'https://www.royaluniondesign.com/rotulos/publicidad-exterior-barcelona',
+  provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
   areaServed: { '@type': 'City', name: 'Barcelona' },
   serviceType: 'Publicidad exterior',
-  isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+  isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
 }
 
 const FORMATOS = [

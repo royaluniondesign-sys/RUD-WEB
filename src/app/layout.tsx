@@ -10,46 +10,46 @@ export const metadata: Metadata = {
   title: 'RUD Studio | Rótulos, Carteles, Branding y Diseño Web en Barcelona',
   description: 'Empresa de rótulos luminosos, carteles y vinilos para escaparates en Barcelona. También branding, identidad visual y diseño web profesional. Presupuesto en 24h sin compromiso.',
   keywords: 'rótulos Barcelona,carteles luminosos Barcelona,vinilos escaparate Barcelona,letras corpóreas Barcelona,rótulos neón Barcelona,rótulos LED Barcelona,señalética corporativa Barcelona,empresa rótulos Barcelona,branding Barcelona,agencia diseño web Barcelona,identidad visual Barcelona,e-commerce Shopify Barcelona,Royal Union Design,RUD Studio',
-  authors: [{ name: 'RUD Studio', url: 'https://royaluniondesign.com' }],
+  authors: [{ name: 'RUD Studio', url: 'https://www.royaluniondesign.com' }],
   creator: 'RUD Studio',
   publisher: 'RUD Studio',
   robots: { index: true, follow: true },
-  alternates: { canonical: 'https://royaluniondesign.com/' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/' },
   icons: {
     apple: [{ url: '/logo-rud.png', sizes: '180x180', type: 'image/png' }],
   },
   openGraph: {
     title: 'RUD Studio | Rótulos, Carteles, Branding y Diseño Web en Barcelona',
     description: 'Empresa de rótulos luminosos, carteles y vinilos en Barcelona. Branding, diseño web y e-commerce. Presupuesto en 24h.',
-    url: 'https://royaluniondesign.com',
+    url: 'https://www.royaluniondesign.com',
     siteName: 'RUD Studio',
     locale: 'es_ES',
     type: 'website',
-    images: [{ url: 'https://royaluniondesign.com/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.royaluniondesign.com/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'RUD Studio | Rótulos y Branding Barcelona',
     description: 'Rótulos luminosos, carteles, vinilos y branding en Barcelona. Diseño web y e-commerce.',
-    images: ['https://royaluniondesign.com/og-image.png'],
+    images: ['https://www.royaluniondesign.com/og-image.png'],
   },
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  '@id': 'https://royaluniondesign.com/#organization',
+  '@id': 'https://www.royaluniondesign.com/#organization',
   'name': 'RUD Studio',
   'alternateName': 'Royal Union Design',
   'description': 'Agencia creativa en Barcelona especializada en rótulos luminosos, señalética, branding, identidad visual, diseño web y automatización IA.',
-  'url': 'https://royaluniondesign.com',
+  'url': 'https://www.royaluniondesign.com',
   'logo': {
     '@type': 'ImageObject',
-    'url': 'https://royaluniondesign.com/logo-rud-web.svg',
+    'url': 'https://www.royaluniondesign.com/logo-rud-web.svg',
     'width': 200,
     'height': 60,
   },
-  'image': 'https://royaluniondesign.com/og-image.png',
+  'image': 'https://www.royaluniondesign.com/og-image.png',
   'email': 'hello@royaluniondesign.com',
   'priceRange': '€€',
   'address': {
@@ -81,7 +81,7 @@ const localBusinessSchema = {
           '@type': 'Service',
           'name': 'Rótulos Luminosos Barcelona',
           'description': 'Fabricación e instalación de rótulos luminosos, neón LED, letras corpóreas y vinilos de escaparate en Barcelona.',
-          'url': 'https://royaluniondesign.com/rotulos',
+          'url': 'https://www.royaluniondesign.com/rotulos',
         },
       },
       {
@@ -90,7 +90,7 @@ const localBusinessSchema = {
           '@type': 'Service',
           'name': 'Branding e Identidad Visual',
           'description': 'Diseño de marca, identidad visual corporativa y sistema de diseño para empresas.',
-          'url': 'https://royaluniondesign.com/services',
+          'url': 'https://www.royaluniondesign.com/services',
         },
       },
       {
@@ -99,7 +99,7 @@ const localBusinessSchema = {
           '@type': 'Service',
           'name': 'Diseño Web y E-commerce',
           'description': 'Diseño y desarrollo de sitios web profesionales, tiendas online Shopify y e-commerce en Barcelona.',
-          'url': 'https://royaluniondesign.com/services',
+          'url': 'https://www.royaluniondesign.com/services',
         },
       },
     ],
@@ -114,12 +114,12 @@ const localBusinessSchema = {
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  '@id': 'https://royaluniondesign.com/#website',
+  '@id': 'https://www.royaluniondesign.com/#website',
   'name': 'RUD Studio',
-  'url': 'https://royaluniondesign.com',
+  'url': 'https://www.royaluniondesign.com',
   'inLanguage': 'es-ES',
   'publisher': {
-    '@id': 'https://royaluniondesign.com/#organization',
+    '@id': 'https://www.royaluniondesign.com/#organization',
   },
 }
 

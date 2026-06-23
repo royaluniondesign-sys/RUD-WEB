@@ -6,21 +6,21 @@ export const metadata = {
   title: 'Empresa de Rótulos y Branding en Barcelona — Quiénes Somos | RUD Studio',
   description: 'RUD Studio: empresa de rótulos luminosos, señalética, branding y diseño web en Barcelona con taller propio. Fabricación, identidad visual y desarrollo web bajo un mismo techo desde Barcelona.',
   keywords: 'empresa rótulos Barcelona, agencia branding Barcelona, fabricación rótulos luminosos Barcelona, quiénes somos, agencia creativa Barcelona, diseño y fabricación rótulos',
-  alternates: { canonical: 'https://royaluniondesign.com/about' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/about' },
   openGraph: {
     title: 'Empresa de Rótulos y Branding en Barcelona — Quiénes Somos | RUD Studio',
     description: 'RUD Studio: fabricamos rótulos luminosos, creamos marcas y desarrollamos webs en Barcelona. Todo bajo un mismo techo.',
-    url: 'https://royaluniondesign.com/about',
+    url: 'https://www.royaluniondesign.com/about',
     siteName: 'RUD Studio',
     locale: 'es_ES',
     type: 'website',
-    images: [{ url: 'https://royaluniondesign.com/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.royaluniondesign.com/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Quiénes somos | RUD Studio Barcelona',
     description: 'Agencia creativa en Barcelona: rótulos luminosos, branding y diseño web bajo un mismo techo.',
-    images: ['https://royaluniondesign.com/og-image.png'],
+    images: ['https://www.royaluniondesign.com/og-image.png'],
   },
 }
 

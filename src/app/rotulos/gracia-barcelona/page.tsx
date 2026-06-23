@@ -7,12 +7,12 @@ export const metadata = {
   title: 'Rótulos Gràcia Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
   description: 'Rótulos artesanales en el barrio de Gràcia, Barcelona: neón LED, letras corpóreas, vinilos y señalética. Para restaurantes, boutiques y estudios creativos. Presupuesto en 24h.',
   keywords: 'rótulos Gràcia Barcelona, rótulo neón LED Gràcia, letras corpóreas Gràcia, rótulos Carrer Verdi, rótulos Plaça del Sol, señalética barrio Gràcia Barcelona',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/gracia-barcelona' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/gracia-barcelona' },
   openGraph: {
     title: 'Rótulos Gràcia Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
     description: 'Rótulos a medida en el barrio de Gràcia: neón LED, letras corpóreas, vinilos. Estilo artesanal y creativo. Presupuesto gratis en 24h.',
-    url: 'https://royaluniondesign.com/rotulos/gracia-barcelona',
-    images: [{ url: 'https://royaluniondesign.com/services/neon-interior.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/gracia-barcelona',
+    images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },
 }
 
@@ -21,9 +21,9 @@ const schema = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://royaluniondesign.com/#organization',
+      '@id': 'https://www.royaluniondesign.com/#organization',
       name: 'RUD Studio',
-      url: 'https://royaluniondesign.com',
+      url: 'https://www.royaluniondesign.com',
       telephone: '+34645593227',
       email: 'hello@royaluniondesign.com',
       address: {
@@ -36,14 +36,14 @@ const schema = {
     },
     {
       '@type': 'Service',
-      '@id': 'https://royaluniondesign.com/rotulos/gracia-barcelona#service',
+      '@id': 'https://www.royaluniondesign.com/rotulos/gracia-barcelona#service',
       name: 'Rótulos Gràcia Barcelona',
       description: 'Fabricación e instalación de rótulos a medida en el barrio de Gràcia, Barcelona. Neón LED, letras corpóreas, vinilos y señalética para negocios creativos e independientes.',
-      url: 'https://royaluniondesign.com/rotulos/gracia-barcelona',
-      provider: { '@id': 'https://royaluniondesign.com/#organization' },
+      url: 'https://www.royaluniondesign.com/rotulos/gracia-barcelona',
+      provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
       areaServed: { '@type': 'Place', name: 'Gràcia, Barcelona' },
       serviceType: 'Fabricación e instalación de rótulos',
-      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
     },
   ],
 }

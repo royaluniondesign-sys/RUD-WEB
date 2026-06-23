@@ -7,12 +7,12 @@ export const metadata = {
   title: 'Rótulos El Born Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
   description: 'Rótulos a medida en El Born y Sant Pere Barcelona: neón LED, letras corpóreas y vinilos para restaurantes, boutiques y galerías. Presupuesto gratis en 24h con render 3D incluido.',
   keywords: 'rótulos El Born Barcelona, neón LED Born Barcelona, letras corpóreas Born, rótulo Sant Pere Barcelona, señalética Born Barcelona',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/born-barcelona' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/born-barcelona' },
   openGraph: {
     title: 'Rótulos El Born Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
     description: 'Rótulos a medida en El Born y Sant Pere Barcelona: neón LED, letras corpóreas y vinilos para restaurantes, boutiques y galerías. Presupuesto gratis en 24h con render 3D incluido.',
-    url: 'https://royaluniondesign.com/rotulos/born-barcelona',
-    images: [{ url: 'https://royaluniondesign.com/services/neon-interior.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/born-barcelona',
+    images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },
 }
 
@@ -21,9 +21,9 @@ const schema = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://royaluniondesign.com/#organization',
+      '@id': 'https://www.royaluniondesign.com/#organization',
       name: 'RUD Studio',
-      url: 'https://royaluniondesign.com',
+      url: 'https://www.royaluniondesign.com',
       telephone: '+34645593227',
       email: 'hello@royaluniondesign.com',
       address: {
@@ -36,14 +36,14 @@ const schema = {
     },
     {
       '@type': 'Service',
-      '@id': 'https://royaluniondesign.com/rotulos/born-barcelona#service',
+      '@id': 'https://www.royaluniondesign.com/rotulos/born-barcelona#service',
       name: 'Rótulos El Born Barcelona',
       description: 'Fabricación e instalación de rótulos a medida en El Born y Sant Pere de Barcelona. Neón LED, letras corpóreas en madera y latón, vinilos esmerilados para restaurantes, boutiques y galerías.',
-      url: 'https://royaluniondesign.com/rotulos/born-barcelona',
-      provider: { '@id': 'https://royaluniondesign.com/#organization' },
+      url: 'https://www.royaluniondesign.com/rotulos/born-barcelona',
+      provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
       areaServed: { '@type': 'Place', name: 'El Born, Sant Pere, Barcelona' },
       serviceType: 'Fabricación e instalación de rótulos',
-      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
     },
   ],
 }

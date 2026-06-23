@@ -7,26 +7,26 @@ export const metadata = {
   title: 'Vinilos Escaparate Barcelona · Corte, Impreso, Esmerilado | RUD Studio',
   description: 'Vinilos para escaparates en Barcelona: de corte, impresos, esmerilados y microperforados. Instalación en 48-72h. Presupuesto el mismo día.',
   keywords: 'vinilos escaparate Barcelona, vinilos para cristales Barcelona, vinilos tienda Barcelona, vinilo esmerilado Barcelona, vinilo impreso escaparate Barcelona, vinilos decorativos Barcelona',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/vinilos-escaparate-barcelona' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/vinilos-escaparate-barcelona' },
   openGraph: {
     title: 'Vinilos Escaparate Barcelona · Instalación 48-72h | RUD Studio',
     description: 'Vinilos de corte, impresos y esmerilados para escaparates en Barcelona. Instalación rápida, sin obra, presupuesto el mismo día.',
-    url: 'https://royaluniondesign.com/rotulos/vinilos-escaparate-barcelona',
-    images: [{ url: 'https://royaluniondesign.com/services/vinilo-escaparate.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/vinilos-escaparate-barcelona',
+    images: [{ url: 'https://www.royaluniondesign.com/services/vinilo-escaparate.avif' }],
   },
 }
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  '@id': 'https://royaluniondesign.com/rotulos/vinilos-escaparate-barcelona#service',
+  '@id': 'https://www.royaluniondesign.com/rotulos/vinilos-escaparate-barcelona#service',
   name: 'Vinilos de escaparate Barcelona',
   description: 'Instalación de vinilos para escaparates en Barcelona: de corte, impresos en alta resolución, esmerilados y microperforados. Sin obra, entrega en 48-72h.',
-  url: 'https://royaluniondesign.com/rotulos/vinilos-escaparate-barcelona',
-  provider: { '@id': 'https://royaluniondesign.com/#organization' },
+  url: 'https://www.royaluniondesign.com/rotulos/vinilos-escaparate-barcelona',
+  provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
   areaServed: { '@type': 'City', name: 'Barcelona' },
   serviceType: 'Instalación de vinilos para escaparates',
-  isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+  isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'EUR',

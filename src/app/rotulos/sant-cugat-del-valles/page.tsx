@@ -7,12 +7,12 @@ export const metadata = {
   title: 'Rótulos Sant Cugat del Vallès · Neón LED y Señalética Corporativa | RUD Studio',
   description: 'Empresa de rótulos en Sant Cugat del Vallès: neón LED, letras corpóreas, señalética corporativa y vinilos. A 10 minutos de nuestro taller en Cerdanyola. Presupuesto gratis en 2h.',
   keywords: 'rótulos Sant Cugat del Vallès, neón LED Sant Cugat, letras corpóreas Sant Cugat, señalética corporativa Sant Cugat, rótulo comercio Sant Cugat',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/sant-cugat-del-valles' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/sant-cugat-del-valles' },
   openGraph: {
     title: 'Rótulos Sant Cugat del Vallès · Neón LED y Señalética Corporativa | RUD Studio',
     description: 'Empresa de rótulos en Sant Cugat del Vallès: neón LED, letras corpóreas, señalética corporativa y vinilos. A 10 minutos de nuestro taller en Cerdanyola. Presupuesto gratis en 2h.',
-    url: 'https://royaluniondesign.com/rotulos/sant-cugat-del-valles',
-    images: [{ url: 'https://royaluniondesign.com/services/neon-interior.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/sant-cugat-del-valles',
+    images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },
 }
 
@@ -21,9 +21,9 @@ const schema = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://royaluniondesign.com/#organization',
+      '@id': 'https://www.royaluniondesign.com/#organization',
       name: 'RUD Studio',
-      url: 'https://royaluniondesign.com',
+      url: 'https://www.royaluniondesign.com',
       telephone: '+34645593227',
       email: 'hello@royaluniondesign.com',
       address: {
@@ -36,14 +36,14 @@ const schema = {
     },
     {
       '@type': 'Service',
-      '@id': 'https://royaluniondesign.com/rotulos/sant-cugat-del-valles#service',
+      '@id': 'https://www.royaluniondesign.com/rotulos/sant-cugat-del-valles#service',
       name: 'Rótulos Sant Cugat del Vallès',
       description: 'Fabricación e instalación de rótulos a medida en Sant Cugat del Vallès. Neón LED, letras corpóreas, señalética corporativa y vinilos. Taller a 10 minutos en Cerdanyola del Vallès.',
-      url: 'https://royaluniondesign.com/rotulos/sant-cugat-del-valles',
-      provider: { '@id': 'https://royaluniondesign.com/#organization' },
+      url: 'https://www.royaluniondesign.com/rotulos/sant-cugat-del-valles',
+      provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
       areaServed: { '@type': 'Place', name: 'Sant Cugat del Vallès' },
       serviceType: 'Fabricación e instalación de rótulos',
-      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
     },
   ],
 }

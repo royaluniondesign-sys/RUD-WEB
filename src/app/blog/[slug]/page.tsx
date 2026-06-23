@@ -376,19 +376,32 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${p.title} · RUD Studio Barcelona`,
     description: p.excerpt,
-    alternates: { canonical: `https://royaluniondesign.com/blog/${slug}` },
-    openGraph: { title: p.title, description: p.excerpt, images: [{ url: p.image }] },
-    other: p.faqs ? {
-      'script:ld+json': JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: p.faqs.map(({ q, a }) => ({
-          '@type': 'Question',
-          name: q,
-          acceptedAnswer: { '@type': 'Answer', text: a },
-        })),
-      }),
-    } : {},
+    alternates: { canonical: `https://www.royaluniondesign.com/blog/${slug}` },
+    openGraph: { title: p.title, description: p.excerpt, images: [{ url: p.image.startsWith('/') ? `https://www.royaluniondesign.com${p.image}` : p.image }] },
+    other: {
+      'script:ld+json': JSON.stringify([
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: p.title,
+          description: p.excerpt,
+          image: p.image.startsWith('/') ? `https://www.royaluniondesign.com${p.image}` : p.image,
+          datePublished: p.date,
+          author: { '@type': 'Organization', name: 'RUD Studio', url: 'https://www.royaluniondesign.com' },
+          publisher: { '@type': 'Organization', name: 'RUD Studio', logo: { '@type': 'ImageObject', url: 'https://www.royaluniondesign.com/logo-rud-web.svg' } },
+          mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.royaluniondesign.com/blog/${slug}` },
+        },
+        ...(p.faqs ? [{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: p.faqs.map(({ q, a }) => ({
+            '@type': 'Question',
+            name: q,
+            acceptedAnswer: { '@type': 'Answer', text: a },
+          })),
+        }] : []),
+      ]),
+    },
   }
 }
 
@@ -424,7 +437,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
       {/* Hero image */}
       <div style={{ height: 'clamp(220px,40vw,480px)', overflow: 'hidden', position: 'relative' }}>
-        <img src={p.image} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        <img src={p.image} alt={p.title} width={1200} height={630} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       </div>
 
       {/* Content */}

@@ -6,21 +6,21 @@ export const metadata = {
   title: 'Portfolio Branding, Rótulos y Diseño Web Barcelona — Proyectos Reales | RUD Studio',
   description: 'Trabajos reales de RUD Studio: rótulos luminosos, branding, identidad visual, e-commerce Shopify y diseño web para empresas en Barcelona. Proyectos con resultados medibles.',
   keywords: 'portfolio branding Barcelona, rótulos barcelona proyectos, agencia diseño web Barcelona, proyectos identidad visual, e-commerce Shopify Barcelona, casos de éxito agencia Barcelona',
-  alternates: { canonical: 'https://royaluniondesign.com/work' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/work' },
   openGraph: {
     title: 'Portfolio — Proyectos Reales de Rótulos y Branding | RUD Studio',
     description: 'Casos reales: rótulos luminosos, branding e-commerce Shopify y diseño web para empresas en Barcelona.',
-    url: 'https://royaluniondesign.com/work',
+    url: 'https://www.royaluniondesign.com/work',
     siteName: 'RUD Studio',
     locale: 'es_ES',
     type: 'website',
-    images: [{ url: 'https://royaluniondesign.com/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.royaluniondesign.com/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Portfolio | RUD Studio Barcelona',
     description: 'Proyectos reales de rótulos, branding y diseño web en Barcelona.',
-    images: ['https://royaluniondesign.com/og-image.png'],
+    images: ['https://www.royaluniondesign.com/og-image.png'],
   },
 }
 

@@ -7,12 +7,12 @@ export const metadata = {
   title: 'Rótulos Badalona · Neón LED, Letras Corpóreas e Instalación | RUD Studio',
   description: 'Empresa de rótulos en Badalona: neón LED, letras corpóreas, cajas de luz y vinilos para comercios, restaurantes y empresas. Fabricación propia en Cerdanyola del Vallès. Presupuesto gratis en 24h.',
   keywords: 'rótulos Badalona, neón LED Badalona, letras corpóreas Badalona, rótulo luminoso Badalona, señalética Badalona Barcelona',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/badalona-barcelona' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/badalona-barcelona' },
   openGraph: {
     title: 'Rótulos Badalona · Neón LED, Letras Corpóreas e Instalación | RUD Studio',
     description: 'Empresa de rótulos en Badalona: neón LED, letras corpóreas, cajas de luz y vinilos. Fabricación propia en Cerdanyola del Vallès. Presupuesto gratis en 24h.',
-    url: 'https://royaluniondesign.com/rotulos/badalona-barcelona',
-    images: [{ url: 'https://royaluniondesign.com/services/neon-interior.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/badalona-barcelona',
+    images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },
 }
 
@@ -21,9 +21,9 @@ const schema = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://royaluniondesign.com/#organization',
+      '@id': 'https://www.royaluniondesign.com/#organization',
       name: 'RUD Studio',
-      url: 'https://royaluniondesign.com',
+      url: 'https://www.royaluniondesign.com',
       telephone: '+34645593227',
       email: 'hello@royaluniondesign.com',
       address: {
@@ -36,14 +36,14 @@ const schema = {
     },
     {
       '@type': 'Service',
-      '@id': 'https://royaluniondesign.com/rotulos/badalona-barcelona#service',
+      '@id': 'https://www.royaluniondesign.com/rotulos/badalona-barcelona#service',
       name: 'Rótulos Badalona',
       description: 'Fabricación e instalación de rótulos a medida en Badalona. Neón LED, letras corpóreas, cajas de luz, vinilos de escaparate. Taller propio en Cerdanyola del Vallès, a 25 minutos.',
-      url: 'https://royaluniondesign.com/rotulos/badalona-barcelona',
-      provider: { '@id': 'https://royaluniondesign.com/#organization' },
+      url: 'https://www.royaluniondesign.com/rotulos/badalona-barcelona',
+      provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
       areaServed: { '@type': 'Place', name: 'Badalona' },
       serviceType: 'Fabricación e instalación de rótulos',
-      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
     },
   ],
 }

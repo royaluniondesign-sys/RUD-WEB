@@ -7,21 +7,21 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'FAQ Rótulos Barcelona — Precios, Plazos y Proceso | Preguntas Frecuentes RUD Studio',
   description: 'Preguntas frecuentes sobre rótulos luminosos, neón LED, letras corpóreas y vinilos en Barcelona. Precios orientativos, plazos de fabricación, proceso y presupuesto gratis.',
-  alternates: { canonical: 'https://royaluniondesign.com/faq' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/faq' },
   openGraph: {
     title: 'FAQ Rótulos Barcelona — Precios, Plazos y Proceso | RUD Studio',
     description: 'Todo lo que necesitas saber sobre rótulos luminosos en Barcelona: precios, plazos, licencias y proceso. Respuestas reales de la agencia.',
-    url: 'https://royaluniondesign.com/faq',
+    url: 'https://www.royaluniondesign.com/faq',
     siteName: 'RUD Studio',
     locale: 'es_ES',
     type: 'website',
-    images: [{ url: 'https://royaluniondesign.com/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.royaluniondesign.com/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'FAQ Rótulos Barcelona | RUD Studio',
     description: 'Precios, plazos, licencias y proceso de fabricación de rótulos en Barcelona. Respuestas reales.',
-    images: ['https://royaluniondesign.com/og-image.png'],
+    images: ['https://www.royaluniondesign.com/og-image.png'],
   },
 }
 
@@ -106,8 +106,8 @@ const faqsGeneral = [
 const faqPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  '@id': 'https://royaluniondesign.com/faq#faqpage',
-  'url': 'https://royaluniondesign.com/faq',
+  '@id': 'https://www.royaluniondesign.com/faq#faqpage',
+  'url': 'https://www.royaluniondesign.com/faq',
   'name': 'FAQ Rótulos Barcelona — Preguntas Frecuentes RUD Studio',
   'mainEntity': [...faqsRotulos, ...faqsGeneral].map(({ question, answer }) => ({
     '@type': 'Question',

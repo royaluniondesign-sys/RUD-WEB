@@ -7,12 +7,12 @@ export const metadata = {
   title: "Rótulos L'Hospitalet de Llobregat · Neón LED e Instalación | RUD Studio",
   description: "Empresa de rótulos en L'Hospitalet de Llobregat: neón LED, letras corpóreas, cajas de luz y vinilos de escaparate. Fabricación propia, instalación en 15 min desde el taller. Presupuesto gratis.",
   keywords: "rótulos Hospitalet de Llobregat, neón LED Hospitalet, letras corpóreas Hospitalet, rótulo luminoso L'Hospitalet, señalética Hospitalet Barcelona",
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/hospitalet-de-llobregat' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/hospitalet-de-llobregat' },
   openGraph: {
     title: "Rótulos L'Hospitalet de Llobregat · Neón LED e Instalación | RUD Studio",
     description: "Empresa de rótulos en L'Hospitalet de Llobregat: neón LED, letras corpóreas, cajas de luz y vinilos. Fabricación propia, instalación en 15 min.",
-    url: 'https://royaluniondesign.com/rotulos/hospitalet-de-llobregat',
-    images: [{ url: 'https://royaluniondesign.com/services/neon-interior.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/hospitalet-de-llobregat',
+    images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },
 }
 
@@ -21,9 +21,9 @@ const schema = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://royaluniondesign.com/#organization',
+      '@id': 'https://www.royaluniondesign.com/#organization',
       name: 'RUD Studio',
-      url: 'https://royaluniondesign.com',
+      url: 'https://www.royaluniondesign.com',
       telephone: '+34645593227',
       email: 'hello@royaluniondesign.com',
       address: {
@@ -36,14 +36,14 @@ const schema = {
     },
     {
       '@type': 'Service',
-      '@id': 'https://royaluniondesign.com/rotulos/hospitalet-de-llobregat#service',
+      '@id': 'https://www.royaluniondesign.com/rotulos/hospitalet-de-llobregat#service',
       name: "Rótulos L'Hospitalet de Llobregat",
       description: "Fabricación e instalación de rótulos a medida en L'Hospitalet de Llobregat. Neón LED, letras corpóreas, cajas de luz, vinilos. Taller propio en Cerdanyola del Vallès, a 15 minutos.",
-      url: 'https://royaluniondesign.com/rotulos/hospitalet-de-llobregat',
-      provider: { '@id': 'https://royaluniondesign.com/#organization' },
+      url: 'https://www.royaluniondesign.com/rotulos/hospitalet-de-llobregat',
+      provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
       areaServed: { '@type': 'Place', name: "L'Hospitalet de Llobregat" },
       serviceType: 'Fabricación e instalación de rótulos',
-      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
     },
   ],
 }

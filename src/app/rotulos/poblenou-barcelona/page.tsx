@@ -7,12 +7,12 @@ export const metadata = {
   title: 'Rótulos Poblenou Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
   description: 'Rótulos a medida en Poblenou y el distrito 22@ de Barcelona: neón LED, letras industriales, cajas de luz y señalética para startups, coworkings y restaurantes modernos. Presupuesto en 24h.',
   keywords: 'rótulos Poblenou Barcelona, rótulos 22@ Barcelona, neón LED Poblenou, letras industriales Poblenou, señalética startups Barcelona, rótulos Rambla del Poblenou',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/poblenou-barcelona' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/poblenou-barcelona' },
   openGraph: {
     title: 'Rótulos Poblenou Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
     description: 'Rótulos a medida en Poblenou y el 22@: neón LED, letras industriales, señalética para startups y restaurantes modernos. Presupuesto gratis en 24h.',
-    url: 'https://royaluniondesign.com/rotulos/poblenou-barcelona',
-    images: [{ url: 'https://royaluniondesign.com/services/neon-interior.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/poblenou-barcelona',
+    images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },
 }
 
@@ -21,9 +21,9 @@ const schema = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://royaluniondesign.com/#organization',
+      '@id': 'https://www.royaluniondesign.com/#organization',
       name: 'RUD Studio',
-      url: 'https://royaluniondesign.com',
+      url: 'https://www.royaluniondesign.com',
       telephone: '+34645593227',
       email: 'hello@royaluniondesign.com',
       address: {
@@ -36,14 +36,14 @@ const schema = {
     },
     {
       '@type': 'Service',
-      '@id': 'https://royaluniondesign.com/rotulos/poblenou-barcelona#service',
+      '@id': 'https://www.royaluniondesign.com/rotulos/poblenou-barcelona#service',
       name: 'Rótulos Poblenou Barcelona',
       description: 'Fabricación e instalación de rótulos a medida en Poblenou y el distrito 22@ de Barcelona. Neón LED, letras industriales, cajas de luz y señalética para startups, coworkings y hostelería moderna.',
-      url: 'https://royaluniondesign.com/rotulos/poblenou-barcelona',
-      provider: { '@id': 'https://royaluniondesign.com/#organization' },
+      url: 'https://www.royaluniondesign.com/rotulos/poblenou-barcelona',
+      provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
       areaServed: { '@type': 'Place', name: 'Poblenou, Barcelona' },
       serviceType: 'Fabricación e instalación de rótulos',
-      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+      isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
     },
   ],
 }

@@ -7,26 +7,26 @@ export const metadata = {
   title: 'Cajas de Luz Barcelona · Rótulos Luminosos LED | RUD Studio',
   description: 'Cajas de luz y rótulos luminosos en Barcelona: máxima visibilidad diurna y nocturna. Aluminio, metacrilato, LED interior. Fabricación propia, instalación incluida.',
   keywords: 'cajas de luz Barcelona, rótulos luminosos Barcelona, caja de luz LED Barcelona, rótulo luminoso precio Barcelona, caja de luz retroiluminada Barcelona, rótulos bandeja LED Barcelona',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/cajas-de-luz-barcelona' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/cajas-de-luz-barcelona' },
   openGraph: {
     title: 'Cajas de Luz y Rótulos Luminosos Barcelona | RUD Studio',
     description: 'Cajas de luz con LED interior: máxima visibilidad nocturna. Fabricación propia en Barcelona. Presupuesto en 24h.',
-    url: 'https://royaluniondesign.com/rotulos/cajas-de-luz-barcelona',
-    images: [{ url: 'https://royaluniondesign.com/services/rotulos-luminosos.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/cajas-de-luz-barcelona',
+    images: [{ url: 'https://www.royaluniondesign.com/services/rotulos-luminosos.avif' }],
   },
 }
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  '@id': 'https://royaluniondesign.com/rotulos/cajas-de-luz-barcelona#service',
+  '@id': 'https://www.royaluniondesign.com/rotulos/cajas-de-luz-barcelona#service',
   name: 'Cajas de luz y rótulos luminosos Barcelona',
   description: 'Fabricación e instalación de cajas de luz y rótulos luminosos LED en Barcelona. Estructura de aluminio con frente de metacrilato iluminado. Taller propio.',
-  url: 'https://royaluniondesign.com/rotulos/cajas-de-luz-barcelona',
-  provider: { '@id': 'https://royaluniondesign.com/#organization' },
+  url: 'https://www.royaluniondesign.com/rotulos/cajas-de-luz-barcelona',
+  provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
   areaServed: { '@type': 'City', name: 'Barcelona' },
   serviceType: 'Fabricación de cajas de luz y rótulos luminosos',
-  isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+  isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'EUR',

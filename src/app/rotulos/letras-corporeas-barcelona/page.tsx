@@ -7,26 +7,26 @@ export const metadata = {
   title: 'Letras Corpóreas Barcelona · Aluminio, Metacrilato, Retroiluminadas | RUD Studio',
   description: 'Letras corpóreas en Barcelona fabricadas en aluminio, metacrilato o madera. Con o sin retroiluminación halo. Taller propio, instalación incluida, presupuesto en 24h.',
   keywords: 'letras corpóreas Barcelona, letras corpóreas aluminio Barcelona, letras corpóreas metacrilato Barcelona, letras corpóreas retroiluminadas Barcelona, letras volumétricas Barcelona, letras 3D fachada Barcelona',
-  alternates: { canonical: 'https://royaluniondesign.com/rotulos/letras-corporeas-barcelona' },
+  alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/letras-corporeas-barcelona' },
   openGraph: {
     title: 'Letras Corpóreas Barcelona · Aluminio y Metacrilato | RUD Studio',
     description: 'Letras corpóreas en Barcelona: aluminio, metacrilato, madera. Con o sin retroiluminación. Taller propio, instalación incluida.',
-    url: 'https://royaluniondesign.com/rotulos/letras-corporeas-barcelona',
-    images: [{ url: 'https://royaluniondesign.com/services/letras-corporeas.avif' }],
+    url: 'https://www.royaluniondesign.com/rotulos/letras-corporeas-barcelona',
+    images: [{ url: 'https://www.royaluniondesign.com/services/letras-corporeas.avif' }],
   },
 }
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  '@id': 'https://royaluniondesign.com/rotulos/letras-corporeas-barcelona#service',
+  '@id': 'https://www.royaluniondesign.com/rotulos/letras-corporeas-barcelona#service',
   name: 'Letras Corpóreas Barcelona',
   description: 'Fabricación e instalación de letras corpóreas en Barcelona. Aluminio, metacrilato, madera. Con retroiluminación halo o iluminación frontal LED.',
-  url: 'https://royaluniondesign.com/rotulos/letras-corporeas-barcelona',
-  provider: { '@id': 'https://royaluniondesign.com/#organization' },
+  url: 'https://www.royaluniondesign.com/rotulos/letras-corporeas-barcelona',
+  provider: { '@id': 'https://www.royaluniondesign.com/#organization' },
   areaServed: { '@type': 'City', name: 'Barcelona' },
   serviceType: 'Fabricación de letras corpóreas',
-  isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://royaluniondesign.com/rotulos' },
+  isPartOf: { '@type': 'Service', name: 'Rótulos y Señalética Barcelona', url: 'https://www.royaluniondesign.com/rotulos' },
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'EUR',
