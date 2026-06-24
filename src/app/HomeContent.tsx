@@ -175,7 +175,7 @@ function Hero() {
           RUD STUDIO — TALLER DE RÓTULOS &amp; ESTUDIO CREATIVO, BARCELONA
         </p>
 
-        <h1 style={{ marginBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
+        <h1 aria-label="Rótulos y Branding en Barcelona" style={{ marginBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
           <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>RÓTULOS</span></div>
           <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>Y BRANDING</span></div>
           <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>BARCELONA</span></div>

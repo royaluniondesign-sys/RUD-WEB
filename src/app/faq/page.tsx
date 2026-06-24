@@ -79,7 +79,7 @@ const faqsGeneral = [
   },
   {
     question: '¿Trabajáis con clientes internacionales?',
-    answer: 'Sí — trabajamos con clientes en toda España, Europa y América Latina. Toda la comunicación funciona por videollamada y nuestras herramientas de gestión de proyectos, así que la ubicación nunca es una barrera.',
+    answer: 'Sí — trabajamos con clientes en toda España, Europa y América Latina. Toda la comunicación se hace por videollamada y a través de nuestras herramientas de gestión de proyectos, así que la ubicación nunca es una barrera.',
   },
   {
     question: '¿Cuál es vuestro proceso de trabajo?',

@@ -17,7 +17,7 @@ const SERVICES = [
   { id: 'web',       label: 'Diseño Web & Dev',        sub: 'Next.js, WordPress, SEO técnico' },
   { id: 'ecommerce', label: 'E-commerce Shopify',      sub: 'Tienda online, integración, marketing' },
   { id: 'ia',        label: 'Automatización IA',       sub: 'Agentes IA, flujos n8n, CRM' },
-  { id: 'varios',    label: 'Varios / Asesoría',       sub: 'Proyecto integral o me orientáis' },
+  { id: 'varios',    label: 'Varios / Asesoría',       sub: 'Proyecto integral o me orientéis' },
 ]
 
 const BUDGETS = [
