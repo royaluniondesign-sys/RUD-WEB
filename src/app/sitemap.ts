@@ -6,15 +6,15 @@ const d = (s: string) => new Date(s)
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const core: MetadataRoute.Sitemap = [
-    { url: BASE,               lastModified: d('2026-06-04'), changeFrequency: 'weekly',  priority: 1.0  },
-    { url: `${BASE}/rotulos`,  lastModified: d('2026-06-04'), changeFrequency: 'weekly',  priority: 0.95 },
-    { url: `${BASE}/contact`,  lastModified: d('2026-06-04'), changeFrequency: 'monthly', priority: 0.90 },
+    { url: BASE,               lastModified: d('2026-06-24'), changeFrequency: 'weekly',  priority: 1.0  },
+    { url: `${BASE}/rotulos`,  lastModified: d('2026-06-24'), changeFrequency: 'weekly',  priority: 0.95 },
+    { url: `${BASE}/contact`,  lastModified: d('2026-06-24'), changeFrequency: 'monthly', priority: 0.90 },
     { url: `${BASE}/pricing`,  lastModified: d('2026-05-01'), changeFrequency: 'monthly', priority: 0.88 },
-    { url: `${BASE}/services`, lastModified: d('2026-05-01'), changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${BASE}/blog`,     lastModified: d('2026-06-04'), changeFrequency: 'weekly',  priority: 0.80 },
+    { url: `${BASE}/services`, lastModified: d('2026-06-24'), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE}/blog`,     lastModified: d('2026-06-24'), changeFrequency: 'weekly',  priority: 0.80 },
     { url: `${BASE}/work`,     lastModified: d('2026-05-01'), changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE}/about`,    lastModified: d('2026-04-01'), changeFrequency: 'monthly', priority: 0.70 },
-    { url: `${BASE}/faq`,      lastModified: d('2026-04-01'), changeFrequency: 'monthly', priority: 0.68 },
+    { url: `${BASE}/faq`,      lastModified: d('2026-06-24'), changeFrequency: 'monthly', priority: 0.68 },
   ]
 
   // Core service pages — high commercial intent, max priority after home
