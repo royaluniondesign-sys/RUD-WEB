@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 import FAQAccordion from '@/components/FAQAccordion'
 import Link from 'next/link'
+import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'FAQ Rótulos Barcelona — Precios, Plazos y Proceso | Preguntas Frecuentes RUD Studio',
@@ -124,7 +125,7 @@ export default function FAQ() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
       <Navbar light />
-
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(BREADCRUMBS.faq())) }} />
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section style={{
         background: 'var(--bg)', minHeight: '60svh',

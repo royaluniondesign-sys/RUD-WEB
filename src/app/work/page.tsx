@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
+import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 
 export const metadata = {
   title: 'Portfolio Branding, Rótulos y Diseño Web Barcelona — Proyectos Reales | RUD Studio',
@@ -97,7 +98,7 @@ export default function Work() {
   return (
     <main style={{ background: 'var(--bg)' }}>
       <Navbar light />
-
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(BREADCRUMBS.work())) }} />
       {/* ── HERO ──────────────────────────────────────────── */}
       <section style={{
         background: 'var(--bg)', minHeight: '70svh',

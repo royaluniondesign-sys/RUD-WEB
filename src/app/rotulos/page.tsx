@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
+import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 
 export const metadata = {
   title: 'Rótulos Barcelona · Neón LED, Letras Corpóreas, Vinilos | RUD Studio',
@@ -100,6 +101,7 @@ export default function Rotulos() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rotulosSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar light />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(BREADCRUMBS.rotulos())) }} />
 
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section style={{

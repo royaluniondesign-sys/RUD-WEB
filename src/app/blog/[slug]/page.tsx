@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import BlogTracker from '@/components/BlogTracker'
+import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 
 function renderParagraph(text: string) {
   const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/)
@@ -380,6 +381,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: { title: p.title, description: p.excerpt, images: [{ url: p.image.startsWith('/') ? `https://www.royaluniondesign.com${p.image}` : p.image }] },
     other: {
       'script:ld+json': JSON.stringify([
+        breadcrumbSchema(BREADCRUMBS.blogPost(slug, p.title)),
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',

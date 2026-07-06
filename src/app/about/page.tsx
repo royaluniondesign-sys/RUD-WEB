@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
+import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 
 export const metadata = {
   title: 'Empresa de Rótulos y Branding en Barcelona — Quiénes Somos | RUD Studio',
@@ -48,7 +49,7 @@ export default function About() {
   return (
     <main style={{ background: 'var(--bg)' }}>
       <Navbar light />
-
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(BREADCRUMBS.about())) }} />
       {/* ── HERO ──────────────────────────────────────────── */}
       <section style={{
         background: 'var(--bg)', minHeight: '70svh',
