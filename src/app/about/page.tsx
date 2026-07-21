@@ -63,7 +63,7 @@ export default function About() {
           </p>
           <h1 style={{ margin: 0 }}>
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>AGENCIA</span>
-            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>CREATIVA</span>
+<span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}> CREATIVA</span
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>BARCELONA</span>
           </h1>
           <div style={{
@@ -91,7 +91,7 @@ export default function About() {
               <div>
                 <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1rem' }}>LO QUE SOMOS</p>
                 <h2 className="display" style={{ fontSize: 'clamp(2.5rem, 6vw, 7rem)', color: 'var(--fg)', marginBottom: '2rem' }}>
-                  PUBLICIDAD<br />COMPLETA.<br /><em>360°</em>
+                  PUBLICIDAD<br />COMPLETA.<br /><em> 360°</em>
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75 }}>Somos una agencia 360: diseñamos y fabricamos rótulos luminosos, letras corpóreas, vinilos y señalética — y también creamos la identidad de marca, la web, el e-commerce y los automatismos que hacen crecer el negocio.</p>
@@ -123,7 +123,7 @@ export default function About() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>NUESTRO ESPECTRO</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              DEL ESPACIO FÍSICO<br /><em>AL MUNDO DIGITAL</em>
+              DEL ESPACIO FÍSICO<br /><em> AL MUNDO DIGITAL</em>
             </h2>
           </ScrollReveal>
 
@@ -157,7 +157,7 @@ export default function About() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>NUESTRA FILOSOFÍA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              ESTRATEGIA<br /><em>PRIMERO</em>
+              ESTRATEGIA<br /><em> PRIMERO</em>
             </h2>
           </ScrollReveal>
           <div style={{ borderTop: '1px solid var(--border)' }}>
@@ -182,7 +182,7 @@ export default function About() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>CÓMO TRABAJAMOS</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              EL PROCESO<br /><em>RUD</em>
+              EL PROCESO<br /><em> RUD</em>
             </h2>
           </ScrollReveal>
           <div style={{ borderTop: '1px solid var(--border)' }}>
@@ -210,7 +210,7 @@ export default function About() {
               Presupuesto en 24h · Sin compromiso
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              ¿TRABAJAMOS<br /><em>JUNTOS?</em>
+              ¿TRABAJAMOS<br /><em> JUNTOS?</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <a href="https://wa.me/34645593227" className="mono-label"

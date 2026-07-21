@@ -89,7 +89,7 @@ export default function Services() {
           </p>
           <h1 style={{ margin: 0 }}>
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>RÓTULOS</span>
-            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>BRANDING</span>
+<span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}> BRANDING</span
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>BARCELONA</span>
           </h1>
           <div style={{
@@ -117,7 +117,7 @@ export default function Services() {
               <div>
                 <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — FABRICACIÓN PROPIA · BARCELONA</p>
                 <h2 className="display" style={{ fontSize: 'clamp(3.5rem, 9vw, 10rem)', color: 'var(--fg)' }}>
-                  RÓTULOS<br /><em>LUMINOSOS</em>
+                  RÓTULOS<br /><em> LUMINOSOS</em>
                 </h2>
               </div>
               <Link href="/rotulos" className="mono-label"
@@ -167,7 +167,7 @@ export default function Services() {
               <div>
                 <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — DEL RÓTULO AL PIXEL</p>
                 <h2 className="display" style={{ fontSize: 'clamp(3.5rem, 9vw, 10rem)', color: 'var(--fg)' }}>
-                  SERVICIOS<br /><em>DIGITALES</em>
+                  SERVICIOS<br /><em> DIGITALES</em>
                 </h2>
               </div>
               <Link href="/contact" className="mono-label"
@@ -205,7 +205,7 @@ export default function Services() {
               Taller propio · Cerdanyola del Vallès · BCN
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              FABRICAMOS<br />TU RÓTULO<br /><em>EN BARCELONA</em>
+              FABRICAMOS<br />TU RÓTULO<br /><em> EN BARCELONA</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <a href="https://wa.me/34645593227" className="mono-label"

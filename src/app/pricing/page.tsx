@@ -121,7 +121,7 @@ export default function Pricing() {
           </p>
           <h1 style={{ margin: 0 }}>
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>PRECIOS</span>
-            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>TRANSPARENTES</span>
+<span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}> TRANSPARENTES</span
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>BARCELONA</span>
           </h1>
           <div style={{
@@ -147,7 +147,7 @@ export default function Pricing() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — FABRICACIÓN PROPIA · BARCELONA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              RÓTULOS<br /><em>& SEÑALÉTICA</em>
+              RÓTULOS<br /><em> & SEÑALÉTICA</em>
             </h2>
           </ScrollReveal>
 
@@ -186,7 +186,7 @@ export default function Pricing() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — BRANDING · WEB · IA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              PAQUETES<br /><em>DIGITALES</em>
+              PAQUETES<br /><em> DIGITALES</em>
             </h2>
           </ScrollReveal>
 
@@ -252,7 +252,7 @@ export default function Pricing() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>PREGUNTAS FRECUENTES</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              LO QUE<br /><em>MÁS PREGUNTAN</em>
+              LO QUE<br /><em> MÁS PREGUNTAN</em>
             </h2>
           </ScrollReveal>
           <FAQAccordion faqs={FAQS} />
@@ -267,7 +267,7 @@ export default function Pricing() {
               Presupuesto personalizado · Menos de 24h
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              CUÉNTANOS<br /><em>TU PROYECTO</em>
+              CUÉNTANOS<br /><em> TU PROYECTO</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <Link href="/contact" className="mono-label"

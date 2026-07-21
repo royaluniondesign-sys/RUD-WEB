@@ -100,7 +100,7 @@ export default function NeonLedBarcelona() {
           </p>
           <h1>
             <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}>NEÓN LED</span>
-            <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}>PERSONALIZADO</span>
+<span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}> PERSONALIZADO</span
             <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block', opacity: 0.28 }}>BARCELONA</span>
           </h1>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', paddingTop: '1.5rem', marginTop: 'clamp(2rem, 4vw, 3rem)', borderTop: '1px solid var(--border)' }}>
@@ -118,7 +118,7 @@ export default function NeonLedBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — PRECIOS ORIENTATIVOS</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              ¿CUÁNTO CUESTA<br /><em>UN NEÓN LED?</em>
+              ¿CUÁNTO CUESTA<br /><em> UN NEÓN LED?</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -149,7 +149,7 @@ export default function NeonLedBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — APLICACIONES</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              SECTORES<br /><em>& USOS</em>
+              SECTORES<br /><em> & USOS</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -172,7 +172,7 @@ export default function NeonLedBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>03 — CÓMO FUNCIONA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              DEL BOCETO<br /><em>A LA PARED</em>
+              DEL BOCETO<br /><em> A LA PARED</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -201,7 +201,7 @@ export default function NeonLedBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>04 — PREGUNTAS FRECUENTES</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              PREGUNTAS<br /><em>FRECUENTES</em>
+              PREGUNTAS<br /><em> FRECUENTES</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -227,7 +227,7 @@ export default function NeonLedBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>TAMBIÉN FABRICAMOS</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              MÁS TIPOS<br /><em>DE RÓTULO</em>
+              MÁS TIPOS<br /><em> DE RÓTULO</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -259,7 +259,7 @@ export default function NeonLedBarcelona() {
               Presupuesto gratuito · Respondemos en 24h
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              PIDE TU<br /><em>PRESUPUESTO</em>
+              PIDE TU<br /><em> PRESUPUESTO</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <TrackedLink href="/contact?servicio=neon" label="Presupuesto neón LED bottom" location="bottom-neon" className="mono-label" style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
