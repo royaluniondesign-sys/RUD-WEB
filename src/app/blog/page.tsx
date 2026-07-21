@@ -27,6 +27,14 @@ export const metadata = {
 
 const posts = [
   {
+    slug: 'normativa-rotulos-barcelona-2026',
+    title: 'Normativa de rótulos en Barcelona 2026: guía completa de licencias, multas y requisitos',
+    date: 'Julio 2026', category: 'Señalética & Rótulos', readTime: '8 min',
+    image: '/services/letras-corporeas.avif',
+    excerpt: 'Todo sobre la ordenanza municipal de rótulos en Barcelona 2026: licencias, multas, zonas protegidas.',
+    featured: true,
+  },
+  {
     slug: 'cajas-de-luz-barcelona-precio-tipos',
     title: 'Cajas de luz en Barcelona: tipos, formatos y precios reales en 2026',
     date: 'Junio 2026', category: 'Señalética & Rótulos', readTime: '5 min',
