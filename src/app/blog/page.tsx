@@ -30,7 +30,7 @@ const posts = [
     slug: 'normativa-rotulos-barcelona-2026',
     title: 'Normativa de rótulos en Barcelona 2026: guía completa de licencias, multas y requisitos',
     date: 'Julio 2026', category: 'Señalética & Rótulos', readTime: '8 min',
-    image: '/services/letras-corporeas.avif',
+    image: '/RUDTRABAJOSROTULOS/photo-1774627895147-093ce0150bb3.avif',
     excerpt: 'Todo sobre la ordenanza municipal de rótulos en Barcelona 2026: licencias, multas, zonas protegidas.',
     featured: true,
   },
@@ -61,7 +61,7 @@ const posts = [
     slug: 'letras-corporeas-barcelona-tipos-precios',
     title: 'Letras corpóreas en Barcelona: tipos, materiales y precios reales',
     date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '6 min',
-    image: '/services/letras-corporeas.avif',
+    image: '/services/rotulos-luminosos.avif',
     excerpt: 'Aluminio, metacrilato, retroiluminación halo. Todo sobre las letras corpóreas en Barcelona: qué son, qué materiales existen y cuánto cuestan.',
   },
   {

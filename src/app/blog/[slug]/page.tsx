@@ -239,7 +239,7 @@ En RUD fabricamos e instalamos [neón LED en Barcelona](/rotulos/neon-led-barcel
   'letras-corporeas-barcelona-tipos-precios': {
     title: 'Letras corpóreas en Barcelona: tipos, materiales y precios reales',
     date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '10 min',
-    image: '/services/letras-corporeas.avif',
+    image: '/RUDTRABAJOSROTULOS/photo-1632605166776-7128669886e7.avif',
     excerpt: 'Aluminio, metacrilato, retroiluminación halo. Todo sobre las letras corpóreas en Barcelona: qué son, qué materiales existen y cuánto cuestan.',
     content: `Las letras corpóreas son el estándar del retail premium, la hostelería de nivel medio-alto y las sedes corporativas en Barcelona. Son letras en tres dimensiones que se instalan directamente sobre la fachada, una pared interior o un panel de fondo — y que comunican solidez, permanencia y cuidado por la imagen de marca. A diferencia del neón LED o la caja de luz, las letras corpóreas funcionan igual de bien de día que de noche, con o sin iluminación.
 
@@ -367,7 +367,7 @@ En RUD fabricamos e instalamos [cajas de luz en Barcelona](/rotulos/cajas-de-luz
   'normativa-rotulos-barcelona-2026': {
     title: 'Normativa de rótulos en Barcelona 2026: guía completa de licencias, multas y requisitos',
     date: 'Julio 2026', category: 'Señalética & Rótulos', readTime: '8 min',
-    image: '/services/letras-corporeas.avif',
+    image: '/RUDTRABAJOSROTULOS/photo-1774627895147-093ce0150bb3.avif',
     excerpt: 'Todo sobre la ordenanza municipal de rótulos en Barcelona: licencias, multas, zonas protegidas.',
     content: `Si tienes un negocio en Barcelona y necesitas instalar un rótulo, la primera pregunta no debería ser "cuánto cuesta" sino "qué permisos necesito". La normativa municipal es más estricta de lo que la mayoría de comerciantes cree, y las sanciones pueden alcanzar los 3.000 €.
 
