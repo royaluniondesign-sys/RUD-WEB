@@ -364,6 +364,35 @@ Los precios orientativos en Barcelona para 2026: caja de luz simple con vinilo i
 
 En RUD fabricamos e instalamos [cajas de luz en Barcelona](/rotulos/cajas-de-luz-barcelona) para todo tipo de comercios. Visita técnica gratuita, presupuesto con render en 48 horas, instalación con garantía de 2 años. [Pide presupuesto sin compromiso →](/pricing)`,
   },
+  'normativa-rotulos-barcelona-2026': {
+    title: 'Normativa de rótulos en Barcelona 2026: guía completa de licencias, multas y requisitos',
+    date: 'Julio 2026', category: 'Señalética & Rótulos', readTime: '8 min',
+    image: '/services/letras-corporeas.avif',
+    excerpt: 'Todo sobre la ordenanza municipal de rótulos en Barcelona: licencias, multas, zonas protegidas.',
+    content: `Si tienes un negocio en Barcelona y necesitas instalar un rótulo, la primera pregunta no debería ser "cuánto cuesta" sino "qué permisos necesito". La normativa municipal es más estricta de lo que la mayoría de comerciantes cree, y las sanciones pueden alcanzar los 3.000 €.
+
+**La ordenanza que regula los rótulos en Barcelona**
+
+La normativa aplicable es la Ordenança sobre l'ús de les façanes i dels espais visibles des de la via pública del Ayuntamiento de Barcelona. Las restricciones varían según el distrito. Las zonas con más protección son el Gòtic, el Born, Gràcia y partes del Eixample.
+
+**¿Qué rótulos necesitan licencia?**
+
+Los que no superan el 10% de la fachada y tienen menos de 0,90 m pueden instalarse sin licencia de obra mayor. Los que SÍ requieren licencia: rótulos en edificios catalogados, los que superan las dimensiones establecidas, y rótulos con intermitencia en zonas residenciales.
+
+**Multas por incumplimiento**
+
+Leves hasta 750 €, graves hasta 1.500 €, muy graves hasta 3.000 € más retirada del rótulo.
+
+**Zonas con más restricciones**
+
+Gòtic, Born, Gràcia, Eixample (edificios catalogados), Poblenou (patrimonio industrial).
+
+**Proceso de legalización**
+
+Consulta al Ayuntamiento, proyecto técnico, tasas (50-200 €), licencia (1-3 meses), instalación.
+
+**En RUD nos encargamos de todo:** visita técnica, consulta al Ayuntamiento, proyecto, fabricación en taller propio e instalación. Trabajamos en [Eixample](/rotulos/eixample-barcelona), [Gràcia](/rotulos/gracia-barcelona), [Poblenou](/rotulos/poblenou-barcelona) y [Sarrià](/rotulos/sarria-barcelona).`,
+  },
 }
 
 export async function generateStaticParams() {
