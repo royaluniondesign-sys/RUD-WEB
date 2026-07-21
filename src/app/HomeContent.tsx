@@ -323,7 +323,7 @@ function Overview() {
       <div className="container-custom" style={{ paddingTop: 'clamp(3rem,6vw,5rem)', paddingBottom: 'clamp(1rem,2vw,2rem)' }}>
         <ScrollReveal>
           <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.5rem' }}>Resumen</p>
-          <h2 className="rg display" style={{ fontSize: 'clamp(3rem,7vw,8rem)', color: 'var(--fg)', lineHeight: 0.87 }}>
+          <h2 aria-label="Por qué trabajar con nosotros" className="rg display" style={{ fontSize: 'clamp(3rem,7vw,8rem)', color: 'var(--fg)', lineHeight: 0.87 }}>
             <div className="text-mask"><span className="rl">POR QUÉ</span></div>
             <div className="text-mask"><span className="rl" style={{ opacity: 0.28 }}>TRABAJAR CON NOSOTROS</span></div>
           </h2>
@@ -376,7 +376,7 @@ function RotulosStrip() {
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '3rem' }}>
             <div>
               <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>Empresa de rótulos · Barcelona</p>
-              <h2 className="display" style={{ fontSize: 'clamp(3.5rem,9vw,10rem)', color: 'var(--fg)' }}>
+              <h2 aria-label="Rótulos luminosos" className="display" style={{ fontSize: 'clamp(3.5rem,9vw,10rem)', color: 'var(--fg)' }}>
                 RÓTULOS<br /><em>LUMINOSOS</em>
               </h2>
             </div>
@@ -504,7 +504,7 @@ function CTA() {
           <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
             Taller propio · Cerdanyola del Vallès · BCN
           </p>
-          <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+          <h2 aria-label="Fabricamos tu rótulo en Barcelona" className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
             FABRICAMOS<br />TU RÓTULO<br /><em>EN BARCELONA</em>
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
