@@ -66,7 +66,7 @@ const faqSchema = {
       name: '¿Qué normativa de rótulos existe en el Eixample?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'El Eixample tiene una normativa estricta de rótulos en fachadas: no se permiten rótulos que sobresalgan más de 15 cm de la línea de fachada en planta baja, y los rótulos luminosos deben apagarse a las 23h en locales sin actividad nocturna. Nosotros gestionamos la documentación y licencias necesarias.',
+        text: 'El Eixample tiene una normativa estricta de rótulos en fachadas: no se permiten rótulos que sobresalgan más de 15 cm de la línea de fachada en planta baja, y los rótulos luminosos deben apagarse a las 23h en locales sin actividad nocturna. Te asesoramos sobre la documentación que necesitas presentar.',
       },
     },
     {
@@ -82,7 +82,7 @@ const faqSchema = {
       name: '¿Necesito licencia municipal para un rótulo en el Eixample?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sí. En Barcelona cualquier rótulo en fachada o interior visible desde la calle requiere comunicación previa o licencia al Ayuntamiento. Nosotros gestionamos la tramitación completa: proyecto técnico, licencia de obras menor y alta de instalación eléctrica si procede.',
+        text: 'Sí. En Barcelona cualquier rótulo en fachada o interior visible desde la calle requiere comunicación previa o licencia al Ayuntamiento. Te orientamos sobre los trámites necesarios: proyecto técnico, licencia y alta eléctrica si procede.',
       },
     },
   ],

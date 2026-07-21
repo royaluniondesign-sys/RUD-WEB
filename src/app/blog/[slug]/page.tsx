@@ -66,7 +66,7 @@ Para hostelería y restauración: neón LED en interior o letras corpóreas en f
 
 En Barcelona, los rótulos en fachada están regulados por la Ordenança sobre l'ús de les façanes i dels espais visibles des de la via pública. Las restricciones principales afectan a la altura máxima de los rótulos, la proporción respecto a la fachada, el uso de colores y materiales en zonas de protección patrimonial, y la iluminación en horario nocturno.
 
-Los barrios con más restricciones son el Gòtic, el Born, Gràcia y zonas catalogadas del Eixample. No obstante, en la mayoría de casos los rótulos de hasta 0,90 m de altura y que no superen el 10% de la superficie de la fachada pueden instalarse sin licencia de obra mayor. Para cualquier duda, realizamos consulta previa gratuita con los técnicos del Ayuntamiento.
+Los barrios con más restricciones son el Gòtic, el Born, Gràcia y zonas catalogadas del Eixample. No obstante, en la mayoría de casos los rótulos de hasta 0,90 m de altura y que no superen el 10% de la superficie de la fachada pueden instalarse sin licencia de obra mayor. Para cualquier duda, te informamos sobre los requisitos ante el Ayuntamiento según tu caso.
 
 **El proceso de instalación en RUD**
 
@@ -79,7 +79,7 @@ En RUD diseñamos y fabricamos [rótulos luminosos en Barcelona](/rotulos) con i
       { q: '¿Cuánto cuesta un rótulo luminoso en Barcelona?', a: 'El precio depende del tipo: una caja de luz parte de 800 €, las letras corpóreas desde 2.500 €, el neón LED desde 800 € (mostrador) hasta más de 2.200 € (fachada). Todos los precios incluyen diseño, fabricación e instalación en Barcelona.' },
       { q: '¿Cuánto tarda en fabricarse un rótulo luminoso?', a: 'Los vinilos de escaparate están listos en 48-72 horas. Cajas de luz y letras corpóreas entre 5 y 10 días hábiles. El neón LED tiene un plazo de hasta 15 días por su proceso de fabricación personalizado.' },
       { q: '¿Qué tipo de rótulo luminoso es mejor para un restaurante o bar?', a: 'Para hostelería el neón LED en interior es la opción más popular en 2026: genera contenido orgánico en redes sociales y es económico en consumo (hasta 80% menos que neón de vidrio). Para fachada, las letras corpóreas con retroiluminación halo ofrecen la mayor presencia visual.' },
-      { q: '¿Necesito licencia para poner un rótulo en Barcelona?', a: 'Depende del barrio y el tamaño. Rótulos de hasta 0,90 m de altura que no superen el 10% de la superficie de fachada generalmente no requieren licencia de obra mayor. En zonas protegidas como el Gòtic, Born o partes del Eixample las restricciones son más estrictas. Hacemos consulta previa gratuita con el Ayuntamiento.' },
+      { q: '¿Necesito licencia para poner un rótulo en Barcelona?', a: 'Depende del barrio y el tamaño. Rótulos de hasta 0,90 m de altura que no superen el 10% de la superficie de fachada generalmente no requieren licencia de obra mayor. En zonas protegidas como el Gòtic, Born o partes del Eixample las restricciones son más estrictas. Te informamos de los requisitos municipales según tu ubicación.' },
       { q: '¿Ofrecéis garantía en los rótulos?', a: 'Sí. Todos los rótulos fabricados en nuestro taller incluyen 2 años de garantía en componentes y acabados. Taller propio en Cerdanyola del Vallès, lo que nos permite resolver incidencias en menos de 24 horas sin depender de terceros.' },
     ],
   },
@@ -232,7 +232,7 @@ La garantía es de 2 años en todos los componentes — transformador, tubo y ba
 
 Para instalar un neón LED en el interior de un local no se necesita ningún permiso especial — es una instalación eléctrica como cualquier otra luminaria. Para instalaciones en escaparate o fachada, aplica la normativa municipal de rótulos. En la mayoría de casos, un neón que no supera el 10% de la superficie de la fachada y está a menos de 0,90 m de altura puede instalarse sin licencia de obra mayor. Los barrios con restricciones más estrictas son el Gòtic, Born y ciertas zonas del Eixample catalogadas.
 
-Consulta siempre con tu instalador antes de iniciar el proceso — en RUD hacemos la consulta previa con el Ayuntamiento sin coste adicional para nuestros clientes.
+Consulta siempre con tu instalador antes de iniciar el proceso — te asesoramos sobre la normativa municipal para que puedas gestionarlo correctamente.
 
 En RUD fabricamos e instalamos [neón LED en Barcelona](/rotulos/neon-led-barcelona) con taller propio en Cerdanyola del Vallès. Visita técnica gratuita, render previo incluido en el presupuesto, garantía de 2 años. Si tienes medidas y una idea aproximada, [pide presupuesto ahora](/contact?servicio=neon) y te enviamos render y precio en menos de 48 horas.`,
   },
@@ -269,7 +269,7 @@ El neón LED es el más fotogénico y el que mejor funciona en interior. Genera 
 
 El proceso completo en RUD dura entre 3 y 5 semanas. Semana 1: visita técnica, toma de medidas de la fachada y propuesta con render fotorrealista de cómo quedará el rótulo instalado. Semana 2-3: aprobación del presupuesto y fabricación en nuestro taller de Cerdanyola del Vallès — mecanizado CNC de cada letra, acabado y control de calidad. Semana 4-5: instalación por nuestro equipo especializado con fijación oculta que no deja marcas visibles en el soporte.
 
-Todos los proyectos incluyen consulta sobre normativa municipal y, cuando es necesario, gestionamos la solicitud de licencia de actividad ante el Ayuntamiento de Barcelona.
+Te asesoramos sobre la normativa municipal aplicable a tu proyecto para que puedas tramitar los permisos necesarios.
 
 **¿Necesito licencia para instalar letras corpóreas en Barcelona?**
 
@@ -389,9 +389,8 @@ Gòtic, Born, Gràcia, Eixample (edificios catalogados), Poblenou (patrimonio in
 
 **Proceso de legalización**
 
-Consulta al Ayuntamiento, proyecto técnico, tasas (50-200 €), licencia (1-3 meses), instalación.
 
-**En RUD nos encargamos de todo:** visita técnica, consulta al Ayuntamiento, proyecto, fabricación en taller propio e instalación. Trabajamos en [Eixample](/rotulos/eixample-barcelona), [Gràcia](/rotulos/gracia-barcelona), [Poblenou](/rotulos/poblenou-barcelona) y [Sarrià](/rotulos/sarria-barcelona).`,
+**En RUD te asesoramos sobre normativa, fabricamos e instalamos tu rótulo.** Te informamos de los requisitos según tu barrio. Trabajamos en [Eixample](/rotulos/eixample-barcelona), [Gràcia](/rotulos/gracia-barcelona), [Poblenou](/rotulos/poblenou-barcelona) y [Sarrià](/rotulos/sarria-barcelona).`,
   },
 }
 

@@ -82,7 +82,7 @@ const faqSchema = {
       name: '¿Necesito licencia para un rótulo en Cerdanyola?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Para rótulos en interior de locales no se necesita licencia. Para rótulos en fachada se necesita comunicación previa al Ajuntament de Cerdanyola del Vallès. Nosotros gestionamos la tramitación completa para nuestros clientes.',
+        text: 'Para rótulos en interior de locales no se necesita licencia. Para rótulos en fachada se necesita comunicación previa al Ajuntament de Cerdanyola del Vallès. Te asesoramos sobre los trámites necesarios para tu caso.',
       },
     },
   ],

@@ -66,7 +66,7 @@ const faqSchema = {
       name: '¿Necesito licencia para instalar un rótulo en El Born?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'El Born forma parte del Districte de Ciutat Vella, que tiene una normativa de rótulos en fachada especialmente estricta por su valor patrimonial. Se requiere comunicación previa o licencia de obra menor en la mayoría de casos. Nosotros gestionamos la tramitación completa con el Ajuntament de Barcelona.',
+        text: 'El Born forma parte del Districte de Ciutat Vella, que tiene una normativa de rótulos en fachada especialmente estricta por su valor patrimonial. Se requiere comunicación previa o licencia de obra menor en la mayoría de casos. Te orientamos sobre los trámites a seguir ante el Ajuntament de Barcelona.',
       },
     },
     {
