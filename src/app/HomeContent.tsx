@@ -176,8 +176,8 @@ function Hero() {
         </p>
 
         <h1 aria-label="Rótulos y Branding en Barcelona" style={{ marginBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
-          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>RÓTULOS</span></div>
-          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>Y BRANDING</span></div>
+          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>RÓTULOS</span></div>{' '}
+          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>Y BRANDING</span></div>{' '}
           <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>BARCELONA</span></div>
         </h1>
 
@@ -324,7 +324,7 @@ function Overview() {
         <ScrollReveal>
           <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.5rem' }}>Resumen</p>
           <h2 aria-label="Por qué trabajar con nosotros" className="rg display" style={{ fontSize: 'clamp(3rem,7vw,8rem)', color: 'var(--fg)', lineHeight: 0.87 }}>
-            <div className="text-mask"><span className="rl">POR QUÉ</span></div>
+            <div className="text-mask"><span className="rl">POR QUÉ</span></div>{' '}
             <div className="text-mask"><span className="rl" style={{ opacity: 0.28 }}>TRABAJAR CON NOSOTROS</span></div>
           </h2>
         </ScrollReveal>
@@ -377,7 +377,7 @@ function RotulosStrip() {
             <div>
               <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>Empresa de rótulos · Barcelona</p>
               <h2 aria-label="Rótulos luminosos" className="display" style={{ fontSize: 'clamp(3.5rem,9vw,10rem)', color: 'var(--fg)' }}>
-                RÓTULOS<br /><em>LUMINOSOS</em>
+                RÓTULOS<br />{' '}<em>LUMINOSOS</em>
               </h2>
             </div>
             <Link href="/rotulos" onClick={() => trackCTA('Ver todos los rotulos', '/rotulos', 'rotulos-strip')}
@@ -505,7 +505,7 @@ function CTA() {
             Taller propio · Cerdanyola del Vallès · BCN
           </p>
           <h2 aria-label="Fabricamos tu rótulo en Barcelona" className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-            FABRICAMOS<br />TU RÓTULO<br /><em>EN BARCELONA</em>
+            FABRICAMOS<br />{' '}TU RÓTULO<br />{' '}<em>EN BARCELONA</em>
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
             <a href="https://wa.me/34645593227"
