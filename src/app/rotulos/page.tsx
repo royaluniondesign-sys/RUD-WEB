@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
-import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 
 export const metadata = {
   title: 'Rótulos Barcelona · Neón LED, Letras Corpóreas, Vinilos | RUD Studio',
@@ -101,7 +100,6 @@ export default function Rotulos() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rotulosSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar light />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(BREADCRUMBS.rotulos())) }} />
 
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section style={{
@@ -116,7 +114,7 @@ export default function Rotulos() {
           </p>
           <h1 style={{ margin: 0 }}>
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>RÓTULOS</span>
-<span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}> BARCELONA</span
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>BARCELONA</span>
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>FABRICACIÓN</span>
           </h1>
           <div style={{
@@ -162,7 +160,7 @@ export default function Rotulos() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — FABRICACIÓN PROPIA · BARCELONA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3.5rem, 9vw, 10rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              6 TIPOS<br /><em> DE RÓTULO</em>
+              6 TIPOS<br /><em>DE RÓTULO</em>
             </h2>
           </ScrollReveal>
 
@@ -204,7 +202,7 @@ export default function Rotulos() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — INSTALACIONES REALES · BARCELONA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              TRABAJOS<br /><em> REALIZADOS</em>
+              TRABAJOS<br /><em>REALIZADOS</em>
             </h2>
           </ScrollReveal>
 
@@ -247,7 +245,7 @@ export default function Rotulos() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>03 — DEL BRIEFING A LA INSTALACIÓN</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              EL PROCESO<br /><em> RUD</em>
+              EL PROCESO<br /><em>RUD</em>
             </h2>
           </ScrollReveal>
 
@@ -279,7 +277,7 @@ export default function Rotulos() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>PREGUNTAS FRECUENTES</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              TODO LO<br /><em> QUE NECESITAS</em>
+              TODO LO<br /><em>QUE NECESITAS</em>
             </h2>
           </ScrollReveal>
 
@@ -315,7 +313,7 @@ export default function Rotulos() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>DÓNDE TRABAJAMOS</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              BARCELONA<br /><em> Y ÁREA METROPOLITANA</em>
+              BARCELONA<br /><em>Y ÁREA METROPOLITANA</em>
             </h2>
           </ScrollReveal>
 
@@ -349,7 +347,7 @@ export default function Rotulos() {
               <div>
                 <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1rem' }}>EMPRESA DE RÓTULOS EN BARCELONA</p>
                 <h2 className="display" style={{ fontSize: 'clamp(2rem, 5vw, 5rem)', color: 'var(--fg)' }}>
-                  FABRICACIÓN<br /><em> SIN INTERMEDIARIOS</em>
+                  FABRICACIÓN<br /><em>SIN INTERMEDIARIOS</em>
                 </h2>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -373,7 +371,7 @@ export default function Rotulos() {
               Presupuesto en 24h · Visita técnica gratis · Taller propio
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              MANDA LAS<br />MEDIDAS.<br /><em> HOY.</em>
+              MANDA LAS<br />MEDIDAS.<br /><em>HOY.</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <a href="https://wa.me/34645593227?text=Hola%2C%20quiero%20presupuesto%20para%20un%20r%C3%B3tulo%20en%20Barcelona"

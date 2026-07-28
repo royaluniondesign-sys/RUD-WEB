@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
-import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 
 export const metadata = {
   title: 'Portfolio Branding, Rótulos y Diseño Web Barcelona — Proyectos Reales | RUD Studio',
@@ -98,7 +97,7 @@ export default function Work() {
   return (
     <main style={{ background: 'var(--bg)' }}>
       <Navbar light />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(BREADCRUMBS.work())) }} />
+
       {/* ── HERO ──────────────────────────────────────────── */}
       <section style={{
         background: 'var(--bg)', minHeight: '70svh',
@@ -112,7 +111,7 @@ export default function Work() {
           </p>
           <h1 style={{ margin: 0 }}>
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>TRABAJO</span>
-<span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}> QUE HABLA</span
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>QUE HABLA</span>
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>BARCELONA</span>
           </h1>
           <div style={{
@@ -164,7 +163,7 @@ export default function Work() {
             <ScrollReveal>
               <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>RÓTULOS EN BARCELONA</p>
               <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-                INSTALACIONES<br /><em> RECIENTES</em>
+                INSTALACIONES<br /><em>RECIENTES</em>
               </h2>
             </ScrollReveal>
 
@@ -206,7 +205,7 @@ export default function Work() {
               Abiertos a nuevos proyectos · Presupuesto en 24h
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              TU MARCA<br /><em> AQUÍ</em>
+              TU MARCA<br /><em>AQUÍ</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <Link href="/contact" className="mono-label"

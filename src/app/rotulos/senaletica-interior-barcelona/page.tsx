@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
-import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 
 export const metadata = {
   title: 'Señalética Interior Barcelona · Corporativa y Hotelera | RUD Studio',
@@ -44,7 +43,7 @@ export default function SenaleticaInteriorBarcelona() {
     <main style={{ background: 'var(--bg)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <Navbar light />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(BREADCRUMBS.rotulosService('senaletica-interior-barcelona', 'Señalética Interior'))) }} />
+
       {/* HERO */}
       <section style={{ background: 'var(--bg)', minHeight: '60svh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', paddingTop: '8rem', paddingBottom: 'clamp(3rem, 6vw, 5rem)' }}>
         <div className="container-custom">
@@ -58,7 +57,7 @@ export default function SenaleticaInteriorBarcelona() {
           </p>
           <h1>
             <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}>SEÑALÉTICA</span>
-<span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}> INTERIOR</span
+            <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}>INTERIOR</span>
             <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block', opacity: 0.28 }}>BARCELONA</span>
           </h1>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', paddingTop: '1.5rem', marginTop: 'clamp(2rem, 4vw, 3rem)', borderTop: '1px solid var(--border)' }}>
@@ -76,7 +75,7 @@ export default function SenaleticaInteriorBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — TIPOS DE SEÑALÉTICA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              ¿QUÉ TIPO<br /><em> NECESITAS?</em>
+              ¿QUÉ TIPO<br /><em>NECESITAS?</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -99,7 +98,7 @@ export default function SenaleticaInteriorBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — SECTORES</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              SEÑALÉTICA<br /><em> POR SECTOR</em>
+              SEÑALÉTICA<br /><em>POR SECTOR</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -129,7 +128,7 @@ export default function SenaleticaInteriorBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>03 — CÓMO TRABAJAMOS</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              DEL BOCETO<br /><em> A LA PARED</em>
+              DEL BOCETO<br /><em>A LA PARED</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -158,7 +157,7 @@ export default function SenaleticaInteriorBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>TAMBIÉN FABRICAMOS</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              MÁS TIPOS<br /><em> DE RÓTULO</em>
+              MÁS TIPOS<br /><em>DE RÓTULO</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -190,7 +189,7 @@ export default function SenaleticaInteriorBarcelona() {
               Presupuesto gratuito · Respondemos en 24h
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              PIDE TU<br /><em> PRESUPUESTO</em>
+              PIDE TU<br /><em>PRESUPUESTO</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <TrackedLink href="/contact?servicio=senaletica" label="Presupuesto señalética bottom" location="bottom-senaletica" className="mono-label" style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>

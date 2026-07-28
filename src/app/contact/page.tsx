@@ -150,7 +150,7 @@ export default function Contact() {
             </div>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1rem' }}>MENSAJE RECIBIDO</p>
             <h1 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 6rem)', color: 'var(--fg)', marginBottom: '1.5rem' }}>
-              EN MENOS<br /><em> DE 24H</em>
+              EN MENOS<br /><em>DE 24H</em>
             </h1>
             <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75, marginBottom: '2.5rem' }}>
               Te respondemos en <strong style={{ color: 'var(--fg)' }}>menos de 24h</strong>. Si tienes alguna duda urgente escríbenos por WhatsApp.
@@ -189,7 +189,7 @@ export default function Contact() {
           </p>
           <h1 style={{ margin: 0 }}>
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>CUÉNTANOS</span>
-<span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}> TU PROYECTO</span
+            <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>TU PROYECTO</span>
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>BARCELONA</span>
           </h1>
           <div style={{
@@ -220,7 +220,7 @@ export default function Contact() {
             <aside className="contact-aside" style={{ position: 'sticky', top: 96 }}>
               <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>HABLA CON QUIEN DISEÑA</p>
               <h2 className="display" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 4rem)', color: 'var(--fg)', marginBottom: '1.5rem' }}>
-                SIN<br /><em> INTERMEDIARIOS</em>
+                SIN<br /><em>INTERMEDIARIOS</em>
               </h2>
               <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75, marginBottom: '2rem' }}>
                 El equipo que lleva tu proyecto responde directamente. Sin comerciales, sin teléfonos rotos.
@@ -434,7 +434,7 @@ export default function Contact() {
                 {step === 3 && (
                   <div style={{ animation: 'fadeUp 0.28s ease-out' }}>
                     <h2 className="display" style={{ fontSize: 'clamp(2rem, 4vw, 5rem)', color: 'var(--fg)', marginBottom: '0.5rem' }}>
-                      ¿CÓMO TE<br /><em> CONTACTAMOS?</em>
+                      ¿CÓMO TE<br /><em>CONTACTAMOS?</em>
                     </h2>
                     <p style={{ fontSize: '0.875rem', color: 'var(--muted)', marginBottom: '2rem', lineHeight: 1.65 }}>
                       Último paso. Prometemos no spamear.

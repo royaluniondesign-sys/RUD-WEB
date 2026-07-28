@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
-import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 
 export const metadata = {
   title: 'Rótulos Badalona · Neón LED, Letras Corpóreas e Instalación | RUD Studio',
@@ -150,7 +149,7 @@ export default function RotulosBadalona() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar light />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(BREADCRUMBS.rotulosGeo('badalona-barcelona', 'Badalona'))) }} />
+
       {/* HERO */}
       <section style={{ background: 'var(--bg)', minHeight: '60svh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', paddingTop: '8rem', paddingBottom: 'clamp(3rem, 6vw, 5rem)' }}>
         <div className="container-custom">
@@ -164,7 +163,7 @@ export default function RotulosBadalona() {
           </p>
           <h1>
             <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}>RÓTULOS</span>
-<span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}> BADALONA</span
+            <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}>BADALONA</span>
             <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block', opacity: 0.28 }}>BARCELONA</span>
           </h1>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', paddingTop: '1.5rem', marginTop: 'clamp(2rem, 4vw, 3rem)', borderTop: '1px solid var(--border)' }}>
@@ -188,7 +187,7 @@ export default function RotulosBadalona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — SERVICIOS EN LA ZONA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              QUÉ FABRICAMOS<br /><em> EN BADALONA</em>
+              QUÉ FABRICAMOS<br /><em>EN BADALONA</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -214,7 +213,7 @@ export default function RotulosBadalona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — PREGUNTAS FRECUENTES</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              PREGUNTAS<br /><em> FRECUENTES</em>
+              PREGUNTAS<br /><em>FRECUENTES</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -240,7 +239,7 @@ export default function RotulosBadalona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>TAMBIÉN SERVIMOS</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              ZONAS<br /><em> CERCANAS</em>
+              ZONAS<br /><em>CERCANAS</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -265,7 +264,7 @@ export default function RotulosBadalona() {
               Presupuesto gratuito · Respondemos en 24h
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              PIDE TU<br /><em> PRESUPUESTO</em>
+              PIDE TU<br /><em>PRESUPUESTO</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <TrackedLink

@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
-import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 
 export const metadata = {
   title: 'Rótulos Eixample Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
@@ -66,7 +65,7 @@ const faqSchema = {
       name: '¿Qué normativa de rótulos existe en el Eixample?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'El Eixample tiene una normativa estricta de rótulos en fachadas: no se permiten rótulos que sobresalgan más de 15 cm de la línea de fachada en planta baja, y los rótulos luminosos deben apagarse a las 23h en locales sin actividad nocturna. Te asesoramos sobre la documentación que necesitas presentar.',
+        text: 'El Eixample tiene una normativa estricta de rótulos en fachadas: no se permiten rótulos que sobresalgan más de 15 cm de la línea de fachada en planta baja, y los rótulos luminosos deben apagarse a las 23h en locales sin actividad nocturna. Nosotros gestionamos la documentación y licencias necesarias.',
       },
     },
     {
@@ -82,7 +81,7 @@ const faqSchema = {
       name: '¿Necesito licencia municipal para un rótulo en el Eixample?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sí. En Barcelona cualquier rótulo en fachada o interior visible desde la calle requiere comunicación previa o licencia al Ayuntamiento. Te orientamos sobre los trámites necesarios: proyecto técnico, licencia y alta eléctrica si procede.',
+        text: 'Sí. En Barcelona cualquier rótulo en fachada o interior visible desde la calle requiere comunicación previa o licencia al Ayuntamiento. Nosotros gestionamos la tramitación completa: proyecto técnico, licencia de obras menor y alta de instalación eléctrica si procede.',
       },
     },
   ],
@@ -128,7 +127,7 @@ export default function RotulosEixample() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar light />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(BREADCRUMBS.rotulosGeo('eixample-barcelona', 'Eixample'))) }} />
+
       {/* HERO */}
       <section style={{ background: 'var(--bg)', minHeight: '60svh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', paddingTop: '8rem', paddingBottom: 'clamp(3rem, 6vw, 5rem)' }}>
         <div className="container-custom">
@@ -142,7 +141,7 @@ export default function RotulosEixample() {
           </p>
           <h1>
             <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}>RÓTULOS</span>
-<span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}> EN EL EIXAMPLE</span
+            <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}>EN EL EIXAMPLE</span>
             <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block', opacity: 0.28 }}>BARCELONA</span>
           </h1>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', paddingTop: '1.5rem', marginTop: 'clamp(2rem, 4vw, 3rem)', borderTop: '1px solid var(--border)' }}>
@@ -166,7 +165,7 @@ export default function RotulosEixample() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — SERVICIOS EN LA ZONA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              QUÉ FABRICAMOS<br /><em> EN EL EIXAMPLE</em>
+              QUÉ FABRICAMOS<br /><em>EN EL EIXAMPLE</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -199,7 +198,7 @@ export default function RotulosEixample() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — PREGUNTAS FRECUENTES</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              PREGUNTAS<br /><em> FRECUENTES</em>
+              PREGUNTAS<br /><em>FRECUENTES</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -225,7 +224,7 @@ export default function RotulosEixample() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>TAMBIÉN SERVIMOS</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              ZONAS<br /><em> CERCANAS</em>
+              ZONAS<br /><em>CERCANAS</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -261,7 +260,7 @@ export default function RotulosEixample() {
               Presupuesto gratuito · Respondemos en 24h
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              PIDE TU<br /><em> PRESUPUESTO</em>
+              PIDE TU<br /><em>PRESUPUESTO</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <TrackedLink
