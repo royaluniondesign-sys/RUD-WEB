@@ -4,23 +4,17 @@ on:
   push:
     branches: [main]
 
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
         with:
-          fetch-depth: 1
-
-      - name: Set git identity for Vercel (local only, not pushed)
-        run: |
-          git config user.email "royaluniondesign@gmail.com"
-          git config user.name "RUD Studio"
-          git commit --allow-empty --amend --reset-author --no-edit
-
-      - name: Deploy to Vercel Production
-        run: npx vercel@57.0.0 deploy --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+          working-directory: ./
