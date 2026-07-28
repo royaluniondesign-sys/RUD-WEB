@@ -39,4 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-.claude/skills/ui-ux-pro-max/scripts/__pycache__/
+# Claude Code local config (not part of the app)
+.claude/
