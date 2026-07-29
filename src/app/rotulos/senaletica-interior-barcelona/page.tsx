@@ -75,7 +75,7 @@ export default function SenaleticaInteriorBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — TIPOS DE SEÑALÉTICA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              ¿QUÉ TIPO<br /><em>NECESITAS?</em>
+              ¿QUÉ TIPO <br /><em>NECESITAS?</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -98,7 +98,7 @@ export default function SenaleticaInteriorBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — SECTORES</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              SEÑALÉTICA<br /><em>POR SECTOR</em>
+              SEÑALÉTICA <br /><em>POR SECTOR</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -128,7 +128,7 @@ export default function SenaleticaInteriorBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>03 — CÓMO TRABAJAMOS</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              DEL BOCETO<br /><em>A LA PARED</em>
+              DEL BOCETO <br /><em>A LA PARED</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -157,7 +157,7 @@ export default function SenaleticaInteriorBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>TAMBIÉN FABRICAMOS</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              MÁS TIPOS<br /><em>DE RÓTULO</em>
+              MÁS TIPOS <br /><em>DE RÓTULO</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -189,7 +189,7 @@ export default function SenaleticaInteriorBarcelona() {
               Presupuesto gratuito · Respondemos en 24h
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              PIDE TU<br /><em>PRESUPUESTO</em>
+              PIDE TU <br /><em>PRESUPUESTO</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <TrackedLink href="/contact?servicio=senaletica" label="Presupuesto señalética bottom" location="bottom-senaletica" className="mono-label" style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>

@@ -4,11 +4,9 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import PageTracking from '@/components/PageTracking'
 import WhatsAppButton from '@/components/WhatsAppButton'
-import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.royaluniondesign.com'),
   title: 'RUD Studio | Rótulos, Carteles, Branding y Diseño Web en Barcelona',
   description: 'Empresa de rótulos luminosos, carteles y vinilos para escaparates en Barcelona. También branding, identidad visual y diseño web profesional. Presupuesto en 24h sin compromiso.',
   keywords: 'rótulos Barcelona,carteles luminosos Barcelona,vinilos escaparate Barcelona,letras corpóreas Barcelona,rótulos neón Barcelona,rótulos LED Barcelona,señalética corporativa Barcelona,empresa rótulos Barcelona,branding Barcelona,agencia diseño web Barcelona,identidad visual Barcelona,e-commerce Shopify Barcelona,Royal Union Design,RUD Studio',
@@ -133,7 +131,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="geo.region" content="ES-CT" />
         <meta name="geo.placename" content="Barcelona" />
         <meta name="geo.position" content="41.3851;2.1734" />
-        <link rel="alternate" hrefLang="es-ES" href="https://www.royaluniondesign.com" />
         {/* Preload hero poster — LCP element */}
         <link rel="preload" href="/hero-bg.webp" as="image" fetchPriority="high" />
         {/* Preconnect for fonts and video CDN */}
@@ -148,10 +145,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(BREADCRUMBS.home())) }}
         />
       </head>
       <body>

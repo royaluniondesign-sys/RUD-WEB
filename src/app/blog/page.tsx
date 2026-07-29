@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
-import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 
 export const metadata = {
   title: 'Blog Rótulos, Branding y Diseño Web Barcelona — Guías y Recursos | RUD Studio',
@@ -26,14 +25,6 @@ export const metadata = {
 }
 
 const posts = [
-  {
-    slug: 'normativa-rotulos-barcelona-2026',
-    title: 'Normativa de rótulos en Barcelona 2026: guía completa de licencias, multas y requisitos',
-    date: 'Julio 2026', category: 'Señalética & Rótulos', readTime: '8 min',
-    image: '/RUDTRABAJOSROTULOS/photo-1774627895147-093ce0150bb3.avif',
-    excerpt: 'Todo sobre la ordenanza municipal de rótulos en Barcelona 2026: licencias, multas, zonas protegidas.',
-    featured: true,
-  },
   {
     slug: 'cajas-de-luz-barcelona-precio-tipos',
     title: 'Cajas de luz en Barcelona: tipos, formatos y precios reales en 2026',
@@ -61,7 +52,7 @@ const posts = [
     slug: 'letras-corporeas-barcelona-tipos-precios',
     title: 'Letras corpóreas en Barcelona: tipos, materiales y precios reales',
     date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '6 min',
-    image: '/services/rotulos-luminosos.avif',
+    image: '/services/letras-corporeas.avif',
     excerpt: 'Aluminio, metacrilato, retroiluminación halo. Todo sobre las letras corpóreas en Barcelona: qué son, qué materiales existen y cuánto cuestan.',
   },
   {
@@ -128,7 +119,7 @@ export default function Blog() {
   return (
     <main style={{ minHeight: '100vh', background: 'var(--bg)' }}>
       <Navbar light />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(BREADCRUMBS.blog())) }} />
+
       {/* Hero */}
       <section style={{ background: 'var(--bg)', paddingTop: 68, paddingBottom: 'clamp(3rem,7vw,5rem)' }}>
         <div className="container-custom" style={{ paddingTop: 'clamp(4rem,10vw,7rem)' }}>

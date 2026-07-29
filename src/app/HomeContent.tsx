@@ -377,7 +377,7 @@ function RotulosStrip() {
             <div>
               <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>Empresa de rótulos · Barcelona</p>
               <h2 className="display" style={{ fontSize: 'clamp(3.5rem,9vw,10rem)', color: 'var(--fg)' }}>
-                RÓTULOS<br /><em>LUMINOSOS</em>
+                RÓTULOS <br /><em>LUMINOSOS</em>
               </h2>
             </div>
             <Link href="/rotulos" onClick={() => trackCTA('Ver todos los rotulos', '/rotulos', 'rotulos-strip')}
@@ -505,7 +505,7 @@ function CTA() {
             Taller propio · Cerdanyola del Vallès · BCN
           </p>
           <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-            FABRICAMOS<br />TU RÓTULO<br /><em>EN BARCELONA</em>
+            FABRICAMOS <br />TU RÓTULO <br /><em>EN BARCELONA</em>
           </h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
             <a href="https://wa.me/34645593227"

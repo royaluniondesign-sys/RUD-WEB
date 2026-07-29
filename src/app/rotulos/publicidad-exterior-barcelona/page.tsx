@@ -75,7 +75,7 @@ export default function PublicidadExteriorBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — FORMATOS DISPONIBLES</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              ¿QUÉ FORMATO<br /><em>NECESITAS?</em>
+              ¿QUÉ FORMATO <br /><em>NECESITAS?</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -106,7 +106,7 @@ export default function PublicidadExteriorBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — POR QUÉ RUD</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              UN SOLO<br /><em>PROVEEDOR</em>
+              UN SOLO <br /><em>PROVEEDOR</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -134,7 +134,7 @@ export default function PublicidadExteriorBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>03 — CÓMO FUNCIONA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              DEL BOCETO<br /><em>A LA CALLE</em>
+              DEL BOCETO <br /><em>A LA CALLE</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -163,7 +163,7 @@ export default function PublicidadExteriorBarcelona() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>TAMBIÉN FABRICAMOS</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              MÁS TIPOS<br /><em>DE RÓTULO</em>
+              MÁS TIPOS <br /><em>DE RÓTULO</em>
             </h2>
           </ScrollReveal>
           <div>
@@ -195,7 +195,7 @@ export default function PublicidadExteriorBarcelona() {
               Presupuesto gratuito · Respondemos en 24h
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              PIDE TU<br /><em>PRESUPUESTO</em>
+              PIDE TU <br /><em>PRESUPUESTO</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <TrackedLink href="/contact?servicio=publicidad" label="Presupuesto exterior bottom" location="bottom-exterior" className="mono-label" style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>

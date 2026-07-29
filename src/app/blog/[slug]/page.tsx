@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import BlogTracker from '@/components/BlogTracker'
-import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 
 function renderParagraph(text: string) {
   const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/)
@@ -66,7 +65,7 @@ Para hostelería y restauración: neón LED en interior o letras corpóreas en f
 
 En Barcelona, los rótulos en fachada están regulados por la Ordenança sobre l'ús de les façanes i dels espais visibles des de la via pública. Las restricciones principales afectan a la altura máxima de los rótulos, la proporción respecto a la fachada, el uso de colores y materiales en zonas de protección patrimonial, y la iluminación en horario nocturno.
 
-Los barrios con más restricciones son el Gòtic, el Born, Gràcia y zonas catalogadas del Eixample. No obstante, en la mayoría de casos los rótulos de hasta 0,90 m de altura y que no superen el 10% de la superficie de la fachada pueden instalarse sin licencia de obra mayor. Para cualquier duda, te informamos sobre los requisitos ante el Ayuntamiento según tu caso.
+Los barrios con más restricciones son el Gòtic, el Born, Gràcia y zonas catalogadas del Eixample. No obstante, en la mayoría de casos los rótulos de hasta 0,90 m de altura y que no superen el 10% de la superficie de la fachada pueden instalarse sin licencia de obra mayor. Para cualquier duda, realizamos consulta previa gratuita con los técnicos del Ayuntamiento.
 
 **El proceso de instalación en RUD**
 
@@ -79,7 +78,7 @@ En RUD diseñamos y fabricamos [rótulos luminosos en Barcelona](/rotulos) con i
       { q: '¿Cuánto cuesta un rótulo luminoso en Barcelona?', a: 'El precio depende del tipo: una caja de luz parte de 800 €, las letras corpóreas desde 2.500 €, el neón LED desde 800 € (mostrador) hasta más de 2.200 € (fachada). Todos los precios incluyen diseño, fabricación e instalación en Barcelona.' },
       { q: '¿Cuánto tarda en fabricarse un rótulo luminoso?', a: 'Los vinilos de escaparate están listos en 48-72 horas. Cajas de luz y letras corpóreas entre 5 y 10 días hábiles. El neón LED tiene un plazo de hasta 15 días por su proceso de fabricación personalizado.' },
       { q: '¿Qué tipo de rótulo luminoso es mejor para un restaurante o bar?', a: 'Para hostelería el neón LED en interior es la opción más popular en 2026: genera contenido orgánico en redes sociales y es económico en consumo (hasta 80% menos que neón de vidrio). Para fachada, las letras corpóreas con retroiluminación halo ofrecen la mayor presencia visual.' },
-      { q: '¿Necesito licencia para poner un rótulo en Barcelona?', a: 'Depende del barrio y el tamaño. Rótulos de hasta 0,90 m de altura que no superen el 10% de la superficie de fachada generalmente no requieren licencia de obra mayor. En zonas protegidas como el Gòtic, Born o partes del Eixample las restricciones son más estrictas. Te informamos de los requisitos municipales según tu ubicación.' },
+      { q: '¿Necesito licencia para poner un rótulo en Barcelona?', a: 'Depende del barrio y el tamaño. Rótulos de hasta 0,90 m de altura que no superen el 10% de la superficie de fachada generalmente no requieren licencia de obra mayor. En zonas protegidas como el Gòtic, Born o partes del Eixample las restricciones son más estrictas. Hacemos consulta previa gratuita con el Ayuntamiento.' },
       { q: '¿Ofrecéis garantía en los rótulos?', a: 'Sí. Todos los rótulos fabricados en nuestro taller incluyen 2 años de garantía en componentes y acabados. Taller propio en Cerdanyola del Vallès, lo que nos permite resolver incidencias en menos de 24 horas sin depender de terceros.' },
     ],
   },
@@ -232,14 +231,14 @@ La garantía es de 2 años en todos los componentes — transformador, tubo y ba
 
 Para instalar un neón LED en el interior de un local no se necesita ningún permiso especial — es una instalación eléctrica como cualquier otra luminaria. Para instalaciones en escaparate o fachada, aplica la normativa municipal de rótulos. En la mayoría de casos, un neón que no supera el 10% de la superficie de la fachada y está a menos de 0,90 m de altura puede instalarse sin licencia de obra mayor. Los barrios con restricciones más estrictas son el Gòtic, Born y ciertas zonas del Eixample catalogadas.
 
-Consulta siempre con tu instalador antes de iniciar el proceso — te asesoramos sobre la normativa municipal para que puedas gestionarlo correctamente.
+Consulta siempre con tu instalador antes de iniciar el proceso — en RUD hacemos la consulta previa con el Ayuntamiento sin coste adicional para nuestros clientes.
 
 En RUD fabricamos e instalamos [neón LED en Barcelona](/rotulos/neon-led-barcelona) con taller propio en Cerdanyola del Vallès. Visita técnica gratuita, render previo incluido en el presupuesto, garantía de 2 años. Si tienes medidas y una idea aproximada, [pide presupuesto ahora](/contact?servicio=neon) y te enviamos render y precio en menos de 48 horas.`,
   },
   'letras-corporeas-barcelona-tipos-precios': {
     title: 'Letras corpóreas en Barcelona: tipos, materiales y precios reales',
     date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '10 min',
-    image: '/RUDTRABAJOSROTULOS/photo-1632605166776-7128669886e7.avif',
+    image: '/services/letras-corporeas.avif',
     excerpt: 'Aluminio, metacrilato, retroiluminación halo. Todo sobre las letras corpóreas en Barcelona: qué son, qué materiales existen y cuánto cuestan.',
     content: `Las letras corpóreas son el estándar del retail premium, la hostelería de nivel medio-alto y las sedes corporativas en Barcelona. Son letras en tres dimensiones que se instalan directamente sobre la fachada, una pared interior o un panel de fondo — y que comunican solidez, permanencia y cuidado por la imagen de marca. A diferencia del neón LED o la caja de luz, las letras corpóreas funcionan igual de bien de día que de noche, con o sin iluminación.
 
@@ -269,7 +268,7 @@ El neón LED es el más fotogénico y el que mejor funciona en interior. Genera 
 
 El proceso completo en RUD dura entre 3 y 5 semanas. Semana 1: visita técnica, toma de medidas de la fachada y propuesta con render fotorrealista de cómo quedará el rótulo instalado. Semana 2-3: aprobación del presupuesto y fabricación en nuestro taller de Cerdanyola del Vallès — mecanizado CNC de cada letra, acabado y control de calidad. Semana 4-5: instalación por nuestro equipo especializado con fijación oculta que no deja marcas visibles en el soporte.
 
-Te asesoramos sobre la normativa municipal aplicable a tu proyecto para que puedas tramitar los permisos necesarios.
+Todos los proyectos incluyen consulta sobre normativa municipal y, cuando es necesario, gestionamos la solicitud de licencia de actividad ante el Ayuntamiento de Barcelona.
 
 **¿Necesito licencia para instalar letras corpóreas en Barcelona?**
 
@@ -364,34 +363,6 @@ Los precios orientativos en Barcelona para 2026: caja de luz simple con vinilo i
 
 En RUD fabricamos e instalamos [cajas de luz en Barcelona](/rotulos/cajas-de-luz-barcelona) para todo tipo de comercios. Visita técnica gratuita, presupuesto con render en 48 horas, instalación con garantía de 2 años. [Pide presupuesto sin compromiso →](/pricing)`,
   },
-  'normativa-rotulos-barcelona-2026': {
-    title: 'Normativa de rótulos en Barcelona 2026: guía completa de licencias, multas y requisitos',
-    date: 'Julio 2026', category: 'Señalética & Rótulos', readTime: '8 min',
-    image: '/RUDTRABAJOSROTULOS/photo-1774627895147-093ce0150bb3.avif',
-    excerpt: 'Todo sobre la ordenanza municipal de rótulos en Barcelona: licencias, multas, zonas protegidas.',
-    content: `Si tienes un negocio en Barcelona y necesitas instalar un rótulo, la primera pregunta no debería ser "cuánto cuesta" sino "qué permisos necesito". La normativa municipal es más estricta de lo que la mayoría de comerciantes cree, y las sanciones pueden alcanzar los 3.000 €.
-
-**La ordenanza que regula los rótulos en Barcelona**
-
-La normativa aplicable es la Ordenança sobre l'ús de les façanes i dels espais visibles des de la via pública del Ayuntamiento de Barcelona. Las restricciones varían según el distrito. Las zonas con más protección son el Gòtic, el Born, Gràcia y partes del Eixample.
-
-**¿Qué rótulos necesitan licencia?**
-
-Los que no superan el 10% de la fachada y tienen menos de 0,90 m pueden instalarse sin licencia de obra mayor. Los que SÍ requieren licencia: rótulos en edificios catalogados, los que superan las dimensiones establecidas, y rótulos con intermitencia en zonas residenciales.
-
-**Multas por incumplimiento**
-
-Leves hasta 750 €, graves hasta 1.500 €, muy graves hasta 3.000 € más retirada del rótulo.
-
-**Zonas con más restricciones**
-
-Gòtic, Born, Gràcia, Eixample (edificios catalogados), Poblenou (patrimonio industrial).
-
-**Proceso de legalización**
-
-
-**En RUD te asesoramos sobre normativa, fabricamos e instalamos tu rótulo.** Te informamos de los requisitos según tu barrio. Trabajamos en [Eixample](/rotulos/eixample-barcelona), [Gràcia](/rotulos/gracia-barcelona), [Poblenou](/rotulos/poblenou-barcelona) y [Sarrià](/rotulos/sarria-barcelona).`,
-  },
 }
 
 export async function generateStaticParams() {
@@ -409,7 +380,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: { title: p.title, description: p.excerpt, images: [{ url: p.image.startsWith('/') ? `https://www.royaluniondesign.com${p.image}` : p.image }] },
     other: {
       'script:ld+json': JSON.stringify([
-        breadcrumbSchema(BREADCRUMBS.blogPost(slug, p.title)),
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',

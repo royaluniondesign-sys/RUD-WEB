@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
-import { breadcrumbSchema, BREADCRUMBS } from '@/lib/schema'
 
 const PROJECTS: Record<string, {
   client: string; type: string; desc: string; tags: string[];
@@ -200,11 +199,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${p.client} — Caso de estudio · RUD Studio Barcelona`,
     description: p.desc,
     alternates: { canonical: `https://www.royaluniondesign.com/work/${slug}` },
-    other: {
-      'script:ld+json': JSON.stringify([
-        breadcrumbSchema(BREADCRUMBS.workCase(slug, p.client)),
-      ]),
-    },
     openGraph: {
       title: `${p.client} — Caso de estudio · RUD Studio`,
       description: p.desc,

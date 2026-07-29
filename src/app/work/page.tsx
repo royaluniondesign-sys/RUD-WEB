@@ -163,7 +163,7 @@ export default function Work() {
             <ScrollReveal>
               <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>RÓTULOS EN BARCELONA</p>
               <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-                INSTALACIONES<br /><em>RECIENTES</em>
+                INSTALACIONES <br /><em>RECIENTES</em>
               </h2>
             </ScrollReveal>
 
@@ -205,7 +205,7 @@ export default function Work() {
               Abiertos a nuevos proyectos · Presupuesto en 24h
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              TU MARCA<br /><em>AQUÍ</em>
+              TU MARCA <br /><em>AQUÍ</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <Link href="/contact" className="mono-label"

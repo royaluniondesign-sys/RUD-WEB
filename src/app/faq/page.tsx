@@ -163,7 +163,7 @@ export default function FAQ() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — RÓTULOS & SEÑALÉTICA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              PREGUNTAS SOBRE<br /><em>RÓTULOS</em>
+              PREGUNTAS SOBRE <br /><em>RÓTULOS</em>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={80}>
@@ -178,7 +178,7 @@ export default function FAQ() {
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — BRANDING, WEB & GENERAL</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              CÓMO<br /><em>TRABAJAMOS</em>
+              CÓMO <br /><em>TRABAJAMOS</em>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={80}>
@@ -195,7 +195,7 @@ export default function FAQ() {
               ¿No encuentras tu respuesta? · Respondemos en 24h
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              PREGÚNTANOS<br /><em>DIRECTAMENTE</em>
+              PREGÚNTANOS <br /><em>DIRECTAMENTE</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <Link href="/contact" className="mono-label"
