@@ -15,9 +15,6 @@ export const metadata: Metadata = {
   publisher: 'RUD Studio',
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://www.royaluniondesign.com/' },
-  icons: {
-    apple: [{ url: '/logo-rud.png', sizes: '180x180', type: 'image/png' }],
-  },
   openGraph: {
     title: 'RUD Studio | Rótulos, Carteles, Branding y Diseño Web en Barcelona',
     description: 'Empresa de rótulos luminosos, carteles y vinilos en Barcelona. Branding, diseño web y e-commerce. Presupuesto en 24h.',
