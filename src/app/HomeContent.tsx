@@ -176,8 +176,8 @@ function Hero() {
         </p>
 
         <h1 aria-label="Rótulos y Branding en Barcelona" style={{ marginBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
-          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>RÓTULOS</span></div>
-          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>Y BRANDING</span></div>
+          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>RÓTULOS</span></div>{' '}
+          <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>Y BRANDING</span></div>{' '}
           <div className="text-mask"><span className="rl hero-rl display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap', opacity: 0.28 }}>BARCELONA</span></div>
         </h1>
 
@@ -324,7 +324,7 @@ function Overview() {
         <ScrollReveal>
           <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.5rem' }}>Resumen</p>
           <h2 className="rg display" aria-label="Por qué trabajar con nosotros" style={{ fontSize: 'clamp(3rem,7vw,8rem)', color: 'var(--fg)', lineHeight: 0.87 }}>
-            <div className="text-mask"><span className="rl">POR QUÉ</span></div>
+            <div className="text-mask"><span className="rl">POR QUÉ</span></div>{' '}
             <div className="text-mask"><span className="rl" style={{ opacity: 0.28 }}>TRABAJAR CON NOSOTROS</span></div>
           </h2>
         </ScrollReveal>
