@@ -65,14 +65,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'letras-corporeas-barcelona-tipos-precios',                         lastMod: '2026-07-29', priority: 0.75 },
     { slug: 'vinilos-escaparate-barcelona-precio-instalacion',                  lastMod: '2026-07-29', priority: 0.75 },
     // Branding & web — medium value, 0.65
-    { slug: 'branding-ecommerce-shopify-barcelona',                             lastMod: '2026-02-01', priority: 0.65 },
-    { slug: 'identidad-visual-vs-logo-diferencia',                              lastMod: '2026-01-15', priority: 0.65 },
-    { slug: 'estrategia-marca-startups-barcelona',                              lastMod: '2025-12-01', priority: 0.65 },
-    { slug: 'nextjs-vs-wordpress-2026',                                         lastMod: '2026-01-15', priority: 0.65 },
-    // IA / automation — lower priority for rótulos business
-    { slug: 'ia-local-vs-nube-agencias-creativas',                              lastMod: '2026-03-01', priority: 0.55 },
-    { slug: 'aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st',     lastMod: '2026-04-01', priority: 0.55 },
-    { slug: 'automatizacion-marketing-agencias-n8n',                            lastMod: '2025-11-01', priority: 0.55 },
+    { slug: 'branding-ecommerce-shopify-barcelona',                             lastMod: '2026-07-29', priority: 0.65 },
+    { slug: 'identidad-visual-vs-logo-diferencia',                              lastMod: '2026-07-29', priority: 0.65 },
+    { slug: 'estrategia-marca-startups-barcelona',                              lastMod: '2026-07-29', priority: 0.65 },
+    // nextjs-vs-wordpress excluded — off-topic, noindex applied in metadata
+    // IA/tech posts excluded — off-topic, noindex applied in metadata
   ]
 
   const blog: MetadataRoute.Sitemap = blogEntries.map(({ slug, lastMod, priority }) => ({

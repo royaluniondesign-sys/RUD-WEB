@@ -373,9 +373,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const p = POSTS[slug]
   if (!p) return { title: 'Artículo no encontrado · RUD Blog' }
+  const offTopic = ['aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st', 'ia-local-vs-nube-agencias-creativas', 'automatizacion-marketing-agencias-n8n', 'nextjs-vs-wordpress-2026']
   return {
     title: `${p.title} · RUD Studio Barcelona`,
     description: p.excerpt,
+    ...(offTopic.includes(slug) && { robots: { index: false, follow: false } }),
     alternates: { canonical: `https://www.royaluniondesign.com/blog/${slug}` },
     openGraph: { title: p.title, description: p.excerpt, images: [{ url: p.image.startsWith('/') ? `https://www.royaluniondesign.com${p.image}` : p.image }] },
     other: {
