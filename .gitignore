@@ -41,3 +41,5 @@ yarn-error.log*
 next-env.d.ts
 # Claude Code local config (not part of the app)
 .claude/
+.agents/
+skills-lock.json
