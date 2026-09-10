@@ -99,7 +99,7 @@ export default function Rotulos() {
     <main style={{ background: 'var(--bg)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rotulosSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Navbar light />
+      <Navbar />
 
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section style={{

@@ -47,8 +47,8 @@ export default function Navbar({ light = false }: { light?: boolean }) {
     return () => { document.body.style.overflow = '' }
   }, [open])
 
-  const isLight = light && !scrolled && !open
-  const navBg   = scrolled || open ? 'bg-[#F7F5F1] border-b border-[#E2DDD7]' : 'bg-transparent'
+  const isLight = false
+  const navBg   = scrolled || open ? 'bg-[#F7F5F1] border-b border-[#E2DDD7]' : 'bg-[#F1F0EE]'
 
   const handleRotulosEnter = () => {
     if (hoverTimeout.current) clearTimeout(hoverTimeout.current)

@@ -96,7 +96,7 @@ const PROJECT_ROWS = [
 export default function Work() {
   return (
     <main style={{ background: 'var(--bg)' }}>
-      <Navbar light />
+      <Navbar />
 
       {/* ── HERO ──────────────────────────────────────────── */}
       <section style={{

@@ -123,7 +123,7 @@ export default function FAQ() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
-      <Navbar light />
+      <Navbar />
 
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section style={{

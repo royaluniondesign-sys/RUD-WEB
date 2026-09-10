@@ -142,7 +142,7 @@ export default function Contact() {
   if (status === 'success') {
     return (
       <main id="main-content" style={{ minHeight: '100dvh', background: 'var(--bg)', display: 'flex', flexDirection: 'column' }}>
-        <Navbar light />
+        <Navbar />
         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 'clamp(2rem,8vw,5rem) 1.5rem' }}>
           <div style={{ maxWidth: 520, width: '100%' }}>
             <div style={{ paddingBottom: '2rem', marginBottom: '2rem', borderBottom: '1px solid var(--border)' }}>
@@ -175,7 +175,7 @@ export default function Contact() {
   // ── MAIN ────────────────────────────────────────────────────────────────────
   return (
     <main style={{ minHeight: '100dvh', background: 'var(--bg)' }}>
-      <Navbar light />
+      <Navbar />
 
       {/* ── HERO ───────────────────────────────────────────────────────────── */}
       <section style={{

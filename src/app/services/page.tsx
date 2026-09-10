@@ -73,7 +73,7 @@ export default function Services() {
   return (
     <main style={{ background: 'var(--bg)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
-      <Navbar light />
+      <Navbar />
 
       {/* ── HERO ──────────────────────────────────────────── */}
       <section style={{

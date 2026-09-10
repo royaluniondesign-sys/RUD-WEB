@@ -224,7 +224,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
 
   return (
     <main style={{ background: 'var(--bg)' }}>
-      <Navbar light />
+      <Navbar />
 
       {/* Hero */}
       <section style={{ background: 'var(--bg)', minHeight: '60svh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', paddingTop: '8rem', paddingBottom: 'clamp(3rem, 6vw, 5rem)' }}>

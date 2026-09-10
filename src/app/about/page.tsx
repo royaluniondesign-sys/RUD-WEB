@@ -47,7 +47,7 @@ const FILOSOFIA = [
 export default function About() {
   return (
     <main style={{ background: 'var(--bg)' }}>
-      <Navbar light />
+      <Navbar />
 
       {/* ── HERO ──────────────────────────────────────────── */}
       <section style={{

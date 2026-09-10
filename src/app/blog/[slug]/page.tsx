@@ -417,7 +417,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   return (
     <main style={{ background: 'var(--bg)' }}>
       <BlogTracker slug={slug} title={p.title} />
-      <Navbar light />
+      <Navbar />
 
       {/* Hero */}
       <section style={{ background: 'var(--bg)', paddingTop: 68, paddingBottom: 'clamp(3rem,6vw,5rem)' }}>

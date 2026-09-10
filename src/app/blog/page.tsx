@@ -118,7 +118,7 @@ const posts = [
 export default function Blog() {
   return (
     <main style={{ minHeight: '100vh', background: 'var(--bg)' }}>
-      <Navbar light />
+      <Navbar />
 
       {/* Hero */}
       <section style={{ background: 'var(--bg)', paddingTop: 68, paddingBottom: 'clamp(3rem,7vw,5rem)' }}>

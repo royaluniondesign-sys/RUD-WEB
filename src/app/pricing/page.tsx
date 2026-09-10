@@ -105,7 +105,7 @@ const FAQS = [
 export default function Pricing() {
   return (
     <main style={{ background: 'var(--bg)' }}>
-      <Navbar light />
+      <Navbar />
 
       {/* ── HERO ──────────────────────────────────────────── */}
       <section style={{

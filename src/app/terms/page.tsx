@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Terms() {
   return (
     <main style={{ minHeight: '100vh', background: 'var(--bg)' }}>
-      <Navbar light />
+      <Navbar />
       <section style={{ paddingTop: 68 }}>
         <div className="container-custom" style={{ paddingTop: 'clamp(3rem,8vw,5rem)', paddingBottom: 'clamp(3rem,8vw,5rem)' }}>
           <div style={{ maxWidth: 720 }}>
