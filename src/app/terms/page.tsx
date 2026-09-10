@@ -47,7 +47,7 @@ export default function Terms() {
 
               <div style={{ marginTop: '1rem', paddingTop: '1.5rem', borderTop: '1px solid #E2DDD7' }}>
                 <Link href="/contact" style={{ color: '#0A0908', fontWeight: 500, textDecoration: 'underline', textUnderlineOffset: 3 }}>
-                  ¿Preguntas? Escríbenos →
+                  ¿Preguntas? Escríbenos
                 </Link>
               </div>
             </div>

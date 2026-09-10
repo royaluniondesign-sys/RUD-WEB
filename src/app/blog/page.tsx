@@ -124,7 +124,7 @@ export default function Blog() {
       <section style={{ background: 'var(--bg)', paddingTop: 68, paddingBottom: 'clamp(3rem,7vw,5rem)' }}>
         <div className="container-custom" style={{ paddingTop: 'clamp(4rem,10vw,7rem)' }}>
           <ScrollReveal>
-            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>Blog · Perspectivas RUD</p>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>Blog RUD Studio</p>
             <h1 className="display" style={{ fontSize: 'clamp(4.5rem,14vw,12rem)', lineHeight: 0.85, color: 'var(--fg)', marginBottom: '1rem' }}>
               BLOG
             </h1>
@@ -148,10 +148,10 @@ export default function Blog() {
                   <img src={post.image} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div>
-                  <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>{post.category} · {post.readTime} · {post.date}</p>
+                  <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>{post.category} — {post.readTime} — {post.date}</p>
                   <h2 style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--fg)', lineHeight: 1.35, marginBottom: '0.75rem' }}>{post.title}</h2>
                   <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '1rem' }}>{post.excerpt}</p>
-                  <span className="mono-label" style={{ color: 'var(--fg)', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>LEER ARTÍCULO →</span>
+                  <span className="mono-label" style={{ color: 'var(--fg)', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>LEER ARTÍCULO</span>
                 </div>
               </Link>
             </ScrollReveal>
@@ -172,7 +172,7 @@ export default function Blog() {
               PROYECTO?
             </h2>
             <Link href="/contact" className="mono-label" style={{ color: 'var(--fg)', borderBottom: '1px solid var(--fg)', paddingBottom: 3, textDecoration: 'none' }}>
-              CUÉNTANOSLO →
+              CUÉNTANOSLO
             </Link>
           </ScrollReveal>
         </div>

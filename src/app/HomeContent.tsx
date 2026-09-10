@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { useState, useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import ScrollReveal from '@/components/ScrollReveal'
 import { trackCTA, trackEmailClick, trackSocialClick } from '@/lib/analytics'
 
@@ -26,114 +26,6 @@ function useScrollTextReveal() {
   }, [])
 }
 
-// ═══════════════════════════════════════════════════════════
-// FLOATING MENU — frosted pill con asteriscos giratorios
-// ═══════════════════════════════════════════════════════════
-function FloatingMenu() {
-  const [open, setOpen] = useState(false)
-  const cwRef  = useRef<SVGSVGElement>(null)
-  const ccwRef = useRef<SVGSVGElement>(null)
-
-  useEffect(() => {
-    let ticking = false
-    const onScroll = () => {
-      if (ticking) return
-      ticking = true
-      requestAnimationFrame(() => {
-        const y = window.scrollY
-        if (cwRef.current)  cwRef.current.style.transform = `rotate(${y * 0.09}deg)`
-        if (ccwRef.current) ccwRef.current.style.transform = `rotate(${-y * 0.09}deg)`
-        ticking = false
-      })
-    }
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  const STAR_PATH = 'M12 2 L13.6 7.4 L19.2 4.8 L16.6 10.4 L22 12 L16.6 13.6 L19.2 19.2 L13.6 16.6 L12 22 L10.4 16.6 L4.8 19.2 L7.4 13.6 L2 12 L7.4 10.4 L4.8 4.8 L10.4 7.4 Z'
-
-  return (
-    <>
-      {open && (
-        <div
-          onClick={() => setOpen(false)}
-          style={{
-            position: 'fixed', inset: 0, zIndex: 48,
-            background: 'rgba(241,240,238,0.97)',
-            backdropFilter: 'blur(12px)',
-            display: 'flex', flexDirection: 'column',
-            alignItems: 'center', justifyContent: 'center',
-            gap: '0.05rem',
-          }}
-        >
-          {([
-            ['TRABAJO',   '/work'],
-            ['SERVICIOS', '/services'],
-            ['RÓTULOS',   '/rotulos'],
-            ['NOSOTROS',  '/about'],
-            ['CONTACTO',  '/contact'],
-          ] as const).map(([label, href], i) => (
-            <Link
-              key={label}
-              href={href}
-              onClick={() => setOpen(false)}
-              className="display"
-              style={{
-                fontSize: 'clamp(3.2rem, 9.5vw, 7.5rem)',
-                color: 'var(--fg)',
-                textDecoration: 'none',
-                lineHeight: 1,
-                display: 'block',
-                animation: `menuIn 0.45s cubic-bezier(0.16,1,0.3,1) ${i * 55}ms both`,
-              }}
-            >
-              {label}
-            </Link>
-          ))}
-        </div>
-      )}
-
-      <nav
-        aria-label="Menú principal"
-        style={{
-          position: 'fixed', bottom: 30, left: '50%',
-          transform: 'translateX(-50%)', zIndex: 50,
-          width: 280, height: 48, borderRadius: 32,
-          overflow: 'hidden', display: 'flex',
-          alignItems: 'center', justifyContent: 'space-between',
-        }}
-      >
-        <div style={{
-          position: 'absolute', inset: 0,
-          background: 'rgba(191,191,191,0.45)',
-          backdropFilter: 'blur(30px)',
-          WebkitBackdropFilter: 'blur(30px)',
-          borderRadius: 32,
-        }} />
-
-        <div style={{ position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: 3, padding: '0 18px' }}>
-          <svg ref={cwRef}  viewBox="0 0 24 24" style={{ width: 17, height: 17, fill: 'var(--fg)', display: 'block', willChange: 'transform', transformOrigin: 'center' }} aria-hidden="true"><path d={STAR_PATH}/></svg>
-          <svg ref={ccwRef} viewBox="0 0 24 24" style={{ width: 17, height: 17, fill: 'var(--fg)', display: 'block', willChange: 'transform', transformOrigin: 'center' }} aria-hidden="true"><path d={STAR_PATH}/></svg>
-        </div>
-
-        <button
-          onClick={() => setOpen(v => !v)}
-          aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
-          style={{
-            position: 'relative', zIndex: 1,
-            padding: '0 22px', background: 'none', border: 'none',
-            fontFamily: "'PP Neue Montreal Mono', 'Space Mono', monospace",
-            fontSize: 12, fontWeight: 500, letterSpacing: '0.08em',
-            textTransform: 'uppercase', color: 'var(--fg)',
-            cursor: 'pointer', whiteSpace: 'nowrap',
-          }}
-        >
-          {open ? '✕ CERRAR' : 'MENU'}
-        </button>
-      </nav>
-    </>
-  )
-}
 
 // ═══════════════════════════════════════════════════════════
 // HERO — text-mask slide-up al cargar
@@ -156,11 +48,6 @@ function Hero() {
 
       <div style={{ position: 'absolute', top: '1.5rem', right: 'clamp(1rem, 5vw, 2.5rem)', zIndex: 10 }}>
         <div className="mono-label" style={{ color: 'var(--muted)', textAlign: 'right', lineHeight: 1.9 }}>
-          <div>ESTADO</div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', justifyContent: 'flex-end' }}>
-            <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#22C55E', display: 'inline-block', flexShrink: 0 }} />
-            EN TALLER
-          </div>
           <div>CERDANYOLA DEL VALLÈS</div>
         </div>
       </div>
@@ -172,7 +59,7 @@ function Hero() {
         paddingTop: '6rem',
       }}>
         <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          RUD STUDIO — TALLER DE RÓTULOS &amp; ESTUDIO CREATIVO, BARCELONA
+          TALLER DE RÓTULOS Y ESTUDIO CREATIVO, BARCELONA
         </p>
 
         <h1 aria-label="Rótulos y Branding en Barcelona" style={{ marginBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
@@ -187,14 +74,13 @@ function Hero() {
           paddingTop: '1.5rem', borderTop: '1px solid var(--border)',
         }}>
           <div className="mono-label" style={{ color: 'var(--muted)' }}>
-            Servicios: Rótulos Luminosos, Branding, Web &amp; E-commerce<br />
-            actualmente: EN ACTIVO · BCN
+            Rótulos Luminosos, Branding, Web &amp; E-commerce
           </div>
           <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
             <Link href="/contact" onClick={() => trackCTA('Pedir presupuesto', '/contact', 'hero')}
               className="mono-label"
               style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: '2px' }}>
-              PEDIR PRESUPUESTO →
+              PEDIR PRESUPUESTO
             </Link>
             <Link href="/rotulos" onClick={() => trackCTA('Ver rotulos', '/rotulos', 'hero')}
               className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
@@ -256,11 +142,11 @@ function WorkProjects() {
             <div className={`project-images ${row.layout}`}>
               <Link href={`/work/${row.left.slug}`} className="img-cell" aria-label={`Ver proyecto ${row.left.client}`}>
                 <img src={row.left.img} alt={row.left.client} loading={ri === 0 ? 'eager' : 'lazy'} />
-                <span className="vp-btn">VER PROYECTO →</span>
+                <span className="vp-btn">VER PROYECTO</span>
               </Link>
               <Link href={`/work/${row.right.slug}`} className="img-cell" aria-label={`Ver proyecto ${row.right.client}`}>
                 <img src={row.right.img} alt={row.right.client} loading="lazy" />
-                <span className="vp-btn">VER PROYECTO →</span>
+                <span className="vp-btn">VER PROYECTO</span>
               </Link>
             </div>
             <div className="project-label">
@@ -276,7 +162,7 @@ function WorkProjects() {
 
       <div className="explore-wrap">
         <Link href="/work" className="explore-link" onClick={() => trackCTA('Ver todo el trabajo', '/work', 'explore-all')}>
-          ( VER TODO EL TRABAJO )
+          VER TODO EL TRABAJO
         </Link>
       </div>
     </section>
@@ -382,7 +268,7 @@ function RotulosStrip() {
             </div>
             <Link href="/rotulos" onClick={() => trackCTA('Ver todos los rotulos', '/rotulos', 'rotulos-strip')}
               className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)', paddingBottom: 2 }}>
-              Ver todos →
+              Ver todos
             </Link>
           </div>
         </ScrollReveal>
@@ -409,10 +295,10 @@ function RotulosStrip() {
 
         <ScrollReveal delay={200}>
           <div style={{ marginTop: '2rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.25rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
-            <p className="mono-label" style={{ color: 'var(--muted)' }}>Visita técnica gratuita · Presupuesto en 24h · Taller propio BCN</p>
+            <p className="mono-label" style={{ color: 'var(--muted)' }}>Visita técnica gratuita. Presupuesto en 24h. Taller propio BCN</p>
             <Link href="/contact" onClick={() => trackCTA('Pedir presupuesto rotulo', '/contact', 'rotulos-strip-bottom')}
               className="mono-label" style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
-              PEDIR PRESUPUESTO →
+              PEDIR PRESUPUESTO
             </Link>
           </div>
         </ScrollReveal>
@@ -465,33 +351,6 @@ function Services() {
   )
 }
 
-// ═══════════════════════════════════════════════════════════
-// STATS
-// ═══════════════════════════════════════════════════════════
-function Stats() {
-  const stats = [
-    { number: '+8',  label: 'Años fabricando en BCN' },
-    { number: '24h', label: 'Presupuesto sin compromiso' },
-    { number: '0€',  label: 'Visita técnica gratuita' },
-    { number: 'BCN', label: 'Taller propio en Barcelona' },
-  ]
-  return (
-    <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)', padding: 'clamp(3rem,6vw,5rem) 0' }}>
-      <div className="container-custom">
-        <div className="grid grid-cols-2 md:grid-cols-4">
-          {stats.map((stat, i) => (
-            <ScrollReveal key={stat.label} delay={i * 80}>
-              <div style={{ padding: 'clamp(1.5rem,4vw,2.5rem)', borderRight: i < 3 ? '1px solid var(--border)' : 'none' }}>
-                <p className="stat-number" style={{ color: 'var(--fg)', marginBottom: '0.5rem' }}>{stat.number}</p>
-                <p className="mono-label" style={{ color: 'var(--muted)' }}>{stat.label}</p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
 
 // ═══════════════════════════════════════════════════════════
 // CTA
@@ -502,7 +361,7 @@ function CTA() {
       <div className="container-custom">
         <ScrollReveal>
           <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-            Taller propio · Cerdanyola del Vallès · BCN
+            Taller propio, Cerdanyola del Vallès
           </p>
           <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
             FABRICAMOS <br />TU RÓTULO <br /><em>EN BARCELONA</em>
@@ -512,7 +371,7 @@ function CTA() {
               onClick={() => trackCTA('WhatsApp CTA', 'whatsapp', 'bottom-cta')}
               className="mono-label"
               style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
-              +34 645 593 227 →
+              +34 645 593 227
             </a>
             <Link href="/contact" onClick={() => trackCTA('Pedir presupuesto', '/contact', 'bottom-cta')}
               className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
@@ -609,10 +468,8 @@ export default function HomeContent() {
       <Overview />
       <RotulosStrip />
       <Services />
-      <Stats />
       <CTA />
       <Footer />
-      <FloatingMenu />
     </main>
   )
 }

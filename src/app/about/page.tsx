@@ -25,17 +25,17 @@ export const metadata = {
 }
 
 const ESPECTRO = [
-  { num: '01', cat: 'FÍSICO', title: 'RÓTULOS & SEÑALÉTICA', items: ['Rótulos luminosos LED', 'Letras corpóreas', 'Neón LED personalizado', 'Vinilos escaparate', 'Señalética interior', 'Banderolas & POP'] },
-  { num: '02', cat: 'IDENTIDAD', title: 'BRANDING & MARCA', items: ['Estrategia de marca', 'Identidad visual', 'Sistema de logo', 'Packaging', 'Manual de marca', 'Naming'] },
-  { num: '03', cat: 'DIGITAL', title: 'WEB & E-COMMERCE', items: ['Diseño web Next.js', 'E-commerce Shopify', 'SEO técnico', 'UX/UI', 'CRO y conversión', 'Integraciones API'] },
-  { num: '04', cat: 'AUTOMATIZACIÓN', title: 'IA & CONTENIDO', items: ['Agentes AURA & Hermes', 'Automatización n8n', 'Copywriting', 'Motion branding', 'Marketing digital', 'Workflows IA'] },
+  { cat: 'FÍSICO', title: 'RÓTULOS & SEÑALÉTICA', items: ['Rótulos luminosos LED', 'Letras corpóreas', 'Neón LED personalizado', 'Vinilos escaparate', 'Señalética interior', 'Banderolas & POP'] },
+  { cat: 'IDENTIDAD', title: 'BRANDING & MARCA', items: ['Estrategia de marca', 'Identidad visual', 'Sistema de logo', 'Packaging', 'Manual de marca', 'Naming'] },
+  { cat: 'DIGITAL', title: 'WEB & E-COMMERCE', items: ['Diseño web Next.js', 'E-commerce Shopify', 'SEO técnico', 'UX/UI', 'CRO y conversión', 'Integraciones API'] },
+  { cat: 'AUTOMATIZACIÓN', title: 'IA & CONTENIDO', items: ['Agentes AURA & Hermes', 'Automatización n8n', 'Copywriting', 'Motion branding', 'Marketing digital', 'Workflows IA'] },
 ]
 
 const PROCESO = [
-  { num: '01', title: 'DESCUBRIMIENTO', desc: 'Sesión inicial donde entendemos tu negocio, objetivos, audiencia y competencia.' },
-  { num: '02', title: 'ESTRATEGIA', desc: 'Definimos posicionamiento, mensajes clave y dirección creativa antes de diseñar una sola pieza.' },
-  { num: '03', title: 'DISEÑO & BUILD', desc: 'Creamos identidad visual, diseñamos en Figma, fabricamos señalética y desarrollamos la web.' },
-  { num: '04', title: 'ENTREGA & SOPORTE', desc: 'Entregamos todos los recursos, instalamos señalética, formamos al equipo y ofrecemos soporte post-entrega.' },
+  { title: 'DESCUBRIMIENTO', desc: 'Sesión inicial donde entendemos tu negocio, objetivos, audiencia y competencia.' },
+  { title: 'ESTRATEGIA', desc: 'Definimos posicionamiento, mensajes clave y dirección creativa antes de diseñar una sola pieza.' },
+  { title: 'DISEÑO & BUILD', desc: 'Creamos identidad visual, diseñamos en Figma, fabricamos señalética y desarrollamos la web.' },
+  { title: 'ENTREGA & SOPORTE', desc: 'Entregamos todos los recursos, instalamos señalética, formamos al equipo y ofrecemos soporte post-entrega.' },
 ]
 
 const FILOSOFIA = [
@@ -58,7 +58,7 @@ export default function About() {
       }}>
         <div className="container-custom">
           <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-            SOBRE RUD STUDIO · BARCELONA
+            SOBRE RUD STUDIO
           </p>
           <h1 style={{ margin: 0 }}>
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>AGENCIA</span>{' '}
@@ -72,11 +72,11 @@ export default function About() {
             borderTop: '1px solid var(--border)',
           }}>
             <p className="mono-label" style={{ color: 'var(--muted)' }}>
-              Rótulos · Branding · Diseño Web · Automatización IA
+              Rótulos, Branding, Diseño Web, Automatización IA
             </p>
             <Link href="/contact" className="mono-label"
               style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
-              TRABAJAR CON NOSOTROS →
+              TRABAJAR CON NOSOTROS
             </Link>
           </div>
         </div>
@@ -90,26 +90,17 @@ export default function About() {
               <div>
                 <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1rem' }}>LO QUE SOMOS</p>
                 <h2 className="display" style={{ fontSize: 'clamp(2.5rem, 6vw, 7rem)', color: 'var(--fg)', marginBottom: '2rem' }}>
-                  PUBLICIDAD <br />COMPLETA. <br /><em>360°</em>
+                  FABRICAMOS <br />Y DISEÑAMOS <br /><em>TODO</em>
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75 }}>Somos una agencia 360: diseñamos y fabricamos rótulos luminosos, letras corpóreas, vinilos y señalética — y también creamos la identidad de marca, la web, el e-commerce y los automatismos que hacen crecer el negocio.</p>
+                  <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75 }}>Diseñamos y fabricamos rótulos luminosos, letras corpóreas, vinilos y señalética — y también creamos la identidad de marca, la web, el e-commerce y los automatismos que hacen crecer el negocio.</p>
                   <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75 }}>No somos solo &ldquo;una agencia digital&rdquo; ni solo &ldquo;un taller de rótulos&rdquo;. Somos los dos. Coherencia desde la fachada hasta el checkout online.</p>
                   <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75 }}>Trabajamos con estrategia antes que con diseño. El resultado es trabajo que posiciona, no solo decora.</p>
                 </div>
               </div>
               <div style={{ borderLeft: '1px solid var(--border)', paddingLeft: '3rem' }}>
-                {[
-                  { num: '360°', label: 'COBERTURA DE SERVICIO' },
-                  { num: '50+', label: 'PROYECTOS ENTREGADOS' },
-                  { num: '€0', label: 'COSTE IA CON AURA' },
-                  { num: '24H', label: 'TIEMPO DE RESPUESTA' },
-                ].map((s, i) => (
-                  <div key={s.label} style={{ padding: '2rem 0', borderBottom: i < 3 ? '1px solid var(--border)' : 'none' }}>
-                    <p className="display" style={{ fontSize: 'clamp(3rem, 6vw, 7rem)', color: 'var(--fg)', marginBottom: '0.25rem' }}>{s.num}</p>
-                    <p className="mono-label" style={{ color: 'var(--muted)' }}>{s.label}</p>
-                  </div>
-                ))}
+                <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75 }}>Diseño y fabricación bajo un mismo techo. Rótulos de fachada, identidad de marca y desarrollo web — todo coherente, sin coordinar tres proveedores.</p>
+                <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75, marginTop: '1.25rem' }}>Taller propio en Cerdanyola del Vallès. Presupuesto en menos de 24h. Instalación incluida.</p>
               </div>
             </div>
           </ScrollReveal>
@@ -128,14 +119,13 @@ export default function About() {
 
           <div style={{ borderTop: '1px solid var(--border)' }}>
             {ESPECTRO.map((col, i) => (
-              <ScrollReveal key={col.num} delay={i * 60}>
+              <ScrollReveal key={col.cat} delay={i * 60}>
                 <div style={{
                   display: 'grid', gridTemplateColumns: '120px 1fr 1fr', gap: '3rem',
                   padding: '2rem 0', borderBottom: '1px solid var(--border)', alignItems: 'start',
                 }}>
                   <div>
-                    <p className="mono-label" style={{ color: 'var(--muted)' }}>{col.num}</p>
-                    <p className="mono-label" style={{ color: 'var(--muted)', marginTop: '0.25rem' }}>{col.cat}</p>
+                    <p className="mono-label" style={{ color: 'var(--muted)' }}>{col.cat}</p>
                   </div>
                   <h3 className="display" style={{ fontSize: 'clamp(1.5rem, 3vw, 3.5rem)', color: 'var(--fg)', margin: 0 }}>{col.title}</h3>
                   <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
@@ -186,12 +176,12 @@ export default function About() {
           </ScrollReveal>
           <div style={{ borderTop: '1px solid var(--border)' }}>
             {PROCESO.map((step, i) => (
-              <ScrollReveal key={step.num} delay={i * 60}>
+              <ScrollReveal key={step.title} delay={i * 60}>
                 <div style={{
                   display: 'grid', gridTemplateColumns: '120px 1fr 40%', gap: '3rem',
                   padding: '2rem 0', borderBottom: '1px solid var(--border)', alignItems: 'start',
                 }}>
-                  <p className="mono-label" style={{ color: 'var(--muted)' }}>{step.num}</p>
+                  <p className="mono-label" style={{ color: 'var(--muted)' }}>0{i + 1}</p>
                   <h3 className="display" style={{ fontSize: 'clamp(1.5rem, 3vw, 3.5rem)', color: 'var(--fg)', margin: 0 }}>{step.title}</h3>
                   <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75 }}>{step.desc}</p>
                 </div>
@@ -206,7 +196,7 @@ export default function About() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto en 24h · Sin compromiso
+              Presupuesto en 24h, sin compromiso
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               ¿TRABAJAMOS <br /><em>JUNTOS?</em>
@@ -214,7 +204,7 @@ export default function About() {
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <a href="https://wa.me/34645593227" className="mono-label"
                 style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
-                +34 645 593 227 →
+                +34 645 593 227
               </a>
               <Link href="/contact" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
                 Pedir presupuesto

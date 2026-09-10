@@ -84,7 +84,7 @@ export default function Services() {
       }}>
         <div className="container-custom">
           <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-            RUD STUDIO — SERVICIOS · BARCELONA
+            SERVICIOS, BARCELONA
           </p>
           <h1 style={{ margin: 0 }}>
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>RÓTULOS</span>{' '}
@@ -98,11 +98,11 @@ export default function Services() {
             borderTop: '1px solid var(--border)',
           }}>
             <p className="mono-label" style={{ color: 'var(--muted)' }}>
-              Fabricación propia · Branding · Diseño Web · Automatización IA
+              Fabricación propia, Branding, Diseño Web, Automatización IA
             </p>
             <Link href="/contact" className="mono-label"
               style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
-              PEDIR PRESUPUESTO →
+              PEDIR PRESUPUESTO
             </Link>
           </div>
         </div>
@@ -114,14 +114,14 @@ export default function Services() {
           <ScrollReveal>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '3rem' }}>
               <div>
-                <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — FABRICACIÓN PROPIA · BARCELONA</p>
+                <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>FABRICACIÓN PROPIA, BARCELONA</p>
                 <h2 className="display" style={{ fontSize: 'clamp(3.5rem, 9vw, 10rem)', color: 'var(--fg)' }}>
                   RÓTULOS <br /><em>LUMINOSOS</em>
                 </h2>
               </div>
               <Link href="/rotulos" className="mono-label"
                 style={{ color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)', paddingBottom: 2 }}>
-                Ver todos →
+                Ver todos
               </Link>
             </div>
           </ScrollReveal>
@@ -164,7 +164,7 @@ export default function Services() {
           <ScrollReveal>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '3rem' }}>
               <div>
-                <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — DEL RÓTULO AL PIXEL</p>
+                <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>DEL RÓTULO AL PIXEL</p>
                 <h2 className="display" style={{ fontSize: 'clamp(3.5rem, 9vw, 10rem)', color: 'var(--fg)' }}>
                   SERVICIOS <br /><em>DIGITALES</em>
                 </h2>
@@ -201,7 +201,7 @@ export default function Services() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Taller propio · Cerdanyola del Vallès · BCN
+              Taller propio, Cerdanyola del Vallès
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               FABRICAMOS <br />TU RÓTULO <br /><em>EN BARCELONA</em>
@@ -209,7 +209,7 @@ export default function Services() {
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <a href="https://wa.me/34645593227" className="mono-label"
                 style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
-                +34 645 593 227 →
+                +34 645 593 227
               </a>
               <Link href="/contact" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
                 Pedir presupuesto

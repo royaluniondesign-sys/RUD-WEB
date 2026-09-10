@@ -168,7 +168,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
                       <div style={{ marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
                         <Link href="/rotulos"
                           style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontWeight: 500 }}>
-                          Ver todos los rótulos →
+                          Ver todos los rótulos
                         </Link>
                       </div>
                     </div>
@@ -195,7 +195,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
               onClick={() => trackNavCTA('Hablemos')}
               className={`hidden md:inline-flex items-center transition-all duration-200 ${
                 isLight
-                  ? 'border border-white/40 text-white hover:bg-white/10 rounded-full font-medium text-sm'
+                  ? 'border border-white/40 text-white hover:bg-white/10 font-medium text-sm'
                   : 'btn-primary'
               }`}
               style={{ padding: '.55rem 1.2rem', fontSize: '.85rem' }}>
@@ -206,7 +206,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
               onClick={() => setOpen(o => !o)}
               aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
               aria-expanded={open}
-              className={`md:hidden flex flex-col items-center justify-center rounded-full border ${
+              className={`md:hidden flex flex-col items-center justify-center border ${
                 isLight ? 'border-white/40 bg-white/10' : 'bg-white border-[#E2DDD7]'
               }`}
               style={{ width: 40, height: 40, gap: 5, flexShrink: 0 }}>
@@ -262,7 +262,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
                   <div style={{ background: '#F0EDE8', borderRadius: 12, padding: '0.5rem', marginBottom: '0.25rem' }}>
                     <Link href="/rotulos"
                       style={{ display: 'block', padding: '0.75rem 1rem', fontSize: '0.875rem', fontWeight: 700, color: '#0A0908', textDecoration: 'none', borderBottom: '1px solid #E2DDD7', marginBottom: '0.25rem' }}>
-                      Ver todos los rótulos →
+                      Ver todos los rótulos
                     </Link>
                     {ROTULOS_SUBMENU.map(item => (
                       <Link key={item.href} href={item.href}
@@ -290,7 +290,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
                 Hablemos de tu proyecto
               </Link>
               <p className="text-center text-xs text-[#9CA3AF] mt-5">
-                hello@royaluniondesign.com · Barcelona
+                hello@royaluniondesign.com
               </p>
             </div>
           </div>

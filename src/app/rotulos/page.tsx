@@ -110,7 +110,7 @@ export default function Rotulos() {
       }}>
         <div className="container-custom">
           <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-            RUD STUDIO — TALLER PROPIO · BARCELONA
+            TALLER PROPIO, BARCELONA
           </p>
           <h1 style={{ margin: 0 }}>
             <span className="display" style={{ fontSize: 'clamp(3.5rem, 11vw, 13rem)', lineHeight: 0.85, display: 'block', whiteSpace: 'nowrap' }}>RÓTULOS</span>{' '}
@@ -129,7 +129,7 @@ export default function Rotulos() {
             <TrackedLink href="/contact?servicio=rotulos" label="Pedir presupuesto" location="hero-rotulos"
               className="mono-label"
               style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
-              PEDIR PRESUPUESTO →
+              PEDIR PRESUPUESTO
             </TrackedLink>
           </div>
         </div>
@@ -158,7 +158,7 @@ export default function Rotulos() {
       <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — FABRICACIÓN PROPIA · BARCELONA</p>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>FABRICACIÓN PROPIA, BARCELONA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3.5rem, 9vw, 10rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               6 TIPOS <br /><em>DE RÓTULO</em>
             </h2>
@@ -200,7 +200,7 @@ export default function Rotulos() {
       <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — INSTALACIONES REALES · BARCELONA</p>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>INSTALACIONES REALES, BARCELONA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               TRABAJOS <br /><em>REALIZADOS</em>
             </h2>
@@ -232,7 +232,7 @@ export default function Rotulos() {
               <TrackedLink href="/contact?servicio=rotulos" label="Tu local aquí" location="trabajos-rotulos"
                 className="mono-label"
                 style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
-                TU NEGOCIO, EL SIGUIENTE →
+                TU NEGOCIO, EL SIGUIENTE
               </TrackedLink>
             </div>
           </ScrollReveal>
@@ -243,7 +243,7 @@ export default function Rotulos() {
       <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>03 — DEL BRIEFING A LA INSTALACIÓN</p>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>DEL BRIEFING A LA INSTALACIÓN</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               EL PROCESO <br /><em>RUD</em>
             </h2>
@@ -377,7 +377,7 @@ export default function Rotulos() {
               <a href="https://wa.me/34645593227?text=Hola%2C%20quiero%20presupuesto%20para%20un%20r%C3%B3tulo%20en%20Barcelona"
                 className="mono-label"
                 style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
-                +34 645 593 227 (WHATSAPP) →
+                +34 645 593 227 (WHATSAPP)
               </a>
               <TrackedLink href="/contact?servicio=rotulos" label="Pedir presupuesto" location="bottom-rotulos"
                 className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>

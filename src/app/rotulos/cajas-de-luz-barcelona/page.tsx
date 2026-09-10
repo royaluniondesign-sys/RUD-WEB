@@ -75,11 +75,11 @@ export default function CajasLuzBarcelona() {
         <div className="container-custom">
           <nav style={{ marginBottom: '1.5rem' }}>
             <Link href="/rotulos" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
-              ← RÓTULOS BARCELONA
+              RÓTULOS BARCELONA
             </Link>
           </nav>
           <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-            RUD STUDIO — BARCELONA · CAJA DE LUZ · BANDEJA CALADA · RETROILUMINADO
+            BARCELONA · CAJA DE LUZ · BANDEJA CALADA · RETROILUMINADO
           </p>
           <h1>
             <span className="display" style={{ fontSize: 'clamp(3rem, 10vw, 12rem)', lineHeight: 0.85, display: 'block' }}>CAJAS</span>{' '}
@@ -89,7 +89,7 @@ export default function CajasLuzBarcelona() {
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', paddingTop: '1.5rem', marginTop: 'clamp(2rem, 4vw, 3rem)', borderTop: '1px solid var(--border)' }}>
             <p className="mono-label" style={{ color: 'var(--muted)' }}>VISIBILIDAD 24/7 · LED IP65 · ACTUALIZABLE</p>
             <TrackedLink href="/contact?servicio=cajas" label="Presupuesto caja de luz" location="hero-cajas" className="mono-label" style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
-              PEDIR PRESUPUESTO GRATIS →
+              PEDIR PRESUPUESTO GRATIS
             </TrackedLink>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function CajasLuzBarcelona() {
       <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>01 — TIPOS DE RÓTULO LUMINOSO</p>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>TIPOS DE RÓTULO LUMINOSO</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               ¿CAJA DE LUZ <br /><em>O BANDEJA?</em>
             </h2>
@@ -135,7 +135,7 @@ export default function CajasLuzBarcelona() {
       <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — POR QUÉ ELEGIRLA</p>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>POR QUÉ ELEGIRLA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               VENTAJAS <br /><em>DEL LED</em>
             </h2>
@@ -165,7 +165,7 @@ export default function CajasLuzBarcelona() {
       <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>03 — CÓMO FUNCIONA</p>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>CÓMO FUNCIONA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               DEL BOCETO <br /><em>A LA PARED</em>
             </h2>
@@ -194,7 +194,7 @@ export default function CajasLuzBarcelona() {
       <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>04 — PREGUNTAS FRECUENTES</p>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>PREGUNTAS FRECUENTES</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               PREGUNTAS <br /><em>FRECUENTES</em>
             </h2>
@@ -237,7 +237,7 @@ export default function CajasLuzBarcelona() {
               <ScrollReveal key={item.href} delay={i * 30}>
                 <Link href={item.href} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.25rem 0', borderTop: '1px solid var(--border)', textDecoration: 'none', color: 'var(--fg)', gap: '2rem' }}>
                   <span style={{ fontWeight: 600, fontSize: '0.95rem' }}>{item.label}</span>
-                  <span className="mono-label" style={{ color: 'var(--muted)' }}>→</span>
+                  
                 </Link>
               </ScrollReveal>
             ))}
@@ -251,17 +251,17 @@ export default function CajasLuzBarcelona() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto gratuito · Respondemos en 24h
+              Presupuesto gratuito. Respondemos en 24h.
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               PIDE TU <br /><em>PRESUPUESTO</em>
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
               <TrackedLink href="/contact?servicio=cajas" label="Presupuesto caja luz bottom" location="bottom-cajas" className="mono-label" style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
-                SOLICITAR PRESUPUESTO →
+                SOLICITAR PRESUPUESTO
               </TrackedLink>
               <a href="https://t.me/+34645593227" className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
-                TELEGRAM · RESPUESTA INMEDIATA
+                TELEGRAM
               </a>
             </div>
           </ScrollReveal>
