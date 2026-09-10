@@ -236,15 +236,10 @@ export default function Contact() {
                   </a>
                 </div>
                 <div style={{ padding: '1.25rem 0', borderBottom: '1px solid var(--border)' }}>
-                  <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.4rem' }}>TELÉFONO / WHATSAPP</p>
-                  <a href="https://wa.me/34602423661"
-                    style={{ fontSize: '0.9375rem', fontWeight: 600, color: 'var(--fg)', textDecoration: 'none', display: 'block', marginBottom: 4 }}>
+                  <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.4rem' }}>WHATSAPP</p>
+                  <a href="https://wa.me/34602423661?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20RUD%20Studio."
+                    style={{ fontSize: '0.9375rem', fontWeight: 600, color: 'var(--fg)', textDecoration: 'none' }}>
                     +34 602 423 661
-                  </a>
-                  <a href="tel:+34602423661"
-                    className="mono-label"
-                    style={{ color: 'var(--muted)', textDecoration: 'none' }}>
-                    Llamar
                   </a>
                 </div>
                 <div style={{ padding: '1.25rem 0', borderBottom: '1px solid var(--border)' }}>
