@@ -86,7 +86,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
               if (hasDropdown) {
                 return (
                   <div key={href}
-                    style={{ position: 'relative' }}
+                    style={{ position: 'relative', paddingBottom: '8px' }}
                     onMouseEnter={handleRotulosEnter}
                     onMouseLeave={handleRotulosLeave}
                     onKeyDown={e => {
@@ -115,7 +115,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
                     <div
                       style={{
                         position: 'absolute',
-                        top: 'calc(100% + 8px)',
+                        top: '100%',
                         left: '50%',
                         transform: 'translateX(-50%)',
                         background: '#0A0908',

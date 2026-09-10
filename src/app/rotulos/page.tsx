@@ -135,24 +135,6 @@ export default function Rotulos() {
         </div>
       </section>
 
-      {/* ── STATS ────────────────────────────────────────────── */}
-      <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)', padding: 'clamp(3rem,5vw,4rem) 0' }}>
-        <div className="container-custom">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 0 }}>
-            {[
-              { num: '24H', label: 'PRESUPUESTO' },
-              { num: '0€',  label: 'VISITA TÉCNICA' },
-              { num: 'BCN', label: 'TALLER PROPIO' },
-              { num: '2Y',  label: 'GARANTÍA LED' },
-            ].map((s, i) => (
-              <div key={s.label} style={{ padding: 'clamp(1.5rem,3vw,2rem)', borderRight: i < 3 ? '1px solid var(--border)' : 'none' }}>
-                <p className="display" style={{ fontSize: 'clamp(2.5rem, 5vw, 6rem)', color: 'var(--fg)', marginBottom: '0.25rem' }}>{s.num}</p>
-                <p className="mono-label" style={{ color: 'var(--muted)' }}>{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── TIPOS — lista tipográfica ─────────────────────────── */}
       <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>

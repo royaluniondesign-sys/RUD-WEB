@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useEffect } from 'react'
+import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 import { trackCTA, trackEmailClick, trackSocialClick } from '@/lib/analytics'
 
@@ -42,21 +43,11 @@ function Hero() {
       background: 'var(--bg)', display: 'flex',
       flexDirection: 'column', overflow: 'hidden',
     }}>
-      <div style={{ position: 'absolute', top: '1.5rem', left: 'clamp(1rem, 5vw, 2.5rem)', zIndex: 10 }}>
-        <img src="/logo-rud-web.svg" alt="RUD Studio" style={{ height: 22, opacity: 0.85 }} />
-      </div>
-
-      <div style={{ position: 'absolute', top: '1.5rem', right: 'clamp(1rem, 5vw, 2.5rem)', zIndex: 10 }}>
-        <div className="mono-label" style={{ color: 'var(--muted)', textAlign: 'right', lineHeight: 1.9 }}>
-          <div>CERDANYOLA DEL VALLÈS</div>
-        </div>
-      </div>
-
       <div className="container-custom" style={{
         flex: 1, display: 'flex', flexDirection: 'column',
         justifyContent: 'flex-end',
         paddingBottom: 'clamp(5rem, 14vw, 9rem)',
-        paddingTop: '6rem',
+        paddingTop: '5rem',
       }}>
         <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
           TALLER DE RÓTULOS Y ESTUDIO CREATIVO, BARCELONA
@@ -462,6 +453,7 @@ export default function HomeContent() {
 
   return (
     <main id="main-content">
+      <Navbar />
       <Hero />
       <Marquee />
       <WorkProjects />
