@@ -386,8 +386,17 @@ function CTA() {
 function Footer() {
   return (
     <>
-      <footer style={{ background: 'var(--fg)', borderTop: '1px solid #2A2A2A', paddingTop: '4rem', paddingBottom: '2rem' }}>
-        <div className="container-custom">
+      <footer style={{ background: 'var(--fg)', borderTop: '1px solid #2A2A2A', paddingBottom: '2rem' }}>
+        {/* Logo mark — decorative, before nav links */}
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 'clamp(3rem,7vw,5rem) 0', borderBottom: '1px solid #222' }}>
+          <img
+            src="/logo-rud-white.png"
+            alt="RUD Studio"
+            loading="lazy"
+            style={{ width: 'clamp(80px, 12vw, 160px)', mixBlendMode: 'screen', opacity: 0.9 }}
+          />
+        </div>
+        <div className="container-custom" style={{ paddingTop: '3rem' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(180px,1fr))', gap: '2.5rem', marginBottom: '3rem' }}>
             <div>
               <img src="/logo-rud-web-blanco.svg" alt="RUD Studio" style={{ height: '26px', marginBottom: '1.25rem', opacity: 0.85 }} loading="lazy" />
@@ -435,12 +444,8 @@ function Footer() {
             </div>
           </div>
         </div>
+        </div>
       </footer>
-
-      {/* Big wordmark — purely decorative */}
-      <div className="footer-wordmark" aria-hidden="true">
-        <span className="footer-wordmark-text">RUD STUDIO</span>
-      </div>
     </>
   )
 }
