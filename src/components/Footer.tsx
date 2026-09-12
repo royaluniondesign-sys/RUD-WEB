@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container-custom" style={{ paddingTop: '3rem' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(180px,1fr))', gap: '2.5rem', marginBottom: '3rem' }}>
           <div>
-            <img src="/logo-rud-white.png" alt="RUD Studio" style={{ height: '32px', marginBottom: '1.25rem', mixBlendMode: 'screen', opacity: 0.9 }} loading="lazy" />
+            <img src="/logo-rud-studio-footer.png" alt="RUD Studio" style={{ width: 'clamp(120px,18vw,200px)', marginBottom: '1.25rem', mixBlendMode: 'screen', opacity: 0.95 }} loading="lazy" />
             <p style={{ color: '#6B7280', fontSize: '0.8125rem', lineHeight: 1.7, maxWidth: '220px' }}>
               Agencia creativa de branding, diseño web y automatización IA en Barcelona.
             </p>
