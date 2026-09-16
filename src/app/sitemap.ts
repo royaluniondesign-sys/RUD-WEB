@@ -96,5 +96,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.70,
   }))
 
-  return [...core, ...rotulosServices, ...rotulosGeo, ...blog, ...work]
+  // Branding silo
+  const branding: MetadataRoute.Sitemap = [
+    { url: `${BASE}/branding-barcelona`,                                                lastModified: d('2026-08-20'), changeFrequency: 'monthly', priority: 0.92 },
+    { url: `${BASE}/branding-barcelona/identidad-visual-barcelona`,                     lastModified: d('2026-09-10'), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE}/branding-barcelona/diseno-logo-barcelona`,                          lastModified: d('2026-09-10'), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE}/branding-barcelona/manual-de-marca-barcelona`,                      lastModified: d('2026-09-10'), changeFrequency: 'monthly', priority: 0.82 },
+  ]
+
+  // Imagen corporativa silo
+  const imagenCorporativa: MetadataRoute.Sitemap = [
+    { url: `${BASE}/imagen-corporativa-barcelona`,                                       lastModified: d('2026-09-17'), changeFrequency: 'monthly', priority: 0.90 },
+    { url: `${BASE}/imagen-corporativa-barcelona/rediseno-imagen-corporativa-barcelona`, lastModified: d('2026-09-17'), changeFrequency: 'monthly', priority: 0.83 },
+    { url: `${BASE}/imagen-corporativa-barcelona/manual-identidad-corporativa-barcelona`,lastModified: d('2026-09-17'), changeFrequency: 'monthly', priority: 0.83 },
+  ]
+
+  // Material POP silo
+  const materialPop: MetadataRoute.Sitemap = [
+    { url: `${BASE}/material-pop-barcelona`,                                             lastModified: d('2026-09-17'), changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${BASE}/material-pop-barcelona/roll-up-barcelona`,                           lastModified: d('2026-09-17'), changeFrequency: 'monthly', priority: 0.82 },
+    { url: `${BASE}/material-pop-barcelona/displays-barcelona`,                          lastModified: d('2026-09-17'), changeFrequency: 'monthly', priority: 0.82 },
+  ]
+
+  // Packaging silo
+  const packaging: MetadataRoute.Sitemap = [
+    { url: `${BASE}/packaging-barcelona`,                                                lastModified: d('2026-09-17'), changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${BASE}/packaging-barcelona/diseno-etiquetas-barcelona`,                    lastModified: d('2026-09-17'), changeFrequency: 'monthly', priority: 0.82 },
+    { url: `${BASE}/packaging-barcelona/diseno-envases-barcelona`,                      lastModified: d('2026-09-17'), changeFrequency: 'monthly', priority: 0.82 },
+  ]
+
+  // Textil corporativo silo
+  const textil: MetadataRoute.Sitemap = [
+    { url: `${BASE}/textil-corporativo-barcelona`,                                       lastModified: d('2026-09-17'), changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${BASE}/textil-corporativo-barcelona/uniformes-corporativos-barcelona`,     lastModified: d('2026-09-17'), changeFrequency: 'monthly', priority: 0.82 },
+    { url: `${BASE}/textil-corporativo-barcelona/camisetas-personalizadas-barcelona`,   lastModified: d('2026-09-17'), changeFrequency: 'monthly', priority: 0.82 },
+  ]
+
+  return [...core, ...rotulosServices, ...rotulosGeo, ...branding, ...imagenCorporativa, ...materialPop, ...packaging, ...textil, ...blog, ...work]
 }
