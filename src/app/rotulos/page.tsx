@@ -359,7 +359,12 @@ export default function Rotulos() {
               <a href="https://wa.me/34645593227?text=Hola%2C%20quiero%20presupuesto%20para%20un%20r%C3%B3tulo%20en%20Barcelona"
                 className="mono-label"
                 style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
-                +34 645 593 227 (WHATSAPP)
+                +34 645 593 227
+              </a>
+              <a href="https://wa.me/34602423661?text=Hola%2C%20quiero%20presupuesto%20para%20un%20r%C3%B3tulo%20en%20Barcelona"
+                className="mono-label"
+                style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+                +34 602 423 661
               </a>
               <TrackedLink href="/contact?servicio=rotulos" label="Pedir presupuesto" location="bottom-rotulos"
                 className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>

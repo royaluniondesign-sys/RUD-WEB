@@ -364,6 +364,12 @@ function CTA() {
               style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
               +34 645 593 227
             </a>
+            <a href="https://wa.me/34602423661"
+              onClick={() => trackCTA('WhatsApp CTA 2', 'whatsapp', 'bottom-cta')}
+              className="mono-label"
+              style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+              +34 602 423 661
+            </a>
             <Link href="/contact" onClick={() => trackCTA('Pedir presupuesto', '/contact', 'bottom-cta')}
               className="mono-label" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
               Pedir presupuesto
