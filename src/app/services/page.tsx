@@ -4,12 +4,12 @@ import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata = {
   title: 'Servicios · Rótulos, Branding y Diseño Web Barcelona | RUD Studio',
-  description: 'Rótulos luminosos, neón LED, letras corpóreas, branding, diseño web Next.js y automatización IA en Barcelona. Fabricación propia. Presupuesto en 24h.',
+  description: 'Rótulos luminosos, neón LED, letras corpóreas, branding, diseño web Next.js y automatización IA en Barcelona. Fabricación propia. Presupuesto gratuito.',
   keywords: 'rótulos luminosos Barcelona, neón LED Barcelona, letras corpóreas Barcelona, vinilos escaparate Barcelona, branding Barcelona, agencia diseño web Barcelona, e-commerce Shopify Barcelona, señalética corporativa Barcelona, automatización IA Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/services' },
   openGraph: {
     title: 'Servicios · Rótulos, Branding y Diseño Web Barcelona | RUD Studio',
-    description: 'Rótulos luminosos, neón LED, letras corpóreas, branding y diseño web en Barcelona. Fabricación propia. Presupuesto en 24h.',
+    description: 'Rótulos luminosos, neón LED, letras corpóreas, branding y diseño web en Barcelona. Fabricación propia. Presupuesto gratuito.',
     url: 'https://www.royaluniondesign.com/services',
     siteName: 'RUD Studio',
     locale: 'es_ES',
@@ -19,7 +19,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Servicios | RUD Studio Barcelona',
-    description: 'Rótulos luminosos, branding y diseño web en Barcelona. Fabricación propia. Presupuesto en 24h.',
+    description: 'Rótulos luminosos, branding y diseño web en Barcelona. Fabricación propia. Presupuesto gratuito.',
     images: ['https://www.royaluniondesign.com/og-image.png'],
   },
 }

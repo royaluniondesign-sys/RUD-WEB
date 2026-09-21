@@ -5,12 +5,12 @@ import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
   title: 'Señalética Interior Barcelona · Corporativa y Hotelera | RUD Studio',
-  description: 'Señalética interior en Barcelona para oficinas, hoteles, clínicas y empresas. Directorios, wayfinding, señalización de accesos. Presupuesto en 24h.',
+  description: 'Señalética interior en Barcelona para oficinas, hoteles, clínicas y empresas. Directorios, wayfinding, señalización de accesos. Presupuesto gratuito.',
   keywords: 'señalética interior Barcelona, señalética corporativa Barcelona, señalética hotelera Barcelona, wayfinding Barcelona, señalización oficinas Barcelona, señalética clínicas Barcelona, directorios corporativos Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/senaletica-interior-barcelona' },
   openGraph: {
     title: 'Señalética Interior Barcelona · Corporativa y Hotelera | RUD Studio',
-    description: 'Señalética interior para oficinas, hoteles y clínicas en Barcelona. Directorios, wayfinding y señalización de accesos. Presupuesto en 24h.',
+    description: 'Señalética interior para oficinas, hoteles y clínicas en Barcelona. Directorios, wayfinding y señalización de accesos. Presupuesto gratuito.',
     url: 'https://www.royaluniondesign.com/rotulos/senaletica-interior-barcelona',
     images: [{ url: 'https://www.royaluniondesign.com/services/senaletica-interior.avif' }],
   },
@@ -186,7 +186,7 @@ export default function SenaleticaInteriorBarcelona() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto gratuito. Respondemos en 24h.
+              Presupuesto gratuito. Sin compromiso.
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               PIDE TU <br /><em>PRESUPUESTO</em>

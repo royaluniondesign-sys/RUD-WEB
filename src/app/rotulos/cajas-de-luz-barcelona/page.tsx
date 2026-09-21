@@ -10,7 +10,7 @@ export const metadata = {
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/cajas-de-luz-barcelona' },
   openGraph: {
     title: 'Cajas de Luz y Rótulos Luminosos Barcelona | RUD Studio',
-    description: 'Cajas de luz con LED interior: máxima visibilidad nocturna. Fabricación propia en Barcelona. Presupuesto en 24h.',
+    description: 'Cajas de luz con LED interior: máxima visibilidad nocturna. Fabricación propia en Barcelona. Presupuesto gratuito.',
     url: 'https://www.royaluniondesign.com/rotulos/cajas-de-luz-barcelona',
     images: [{ url: 'https://www.royaluniondesign.com/services/rotulos-luminosos.avif' }],
   },
@@ -251,7 +251,7 @@ export default function CajasLuzBarcelona() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto gratuito. Respondemos en 24h.
+              Presupuesto gratuito. Sin compromiso.
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               PIDE TU <br /><em>PRESUPUESTO</em>

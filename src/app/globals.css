@@ -47,9 +47,9 @@ body {
   font-family: 'AS Therma Bold Condensed', 'Bebas Neue', 'Anton', sans-serif !important;
   font-weight: 400 !important;
   text-transform: uppercase !important;
-  letter-spacing: -0.04em !important;
-  word-spacing: -0.08em !important;
-  line-height: 0.85 !important;
+  letter-spacing: -0.02em !important;
+  word-spacing: 0em !important;
+  line-height: 0.92 !important;
 }
 .display em, .display i {
   font-style: normal;

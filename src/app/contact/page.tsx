@@ -150,10 +150,10 @@ export default function Contact() {
             </div>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1rem' }}>MENSAJE RECIBIDO</p>
             <h1 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 6rem)', color: 'var(--fg)', marginBottom: '1.5rem' }}>
-              EN MENOS <br /><em>DE 24H</em>
+              SIN<br /><em>COMPROMISO</em>
             </h1>
             <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75, marginBottom: '2.5rem' }}>
-              Te respondemos en <strong style={{ color: 'var(--fg)' }}>menos de 24h</strong>. Si tienes alguna duda urgente escríbenos por WhatsApp.
+              Te respondemos <strong style={{ color: "var(--fg)" }}>rápido</strong>. Si tienes alguna duda urgente escríbenos por WhatsApp.
             </p>
             <div style={{ paddingTop: '1.5rem', borderTop: '1px solid var(--border)', display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'center' }}>
               <a href={WA_LINK}
@@ -199,7 +199,7 @@ export default function Contact() {
             borderTop: '1px solid var(--border)',
           }}>
             <p className="mono-label" style={{ color: 'var(--muted)' }}>
-              Presupuesto en 24h · Visita técnica gratis · Sin compromiso
+              Presupuesto gratuito · Visita técnica · Sin compromiso
             </p>
             <a href={WA_LINK}
               onClick={() => trackWhatsAppClick('hero')}

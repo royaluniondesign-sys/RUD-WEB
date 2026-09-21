@@ -5,7 +5,7 @@ import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
   title: 'Rótulos Sarrià Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
-  description: 'Rótulos de alta calidad en Sarrià-Sant Gervasi, Zona Alta de Barcelona: letras corpóreas premium, neón LED, señalética para tiendas de lujo, clínicas privadas y restaurantes de alto standing. Presupuesto en 24h.',
+  description: 'Rótulos de alta calidad en Sarrià-Sant Gervasi, Zona Alta de Barcelona: letras corpóreas premium, neón LED, señalética para tiendas de lujo, clínicas privadas y restaurantes de alto standing. Presupuesto gratuito.',
   keywords: 'rótulos Sarrià Barcelona, rótulos Sant Gervasi Barcelona, rótulos Zona Alta Barcelona, letras corpóreas premium Barcelona, señalética clínicas privadas Barcelona, rótulos tiendas lujo Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/sarria-barcelona' },
   openGraph: {
@@ -256,7 +256,7 @@ export default function RotulosSarria() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto gratuito. Respondemos en 24h.
+              Presupuesto gratuito. Sin compromiso.
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               PIDE TU <br /><em>PRESUPUESTO</em>

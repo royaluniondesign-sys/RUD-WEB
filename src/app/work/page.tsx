@@ -202,7 +202,7 @@ export default function Work() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Abiertos a nuevos proyectos · Presupuesto en 24h
+              Abiertos a nuevos proyectos · Presupuesto gratuito
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               TU MARCA <br /><em>AQUÍ</em>

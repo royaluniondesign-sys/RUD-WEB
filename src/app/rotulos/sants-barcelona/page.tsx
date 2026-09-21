@@ -5,7 +5,7 @@ import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
   title: 'Rótulos Sants Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
-  description: 'Rótulos funcionales y resistentes en el barrio de Sants, Barcelona: neón LED, cajas de luz, vinilos y letras corpóreas para el comercio de barrio. Presupuesto en 24h.',
+  description: 'Rótulos funcionales y resistentes en el barrio de Sants, Barcelona: neón LED, cajas de luz, vinilos y letras corpóreas para el comercio de barrio. Presupuesto gratuito.',
   keywords: 'rótulos Sants Barcelona, rótulo Carrer de Sants, rótulos comercio barrio Barcelona, neón LED Sants, letras corpóreas Sants, señalética tiendas Sants Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/sants-barcelona' },
   openGraph: {
@@ -256,7 +256,7 @@ export default function RotulosSants() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto gratuito. Respondemos en 24h.
+              Presupuesto gratuito. Sin compromiso.
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               PIDE TU <br /><em>PRESUPUESTO</em>

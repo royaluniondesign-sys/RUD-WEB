@@ -192,7 +192,7 @@ export default function FAQ() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              ¿No encuentras tu respuesta? · Respondemos en 24h
+              ¿No encuentras tu respuesta? · Respuesta rápida
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               PREGÚNTANOS <br /><em>DIRECTAMENTE</em>

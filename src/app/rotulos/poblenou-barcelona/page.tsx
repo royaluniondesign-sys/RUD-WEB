@@ -5,7 +5,7 @@ import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
   title: 'Rótulos Poblenou Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
-  description: 'Rótulos a medida en Poblenou y el distrito 22@ de Barcelona: neón LED, letras industriales, cajas de luz y señalética para startups, coworkings y restaurantes modernos. Presupuesto en 24h.',
+  description: 'Rótulos a medida en Poblenou y el distrito 22@ de Barcelona: neón LED, letras industriales, cajas de luz y señalética para startups, coworkings y restaurantes modernos. Presupuesto gratuito.',
   keywords: 'rótulos Poblenou Barcelona, rótulos 22@ Barcelona, neón LED Poblenou, letras industriales Poblenou, señalética startups Barcelona, rótulos Rambla del Poblenou',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/poblenou-barcelona' },
   openGraph: {
@@ -256,7 +256,7 @@ export default function RotulosPoblenou() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto gratuito. Respondemos en 24h.
+              Presupuesto gratuito. Sin compromiso.
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               PIDE TU <br /><em>PRESUPUESTO</em>

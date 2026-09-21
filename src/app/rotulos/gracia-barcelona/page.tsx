@@ -5,7 +5,7 @@ import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
   title: 'Rótulos Gràcia Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
-  description: 'Rótulos artesanales en el barrio de Gràcia, Barcelona: neón LED, letras corpóreas, vinilos y señalética. Para restaurantes, boutiques y estudios creativos. Presupuesto en 24h.',
+  description: 'Rótulos artesanales en el barrio de Gràcia, Barcelona: neón LED, letras corpóreas, vinilos y señalética. Para restaurantes, boutiques y estudios creativos. Presupuesto gratuito.',
   keywords: 'rótulos Gràcia Barcelona, rótulo neón LED Gràcia, letras corpóreas Gràcia, rótulos Carrer Verdi, rótulos Plaça del Sol, señalética barrio Gràcia Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/gracia-barcelona' },
   openGraph: {
@@ -256,7 +256,7 @@ export default function RotulosGracia() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto gratuito. Respondemos en 24h.
+              Presupuesto gratuito. Sin compromiso.
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               PIDE TU <br /><em>PRESUPUESTO</em>

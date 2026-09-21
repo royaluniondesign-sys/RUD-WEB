@@ -86,7 +86,7 @@ const ZONAS = [
 ]
 
 const FAQ_ITEMS = [
-  { q: '¿Cuánto cuesta un rótulo neón LED en Barcelona?',   a: 'El neón LED personalizado parte de 1.800€ para una instalación comercial completa — diseño, fabricación e instalación incluidos. El precio varía según el tamaño, la complejidad de la forma y el tipo de soporte. Pídenos medidas y te enviamos presupuesto en 24h.' },
+  { q: '¿Cuánto cuesta un rótulo neón LED en Barcelona?',   a: 'El neón LED personalizado parte de 1.800€ para una instalación comercial completa — diseño, fabricación e instalación incluidos. El precio varía según el tamaño, la complejidad de la forma y el tipo de soporte. Pídenos medidas y te enviamos presupuesto gratuito.' },
   { q: '¿Cuánto cuesta un rótulo luminoso (caja de luz)?',  a: 'Los rótulos luminosos tipo caja de luz parten de 3.200€ para una instalación comercial estándar con iluminación LED interior. El precio depende de las dimensiones, el acabado y la complejidad de la instalación.' },
   { q: '¿Cuánto cuestan las letras corpóreas?',             a: 'Las letras corpóreas en aluminio, metacrilato o madera parten de 2.500€ para un proyecto estándar con instalación incluida. El retroiluminado tipo halo o las letras de gran formato pueden superar ese precio según el proyecto.' },
   { q: '¿Cuánto tiempo tardáis en fabricar e instalar?',    a: 'Los vinilos de escaparate los entregamos en 48–72h. Rótulos luminosos y letras corpóreas entre 5 y 10 días hábiles. El neón LED a medida puede tardar hasta 15 días. Instalamos en el horario que mejor te venga.' },
@@ -234,7 +234,7 @@ export default function Rotulos() {
           <div style={{ borderTop: '1px solid var(--border)' }}>
             {[
               { n: '01', title: 'MEDICIÓN Y BRIEFING',    desc: 'Mándanos fotos del espacio por WhatsApp. Visita técnica gratuita para proyectos en Barcelona y área metropolitana.' },
-              { n: '02', title: 'DISEÑO Y PROPUESTA',     desc: 'Propuesta visual y presupuesto detallado en menos de 24h. Sin compromiso.' },
+              { n: '02', title: 'DISEÑO Y PROPUESTA',     desc: 'Propuesta visual y presupuesto detallado sin compromiso. Sin compromiso.' },
               { n: '03', title: 'FABRICACIÓN EN TALLER',  desc: 'Todo fabricado en nuestro taller de Cerdanyola del Vallès. Materiales premium, control de calidad total.' },
               { n: '04', title: 'INSTALACIÓN PROFESIONAL',desc: 'Equipo propio. Sin afectar tu horario comercial. Permisos y licencias incluidos.' },
             ].map((s, i) => (
@@ -283,7 +283,7 @@ export default function Rotulos() {
               <a href="https://wa.me/34645593227" style={{ color: 'var(--fg)', fontWeight: 600, textDecoration: 'none', borderBottom: '1px solid var(--fg)' }}>WhatsApp</a>
               {' '}o{' '}
               <a href="mailto:hello@royaluniondesign.com" style={{ color: 'var(--fg)', fontWeight: 600, textDecoration: 'none', borderBottom: '1px solid var(--fg)' }}>email</a>
-              {' '}— respondemos en menos de 24h.
+              {' '}— respondemos rápido.
             </p>
           </ScrollReveal>
         </div>
@@ -337,7 +337,7 @@ export default function Rotulos() {
                   RUD Studio es una empresa de rótulos en Barcelona con taller propio en Cerdanyola del Vallès. Fabricamos rótulos personalizados para comercios, restaurantes, hoteles y empresas: neón LED, letras corpóreas, rótulos luminosos tipo caja de luz, vinilos de escaparate y señalética corporativa.
                 </p>
                 <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75 }}>
-                  A diferencia de otras empresas de rótulos en Barcelona, controlamos todo el proceso — desde el diseño hasta la instalación — sin intermediarios. Mayor calidad, en menos tiempo y con presupuesto competitivo. Visita técnica gratuita y presupuesto en 24h.
+                  A diferencia de otras empresas de rótulos en Barcelona, controlamos todo el proceso — desde el diseño hasta la instalación — sin intermediarios. Mayor calidad, en menos tiempo y con presupuesto competitivo. Visita técnica gratuita y presupuesto gratuito.
                 </p>
               </div>
             </div>
@@ -350,7 +350,7 @@ export default function Rotulos() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto en 24h · Visita técnica gratis · Taller propio
+              Visita técnica gratuita · Presupuesto sin compromiso
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               MANDA LAS <br />MEDIDAS. <br /><em>HOY.</em>

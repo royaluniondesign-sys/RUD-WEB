@@ -5,12 +5,12 @@ import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
   title: 'Agencia de Branding en Barcelona · Identidad Visual y Diseño de Marca | RUD Studio',
-  description: 'Agencia de branding en Barcelona para pymes y negocios locales. Identidad visual completa, diseño de logo y manual de marca. Presupuesto en 24h.',
+  description: 'Agencia de branding en Barcelona para pymes y negocios locales. Identidad visual completa, diseño de logo y manual de marca. Presupuesto gratuito.',
   keywords: 'agencia branding Barcelona, identidad visual Barcelona, diseño logo Barcelona, manual de marca Barcelona, branding pymes Barcelona, agencia diseño marca Barcelona, identidad corporativa Barcelona, branding negocios Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/branding-barcelona' },
   openGraph: {
     title: 'Agencia de Branding en Barcelona | RUD Studio',
-    description: 'Identidad visual completa para negocios en Barcelona. Logo, sistema de marca y manual. Presupuesto en 24h.',
+    description: 'Identidad visual completa para negocios en Barcelona. Logo, sistema de marca y manual. Presupuesto gratuito.',
     url: 'https://www.royaluniondesign.com/branding-barcelona',
     images: [{ url: 'https://www.royaluniondesign.com/og-image.png' }],
   },
@@ -147,7 +147,7 @@ export default function BrandingBarcelona() {
             <span className="display" style={{ fontSize: 'clamp(2.5rem, 9vw, 11rem)', lineHeight: 0.85, display: 'block', opacity: 0.28 }}>BARCELONA</span>
           </h1>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', paddingTop: '1.5rem', marginTop: 'clamp(2rem, 4vw, 3rem)', borderTop: '1px solid var(--border)' }}>
-            <p className="mono-label" style={{ color: 'var(--muted)' }}>IDENTIDAD VISUAL · LOGO · MANUAL DE MARCA · PRESUPUESTO EN 24H</p>
+            <p className="mono-label" style={{ color: 'var(--muted)' }}>IDENTIDAD VISUAL · LOGO · MANUAL DE MARCA · PRESUPUESTO GRATUITO</p>
             <TrackedLink href="/contact?servicio=branding" label="Presupuesto branding" location="hero-branding" className="mono-label" style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
               PEDIR PRESUPUESTO GRATIS →
             </TrackedLink>
@@ -331,7 +331,7 @@ export default function BrandingBarcelona() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto gratuito · Respondemos en 24h
+              Presupuesto gratuito · Respuesta rápida
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               HABLEMOS<br /><em>DE TU MARCA</em>

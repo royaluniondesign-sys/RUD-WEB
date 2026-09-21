@@ -95,7 +95,7 @@ function FunnelCard({ onClose }: { onClose: () => void }) {
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#BF4E30" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
           <div>
             <p style={{ fontSize: 12, fontWeight: 700, color: 'white', lineHeight: 1 }}>Pedir presupuesto</p>
-            <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.65)', marginTop: 2 }}>Respuesta en menos de 24h</p>
+            <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.65)', marginTop: 2 }}>Respuesta rápida</p>
           </div>
         </Link>
         <Link href="/contact?tipo=llamada" onClick={onClose}

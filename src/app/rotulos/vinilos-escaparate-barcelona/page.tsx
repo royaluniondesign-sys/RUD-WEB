@@ -176,7 +176,7 @@ export default function VinilosEscaparateBarcelona() {
           <div>
             {[
               { n: '01', t: 'Contacto y medidas', d: 'Mándanos fotos del escaparate y medidas aproximadas. Respondemos el mismo día con presupuesto.' },
-              { n: '02', t: 'Arte final aprobado', d: 'Recibes el diseño en 24h para aprobación. Sin coste adicional, revisiones incluidas.' },
+              { n: '02', t: 'Arte final aprobado', d: 'Recibes el diseño para aprobación. Sin coste adicional, revisiones incluidas. Sin coste adicional, revisiones incluidas.' },
               { n: '03', t: 'Impresión en taller', d: 'Imprimimos en alta resolución en nuestro taller. Laminación UV incluida en todos los vinilos impresos.' },
               { n: '04', t: 'Instalación en 48-72h', d: 'Nuestro equipo instala en el cristal en el horario que mejor te vaya. Sin obra, sin polvo.' },
             ].map((s, i) => (
@@ -254,7 +254,7 @@ export default function VinilosEscaparateBarcelona() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto gratuito. Respondemos en 24h.
+              Presupuesto gratuito. Sin compromiso.
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               PIDE TU <br /><em>PRESUPUESTO</em>

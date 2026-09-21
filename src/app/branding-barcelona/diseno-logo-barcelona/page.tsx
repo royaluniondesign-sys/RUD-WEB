@@ -107,7 +107,7 @@ export default function DisenoLogoBarcelona() {
             ))}
           </div>
           <ScrollReveal>
-            <p style={{ fontSize: '0.8125rem', color: 'var(--muted)', marginTop: '1.5rem' }}>Precios orientativos. IVA no incluido. Presupuesto personalizado en 24h.</p>
+            <p style={{ fontSize: '0.8125rem', color: 'var(--muted)', marginTop: '1.5rem' }}>Precios orientativos. IVA no incluido. Presupuesto personalizado.</p>
           </ScrollReveal>
         </div>
       </section>

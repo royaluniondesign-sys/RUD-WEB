@@ -100,7 +100,7 @@ export default function About() {
               </div>
               <div style={{ borderLeft: '1px solid var(--border)', paddingLeft: '3rem' }}>
                 <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75 }}>Diseño y fabricación bajo un mismo techo. Rótulos de fachada, identidad de marca y desarrollo web — todo coherente, sin coordinar tres proveedores.</p>
-                <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75, marginTop: '1.25rem' }}>Taller propio en Cerdanyola del Vallès. Presupuesto en menos de 24h. Instalación incluida.</p>
+                <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75, marginTop: '1.25rem' }}>Taller propio en Cerdanyola del Vallès. Presupuesto gratuito. Instalación incluida.</p>
               </div>
             </div>
           </ScrollReveal>
@@ -196,7 +196,7 @@ export default function About() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto en 24h, sin compromiso
+              Presupuesto gratuito, sin compromiso
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               ¿TRABAJAMOS <br /><em>JUNTOS?</em>

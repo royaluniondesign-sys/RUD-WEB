@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.royaluniondesign.com' },
   openGraph: {
     title: 'RUD Studio · Rótulos, Branding y Web Barcelona',
-    description: 'Fabricamos rótulos luminosos, neón LED y letras corpóreas en Barcelona. Branding y diseño web. Presupuesto en 24h.',
+    description: 'Fabricamos rótulos luminosos, neón LED y letras corpóreas en Barcelona. Branding y diseño web. Presupuesto gratuito.',
     url: 'https://www.royaluniondesign.com',
     siteName: 'RUD Studio',
     locale: 'es_ES',

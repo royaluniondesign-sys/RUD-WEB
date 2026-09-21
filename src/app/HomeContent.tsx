@@ -187,8 +187,8 @@ const OV_ITEMS = [
   },
   {
     tag:  'CUÁNDO EMPEZAR',
-    title: ['PRESUPUESTO EN 24H,', 'VISITA TÉCNICA GRATIS'],
-    body: 'Contacta hoy. Menos de 24h para tener presupuesto detallado. Visita técnica para medir y asesorarte sin coste ni compromiso.',
+    title: ['PRESUPUESTO GRATUITO,', 'VISITA TÉCNICA GRATIS'],
+    body: 'Contacta hoy. Presupuesto detallado gratuito. Visita técnica para medir y asesorarte sin coste ni compromiso.',
     img:  '/trabajos/clinica-lumina-estetica-letras-corporeas-doradas-retroiluminadas-barcelona.jpg',
     alt:  'Letras corpóreas Clínica Lumina Estética Barcelona',
   },
@@ -286,7 +286,7 @@ function RotulosStrip() {
 
         <ScrollReveal delay={200}>
           <div style={{ marginTop: '2rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.25rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
-            <p className="mono-label" style={{ color: 'var(--muted)' }}>Visita técnica gratuita. Presupuesto en 24h. Taller propio BCN</p>
+            <p className="mono-label" style={{ color: 'var(--muted)' }}>Visita técnica gratuita. Presupuesto gratuito. Taller propio BCN</p>
             <Link href="/contact" onClick={() => trackCTA('Pedir presupuesto rotulo', '/contact', 'rotulos-strip-bottom')}
               className="mono-label" style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
               PEDIR PRESUPUESTO

@@ -5,12 +5,12 @@ import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
   title: 'Publicidad Exterior Barcelona · Lonas, Banderolas, Vallas | RUD Studio',
-  description: 'Publicidad exterior en Barcelona: lonas, banderolas, vallas publicitarias, wrapping de vehículos y fachadas. Diseño, impresión e instalación. Presupuesto en 24h.',
+  description: 'Publicidad exterior en Barcelona: lonas, banderolas, vallas publicitarias, wrapping de vehículos y fachadas. Diseño, impresión e instalación. Presupuesto gratuito.',
   keywords: 'publicidad exterior Barcelona, lonas publicitarias Barcelona, banderolas Barcelona, vallas publicitarias Barcelona, wrapping vehículos Barcelona, rótulos fachada Barcelona, publicidad gran formato Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/publicidad-exterior-barcelona' },
   openGraph: {
     title: 'Publicidad Exterior Barcelona · Lonas y Banderolas | RUD Studio',
-    description: 'Publicidad exterior en Barcelona: lonas, banderolas y vallas. Diseño, impresión e instalación. Presupuesto en 24h.',
+    description: 'Publicidad exterior en Barcelona: lonas, banderolas y vallas. Diseño, impresión e instalación. Presupuesto gratuito.',
     url: 'https://www.royaluniondesign.com/rotulos/publicidad-exterior-barcelona',
     images: [{ url: 'https://www.royaluniondesign.com/services/publicidad-exterior.avif' }],
   },
@@ -192,7 +192,7 @@ export default function PublicidadExteriorBarcelona() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto gratuito. Respondemos en 24h.
+              Presupuesto gratuito. Sin compromiso.
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               PIDE TU <br /><em>PRESUPUESTO</em>

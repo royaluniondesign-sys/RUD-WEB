@@ -130,7 +130,7 @@ export default function Pricing() {
             borderTop: '1px solid var(--border)',
           }}>
             <p className="mono-label" style={{ color: 'var(--muted)' }}>
-              Orientativos · Propuesta personalizada en 24h · Sin compromiso
+              Orientativos · Propuesta personalizada · Sin compromiso
             </p>
             <Link href="/contact" className="mono-label"
               style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
@@ -169,7 +169,7 @@ export default function Pricing() {
 
           <ScrollReveal>
             <div style={{ marginTop: '2rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.25rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
-              <p className="mono-label" style={{ color: 'var(--muted)' }}>Visita técnica gratuita · Presupuesto en 24h · Instalación incluida</p>
+              <p className="mono-label" style={{ color: 'var(--muted)' }}>Visita técnica gratuita · Presupuesto gratuito · Instalación incluida</p>
               <Link href="/rotulos" className="mono-label"
                 style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
                 VER RÓTULOS →
@@ -263,7 +263,7 @@ export default function Pricing() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto personalizado · Menos de 24h
+              Presupuesto personalizado · Sin compromiso
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               CUÉNTANOS <br /><em>TU PROYECTO</em>

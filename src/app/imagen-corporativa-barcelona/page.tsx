@@ -5,7 +5,7 @@ import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
   title: 'Imagen Corporativa Barcelona · Rediseño de Marca para Empresas | RUD Studio',
-  description: 'Agencia de imagen corporativa en Barcelona. Renovamos o creamos la identidad visual de tu empresa: logo, colores, tipografía, aplicaciones y manual de marca. Presupuesto en 24h.',
+  description: 'Agencia de imagen corporativa en Barcelona. Renovamos o creamos la identidad visual de tu empresa: logo, colores, tipografía, aplicaciones y manual de marca. Presupuesto gratuito.',
   keywords: 'imagen corporativa Barcelona, identidad corporativa Barcelona, rediseño imagen corporativa Barcelona, branding corporativo Barcelona, renovar imagen empresa Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/imagen-corporativa-barcelona' },
   openGraph: {

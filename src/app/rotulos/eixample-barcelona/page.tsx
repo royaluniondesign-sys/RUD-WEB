@@ -5,7 +5,7 @@ import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
   title: 'Rótulos Eixample Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
-  description: 'Rótulos a medida en el Eixample Barcelona: neón LED, letras corpóreas, cajas de luz y vinilos. Cumplimos la normativa de fachadas del Ayuntamiento. Presupuesto en 24h.',
+  description: 'Rótulos a medida en el Eixample Barcelona: neón LED, letras corpóreas, cajas de luz y vinilos. Cumplimos la normativa de fachadas del Ayuntamiento. Presupuesto gratuito.',
   keywords: 'rótulos Eixample Barcelona, rótulos Passeig de Gràcia, rótulo Eixample normativa fachada, neón LED Eixample, letras corpóreas Eixample, señalética Eixample Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/eixample-barcelona' },
   openGraph: {
@@ -256,7 +256,7 @@ export default function RotulosEixample() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto gratuito. Respondemos en 24h.
+              Presupuesto gratuito. Sin compromiso.
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               PIDE TU <br /><em>PRESUPUESTO</em>

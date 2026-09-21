@@ -5,7 +5,7 @@ import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
   title: 'Letras Corpóreas Barcelona · Aluminio, Metacrilato, Retroiluminadas | RUD Studio',
-  description: 'Letras corpóreas en Barcelona fabricadas en aluminio, metacrilato o madera. Con o sin retroiluminación halo. Taller propio, instalación incluida, presupuesto en 24h.',
+  description: 'Letras corpóreas en Barcelona fabricadas en aluminio, metacrilato o madera. Con o sin retroiluminación halo. Taller propio, instalación incluida, presupuesto gratuito.',
   keywords: 'letras corpóreas Barcelona, letras corpóreas aluminio Barcelona, letras corpóreas metacrilato Barcelona, letras corpóreas retroiluminadas Barcelona, letras volumétricas Barcelona, letras 3D fachada Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/letras-corporeas-barcelona' },
   openGraph: {
@@ -254,7 +254,7 @@ export default function LetrasCorporeasBarcelona() {
         <div className="container-custom">
           <ScrollReveal>
             <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>
-              Presupuesto gratuito. Respondemos en 24h.
+              Presupuesto gratuito. Sin compromiso.
             </p>
             <h2 className="display" style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
               PIDE TU <br /><em>PRESUPUESTO</em>
