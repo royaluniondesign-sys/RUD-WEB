@@ -6,12 +6,12 @@ import FAQAccordion from '@/components/FAQAccordion'
 
 export const metadata: Metadata = {
   title: 'Precios Diseño Web, Tiendas Online y Rótulos Barcelona — Tarifas | RUD Studio',
-  description: 'Diseño web desde 890€, web profesional desde 3.490€, tienda online desde 2.490€, neón LED desde 1.800€ y letras corpóreas desde 2.500€ en Barcelona. Presupuesto cerrado gratis en 24h.',
+  description: 'Diseño web desde 890€, web profesional desde 3.490€, tienda online desde 2.490€, neón LED desde 1.800€ y letras corpóreas desde 2.500€ en Barcelona. Presupuesto cerrado gratis y sin compromiso.',
   keywords: 'precio diseño web Barcelona, cuánto cuesta una página web, precio tienda online Barcelona, precio rótulos Barcelona, cuánto cuesta neón LED Barcelona, precio letras corpóreas Barcelona, tarifa branding Barcelona, presupuesto rótulos luminosos',
   alternates: { canonical: 'https://www.royaluniondesign.com/pricing' },
   openGraph: {
     title: 'Precios Diseño Web, Tiendas Online y Rótulos Barcelona | RUD Studio',
-    description: 'Webs desde 890€, tiendas online desde 2.490€, neón LED desde 1.800€. Presupuesto cerrado gratis en 24h.',
+    description: 'Webs desde 890€, tiendas online desde 2.490€, neón LED desde 1.800€. Presupuesto cerrado gratis y sin compromiso.',
     url: 'https://www.royaluniondesign.com/pricing',
     siteName: 'RUD Studio',
     locale: 'es_ES',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Precios Diseño Web y Rótulos Barcelona | RUD Studio',
-    description: 'Webs desde 890€, tiendas online desde 2.490€, neón LED desde 1.800€. Presupuesto gratis en 24h.',
+    description: 'Webs desde 890€, tiendas online desde 2.490€, neón LED desde 1.800€. Presupuesto gratis y sin compromiso.',
     images: ['https://www.royaluniondesign.com/og-image.png'],
   },
 }
@@ -171,7 +171,7 @@ const CARE_PLANS: Plan[] = [
       'Todo lo del plan Básico',
       '1 hora de cambios al mes',
       'Informe mensual de visitas y contactos',
-      'Respuesta en menos de 24 h',
+      'Atención prioritaria',
     ],
     featured: true,
   },
@@ -202,7 +202,7 @@ const ADDONS = [
 
 const FAQS = [
   { question: '¿Los precios son cerrados?', answer: 'Sí. Los precios que ves son de partida y sin IVA (21%). Tras una llamada de 20 minutos te enviamos por escrito un presupuesto cerrado con entregables y fechas. El precio final solo cambia si cambia lo que nos pides.' },
-  { question: '¿Cuánto tarda en llegar el presupuesto?', answer: 'Menos de 24 horas después de la llamada. La llamada es gratuita y sin compromiso.' },
+  { question: '¿Cuánto tarda en llegar el presupuesto?', answer: 'Te lo enviamos por escrito después de una llamada de 20 minutos. La llamada es gratuita y sin compromiso.' },
   { question: '¿Cómo se estructura el pago?', answer: '50% al aprobar el presupuesto y 50% al publicar. En proyectos desde 3.000 € puedes pagar en 3 plazos sin intereses.' },
   { question: '¿La web es mía?', answer: 'Sí, al 100%. La web, el dominio y los contenidos quedan a tu nombre y te entregamos todos los accesos.' },
   { question: '¿Puedo contratar solo un servicio?', answer: 'Sí. Puedes contratar solo web, solo tienda online, solo branding o solo rótulos. Si abres un local, también podemos hacer la web y el rótulo a juego.' },
@@ -301,7 +301,7 @@ export default function Pricing() {
             borderTop: '1px solid var(--border)',
           }}>
             <p className="mono-label" style={{ color: 'var(--muted)' }}>
-              Precios de partida sin IVA · Presupuesto cerrado en 24 h · Sin compromiso
+              Precios de partida sin IVA · Presupuesto cerrado · Sin compromiso
             </p>
             <Link href="/contact" className="mono-label"
               style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
