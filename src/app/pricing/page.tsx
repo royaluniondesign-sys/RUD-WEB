@@ -5,13 +5,13 @@ import ScrollReveal from '@/components/ScrollReveal'
 import FAQAccordion from '@/components/FAQAccordion'
 
 export const metadata: Metadata = {
-  title: 'Precios Rótulos Barcelona, Branding y Diseño Web — Tarifas | RUD Studio',
-  description: 'Precios orientativos de rótulos luminosos (desde 300€), neón LED (desde 1.800€), letras corpóreas (desde 2.500€), branding y diseño web en Barcelona. Presupuesto personalizado gratis en 24h.',
-  keywords: 'precio rótulos Barcelona, cuánto cuesta neón LED Barcelona, precio letras corpóreas Barcelona, tarifa branding Barcelona, precio diseño web Barcelona, presupuesto rótulos luminosos',
+  title: 'Precios Diseño Web, Tiendas Online y Rótulos Barcelona — Tarifas | RUD Studio',
+  description: 'Diseño web desde 890€, web profesional desde 3.490€, tienda online desde 2.490€, neón LED desde 1.800€ y letras corpóreas desde 2.500€ en Barcelona. Presupuesto cerrado gratis en 24h.',
+  keywords: 'precio diseño web Barcelona, cuánto cuesta una página web, precio tienda online Barcelona, precio rótulos Barcelona, cuánto cuesta neón LED Barcelona, precio letras corpóreas Barcelona, tarifa branding Barcelona, presupuesto rótulos luminosos',
   alternates: { canonical: 'https://www.royaluniondesign.com/pricing' },
   openGraph: {
-    title: 'Precios Rótulos, Branding y Diseño Web Barcelona | RUD Studio',
-    description: 'Neón LED desde 1.800€, letras corpóreas desde 2.500€, rótulo luminoso desde 3.200€. Presupuesto gratis en 24h.',
+    title: 'Precios Diseño Web, Tiendas Online y Rótulos Barcelona | RUD Studio',
+    description: 'Webs desde 890€, tiendas online desde 2.490€, neón LED desde 1.800€. Presupuesto cerrado gratis en 24h.',
     url: 'https://www.royaluniondesign.com/pricing',
     siteName: 'RUD Studio',
     locale: 'es_ES',
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Precios Rótulos Barcelona | RUD Studio',
-    description: 'Neón LED desde 1.800€, letras corpóreas desde 2.500€. Presupuesto gratis en 24h.',
+    title: 'Precios Diseño Web y Rótulos Barcelona | RUD Studio',
+    description: 'Webs desde 890€, tiendas online desde 2.490€, neón LED desde 1.800€. Presupuesto gratis en 24h.',
     images: ['https://www.royaluniondesign.com/og-image.png'],
   },
 }
@@ -35,72 +35,243 @@ const ROTULOS = [
   { name: 'PUBLICIDAD EXTERIOR', desc: 'Lonas, banderolas, vallas, wrapping de vehículos.', from: 'Consultar' },
 ]
 
-const TIERS = [
+type Plan = {
+  name: string
+  tagline: string
+  from: string
+  per?: string
+  includes: string[]
+  delivery?: string
+  featured?: boolean
+}
+
+const WEB_PLANS: Plan[] = [
   {
-    name: 'STARTER',
-    tagline: 'Marca lista para lanzar',
-    from: '3.500 €',
+    name: 'LANDING',
+    tagline: 'Una página para lanzar tu negocio o campaña',
+    from: '890 €',
     includes: [
-      'Sesión de Estrategia de Marca (90 min)',
-      'Diseño de logo · 3 conceptos',
-      'Sistema de color y tipografía',
-      'Manual de Marca básico (PDF)',
-      'Formatos editables AI / SVG / PNG',
-      'Soporte email · 30 días',
+      '1 página con secciones',
+      'Diseño adaptado a tu marca',
+      'Formulario y botón de WhatsApp',
+      'SEO básico y Google Analytics',
+      '1 ronda de cambios',
+    ],
+    delivery: '7–10 días',
+  },
+  {
+    name: 'WEB ESENCIAL',
+    tagline: 'Presencia seria en Google para comercios y profesionales',
+    from: '1.790 €',
+    includes: [
+      'Hasta 5 páginas',
+      'Ficha de Google Business conectada',
+      'Formulario, WhatsApp y mapa',
+      'SEO on-page por página',
+      'Textos legales (RGPD y cookies)',
+      '2 rondas de cambios',
+    ],
+    delivery: '2–3 semanas',
+  },
+  {
+    name: 'WEB PROFESIONAL',
+    tagline: 'Una web que trae clientes cada mes',
+    from: '3.490 €',
+    includes: [
+      'Hasta 10 páginas con diseño a medida',
+      'Blog autogestionable',
+      'SEO técnico y velocidad 90+ en Google',
+      'Medición de cada contacto, llamada y WhatsApp',
+      'Formación de 1 hora para editar tu web',
+      '3 rondas de cambios',
     ],
     delivery: '4–6 semanas',
+    featured: true,
   },
   {
-    name: 'PROFESSIONAL',
-    tagline: 'Identidad + web completa',
-    from: '7.500 €',
+    name: 'WEB + SEO LOCAL',
+    tagline: 'Aparece en Google en cada barrio y ciudad donde trabajas',
+    from: '6.900 €',
     includes: [
-      'Todo en Starter',
-      'Identidad visual completa con motion',
-      'Diseño web · hasta 5 páginas (Figma)',
-      'Desarrollo Next.js / React',
-      'SEO técnico · Lighthouse 95+',
-      'GA4, Hotjar y tracking completo',
-      '3 rondas de revisiones',
-      'Soporte prioritario · 60 días',
+      '20 páginas o más',
+      'Páginas por servicio y por zona',
+      'Casos de éxito y portfolio',
+      'Datos estructurados para Google',
+      '3 meses de seguimiento SEO incluidos',
+      'Informe mensual de resultados',
     ],
-    delivery: '8–12 semanas',
+    delivery: '6–10 semanas',
+  },
+]
+
+const SHOP_PLANS: Plan[] = [
+  {
+    name: 'TIENDA ESENCIAL',
+    tagline: 'Empieza a vender online con un catálogo pequeño',
+    from: '2.490 €',
+    includes: [
+      'Hasta 50 productos cargados',
+      'Pago con tarjeta, Bizum y PayPal',
+      'Envíos y recogida en tienda',
+      'Emails de pedido con tu marca',
+      'Textos legales de venta online',
+      'Formación para gestionar pedidos',
+    ],
+    delivery: '3–4 semanas',
+    featured: true,
   },
   {
-    name: 'ENTERPRISE',
-    tagline: 'Proyecto end-to-end',
-    from: '18.000 €',
+    name: 'TIENDA PROFESIONAL',
+    tagline: 'Para marcas con catálogo amplio que quieren vender más',
+    from: '5.900 €',
     includes: [
-      'Todo en Professional',
-      'Señalética & Rótulos corporativos',
-      'E-commerce Shopify Plus',
-      'Copywriting estratégico completo',
-      'Motion branding & video',
-      'Agentes IA · Aura & Hermes',
-      'Panel BI y automatizaciones',
-      'Contrato de mantenimiento mensual opcional',
+      'Diseño a medida de tu marca',
+      'Hasta 300 productos y variantes',
+      'Filtros, búsqueda y productos relacionados',
+      'Carrito abandonado y email marketing',
+      'Medición de ventas en Google Analytics',
+      '2 idiomas',
     ],
-    delivery: '10–16 semanas',
+    delivery: '6–8 semanas',
+  },
+  {
+    name: 'TIENDA A MEDIDA',
+    tagline: 'Venta B2B, catálogos grandes o conexión con tu ERP',
+    from: '12.000 €',
+    includes: [
+      'Productos ilimitados',
+      'Tarifas por cliente y venta mayorista',
+      'Integración con ERP, CRM o almacén',
+      'Automatizaciones de pedidos',
+      'Soporte prioritario',
+    ],
+    delivery: 'A definir',
+  },
+]
+
+const CARE_PLANS: Plan[] = [
+  {
+    name: 'BÁSICO',
+    tagline: 'Tu web segura y al día',
+    from: '69 €',
+    per: '/mes',
+    includes: [
+      'Hosting, dominio y certificado SSL',
+      'Copias de seguridad semanales',
+      'Actualizaciones de seguridad',
+      '30 min de cambios al mes',
+    ],
+  },
+  {
+    name: 'PLUS',
+    tagline: 'Cambios y resultados cada mes',
+    from: '149 €',
+    per: '/mes',
+    includes: [
+      'Todo lo del plan Básico',
+      '1 hora de cambios al mes',
+      'Informe mensual de visitas y contactos',
+      'Respuesta en menos de 24 h',
+    ],
+    featured: true,
+  },
+  {
+    name: 'CRECIMIENTO',
+    tagline: 'SEO y contenido para subir en Google',
+    from: '490 €',
+    per: '/mes',
+    includes: [
+      'Todo lo del plan Plus',
+      'SEO mensual y seguimiento de posiciones',
+      '2 artículos de blog al mes',
+      'Publicaciones en Google Business',
+    ],
   },
 ]
 
 const ADDONS = [
-  { name: 'E-COMMERCE SHOPIFY', from: 'desde 4.500 €' },
-  { name: 'BLOG & CMS INTEGRADO', from: 'desde 1.200 €' },
-  { name: 'AGENTE IA (AURA O HERMES)', from: 'desde 3.500 €' },
-  { name: 'MOTION BRANDING PACKAGE', from: 'desde 2.000 €' },
-  { name: 'COPYWRITING WEB COMPLETO', from: 'desde 1.800 €' },
-  { name: 'MANTENIMIENTO MENSUAL', from: 'desde 400 €/mes' },
+  { name: 'PÁGINA ADICIONAL', from: '180 €' },
+  { name: 'IDIOMA ADICIONAL', from: '+30% del plan' },
+  { name: 'TEXTOS DE LA WEB (COPYWRITING)', from: 'desde 350 €' },
+  { name: 'LOGO E IDENTIDAD BÁSICA', from: 'desde 490 €' },
+  { name: 'BRANDING · IDENTIDAD COMPLETA', from: 'desde 3.500 €' },
+  { name: 'SESIÓN DE FOTOS', from: 'desde 290 €' },
+  { name: 'CARGA DE PRODUCTOS EXTRA', from: '3 € / producto' },
+  { name: 'SISTEMA DE RESERVAS O CITAS', from: 'desde 390 €' },
 ]
 
 const FAQS = [
-  { question: '¿Por qué no publicáis precios exactos?', answer: 'Cada proyecto tiene alcance, complejidad y objetivos distintos. Los precios que ves son orientativos — el presupuesto real puede variar según el tamaño del proyecto, el número de páginas, los materiales o las integraciones necesarias. Siempre preparamos una propuesta honesta ajustada a lo que realmente necesitas.' },
-  { question: '¿Cuánto tarda en llegar el presupuesto?', answer: 'Respondemos en menos de 24 horas con una llamada de 30 min sin compromiso para entender bien tu proyecto. La propuesta detallada llega en 3–5 días laborables.' },
-  { question: '¿Cómo se estructura el pago?', answer: '50% al inicio para reservar tu fecha en nuestra agenda, 50% en la entrega final. Para proyectos Enterprise podemos acordar pagos por hitos (30/30/40).' },
-  { question: '¿Puedo contratar solo un servicio?', answer: 'Sí. Puedes contratar únicamente branding, solo web, solo rótulos o solo automatización IA. No es obligatorio el paquete completo. También podemos empezar con un Starter e ir escalando.' },
+  { question: '¿Los precios son cerrados?', answer: 'Sí. Los precios que ves son de partida y sin IVA (21%). Tras una llamada de 20 minutos te enviamos por escrito un presupuesto cerrado con entregables y fechas. El precio final solo cambia si cambia lo que nos pides.' },
+  { question: '¿Cuánto tarda en llegar el presupuesto?', answer: 'Menos de 24 horas después de la llamada. La llamada es gratuita y sin compromiso.' },
+  { question: '¿Cómo se estructura el pago?', answer: '50% al aprobar el presupuesto y 50% al publicar. En proyectos desde 3.000 € puedes pagar en 3 plazos sin intereses.' },
+  { question: '¿La web es mía?', answer: 'Sí, al 100%. La web, el dominio y los contenidos quedan a tu nombre y te entregamos todos los accesos.' },
+  { question: '¿Puedo contratar solo un servicio?', answer: 'Sí. Puedes contratar solo web, solo tienda online, solo branding o solo rótulos. Si abres un local, también podemos hacer la web y el rótulo a juego.' },
   { question: '¿Los rótulos incluyen instalación?', answer: 'Sí. El precio de los rótulos incluye diseño, fabricación en nuestro taller de Barcelona e instalación profesional en Barcelona y área metropolitana. Los permisos necesarios también están incluidos en proyectos de exterior.' },
-  { question: '¿Qué pasa después de la entrega?', answer: 'Todos los proyectos incluyen soporte post-entrega. Ofrecemos contratos de mantenimiento mensual desde 400 €/mes para mantenimiento, actualizaciones de contenido y crecimiento continuo.' },
+  { question: '¿Qué pasa después de la entrega?', answer: 'Todas las webs incluyen soporte post-entrega. Si quieres que nos ocupemos de todo, el mantenimiento mensual empieza en 69 €/mes, sin permanencia.' },
 ]
+
+function PlanRow({ plan }: { plan: Plan }) {
+  return (
+    <div style={{
+      display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 'clamp(1.25rem, 3vw, 3rem)',
+      padding: '2.5rem 0', borderBottom: '1px solid var(--border)', alignItems: 'start',
+    }}>
+      <div>
+        {plan.featured && (
+          <p className="mono-label" style={{ color: 'var(--chariot)', marginBottom: '0.5rem' }}>● MÁS ELEGIDO</p>
+        )}
+        <h3 className="display" style={{ fontSize: 'clamp(2rem, 4vw, 5rem)', color: 'var(--fg)', margin: 0 }}>{plan.name}</h3>
+        <p className="mono-label" style={{ color: 'var(--muted)', marginTop: '0.5rem' }}>
+          {plan.tagline}{plan.delivery ? ` · Entrega ${plan.delivery}` : ''}
+        </p>
+      </div>
+      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', paddingTop: '0.5rem' }}>
+        {plan.includes.map((inc) => (
+          <li key={inc} className="mono-label" style={{ color: 'var(--muted)' }}>— {inc}</li>
+        ))}
+      </ul>
+      <div>
+        <p className="display" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 3rem)', color: 'var(--fg)', whiteSpace: 'nowrap' }}>
+          {plan.per ? plan.from : <>desde<br />{plan.from}</>}
+          {plan.per && <span className="mono-label" style={{ color: 'var(--muted)', marginLeft: '0.4rem' }}>{plan.per}</span>}
+        </p>
+        <Link href="/contact" className="mono-label"
+          style={{ display: 'inline-block', marginTop: '1rem', color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
+          SOLICITAR →
+        </Link>
+      </div>
+    </div>
+  )
+}
+
+function PlanSection({ index, eyebrow, title, subtitle, plans, background }: {
+  index: string
+  eyebrow: string
+  title: string
+  subtitle: string
+  plans: Plan[]
+  background: string
+}) {
+  return (
+    <section style={{ background, borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
+      <div className="container-custom">
+        <ScrollReveal>
+          <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>{index} — {eyebrow}</p>
+          <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
+            {title} <br /><em>{subtitle}</em>
+          </h2>
+        </ScrollReveal>
+        <div style={{ borderTop: '1px solid var(--border)' }}>
+          {plans.map((plan, i) => (
+            <ScrollReveal key={plan.name} delay={i * 60}>
+              <PlanRow plan={plan} />
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
 
 export default function Pricing() {
   return (
@@ -130,7 +301,7 @@ export default function Pricing() {
             borderTop: '1px solid var(--border)',
           }}>
             <p className="mono-label" style={{ color: 'var(--muted)' }}>
-              Orientativos · Propuesta personalizada · Sin compromiso
+              Precios de partida sin IVA · Presupuesto cerrado en 24 h · Sin compromiso
             </p>
             <Link href="/contact" className="mono-label"
               style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
@@ -179,53 +350,17 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* ── PAQUETES DIGITALES — lista tipográfica ────────── */}
-      <section style={{ background: 'var(--warm)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
-        <div className="container-custom">
-          <ScrollReveal>
-            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>02 — BRANDING · WEB · IA</p>
-            <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              PAQUETES <br /><em>DIGITALES</em>
-            </h2>
-          </ScrollReveal>
-
-          <div style={{ borderTop: '1px solid var(--border)' }}>
-            {TIERS.map((tier, i) => (
-              <ScrollReveal key={tier.name} delay={i * 60}>
-                <div style={{
-                  display: 'grid', gridTemplateColumns: '1fr 1fr auto', gap: '3rem',
-                  padding: '2.5rem 0', borderBottom: '1px solid var(--border)', alignItems: 'start',
-                }}>
-                  <div>
-                    <h3 className="display" style={{ fontSize: 'clamp(2rem, 4vw, 5rem)', color: 'var(--fg)', margin: 0 }}>{tier.name}</h3>
-                    <p className="mono-label" style={{ color: 'var(--muted)', marginTop: '0.5rem' }}>{tier.tagline} · {tier.delivery}</p>
-                  </div>
-                  <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', paddingTop: '0.5rem' }}>
-                    {tier.includes.map((inc, j) => (
-                      <li key={j} className="mono-label" style={{ color: 'var(--muted)' }}>— {inc}</li>
-                    ))}
-                  </ul>
-                  <div style={{ textAlign: 'right' }}>
-                    <p className="display" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 3rem)', color: 'var(--fg)', whiteSpace: 'nowrap' }}>desde<br />{tier.from}</p>
-                    <Link href="/contact" className="mono-label"
-                      style={{ display: 'inline-block', marginTop: '1rem', color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)', paddingBottom: 2 }}>
-                      SOLICITAR →
-                    </Link>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PlanSection index="02" eyebrow="DISEÑO WEB · SIN IVA" title="PÁGINAS" subtitle="WEB" plans={WEB_PLANS} background="var(--warm)" />
+      <PlanSection index="03" eyebrow="SHOPIFY O WOOCOMMERCE · SIN IVA" title="TIENDAS" subtitle="ONLINE" plans={SHOP_PLANS} background="var(--bg)" />
+      <PlanSection index="04" eyebrow="OPCIONAL · SIN PERMANENCIA" title="MANTENIMIENTO" subtitle="MENSUAL" plans={CARE_PLANS} background="var(--warm)" />
 
       {/* ── ADD-ONS ──────────────────────────────────────── */}
       <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(4rem,7vw,6rem) 0' }}>
         <div className="container-custom">
           <ScrollReveal>
-            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>03 — EXTRAS</p>
+            <p className="mono-label" style={{ color: 'var(--muted)', marginBottom: '0.75rem' }}>05 — EXTRAS · SIN IVA</p>
             <h2 className="display" style={{ fontSize: 'clamp(3rem, 7vw, 8rem)', color: 'var(--fg)', marginBottom: '3rem' }}>
-              ADD-ONS
+              EXTRAS
             </h2>
           </ScrollReveal>
 
