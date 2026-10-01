@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Rediseño de Imagen Corporativa Barcelona · Actualiza tu Marca | RUD Studio',
+  title: 'Rediseño de Imagen Corporativa Barcelona | RUD Studio',
   description: 'Rediseño de imagen corporativa para empresas en Barcelona. Modernizamos tu logo e identidad visual sin perder el reconocimiento de marca. Proceso claro en 6 semanas.',
   keywords: 'rediseño imagen corporativa Barcelona, renovar imagen empresa Barcelona, actualizar logo empresa Barcelona, rediseño marca Barcelona, modernizar identidad corporativa',
   alternates: { canonical: 'https://www.royaluniondesign.com/imagen-corporativa-barcelona/rediseno-imagen-corporativa-barcelona' },

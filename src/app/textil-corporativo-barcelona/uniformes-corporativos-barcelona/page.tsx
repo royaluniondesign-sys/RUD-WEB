@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Uniformes Corporativos Barcelona · Ropa de Trabajo con Logo para Empresas | RUD Studio',
+  title: 'Uniformes Corporativos con Logo Barcelona | RUD Studio',
   description: 'Uniformes corporativos para empresas en Barcelona. Polos, camisas, chaquetas y delantales con logo bordado o serigrafiado. Para hostelería, oficina y sectores técnicos.',
   keywords: 'uniformes corporativos Barcelona, uniformes empresa Barcelona, ropa de trabajo con logo Barcelona, uniformes hostelería Barcelona, uniformes personal Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/textil-corporativo-barcelona/uniformes-corporativos-barcelona' },

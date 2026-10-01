@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Señalética Interior Barcelona · Corporativa y Hotelera | RUD Studio',
+  title: 'Señalética Interior Corporativa Barcelona | RUD Studio',
   description: 'Señalética interior en Barcelona para oficinas, hoteles, clínicas y empresas. Directorios, wayfinding, señalización de accesos. Presupuesto gratuito.',
   keywords: 'señalética interior Barcelona, señalética corporativa Barcelona, señalética hotelera Barcelona, wayfinding Barcelona, señalización oficinas Barcelona, señalética clínicas Barcelona, directorios corporativos Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/senaletica-interior-barcelona' },

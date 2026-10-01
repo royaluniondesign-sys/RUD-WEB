@@ -5,12 +5,12 @@ import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
   title: 'Rótulos Barcelona · Neón LED, Letras Corpóreas, Vinilos | RUD Studio',
-  description: 'Empresa de rótulos en Barcelona con taller propio. Neón LED, letras corpóreas, rótulos luminosos y vinilos escaparate. Fabricación e instalación. Presupuesto gratis en 24h.',
+  description: 'Empresa de rótulos en Barcelona con taller propio. Neón LED, letras corpóreas, rótulos luminosos y vinilos escaparate. Fabricación e instalación. Presupuesto gratis sin compromiso.',
   keywords: 'rótulos barcelona, rótulos personalizados barcelona, neón LED barcelona, letras corpóreas barcelona, vinilos escaparate barcelona, rótulos luminosos barcelona, señalética corporativa barcelona, empresa rótulos barcelona, fabricación rótulos barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos' },
   openGraph: {
     title: 'Rótulos Barcelona · Neón LED, Letras Corpóreas, Vinilos | RUD Studio',
-    description: 'Empresa de rótulos en Barcelona con taller propio. Neón LED, letras corpóreas, rótulos luminosos y vinilos. Presupuesto gratis en 24h.',
+    description: 'Empresa de rótulos en Barcelona con taller propio. Neón LED, letras corpóreas, rótulos luminosos y vinilos. Presupuesto gratis sin compromiso.',
     url: 'https://www.royaluniondesign.com/rotulos',
     images: [{ url: 'https://www.royaluniondesign.com/services/hero-rotulos.jpg', width: 1400, height: 1051 }],
   },

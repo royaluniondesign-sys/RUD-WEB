@@ -4,13 +4,13 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Rótulos El Born Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
-  description: 'Rótulos a medida en El Born y Sant Pere Barcelona: neón LED, letras corpóreas y vinilos para restaurantes, boutiques y galerías. Presupuesto gratis en 24h con render 3D incluido.',
+  title: 'Rótulos en El Born · Neón LED y Letras | RUD Studio',
+  description: 'Rótulos a medida en El Born y Sant Pere Barcelona: neón LED, letras corpóreas y vinilos para restaurantes, boutiques y galerías. Presupuesto gratis sin compromiso con render 3D incluido.',
   keywords: 'rótulos El Born Barcelona, neón LED Born Barcelona, letras corpóreas Born, rótulo Sant Pere Barcelona, señalética Born Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/born-barcelona' },
   openGraph: {
     title: 'Rótulos El Born Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
-    description: 'Rótulos a medida en El Born y Sant Pere Barcelona: neón LED, letras corpóreas y vinilos para restaurantes, boutiques y galerías. Presupuesto gratis en 24h con render 3D incluido.',
+    description: 'Rótulos a medida en El Born y Sant Pere Barcelona: neón LED, letras corpóreas y vinilos para restaurantes, boutiques y galerías. Presupuesto gratis sin compromiso con render 3D incluido.',
     url: 'https://www.royaluniondesign.com/rotulos/born-barcelona',
     images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },

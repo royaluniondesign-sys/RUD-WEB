@@ -19,11 +19,13 @@ function renderParagraph(text: string) {
   )
 }
 
-const POSTS: Record<string, {
+type Post = {
   title: string; date: string; category: string; readTime: string;
   image: string; content: string; excerpt: string;
   faqs?: Array<{ q: string; a: string }>;
-}> = {
+}
+
+const POSTS: Record<string, Post> = {
   'rotulos-luminosos-barcelona-precio-tipos-instalacion': {
     title: 'Rótulos luminosos en Barcelona: tipos, precios y cómo elegir el correcto para tu negocio',
     date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '12 min',
@@ -365,6 +367,54 @@ En RUD fabricamos e instalamos [cajas de luz en Barcelona](/rotulos/cajas-de-luz
   },
 }
 
+const MONTHS: Record<string, string> = {
+  enero: '01', febrero: '02', marzo: '03', abril: '04', mayo: '05', junio: '06',
+  julio: '07', agosto: '08', septiembre: '09', octubre: '10', noviembre: '11', diciembre: '12',
+}
+
+// 'Mayo 2026' → '2026-05-01' (schema.org needs ISO 8601)
+function isoDate(date: string) {
+  const [month, year] = date.toLowerCase().split(' ')
+  return MONTHS[month] && year ? `${year}-${MONTHS[month]}-01` : undefined
+}
+
+function postSchema(slug: string, p: Post) {
+  const url = `https://www.royaluniondesign.com/blog/${slug}`
+  const image = p.image.startsWith('/') ? `https://www.royaluniondesign.com${p.image}` : p.image
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: p.title,
+      description: p.excerpt,
+      image,
+      datePublished: isoDate(p.date),
+      inLanguage: 'es-ES',
+      author: { '@type': 'Organization', name: 'RUD Studio', url: 'https://www.royaluniondesign.com' },
+      publisher: { '@id': 'https://www.royaluniondesign.com/#organization' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://www.royaluniondesign.com' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.royaluniondesign.com/blog' },
+        { '@type': 'ListItem', position: 3, name: p.title, item: url },
+      ],
+    },
+    ...(p.faqs ? [{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: p.faqs.map(({ q, a }) => ({
+        '@type': 'Question',
+        name: q,
+        acceptedAnswer: { '@type': 'Answer', text: a },
+      })),
+    }] : []),
+  ]
+}
+
 export async function generateStaticParams() {
   return Object.keys(POSTS).map(slug => ({ slug }))
 }
@@ -375,35 +425,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!p) return { title: 'Artículo no encontrado · RUD Blog' }
   const offTopic = ['aura-el-agente-ia-autonomo-que-lidera-la-operacion-de-rud-st', 'ia-local-vs-nube-agencias-creativas', 'automatizacion-marketing-agencias-n8n', 'nextjs-vs-wordpress-2026']
   return {
-    title: `${p.title} · RUD Studio Barcelona`,
+    title: p.title.length > 50 ? p.title : `${p.title} | RUD Studio`,
     description: p.excerpt,
     ...(offTopic.includes(slug) && { robots: { index: false, follow: false } }),
     alternates: { canonical: `https://www.royaluniondesign.com/blog/${slug}` },
     openGraph: { title: p.title, description: p.excerpt, images: [{ url: p.image.startsWith('/') ? `https://www.royaluniondesign.com${p.image}` : p.image }] },
-    other: {
-      'script:ld+json': JSON.stringify([
-        {
-          '@context': 'https://schema.org',
-          '@type': 'BlogPosting',
-          headline: p.title,
-          description: p.excerpt,
-          image: p.image.startsWith('/') ? `https://www.royaluniondesign.com${p.image}` : p.image,
-          datePublished: p.date,
-          author: { '@type': 'Organization', name: 'RUD Studio', url: 'https://www.royaluniondesign.com' },
-          publisher: { '@type': 'Organization', name: 'RUD Studio', logo: { '@type': 'ImageObject', url: 'https://www.royaluniondesign.com/logo-rud-web.svg' } },
-          mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.royaluniondesign.com/blog/${slug}` },
-        },
-        ...(p.faqs ? [{
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: p.faqs.map(({ q, a }) => ({
-            '@type': 'Question',
-            name: q,
-            acceptedAnswer: { '@type': 'Answer', text: a },
-          })),
-        }] : []),
-      ]),
-    },
   }
 }
 
@@ -416,6 +442,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   return (
     <main style={{ background: 'var(--bg)' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(postSchema(slug, p)) }} />
       <BlogTracker slug={slug} title={p.title} />
       <Navbar />
 

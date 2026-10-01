@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Roll Up Barcelona · Diseño e Impresión de Roll-Ups para Ferias y Eventos | RUD Studio',
+  title: 'Roll-Ups para Ferias y Eventos en Barcelona | RUD Studio',
   description: 'Roll-ups para ferias, eventos y punto de venta en Barcelona. Diseño + impresión + estructura. Entrega en 48h. Formatos estándar y personalizados. Desde 180€.',
   keywords: 'roll up Barcelona, roll-up feria Barcelona, diseño roll up Barcelona, impresión roll up Barcelona, roll up evento Barcelona, expositor enrollable Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/material-pop-barcelona/roll-up-barcelona' },

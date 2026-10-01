@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata = {
-  title: 'Portfolio Branding, Rótulos y Diseño Web Barcelona — Proyectos Reales | RUD Studio',
+  title: 'Portfolio: Rótulos, Branding y Webs Reales | RUD Studio',
   description: 'Trabajos reales de RUD Studio: rótulos luminosos, branding, identidad visual, e-commerce Shopify y diseño web para empresas en Barcelona. Proyectos con resultados medibles.',
   keywords: 'portfolio branding Barcelona, rótulos barcelona proyectos, agencia diseño web Barcelona, proyectos identidad visual, e-commerce Shopify Barcelona, casos de éxito agencia Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/work' },

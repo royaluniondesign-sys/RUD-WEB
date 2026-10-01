@@ -4,13 +4,13 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Rótulos Badalona · Neón LED, Letras Corpóreas e Instalación | RUD Studio',
-  description: 'Empresa de rótulos en Badalona: neón LED, letras corpóreas, cajas de luz y vinilos para comercios, restaurantes y empresas. Fabricación propia en Cerdanyola del Vallès. Presupuesto gratis en 24h.',
+  title: 'Rótulos en Badalona · Neón LED y Letras | RUD Studio',
+  description: 'Empresa de rótulos en Badalona: neón LED, letras corpóreas, cajas de luz y vinilos para comercios, restaurantes y empresas. Fabricación propia en Cerdanyola del Vallès. Presupuesto gratis sin compromiso.',
   keywords: 'rótulos Badalona, neón LED Badalona, letras corpóreas Badalona, rótulo luminoso Badalona, señalética Badalona Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/badalona-barcelona' },
   openGraph: {
     title: 'Rótulos Badalona · Neón LED, Letras Corpóreas e Instalación | RUD Studio',
-    description: 'Empresa de rótulos en Badalona: neón LED, letras corpóreas, cajas de luz y vinilos. Fabricación propia en Cerdanyola del Vallès. Presupuesto gratis en 24h.',
+    description: 'Empresa de rótulos en Badalona: neón LED, letras corpóreas, cajas de luz y vinilos. Fabricación propia en Cerdanyola del Vallès. Presupuesto gratis sin compromiso.',
     url: 'https://www.royaluniondesign.com/rotulos/badalona-barcelona',
     images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },

@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Diseño de Logotipo Barcelona · Logo Profesional para tu Empresa | RUD Studio',
+  title: 'Diseño de Logotipo en Barcelona | RUD Studio',
   description: 'Diseño de logotipo profesional en Barcelona. Logo para pymes, autónomos y negocios locales. Archivos vectoriales en todos los formatos. Desde 1.200€.',
   keywords: 'diseño logo Barcelona, diseño logotipo Barcelona, logo empresa Barcelona, logotipo profesional Barcelona, diseño logo pymes Barcelona, creación logo Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/branding-barcelona/diseno-logo-barcelona' },

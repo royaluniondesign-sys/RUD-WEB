@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Rótulos Terrassa · Neón LED, Letras Corpóreas e Instalación | RUD Studio',
+  title: 'Rótulos en Terrassa · Neón LED y Letras | RUD Studio',
   description: 'Empresa de rótulos en Terrassa: neón LED, letras corpóreas, cajas de luz y señalética para comercios, industria y hostelería. Fabricación propia en Cerdanyola del Vallès. Presupuesto gratis.',
   keywords: 'rótulos Terrassa, neón LED Terrassa, letras corpóreas Terrassa, rótulo luminoso Terrassa, señalética Terrassa Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/terrassa-barcelona' },

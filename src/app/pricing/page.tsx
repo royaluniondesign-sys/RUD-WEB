@@ -5,7 +5,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import FAQAccordion from '@/components/FAQAccordion'
 
 export const metadata: Metadata = {
-  title: 'Precios Diseño Web, Tiendas Online y Rótulos Barcelona — Tarifas | RUD Studio',
+  title: 'Precios de Diseño Web y Rótulos en Barcelona | RUD Studio',
   description: 'Diseño web desde 890€, web profesional desde 3.490€, tienda online desde 2.490€, neón LED desde 1.800€ y letras corpóreas desde 2.500€ en Barcelona. Presupuesto cerrado gratis y sin compromiso.',
   keywords: 'precio diseño web Barcelona, cuánto cuesta una página web, precio tienda online Barcelona, precio rótulos Barcelona, cuánto cuesta neón LED Barcelona, precio letras corpóreas Barcelona, tarifa branding Barcelona, presupuesto rótulos luminosos',
   alternates: { canonical: 'https://www.royaluniondesign.com/pricing' },

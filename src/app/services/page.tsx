@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata = {
-  title: 'Servicios · Rótulos, Branding y Diseño Web Barcelona | RUD Studio',
+  title: 'Servicios: Rótulos, Branding y Diseño Web | RUD Studio',
   description: 'Rótulos luminosos, neón LED, letras corpóreas, branding, diseño web Next.js y automatización IA en Barcelona. Fabricación propia. Presupuesto gratuito.',
   keywords: 'rótulos luminosos Barcelona, neón LED Barcelona, letras corpóreas Barcelona, vinilos escaparate Barcelona, branding Barcelona, agencia diseño web Barcelona, e-commerce Shopify Barcelona, señalética corporativa Barcelona, automatización IA Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/services' },
@@ -34,11 +34,11 @@ const ROTULOS_ROWS = [
 ]
 
 const DIGITAL_ROWS = [
-  { titulo: 'ESTRATEGIA DE MARCA & IDENTIDAD VISUAL', sub: 'Naming · Sistema de logo · Manual de marca · Motion', href: '/services#branding',
+  { titulo: 'ESTRATEGIA DE MARCA & IDENTIDAD VISUAL', sub: 'Naming · Sistema de logo · Manual de marca · Motion', href: '/branding-barcelona',
     desc: 'Auditoría de mercado, análisis competitivo, workshops de posicionamiento y arquitectura de marca completa. Sistema de logo, paleta, tipografía y Manual de Marca extenso.' },
-  { titulo: 'DISEÑO WEB & DESARROLLO',                sub: 'Next.js · Shopify · SEO · Core Web Vitals 95+',     href: '/services#web',
+  { titulo: 'DISEÑO WEB & DESARROLLO',                sub: 'Next.js · Shopify · SEO · Core Web Vitals 95+',     href: '/diseno-web-barcelona',
     desc: 'Investigación UX, wireframes, diseño UI pixel-perfect en Figma y desarrollo Next.js / Shopify. Sin compromisos de performance: 95+ Lighthouse y Core Web Vitals en verde desde el día uno.' },
-  { titulo: 'E-COMMERCE & CONVERSIÓN',               sub: 'Shopify Plus · WooCommerce · CRO · Email automation', href: '/services#ecommerce',
+  { titulo: 'E-COMMERCE & CONVERSIÓN',               sub: 'Shopify Plus · WooCommerce · CRO · Email automation', href: '/diseno-web-barcelona#tiendas-online',
     desc: 'Arquitectura de producto, checkout sin fricción, integraciones ERP/PIM, email automation y estrategia post-venta. El sistema completo, no solo el escaparate.' },
   { titulo: 'CONTENIDO, MOTION & PRODUCCIÓN',        sub: 'Copywriting · Dirección de arte · Animaciones',     href: '/services#content',
     desc: 'Copywriting estratégico, dirección de arte para foto y video, animaciones de marca y producción de contenido para todos los canales.' },
@@ -188,7 +188,12 @@ export default function Services() {
                     <h3 className="display" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 4.5rem)', color: 'var(--fg)', margin: 0 }}>{r.titulo}</h3>
                     <p className="mono-label" style={{ color: 'var(--muted)', marginTop: '0.5rem' }}>{r.sub}</p>
                   </div>
-                  <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7, paddingTop: '0.25rem' }}>{r.desc}</p>
+                  <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7, paddingTop: '0.25rem' }}>
+                    {r.desc}
+                    {!r.href.startsWith('/services#') && (
+                      <> <Link href={r.href} style={{ color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--fg)' }}>Ver más →</Link></>
+                    )}
+                  </p>
                 </div>
               </ScrollReveal>
             ))}

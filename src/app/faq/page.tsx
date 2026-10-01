@@ -5,7 +5,7 @@ import FAQAccordion from '@/components/FAQAccordion'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'FAQ Rótulos Barcelona — Precios, Plazos y Proceso | Preguntas Frecuentes RUD Studio',
+  title: 'Preguntas Frecuentes sobre Rótulos y Precios | RUD Studio',
   description: 'Preguntas frecuentes sobre rótulos luminosos, neón LED, letras corpóreas y vinilos en Barcelona. Precios orientativos, plazos de fabricación, proceso y presupuesto gratis.',
   alternates: { canonical: 'https://www.royaluniondesign.com/faq' },
   openGraph: {

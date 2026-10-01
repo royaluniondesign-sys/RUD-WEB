@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: "Rótulos L'Hospitalet de Llobregat · Neón LED e Instalación | RUD Studio",
+  title: "Rótulos en L'Hospitalet · Neón LED y Letras | RUD Studio",
   description: "Empresa de rótulos en L'Hospitalet de Llobregat: neón LED, letras corpóreas, cajas de luz y vinilos de escaparate. Fabricación propia, instalación en 15 min desde el taller. Presupuesto gratis.",
   keywords: "rótulos Hospitalet de Llobregat, neón LED Hospitalet, letras corpóreas Hospitalet, rótulo luminoso L'Hospitalet, señalética Hospitalet Barcelona",
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/hospitalet-de-llobregat' },

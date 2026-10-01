@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Displays y Stands Barcelona · Expositores para Punto de Venta | RUD Studio',
+  title: 'Displays y Expositores en Barcelona | RUD Studio',
   description: 'Diseño y producción de displays, expositores y stands para punto de venta en Barcelona. Cartón, forex, aluminio. Impresión y montaje incluidos.',
   keywords: 'displays Barcelona, stands Barcelona, expositores punto de venta Barcelona, display carton Barcelona, expositor producto Barcelona, display TPV Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/material-pop-barcelona/displays-barcelona' },

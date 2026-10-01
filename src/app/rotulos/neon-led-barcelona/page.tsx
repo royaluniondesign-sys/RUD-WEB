@@ -4,8 +4,8 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Neón LED Barcelona · Fabricación e Instalación a Medida | RUD Studio',
-  description: 'Neón LED personalizado en Barcelona: cualquier forma, tipografía o logotipo. Fabricación en taller propio, instalación incluida. Presupuesto gratis en 24h.',
+  title: 'Neón LED Barcelona · Fabricación e Instalación | RUD Studio',
+  description: 'Neón LED personalizado en Barcelona: cualquier forma, tipografía o logotipo. Fabricación en taller propio, instalación incluida. Presupuesto gratis sin compromiso.',
   keywords: 'neón LED Barcelona, rótulo neón LED Barcelona, neón personalizado Barcelona, neón LED precio Barcelona, neón LED escaparate Barcelona, neón LED hostelería Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/neon-led-barcelona' },
   openGraph: {

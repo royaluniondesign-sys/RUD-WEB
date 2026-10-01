@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Manual de Marca Barcelona · Brand Guidelines para tu Empresa | RUD Studio',
+  title: 'Manual de Marca en Barcelona | RUD Studio',
   description: 'Diseño de manual de marca (brand guidelines) en Barcelona. Documenta cómo usar tu identidad visual. Para pymes con equipo o que trabajan con proveedores externos.',
   keywords: 'manual de marca Barcelona, brand guidelines Barcelona, libro de marca Barcelona, guía de estilo marca Barcelona, brandbook Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/branding-barcelona/manual-de-marca-barcelona' },

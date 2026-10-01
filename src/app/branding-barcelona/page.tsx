@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Agencia de Branding en Barcelona · Identidad Visual y Diseño de Marca | RUD Studio',
+  title: 'Agencia de Branding en Barcelona | RUD Studio',
   description: 'Agencia de branding en Barcelona para pymes y negocios locales. Identidad visual completa, diseño de logo y manual de marca. Presupuesto gratuito.',
   keywords: 'agencia branding Barcelona, identidad visual Barcelona, diseño logo Barcelona, manual de marca Barcelona, branding pymes Barcelona, agencia diseño marca Barcelona, identidad corporativa Barcelona, branding negocios Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/branding-barcelona' },

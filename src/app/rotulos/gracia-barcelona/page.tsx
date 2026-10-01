@@ -4,13 +4,13 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Rótulos Gràcia Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
+  title: 'Rótulos en Gràcia · Neón LED y Letras | RUD Studio',
   description: 'Rótulos artesanales en el barrio de Gràcia, Barcelona: neón LED, letras corpóreas, vinilos y señalética. Para restaurantes, boutiques y estudios creativos. Presupuesto gratuito.',
   keywords: 'rótulos Gràcia Barcelona, rótulo neón LED Gràcia, letras corpóreas Gràcia, rótulos Carrer Verdi, rótulos Plaça del Sol, señalética barrio Gràcia Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/gracia-barcelona' },
   openGraph: {
     title: 'Rótulos Gràcia Barcelona · Neón LED y Letras Corpóreas | RUD Studio',
-    description: 'Rótulos a medida en el barrio de Gràcia: neón LED, letras corpóreas, vinilos. Estilo artesanal y creativo. Presupuesto gratis en 24h.',
+    description: 'Rótulos a medida en el barrio de Gràcia: neón LED, letras corpóreas, vinilos. Estilo artesanal y creativo. Presupuesto gratis sin compromiso.',
     url: 'https://www.royaluniondesign.com/rotulos/gracia-barcelona',
     images: [{ url: 'https://www.royaluniondesign.com/services/neon-interior.avif' }],
   },

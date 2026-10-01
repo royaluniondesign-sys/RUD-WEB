@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Identidad Visual Barcelona · Diseño de Marca para Empresas | RUD Studio',
+  title: 'Identidad Visual para Empresas en Barcelona | RUD Studio',
   description: 'Diseño de identidad visual para empresas en Barcelona. Sistema de marca completo: logo, colores, tipografías, aplicaciones y manual. Pymes y negocios locales.',
   keywords: 'identidad visual Barcelona, diseño identidad corporativa Barcelona, imagen corporativa Barcelona, sistema de marca Barcelona, identidad de marca Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/branding-barcelona/identidad-visual-barcelona' },
