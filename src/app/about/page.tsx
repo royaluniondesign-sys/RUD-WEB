@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata = {
-  title: 'Empresa de Rótulos y Branding en Barcelona — Quiénes Somos | RUD Studio',
+  title: 'Quiénes Somos · Rótulos y Branding Barcelona | RUD Studio',
   description: 'RUD Studio: empresa de rótulos luminosos, señalética, branding y diseño web en Barcelona con taller propio. Fabricación, identidad visual y desarrollo web bajo un mismo techo desde Barcelona.',
   keywords: 'empresa rótulos Barcelona, agencia branding Barcelona, fabricación rótulos luminosos Barcelona, quiénes somos, agencia creativa Barcelona, diseño y fabricación rótulos',
   alternates: { canonical: 'https://www.royaluniondesign.com/about' },

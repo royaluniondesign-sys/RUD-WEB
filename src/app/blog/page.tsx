@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata = {
-  title: 'Blog Rótulos, Branding y Diseño Web Barcelona — Guías y Recursos | RUD Studio',
+  title: 'Blog de Rótulos, Branding y Diseño Web | RUD Studio',
   description: 'Guías prácticas sobre rótulos luminosos en Barcelona, branding estratégico, diseño web, e-commerce Shopify y automatización IA. Consejos reales de una agencia que fabrica y diseña.',
   keywords: 'blog rótulos Barcelona, guía neón LED Barcelona, blog branding Barcelona, cómo elegir rótulo luminoso, blog diseño web Barcelona, tendencias señalética 2026',
   alternates: { canonical: 'https://www.royaluniondesign.com/blog' },

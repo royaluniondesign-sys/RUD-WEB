@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Rótulos Sant Cugat del Vallès · Neón LED y Señalética Corporativa | RUD Studio',
+  title: 'Rótulos en Sant Cugat del Vallès | RUD Studio',
   description: 'Empresa de rótulos en Sant Cugat del Vallès: neón LED, letras corpóreas, señalética corporativa y vinilos. A 10 minutos de nuestro taller en Cerdanyola. Presupuesto gratis en 2h.',
   keywords: 'rótulos Sant Cugat del Vallès, neón LED Sant Cugat, letras corpóreas Sant Cugat, señalética corporativa Sant Cugat, rótulo comercio Sant Cugat',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/sant-cugat-del-valles' },

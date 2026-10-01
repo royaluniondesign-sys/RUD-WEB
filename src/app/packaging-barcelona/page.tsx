@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Diseño de Packaging Barcelona · Envases, Cajas y Etiquetas | RUD Studio',
+  title: 'Diseño de Packaging en Barcelona | RUD Studio',
   description: 'Diseño de packaging para productos en Barcelona. Cajas, envases, etiquetas, bolsas y estuches con identidad visual coherente. Para pymes, artesanos y marcas locales.',
   keywords: 'diseño packaging Barcelona, packaging personalizado Barcelona, diseño envases Barcelona, diseño etiquetas Barcelona, packaging producto Barcelona, packaging marca Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/packaging-barcelona' },

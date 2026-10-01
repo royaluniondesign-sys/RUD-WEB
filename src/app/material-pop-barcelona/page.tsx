@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Material POP Barcelona · Displays, Roll-Ups y Señalética Comercial | RUD Studio',
+  title: 'Material POP en Barcelona · Displays y Roll-Ups | RUD Studio',
   description: 'Diseño y producción de material POP en Barcelona. Roll-ups, displays, banners, carteles y señalética para punto de venta. Diseño + producción en un solo proveedor.',
   keywords: 'material POP Barcelona, material punto de venta Barcelona, roll up Barcelona, display Barcelona, señalética comercial Barcelona, banners Barcelona, publicidad en el punto de venta',
   alternates: { canonical: 'https://www.royaluniondesign.com/material-pop-barcelona' },
@@ -44,7 +44,7 @@ const faqSchema = {
   mainEntity: [
     { '@type': 'Question', name: '¿Qué es el material POP?', acceptedAnswer: { '@type': 'Answer', text: 'POP significa "Point of Purchase" (punto de venta). Son todos los elementos visuales que se colocan en el lugar donde el cliente toma la decisión de compra: roll-ups, displays, carteles de precio, señalética interior, banners de suelo o de techo, expositores de producto, etc.' } },
     { '@type': 'Question', name: '¿Hacéis diseño y producción, o solo diseño?', acceptedAnswer: { '@type': 'Answer', text: 'Hacemos las dos cosas. Diseñamos el material adaptado a tu imagen corporativa y lo producimos (impresión + estructura si aplica). También adaptamos diseños existentes para imprimir. Para grandes tiradas o formatos especiales, gestionamos la producción con nuestros proveedores de impresión en Barcelona.' } },
-    { '@type': 'Question', name: '¿Cuánto cuesta un roll-up en Barcelona?', acceptedAnswer: { '@type': 'Answer', text: 'Un roll-up básico (diseño + impresión + estructura enrollable, 85×200cm) parte desde 180€. Un roll-up premium con estructura de mayor calidad y diseño elaborado desde 280€. Para pedidos de varios roll-ups, el precio por unidad baja. Presupuesto detallado en 24h.' } },
+    { '@type': 'Question', name: '¿Cuánto cuesta un roll-up en Barcelona?', acceptedAnswer: { '@type': 'Answer', text: 'Un roll-up básico (diseño + impresión + estructura enrollable, 85×200cm) parte desde 180€. Un roll-up premium con estructura de mayor calidad y diseño elaborado desde 280€. Para pedidos de varios roll-ups, el precio por unidad baja. Presupuesto detallado sin compromiso.' } },
     { '@type': 'Question', name: '¿El material POP debe ir coordinado con mi identidad corporativa?', acceptedAnswer: { '@type': 'Answer', text: 'Idealmente sí. El material POP es uno de los momentos de mayor impacto visual con el cliente. Si el roll-up de un evento no guarda relación con tu web o tu tarjeta de visita, se pierde coherencia de marca. Si no tienes un sistema de identidad visual definido, te ayudamos a crear uno antes de producir el material.' } },
   ],
 }

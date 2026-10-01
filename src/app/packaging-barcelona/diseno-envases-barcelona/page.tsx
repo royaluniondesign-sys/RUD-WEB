@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Diseño de Envases Barcelona · Cajas, Estuches y Packaging de Producto | RUD Studio',
+  title: 'Diseño de Envases y Cajas en Barcelona | RUD Studio',
   description: 'Diseño de envases y packaging de producto en Barcelona. Cajas de cartón, estuches, bolsas y packaging para e-commerce. Troquel incluido. Artes finales para imprenta.',
   keywords: 'diseño envases Barcelona, diseño cajas Barcelona, packaging producto Barcelona, diseño packaging e-commerce Barcelona, caja cartón personalizada Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/packaging-barcelona/diseno-envases-barcelona' },

@@ -3,7 +3,7 @@ import HomeContent from './HomeContent'
 
 export const metadata: Metadata = {
   title: 'Empresa Rótulos Barcelona · Branding y Web | RUD Studio',
-  description: 'Fabricamos rótulos luminosos, neón LED y letras corpóreas en Barcelona. Branding y diseño web de alto rendimiento. Presupuesto gratis en 24h.',
+  description: 'Fabricamos rótulos luminosos, neón LED y letras corpóreas en Barcelona. Branding y diseño web de alto rendimiento. Presupuesto gratis sin compromiso.',
   keywords: 'empresa rótulos Barcelona, rótulos luminosos Barcelona, neón LED Barcelona, letras corpóreas Barcelona, vinilos escaparate Barcelona, branding Barcelona, agencia diseño web Barcelona, señalética corporativa Barcelona, fabricación rótulos Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com' },
   openGraph: {

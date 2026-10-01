@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Vinilos Escaparate Barcelona · Corte, Impreso, Esmerilado | RUD Studio',
+  title: 'Vinilos para Escaparate en Barcelona | RUD Studio',
   description: 'Vinilos para escaparates en Barcelona: de corte, impresos, esmerilados y microperforados. Instalación en 48-72h. Presupuesto el mismo día.',
   keywords: 'vinilos escaparate Barcelona, vinilos para cristales Barcelona, vinilos tienda Barcelona, vinilo esmerilado Barcelona, vinilo impreso escaparate Barcelona, vinilos decorativos Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/vinilos-escaparate-barcelona' },

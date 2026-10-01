@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Imagen Corporativa Barcelona · Rediseño de Marca para Empresas | RUD Studio',
+  title: 'Imagen Corporativa en Barcelona | RUD Studio',
   description: 'Agencia de imagen corporativa en Barcelona. Renovamos o creamos la identidad visual de tu empresa: logo, colores, tipografía, aplicaciones y manual de marca. Presupuesto gratuito.',
   keywords: 'imagen corporativa Barcelona, identidad corporativa Barcelona, rediseño imagen corporativa Barcelona, branding corporativo Barcelona, renovar imagen empresa Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/imagen-corporativa-barcelona' },
@@ -44,7 +44,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: '¿Cuánto cuesta renovar la imagen corporativa de mi empresa?', acceptedAnswer: { '@type': 'Answer', text: 'Un proyecto de imagen corporativa en RUD Studio parte desde 1.800€ para una actualización y desde 3.000€ para un rediseño completo. El presupuesto depende del alcance: número de soportes, si hay manual de marca, si incluye aplicaciones físicas (rótulos, material POP). Enviamos propuesta en 24h.' } },
+    { '@type': 'Question', name: '¿Cuánto cuesta renovar la imagen corporativa de mi empresa?', acceptedAnswer: { '@type': 'Answer', text: 'Un proyecto de imagen corporativa en RUD Studio parte desde 1.800€ para una actualización y desde 3.000€ para un rediseño completo. El presupuesto depende del alcance: número de soportes, si hay manual de marca, si incluye aplicaciones físicas (rótulos, material POP). Enviamos la propuesta tras una llamada sin compromiso.' } },
     { '@type': 'Question', name: '¿Qué diferencia hay entre imagen corporativa e identidad visual?', acceptedAnswer: { '@type': 'Answer', text: 'La identidad visual es el sistema gráfico (logo, colores, tipografías). La imagen corporativa es todo lo que transmite tu empresa: identidad visual + tono de comunicación + aplicaciones en todos los soportes (digital, impresión, señalética, uniformes). Trabajamos los dos niveles.' } },
     { '@type': 'Question', name: '¿Cuánto tiempo tarda un proyecto de imagen corporativa?', acceptedAnswer: { '@type': 'Answer', text: 'Entre 4 y 8 semanas según el alcance. Una actualización de logo con manual básico puede estar en 3 semanas. Un rediseño completo con todas las aplicaciones (rótulo incluido) lleva entre 6 y 10 semanas.' } },
     { '@type': 'Question', name: '¿Trabajáis también el rótulo y la señalética del local?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, y es uno de nuestros puntos fuertes en Barcelona. Diseñamos la identidad visual y la aplicamos en el rótulo del local, la señalética interior, el material POP y los escaparates. Todo sale del mismo sistema visual: coherencia total.' } },

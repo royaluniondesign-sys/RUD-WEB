@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Diseño de Etiquetas Barcelona · Etiquetas para Botes, Botellas y Envases | RUD Studio',
+  title: 'Diseño de Etiquetas en Barcelona | RUD Studio',
   description: 'Diseño de etiquetas para productos en Barcelona. Etiquetas adhesivas para botes, botellas, frascos y envases. Artes finales listos para imprenta. Desde 350€.',
   keywords: 'diseño etiquetas Barcelona, etiquetas producto Barcelona, etiquetas botes Barcelona, etiquetas botellas Barcelona, diseño etiqueta adhesiva Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/packaging-barcelona/diseno-etiquetas-barcelona' },

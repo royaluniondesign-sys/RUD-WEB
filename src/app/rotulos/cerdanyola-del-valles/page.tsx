@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Rótulos Cerdanyola del Vallès · Neón LED y Letras Corpóreas | RUD Studio',
+  title: 'Rótulos en Cerdanyola del Vallès · Taller | RUD Studio',
   description: 'Empresa de rótulos en Cerdanyola del Vallès con taller propio. Neón LED, letras corpóreas, cajas de luz y vinilos. Fabricamos e instalamos en el mismo día. Presupuesto gratis en 2h.',
   keywords: 'rótulos Cerdanyola del Vallès, neón LED Cerdanyola, letras corpóreas Cerdanyola, rótulo luminoso Cerdanyola del Vallès, señalética Cerdanyola',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/cerdanyola-del-valles' },
@@ -73,7 +73,7 @@ const faqSchema = {
       name: '¿Cuánto cuesta un rótulo en Cerdanyola del Vallès?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Los precios son los mismos para toda el área metropolitana de Barcelona. Neón LED desde 800€, letras corpóreas desde 2.500€, cajas de luz desde 800€, vinilos de escaparate desde 150€. Presupuesto gratuito con render en menos de 24h.',
+        text: 'Los precios son los mismos para toda el área metropolitana de Barcelona. Neón LED desde 800€, letras corpóreas desde 2.500€, cajas de luz desde 800€, vinilos de escaparate desde 150€. Presupuesto gratuito con render.',
       },
     },
     {

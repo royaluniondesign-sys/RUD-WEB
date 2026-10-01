@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Manual de Identidad Corporativa Barcelona · Brand Guidelines Completos | RUD Studio',
+  title: 'Manual de Identidad Corporativa Barcelona | RUD Studio',
   description: 'Diseño de manual de identidad corporativa para empresas en Barcelona. Documenta tu imagen corporativa para equipos, franquicias y proveedores. PDF profesional.',
   keywords: 'manual identidad corporativa Barcelona, brand guidelines Barcelona, libro de marca Barcelona, manual de marca corporativo Barcelona, guía de estilo corporativo',
   alternates: { canonical: 'https://www.royaluniondesign.com/imagen-corporativa-barcelona/manual-identidad-corporativa-barcelona' },

@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Textil Corporativo Barcelona · Uniformes y Ropa Personalizada para Empresas | RUD Studio',
+  title: 'Textil Corporativo y Uniformes en Barcelona | RUD Studio',
   description: 'Diseño y producción de textil corporativo en Barcelona. Uniformes de empresa, camisetas personalizadas, ropa de trabajo con logo. Bordado y serigrafía. Desde 10 unidades.',
   keywords: 'textil corporativo Barcelona, uniformes empresa Barcelona, ropa corporativa Barcelona, camisetas personalizadas empresa Barcelona, ropa de trabajo con logo Barcelona, bordado logo Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/textil-corporativo-barcelona' },

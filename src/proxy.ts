@@ -7,7 +7,7 @@ export function proxy(req: NextRequest) {
   if (host.endsWith('.vercel.app')) {
     const url = req.nextUrl.clone()
     url.protocol = 'https:'
-    url.host = 'royaluniondesign.com'
+    url.host = 'www.royaluniondesign.com'
     url.port = ''
     return NextResponse.redirect(url, { status: 301 })
   }

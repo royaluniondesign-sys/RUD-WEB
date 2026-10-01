@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Camisetas Personalizadas Empresa Barcelona · Serigrafía y DTF | RUD Studio',
+  title: 'Camisetas Personalizadas para Empresas | RUD Studio',
   description: 'Camisetas personalizadas para empresas y eventos en Barcelona. Serigrafía, DTF y bordado. Diseño + producción desde 10 unidades. Para equipos, eventos y merchandise.',
   keywords: 'camisetas personalizadas empresa Barcelona, camisetas serigrafía Barcelona, camisetas bordado Barcelona, camisetas evento Barcelona, camisetas DTF Barcelona, camisetas equipo Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/textil-corporativo-barcelona/camisetas-personalizadas-barcelona' },

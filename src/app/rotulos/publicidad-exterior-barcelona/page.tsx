@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Publicidad Exterior Barcelona · Lonas, Banderolas, Vallas | RUD Studio',
+  title: 'Publicidad Exterior Barcelona · Lonas y Vallas | RUD Studio',
   description: 'Publicidad exterior en Barcelona: lonas, banderolas, vallas publicitarias, wrapping de vehículos y fachadas. Diseño, impresión e instalación. Presupuesto gratuito.',
   keywords: 'publicidad exterior Barcelona, lonas publicitarias Barcelona, banderolas Barcelona, vallas publicitarias Barcelona, wrapping vehículos Barcelona, rótulos fachada Barcelona, publicidad gran formato Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/publicidad-exterior-barcelona' },

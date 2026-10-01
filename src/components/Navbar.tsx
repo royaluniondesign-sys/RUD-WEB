@@ -15,6 +15,7 @@ const ROTULOS_SUBMENU = [
 
 const NAV = [
   { href: '/rotulos',  label: 'Rótulos', hasDropdown: true },
+  { href: '/diseno-web-barcelona', label: 'Diseño Web' },
   { href: '/work',     label: 'Trabajo' },
   { href: '/services', label: 'Servicios' },
   { href: '/about',    label: 'Nosotros' },
