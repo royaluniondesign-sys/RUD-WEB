@@ -30,7 +30,7 @@ const POSTS: Record<string, Post> = {
     title: 'Rótulos luminosos en Barcelona: tipos, precios y cómo elegir el correcto para tu negocio',
     date: 'Mayo 2026', category: 'Señalética & Rótulos', readTime: '12 min',
     image: '/services/neon-shop.jpg',
-    excerpt: 'Neón LED, cajas de luz, letras corpóreas, vinilos. Todo lo que necesitas saber antes de pedir presupuesto para tu rótulo en Barcelona.',
+    excerpt: 'Cuánto cuesta un rótulo luminoso en Barcelona: neón LED desde 800 €, cajas de luz desde 800 €, letras corpóreas desde 2.500 €. Tipos, precios e instalación.',
     content: `Si tienes un local en Barcelona y estás pensando en un rótulo, la primera pregunta suele ser la misma: ¿cuánto cuesta? Pero antes de hablar de precio, hay que entender qué tipo de rótulo necesitas realmente — porque la diferencia entre un neón LED y una caja de luz no es solo estética, es funcional y presupuestaria.
 
 **Los 4 tipos de rótulos luminosos en Barcelona**

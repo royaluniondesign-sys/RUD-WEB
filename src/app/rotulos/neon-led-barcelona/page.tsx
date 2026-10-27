@@ -4,8 +4,8 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Neón LED Barcelona · Fabricación e Instalación | RUD Studio',
-  description: 'Neón LED personalizado en Barcelona: cualquier forma, tipografía o logotipo. Fabricación en taller propio, instalación incluida. Presupuesto gratis sin compromiso.',
+  title: 'Neón LED Barcelona · Precios desde 800€, Instalación Incluida | RUD Studio',
+  description: 'Neón LED a medida en Barcelona desde 800€ (mostrador) hasta 4.000€ (fachada). Fabricamos en taller propio, instalamos y damos 2 años de garantía. Presupuesto en 24h.',
   keywords: 'neón LED Barcelona, rótulo neón LED Barcelona, neón personalizado Barcelona, neón LED precio Barcelona, neón LED escaparate Barcelona, neón LED hostelería Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/neon-led-barcelona' },
   openGraph: {
