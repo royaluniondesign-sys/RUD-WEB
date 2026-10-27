@@ -312,6 +312,8 @@ export default function BrandingBarcelona() {
               { href: '/branding-barcelona/diseno-logo-barcelona', label: 'Diseño de Logotipo Barcelona' },
               { href: '/branding-barcelona/manual-de-marca-barcelona', label: 'Manual de Marca Barcelona' },
               { href: '/rotulos', label: 'Rótulos para tu local' },
+              { href: '/rotulos/neon-led-barcelona', label: 'Neón LED Barcelona · desde 800€' },
+              { href: '/rotulos/letras-corporeas-barcelona', label: 'Letras Corpóreas Barcelona · desde 2.500€' },
               { href: '/services', label: 'Todos los servicios' },
             ].map((item, i) => (
               <ScrollReveal key={item.href} delay={i * 30}>

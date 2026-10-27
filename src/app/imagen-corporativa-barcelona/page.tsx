@@ -155,6 +155,8 @@ export default function ImagenCorporativaBarcelona() {
               { href: '/imagen-corporativa-barcelona/rediseno-imagen-corporativa-barcelona', label: 'Rediseño de Imagen Corporativa' },
               { href: '/imagen-corporativa-barcelona/manual-identidad-corporativa-barcelona', label: 'Manual de Identidad Corporativa' },
               { href: '/rotulos', label: 'Rótulos · Aplicación física de tu imagen' },
+              { href: '/rotulos/letras-corporeas-barcelona', label: 'Letras Corpóreas para tu fachada' },
+              { href: '/rotulos/cajas-de-luz-barcelona', label: 'Cajas de Luz Barcelona' },
               { href: '/material-pop-barcelona', label: 'Material POP Barcelona' },
             ].map((item, i) => (
               <ScrollReveal key={item.href} delay={i * 30}>

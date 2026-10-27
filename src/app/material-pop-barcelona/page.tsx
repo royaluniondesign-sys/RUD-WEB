@@ -141,6 +141,8 @@ export default function MaterialPopBarcelona() {
               { href: '/material-pop-barcelona/roll-up-barcelona', label: 'Roll-Up Barcelona' },
               { href: '/material-pop-barcelona/displays-barcelona', label: 'Displays y Stands Barcelona' },
               { href: '/rotulos', label: 'Rótulos y señalética exterior' },
+              { href: '/rotulos/neon-led-barcelona', label: 'Neón LED Barcelona' },
+              { href: '/rotulos/senaletica-interior-barcelona', label: 'Señalética Interior Barcelona' },
               { href: '/imagen-corporativa-barcelona', label: 'Imagen Corporativa Barcelona' },
               { href: '/packaging-barcelona', label: 'Packaging Barcelona' },
             ].map((item, i) => (
