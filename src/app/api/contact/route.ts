@@ -154,8 +154,12 @@ export async function POST(req: NextRequest) {
 
     const password = process.env.IONOS_EMAIL_PASSWORD
     if (!password) {
-      console.error('[CONTACT] IONOS_EMAIL_PASSWORD not set — lead lost:', { name, email, projectType })
-      return NextResponse.json({ success: true })
+      // Never report success for a lead nobody receives: show the visitor a fallback instead
+      console.error('[CONTACT] IONOS_EMAIL_PASSWORD not set — lead not delivered:', { name, email, projectType })
+      return NextResponse.json(
+        { error: 'No hemos podido enviar tu mensaje. Escríbenos por WhatsApp al +34 645 593 227 o a hello@royaluniondesign.com' },
+        { status: 503 }
+      )
     }
 
     const transporter = createTransporter()
