@@ -6,7 +6,7 @@ import { TrackedLink } from '@/components/TrackedLink'
 const URL = 'https://www.royaluniondesign.com/rotulos/precio-rotular-pared-barcelona'
 
 export const metadata = {
-  title: 'Cuánto Cuesta Rotular una Pared en Barcelona · Precios Reales | RUD Studio',
+  title: 'Cuánto Cuesta Rotular una Pared en Barcelona | RUD Studio',
   description: 'Rotular una pared en Barcelona: vinilo desde 150€, neón LED de pared entre 1.400€ y 2.200€, letras corpóreas desde 2.500€. Qué incluye cada precio y qué lo cambia.',
   keywords: 'cuánto cuesta rotular una pared, rotular pared Barcelona, precio rótulo pared Barcelona, rótulo pared interior precio, letras pared negocio Barcelona',
   alternates: { canonical: URL },

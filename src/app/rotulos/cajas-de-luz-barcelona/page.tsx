@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Cajas de Luz Barcelona · Rótulos Luminosos LED | RUD Studio',
+  title: 'Cajas de Luz Personalizadas Barcelona · LED | RUD Studio',
   description: 'Cajas de luz y rótulos luminosos en Barcelona: máxima visibilidad diurna y nocturna. Aluminio, metacrilato, LED interior. Fabricación propia, instalación incluida.',
   keywords: 'cajas de luz Barcelona, rótulos luminosos Barcelona, caja de luz LED Barcelona, rótulo luminoso precio Barcelona, caja de luz retroiluminada Barcelona, rótulos bandeja LED Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/cajas-de-luz-barcelona' },

@@ -4,8 +4,8 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { TrackedLink } from '@/components/TrackedLink'
 
 export const metadata = {
-  title: 'Letras Corpóreas Barcelona · Precios desde 2.500€, Instaladas | RUD Studio',
-  description: 'Letras corpóreas en Barcelona desde 2.500€ sin luz y desde 3.500€ con retroiluminación halo. Aluminio, metacrilato o madera. Taller propio e instalación incluida.',
+  title: 'Letras Corpóreas Barcelona · Desde 2.500€ | RUD Studio',
+  description: 'Letras corpóreas en Barcelona desde 2.500€ y con halo desde 3.500€. Aluminio, metacrilato o madera. Taller propio e instalación incluida.',
   keywords: 'letras corpóreas Barcelona, letras corpóreas aluminio Barcelona, letras corpóreas metacrilato Barcelona, letras corpóreas retroiluminadas Barcelona, letras volumétricas Barcelona, letras 3D fachada Barcelona',
   alternates: { canonical: 'https://www.royaluniondesign.com/rotulos/letras-corporeas-barcelona' },
   openGraph: {
