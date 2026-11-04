@@ -24,8 +24,9 @@ export function track(
 
 /** Formulario de contacto enviado — conversión principal */
 export function trackLead(service: string, budget: string) {
-  track('generate_lead', {
-    currency: 'EUR',
+  // generate_lead lo envía el servidor (/api/contact) con client_id y session_id.
+  // Este evento es el cierre del embudo en el navegador y no cuenta como lead.
+  track('form_submit_success', {
     service,
     budget,
     form_name: 'contact_multistep',
@@ -75,27 +76,64 @@ export function trackCTA(label: string, destination: string, location?: string) 
   })
 }
 
+const recentEvents = new Map<string, number>()
+function fresh(key: string, windowMs = 800) {
+  const now = Date.now()
+  if (now - (recentEvents.get(key) ?? 0) < windowMs) return false
+  recentEvents.set(key, now)
+  return true
+}
+
+export function getGaIds(): { clientId?: string; sessionId?: string } {
+  if (typeof document === 'undefined') return {}
+  const jar: Record<string, string> = {}
+  document.cookie.split(';').forEach(c => {
+    const i = c.indexOf('=')
+    if (i > 0) jar[c.slice(0, i).trim()] = c.slice(i + 1)
+  })
+  const ga = jar['_ga']
+  const sess = jar['_ga_' + GA_ID.replace('G-', '')]
+  let sessionId: string | undefined
+  if (sess) sessionId = sess.startsWith('GS2') ? sess.match(/s(\d+)/)?.[1] : sess.split('.')[2]
+  return { clientId: ga ? ga.split('.').slice(2).join('.') : undefined, sessionId }
+}
+
 export function trackPhoneClick(location?: string) {
+  if (!fresh('phone_call')) return
   track('phone_call', {
     event_category: 'contact',
     event_label: '+34645593227',
     click_location: location ?? 'unknown',
+    cta_location: location ?? 'unknown',
   })
 }
 
 export function trackEmailClick(address: string, location?: string) {
+  if (!fresh('email_click')) return
   track('email_click', {
     event_category: 'contact',
     event_label: address,
     click_location: location ?? 'unknown',
+    cta_location: location ?? 'unknown',
   })
 }
 
 export function trackWhatsAppClick(location?: string) {
+  if (!fresh('whatsapp_click')) return
   track('whatsapp_click', {
     event_category: 'contact',
     event_label: 'whatsapp_cta',
     click_location: location ?? 'unknown',
+    cta_location: location ?? 'unknown',
+  })
+}
+
+export function trackTelegramClick(location?: string) {
+  if (!fresh('telegram_click')) return
+  track('telegram_click', {
+    event_category: 'contact',
+    event_label: 'telegram_cta',
+    cta_location: location ?? 'unknown',
   })
 }
 

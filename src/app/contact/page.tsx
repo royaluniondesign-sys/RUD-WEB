@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar'
 import ScrollReveal from '@/components/ScrollReveal'
 import {
   trackFormStart, trackFormStep, trackFormSubmitAttempt,
-  trackFormError, trackLead, trackWhatsAppClick,
+  trackFormError, trackLead, trackWhatsAppClick, getGaIds,
 } from '@/lib/analytics'
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
@@ -114,13 +114,13 @@ export default function Contact() {
     setStatus('sending')
     trackFormSubmitAttempt()
     try {
-      const gaCookie  = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('_ga='))
-      const gaClientId = gaCookie ? gaCookie.split('=').slice(1).join('=').split('.').slice(2).join('.') : undefined
+      const { clientId: gaClientId, sessionId: gaSessionId } = getGaIds()
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           ...(gaClientId ? { 'x-ga-client-id': gaClientId } : {}),
+          ...(gaSessionId ? { 'x-ga-session-id': gaSessionId } : {}),
         },
         body: JSON.stringify({ name, email, phone, projectType: service, budget, message }),
       })

@@ -3,6 +3,7 @@ import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import PageTracking from '@/components/PageTracking'
+import ContactClickTracker from '@/components/ContactClickTracker'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import Footer from '@/components/Footer'
 import './globals.css'
@@ -149,6 +150,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <PageTracking />
+        <ContactClickTracker />
         <WhatsAppButton />
         <Analytics />
         <SpeedInsights />

@@ -98,6 +98,7 @@ async function trackGA4ServerSide(params: {
   service: string
   budget: string
   clientId?: string
+  sessionId?: string
 }) {
   const apiSecret = process.env.GA4_API_SECRET
   if (!apiSecret) return
@@ -118,6 +119,9 @@ async function trackGA4ServerSide(params: {
                 budget: params.budget,
                 form_name: 'contact_multistep',
                 source: 'server_side',
+                lead_source: 'web_form',
+                engagement_time_msec: 1,
+                ...(params.sessionId ? { session_id: params.sessionId } : {}),
               },
             },
           ],
@@ -189,7 +193,8 @@ export async function POST(req: NextRequest) {
     // GA4 server-side tracking — fires even if gtag.js blocked by ad-blockers
     // Must be awaited so Vercel doesn't terminate the function before fetch completes
     const gaClientId = req.headers.get('x-ga-client-id') ?? undefined
-    await trackGA4ServerSide({ service: safeType, budget: safeBudget, clientId: gaClientId })
+    const gaSessionId = req.headers.get('x-ga-session-id') ?? undefined
+    await trackGA4ServerSide({ service: safeType, budget: safeBudget, clientId: gaClientId, sessionId: gaSessionId })
 
     return NextResponse.json({ success: true })
   } catch (err) {
