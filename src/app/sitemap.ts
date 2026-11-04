@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'vinilos-escaparate-barcelona',lastMod: '2026-08-07' },
     { slug: 'senaletica-interior-barcelona',lastMod: '2026-08-07' },
     { slug: 'publicidad-exterior-barcelona',lastMod: '2026-08-07' },
+    { slug: 'precio-rotular-pared-barcelona', lastMod: '2026-11-04' },
   ]
 
   // Geo-targeted landing pages — slightly lower than core services
